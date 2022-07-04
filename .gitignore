@@ -9,7 +9,7 @@ text_menus/textformatter/__pycache__
 tools/__pycache__
 
 tools/64tass/*
-!tools/64tass/!64tass - SourceForge.url
+!tools/64tass/64tass - SourceForge.url
 
 tools/BSNES Max/
 !tools/BSNES Max/GitHub - bsnes-emubsnes.url
