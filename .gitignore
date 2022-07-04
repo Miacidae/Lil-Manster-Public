@@ -8,17 +8,6 @@ text_menus/textformatter/__pycache__
 
 tools/__pycache__
 
-tools/64tass/syntax/
-tools/64tass/64tass.exe
-tools/64tass/LICENSE-GPL-2.0
-tools/64tass/LICENSE-LGPL-2.0
-tools/64tass/LICENSE-LGPL-2.1
-tools/64tass/LICENSE-my_getopt
-tools/64tass/manual.pdf
-tools/64tass/NEWS
-tools/64tass/README
-tools/64tass/README.html
-
 tools/BSNES Max/bsxdat/
 tools/BSNES Max/platforms/
 tools/BSNES Max/Saves/
@@ -39,9 +28,8 @@ tools/SnesGFX/*.exe
 tools/SnesGFX/*.txt
 tools/SnesGFX/*.config
 
-tools/Tileset Editor/ini
-tools/Tileset Editor/FE5TileMap.exe
-tools/Tileset Editor/Readme.txt
+tools/Tileset Editor/ini/
+tools/Tileset Editor/*.exe
 
 tools/Usenti/*.txt
 tools/Usenti/*.exe
