@@ -8,7 +8,7 @@ text_menus/textformatter/__pycache__
 
 tools/__pycache__
 
-tools/64tass/*
+tools/64tass/
 
 tools/BSNES Max/
 !tools/BSNES Max/GitHub - bsnes-emubsnes.url
