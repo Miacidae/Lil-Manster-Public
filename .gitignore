@@ -1,12 +1,11 @@
 *.sfc
+*.pyc
 
 TO_DO.txt
 fe5trans.ups
 labels.txt
 log.txt
-text_menus/textformatter/__pycache__
 
-tools/__pycache__
 
 tools/Assembler/syntax/
 tools/Assembler/*.exe
@@ -14,7 +13,6 @@ tools/Assembler/*.0
 tools/Assembler/*.1
 tools/Assembler/*.pdf
 tools/Assembler/*.html
-
 
 tools/BSNES Max/bsxdat/
 tools/BSNES Max/platforms/
