@@ -8,38 +8,51 @@ text_menus/textformatter/__pycache__
 
 tools/__pycache__
 
-!tools/64tass/
-tools/64tass/
-!tools/64tass/64tass - SourceForge.url
+tools/64tass/syntax/
+tools/64tass/64tass.exe
+tools/64tass/LICENSE-GPL-2.0
+tools/64tass/LICENSE-LGPL-2.0
+tools/64tass/LICENSE-LGPL-2.1
+tools/64tass/LICENSE-my_getopt
+tools/64tass/manual.pdf
+tools/64tass/NEWS
+tools/64tass/README
+tools/64tass/README.html
 
-tools/BSNES Max/
-tools/BSNES Max/
-!tools/BSNES Max/GitHub - bsnes-emubsnes.url
+tools/BSNES Max/bsxdat/
+tools/BSNES Max/platforms/
+tools/BSNES Max/Saves/
+tools/BSNES Max/styles/
+tools/BSNES Max/*.exe
+tools/BSNES Max/*.txt
+tools/BSNES Max/*.dll
 
-!tools/FE5 Map Editor/
-tools/FE5 Map Editor/
-!tools/FE5 Map Editor/FE5 Map Editor - DropBox.url
+tools/FE5 Map Editor/*.jar
+tools/FE5 Map Editor/*.txt
 
-!tools/Lunar Address/
-tools/Lunar Address/
-!tools/Lunar Address/FuSoYa's Niche - Lunar Address.url
+tools/Lunar Address/*.exe
 
-!tools/Lunar Expand/
-tools/Lunar Expand/
-!tools/Lunar Expand/FuSoYa's Niche - Lunar Expand.url
+tools/Lunar Expand/*.exe
+tools/Lunar Expand/*.txt
 
-!tools/SnesGFX/
-tools/SnesGFX/
-!tools/SnesGFX/SnesGFX v2.62 - Tools - SMW Central.url 
+tools/SnesGFX/*.exe
+tools/SnesGFX/*.txt
+tools/SnesGFX/*.config
 
 tools/Tileset Editor/ini
 tools/Tileset Editor/FE5TileMap.exe
 tools/Tileset Editor/Readme.txt
 
-!tools/Usenti/
-tools/Usenti/
-!tools/Usenti/Usenti – A bitmap editor Coranac.url
+tools/Usenti/*.txt
+tools/Usenti/*.exe
+tools/Usenti/*.chm
+tools/Usenti/*.pal
 
-!tools/YY-CHR/
-tools/YY-CHR/
-!tools/YY-CHR/YY-CHR (.NET Version, EnglishJapanese) - Tools - SMW Central.url
+tools/YY-CHR/*.adf
+tools/YY-CHR/*.chr
+tools/YY-CHR/*.dat
+tools/YY-CHR/*.enu
+tools/YY-CHR/*.exe
+tools/YY-CHR/*.fra
+tools/YY-CHR/*.ini
+tools/YY-CHR/*.pal
