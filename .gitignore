@@ -8,25 +8,38 @@ text_menus/textformatter/__pycache__
 
 tools/__pycache__
 
-tools/64tass/*
+!tools/64tass/
+tools/64tass/
+!tools/64tass/64tass - SourceForge.url
 
-tools/BSNES Max/*
+tools/BSNES Max/
+tools/BSNES Max/
+!tools/BSNES Max/GitHub - bsnes-emubsnes.url
 
-tools/FE5 Map Editor/*
+!tools/FE5 Map Editor/
+tools/FE5 Map Editor/
+!tools/FE5 Map Editor/FE5 Map Editor - DropBox.url
 
-tools/Lunar Address/*
+!tools/Lunar Address/
+tools/Lunar Address/
+!tools/Lunar Address/FuSoYa's Niche - Lunar Address.url
 
-tools/Lunar Expand/*
+!tools/Lunar Expand/
+tools/Lunar Expand/
+!tools/Lunar Expand/FuSoYa's Niche - Lunar Expand.url
 
-tools/SnesGFX/*
+!tools/SnesGFX/
+tools/SnesGFX/
+!tools/SnesGFX/SnesGFX v2.62 - Tools - SMW Central.url 
 
 tools/Tileset Editor/ini
 tools/Tileset Editor/FE5TileMap.exe
 tools/Tileset Editor/Readme.txt
 
-tools/Usenti/*
+!tools/Usenti/
+tools/Usenti/
+!tools/Usenti/Usenti – A bitmap editor Coranac.url
 
-tools/YY-CHR/*
-
-
-!.URL
+!tools/YY-CHR/
+tools/YY-CHR/
+!tools/YY-CHR/YY-CHR (.NET Version, EnglishJapanese) - Tools - SMW Central.url
