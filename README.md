@@ -5,7 +5,7 @@ This folder is a more complete version of the [**Lil' Manster**](https://forums.
 While this may not be an "FE5 Builder", and the game's disassembly is still far from complete, I hope this will provide a useful base for your own creative endeavors.
 
 -----------------
-SETUP
+Setup
 -----------------
 
 - A recent version of [**python 3**](https://www.python.org/) must be installed and in your path.
@@ -20,7 +20,7 @@ SETUP
   The text file in `base_rom` gives you further instructions on how to expand the ROM with Lunar Expand.
 
 -----------------
-OPERATION
+Operation
 -----------------
 
 - Click the `build.bat` file to generate a copy of the current developper version of Lil' Manster, as well as an UPS patch.
@@ -37,8 +37,7 @@ OPERATION
   `clean-all.bat` also deletes the base ROM and its saves.
 
 ----------------
-FOLDER
-OVERVIEW
+Folder overview
 ----------------
 
 `asm` holds most of the nitty gritty code—almost of it assembler—as well as the various quality-of-life improvements. If you go look in there, you likely already know what you're doing
@@ -70,11 +69,13 @@ Keep in mind that dialogue text and menu text are completely different systems a
 `ups` holds the UPS patch generated when building the ROM.
 
 ----------------
-CREDITS
+Credits
 ----------------
 
-Miacis:	Repository's manager and Lil' Manster Project Lead
-Zane Avernathy:	Most of the disassembly and tools.	
+Miacis: Repository's manager and Lil' Manster Project Lead.
+
+Zane Avernathy: Most of the disassembly and tools.
+
 Ultimage: Disassembly work, coding for Lil' Manster.
 
 [The Lil' Manster and Project Exile teams](https://forums.serenesforest.net/index.php?/topic/90189-fe5-lil-manster-%E2%80%93-translation-and-quality-of-life-patch-for-thracia-776/#comments)

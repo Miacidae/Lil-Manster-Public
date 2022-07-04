@@ -1,7 +1,37 @@
 *.sfc
 
+TO DO.txt
 fe5trans.ups
 labels.txt
 log.txt
+text_menus/textformatter/__pycache__
+
 tools/__pycache__
-tools/64tass
+
+64tass/*
+!64tass/!64tass - SourceForge.url
+
+BSNES Max/
+!BSNES Max/GitHub - bsnes-emubsnes.url
+
+FE5 Map Editor/
+!FE5 Map Editor/FE5 Map Editor - DropBox.url
+
+Lunar Address/
+!Lunar Address/FuSoYa's Niche - Lunar Address.url
+
+Lunar Expand/
+!Lunar Expand/FuSoYa's Niche - Lunar Expand.url
+
+SnesGFX/
+!SnesGFX/SnesGFX v2.62 - Tools - SMW Central.url 
+
+Tileset Editor/ini
+Tileset Editor/FE5TileMap.exe
+Tileset Editor/Readme.txt
+
+Usenti/
+!Usenti/Usenti – A bitmap editor Coranac.url
+
+YY-CHR/
+!YY-CHR/YY-CHR (.NET Version, EnglishJapanese) - Tools - SMW Central.url
