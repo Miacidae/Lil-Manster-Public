@@ -1,6 +1,6 @@
 SET startDir=%~dp0
 
-SET as="%startDir%/tools/64tass/64tass"
+SET as="%startDir%/tools/Assembler 64tass/64tass"
 
 SET textasm="%startDir%/text_menus/textformatter/MenuTextFormatter.py"
 

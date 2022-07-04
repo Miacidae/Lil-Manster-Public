@@ -1,12 +1,14 @@
 *.sfc
 
-TO DO.txt
+TO_DO.txt
 fe5trans.ups
 labels.txt
 log.txt
 text_menus/textformatter/__pycache__
 
 tools/__pycache__
+
+tools/Assembler 64tass
 
 tools/BSNES Max/bsxdat/
 tools/BSNES Max/platforms/
