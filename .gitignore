@@ -8,30 +8,30 @@ text_menus/textformatter/__pycache__
 
 tools/__pycache__
 
-64tass/*
-!64tass/!64tass - SourceForge.url
+tools/64tass/*
+!tools/64tass/!64tass - SourceForge.url
 
-BSNES Max/
-!BSNES Max/GitHub - bsnes-emubsnes.url
+tools/BSNES Max/
+!tools/BSNES Max/GitHub - bsnes-emubsnes.url
 
-FE5 Map Editor/
-!FE5 Map Editor/FE5 Map Editor - DropBox.url
+tools/FE5 Map Editor/
+!tools/FE5 Map Editor/FE5 Map Editor - DropBox.url
 
-Lunar Address/
-!Lunar Address/FuSoYa's Niche - Lunar Address.url
+tools/Lunar Address/
+!tools/Lunar Address/FuSoYa's Niche - Lunar Address.url
 
-Lunar Expand/
-!Lunar Expand/FuSoYa's Niche - Lunar Expand.url
+tools/Lunar Expand/
+!tools/Lunar Expand/FuSoYa's Niche - Lunar Expand.url
 
-SnesGFX/
-!SnesGFX/SnesGFX v2.62 - Tools - SMW Central.url 
+tools/SnesGFX/
+!tools/SnesGFX/SnesGFX v2.62 - Tools - SMW Central.url 
 
-Tileset Editor/ini
-Tileset Editor/FE5TileMap.exe
-Tileset Editor/Readme.txt
+tools/Tileset Editor/ini
+tools/Tileset Editor/FE5TileMap.exe
+tools/Tileset Editor/Readme.txt
 
-Usenti/
-!Usenti/Usenti – A bitmap editor Coranac.url
+tools/Usenti/
+!tools/Usenti/Usenti – A bitmap editor Coranac.url
 
-YY-CHR/
-!YY-CHR/YY-CHR (.NET Version, EnglishJapanese) - Tools - SMW Central.url
+tools/YY-CHR/
+!tools/YY-CHR/YY-CHR (.NET Version, EnglishJapanese) - Tools - SMW Central.url
