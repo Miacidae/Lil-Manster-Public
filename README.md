@@ -1,11 +1,11 @@
-# Lil Manster Public
+# Lil' Manster Public Files
  Public build files for Lil' Manster, the Fire Emblem 5 translation and QoL patch.
 
-This folder is a more complete version of the Lil' Manster project files, which allows you to translate Fire Emblem Thracia 776 into different languages, or make mods without having to start from scratch.
-While this may not be an FE5 builder, and the game's disassembly is still far from complete, I hope this will provide a useful base for your own creative endeavors.
+This folder is a more complete version of the [**Lil' Manster**](https://forums.serenesforest.net/index.php?/topic/90189-fe5-lil-manster-%E2%80%93-translation-and-quality-of-life-patch-for-thracia-776/#comments) project files, which allows you to translate Fire Emblem Thracia 776 into different languages, or make mods without having to start from scratch.
+While this may not be an "FE5 Builder", and the game's disassembly is still far from complete, I hope this will provide a useful base for your own creative endeavors.
 
 -----------------
-	  SETUP
+SETUP
 -----------------
 
 - A recent version of [**python 3**](https://www.python.org/) must be installed and in your path.
@@ -20,13 +20,13 @@ While this may not be an FE5 builder, and the game's disassembly is still far fr
   The text file in `base_rom` gives you further instructions on how to expand the ROM with Lunar Expand.
 
 -----------------
-	OPERATION
+OPERATION
 -----------------
 
-- Click the `build.bat` folder to generate a copy of the current developper version of Lil' Manster, as well as an UPS patch.
+- Click the `build.bat` file to generate a copy of the current developper version of Lil' Manster, as well as an UPS patch.
 
 - If no ROM is generated, consult the command line prompt and the `log.txt` file for possible error messages.
-  Feel free to ignore "Warning messages" in the log, as they do not prevent the build process and are generally unconsequential.
+  Do ignore the "Warning messages" in the log, as they do not prevent the build process and are generally unconsequential.
 
 - If you edit any of the tables in the `tables` folder, make sure to launch the `tablebuilder.bat` before building.
   This will generate new, insertable `.casm` files for the assembler.
@@ -37,13 +37,13 @@ While this may not be an FE5 builder, and the game's disassembly is still far fr
   `clean-all.bat` also deletes the base ROM and its saves.
 
 ----------------
-	 FOLDER
-	OVERVIEW
+FOLDER
+OVERVIEW
 ----------------
 
-`asm` holds most of the nitty gritty code, most of it assembler, as well as the various quality-of-life improvements. If you go look in there, you likely already know what you're doing
+`asm` holds most of the nitty gritty code—almost of it assembler—as well as the various quality-of-life improvements. If you go look in there, you likely already know what you're doing
 
-`base_rom`, as explained above, is where you put the FE5 ROM what will serve as a base for the aseembler.
+`base_rom`, as explained above, is where you put the FE5 ROM what will serve as a base for the assembler.
 
 `definitions` holds some of the definition files that aren't in `asm`.
 
@@ -53,7 +53,7 @@ While this may not be an FE5 builder, and the game's disassembly is still far fr
 Requires some tinkering and studying to edit, but fairly accessible compared to writing your own asm routines.
 
 `graphics` holds a small portion of the game's graphics, including the intro crawl, portraits, and some elements of battle animations.
-Everything that requires translation is also located in there. Everything else is a WIP.
+Anything that requires translation is located there. Everything else is a WIP.
 
 `tables` will be of most interest for modders, and broadly replaces the function of Nightmare modules.
 Units, class, item, chapter data, but also battle animation properties, arena opponents... there is a little of everything. Editing these should be easy for almost anyone.
@@ -70,11 +70,11 @@ Keep in mind that dialogue text and menu text are completely different systems a
 `ups` holds the UPS patch generated when building the ROM.
 
 ----------------
-	CREDITS
+CREDITS
 ----------------
 
 Miacis:	Repository's manager and Lil' Manster Project Lead
 Zane Avernathy:	Most of the disassembly and tools.	
 Ultimage: Disassembly work, coding for Lil' Manster.
 
-[The Lil' Manster and Project Exile teams](https://forums.serenesforest.net/index.php?/topic/90189-fe5-lil-manster-%E2%80%93-translation-and-quality-of-life-patch-for-thracia-776/#comments)(https://forums.serenesforest.net/index.php?/topic/90189-fe5-lil-manster-%E2%80%93-translation-and-quality-of-life-patch-for-thracia-776/)
+[The Lil' Manster and Project Exile teams](https://forums.serenesforest.net/index.php?/topic/90189-fe5-lil-manster-%E2%80%93-translation-and-quality-of-life-patch-for-thracia-776/#comments)
