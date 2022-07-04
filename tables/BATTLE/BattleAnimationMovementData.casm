@@ -1,0 +1,495 @@
+	BAprop_BaseCavSwordAxe									= 0
+		BAprop_BaseCavSwordAxeBA_EdgeDistance				= 20
+		BAprop_BaseCavSwordAxeBA_SpriteHeight				= 40
+		BAprop_BaseCavSwordAxeBA_AttackDistance				= 32
+		BAprop_BaseCavSwordAxeBA_AttackSpeed				= 20
+		BAprop_BaseCavSwordAxeBA_CritSpeed					= 14
+		BAprop_BaseCavSwordAxeUnknown1						= 32
+		BAprop_BaseCavSwordAxeBA_OpponentDistance			= 117
+		BAprop_BaseCavSwordAxeUnknown2						= 0
+
+	BAprop_BaseCavLance										= 1
+		BAprop_BaseCavLanceBA_EdgeDistance					= 20
+		BAprop_BaseCavLanceBA_SpriteHeight					= 40
+		BAprop_BaseCavLanceBA_AttackDistance				= 44
+		BAprop_BaseCavLanceBA_AttackSpeed					= 20
+		BAprop_BaseCavLanceBA_CritSpeed						= 14
+		BAprop_BaseCavLanceUnknown1							= 32
+		BAprop_BaseCavLanceBA_OpponentDistance				= 117
+		BAprop_BaseCavLanceUnknown2							= 0
+
+	BAprop_BaseCavThrownLance								= 2
+		BAprop_BaseCavThrownLanceBA_EdgeDistance			= 20
+		BAprop_BaseCavThrownLanceBA_SpriteHeight			= 40
+		BAprop_BaseCavThrownLanceBA_AttackDistance			= 32
+		BAprop_BaseCavThrownLanceBA_AttackSpeed				= 32
+		BAprop_BaseCavThrownLanceBA_CritSpeed				= 16
+		BAprop_BaseCavThrownLanceUnknown1					= 32
+		BAprop_BaseCavThrownLanceBA_OpponentDistance		= 112
+		BAprop_BaseCavThrownLanceUnknown2					= 0
+
+	BAprop_BaseCavThrownAxe									= 3
+		BAprop_BaseCavThrownAxeBA_EdgeDistance				= 20
+		BAprop_BaseCavThrownAxeBA_SpriteHeight				= 40
+		BAprop_BaseCavThrownAxeBA_AttackDistance			= 32
+		BAprop_BaseCavThrownAxeBA_AttackSpeed				= 32
+		BAprop_BaseCavThrownAxeBA_CritSpeed					= 16
+		BAprop_BaseCavThrownAxeUnknown1						= 32
+		BAprop_BaseCavThrownAxeBA_OpponentDistance			= 80
+		BAprop_BaseCavThrownAxeUnknown2						= 0
+
+	BAprop_CavBow											= 4
+		BAprop_CavBowBA_EdgeDistance						= 20
+		BAprop_CavBowBA_SpriteHeight						= 40
+		BAprop_CavBowBA_AttackDistance						= 48
+		BAprop_CavBowBA_AttackSpeed							= 32
+		BAprop_CavBowBA_CritSpeed							= 16
+		BAprop_CavBowUnknown1								= 32
+		BAprop_CavBowBA_OpponentDistance					= 112
+		BAprop_CavBowUnknown2								= 0
+
+	BAprop_BaseCavStaff										= 5
+		BAprop_BaseCavStaffBA_EdgeDistance					= 20
+		BAprop_BaseCavStaffBA_SpriteHeight					= 40
+		BAprop_BaseCavStaffBA_AttackDistance				= 48
+		BAprop_BaseCavStaffBA_AttackSpeed					= 32
+		BAprop_BaseCavStaffBA_CritSpeed						= 16
+		BAprop_BaseCavStaffUnknown1							= 32
+		BAprop_BaseCavStaffBA_OpponentDistance				= 64
+		BAprop_BaseCavStaffUnknown2							= 0
+
+	BAprop_PromotedCavSwordAxe								= 6
+		BAprop_PromotedCavSwordAxeBA_EdgeDistance			= 20
+		BAprop_PromotedCavSwordAxeBA_SpriteHeight			= 40
+		BAprop_PromotedCavSwordAxeBA_AttackDistance			= 32
+		BAprop_PromotedCavSwordAxeBA_AttackSpeed			= 32
+		BAprop_PromotedCavSwordAxeBA_CritSpeed				= 16
+		BAprop_PromotedCavSwordAxeUnknown1					= 32
+		BAprop_PromotedCavSwordAxeBA_OpponentDistance		= 92
+		BAprop_PromotedCavSwordAxeUnknown2					= 0
+
+	BAprop_PromotedCavLance									= 7
+		BAprop_PromotedCavLanceBA_EdgeDistance				= 20
+		BAprop_PromotedCavLanceBA_SpriteHeight				= 40
+		BAprop_PromotedCavLanceBA_AttackDistance			= 36
+		BAprop_PromotedCavLanceBA_AttackSpeed				= 32
+		BAprop_PromotedCavLanceBA_CritSpeed					= 16
+		BAprop_PromotedCavLanceUnknown1						= 32
+		BAprop_PromotedCavLanceBA_OpponentDistance			= 92
+		BAprop_PromotedCavLanceUnknown2						= 0
+
+	BAprop_PromotedCavThrownLance							= 8
+		BAprop_PromotedCavThrownLanceBA_EdgeDistance		= 20
+		BAprop_PromotedCavThrownLanceBA_SpriteHeight		= 40
+		BAprop_PromotedCavThrownLanceBA_AttackDistance		= 40
+		BAprop_PromotedCavThrownLanceBA_AttackSpeed			= 32
+		BAprop_PromotedCavThrownLanceBA_CritSpeed			= 16
+		BAprop_PromotedCavThrownLanceUnknown1				= 32
+		BAprop_PromotedCavThrownLanceBA_OpponentDistance	= 112
+		BAprop_PromotedCavThrownLanceUnknown2				= 0
+
+	BAprop_PromotedCavThrownAxe								= 9
+		BAprop_PromotedCavThrownAxeBA_EdgeDistance			= 20
+		BAprop_PromotedCavThrownAxeBA_SpriteHeight			= 40
+		BAprop_PromotedCavThrownAxeBA_AttackDistance		= 32
+		BAprop_PromotedCavThrownAxeBA_AttackSpeed			= 32
+		BAprop_PromotedCavThrownAxeBA_CritSpeed				= 16
+		BAprop_PromotedCavThrownAxeUnknown1					= 32
+		BAprop_PromotedCavThrownAxeBA_OpponentDistance		= 80
+		BAprop_PromotedCavThrownAxeUnknown2					= 0
+
+	BAprop_PromotedCavStaff									= 10
+		BAprop_PromotedCavStaffBA_EdgeDistance				= 20
+		BAprop_PromotedCavStaffBA_SpriteHeight				= 40
+		BAprop_PromotedCavStaffBA_AttackDistance			= 32
+		BAprop_PromotedCavStaffBA_AttackSpeed				= 32
+		BAprop_PromotedCavStaffBA_CritSpeed					= 16
+		BAprop_PromotedCavStaffUnknown1						= 32
+		BAprop_PromotedCavStaffBA_OpponentDistance			= 64
+		BAprop_PromotedCavStaffUnknown2						= 0
+
+	BAprop_CavMagic											= 11
+		BAprop_CavMagicBA_EdgeDistance						= 20
+		BAprop_CavMagicBA_SpriteHeight						= 40
+		BAprop_CavMagicBA_AttackDistance					= 48
+		BAprop_CavMagicBA_AttackSpeed						= 32
+		BAprop_CavMagicBA_CritSpeed							= 16
+		BAprop_CavMagicUnknown1								= 32
+		BAprop_CavMagicBA_OpponentDistance					= 80
+		BAprop_CavMagicUnknown2								= 0
+
+	BAprop_PegasusSword										= 12
+		BAprop_PegasusSwordBA_EdgeDistance					= 29
+		BAprop_PegasusSwordBA_SpriteHeight					= 40
+		BAprop_PegasusSwordBA_AttackDistance				= 45
+		BAprop_PegasusSwordBA_AttackSpeed					= 32
+		BAprop_PegasusSwordBA_CritSpeed						= 45
+		BAprop_PegasusSwordUnknown1							= 32
+		BAprop_PegasusSwordBA_OpponentDistance				= 112
+		BAprop_PegasusSwordUnknown2							= 48
+
+	BAprop_PegasusLance										= 13
+		BAprop_PegasusLanceBA_EdgeDistance					= 29
+		BAprop_PegasusLanceBA_SpriteHeight					= 40
+		BAprop_PegasusLanceBA_AttackDistance				= 56
+		BAprop_PegasusLanceBA_AttackSpeed					= 16
+		BAprop_PegasusLanceBA_CritSpeed						= 45
+		BAprop_PegasusLanceUnknown1							= 32
+		BAprop_PegasusLanceBA_OpponentDistance				= 112
+		BAprop_PegasusLanceUnknown2							= 48
+
+	BAprop_PegasusThrownLance								= 14
+		BAprop_PegasusThrownLanceBA_EdgeDistance			= 29
+		BAprop_PegasusThrownLanceBA_SpriteHeight			= 40
+		BAprop_PegasusThrownLanceBA_AttackDistance			= 43
+		BAprop_PegasusThrownLanceBA_AttackSpeed				= 32
+		BAprop_PegasusThrownLanceBA_CritSpeed				= 16
+		BAprop_PegasusThrownLanceUnknown1					= 32
+		BAprop_PegasusThrownLanceBA_OpponentDistance		= 112
+		BAprop_PegasusThrownLanceUnknown2					= 0
+
+	BAprop_FalconKnightStaff								= 15
+		BAprop_FalconKnightStaffBA_EdgeDistance				= 29
+		BAprop_FalconKnightStaffBA_SpriteHeight				= 40
+		BAprop_FalconKnightStaffBA_AttackDistance			= 48
+		BAprop_FalconKnightStaffBA_AttackSpeed				= 32
+		BAprop_FalconKnightStaffBA_CritSpeed				= 16
+		BAprop_FalconKnightStaffUnknown1					= 32
+		BAprop_FalconKnightStaffBA_OpponentDistance			= 64
+		BAprop_FalconKnightStaffUnknown2					= 0
+
+	BAprop_DragonSword										= 16
+		BAprop_DragonSwordBA_EdgeDistance					= 26
+		BAprop_DragonSwordBA_SpriteHeight					= 48
+		BAprop_DragonSwordBA_AttackDistance					= 46
+		BAprop_DragonSwordBA_AttackSpeed					= 32
+		BAprop_DragonSwordBA_CritSpeed						= 31
+		BAprop_DragonSwordUnknown1							= 32
+		BAprop_DragonSwordBA_OpponentDistance				= 112
+		BAprop_DragonSwordUnknown2							= 48
+
+	BAprop_DragonLance										= 17
+		BAprop_DragonLanceBA_EdgeDistance					= 16
+		BAprop_DragonLanceBA_SpriteHeight					= 32
+		BAprop_DragonLanceBA_AttackDistance					= 48
+		BAprop_DragonLanceBA_AttackSpeed					= 32
+		BAprop_DragonLanceBA_CritSpeed						= 28
+		BAprop_DragonLanceUnknown1							= 32
+		BAprop_DragonLanceBA_OpponentDistance				= 112
+		BAprop_DragonLanceUnknown2							= 48
+
+	BAprop_DragonThrownLance								= 18
+		BAprop_DragonThrownLanceBA_EdgeDistance				= 24
+		BAprop_DragonThrownLanceBA_SpriteHeight				= 48
+		BAprop_DragonThrownLanceBA_AttackDistance			= 57
+		BAprop_DragonThrownLanceBA_AttackSpeed				= 32
+		BAprop_DragonThrownLanceBA_CritSpeed				= 16
+		BAprop_DragonThrownLanceUnknown1					= 32
+		BAprop_DragonThrownLanceBA_OpponentDistance			= 112
+		BAprop_DragonThrownLanceUnknown2					= 0
+
+	BAprop_InfantryBow										= 19
+		BAprop_InfantryBowBA_EdgeDistance					= 8
+		BAprop_InfantryBowBA_SpriteHeight					= 28
+		BAprop_InfantryBowBA_AttackDistance					= 48
+		BAprop_InfantryBowBA_AttackSpeed					= 32
+		BAprop_InfantryBowBA_CritSpeed						= 16
+		BAprop_InfantryBowUnknown1							= 32
+		BAprop_InfantryBowBA_OpponentDistance				= 112
+		BAprop_InfantryBowUnknown2							= 0
+
+	BAprop_ArmorSwordAxe									= 20
+		BAprop_ArmorSwordAxeBA_EdgeDistance					= 12
+		BAprop_ArmorSwordAxeBA_SpriteHeight					= 32
+		BAprop_ArmorSwordAxeBA_AttackDistance				= 26
+		BAprop_ArmorSwordAxeBA_AttackSpeed					= 32
+		BAprop_ArmorSwordAxeBA_CritSpeed					= 16
+		BAprop_ArmorSwordAxeUnknown1						= 32
+		BAprop_ArmorSwordAxeBA_OpponentDistance				= 40
+		BAprop_ArmorSwordAxeUnknown2						= 0
+
+	BAprop_ArmorLance										= 21
+		BAprop_ArmorLanceBA_EdgeDistance					= 12
+		BAprop_ArmorLanceBA_SpriteHeight					= 32
+		BAprop_ArmorLanceBA_AttackDistance					= 36
+		BAprop_ArmorLanceBA_AttackSpeed						= 32
+		BAprop_ArmorLanceBA_CritSpeed						= 16
+		BAprop_ArmorLanceUnknown1							= 32
+		BAprop_ArmorLanceBA_OpponentDistance				= 40
+		BAprop_ArmorLanceUnknown2							= 0
+
+	BAprop_ArmorThrownLance									= 22
+		BAprop_ArmorThrownLanceBA_EdgeDistance				= 12
+		BAprop_ArmorThrownLanceBA_SpriteHeight				= 32
+		BAprop_ArmorThrownLanceBA_AttackDistance			= 48
+		BAprop_ArmorThrownLanceBA_AttackSpeed				= 32
+		BAprop_ArmorThrownLanceBA_CritSpeed					= 16
+		BAprop_ArmorThrownLanceUnknown1						= 32
+		BAprop_ArmorThrownLanceBA_OpponentDistance			= 112
+		BAprop_ArmorThrownLanceUnknown2						= 0
+
+	BAprop_ArmorThrownAxe									= 23
+		BAprop_ArmorThrownAxeBA_EdgeDistance				= 12
+		BAprop_ArmorThrownAxeBA_SpriteHeight				= 32
+		BAprop_ArmorThrownAxeBA_AttackDistance				= 48
+		BAprop_ArmorThrownAxeBA_AttackSpeed					= 32
+		BAprop_ArmorThrownAxeBA_CritSpeed					= 16
+		BAprop_ArmorThrownAxeUnknown1						= 32
+		BAprop_ArmorThrownAxeBA_OpponentDistance			= 80
+		BAprop_ArmorThrownAxeUnknown2						= 0
+
+	BAprop_ArmorBow											= 24
+		BAprop_ArmorBowBA_EdgeDistance						= 12
+		BAprop_ArmorBowBA_SpriteHeight						= 32
+		BAprop_ArmorBowBA_AttackDistance					= 48
+		BAprop_ArmorBowBA_AttackSpeed						= 48
+		BAprop_ArmorBowBA_CritSpeed							= 16
+		BAprop_ArmorBowUnknown1								= 32
+		BAprop_ArmorBowBA_OpponentDistance					= 112
+		BAprop_ArmorBowUnknown2								= 0
+
+	BAprop_ArmorStaff										= 25
+		BAprop_ArmorStaffBA_EdgeDistance					= 12
+		BAprop_ArmorStaffBA_SpriteHeight					= 32
+		BAprop_ArmorStaffBA_AttackDistance					= 48
+		BAprop_ArmorStaffBA_AttackSpeed						= 32
+		BAprop_ArmorStaffBA_CritSpeed						= 16
+		BAprop_ArmorStaffUnknown1							= 32
+		BAprop_ArmorStaffBA_OpponentDistance				= 64
+		BAprop_ArmorStaffUnknown2							= 0
+
+	BAprop_ArmorMagic										= 26
+		BAprop_ArmorMagicBA_EdgeDistance					= 12
+		BAprop_ArmorMagicBA_SpriteHeight					= 32
+		BAprop_ArmorMagicBA_AttackDistance					= 48
+		BAprop_ArmorMagicBA_AttackSpeed						= 32
+		BAprop_ArmorMagicBA_CritSpeed						= 16
+		BAprop_ArmorMagicUnknown1							= 32
+		BAprop_ArmorMagicBA_OpponentDistance				= 80
+		BAprop_ArmorMagicUnknown2							= 0
+
+	BAprop_ArmoredBow										= 27
+		BAprop_ArmoredBowBA_EdgeDistance					= 12
+		BAprop_ArmoredBowBA_SpriteHeight					= 32
+		BAprop_ArmoredBowBA_AttackDistance					= 48
+		BAprop_ArmoredBowBA_AttackSpeed						= 48
+		BAprop_ArmoredBowBA_CritSpeed						= 16
+		BAprop_ArmoredBowUnknown1							= 32
+		BAprop_ArmoredBowBA_OpponentDistance				= 112
+		BAprop_ArmoredBowUnknown2							= 0
+
+	BAprop_BrigandsAxe										= 28
+		BAprop_BrigandsAxeBA_EdgeDistance					= 14
+		BAprop_BrigandsAxeBA_SpriteHeight					= 32
+		BAprop_BrigandsAxeBA_AttackDistance					= 29
+		BAprop_BrigandsAxeBA_AttackSpeed					= 16
+		BAprop_BrigandsAxeBA_CritSpeed						= 18
+		BAprop_BrigandsAxeUnknown1							= 32
+		BAprop_BrigandsAxeBA_OpponentDistance				= 64
+		BAprop_BrigandsAxeUnknown2							= 0
+
+	BAprop_BrigandsThrownAxe								= 29
+		BAprop_BrigandsThrownAxeBA_EdgeDistance				= 14
+		BAprop_BrigandsThrownAxeBA_SpriteHeight				= 32
+		BAprop_BrigandsThrownAxeBA_AttackDistance			= 48
+		BAprop_BrigandsThrownAxeBA_AttackSpeed				= 32
+		BAprop_BrigandsThrownAxeBA_CritSpeed				= 16
+		BAprop_BrigandsThrownAxeUnknown1					= 32
+		BAprop_BrigandsThrownAxeBA_OpponentDistance			= 80
+		BAprop_BrigandsThrownAxeUnknown2					= 0
+
+	BAprop_BrigandsBow										= 30
+		BAprop_BrigandsBowBA_EdgeDistance					= 14
+		BAprop_BrigandsBowBA_SpriteHeight					= 32
+		BAprop_BrigandsBowBA_AttackDistance					= 48
+		BAprop_BrigandsBowBA_AttackSpeed					= 32
+		BAprop_BrigandsBowBA_CritSpeed						= 16
+		BAprop_BrigandsBowUnknown1							= 32
+		BAprop_BrigandsBowBA_OpponentDistance				= 112
+		BAprop_BrigandsBowUnknown2							= 0
+
+	BAprop_InfantryStaff									= 31
+		BAprop_InfantryStaffBA_EdgeDistance					= 8
+		BAprop_InfantryStaffBA_SpriteHeight					= 27
+		BAprop_InfantryStaffBA_AttackDistance				= 48
+		BAprop_InfantryStaffBA_AttackSpeed					= 32
+		BAprop_InfantryStaffBA_CritSpeed					= 16
+		BAprop_InfantryStaffUnknown1						= 32
+		BAprop_InfantryStaffBA_OpponentDistance				= 64
+		BAprop_InfantryStaffUnknown2						= 0
+
+	BAprop_InfantryMagic									= 32
+		BAprop_InfantryMagicBA_EdgeDistance					= 8
+		BAprop_InfantryMagicBA_SpriteHeight					= 29
+		BAprop_InfantryMagicBA_AttackDistance				= 48
+		BAprop_InfantryMagicBA_AttackSpeed					= 48
+		BAprop_InfantryMagicBA_CritSpeed					= 32
+		BAprop_InfantryMagicUnknown1						= 32
+		BAprop_InfantryMagicBA_OpponentDistance				= 80
+		BAprop_InfantryMagicUnknown2						= 0
+
+	BAprop_MyrmidonFighterHero								= 33
+		BAprop_MyrmidonFighterHeroBA_EdgeDistance			= 8
+		BAprop_MyrmidonFighterHeroBA_SpriteHeight			= 28
+		BAprop_MyrmidonFighterHeroBA_AttackDistance			= 24
+		BAprop_MyrmidonFighterHeroBA_AttackSpeed			= 32
+		BAprop_MyrmidonFighterHeroBA_CritSpeed				= 16
+		BAprop_MyrmidonFighterHeroUnknown1					= 32
+		BAprop_MyrmidonFighterHeroBA_OpponentDistance		= 64
+		BAprop_MyrmidonFighterHeroUnknown2					= 0
+
+	BAprop_SwordmasterHeroFE4								= 34
+		BAprop_SwordmasterHeroFE4BA_EdgeDistance			= 8
+		BAprop_SwordmasterHeroFE4BA_SpriteHeight			= 32
+		BAprop_SwordmasterHeroFE4BA_AttackDistance			= 24
+		BAprop_SwordmasterHeroFE4BA_AttackSpeed				= 20
+		BAprop_SwordmasterHeroFE4BA_CritSpeed				= 32
+		BAprop_SwordmasterHeroFE4Unknown1					= 32
+		BAprop_SwordmasterHeroFE4BA_OpponentDistance		= 91
+		BAprop_SwordmasterHeroFE4Unknown2					= 0
+
+	BAprop_InfantrySword									= 35
+		BAprop_InfantrySwordBA_EdgeDistance					= 8
+		BAprop_InfantrySwordBA_SpriteHeight					= 29
+		BAprop_InfantrySwordBA_AttackDistance				= 24
+		BAprop_InfantrySwordBA_AttackSpeed					= 20
+		BAprop_InfantrySwordBA_CritSpeed					= 32
+		BAprop_InfantrySwordUnknown1						= 32
+		BAprop_InfantrySwordBA_OpponentDistance				= 91
+		BAprop_InfantrySwordUnknown2						= 0
+
+	BAprop_UNUSED_24										= 36
+		BAprop_UNUSED_24BA_EdgeDistance						= 8
+		BAprop_UNUSED_24BA_SpriteHeight						= 27
+		BAprop_UNUSED_24BA_AttackDistance					= 48
+		BAprop_UNUSED_24BA_AttackSpeed						= 32
+		BAprop_UNUSED_24BA_CritSpeed						= 16
+		BAprop_UNUSED_24Unknown1							= 32
+		BAprop_UNUSED_24BA_OpponentDistance					= 64
+		BAprop_UNUSED_24Unknown2							= 0
+
+	BAprop_InfantryThrownAxe								= 37
+		BAprop_InfantryThrownAxeBA_EdgeDistance				= 8
+		BAprop_InfantryThrownAxeBA_SpriteHeight				= 28
+		BAprop_InfantryThrownAxeBA_AttackDistance			= 48
+		BAprop_InfantryThrownAxeBA_AttackSpeed				= 32
+		BAprop_InfantryThrownAxeBA_CritSpeed				= 16
+		BAprop_InfantryThrownAxeUnknown1					= 32
+		BAprop_InfantryThrownAxeBA_OpponentDistance			= 80
+		BAprop_InfantryThrownAxeUnknown2					= 0
+
+	BAprop_DancerThieves									= 38
+		BAprop_DancerThievesBA_EdgeDistance					= 8
+		BAprop_DancerThievesBA_SpriteHeight					= 29
+		BAprop_DancerThievesBA_AttackDistance				= 24
+		BAprop_DancerThievesBA_AttackSpeed					= 22
+		BAprop_DancerThievesBA_CritSpeed					= 21
+		BAprop_DancerThievesUnknown1						= 32
+		BAprop_DancerThievesBA_OpponentDistance				= 64
+		BAprop_DancerThievesUnknown2						= 0
+
+	BAprop_Ballisticians									= 39
+		BAprop_BallisticiansBA_EdgeDistance					= 37
+		BAprop_BallisticiansBA_SpriteHeight					= 48
+		BAprop_BallisticiansBA_AttackDistance				= 48
+		BAprop_BallisticiansBA_AttackSpeed					= 32
+		BAprop_BallisticiansBA_CritSpeed					= 16
+		BAprop_BallisticiansUnknown1						= 32
+		BAprop_BallisticiansBA_OpponentDistance				= 96
+		BAprop_BallisticiansUnknown2						= 0
+
+	BAprop_DarkPrince										= 40
+		BAprop_DarkPrinceBA_EdgeDistance					= 8
+		BAprop_DarkPrinceBA_SpriteHeight					= 29
+		BAprop_DarkPrinceBA_AttackDistance					= 48
+		BAprop_DarkPrinceBA_AttackSpeed						= 32
+		BAprop_DarkPrinceBA_CritSpeed						= 16
+		BAprop_DarkPrinceUnknown1							= 96
+		BAprop_DarkPrinceBA_OpponentDistance				= 80
+		BAprop_DarkPrinceUnknown2							= 0
+
+	BAprop_UNUSED_29										= 41
+		BAprop_UNUSED_29BA_EdgeDistance						= 6
+		BAprop_UNUSED_29BA_SpriteHeight						= 28
+		BAprop_UNUSED_29BA_AttackDistance					= 48
+		BAprop_UNUSED_29BA_AttackSpeed						= 32
+		BAprop_UNUSED_29BA_CritSpeed						= 16
+		BAprop_UNUSED_29Unknown1							= 32
+		BAprop_UNUSED_29BA_OpponentDistance					= 64
+		BAprop_UNUSED_29Unknown2							= 0
+
+	BAprop_Lord												= 42
+		BAprop_LordBA_EdgeDistance							= 8
+		BAprop_LordBA_SpriteHeight							= 29
+		BAprop_LordBA_AttackDistance						= 24
+		BAprop_LordBA_AttackSpeed							= 20
+		BAprop_LordBA_CritSpeed								= 48
+		BAprop_LordUnknown1									= 32
+		BAprop_LordBA_OpponentDistance						= 91
+		BAprop_LordUnknown2									= 0
+
+	BAprop_SoldierLance										= 43
+		BAprop_SoldierLanceBA_EdgeDistance					= 8
+		BAprop_SoldierLanceBA_SpriteHeight					= 29
+		BAprop_SoldierLanceBA_AttackDistance				= 42
+		BAprop_SoldierLanceBA_AttackSpeed					= 20
+		BAprop_SoldierLanceBA_CritSpeed						= 16
+		BAprop_SoldierLanceUnknown1							= 32
+		BAprop_SoldierLanceBA_OpponentDistance				= 46
+		BAprop_SoldierLanceUnknown2							= 0
+
+	BAprop_SoldierThrownLance								= 44
+		BAprop_SoldierThrownLanceBA_EdgeDistance			= 14
+		BAprop_SoldierThrownLanceBA_SpriteHeight			= 29
+		BAprop_SoldierThrownLanceBA_AttackDistance			= 48
+		BAprop_SoldierThrownLanceBA_AttackSpeed				= 32
+		BAprop_SoldierThrownLanceBA_CritSpeed				= 16
+		BAprop_SoldierThrownLanceUnknown1					= 32
+		BAprop_SoldierThrownLanceBA_OpponentDistance		= 112
+		BAprop_SoldierThrownLanceUnknown2					= 0
+
+BAprop_BaseCavSwordAxeBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_BaseCavSwordAxeBA_EdgeDistance, BAprop_BaseCavSwordAxeBA_SpriteHeight, BAprop_BaseCavSwordAxeBA_AttackDistance, BAprop_BaseCavSwordAxeBA_AttackSpeed, BAprop_BaseCavSwordAxeBA_CritSpeed, BAprop_BaseCavSwordAxeUnknown1, BAprop_BaseCavSwordAxeBA_OpponentDistance, BAprop_BaseCavSwordAxeUnknown2
+BAprop_BaseCavLanceBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_BaseCavLanceBA_EdgeDistance, BAprop_BaseCavLanceBA_SpriteHeight, BAprop_BaseCavLanceBA_AttackDistance, BAprop_BaseCavLanceBA_AttackSpeed, BAprop_BaseCavLanceBA_CritSpeed, BAprop_BaseCavLanceUnknown1, BAprop_BaseCavLanceBA_OpponentDistance, BAprop_BaseCavLanceUnknown2
+BAprop_BaseCavThrownLanceBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_BaseCavThrownLanceBA_EdgeDistance, BAprop_BaseCavThrownLanceBA_SpriteHeight, BAprop_BaseCavThrownLanceBA_AttackDistance, BAprop_BaseCavThrownLanceBA_AttackSpeed, BAprop_BaseCavThrownLanceBA_CritSpeed, BAprop_BaseCavThrownLanceUnknown1, BAprop_BaseCavThrownLanceBA_OpponentDistance, BAprop_BaseCavThrownLanceUnknown2
+BAprop_BaseCavThrownAxeBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_BaseCavThrownAxeBA_EdgeDistance, BAprop_BaseCavThrownAxeBA_SpriteHeight, BAprop_BaseCavThrownAxeBA_AttackDistance, BAprop_BaseCavThrownAxeBA_AttackSpeed, BAprop_BaseCavThrownAxeBA_CritSpeed, BAprop_BaseCavThrownAxeUnknown1, BAprop_BaseCavThrownAxeBA_OpponentDistance, BAprop_BaseCavThrownAxeUnknown2
+BAprop_CavBowBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_CavBowBA_EdgeDistance, BAprop_CavBowBA_SpriteHeight, BAprop_CavBowBA_AttackDistance, BAprop_CavBowBA_AttackSpeed, BAprop_CavBowBA_CritSpeed, BAprop_CavBowUnknown1, BAprop_CavBowBA_OpponentDistance, BAprop_CavBowUnknown2
+BAprop_BaseCavStaffBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_BaseCavStaffBA_EdgeDistance, BAprop_BaseCavStaffBA_SpriteHeight, BAprop_BaseCavStaffBA_AttackDistance, BAprop_BaseCavStaffBA_AttackSpeed, BAprop_BaseCavStaffBA_CritSpeed, BAprop_BaseCavStaffUnknown1, BAprop_BaseCavStaffBA_OpponentDistance, BAprop_BaseCavStaffUnknown2
+BAprop_PromotedCavSwordAxeBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_PromotedCavSwordAxeBA_EdgeDistance, BAprop_PromotedCavSwordAxeBA_SpriteHeight, BAprop_PromotedCavSwordAxeBA_AttackDistance, BAprop_PromotedCavSwordAxeBA_AttackSpeed, BAprop_PromotedCavSwordAxeBA_CritSpeed, BAprop_PromotedCavSwordAxeUnknown1, BAprop_PromotedCavSwordAxeBA_OpponentDistance, BAprop_PromotedCavSwordAxeUnknown2
+BAprop_PromotedCavLanceBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_PromotedCavLanceBA_EdgeDistance, BAprop_PromotedCavLanceBA_SpriteHeight, BAprop_PromotedCavLanceBA_AttackDistance, BAprop_PromotedCavLanceBA_AttackSpeed, BAprop_PromotedCavLanceBA_CritSpeed, BAprop_PromotedCavLanceUnknown1, BAprop_PromotedCavLanceBA_OpponentDistance, BAprop_PromotedCavLanceUnknown2
+BAprop_PromotedCavThrownLanceBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_PromotedCavThrownLanceBA_EdgeDistance, BAprop_PromotedCavThrownLanceBA_SpriteHeight, BAprop_PromotedCavThrownLanceBA_AttackDistance, BAprop_PromotedCavThrownLanceBA_AttackSpeed, BAprop_PromotedCavThrownLanceBA_CritSpeed, BAprop_PromotedCavThrownLanceUnknown1, BAprop_PromotedCavThrownLanceBA_OpponentDistance, BAprop_PromotedCavThrownLanceUnknown2
+BAprop_PromotedCavThrownAxeBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_PromotedCavThrownAxeBA_EdgeDistance, BAprop_PromotedCavThrownAxeBA_SpriteHeight, BAprop_PromotedCavThrownAxeBA_AttackDistance, BAprop_PromotedCavThrownAxeBA_AttackSpeed, BAprop_PromotedCavThrownAxeBA_CritSpeed, BAprop_PromotedCavThrownAxeUnknown1, BAprop_PromotedCavThrownAxeBA_OpponentDistance, BAprop_PromotedCavThrownAxeUnknown2
+BAprop_PromotedCavStaffBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_PromotedCavStaffBA_EdgeDistance, BAprop_PromotedCavStaffBA_SpriteHeight, BAprop_PromotedCavStaffBA_AttackDistance, BAprop_PromotedCavStaffBA_AttackSpeed, BAprop_PromotedCavStaffBA_CritSpeed, BAprop_PromotedCavStaffUnknown1, BAprop_PromotedCavStaffBA_OpponentDistance, BAprop_PromotedCavStaffUnknown2
+BAprop_CavMagicBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_CavMagicBA_EdgeDistance, BAprop_CavMagicBA_SpriteHeight, BAprop_CavMagicBA_AttackDistance, BAprop_CavMagicBA_AttackSpeed, BAprop_CavMagicBA_CritSpeed, BAprop_CavMagicUnknown1, BAprop_CavMagicBA_OpponentDistance, BAprop_CavMagicUnknown2
+BAprop_PegasusSwordBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_PegasusSwordBA_EdgeDistance, BAprop_PegasusSwordBA_SpriteHeight, BAprop_PegasusSwordBA_AttackDistance, BAprop_PegasusSwordBA_AttackSpeed, BAprop_PegasusSwordBA_CritSpeed, BAprop_PegasusSwordUnknown1, BAprop_PegasusSwordBA_OpponentDistance, BAprop_PegasusSwordUnknown2
+BAprop_PegasusLanceBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_PegasusLanceBA_EdgeDistance, BAprop_PegasusLanceBA_SpriteHeight, BAprop_PegasusLanceBA_AttackDistance, BAprop_PegasusLanceBA_AttackSpeed, BAprop_PegasusLanceBA_CritSpeed, BAprop_PegasusLanceUnknown1, BAprop_PegasusLanceBA_OpponentDistance, BAprop_PegasusLanceUnknown2
+BAprop_PegasusThrownLanceBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_PegasusThrownLanceBA_EdgeDistance, BAprop_PegasusThrownLanceBA_SpriteHeight, BAprop_PegasusThrownLanceBA_AttackDistance, BAprop_PegasusThrownLanceBA_AttackSpeed, BAprop_PegasusThrownLanceBA_CritSpeed, BAprop_PegasusThrownLanceUnknown1, BAprop_PegasusThrownLanceBA_OpponentDistance, BAprop_PegasusThrownLanceUnknown2
+BAprop_FalconKnightStaffBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_FalconKnightStaffBA_EdgeDistance, BAprop_FalconKnightStaffBA_SpriteHeight, BAprop_FalconKnightStaffBA_AttackDistance, BAprop_FalconKnightStaffBA_AttackSpeed, BAprop_FalconKnightStaffBA_CritSpeed, BAprop_FalconKnightStaffUnknown1, BAprop_FalconKnightStaffBA_OpponentDistance, BAprop_FalconKnightStaffUnknown2
+BAprop_DragonSwordBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_DragonSwordBA_EdgeDistance, BAprop_DragonSwordBA_SpriteHeight, BAprop_DragonSwordBA_AttackDistance, BAprop_DragonSwordBA_AttackSpeed, BAprop_DragonSwordBA_CritSpeed, BAprop_DragonSwordUnknown1, BAprop_DragonSwordBA_OpponentDistance, BAprop_DragonSwordUnknown2
+BAprop_DragonLanceBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_DragonLanceBA_EdgeDistance, BAprop_DragonLanceBA_SpriteHeight, BAprop_DragonLanceBA_AttackDistance, BAprop_DragonLanceBA_AttackSpeed, BAprop_DragonLanceBA_CritSpeed, BAprop_DragonLanceUnknown1, BAprop_DragonLanceBA_OpponentDistance, BAprop_DragonLanceUnknown2
+BAprop_DragonThrownLanceBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_DragonThrownLanceBA_EdgeDistance, BAprop_DragonThrownLanceBA_SpriteHeight, BAprop_DragonThrownLanceBA_AttackDistance, BAprop_DragonThrownLanceBA_AttackSpeed, BAprop_DragonThrownLanceBA_CritSpeed, BAprop_DragonThrownLanceUnknown1, BAprop_DragonThrownLanceBA_OpponentDistance, BAprop_DragonThrownLanceUnknown2
+BAprop_InfantryBowBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_InfantryBowBA_EdgeDistance, BAprop_InfantryBowBA_SpriteHeight, BAprop_InfantryBowBA_AttackDistance, BAprop_InfantryBowBA_AttackSpeed, BAprop_InfantryBowBA_CritSpeed, BAprop_InfantryBowUnknown1, BAprop_InfantryBowBA_OpponentDistance, BAprop_InfantryBowUnknown2
+BAprop_ArmorSwordAxeBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_ArmorSwordAxeBA_EdgeDistance, BAprop_ArmorSwordAxeBA_SpriteHeight, BAprop_ArmorSwordAxeBA_AttackDistance, BAprop_ArmorSwordAxeBA_AttackSpeed, BAprop_ArmorSwordAxeBA_CritSpeed, BAprop_ArmorSwordAxeUnknown1, BAprop_ArmorSwordAxeBA_OpponentDistance, BAprop_ArmorSwordAxeUnknown2
+BAprop_ArmorLanceBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_ArmorLanceBA_EdgeDistance, BAprop_ArmorLanceBA_SpriteHeight, BAprop_ArmorLanceBA_AttackDistance, BAprop_ArmorLanceBA_AttackSpeed, BAprop_ArmorLanceBA_CritSpeed, BAprop_ArmorLanceUnknown1, BAprop_ArmorLanceBA_OpponentDistance, BAprop_ArmorLanceUnknown2
+BAprop_ArmorThrownLanceBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_ArmorThrownLanceBA_EdgeDistance, BAprop_ArmorThrownLanceBA_SpriteHeight, BAprop_ArmorThrownLanceBA_AttackDistance, BAprop_ArmorThrownLanceBA_AttackSpeed, BAprop_ArmorThrownLanceBA_CritSpeed, BAprop_ArmorThrownLanceUnknown1, BAprop_ArmorThrownLanceBA_OpponentDistance, BAprop_ArmorThrownLanceUnknown2
+BAprop_ArmorThrownAxeBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_ArmorThrownAxeBA_EdgeDistance, BAprop_ArmorThrownAxeBA_SpriteHeight, BAprop_ArmorThrownAxeBA_AttackDistance, BAprop_ArmorThrownAxeBA_AttackSpeed, BAprop_ArmorThrownAxeBA_CritSpeed, BAprop_ArmorThrownAxeUnknown1, BAprop_ArmorThrownAxeBA_OpponentDistance, BAprop_ArmorThrownAxeUnknown2
+BAprop_ArmorBowBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_ArmorBowBA_EdgeDistance, BAprop_ArmorBowBA_SpriteHeight, BAprop_ArmorBowBA_AttackDistance, BAprop_ArmorBowBA_AttackSpeed, BAprop_ArmorBowBA_CritSpeed, BAprop_ArmorBowUnknown1, BAprop_ArmorBowBA_OpponentDistance, BAprop_ArmorBowUnknown2
+BAprop_ArmorStaffBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_ArmorStaffBA_EdgeDistance, BAprop_ArmorStaffBA_SpriteHeight, BAprop_ArmorStaffBA_AttackDistance, BAprop_ArmorStaffBA_AttackSpeed, BAprop_ArmorStaffBA_CritSpeed, BAprop_ArmorStaffUnknown1, BAprop_ArmorStaffBA_OpponentDistance, BAprop_ArmorStaffUnknown2
+BAprop_ArmorMagicBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_ArmorMagicBA_EdgeDistance, BAprop_ArmorMagicBA_SpriteHeight, BAprop_ArmorMagicBA_AttackDistance, BAprop_ArmorMagicBA_AttackSpeed, BAprop_ArmorMagicBA_CritSpeed, BAprop_ArmorMagicUnknown1, BAprop_ArmorMagicBA_OpponentDistance, BAprop_ArmorMagicUnknown2
+BAprop_ArmoredBowBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_ArmoredBowBA_EdgeDistance, BAprop_ArmoredBowBA_SpriteHeight, BAprop_ArmoredBowBA_AttackDistance, BAprop_ArmoredBowBA_AttackSpeed, BAprop_ArmoredBowBA_CritSpeed, BAprop_ArmoredBowUnknown1, BAprop_ArmoredBowBA_OpponentDistance, BAprop_ArmoredBowUnknown2
+BAprop_BrigandsAxeBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_BrigandsAxeBA_EdgeDistance, BAprop_BrigandsAxeBA_SpriteHeight, BAprop_BrigandsAxeBA_AttackDistance, BAprop_BrigandsAxeBA_AttackSpeed, BAprop_BrigandsAxeBA_CritSpeed, BAprop_BrigandsAxeUnknown1, BAprop_BrigandsAxeBA_OpponentDistance, BAprop_BrigandsAxeUnknown2
+BAprop_BrigandsThrownAxeBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_BrigandsThrownAxeBA_EdgeDistance, BAprop_BrigandsThrownAxeBA_SpriteHeight, BAprop_BrigandsThrownAxeBA_AttackDistance, BAprop_BrigandsThrownAxeBA_AttackSpeed, BAprop_BrigandsThrownAxeBA_CritSpeed, BAprop_BrigandsThrownAxeUnknown1, BAprop_BrigandsThrownAxeBA_OpponentDistance, BAprop_BrigandsThrownAxeUnknown2
+BAprop_BrigandsBowBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_BrigandsBowBA_EdgeDistance, BAprop_BrigandsBowBA_SpriteHeight, BAprop_BrigandsBowBA_AttackDistance, BAprop_BrigandsBowBA_AttackSpeed, BAprop_BrigandsBowBA_CritSpeed, BAprop_BrigandsBowUnknown1, BAprop_BrigandsBowBA_OpponentDistance, BAprop_BrigandsBowUnknown2
+BAprop_InfantryStaffBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_InfantryStaffBA_EdgeDistance, BAprop_InfantryStaffBA_SpriteHeight, BAprop_InfantryStaffBA_AttackDistance, BAprop_InfantryStaffBA_AttackSpeed, BAprop_InfantryStaffBA_CritSpeed, BAprop_InfantryStaffUnknown1, BAprop_InfantryStaffBA_OpponentDistance, BAprop_InfantryStaffUnknown2
+BAprop_InfantryMagicBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_InfantryMagicBA_EdgeDistance, BAprop_InfantryMagicBA_SpriteHeight, BAprop_InfantryMagicBA_AttackDistance, BAprop_InfantryMagicBA_AttackSpeed, BAprop_InfantryMagicBA_CritSpeed, BAprop_InfantryMagicUnknown1, BAprop_InfantryMagicBA_OpponentDistance, BAprop_InfantryMagicUnknown2
+BAprop_MyrmidonFighterHeroBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_MyrmidonFighterHeroBA_EdgeDistance, BAprop_MyrmidonFighterHeroBA_SpriteHeight, BAprop_MyrmidonFighterHeroBA_AttackDistance, BAprop_MyrmidonFighterHeroBA_AttackSpeed, BAprop_MyrmidonFighterHeroBA_CritSpeed, BAprop_MyrmidonFighterHeroUnknown1, BAprop_MyrmidonFighterHeroBA_OpponentDistance, BAprop_MyrmidonFighterHeroUnknown2
+BAprop_SwordmasterHeroFE4BattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_SwordmasterHeroFE4BA_EdgeDistance, BAprop_SwordmasterHeroFE4BA_SpriteHeight, BAprop_SwordmasterHeroFE4BA_AttackDistance, BAprop_SwordmasterHeroFE4BA_AttackSpeed, BAprop_SwordmasterHeroFE4BA_CritSpeed, BAprop_SwordmasterHeroFE4Unknown1, BAprop_SwordmasterHeroFE4BA_OpponentDistance, BAprop_SwordmasterHeroFE4Unknown2
+BAprop_InfantrySwordBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_InfantrySwordBA_EdgeDistance, BAprop_InfantrySwordBA_SpriteHeight, BAprop_InfantrySwordBA_AttackDistance, BAprop_InfantrySwordBA_AttackSpeed, BAprop_InfantrySwordBA_CritSpeed, BAprop_InfantrySwordUnknown1, BAprop_InfantrySwordBA_OpponentDistance, BAprop_InfantrySwordUnknown2
+BAprop_UNUSED_24BattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_UNUSED_24BA_EdgeDistance, BAprop_UNUSED_24BA_SpriteHeight, BAprop_UNUSED_24BA_AttackDistance, BAprop_UNUSED_24BA_AttackSpeed, BAprop_UNUSED_24BA_CritSpeed, BAprop_UNUSED_24Unknown1, BAprop_UNUSED_24BA_OpponentDistance, BAprop_UNUSED_24Unknown2
+BAprop_InfantryThrownAxeBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_InfantryThrownAxeBA_EdgeDistance, BAprop_InfantryThrownAxeBA_SpriteHeight, BAprop_InfantryThrownAxeBA_AttackDistance, BAprop_InfantryThrownAxeBA_AttackSpeed, BAprop_InfantryThrownAxeBA_CritSpeed, BAprop_InfantryThrownAxeUnknown1, BAprop_InfantryThrownAxeBA_OpponentDistance, BAprop_InfantryThrownAxeUnknown2
+BAprop_DancerThievesBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_DancerThievesBA_EdgeDistance, BAprop_DancerThievesBA_SpriteHeight, BAprop_DancerThievesBA_AttackDistance, BAprop_DancerThievesBA_AttackSpeed, BAprop_DancerThievesBA_CritSpeed, BAprop_DancerThievesUnknown1, BAprop_DancerThievesBA_OpponentDistance, BAprop_DancerThievesUnknown2
+BAprop_BallisticiansBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_BallisticiansBA_EdgeDistance, BAprop_BallisticiansBA_SpriteHeight, BAprop_BallisticiansBA_AttackDistance, BAprop_BallisticiansBA_AttackSpeed, BAprop_BallisticiansBA_CritSpeed, BAprop_BallisticiansUnknown1, BAprop_BallisticiansBA_OpponentDistance, BAprop_BallisticiansUnknown2
+BAprop_DarkPrinceBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_DarkPrinceBA_EdgeDistance, BAprop_DarkPrinceBA_SpriteHeight, BAprop_DarkPrinceBA_AttackDistance, BAprop_DarkPrinceBA_AttackSpeed, BAprop_DarkPrinceBA_CritSpeed, BAprop_DarkPrinceUnknown1, BAprop_DarkPrinceBA_OpponentDistance, BAprop_DarkPrinceUnknown2
+BAprop_UNUSED_29BattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_UNUSED_29BA_EdgeDistance, BAprop_UNUSED_29BA_SpriteHeight, BAprop_UNUSED_29BA_AttackDistance, BAprop_UNUSED_29BA_AttackSpeed, BAprop_UNUSED_29BA_CritSpeed, BAprop_UNUSED_29Unknown1, BAprop_UNUSED_29BA_OpponentDistance, BAprop_UNUSED_29Unknown2
+BAprop_LordBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_LordBA_EdgeDistance, BAprop_LordBA_SpriteHeight, BAprop_LordBA_AttackDistance, BAprop_LordBA_AttackSpeed, BAprop_LordBA_CritSpeed, BAprop_LordUnknown1, BAprop_LordBA_OpponentDistance, BAprop_LordUnknown2
+BAprop_SoldierLanceBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_SoldierLanceBA_EdgeDistance, BAprop_SoldierLanceBA_SpriteHeight, BAprop_SoldierLanceBA_AttackDistance, BAprop_SoldierLanceBA_AttackSpeed, BAprop_SoldierLanceBA_CritSpeed, BAprop_SoldierLanceUnknown1, BAprop_SoldierLanceBA_OpponentDistance, BAprop_SoldierLanceUnknown2
+BAprop_SoldierThrownLanceBattleAnimationMovementDataEntry .dstruct structAnimationMovementData, BAprop_SoldierThrownLanceBA_EdgeDistance, BAprop_SoldierThrownLanceBA_SpriteHeight, BAprop_SoldierThrownLanceBA_AttackDistance, BAprop_SoldierThrownLanceBA_AttackSpeed, BAprop_SoldierThrownLanceBA_CritSpeed, BAprop_SoldierThrownLanceUnknown1, BAprop_SoldierThrownLanceBA_OpponentDistance, BAprop_SoldierThrownLanceUnknown2

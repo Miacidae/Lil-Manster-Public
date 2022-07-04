@@ -1,0 +1,516 @@
+commands
+XX 00 Effect Mask
+XX 02 Load Tiles [pauses codes until graphics finish loading]
+XX 04 Display Tiles
+XX 06 Tile Effect
+XX 08 Battle Scene Mod
+XX 0E BG? [deals with background]
+XX 10 Battle Scene Mod2 [slightly different]
+XX 16 Effect / Palette
+XX 18 BG Mod
+XX 1A Placement / Scrolling
+XX 1C Secondary Palette
+XX 1E Scroll to Defender
+XX 20 Screen Shake [uses variable, no special codes]
+XX 22 Add Background Hue
+XX 24 Special Triangle Masking
+XX 26 BG2? [deals with background]
+XX 28 Load Tile2 [pauses codes until graphics finish loading] [different?]
+XX 2A Play Sound
+XX 2C Play Sound (low) [slightly lower pitch]
+XX 2E Play Sound (lower) [slightly lowerer pitch]
+
++$40 = (+pause)
+	- Waits for a fixed period based on the action to allow it to finish, saves on space instead of using the 54 code after everything.
+	- A3 56 for example will use a single animated white palette cycle from healing staves, but adds a pause with it so that the next commands don't run while it's still cycling; it's also used for repeated single cycles such as the aforementioned.
+	- Causes lockups for stuff that usually isn't used with pauses; only recommended for these codes: 40, 42, 4E, 56, 5A, 5E, 68
+
+XX 54 --Wait: 8 frames--
+
+XX FF Control codes
+
+F8 FF pause for damage absorb, place after FA FF (as with rizziah)
+F9 FF the point where the target dodges if it's a miss (using more than one is fine, just add an additional FC FF after each)
+FA FF inflict damage if no miss
+FB FF pause for healing, heals target (meaning don't use this for attack magic)
+FC FF defender dodge action and reaction, must be placed after F9 FF (and the second FD FF) to prevent lockups
+FD FF cast, the first use starts the animation loop on the caster, the second FD FF is for resting
+FE FF wait? (doesn't do anything noticeable; free space)
+FF FF exit animation
+
+
+17 10 08 54 05 0E 06 4E 06 18 FD FF 11 08 12 08 16 10
+long range magic codeset
+ - blacks out current view, unloads current view, loads target view
+
+3B 08 begin animation? (is this necessary?)
+36 08 end animation (I think this clears most non-tile effects)
+
+
+XX 00 Effect Mask
+-----
+01 00 pillar mask, contract from medium
+02 00 Pillar: Medium
+03 00 Remove Mjölnir Orb
+05 00 pillar mask, thin
+07 00 Large Circle around Target
+08 00 Contract Circle
+09 00 Bolganone Pit Open
+0A 00 Very Large Contract: Fast
+0B 00 Bolganone Mask
+0C 00 Pillar: Very Thin
+0D 00 Pillar: Slow Expand to Medium
+0E 00 Pillar: Slow Contract to Very Thin
+10 00 Pillar: Large
+12 00 expand to thin pillar
+14 00 Circle under Target
+16 00 Mjölnir Orb Arrive
+17 00 Mjölnir Orb Leave
+19 00 Pillar: Very Thin
+1A 00 Pillar: Expand
+1B 00 Target Disappears
+1C 00 Pillar: Contract
+1E 00 Pillar: One Pixel
+21 00 Fill Screen: Slow Expand from Nothing
+23 00 Naga Blast
+25 00 Fill Screen: Slow Expand from Nothing
+26 00 Fill Screen: Slow Accurate Expand from Nothing
+28 00 Fill Screen: Fast Expand from Nothing 
+29 00 Valkyrie Slow Expand
+2A 00 Pillar: Very Slow Expand to Large
+2B 00 Pillar: Quick Contract to Very Thin
+2C 00 Loptous (No?)
+31 00 explosion start?
+
+
+XX 02 Load Tiles
+-----
+07 02 berserk
+09-0A-0B 02 aura
+10 02 bolganon
+12 02 warp
+16 02 restore
+18-19 02 sleep
+20-21 02 valkyrie
+24-25-26 02 fire/elfire
+37-38-39 02 holsety
+3A-3B 02 wind
+3D 02 elwind background
+40 02 tornado
+4B-4D 02 speed lines
+4F-56-5A-5E 02 meteo?
+63-64-65-7D-7E 02 lightning
+66 02 narga
+68 02 yotsmungand
+6C 02 hell
+72-86 02 loptous
+78-79 02 fenrir
+7B-7C 02 elfire
+7F-80 02 promotion
+
+
+XX 04 Display Tiles
+-----
+00 04 ? display
+02 04 ? display
+04 04 ? display
+06 04 Basic Display
+08 04 Dim Display
+09 04 Remove Display?
+0D 04 Dim
+0F 04 Defender Mask
+1E 04 wind pattern?
+1F 04 clear wind pattern?
+2A 04 Sleep Pattern
+30 04 Translucent over Defender
+32 04 Draw behind Defender
+34 04 Black out BG
+38 04 Meteor something1
+39 04 Meteor something2
+3A 04 Meteor something3
+4B 04 Mjölnir Whooshy BG
+4C 04 Mjölnir Shock
+52 04 Forseti BG Break?
+54 04 Instant Screen Black Out 1
+60 04 Instant Screen Black Out 2
+62 04 Clear Tiles?
+68 04 Slow Fade In?
+6D 04 Valkyrie: Wavy effect
+6E 04 Valkyrie: Something???
+6F 04 Valkyrie: Mask
+
+
+XX 06 Tile Effect
+-----
+00 06 Stop Effect
+08 06 Heavy Ripple [does not move, need to animate layer] [+special horizontal split?]
+09 06 Restore Wavy
+0A-0B 06 Unflatten Appear [like fire, wind, etc]
+0C 06 3D Flatten to Ground
+0D 06 3D Undo Flatten
+0F 06 ? (seems to skip certain '+40 wait' commands)
+11 06 Ripple Effect [does not move, need to animate layer]
+13 06 special horizontal split?
+14 06 Mjölnir Orb
+16 06 Wavy
+18 06 holsety background scroll
+19 06 Distortion [reverses layer horizontal motion]
+13 06 19 06 split horizontal motion?
+
+
+XX 08 Battle Scene Mod
+-----
+0F 08 aura background scroll?
+11 08 Hide Attacker
+12 08 Show Defender
+24 08 defender dies
+25 08 defender raises offscreen (warp/return)
+26 08 Hide Defender
+27 08 lower defender from offscreen (rescue)
+28 08 hide defender (not shadow)
+29 08 flicker defender (promotion)
+2A 08 Shift Background Up
+2B 08 Reset BG
+2C 08 Meteor Something
+2D 08 shift background
+2F 08 promotion change defender to attacker
+30 08 narga brighten + HUD fade out
+31 08 narga fade in + HUD fade in
+37 08 Display Attacker
+38 08 move attacker to center?
+39 08 Naga Fade In + HUD Fade In
+3D 08 level up jingle
+3F 08 Valkyrie: HUD Fade Out
+42 08 Mute Music 1
+43 08 Mute Music 2
+45 08 move both characters to center (long range magic/promotion default)
+
+
+XX 0E BG?
+-----
+05 0E Meteor Something 1
+06 0E Meteor Something 2
+
+
+XX 10 Battle Scene Mod2
+-----
+03 10 Fade Out HUD to black
+04 10 Fade In HUD
+06 10 Fade Out HUD to black
+07 10 Fade In HUD: Fast
+08 10 Fade Out HUD to black: Fast
+11 10 Hide Attacker
+13 10 Fade Out Battle Area to Black (+characters): Fast
+14 10 Fade In Battle Area
+15 10 Fade Out Battle Area to Black (+characters): Medium
+16 10 Fade In Battle Area: Fast
+17 10 Fade Out Battle Area to Black (+characters): Super Fast
+24 10 Defender Dies
+25 10 Defender Raises Offscreen [Warp/Return]
+26 10 Hide Defender
+27 10 Lower Defender from Offscreen [Rescue]
+28 10 Hide Defender but not Shadow
+29 10 Flicker Defender [Promotion]
+2F 10 Promotion Change Attacker to Defender
+
+
+XX 16 Effect / Palette
+-----
+07 16 Fade Out 1 [interruptible]
+11 16 Slow Fade Out
+12 16 Reset Tile/Palette Effects
+13 16 Fade Out 2 [different]
+1F 16 Enable XX 22 code?
+20 16 Heavy Darkness
+21 16 Instant White
+60 16 Fade In
+B7 16 Palette Fade Out
+B8 16 Slow Darken BG
+
+A3-A4-A5-A6-A7-A8 live/relive/etc
+08 16 berserk
+B2-B3-B4-B5 16 tornado
+00-BA-BB 16 blizzard white
+0B-0C 16 reserve gold
+0E-0F-10 16 bolganon red
+22 16 Restore Blue
+53-55-56-58-5D-5E 16 meteo charge (speedlines)
+57-59-5A-5B-5C 16 meteo charge (background only)
+7A-7B-7C-7D-7E-7F-80 16 fenrir
+7C 16 fenrir purple
+83-84-85 16 Flashing Teal/Pink
+89 16 flashing teal
+A1 16 fire red
+43-44 16 holsety green
+45-46 16 Warp Gold/Purple
+8C-8D 16 warp purple/gold
+3C-42 16 wind blue/yellow
+28 16 elwind blue/yellow
+40 16 Return Gold
+3A-3F 16 Sleep
+49-4A-4B 16 change floor color?
+07 1C 49 16 aura gold
+4A 16 aura green (background only)
+4C-4D 16 gold
+4E 16 green?
+4F-50-51 16 Valflame Red
+19 16 lightning yellows
+1A 16 lightning brighten to white
+14-15-16-17 16 Valkyrie Pink
+1E-1F-20-21 16 silence purple/pink
+94-95-96-99-9A-9B-9C-9E-96-92 16 promotion
+70 16 Naga Dragon Fade In
+74 16 Naga Brightness
+2A~39 16 rizziah
+24 16 some blue?
+
+90 16 darken attacker
+91 16 blacken target
+92 16 whiten target
+97 16 lighten shadows
+98 16 whiten shadows
+
+
+XX 18 BG Mod
+-----
+04-05 18 clear?
+
+
+XX 1A Placement / Scrolling
+-----
+00 1A Above attacker
+01 1A Defender
+02 1A Center of Screen
+05 1A Blizzard/Jörmungandr Scroll
+08 1A Scroll Up Forward
+0B 1A Just below Attacker
+0C 1A Scroll Slow Forward, Defender Detection [tip: use 5A pause]
+0F 1A Scroll Fast Upward
+12 1A scroll forward fast, defender detection (tip: use 5A pause)
+16 1A crazy horizontal scroll (often can't be stopped; may disrupt further 1A placements)
+17 1A Behind Attacker
+1D 1A Scroll Very Fast Horizontal
+1E 1A Scroll Bypasses Target [like fire/wind]
+20 1A Sleep scroll
+22 1A Defender Ground
+27 1A (works with 16 1A)
+2B 1A Scroll Fast Horizontal
+35 1A Restore Staff Scroll
+36 1A upward, slightly forward scroll?
+3D 1A Center of Screen 2
+3F 1A scroll forward, defender detection (tip: use 5A pause)
+45-44 1A defender location (special)
+46 1A Ground Center
+47 1A Upward Scroll
+48 1A something to do with bypassing target
+4A 1A (works with 16 1A)
+4B 1A Elfire Dual Flicker
+4C 1A Scroll Upward Foreground
+
+
+XX 1E Scroll to Defender
+-----
+00 1E Slowest
+01 1E Slow 1
+02 1E Fast 1
+03 1E Very Fast
+04 1E Beyond Fast
+05 1E Slow 2
+06 1E Medium 1
+07 1E Medium 2
+09 1E Normal [just about every magic uses this]
+0B 1E Medium 3
+0C 1E Medium 4
+0D 1E Fast 2
+
+
+XX 22 Add Background Hue
+-----
+00 22 Red 
+01 22 Light Blue
+02 22 Purple
+03 22 Grey
+05 22 Solid Blue
+07 22 Very Dark
+
+
+18B181 torhammer orb palette
+200200 narga background palette
+202338 holsety palette
+
+-----
+(below made easier to read, japanese research)
+
+Magic Animation Pointers 17917D
+
+Animation Locations
+179217 Live (38)
+179261 level up (3C)
+17929D Fire (36)
+1792D3 (recovery?) (34)
+179307 Aura (6C)
+179373 Long Range Libro (5C)
+1793CF Relive (38)
+179407 Recover (38)
+17943F Berserk (30)
+17946F Reserve (3E)
+1794AD Bolganone (6E)
+17951B Meteo (92)
+1795AD Return (36)
+1795E3 Warp (3E)
+179621 Rescue (44)
+179665 Charm (42)
+1796A7 Restore (44)
+1796EB Valkyrie (7C)
+179767 Silence (68)
+1797CF Sleep (42)
+179811 (nothing) (20)
+179831 Elfire (4E)
+17987F Valflame (96)
+179915 Thunder (66)
+17997B Elthunder (64)
+1799E1 Thoron (8C)
+179A6B Torhammer (70)
+179ADB Thunderstorm (84)
+179B5F Wind (3A)
+179B99 Elwind (36)
+179BCF Tornado (44)
+179C13 Holsety (68)
+179C7B Blizzard (74)
+179CEF Lightning (5C)
+179D4B Rizziah (88)
+179DD3 Narga (96)
+179E69 Yotsmungand (5A)
+179EC3 Fenrir (A2)
+179F65 Hel (98)
+179FFD Loptyr (9A)
+17A097 Death (25)
+17A0BD Dialogue bubble (21)
+17A211 Promotion
+17A4F5 Long Range Sleep (63)
+(more)
+
+-----
+(below was NOT made easier to read, japanese research)
+(the list between 00-65 is the reference number for the tile-loading animation codes 02 and 28)
+
+- (Equivalent to number 24 in the image reading instruction in magic effect) specification of the image of the Fire
+$ 17B3E9: 42 6F EF
+↑ I have to specify the address of the image here.
+$ 17B3EC: 88 8B 7E 00
+↑? In a number of the same for all specified, like to hang when I put a number greater extremely
+$ 17B3F0: 20 00 14
+↑ I have to specify the display format of the image here.
+
+In pagination for this Ah minute, image magic effect is specified.
+
+The copy and paste the image designation of Fire in empty space if they wish to make of such a fireball like a genealogy of phantom water,
+I specify the address image rewriting the image of fire is on.
+And I read that number in the way of magic effects that separate copy and paste the structure of the Fire.
+Multiplexed caliber and wind arrow also same.
+
+$ 17B281: character and level up gauge (00)
+$ 17B28B: Live (01)
+$ 17B29F: Riraibu (02)
+$ 17B2A9: ※ (03)
+$ 17B2B3: recover (04)
+$ 17B2BD: ※ (05)
+$ 17B2C7: Basaku (06)
+$ 17B2D1: ※ (07)
+$ 17B2DB: Aura (08)
+$ 17B2E5: ※ (09)
+$ 17B2EF: ※ (0A)
+$ 17B2F9: reserve (0B)
+$ 17B303: ※ (0C)
+$ 17B30D:? (0D)
+$ 17B317: ※ (0E)
+$ 17B321: Boruganon (0F)
+$ 17B32B: ※ (10)
+$ 17B335: Warp rescue (11)
+$ 17B33F: ※ (12)
+$ 17B349: return (13)
+$ 17B353: ※ (14)
+$ 17B35D: Rest (15)
+$ 17B367: ※ (16)
+$ 17B371: Sleep (17)
+$ 17B37B: ※ (18)
+$ 17B385: ※ (19)
+$ 17B38F: ※ (1A)
+$ 17B399: free (1B)
+$ 17B3A3: free (1C)
+$ 17B3D5: free (1D)
+$ 17B3AD: free (1E)
+$ 17B3B6: free (1F)
+$ 17B3C1: Hoop mystery (20)
+$ 17B3CB: ※ (21)
+$ 17B3D5: free (22)
+$ 17B3DF: free (23)
+$ 17B3E9: Fire (24)
+$ 17B3F3: ※ (25)
+$ 17B3FD: ※ (26)
+$ 17B407: ※ (27)
+$ 17B411: Farah Flame (28)
+$ 17B41B: or Metio Fenrir (29)
+$ 17B425:? (2A)
+$ 17B42F: ※ (2B)
+$ 17B439: ※ (2C)
+$ 17B443: ※ (2D)
+$ 17B44D: ※ (2E)
+$ 17B457: or Metio Fenrir (2F)
+$ 17B461: Metio 2 (30)
+$ 17B46B: ※ (31)
+$ 17B475: ※ (32)
+$ 17B47F: ※ (33)
+$ 17B489: Rizaia (34)
+$ 17B493: ※ (35)
+$ 17B49D: ※ (36)
+$ 17B4A7: Foruseti (37)
+$ 17B4B1: ※ (39)
+Part of the window: $ 17B4BB? (3A)
+$ 17B4C5: Wind (3B)
+$ 17B4CF: ※ (3C)
+$ 17B4D9: ※ (3D)
+$ 17B4E3: El Wind (3E)
+$ 17B4ED: ※ (3F)
+$ 17B4F7: ※ (40)
+$ 17B510:? (41)
+$ 17B50B: ※ (42)
+$ 17B515: ※ (43)
+$ 17B51F: Tornado (44)
+$ 17B529: ※ (45)
+$ 17B533: Blizzard (46)
+$ 17B53D:? (47)
+$ 17B547: ※ (48)
+$ 17B551: ※ (49)
+$ 17B55B: ※ (4A)
+$ 17B565: ※ (4B)
+$ 17B56F: Thor hammer (4C)
+$ 17B579: Thor Hammer 2 (4D)
+$ 17B583: ※ (4E)
+$ 17B58D: ※ (4F)
+$ 17B597: El Thunder (4F)
+$ 17B5A1: Toron (50)
+$ 17B5AB: ※ (51)
+$ 17B5B5: ※ (52)
+$ 17B5BF: ※ (53)
+$ 17B5C9: ※ (54)
+$ 17B5D3: ※ (55)
+$ 17B5DD: Thunder (56)
+$ 17B5E7: Thunder 2 (57)
+$ 17B5F1: ※ (58)
+$ 17B5FB: ※ (59)
+$ 17B605: Toron 2 (5A)
+$ 17B60F: Tornado? (5B)
+$ 17B619:? (5C)
+$ 17B623: ※ (5D)
+$ 17B62D: Toron 3 (5E)
+$ 17B637: El Thunder (5F)
+$ 17B641: ※ (60)
+$ 17B64B: ※ (61)
+$ 17B655: ※ (62)
+$ 17B65F: Lightning (63)
+$ 17B65F: ※ (64)
+$ 17B673:? (65)
+
+※ ringing at There is one image for addressing portions of what configuration itself is does not specify the image.
+But those who are not to crush be good.

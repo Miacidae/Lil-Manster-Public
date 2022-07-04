@@ -1,0 +1,7 @@
+*.sfc
+
+fe5trans.ups
+labels.txt
+log.txt
+tools/__pycache__
+tools/64tass

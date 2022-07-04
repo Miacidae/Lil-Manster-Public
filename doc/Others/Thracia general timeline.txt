@@ -1,0 +1,15 @@
+Year	Leif's age		Event					Citations
+763		2				Burning of Leonster		< "13 years ago"
+764		3				
+765		4				
+766		5				Leave Alster			< "10 years ago"
+767		6				
+768		7				Arrive in Tahra			--
+769		8										||
+770		9										||"5 years"
+771		10										||in Tahra
+772		11										||
+773		12				Leave Tahra for Fiana	--
+774		13										||Asvel searches			+ "Three years"
+775		14										||for Leif for "3 years"	+ in Fiana (24x)
+776		15				Start of game			--

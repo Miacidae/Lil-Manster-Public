@@ -1,0 +1,35 @@
+B1172 - B11B3
+
+3B 08     ; BEGIN
+18 42     ; Load Tile: Sleep (+pause)
+FE FF     ; --Wait--
+B9 16     ; Effect / Palette: ???
+19 42     ; Load Tile: Sleep Tilemap (+pause)
+FE FF     ; --Wait--
+0C 5E     ; Scroll to Defender: Medium 4 (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+2E 2A     ; Play Sound: Sleep
+2A 04     ; Display Tiles: Sleep Pattern
+08 06     ; Tile Effect: Heavy Ripple
+20 1A     ; Scrolling: Sleep
+3C 16     ; Palette: Sleep 3
+3D 56     ; Palette: Sleep 4 (+pause)
+FE FF     ; --Wait--
+3A 16     ; Palette: Sleep 1
+3B 16     ; Palette: Sleep 2
+B0 54     ; --Wait: 176 frames--
+FE FF     ; --Wait--
+F9 FF     ; Dodge point
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+3E 16     ; Palette: Sleep 5
+3F 56     ; Palette: Sleep 6 (+pause)
+FE FF     ; --Wait--
+2B 04     ; Display Tiles: ???
+00 06     ; Tile Effect: Stop
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+36 08     ; END
+FF FF     ; EXIT

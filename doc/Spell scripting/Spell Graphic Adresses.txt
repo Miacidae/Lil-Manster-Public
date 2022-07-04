@@ -1,0 +1,163 @@
+(Turn this into a proper ASM)
+B372E
+
+38 F1 C6 00 B0 7E 00 70 00 04 // 00	$23:7138	EXP Bar
+15 FA D1 00 B0 7E 00 30 00 06 // 01	$28:FA15	Heal
+82 FC D1 00 B0 7E 00 38 00 10 // 02	$28:FC82	Heal Tilemap
+10 FE D1 00 B0 7E 00 30 00 08 // 03	$28:FE10	Mend
+33 81 D2 00 B0 7E 00 38 00 10 // 04	$29:0133	Mend Tilemap
+75 83 D2 00 B0 7E 00 30 00 10 // 05	$29:0375	Recover
+80 88 D2 00 B0 7E 00 38 00 10 // 06	$29:0880	Recover Tilemap
+39 C9 D2 00 B0 7E 00 20 00 20 // 07	$29:4939	Berserk
+13 D7 D2 00 B0 7E 00 38 00 10 // 08	$29:5713	Berserk Tilemap
+D0 ED 93 00 B0 7E 00 20 00 1C // 09	$09:EDD0	Aura
+58 F7 FC 00 B0 7E 00 38 00 10 // 0A $3E:7758	Aura Tilemap1
+AA FA FC 00 B0 7E 00 74 00 08 // 0B $3E:7AAA	Aura Tilemap2 (BG)
+AE 8B D2 00 B0 7E 00 20 00 20 // 0C	$29:0BAE	Fortify
+FC 9B D2 00 B0 7E 00 38 00 08 // 0D	$29:1BFC	Fortify Tilemap
+D3 F7 82 00 B0 7E 00 30 00 05 // 0E $01:77D3	Bolganone Ground - 2bpp
+6F FD 82 00 B0 7E 00 70 00 08 // 0F $01:7D6F	Bolganone Ground Tilemap
+B0 E5 82 00 B0 7E 00 20 00 1C // 10 $01:65B0	Bolganone Flame
+5B FB 82 00 B0 7E 00 38 00 08 // 11 $01:7B5B	Bolganone Flame Tilemap
+B2 A0 D2 00 B0 7E 00 20 00 20 // 12	$29:20B2	FE4 Warp	
+F1 B1 D2 00 B0 7E 00 38 00 10 // 13	$29:31F1	FE4 Warp Tilemap
+1A B4 D2 00 B0 7E 00 30 20 01 // 14	$29:341A	FE4 Return
+46 B4 D2 00 B0 7E 00 38 00 10 // 15	$29:3446	FE4 Return Tilemap
+24 B5 D2 00 B0 7E 00 20 00 18 // 16	$29:3524	Restore
+D5 BB D2 00 B0 7E 00 38 00 10 // 17	$29:3BD5	Restore Tilemap
+33 BE D2 00 B0 7E 00 20 00 10 // 18	$29:3E33	Sleep
+60 C6 D2 00 B0 7E 00 38 00 10 // 19	$29:4660	Sleep Tilemap
+C9 C7 D2 00 B0 7E 00 38 00 10 // 1A	$29:47C9	Some Tilemap1
+00 00 00 00 00 00 00 00 00 00 // 1B
+00 00 00 00 00 00 00 00 00 00 // 1C
+00 00 00 00 00 00 00 00 00 00 // 1D
+00 00 00 00 00 00 00 00 00 00 // 1E
+00 00 00 00 00 00 00 00 00 00 // 1F
+71 D9 D2 00 B0 7E 00 20 00 04 // 20	$29:5971	Valkyrie Highlight
+C3 DA D2 00 B0 7E 00 38 00 08 // 21	$29:5AC3	Valkyrie Highlight Tilemap
+00 00 00 00 00 00 00 00 00 00 // 22
+00 00 00 00 00 00 00 00 00 00 // 23
+42 E1 D2 00 B0 7E 00 20 00 14 // 24	$29:6142	Fire/Elfire
+72 EB D2 00 B0 7E 00 30 00 20 // 25	$29:6B72	Elfire Tilemap
+BA F0 D2 00 B0 7E 00 38 00 10 // 26 $29:70BA	Fire Tilemap
+FC F1 D2 00 B0 7E 00 38 00 10 // 27	$29:71FC	Some Tilemap3
+80 EC F0 00 B0 7E 00 00 00 20 // 28 $38:6C80	Valflame Sun
+00 BF DA 00 B0 7E 00 20 00 20 // 29 $2D:3F00	Valflame Lines
+F2 F4 F0 00 B0 7E 00 30 00 02 // 2A $38:74F2	Valflame Triangle Lines -2bpp
+72 F6 F0 00 B0 7E 00 38 00 08 // 2B $38:7672	Valflame Lines Tilemap
+C0 FA F0 00 B0 7E 00 60 00 08 // 2C $38:7AC0	Valflame Sun Tilemap 1
+A2 FC F0 00 B0 7E 00 60 00 08 // 2D $38:7CA2	Valflame Sun Tilemap 2
+D3 FE F0 00 B0 7E 00 70 00 08 // 2E $38:7ED3	Valflame Triangle Lines Tilemap
+3D F3 D2 00 B0 7E 00 20 00 20 // 2F	$29:733D	Meteor Outlines
+E0 FF D2 00 B0 7E 00 00 00 40 // 30	$29:7FE0	Meteor Explosion+Lines
+99 A4 D3 00 B0 7E 00 38 00 08 // 31	$29:A499	Prob Meteor Tilemap
+2A A9 D3 00 B0 7E 00 60 00 08 // 32	$29:A92A	Prob Meteor Explosion Tilemap
+79 AD D3 00 B0 7E 00 60 00 08 // 33	$29:AD79	Prob Meteor Explosion Tilemap2
+06 B2 D3 00 B0 7E 00 20 00 40 // 34 $29:B206	Nosferatu
+83 C0 D3 00 B0 7E 00 70 00 10 // 35	$29:C083	Nosferatu Tilemap1
+16 C7 D3 00 B0 7E 00 60 00 08 // 36	$29:C716	Nosferatu Tilemap2
+A7 CB D3 00 B0 7E 00 20 00 20 // 37	$29:CBA7	Forseti
+96 E2 D3 00 B0 7E 00 38 00 10 // 38	$29:E296	Forseti Tilemap1
+69 E7 D3 00 B0 7E 00 70 00 08 // 39	$29:E769	Forseti Tilemap2
+FA EB D3 00 B0 7E 00 20 00 0A // 3A	$29:EBFA	Wind
+44 F0 D3 00 B0 7E 00 38 00 10 // 3B	$29:F044	Wind Tilemap1
+C5 F1 D3 00 B0 7E 00 38 00 10 // 3C	$29:F1C5	Wind Tilemap2	
+45 F3 D3 00 B0 7E 00 20 00 1E // 3D	$29:F345	Grafcalibur
+5C FB D3 00 B0 7E 00 38 00 10 // 3E	$29:FB5C	Grafcalibur Tilemap1
+B7 FE D3 00 B0 7E 00 38 00 10 // 3F	$29:FEB7	Grafcalibur Tilemap2
+12 82 D4 00 B0 7E 00 20 00 10 // 40	$2A:0212	Tornado
+47 8B D4 00 B0 7E 00 38 00 10 // 41	$2A:0B47	Tornado Tilemap
+D1 8C D4 00 B0 7E 00 38 00 10 // 42	$2A:0CD1	Some Tilemap5
+49 8E D4 00 B0 7E 00 30 00 02 // 43	$2A:0E49	Blizzard
+B5 8F D4 00 B0 7E 00 70 00 08 // 44	$2A:0FB5	Blizzard Tilemap
+AB 92 D4 00 B0 7E 00 20 00 04 // 45	$2A:12AB	Blizzard Snowflakes
+C2 93 D4 00 B0 7E 00 30 00 02 // 46	$2A:13C2	More Blizzard
+7A 94 D4 00 B0 7E 00 38 00 08 // 47	$2A:147A	Blizzard Tilemap2
+0A 96 D4 00 B0 7E 00 38 00 08 // 48	$2A:160A	Blizzard Tilemap3
+9F 97 D4 00 B0 7E 00 70 00 08 // 49	$2A:179F	Blizzard Tilemap4
+7C 98 D4 00 B0 7E 00 70 00 08 // 4A	$2A:187C	Some Tilemap6
+C9 E6 BF 00 B0 7E 00 21 00 12 // 4B $1F:E6C9	Mjölnir Static
+C4 EF BF 00 B0 7E 00 70 00 0D // 4C $1F:EFC4	Mjölnir Bolts - 2bpp
+3A F6 BF 00 B0 7E 00 3C 00 08 // 4D $1F:F63A	Mjölnir Static Tilemap 
+FF F8 BF 00 B0 7E 00 30 00 18 // 4E	$1F:F8FF	Mjölnir Bolts Tilemap 
+52 99 D4 00 B0 7E 00 22 00 12 // 4F	$2A:1952	Thoron Pulse	
+01 A1 D4 00 B0 7E 00 30 00 0E // 50	$2A:2101	Thoron Line - 2bpp
+DE A8 D4 00 B0 7E 00 38 00 10 // 51	$2A:28DE	Thoron Tilemap1
+F9 A9 D4 00 B0 7E 00 38 00 10 // 52	$2A:29F9	Some Tilemap7 / Forseti, Loptous?
+11 AB D4 00 B0 7E 00 70 00 10 // 53	$2A:2B11	Thoron Tilemap3
+4A AE D4 00 B0 7E 00 2C 00 08 // 54	$2A:2E4A	Thoron Tilemap4
+22 B1 D4 00 B0 7E 00 20 00 04 // 55	$2A:3122	Thoron Tilemap5
+00 B2 D4 00 B0 7E 00 20 00 0A // 56	$2A:3200	Thunder Impact
+51 B7 D4 00 B0 7E 00 30 00 02 // 57	$2A:3751	Thunder Bolts - 2bpp
+A9 B8 D4 00 B0 7E 00 38 00 10 // 58	$2A:38A9	Thunder Tilemap1
+3B BA D4 00 B0 7E 00 70 00 08 // 59	$2A:3A3B	Thunder Tilemap2
+91 BB D4 00 B0 7E 00 20 00 16 // 5A	$2A:3B91	Dire Thunder/Bolting Impact
+4A C4 D4 00 B0 7E 00 30 00 0F // 5B	$2A:444A	Dire Thunder/Bolting Bolt - 2bpp
+4E CD D4 00 B0 7E 00 38 00 10 // 5C	$2A:4D4E	Dire Thunder/Bolting Tilemap1
+AB CF D4 00 B0 7E 00 70 00 08 // 5D	$2A:4FAB	Dire Thunder/Bolting Tilemap2
+4C D1 D4 00 B0 7E 00 20 00 12 // 5E	$2A:514C	Unused Thunder Impact
+5A DB D4 00 B0 7E 00 30 00 10 // 5F	$2A:5B5A	Unused Thunder Bolt - 2bpp
+28 E5 D4 00 B0 7E 00 38 00 10 // 60	$2A:6528	Unused Thunder Tilemap1
+A5 E6 D4 00 B0 7E 00 38 00 10 // 61	$2A:66A5	Unused Thunder Tilemap2
+38 E8 D4 00 B0 7E 00 70 00 18 // 62	$2A:6838	Unused Thunder Tilemap3
+7D EB D4 00 B0 7E 00 20 00 18 // 63	$2A:6B7D	Light
+3E FC D4 00 B0 7E 00 38 00 08 // 64 $2A:7C3E	Light Tilemap
+7D EB D4 00 B0 7E 00 20 00 18 // 65 $2A:6B7D	Naga BG Shine (Uses Light, here)
+04 B7 0F 00 B0 7E 00 00 00 40 // 66 $47:B704	Naga Dragon
+F2 DE 0F 00 B0 7E 00 30 10 00 // 67 $47:DEF2	Naga Small Square?
+F8 DE 0F 00 B0 7E 00 38 00 08 // 68 $47:DEF8	Naga BG Shine Tilemap
+80 E2 0F 00 B0 7E 00 60 00 10 // 69 $47:E280	Naga Dragon Tilemap
+65 E6 0F 00 B0 7E 00 70 00 08 // 6A $47:E665	Naga Small Square? Tilemap??
+B8 FB D6 00 B0 7E 00 30 00 14 // 6B	$2B:7BB8	Hel Circle
+D3 81 D7 00 B0 7E 00 00 00 40 // 6C	$2B:81D3	Hel Background
+52 80 D7 00 B0 7E 00 70 00 08 // 6D	$2B:8052	Hel Circle Tilemap
+38 93 D7 00 B0 7E 00 60 00 10 // 6E	$2B:9338	Hel Background Tilemap
+43 87 D5 00 B0 7E 00 20 00 10 // 6F	$2A:8743	Jörmungandr
+34 8F D5 00 B0 7E 00 38 00 08 // 70	$2A:8F34	Jörmungandr Tilemap
+A7 90 D5 00 B0 7E 00 38 00 08 // 71	$2A:90A7	Some Tilemap8
+20 8B 81 00 B0 7E 00 00 00 34 // 72 $00:8B20	Loptous Dragon
+00 00 00 00 00 00 00 00 00 00 // 73
+EB A3 81 00 B0 7E 00 60 00 10 // 74 $00:A3EB	Loptous Dragon Tilemap
+00 00 00 00 00 00 00 00 00 00 // 75
+00 00 00 00 00 00 00 00 00 00 // 76
+12 92 D5 00 B0 7E 00 20 00 1E // 77	$2A:9212	Lines- Fenrir, Stone, Venin
+28 9E D5 00 B0 7E 00 00 00 2A // 78	$2A:9E28	Head - Fenrir, Stone, Venin 
+EB B5 D5 00 B0 7E 00 70 00 08 // 79	$2A:B5EB	Fenrir, Stone, Venin Tilemap1
+3D BA D5 00 B0 7E 00 30 00 20 // 7A	$2A:BA3D	Fenrir, Stone, Venin Tilemap2
+8D DB D2 00 B0 7E 00 20 20 05 // 7B	$29:5B8D	Silence
+77 DF D2 00 B0 7E 00 38 00 08 // 7C	$29:5F77	Silence Tilemap
+B1 FF D4 00 B0 7E 00 30 00 08 // 7D	$2A:7FB1	Light Triangle
+4A 86 D5 00 B0 7E 00 70 00 08 // 7E	$2A:864A	Light Triangle Tilemap
+A0 F0 D6 00 B0 7E 00 20 00 0C // 7F $2B:70A0	Promotion Unit Highlight//different
+D2 F6 D6 00 B0 7E 00 28 00 10 // 80 $2B:76D2	Promotion Tilemap	//different
+9E F8 D6 00 B0 7E B0 47 40 00 // 81	$2B:789E	Unused Sparkle
+C6 F8 D6 00 B0 7E B0 57 A0 00 // 82	$2B:78C6	Small Wind
+34 F9 D6 00 B0 7E B0 57 A0 00 // 83	$2B:7934	Small Fire
+71 F3 C6 00 B0 7E B0 47 A0 00 // 84	$2B:7371	idk HUD Tilemap
+A2 F9 D6 00 B0 7E B0 57 60 00 // 85	$2B:79A2	Some Corner Tile
+00 00 00 00 00 00 00 00 00 00 // 86	
+00 00 00 00 00 00 00 00 00 00 // 87	
+A0 F0 D6 00 B0 7E 00 20 00 0C // 88	$2B:70A0 	//Promotion Again
+DA F7 D6 00 B0 7E 00 38 00 10 // 89	$2B:77DA	Promotion BG Tilemap
+E2 EA C6 00 B8 7E 82 ED C6 00 // 8A	$23:6AE2	HUD Numbers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

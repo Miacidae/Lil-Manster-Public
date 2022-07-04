@@ -1,0 +1,18 @@
+B11B4 - B11D3
+
+3B 08     ; BEGIN
+1B 42	  ; Load Tile: NOTHING (+pause)
+FE FF     ; --Wait--
+1D 68	  ; Load Tile: NOTHING (+pause)
+FE FF     ; --Wait--
+1C 42	  ; Load Tile: NOTHING (+pause)	  
+FE FF     ; --Wait--
+1F 68	  ; Load Tile: NOTHING (+pause)	  
+17 1A	  ; Placement: Behind Attacker
+FE FF     ; --Wait--
+4E 04	  ; Display Tiles: ???
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+FD FF     ; Cast2: resting
+36 08     ; END
+FF FF     ; EXIT

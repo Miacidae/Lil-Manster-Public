@@ -1,0 +1,30 @@
+64tass is the assembler which puts all your files into a ROM. It is REQUIRED for the build files to function.
+
+BSNES Max is an SNES emulator with solid debugging tools, which will let you go a bit deeper into hacking the game.
+
+The Compression/Decompression folder has a compressor and decompressor program, which are necessary to handle a number of files.
+There is also a batch compression .bat file which compresses all the most common files. Useful for translation patches!
+
+FE5 Map Editor is a standalone program that allows you to edit FE5 maps.
+The current build files do not yet allow map editing.
+Therefore, if you plan to edit maps, you will need to edit your base fe5.sfc ROM with this program, then replace it with the result before building.
+
+Lunar Address allows you to easily convert ROM addresses to memory addresses and vice-versa.
+Use the ExLoRom setting, and do not include a header.
+
+Lunar Expand is required once, to expand your base ROM before putting it in its folder.
+See the text file in base_rom for more details.
+
+SnesGFX allows you to turn your image files into insertable graphics and palettes.
+
+SuperFamiconv is used by a few conversion tools.
+
+The Text Ripper is a simple ripping tool which dumps Japanese text from the rom address you give it.
+
+The Tileset Editor allows you to edit chapter tilesets, and especially the world map. Useful for both mods and translations!
+
+Usenti is a simple and lightweight image editor. 
+
+YY-CHR is a tool that lets you visualize and edit SNES graphic files. Use for all the 2bpp and 4bpp files.
+
+c2a.py and six.py are used by a few other conversion tools.

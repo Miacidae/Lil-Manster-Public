@@ -1,0 +1,1000 @@
+	NoneItemMapAnimationGraphicsInfo							= 0
+		NoneItemMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		NoneItemMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		NoneItemMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		NoneItemMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		NoneItemMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	IronSwordMapAnimationGraphicsInfo							= 1
+		IronSwordMapAnimationGraphicsInfoImagePointer			= aMapAnim_Swords
+		IronSwordMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		IronSwordMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		IronSwordMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		IronSwordMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	SteelSwordMapAnimationGraphicsInfo							= 2
+		SteelSwordMapAnimationGraphicsInfoImagePointer			= aMapAnim_Swords
+		SteelSwordMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		SteelSwordMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		SteelSwordMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		SteelSwordMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	SilverSwordMapAnimationGraphicsInfo							= 3
+		SilverSwordMapAnimationGraphicsInfoImagePointer			= aMapAnim_Swords
+		SilverSwordMapAnimationGraphicsInfoPaletteIndex			= MapPalette_White
+		SilverSwordMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		SilverSwordMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		SilverSwordMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	SlimSwordMapAnimationGraphicsInfo							= 4
+		SlimSwordMapAnimationGraphicsInfoImagePointer			= aMapAnim_Swords
+		SlimSwordMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Beige
+		SlimSwordMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		SlimSwordMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		SlimSwordMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	IronBladeMapAnimationGraphicsInfo							= 5
+		IronBladeMapAnimationGraphicsInfoImagePointer			= aMapAnim_IronBlade
+		IronBladeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		IronBladeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		IronBladeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		IronBladeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	KillingEdgeMapAnimationGraphicsInfo							= 6
+		KillingEdgeMapAnimationGraphicsInfoImagePointer			= aMapAnim_KillingEdge_LightningSword
+		KillingEdgeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		KillingEdgeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		KillingEdgeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		KillingEdgeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	VeninEdgeMapAnimationGraphicsInfo							= 7
+		VeninEdgeMapAnimationGraphicsInfoImagePointer			= aMapAnim_VeninEdge_Shortsword
+		VeninEdgeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Purple
+		VeninEdgeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		VeninEdgeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_Poison
+		VeninEdgeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	BerserkEdgeMapAnimationGraphicsInfo							= 8
+		BerserkEdgeMapAnimationGraphicsInfoImagePointer			= aMapAnim_BigSwords
+		BerserkEdgeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		BerserkEdgeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		BerserkEdgeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_Berserk
+		BerserkEdgeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	SleepEdgeMapAnimationGraphicsInfo							= 9
+		SleepEdgeMapAnimationGraphicsInfoImagePointer			= aMapAnim_BigSwords
+		SleepEdgeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		SleepEdgeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		SleepEdgeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_Sleep
+		SleepEdgeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	BeoBladeMapAnimationGraphicsInfo							= 10
+		BeoBladeMapAnimationGraphicsInfoImagePointer			= aMapAnim_BigSwords
+		BeoBladeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		BeoBladeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		BeoBladeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BeoBladeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	BlessedSwordMapAnimationGraphicsInfo						= 11
+		BlessedSwordMapAnimationGraphicsInfoImagePointer		= aMapAnim_Blessed_ParagonSword_LightBrand
+		BlessedSwordMapAnimationGraphicsInfoPaletteIndex		= MapPalette_Others
+		BlessedSwordMapAnimationGraphicsInfoSpellEffectIndex	= MapSpellEffect_None
+		BlessedSwordMapAnimationGraphicsInfoOnHitEffectIndex	= MapStatusEffect_None
+		BlessedSwordMapAnimationGraphicsInfoRangedSpellIndex	= MapSpellEffect_None
+
+	LoptrianFangMapAnimationGraphicsInfo						= 12
+		LoptrianFangMapAnimationGraphicsInfoImagePointer		= aMapAnim_BigSwords
+		LoptrianFangMapAnimationGraphicsInfoPaletteIndex		= MapPalette_Brown
+		LoptrianFangMapAnimationGraphicsInfoSpellEffectIndex	= MapSpellEffect_None
+		LoptrianFangMapAnimationGraphicsInfoOnHitEffectIndex	= MapStatusEffect_None
+		LoptrianFangMapAnimationGraphicsInfoRangedSpellIndex	= MapSpellEffect_None
+
+	BragisBladeMapAnimationGraphicsInfo							= 13
+		BragisBladeMapAnimationGraphicsInfoImagePointer			= aMapAnim_BragisBlade_Kingmaker
+		BragisBladeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Yellow
+		BragisBladeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		BragisBladeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BragisBladeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	LightBrandMapAnimationGraphicsInfo							= 14
+		LightBrandMapAnimationGraphicsInfoImagePointer			= aMapAnim_Blessed_ParagonSword_LightBrand
+		LightBrandMapAnimationGraphicsInfoPaletteIndex			= MapPalette_White
+		LightBrandMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		LightBrandMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		LightBrandMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_Light
+
+	BraveSwordMapAnimationGraphicsInfo							= 15
+		BraveSwordMapAnimationGraphicsInfoImagePointer			= aMapAnim_BraveSword
+		BraveSwordMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		BraveSwordMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		BraveSwordMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BraveSwordMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	KingmakerMapAnimationGraphicsInfo							= 16
+		KingmakerMapAnimationGraphicsInfoImagePointer			= aMapAnim_BragisBlade_Kingmaker
+		KingmakerMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Yellow
+		KingmakerMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		KingmakerMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		KingmakerMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	LandsSwordMapAnimationGraphicsInfo							= 17
+		LandsSwordMapAnimationGraphicsInfoImagePointer			= aMapAnim_LandsSword
+		LandsSwordMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Pink
+		LandsSwordMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		LandsSwordMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		LandsSwordMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_Nosferatu
+
+	WindSwordMapAnimationGraphicsInfo							= 18
+		WindSwordMapAnimationGraphicsInfoImagePointer			= aMapAnim_WindSword
+		WindSwordMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Grey
+		WindSwordMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		WindSwordMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		WindSwordMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_Wind
+
+	FlameSwordMapAnimationGraphicsInfo							= 19
+		FlameSwordMapAnimationGraphicsInfoImagePointer			= aMapAnim_FlameSword
+		FlameSwordMapAnimationGraphicsInfoPaletteIndex			= MapPalette_DarkPurple
+		FlameSwordMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		FlameSwordMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		FlameSwordMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_Fire
+
+	LightningSwordMapAnimationGraphicsInfo						= 20
+		LightningSwordMapAnimationGraphicsInfoImagePointer		= aMapAnim_KillingEdge_LightningSword
+		LightningSwordMapAnimationGraphicsInfoPaletteIndex		= MapPalette_Yellow
+		LightningSwordMapAnimationGraphicsInfoSpellEffectIndex	= MapSpellEffect_None
+		LightningSwordMapAnimationGraphicsInfoOnHitEffectIndex	= MapStatusEffect_None
+		LightningSwordMapAnimationGraphicsInfoRangedSpellIndex	= MapSpellEffect_Thunder
+
+	ParagonSwordMapAnimationGraphicsInfo						= 21
+		ParagonSwordMapAnimationGraphicsInfoImagePointer		= aMapAnim_Blessed_ParagonSword_LightBrand
+		ParagonSwordMapAnimationGraphicsInfoPaletteIndex		= MapPalette_Others
+		ParagonSwordMapAnimationGraphicsInfoSpellEffectIndex	= MapSpellEffect_None
+		ParagonSwordMapAnimationGraphicsInfoOnHitEffectIndex	= MapStatusEffect_None
+		ParagonSwordMapAnimationGraphicsInfoRangedSpellIndex	= MapSpellEffect_None
+
+	ArmorslayerMapAnimationGraphicsInfo							= 22
+		ArmorslayerMapAnimationGraphicsInfoImagePointer			= aMapAnim_Armorslayer
+		ArmorslayerMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		ArmorslayerMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		ArmorslayerMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		ArmorslayerMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	RapierMapAnimationGraphicsInfo								= 23
+		RapierMapAnimationGraphicsInfoImagePointer				= aMapAnim_Rapier
+		RapierMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Brown
+		RapierMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_None
+		RapierMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		RapierMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	ShortswordMapAnimationGraphicsInfo							= 24
+		ShortswordMapAnimationGraphicsInfoImagePointer			= aMapAnim_VeninEdge_Shortsword
+		ShortswordMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		ShortswordMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		ShortswordMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		ShortswordMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	LongswordMapAnimationGraphicsInfo							= 25
+		LongswordMapAnimationGraphicsInfoImagePointer			= aMapAnim_Longsword
+		LongswordMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		LongswordMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		LongswordMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		LongswordMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	GreatswordMapAnimationGraphicsInfo							= 26
+		GreatswordMapAnimationGraphicsInfoImagePointer			= aMapAnim_Greatsword
+		GreatswordMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		GreatswordMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		GreatswordMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		GreatswordMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	MasterSwordMapAnimationGraphicsInfo							= 27
+		MasterSwordMapAnimationGraphicsInfoImagePointer			= aMapAnim_MasterSword
+		MasterSwordMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		MasterSwordMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		MasterSwordMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		MasterSwordMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	ShadowSwordMapAnimationGraphicsInfo							= 28
+		ShadowSwordMapAnimationGraphicsInfoImagePointer			= aMapAnim_ShadowSword
+		ShadowSwordMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		ShadowSwordMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		ShadowSwordMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		ShadowSwordMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	MareetasBladeMapAnimationGraphicsInfo						= 29
+		MareetasBladeMapAnimationGraphicsInfoImagePointer		= aMapAnim_ShadowSword
+		MareetasBladeMapAnimationGraphicsInfoPaletteIndex		= MapPalette_Others
+		MareetasBladeMapAnimationGraphicsInfoSpellEffectIndex	= MapSpellEffect_None
+		MareetasBladeMapAnimationGraphicsInfoOnHitEffectIndex	= MapStatusEffect_None
+		MareetasBladeMapAnimationGraphicsInfoRangedSpellIndex	= MapSpellEffect_None
+
+	BrokenSwordMapAnimationGraphicsInfo							= 30
+		BrokenSwordMapAnimationGraphicsInfoImagePointer			= aMapAnim_Swords
+		BrokenSwordMapAnimationGraphicsInfoPaletteIndex			= MapPalette_GreyBrown
+		BrokenSwordMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		BrokenSwordMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BrokenSwordMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	IronLanceMapAnimationGraphicsInfo							= 31
+		IronLanceMapAnimationGraphicsInfoImagePointer			= aMapAnim_Lances
+		IronLanceMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		IronLanceMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		IronLanceMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		IronLanceMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	SteelLanceMapAnimationGraphicsInfo							= 32
+		SteelLanceMapAnimationGraphicsInfoImagePointer			= aMapAnim_Lances
+		SteelLanceMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		SteelLanceMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		SteelLanceMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		SteelLanceMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	SilverLanceMapAnimationGraphicsInfo							= 33
+		SilverLanceMapAnimationGraphicsInfoImagePointer			= aMapAnim_Lances
+		SilverLanceMapAnimationGraphicsInfoPaletteIndex			= MapPalette_White
+		SilverLanceMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		SilverLanceMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		SilverLanceMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	SlimLanceMapAnimationGraphicsInfo							= 34
+		SlimLanceMapAnimationGraphicsInfoImagePointer			= aMapAnim_Slim_KillerLance
+		SlimLanceMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		SlimLanceMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		SlimLanceMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		SlimLanceMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	VeninLanceMapAnimationGraphicsInfo							= 35
+		VeninLanceMapAnimationGraphicsInfoImagePointer			= aMapAnim_Venin_ShortLance
+		VeninLanceMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Purple
+		VeninLanceMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		VeninLanceMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_Poison
+		VeninLanceMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	DragonpikeMapAnimationGraphicsInfo							= 36
+		DragonpikeMapAnimationGraphicsInfoImagePointer			= aMapAnim_Dragonpike
+		DragonpikeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Yellow
+		DragonpikeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		DragonpikeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		DragonpikeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	ShadowSpearMapAnimationGraphicsInfo							= 37
+		ShadowSpearMapAnimationGraphicsInfoImagePointer			= aMapAnim_ShadowSpear
+		ShadowSpearMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		ShadowSpearMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		ShadowSpearMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		ShadowSpearMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	BraveLanceMapAnimationGraphicsInfo							= 38
+		BraveLanceMapAnimationGraphicsInfoImagePointer			= aMapAnim_BraveLance
+		BraveLanceMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Yellow
+		BraveLanceMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		BraveLanceMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BraveLanceMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	ShortLanceMapAnimationGraphicsInfo							= 39
+		ShortLanceMapAnimationGraphicsInfoImagePointer			= aMapAnim_Venin_ShortLance
+		ShortLanceMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		ShortLanceMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		ShortLanceMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		ShortLanceMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	LongLanceMapAnimationGraphicsInfo							= 40
+		LongLanceMapAnimationGraphicsInfoImagePointer			= aMapAnim_LongLance
+		LongLanceMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		LongLanceMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		LongLanceMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		LongLanceMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	GreatlanceMapAnimationGraphicsInfo							= 41
+		GreatlanceMapAnimationGraphicsInfoImagePointer			= aMapAnim_GreatLance
+		GreatlanceMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		GreatlanceMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		GreatlanceMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		GreatlanceMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	JavelinMapAnimationGraphicsInfo								= 42
+		JavelinMapAnimationGraphicsInfoImagePointer				= aMapAnim_Javelin
+		JavelinMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		JavelinMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_None
+		JavelinMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		JavelinMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	MasterLanceMapAnimationGraphicsInfo							= 43
+		MasterLanceMapAnimationGraphicsInfoImagePointer			= aMapAnim_MasterLance
+		MasterLanceMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		MasterLanceMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		MasterLanceMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		MasterLanceMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	RidersbaneMapAnimationGraphicsInfo							= 44
+		RidersbaneMapAnimationGraphicsInfoImagePointer			= aMapAnim_Ridersbane
+		RidersbaneMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		RidersbaneMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		RidersbaneMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		RidersbaneMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	KillerLanceMapAnimationGraphicsInfo							= 45
+		KillerLanceMapAnimationGraphicsInfoImagePointer			= aMapAnim_Slim_KillerLance
+		KillerLanceMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		KillerLanceMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		KillerLanceMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		KillerLanceMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	GaeBolgMapAnimationGraphicsInfo								= 46
+		GaeBolgMapAnimationGraphicsInfoImagePointer				= aMapAnim_GaeBolg_Gungnir
+		GaeBolgMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Yellow
+		GaeBolgMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_None
+		GaeBolgMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		GaeBolgMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	GungnirMapAnimationGraphicsInfo								= 47
+		GungnirMapAnimationGraphicsInfoImagePointer				= aMapAnim_GaeBolg_Gungnir
+		GungnirMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Yellow
+		GungnirMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_None
+		GungnirMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		GungnirMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	BrokenLanceMapAnimationGraphicsInfo							= 48
+		BrokenLanceMapAnimationGraphicsInfoImagePointer			= aMapAnim_Lances
+		BrokenLanceMapAnimationGraphicsInfoPaletteIndex			= MapPalette_GreyBrown
+		BrokenLanceMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		BrokenLanceMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BrokenLanceMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	IronAxeMapAnimationGraphicsInfo								= 49
+		IronAxeMapAnimationGraphicsInfoImagePointer				= aMapAnim_Axes
+		IronAxeMapAnimationGraphicsInfoPaletteIndex				= MapPalette_GreyBlue
+		IronAxeMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_None
+		IronAxeMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		IronAxeMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	VeninAxeMapAnimationGraphicsInfo							= 50
+		VeninAxeMapAnimationGraphicsInfoImagePointer			= aMapAnim_Axes
+		VeninAxeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Purple
+		VeninAxeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		VeninAxeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_Poison
+		VeninAxeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	SteelAxeMapAnimationGraphicsInfo							= 51
+		SteelAxeMapAnimationGraphicsInfoImagePointer			= aMapAnim_Axes
+		SteelAxeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		SteelAxeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		SteelAxeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		SteelAxeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	SilverAxeMapAnimationGraphicsInfo							= 52
+		SilverAxeMapAnimationGraphicsInfoImagePointer			= aMapAnim_Silver_DevilAxe
+		SilverAxeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_GreyBlue
+		SilverAxeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		SilverAxeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		SilverAxeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	HandAxeMapAnimationGraphicsInfo								= 53
+		HandAxeMapAnimationGraphicsInfoImagePointer				= aMapAnim_Handaxe
+		HandAxeMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		HandAxeMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_None
+		HandAxeMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		HandAxeMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	HammerMapAnimationGraphicsInfo								= 54
+		HammerMapAnimationGraphicsInfoImagePointer				= aMapAnim_Hammer
+		HammerMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		HammerMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_None
+		HammerMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		HammerMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	KillerAxeMapAnimationGraphicsInfo							= 55
+		KillerAxeMapAnimationGraphicsInfoImagePointer			= aMapAnim_Killer_MasterAxe
+		KillerAxeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		KillerAxeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		KillerAxeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		KillerAxeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	VougeMapAnimationGraphicsInfo								= 56
+		VougeMapAnimationGraphicsInfoImagePointer				= aMapAnim_Vouge_Poleax
+		VougeMapAnimationGraphicsInfoPaletteIndex				= MapPalette_GreyBrown
+		VougeMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_None
+		VougeMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		VougeMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	BraveAxeMapAnimationGraphicsInfo							= 57
+		BraveAxeMapAnimationGraphicsInfoImagePointer			= aMapAnim_BraveAxe
+		BraveAxeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		BraveAxeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		BraveAxeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BraveAxeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	DevilAxeMapAnimationGraphicsInfo							= 58
+		DevilAxeMapAnimationGraphicsInfoImagePointer			= aMapAnim_Silver_DevilAxe
+		DevilAxeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Green
+		DevilAxeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		DevilAxeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		DevilAxeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	BattleAxeMapAnimationGraphicsInfo							= 59
+		BattleAxeMapAnimationGraphicsInfoImagePointer			= aMapAnim_BattleAxe
+		BattleAxeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		BattleAxeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		BattleAxeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BattleAxeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	PoleaxMapAnimationGraphicsInfo								= 60
+		PoleaxMapAnimationGraphicsInfoImagePointer				= aMapAnim_Vouge_Poleax
+		PoleaxMapAnimationGraphicsInfoPaletteIndex				= MapPalette_GreyBlue
+		PoleaxMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_None
+		PoleaxMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		PoleaxMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	MasterAxeMapAnimationGraphicsInfo							= 61
+		MasterAxeMapAnimationGraphicsInfoImagePointer			= aMapAnim_Killer_MasterAxe
+		MasterAxeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_GreyBrown
+		MasterAxeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		MasterAxeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		MasterAxeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	BrokenAxeMapAnimationGraphicsInfo							= 62
+		BrokenAxeMapAnimationGraphicsInfoImagePointer			= aMapAnim_Axes
+		BrokenAxeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_GreyBrown
+		BrokenAxeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		BrokenAxeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BrokenAxeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	IronBowMapAnimationGraphicsInfo								= 63
+		IronBowMapAnimationGraphicsInfoImagePointer				= aMapAnim_Bows
+		IronBowMapAnimationGraphicsInfoPaletteIndex				= MapPalette_DarkGreyBlue
+		IronBowMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_None
+		IronBowMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		IronBowMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	SteelBowMapAnimationGraphicsInfo							= 64
+		SteelBowMapAnimationGraphicsInfoImagePointer			= aMapAnim_Bows
+		SteelBowMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		SteelBowMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		SteelBowMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		SteelBowMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	SilverBowMapAnimationGraphicsInfo							= 65
+		SilverBowMapAnimationGraphicsInfoImagePointer			= aMapAnim_Bows
+		SilverBowMapAnimationGraphicsInfoPaletteIndex			= MapPalette_White
+		SilverBowMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		SilverBowMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		SilverBowMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	VeninBowMapAnimationGraphicsInfo							= 66
+		VeninBowMapAnimationGraphicsInfoImagePointer			= aMapAnim_VeninBow_Shortbow
+		VeninBowMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Purple
+		VeninBowMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		VeninBowMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_Poison
+		VeninBowMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	KillerBowMapAnimationGraphicsInfo							= 67
+		KillerBowMapAnimationGraphicsInfoImagePointer			= aMapAnim_Bows
+		KillerBowMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Black
+		KillerBowMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		KillerBowMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		KillerBowMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	BraveBowMapAnimationGraphicsInfo							= 68
+		BraveBowMapAnimationGraphicsInfoImagePointer			= aMapAnim_BraveBow
+		BraveBowMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Yellow
+		BraveBowMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		BraveBowMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BraveBowMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	ShortbowMapAnimationGraphicsInfo							= 69
+		ShortbowMapAnimationGraphicsInfoImagePointer			= aMapAnim_VeninBow_Shortbow
+		ShortbowMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Brown
+		ShortbowMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		ShortbowMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		ShortbowMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	LongbowMapAnimationGraphicsInfo								= 70
+		LongbowMapAnimationGraphicsInfoImagePointer				= aMapAnim_Longbow
+		LongbowMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Grey
+		LongbowMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_None
+		LongbowMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		LongbowMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	GreatbowMapAnimationGraphicsInfo							= 71
+		GreatbowMapAnimationGraphicsInfoImagePointer			= aMapAnim_Greatbow
+		GreatbowMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Beige
+		GreatbowMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		GreatbowMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		GreatbowMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	MasterBowMapAnimationGraphicsInfo							= 72
+		MasterBowMapAnimationGraphicsInfoImagePointer			= aMapAnim_Masterbow
+		MasterBowMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Beige
+		MasterBowMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		MasterBowMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		MasterBowMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	BallistaMapAnimationGraphicsInfo							= 73
+		BallistaMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		BallistaMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		BallistaMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_Ballista
+		BallistaMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BallistaMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	IronBallistaMapAnimationGraphicsInfo						= 74
+		IronBallistaMapAnimationGraphicsInfoImagePointer		= aMapAnim_None
+		IronBallistaMapAnimationGraphicsInfoPaletteIndex		= MapPalette_Others
+		IronBallistaMapAnimationGraphicsInfoSpellEffectIndex	= MapSpellEffect_Ballista
+		IronBallistaMapAnimationGraphicsInfoOnHitEffectIndex	= MapStatusEffect_None
+		IronBallistaMapAnimationGraphicsInfoRangedSpellIndex	= MapSpellEffect_None
+
+	KillerBallistaMapAnimationGraphicsInfo						= 75
+		KillerBallistaMapAnimationGraphicsInfoImagePointer		= aMapAnim_None
+		KillerBallistaMapAnimationGraphicsInfoPaletteIndex		= MapPalette_Others
+		KillerBallistaMapAnimationGraphicsInfoSpellEffectIndex	= MapSpellEffect_Ballista
+		KillerBallistaMapAnimationGraphicsInfoOnHitEffectIndex	= MapStatusEffect_None
+		KillerBallistaMapAnimationGraphicsInfoRangedSpellIndex	= MapSpellEffect_None
+
+	VeninBallistaMapAnimationGraphicsInfo						= 76
+		VeninBallistaMapAnimationGraphicsInfoImagePointer		= aMapAnim_None
+		VeninBallistaMapAnimationGraphicsInfoPaletteIndex		= MapPalette_Others
+		VeninBallistaMapAnimationGraphicsInfoSpellEffectIndex	= MapSpellEffect_Ballista
+		VeninBallistaMapAnimationGraphicsInfoOnHitEffectIndex	= MapStatusEffect_Poison
+		VeninBallistaMapAnimationGraphicsInfoRangedSpellIndex	= MapSpellEffect_None
+
+	BrokenBowMapAnimationGraphicsInfo							= 77
+		BrokenBowMapAnimationGraphicsInfoImagePointer			= aMapAnim_Bows
+		BrokenBowMapAnimationGraphicsInfoPaletteIndex			= MapPalette_GreyBrown
+		BrokenBowMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		BrokenBowMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BrokenBowMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	FireMapAnimationGraphicsInfo								= 78
+		FireMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		FireMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		FireMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Fire
+		FireMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		FireMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	ElfireMapAnimationGraphicsInfo								= 79
+		ElfireMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		ElfireMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		ElfireMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Elfire
+		ElfireMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		ElfireMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	BolganoneMapAnimationGraphicsInfo							= 80
+		BolganoneMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		BolganoneMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		BolganoneMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_Bolganone
+		BolganoneMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BolganoneMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	ValflameMapAnimationGraphicsInfo							= 81
+		ValflameMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		ValflameMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		ValflameMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_Valflame
+		ValflameMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		ValflameMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	ThunderMapAnimationGraphicsInfo								= 82
+		ThunderMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		ThunderMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		ThunderMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Thunder
+		ThunderMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		ThunderMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	DireThunderMapAnimationGraphicsInfo							= 83
+		DireThunderMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		DireThunderMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		DireThunderMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_DireThunder
+		DireThunderMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		DireThunderMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	ThoronMapAnimationGraphicsInfo								= 84
+		ThoronMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		ThoronMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		ThoronMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Thoron
+		ThoronMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		ThoronMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	MjolnirMapAnimationGraphicsInfo								= 85
+		MjolnirMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		MjolnirMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		MjolnirMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Mjolnir
+		MjolnirMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		MjolnirMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	WindMapAnimationGraphicsInfo								= 86
+		WindMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		WindMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		WindMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Wind
+		WindMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		WindMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	GrafcaliburMapAnimationGraphicsInfo							= 87
+		GrafcaliburMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		GrafcaliburMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		GrafcaliburMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_Grafcalibur
+		GrafcaliburMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		GrafcaliburMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	TornadoMapAnimationGraphicsInfo								= 88
+		TornadoMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		TornadoMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		TornadoMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Tornado
+		TornadoMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		TornadoMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	ForsetiMapAnimationGraphicsInfo								= 89
+		ForsetiMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		ForsetiMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		ForsetiMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Forseti
+		ForsetiMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		ForsetiMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	LightMapAnimationGraphicsInfo								= 90
+		LightMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		LightMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		LightMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Light
+		LightMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		LightMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	NosferatuMapAnimationGraphicsInfo							= 91
+		NosferatuMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		NosferatuMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		NosferatuMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_Nosferatu
+		NosferatuMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		NosferatuMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	AuraMapAnimationGraphicsInfo								= 92
+		AuraMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		AuraMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		AuraMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Aura
+		AuraMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		AuraMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	JormungandMapAnimationGraphicsInfo							= 93
+		JormungandMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		JormungandMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		JormungandMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_Jormungand
+		JormungandMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_Poison
+		JormungandMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	FenrirMapAnimationGraphicsInfo								= 94
+		FenrirMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		FenrirMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		FenrirMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Fenrir
+		FenrirMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		FenrirMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	HelMapAnimationGraphicsInfo									= 95
+		HelMapAnimationGraphicsInfoImagePointer					= aMapAnim_None
+		HelMapAnimationGraphicsInfoPaletteIndex					= MapPalette_Others
+		HelMapAnimationGraphicsInfoSpellEffectIndex				= MapSpellEffect_Hel
+		HelMapAnimationGraphicsInfoOnHitEffectIndex				= MapStatusEffect_None
+		HelMapAnimationGraphicsInfoRangedSpellIndex				= MapSpellEffect_None
+
+	LoptousMapAnimationGraphicsInfo								= 96
+		LoptousMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		LoptousMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		LoptousMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Loptous
+		LoptousMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		LoptousMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	MeteorMapAnimationGraphicsInfo								= 97
+		MeteorMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		MeteorMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		MeteorMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Meteor
+		MeteorMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		MeteorMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	BoltingMapAnimationGraphicsInfo								= 98
+		BoltingMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		BoltingMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		BoltingMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Bolting
+		BoltingMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		BoltingMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	BlizzardMapAnimationGraphicsInfo							= 99
+		BlizzardMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		BlizzardMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		BlizzardMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_Blizzard
+		BlizzardMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BlizzardMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	VeninMapAnimationGraphicsInfo								= 100
+		VeninMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		VeninMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		VeninMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Venin
+		VeninMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_Poison
+		VeninMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	PetrifyMapAnimationGraphicsInfo								= 101
+		PetrifyMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		PetrifyMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		PetrifyMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Petrify
+		PetrifyMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_Stone
+		PetrifyMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	ForsetiInfiniteMapAnimationGraphicsInfo						= 102
+		ForsetiInfiniteMapAnimationGraphicsInfoImagePointer		= aMapAnim_None
+		ForsetiInfiniteMapAnimationGraphicsInfoPaletteIndex		= MapPalette_Others
+		ForsetiInfiniteMapAnimationGraphicsInfoSpellEffectIndex	= MapSpellEffect_Forseti
+		ForsetiInfiniteMapAnimationGraphicsInfoOnHitEffectIndex	= MapStatusEffect_None
+		ForsetiInfiniteMapAnimationGraphicsInfoRangedSpellIndex	= MapSpellEffect_None
+
+	BrokenTomeMapAnimationGraphicsInfo							= 103
+		BrokenTomeMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		BrokenTomeMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		BrokenTomeMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		BrokenTomeMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BrokenTomeMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	HealMapAnimationGraphicsInfo								= 104
+		HealMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		HealMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		HealMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Heal
+		HealMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		HealMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	MendMapAnimationGraphicsInfo								= 105
+		MendMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		MendMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		MendMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Mend
+		MendMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		MendMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	RecoverMapAnimationGraphicsInfo								= 106
+		RecoverMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		RecoverMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		RecoverMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Recover
+		RecoverMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		RecoverMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	PhysicMapAnimationGraphicsInfo								= 107
+		PhysicMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		PhysicMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		PhysicMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Physic
+		PhysicMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		PhysicMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	FortifyMapAnimationGraphicsInfo								= 108
+		FortifyMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		FortifyMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		FortifyMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Fortify
+		FortifyMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		FortifyMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	RescueMapAnimationGraphicsInfo								= 109
+		RescueMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		RescueMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		RescueMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Rescue
+		RescueMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		RescueMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	WarpMapAnimationGraphicsInfo								= 110
+		WarpMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		WarpMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		WarpMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Warp
+		WarpMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		WarpMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	RestoreMapAnimationGraphicsInfo								= 111
+		RestoreMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		RestoreMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		RestoreMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Restore
+		RestoreMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		RestoreMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	SilenceStaffMapAnimationGraphicsInfo						= 112
+		SilenceStaffMapAnimationGraphicsInfoImagePointer		= aMapAnim_None
+		SilenceStaffMapAnimationGraphicsInfoPaletteIndex		= MapPalette_Others
+		SilenceStaffMapAnimationGraphicsInfoSpellEffectIndex	= MapSpellEffect_Silence
+		SilenceStaffMapAnimationGraphicsInfoOnHitEffectIndex	= MapStatusEffect_None
+		SilenceStaffMapAnimationGraphicsInfoRangedSpellIndex	= MapSpellEffect_None
+
+	SleepMapAnimationGraphicsInfo								= 113
+		SleepMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		SleepMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		SleepMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Sleep
+		SleepMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		SleepMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	TorchStaffMapAnimationGraphicsInfo							= 114
+		TorchStaffMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		TorchStaffMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		TorchStaffMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_TorchStaff
+		TorchStaffMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		TorchStaffMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	ReturnMapAnimationGraphicsInfo								= 115
+		ReturnMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		ReturnMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		ReturnMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_ReturnStaff
+		ReturnMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		ReturnMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	HammerneMapAnimationGraphicsInfo							= 116
+		HammerneMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		HammerneMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		HammerneMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_Hammerne
+		HammerneMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		HammerneMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	ThiefStaffMapAnimationGraphicsInfo							= 117
+		ThiefStaffMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		ThiefStaffMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		ThiefStaffMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_ThiefStaff
+		ThiefStaffMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		ThiefStaffMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	WatchMapAnimationGraphicsInfo								= 118
+		WatchMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		WatchMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		WatchMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Watch
+		WatchMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		WatchMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	BerserkMapAnimationGraphicsInfo								= 119
+		BerserkMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		BerserkMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		BerserkMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Berserk
+		BerserkMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		BerserkMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	UnlockMapAnimationGraphicsInfo								= 120
+		UnlockMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		UnlockMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		UnlockMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Unlock
+		UnlockMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		UnlockMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	EnsorcelMapAnimationGraphicsInfo							= 121
+		EnsorcelMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		EnsorcelMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		EnsorcelMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_Ensorcel
+		EnsorcelMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		EnsorcelMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+	RewarpMapAnimationGraphicsInfo								= 122
+		RewarpMapAnimationGraphicsInfoImagePointer				= aMapAnim_None
+		RewarpMapAnimationGraphicsInfoPaletteIndex				= MapPalette_Others
+		RewarpMapAnimationGraphicsInfoSpellEffectIndex			= MapSpellEffect_Rewarp
+		RewarpMapAnimationGraphicsInfoOnHitEffectIndex			= MapStatusEffect_None
+		RewarpMapAnimationGraphicsInfoRangedSpellIndex			= MapSpellEffect_None
+
+	KiaMapAnimationGraphicsInfo									= 123
+		KiaMapAnimationGraphicsInfoImagePointer					= aMapAnim_None
+		KiaMapAnimationGraphicsInfoPaletteIndex					= MapPalette_Others
+		KiaMapAnimationGraphicsInfoSpellEffectIndex				= MapSpellEffect_Kia
+		KiaMapAnimationGraphicsInfoOnHitEffectIndex				= MapStatusEffect_None
+		KiaMapAnimationGraphicsInfoRangedSpellIndex				= MapSpellEffect_None
+
+	BrokenStaffMapAnimationGraphicsInfo							= 124
+		BrokenStaffMapAnimationGraphicsInfoImagePointer			= aMapAnim_None
+		BrokenStaffMapAnimationGraphicsInfoPaletteIndex			= MapPalette_Others
+		BrokenStaffMapAnimationGraphicsInfoSpellEffectIndex		= MapSpellEffect_None
+		BrokenStaffMapAnimationGraphicsInfoOnHitEffectIndex		= MapStatusEffect_None
+		BrokenStaffMapAnimationGraphicsInfoRangedSpellIndex		= MapSpellEffect_None
+
+NoneItemMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, NoneItemMapAnimationGraphicsInfoImagePointer, NoneItemMapAnimationGraphicsInfoPaletteIndex, NoneItemMapAnimationGraphicsInfoSpellEffectIndex, NoneItemMapAnimationGraphicsInfoOnHitEffectIndex, NoneItemMapAnimationGraphicsInfoRangedSpellIndex
+IronSwordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, IronSwordMapAnimationGraphicsInfoImagePointer, IronSwordMapAnimationGraphicsInfoPaletteIndex, IronSwordMapAnimationGraphicsInfoSpellEffectIndex, IronSwordMapAnimationGraphicsInfoOnHitEffectIndex, IronSwordMapAnimationGraphicsInfoRangedSpellIndex
+SteelSwordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, SteelSwordMapAnimationGraphicsInfoImagePointer, SteelSwordMapAnimationGraphicsInfoPaletteIndex, SteelSwordMapAnimationGraphicsInfoSpellEffectIndex, SteelSwordMapAnimationGraphicsInfoOnHitEffectIndex, SteelSwordMapAnimationGraphicsInfoRangedSpellIndex
+SilverSwordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, SilverSwordMapAnimationGraphicsInfoImagePointer, SilverSwordMapAnimationGraphicsInfoPaletteIndex, SilverSwordMapAnimationGraphicsInfoSpellEffectIndex, SilverSwordMapAnimationGraphicsInfoOnHitEffectIndex, SilverSwordMapAnimationGraphicsInfoRangedSpellIndex
+SlimSwordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, SlimSwordMapAnimationGraphicsInfoImagePointer, SlimSwordMapAnimationGraphicsInfoPaletteIndex, SlimSwordMapAnimationGraphicsInfoSpellEffectIndex, SlimSwordMapAnimationGraphicsInfoOnHitEffectIndex, SlimSwordMapAnimationGraphicsInfoRangedSpellIndex
+IronBladeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, IronBladeMapAnimationGraphicsInfoImagePointer, IronBladeMapAnimationGraphicsInfoPaletteIndex, IronBladeMapAnimationGraphicsInfoSpellEffectIndex, IronBladeMapAnimationGraphicsInfoOnHitEffectIndex, IronBladeMapAnimationGraphicsInfoRangedSpellIndex
+KillingEdgeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, KillingEdgeMapAnimationGraphicsInfoImagePointer, KillingEdgeMapAnimationGraphicsInfoPaletteIndex, KillingEdgeMapAnimationGraphicsInfoSpellEffectIndex, KillingEdgeMapAnimationGraphicsInfoOnHitEffectIndex, KillingEdgeMapAnimationGraphicsInfoRangedSpellIndex
+VeninEdgeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, VeninEdgeMapAnimationGraphicsInfoImagePointer, VeninEdgeMapAnimationGraphicsInfoPaletteIndex, VeninEdgeMapAnimationGraphicsInfoSpellEffectIndex, VeninEdgeMapAnimationGraphicsInfoOnHitEffectIndex, VeninEdgeMapAnimationGraphicsInfoRangedSpellIndex
+BerserkEdgeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BerserkEdgeMapAnimationGraphicsInfoImagePointer, BerserkEdgeMapAnimationGraphicsInfoPaletteIndex, BerserkEdgeMapAnimationGraphicsInfoSpellEffectIndex, BerserkEdgeMapAnimationGraphicsInfoOnHitEffectIndex, BerserkEdgeMapAnimationGraphicsInfoRangedSpellIndex
+SleepEdgeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, SleepEdgeMapAnimationGraphicsInfoImagePointer, SleepEdgeMapAnimationGraphicsInfoPaletteIndex, SleepEdgeMapAnimationGraphicsInfoSpellEffectIndex, SleepEdgeMapAnimationGraphicsInfoOnHitEffectIndex, SleepEdgeMapAnimationGraphicsInfoRangedSpellIndex
+BeoBladeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BeoBladeMapAnimationGraphicsInfoImagePointer, BeoBladeMapAnimationGraphicsInfoPaletteIndex, BeoBladeMapAnimationGraphicsInfoSpellEffectIndex, BeoBladeMapAnimationGraphicsInfoOnHitEffectIndex, BeoBladeMapAnimationGraphicsInfoRangedSpellIndex
+BlessedSwordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BlessedSwordMapAnimationGraphicsInfoImagePointer, BlessedSwordMapAnimationGraphicsInfoPaletteIndex, BlessedSwordMapAnimationGraphicsInfoSpellEffectIndex, BlessedSwordMapAnimationGraphicsInfoOnHitEffectIndex, BlessedSwordMapAnimationGraphicsInfoRangedSpellIndex
+LoptrianFangMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, LoptrianFangMapAnimationGraphicsInfoImagePointer, LoptrianFangMapAnimationGraphicsInfoPaletteIndex, LoptrianFangMapAnimationGraphicsInfoSpellEffectIndex, LoptrianFangMapAnimationGraphicsInfoOnHitEffectIndex, LoptrianFangMapAnimationGraphicsInfoRangedSpellIndex
+BragisBladeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BragisBladeMapAnimationGraphicsInfoImagePointer, BragisBladeMapAnimationGraphicsInfoPaletteIndex, BragisBladeMapAnimationGraphicsInfoSpellEffectIndex, BragisBladeMapAnimationGraphicsInfoOnHitEffectIndex, BragisBladeMapAnimationGraphicsInfoRangedSpellIndex
+LightBrandMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, LightBrandMapAnimationGraphicsInfoImagePointer, LightBrandMapAnimationGraphicsInfoPaletteIndex, LightBrandMapAnimationGraphicsInfoSpellEffectIndex, LightBrandMapAnimationGraphicsInfoOnHitEffectIndex, LightBrandMapAnimationGraphicsInfoRangedSpellIndex
+BraveSwordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BraveSwordMapAnimationGraphicsInfoImagePointer, BraveSwordMapAnimationGraphicsInfoPaletteIndex, BraveSwordMapAnimationGraphicsInfoSpellEffectIndex, BraveSwordMapAnimationGraphicsInfoOnHitEffectIndex, BraveSwordMapAnimationGraphicsInfoRangedSpellIndex
+KingmakerMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, KingmakerMapAnimationGraphicsInfoImagePointer, KingmakerMapAnimationGraphicsInfoPaletteIndex, KingmakerMapAnimationGraphicsInfoSpellEffectIndex, KingmakerMapAnimationGraphicsInfoOnHitEffectIndex, KingmakerMapAnimationGraphicsInfoRangedSpellIndex
+LandsSwordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, LandsSwordMapAnimationGraphicsInfoImagePointer, LandsSwordMapAnimationGraphicsInfoPaletteIndex, LandsSwordMapAnimationGraphicsInfoSpellEffectIndex, LandsSwordMapAnimationGraphicsInfoOnHitEffectIndex, LandsSwordMapAnimationGraphicsInfoRangedSpellIndex
+WindSwordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, WindSwordMapAnimationGraphicsInfoImagePointer, WindSwordMapAnimationGraphicsInfoPaletteIndex, WindSwordMapAnimationGraphicsInfoSpellEffectIndex, WindSwordMapAnimationGraphicsInfoOnHitEffectIndex, WindSwordMapAnimationGraphicsInfoRangedSpellIndex
+FlameSwordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, FlameSwordMapAnimationGraphicsInfoImagePointer, FlameSwordMapAnimationGraphicsInfoPaletteIndex, FlameSwordMapAnimationGraphicsInfoSpellEffectIndex, FlameSwordMapAnimationGraphicsInfoOnHitEffectIndex, FlameSwordMapAnimationGraphicsInfoRangedSpellIndex
+LightningSwordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, LightningSwordMapAnimationGraphicsInfoImagePointer, LightningSwordMapAnimationGraphicsInfoPaletteIndex, LightningSwordMapAnimationGraphicsInfoSpellEffectIndex, LightningSwordMapAnimationGraphicsInfoOnHitEffectIndex, LightningSwordMapAnimationGraphicsInfoRangedSpellIndex
+ParagonSwordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ParagonSwordMapAnimationGraphicsInfoImagePointer, ParagonSwordMapAnimationGraphicsInfoPaletteIndex, ParagonSwordMapAnimationGraphicsInfoSpellEffectIndex, ParagonSwordMapAnimationGraphicsInfoOnHitEffectIndex, ParagonSwordMapAnimationGraphicsInfoRangedSpellIndex
+ArmorslayerMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ArmorslayerMapAnimationGraphicsInfoImagePointer, ArmorslayerMapAnimationGraphicsInfoPaletteIndex, ArmorslayerMapAnimationGraphicsInfoSpellEffectIndex, ArmorslayerMapAnimationGraphicsInfoOnHitEffectIndex, ArmorslayerMapAnimationGraphicsInfoRangedSpellIndex
+RapierMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, RapierMapAnimationGraphicsInfoImagePointer, RapierMapAnimationGraphicsInfoPaletteIndex, RapierMapAnimationGraphicsInfoSpellEffectIndex, RapierMapAnimationGraphicsInfoOnHitEffectIndex, RapierMapAnimationGraphicsInfoRangedSpellIndex
+ShortswordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ShortswordMapAnimationGraphicsInfoImagePointer, ShortswordMapAnimationGraphicsInfoPaletteIndex, ShortswordMapAnimationGraphicsInfoSpellEffectIndex, ShortswordMapAnimationGraphicsInfoOnHitEffectIndex, ShortswordMapAnimationGraphicsInfoRangedSpellIndex
+LongswordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, LongswordMapAnimationGraphicsInfoImagePointer, LongswordMapAnimationGraphicsInfoPaletteIndex, LongswordMapAnimationGraphicsInfoSpellEffectIndex, LongswordMapAnimationGraphicsInfoOnHitEffectIndex, LongswordMapAnimationGraphicsInfoRangedSpellIndex
+GreatswordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, GreatswordMapAnimationGraphicsInfoImagePointer, GreatswordMapAnimationGraphicsInfoPaletteIndex, GreatswordMapAnimationGraphicsInfoSpellEffectIndex, GreatswordMapAnimationGraphicsInfoOnHitEffectIndex, GreatswordMapAnimationGraphicsInfoRangedSpellIndex
+MasterSwordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, MasterSwordMapAnimationGraphicsInfoImagePointer, MasterSwordMapAnimationGraphicsInfoPaletteIndex, MasterSwordMapAnimationGraphicsInfoSpellEffectIndex, MasterSwordMapAnimationGraphicsInfoOnHitEffectIndex, MasterSwordMapAnimationGraphicsInfoRangedSpellIndex
+ShadowSwordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ShadowSwordMapAnimationGraphicsInfoImagePointer, ShadowSwordMapAnimationGraphicsInfoPaletteIndex, ShadowSwordMapAnimationGraphicsInfoSpellEffectIndex, ShadowSwordMapAnimationGraphicsInfoOnHitEffectIndex, ShadowSwordMapAnimationGraphicsInfoRangedSpellIndex
+MareetasBladeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, MareetasBladeMapAnimationGraphicsInfoImagePointer, MareetasBladeMapAnimationGraphicsInfoPaletteIndex, MareetasBladeMapAnimationGraphicsInfoSpellEffectIndex, MareetasBladeMapAnimationGraphicsInfoOnHitEffectIndex, MareetasBladeMapAnimationGraphicsInfoRangedSpellIndex
+BrokenSwordMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BrokenSwordMapAnimationGraphicsInfoImagePointer, BrokenSwordMapAnimationGraphicsInfoPaletteIndex, BrokenSwordMapAnimationGraphicsInfoSpellEffectIndex, BrokenSwordMapAnimationGraphicsInfoOnHitEffectIndex, BrokenSwordMapAnimationGraphicsInfoRangedSpellIndex
+IronLanceMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, IronLanceMapAnimationGraphicsInfoImagePointer, IronLanceMapAnimationGraphicsInfoPaletteIndex, IronLanceMapAnimationGraphicsInfoSpellEffectIndex, IronLanceMapAnimationGraphicsInfoOnHitEffectIndex, IronLanceMapAnimationGraphicsInfoRangedSpellIndex
+SteelLanceMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, SteelLanceMapAnimationGraphicsInfoImagePointer, SteelLanceMapAnimationGraphicsInfoPaletteIndex, SteelLanceMapAnimationGraphicsInfoSpellEffectIndex, SteelLanceMapAnimationGraphicsInfoOnHitEffectIndex, SteelLanceMapAnimationGraphicsInfoRangedSpellIndex
+SilverLanceMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, SilverLanceMapAnimationGraphicsInfoImagePointer, SilverLanceMapAnimationGraphicsInfoPaletteIndex, SilverLanceMapAnimationGraphicsInfoSpellEffectIndex, SilverLanceMapAnimationGraphicsInfoOnHitEffectIndex, SilverLanceMapAnimationGraphicsInfoRangedSpellIndex
+SlimLanceMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, SlimLanceMapAnimationGraphicsInfoImagePointer, SlimLanceMapAnimationGraphicsInfoPaletteIndex, SlimLanceMapAnimationGraphicsInfoSpellEffectIndex, SlimLanceMapAnimationGraphicsInfoOnHitEffectIndex, SlimLanceMapAnimationGraphicsInfoRangedSpellIndex
+VeninLanceMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, VeninLanceMapAnimationGraphicsInfoImagePointer, VeninLanceMapAnimationGraphicsInfoPaletteIndex, VeninLanceMapAnimationGraphicsInfoSpellEffectIndex, VeninLanceMapAnimationGraphicsInfoOnHitEffectIndex, VeninLanceMapAnimationGraphicsInfoRangedSpellIndex
+DragonpikeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, DragonpikeMapAnimationGraphicsInfoImagePointer, DragonpikeMapAnimationGraphicsInfoPaletteIndex, DragonpikeMapAnimationGraphicsInfoSpellEffectIndex, DragonpikeMapAnimationGraphicsInfoOnHitEffectIndex, DragonpikeMapAnimationGraphicsInfoRangedSpellIndex
+ShadowSpearMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ShadowSpearMapAnimationGraphicsInfoImagePointer, ShadowSpearMapAnimationGraphicsInfoPaletteIndex, ShadowSpearMapAnimationGraphicsInfoSpellEffectIndex, ShadowSpearMapAnimationGraphicsInfoOnHitEffectIndex, ShadowSpearMapAnimationGraphicsInfoRangedSpellIndex
+BraveLanceMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BraveLanceMapAnimationGraphicsInfoImagePointer, BraveLanceMapAnimationGraphicsInfoPaletteIndex, BraveLanceMapAnimationGraphicsInfoSpellEffectIndex, BraveLanceMapAnimationGraphicsInfoOnHitEffectIndex, BraveLanceMapAnimationGraphicsInfoRangedSpellIndex
+ShortLanceMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ShortLanceMapAnimationGraphicsInfoImagePointer, ShortLanceMapAnimationGraphicsInfoPaletteIndex, ShortLanceMapAnimationGraphicsInfoSpellEffectIndex, ShortLanceMapAnimationGraphicsInfoOnHitEffectIndex, ShortLanceMapAnimationGraphicsInfoRangedSpellIndex
+LongLanceMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, LongLanceMapAnimationGraphicsInfoImagePointer, LongLanceMapAnimationGraphicsInfoPaletteIndex, LongLanceMapAnimationGraphicsInfoSpellEffectIndex, LongLanceMapAnimationGraphicsInfoOnHitEffectIndex, LongLanceMapAnimationGraphicsInfoRangedSpellIndex
+GreatlanceMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, GreatlanceMapAnimationGraphicsInfoImagePointer, GreatlanceMapAnimationGraphicsInfoPaletteIndex, GreatlanceMapAnimationGraphicsInfoSpellEffectIndex, GreatlanceMapAnimationGraphicsInfoOnHitEffectIndex, GreatlanceMapAnimationGraphicsInfoRangedSpellIndex
+JavelinMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, JavelinMapAnimationGraphicsInfoImagePointer, JavelinMapAnimationGraphicsInfoPaletteIndex, JavelinMapAnimationGraphicsInfoSpellEffectIndex, JavelinMapAnimationGraphicsInfoOnHitEffectIndex, JavelinMapAnimationGraphicsInfoRangedSpellIndex
+MasterLanceMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, MasterLanceMapAnimationGraphicsInfoImagePointer, MasterLanceMapAnimationGraphicsInfoPaletteIndex, MasterLanceMapAnimationGraphicsInfoSpellEffectIndex, MasterLanceMapAnimationGraphicsInfoOnHitEffectIndex, MasterLanceMapAnimationGraphicsInfoRangedSpellIndex
+RidersbaneMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, RidersbaneMapAnimationGraphicsInfoImagePointer, RidersbaneMapAnimationGraphicsInfoPaletteIndex, RidersbaneMapAnimationGraphicsInfoSpellEffectIndex, RidersbaneMapAnimationGraphicsInfoOnHitEffectIndex, RidersbaneMapAnimationGraphicsInfoRangedSpellIndex
+KillerLanceMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, KillerLanceMapAnimationGraphicsInfoImagePointer, KillerLanceMapAnimationGraphicsInfoPaletteIndex, KillerLanceMapAnimationGraphicsInfoSpellEffectIndex, KillerLanceMapAnimationGraphicsInfoOnHitEffectIndex, KillerLanceMapAnimationGraphicsInfoRangedSpellIndex
+GaeBolgMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, GaeBolgMapAnimationGraphicsInfoImagePointer, GaeBolgMapAnimationGraphicsInfoPaletteIndex, GaeBolgMapAnimationGraphicsInfoSpellEffectIndex, GaeBolgMapAnimationGraphicsInfoOnHitEffectIndex, GaeBolgMapAnimationGraphicsInfoRangedSpellIndex
+GungnirMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, GungnirMapAnimationGraphicsInfoImagePointer, GungnirMapAnimationGraphicsInfoPaletteIndex, GungnirMapAnimationGraphicsInfoSpellEffectIndex, GungnirMapAnimationGraphicsInfoOnHitEffectIndex, GungnirMapAnimationGraphicsInfoRangedSpellIndex
+BrokenLanceMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BrokenLanceMapAnimationGraphicsInfoImagePointer, BrokenLanceMapAnimationGraphicsInfoPaletteIndex, BrokenLanceMapAnimationGraphicsInfoSpellEffectIndex, BrokenLanceMapAnimationGraphicsInfoOnHitEffectIndex, BrokenLanceMapAnimationGraphicsInfoRangedSpellIndex
+IronAxeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, IronAxeMapAnimationGraphicsInfoImagePointer, IronAxeMapAnimationGraphicsInfoPaletteIndex, IronAxeMapAnimationGraphicsInfoSpellEffectIndex, IronAxeMapAnimationGraphicsInfoOnHitEffectIndex, IronAxeMapAnimationGraphicsInfoRangedSpellIndex
+VeninAxeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, VeninAxeMapAnimationGraphicsInfoImagePointer, VeninAxeMapAnimationGraphicsInfoPaletteIndex, VeninAxeMapAnimationGraphicsInfoSpellEffectIndex, VeninAxeMapAnimationGraphicsInfoOnHitEffectIndex, VeninAxeMapAnimationGraphicsInfoRangedSpellIndex
+SteelAxeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, SteelAxeMapAnimationGraphicsInfoImagePointer, SteelAxeMapAnimationGraphicsInfoPaletteIndex, SteelAxeMapAnimationGraphicsInfoSpellEffectIndex, SteelAxeMapAnimationGraphicsInfoOnHitEffectIndex, SteelAxeMapAnimationGraphicsInfoRangedSpellIndex
+SilverAxeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, SilverAxeMapAnimationGraphicsInfoImagePointer, SilverAxeMapAnimationGraphicsInfoPaletteIndex, SilverAxeMapAnimationGraphicsInfoSpellEffectIndex, SilverAxeMapAnimationGraphicsInfoOnHitEffectIndex, SilverAxeMapAnimationGraphicsInfoRangedSpellIndex
+HandAxeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, HandAxeMapAnimationGraphicsInfoImagePointer, HandAxeMapAnimationGraphicsInfoPaletteIndex, HandAxeMapAnimationGraphicsInfoSpellEffectIndex, HandAxeMapAnimationGraphicsInfoOnHitEffectIndex, HandAxeMapAnimationGraphicsInfoRangedSpellIndex
+HammerMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, HammerMapAnimationGraphicsInfoImagePointer, HammerMapAnimationGraphicsInfoPaletteIndex, HammerMapAnimationGraphicsInfoSpellEffectIndex, HammerMapAnimationGraphicsInfoOnHitEffectIndex, HammerMapAnimationGraphicsInfoRangedSpellIndex
+KillerAxeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, KillerAxeMapAnimationGraphicsInfoImagePointer, KillerAxeMapAnimationGraphicsInfoPaletteIndex, KillerAxeMapAnimationGraphicsInfoSpellEffectIndex, KillerAxeMapAnimationGraphicsInfoOnHitEffectIndex, KillerAxeMapAnimationGraphicsInfoRangedSpellIndex
+VougeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, VougeMapAnimationGraphicsInfoImagePointer, VougeMapAnimationGraphicsInfoPaletteIndex, VougeMapAnimationGraphicsInfoSpellEffectIndex, VougeMapAnimationGraphicsInfoOnHitEffectIndex, VougeMapAnimationGraphicsInfoRangedSpellIndex
+BraveAxeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BraveAxeMapAnimationGraphicsInfoImagePointer, BraveAxeMapAnimationGraphicsInfoPaletteIndex, BraveAxeMapAnimationGraphicsInfoSpellEffectIndex, BraveAxeMapAnimationGraphicsInfoOnHitEffectIndex, BraveAxeMapAnimationGraphicsInfoRangedSpellIndex
+DevilAxeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, DevilAxeMapAnimationGraphicsInfoImagePointer, DevilAxeMapAnimationGraphicsInfoPaletteIndex, DevilAxeMapAnimationGraphicsInfoSpellEffectIndex, DevilAxeMapAnimationGraphicsInfoOnHitEffectIndex, DevilAxeMapAnimationGraphicsInfoRangedSpellIndex
+BattleAxeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BattleAxeMapAnimationGraphicsInfoImagePointer, BattleAxeMapAnimationGraphicsInfoPaletteIndex, BattleAxeMapAnimationGraphicsInfoSpellEffectIndex, BattleAxeMapAnimationGraphicsInfoOnHitEffectIndex, BattleAxeMapAnimationGraphicsInfoRangedSpellIndex
+PoleaxMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, PoleaxMapAnimationGraphicsInfoImagePointer, PoleaxMapAnimationGraphicsInfoPaletteIndex, PoleaxMapAnimationGraphicsInfoSpellEffectIndex, PoleaxMapAnimationGraphicsInfoOnHitEffectIndex, PoleaxMapAnimationGraphicsInfoRangedSpellIndex
+MasterAxeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, MasterAxeMapAnimationGraphicsInfoImagePointer, MasterAxeMapAnimationGraphicsInfoPaletteIndex, MasterAxeMapAnimationGraphicsInfoSpellEffectIndex, MasterAxeMapAnimationGraphicsInfoOnHitEffectIndex, MasterAxeMapAnimationGraphicsInfoRangedSpellIndex
+BrokenAxeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BrokenAxeMapAnimationGraphicsInfoImagePointer, BrokenAxeMapAnimationGraphicsInfoPaletteIndex, BrokenAxeMapAnimationGraphicsInfoSpellEffectIndex, BrokenAxeMapAnimationGraphicsInfoOnHitEffectIndex, BrokenAxeMapAnimationGraphicsInfoRangedSpellIndex
+IronBowMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, IronBowMapAnimationGraphicsInfoImagePointer, IronBowMapAnimationGraphicsInfoPaletteIndex, IronBowMapAnimationGraphicsInfoSpellEffectIndex, IronBowMapAnimationGraphicsInfoOnHitEffectIndex, IronBowMapAnimationGraphicsInfoRangedSpellIndex
+SteelBowMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, SteelBowMapAnimationGraphicsInfoImagePointer, SteelBowMapAnimationGraphicsInfoPaletteIndex, SteelBowMapAnimationGraphicsInfoSpellEffectIndex, SteelBowMapAnimationGraphicsInfoOnHitEffectIndex, SteelBowMapAnimationGraphicsInfoRangedSpellIndex
+SilverBowMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, SilverBowMapAnimationGraphicsInfoImagePointer, SilverBowMapAnimationGraphicsInfoPaletteIndex, SilverBowMapAnimationGraphicsInfoSpellEffectIndex, SilverBowMapAnimationGraphicsInfoOnHitEffectIndex, SilverBowMapAnimationGraphicsInfoRangedSpellIndex
+VeninBowMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, VeninBowMapAnimationGraphicsInfoImagePointer, VeninBowMapAnimationGraphicsInfoPaletteIndex, VeninBowMapAnimationGraphicsInfoSpellEffectIndex, VeninBowMapAnimationGraphicsInfoOnHitEffectIndex, VeninBowMapAnimationGraphicsInfoRangedSpellIndex
+KillerBowMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, KillerBowMapAnimationGraphicsInfoImagePointer, KillerBowMapAnimationGraphicsInfoPaletteIndex, KillerBowMapAnimationGraphicsInfoSpellEffectIndex, KillerBowMapAnimationGraphicsInfoOnHitEffectIndex, KillerBowMapAnimationGraphicsInfoRangedSpellIndex
+BraveBowMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BraveBowMapAnimationGraphicsInfoImagePointer, BraveBowMapAnimationGraphicsInfoPaletteIndex, BraveBowMapAnimationGraphicsInfoSpellEffectIndex, BraveBowMapAnimationGraphicsInfoOnHitEffectIndex, BraveBowMapAnimationGraphicsInfoRangedSpellIndex
+ShortbowMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ShortbowMapAnimationGraphicsInfoImagePointer, ShortbowMapAnimationGraphicsInfoPaletteIndex, ShortbowMapAnimationGraphicsInfoSpellEffectIndex, ShortbowMapAnimationGraphicsInfoOnHitEffectIndex, ShortbowMapAnimationGraphicsInfoRangedSpellIndex
+LongbowMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, LongbowMapAnimationGraphicsInfoImagePointer, LongbowMapAnimationGraphicsInfoPaletteIndex, LongbowMapAnimationGraphicsInfoSpellEffectIndex, LongbowMapAnimationGraphicsInfoOnHitEffectIndex, LongbowMapAnimationGraphicsInfoRangedSpellIndex
+GreatbowMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, GreatbowMapAnimationGraphicsInfoImagePointer, GreatbowMapAnimationGraphicsInfoPaletteIndex, GreatbowMapAnimationGraphicsInfoSpellEffectIndex, GreatbowMapAnimationGraphicsInfoOnHitEffectIndex, GreatbowMapAnimationGraphicsInfoRangedSpellIndex
+MasterBowMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, MasterBowMapAnimationGraphicsInfoImagePointer, MasterBowMapAnimationGraphicsInfoPaletteIndex, MasterBowMapAnimationGraphicsInfoSpellEffectIndex, MasterBowMapAnimationGraphicsInfoOnHitEffectIndex, MasterBowMapAnimationGraphicsInfoRangedSpellIndex
+BallistaMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BallistaMapAnimationGraphicsInfoImagePointer, BallistaMapAnimationGraphicsInfoPaletteIndex, BallistaMapAnimationGraphicsInfoSpellEffectIndex, BallistaMapAnimationGraphicsInfoOnHitEffectIndex, BallistaMapAnimationGraphicsInfoRangedSpellIndex
+IronBallistaMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, IronBallistaMapAnimationGraphicsInfoImagePointer, IronBallistaMapAnimationGraphicsInfoPaletteIndex, IronBallistaMapAnimationGraphicsInfoSpellEffectIndex, IronBallistaMapAnimationGraphicsInfoOnHitEffectIndex, IronBallistaMapAnimationGraphicsInfoRangedSpellIndex
+KillerBallistaMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, KillerBallistaMapAnimationGraphicsInfoImagePointer, KillerBallistaMapAnimationGraphicsInfoPaletteIndex, KillerBallistaMapAnimationGraphicsInfoSpellEffectIndex, KillerBallistaMapAnimationGraphicsInfoOnHitEffectIndex, KillerBallistaMapAnimationGraphicsInfoRangedSpellIndex
+VeninBallistaMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, VeninBallistaMapAnimationGraphicsInfoImagePointer, VeninBallistaMapAnimationGraphicsInfoPaletteIndex, VeninBallistaMapAnimationGraphicsInfoSpellEffectIndex, VeninBallistaMapAnimationGraphicsInfoOnHitEffectIndex, VeninBallistaMapAnimationGraphicsInfoRangedSpellIndex
+BrokenBowMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BrokenBowMapAnimationGraphicsInfoImagePointer, BrokenBowMapAnimationGraphicsInfoPaletteIndex, BrokenBowMapAnimationGraphicsInfoSpellEffectIndex, BrokenBowMapAnimationGraphicsInfoOnHitEffectIndex, BrokenBowMapAnimationGraphicsInfoRangedSpellIndex
+FireMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, FireMapAnimationGraphicsInfoImagePointer, FireMapAnimationGraphicsInfoPaletteIndex, FireMapAnimationGraphicsInfoSpellEffectIndex, FireMapAnimationGraphicsInfoOnHitEffectIndex, FireMapAnimationGraphicsInfoRangedSpellIndex
+ElfireMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ElfireMapAnimationGraphicsInfoImagePointer, ElfireMapAnimationGraphicsInfoPaletteIndex, ElfireMapAnimationGraphicsInfoSpellEffectIndex, ElfireMapAnimationGraphicsInfoOnHitEffectIndex, ElfireMapAnimationGraphicsInfoRangedSpellIndex
+BolganoneMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BolganoneMapAnimationGraphicsInfoImagePointer, BolganoneMapAnimationGraphicsInfoPaletteIndex, BolganoneMapAnimationGraphicsInfoSpellEffectIndex, BolganoneMapAnimationGraphicsInfoOnHitEffectIndex, BolganoneMapAnimationGraphicsInfoRangedSpellIndex
+ValflameMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ValflameMapAnimationGraphicsInfoImagePointer, ValflameMapAnimationGraphicsInfoPaletteIndex, ValflameMapAnimationGraphicsInfoSpellEffectIndex, ValflameMapAnimationGraphicsInfoOnHitEffectIndex, ValflameMapAnimationGraphicsInfoRangedSpellIndex
+ThunderMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ThunderMapAnimationGraphicsInfoImagePointer, ThunderMapAnimationGraphicsInfoPaletteIndex, ThunderMapAnimationGraphicsInfoSpellEffectIndex, ThunderMapAnimationGraphicsInfoOnHitEffectIndex, ThunderMapAnimationGraphicsInfoRangedSpellIndex
+DireThunderMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, DireThunderMapAnimationGraphicsInfoImagePointer, DireThunderMapAnimationGraphicsInfoPaletteIndex, DireThunderMapAnimationGraphicsInfoSpellEffectIndex, DireThunderMapAnimationGraphicsInfoOnHitEffectIndex, DireThunderMapAnimationGraphicsInfoRangedSpellIndex
+ThoronMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ThoronMapAnimationGraphicsInfoImagePointer, ThoronMapAnimationGraphicsInfoPaletteIndex, ThoronMapAnimationGraphicsInfoSpellEffectIndex, ThoronMapAnimationGraphicsInfoOnHitEffectIndex, ThoronMapAnimationGraphicsInfoRangedSpellIndex
+MjolnirMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, MjolnirMapAnimationGraphicsInfoImagePointer, MjolnirMapAnimationGraphicsInfoPaletteIndex, MjolnirMapAnimationGraphicsInfoSpellEffectIndex, MjolnirMapAnimationGraphicsInfoOnHitEffectIndex, MjolnirMapAnimationGraphicsInfoRangedSpellIndex
+WindMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, WindMapAnimationGraphicsInfoImagePointer, WindMapAnimationGraphicsInfoPaletteIndex, WindMapAnimationGraphicsInfoSpellEffectIndex, WindMapAnimationGraphicsInfoOnHitEffectIndex, WindMapAnimationGraphicsInfoRangedSpellIndex
+GrafcaliburMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, GrafcaliburMapAnimationGraphicsInfoImagePointer, GrafcaliburMapAnimationGraphicsInfoPaletteIndex, GrafcaliburMapAnimationGraphicsInfoSpellEffectIndex, GrafcaliburMapAnimationGraphicsInfoOnHitEffectIndex, GrafcaliburMapAnimationGraphicsInfoRangedSpellIndex
+TornadoMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, TornadoMapAnimationGraphicsInfoImagePointer, TornadoMapAnimationGraphicsInfoPaletteIndex, TornadoMapAnimationGraphicsInfoSpellEffectIndex, TornadoMapAnimationGraphicsInfoOnHitEffectIndex, TornadoMapAnimationGraphicsInfoRangedSpellIndex
+ForsetiMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ForsetiMapAnimationGraphicsInfoImagePointer, ForsetiMapAnimationGraphicsInfoPaletteIndex, ForsetiMapAnimationGraphicsInfoSpellEffectIndex, ForsetiMapAnimationGraphicsInfoOnHitEffectIndex, ForsetiMapAnimationGraphicsInfoRangedSpellIndex
+LightMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, LightMapAnimationGraphicsInfoImagePointer, LightMapAnimationGraphicsInfoPaletteIndex, LightMapAnimationGraphicsInfoSpellEffectIndex, LightMapAnimationGraphicsInfoOnHitEffectIndex, LightMapAnimationGraphicsInfoRangedSpellIndex
+NosferatuMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, NosferatuMapAnimationGraphicsInfoImagePointer, NosferatuMapAnimationGraphicsInfoPaletteIndex, NosferatuMapAnimationGraphicsInfoSpellEffectIndex, NosferatuMapAnimationGraphicsInfoOnHitEffectIndex, NosferatuMapAnimationGraphicsInfoRangedSpellIndex
+AuraMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, AuraMapAnimationGraphicsInfoImagePointer, AuraMapAnimationGraphicsInfoPaletteIndex, AuraMapAnimationGraphicsInfoSpellEffectIndex, AuraMapAnimationGraphicsInfoOnHitEffectIndex, AuraMapAnimationGraphicsInfoRangedSpellIndex
+JormungandMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, JormungandMapAnimationGraphicsInfoImagePointer, JormungandMapAnimationGraphicsInfoPaletteIndex, JormungandMapAnimationGraphicsInfoSpellEffectIndex, JormungandMapAnimationGraphicsInfoOnHitEffectIndex, JormungandMapAnimationGraphicsInfoRangedSpellIndex
+FenrirMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, FenrirMapAnimationGraphicsInfoImagePointer, FenrirMapAnimationGraphicsInfoPaletteIndex, FenrirMapAnimationGraphicsInfoSpellEffectIndex, FenrirMapAnimationGraphicsInfoOnHitEffectIndex, FenrirMapAnimationGraphicsInfoRangedSpellIndex
+HelMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, HelMapAnimationGraphicsInfoImagePointer, HelMapAnimationGraphicsInfoPaletteIndex, HelMapAnimationGraphicsInfoSpellEffectIndex, HelMapAnimationGraphicsInfoOnHitEffectIndex, HelMapAnimationGraphicsInfoRangedSpellIndex
+LoptousMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, LoptousMapAnimationGraphicsInfoImagePointer, LoptousMapAnimationGraphicsInfoPaletteIndex, LoptousMapAnimationGraphicsInfoSpellEffectIndex, LoptousMapAnimationGraphicsInfoOnHitEffectIndex, LoptousMapAnimationGraphicsInfoRangedSpellIndex
+MeteorMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, MeteorMapAnimationGraphicsInfoImagePointer, MeteorMapAnimationGraphicsInfoPaletteIndex, MeteorMapAnimationGraphicsInfoSpellEffectIndex, MeteorMapAnimationGraphicsInfoOnHitEffectIndex, MeteorMapAnimationGraphicsInfoRangedSpellIndex
+BoltingMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BoltingMapAnimationGraphicsInfoImagePointer, BoltingMapAnimationGraphicsInfoPaletteIndex, BoltingMapAnimationGraphicsInfoSpellEffectIndex, BoltingMapAnimationGraphicsInfoOnHitEffectIndex, BoltingMapAnimationGraphicsInfoRangedSpellIndex
+BlizzardMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BlizzardMapAnimationGraphicsInfoImagePointer, BlizzardMapAnimationGraphicsInfoPaletteIndex, BlizzardMapAnimationGraphicsInfoSpellEffectIndex, BlizzardMapAnimationGraphicsInfoOnHitEffectIndex, BlizzardMapAnimationGraphicsInfoRangedSpellIndex
+VeninMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, VeninMapAnimationGraphicsInfoImagePointer, VeninMapAnimationGraphicsInfoPaletteIndex, VeninMapAnimationGraphicsInfoSpellEffectIndex, VeninMapAnimationGraphicsInfoOnHitEffectIndex, VeninMapAnimationGraphicsInfoRangedSpellIndex
+PetrifyMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, PetrifyMapAnimationGraphicsInfoImagePointer, PetrifyMapAnimationGraphicsInfoPaletteIndex, PetrifyMapAnimationGraphicsInfoSpellEffectIndex, PetrifyMapAnimationGraphicsInfoOnHitEffectIndex, PetrifyMapAnimationGraphicsInfoRangedSpellIndex
+ForsetiInfiniteMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ForsetiInfiniteMapAnimationGraphicsInfoImagePointer, ForsetiInfiniteMapAnimationGraphicsInfoPaletteIndex, ForsetiInfiniteMapAnimationGraphicsInfoSpellEffectIndex, ForsetiInfiniteMapAnimationGraphicsInfoOnHitEffectIndex, ForsetiInfiniteMapAnimationGraphicsInfoRangedSpellIndex
+BrokenTomeMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BrokenTomeMapAnimationGraphicsInfoImagePointer, BrokenTomeMapAnimationGraphicsInfoPaletteIndex, BrokenTomeMapAnimationGraphicsInfoSpellEffectIndex, BrokenTomeMapAnimationGraphicsInfoOnHitEffectIndex, BrokenTomeMapAnimationGraphicsInfoRangedSpellIndex
+HealMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, HealMapAnimationGraphicsInfoImagePointer, HealMapAnimationGraphicsInfoPaletteIndex, HealMapAnimationGraphicsInfoSpellEffectIndex, HealMapAnimationGraphicsInfoOnHitEffectIndex, HealMapAnimationGraphicsInfoRangedSpellIndex
+MendMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, MendMapAnimationGraphicsInfoImagePointer, MendMapAnimationGraphicsInfoPaletteIndex, MendMapAnimationGraphicsInfoSpellEffectIndex, MendMapAnimationGraphicsInfoOnHitEffectIndex, MendMapAnimationGraphicsInfoRangedSpellIndex
+RecoverMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, RecoverMapAnimationGraphicsInfoImagePointer, RecoverMapAnimationGraphicsInfoPaletteIndex, RecoverMapAnimationGraphicsInfoSpellEffectIndex, RecoverMapAnimationGraphicsInfoOnHitEffectIndex, RecoverMapAnimationGraphicsInfoRangedSpellIndex
+PhysicMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, PhysicMapAnimationGraphicsInfoImagePointer, PhysicMapAnimationGraphicsInfoPaletteIndex, PhysicMapAnimationGraphicsInfoSpellEffectIndex, PhysicMapAnimationGraphicsInfoOnHitEffectIndex, PhysicMapAnimationGraphicsInfoRangedSpellIndex
+FortifyMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, FortifyMapAnimationGraphicsInfoImagePointer, FortifyMapAnimationGraphicsInfoPaletteIndex, FortifyMapAnimationGraphicsInfoSpellEffectIndex, FortifyMapAnimationGraphicsInfoOnHitEffectIndex, FortifyMapAnimationGraphicsInfoRangedSpellIndex
+RescueMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, RescueMapAnimationGraphicsInfoImagePointer, RescueMapAnimationGraphicsInfoPaletteIndex, RescueMapAnimationGraphicsInfoSpellEffectIndex, RescueMapAnimationGraphicsInfoOnHitEffectIndex, RescueMapAnimationGraphicsInfoRangedSpellIndex
+WarpMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, WarpMapAnimationGraphicsInfoImagePointer, WarpMapAnimationGraphicsInfoPaletteIndex, WarpMapAnimationGraphicsInfoSpellEffectIndex, WarpMapAnimationGraphicsInfoOnHitEffectIndex, WarpMapAnimationGraphicsInfoRangedSpellIndex
+RestoreMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, RestoreMapAnimationGraphicsInfoImagePointer, RestoreMapAnimationGraphicsInfoPaletteIndex, RestoreMapAnimationGraphicsInfoSpellEffectIndex, RestoreMapAnimationGraphicsInfoOnHitEffectIndex, RestoreMapAnimationGraphicsInfoRangedSpellIndex
+SilenceStaffMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, SilenceStaffMapAnimationGraphicsInfoImagePointer, SilenceStaffMapAnimationGraphicsInfoPaletteIndex, SilenceStaffMapAnimationGraphicsInfoSpellEffectIndex, SilenceStaffMapAnimationGraphicsInfoOnHitEffectIndex, SilenceStaffMapAnimationGraphicsInfoRangedSpellIndex
+SleepMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, SleepMapAnimationGraphicsInfoImagePointer, SleepMapAnimationGraphicsInfoPaletteIndex, SleepMapAnimationGraphicsInfoSpellEffectIndex, SleepMapAnimationGraphicsInfoOnHitEffectIndex, SleepMapAnimationGraphicsInfoRangedSpellIndex
+TorchStaffMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, TorchStaffMapAnimationGraphicsInfoImagePointer, TorchStaffMapAnimationGraphicsInfoPaletteIndex, TorchStaffMapAnimationGraphicsInfoSpellEffectIndex, TorchStaffMapAnimationGraphicsInfoOnHitEffectIndex, TorchStaffMapAnimationGraphicsInfoRangedSpellIndex
+ReturnMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ReturnMapAnimationGraphicsInfoImagePointer, ReturnMapAnimationGraphicsInfoPaletteIndex, ReturnMapAnimationGraphicsInfoSpellEffectIndex, ReturnMapAnimationGraphicsInfoOnHitEffectIndex, ReturnMapAnimationGraphicsInfoRangedSpellIndex
+HammerneMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, HammerneMapAnimationGraphicsInfoImagePointer, HammerneMapAnimationGraphicsInfoPaletteIndex, HammerneMapAnimationGraphicsInfoSpellEffectIndex, HammerneMapAnimationGraphicsInfoOnHitEffectIndex, HammerneMapAnimationGraphicsInfoRangedSpellIndex
+ThiefStaffMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, ThiefStaffMapAnimationGraphicsInfoImagePointer, ThiefStaffMapAnimationGraphicsInfoPaletteIndex, ThiefStaffMapAnimationGraphicsInfoSpellEffectIndex, ThiefStaffMapAnimationGraphicsInfoOnHitEffectIndex, ThiefStaffMapAnimationGraphicsInfoRangedSpellIndex
+WatchMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, WatchMapAnimationGraphicsInfoImagePointer, WatchMapAnimationGraphicsInfoPaletteIndex, WatchMapAnimationGraphicsInfoSpellEffectIndex, WatchMapAnimationGraphicsInfoOnHitEffectIndex, WatchMapAnimationGraphicsInfoRangedSpellIndex
+BerserkMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BerserkMapAnimationGraphicsInfoImagePointer, BerserkMapAnimationGraphicsInfoPaletteIndex, BerserkMapAnimationGraphicsInfoSpellEffectIndex, BerserkMapAnimationGraphicsInfoOnHitEffectIndex, BerserkMapAnimationGraphicsInfoRangedSpellIndex
+UnlockMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, UnlockMapAnimationGraphicsInfoImagePointer, UnlockMapAnimationGraphicsInfoPaletteIndex, UnlockMapAnimationGraphicsInfoSpellEffectIndex, UnlockMapAnimationGraphicsInfoOnHitEffectIndex, UnlockMapAnimationGraphicsInfoRangedSpellIndex
+EnsorcelMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, EnsorcelMapAnimationGraphicsInfoImagePointer, EnsorcelMapAnimationGraphicsInfoPaletteIndex, EnsorcelMapAnimationGraphicsInfoSpellEffectIndex, EnsorcelMapAnimationGraphicsInfoOnHitEffectIndex, EnsorcelMapAnimationGraphicsInfoRangedSpellIndex
+RewarpMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, RewarpMapAnimationGraphicsInfoImagePointer, RewarpMapAnimationGraphicsInfoPaletteIndex, RewarpMapAnimationGraphicsInfoSpellEffectIndex, RewarpMapAnimationGraphicsInfoOnHitEffectIndex, RewarpMapAnimationGraphicsInfoRangedSpellIndex
+KiaMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, KiaMapAnimationGraphicsInfoImagePointer, KiaMapAnimationGraphicsInfoPaletteIndex, KiaMapAnimationGraphicsInfoSpellEffectIndex, KiaMapAnimationGraphicsInfoOnHitEffectIndex, KiaMapAnimationGraphicsInfoRangedSpellIndex
+BrokenStaffMapAnimationGraphicsInfoMapAnimationItemGraphicsInfoEntry .dstruct structMapAnimationItemGraphicsInfoEntry, BrokenStaffMapAnimationGraphicsInfoImagePointer, BrokenStaffMapAnimationGraphicsInfoPaletteIndex, BrokenStaffMapAnimationGraphicsInfoSpellEffectIndex, BrokenStaffMapAnimationGraphicsInfoOnHitEffectIndex, BrokenStaffMapAnimationGraphicsInfoRangedSpellIndex

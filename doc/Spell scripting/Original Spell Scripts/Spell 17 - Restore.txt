@@ -1,0 +1,36 @@
+B0FBA - B0FFD
+
+3B 08     ; BEGIN
+16 42     ; Load Tile: Restore (+pause)
+FE FF     ; --Wait--
+17 42     ; Load Tile: Restore Tilemap (+pause)
+13 1C     ; Secondary Palette: ???
+FE FF     ; --Wait--
+0C 5E     ; Scroll to Defender: Medium 4 (+pause)
+FE FF     ; --Wait--
+10 00     ; Effect Mask: Create Pillar (medium)
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+22 16     ; Palette: Restore Blue
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+2B 2A     ; Play Sound: Restore Start
+11 1A     ; Placement / Scrolling: ???
+1C 04     ; Display Tiles: ???
+08 06     ; Tile Effect: Heavy Ripple
+10 1A     ; Placement / Scrolling: ???
+4C 54     ; --Wait: 76 frames--
+FE FF     ; --Wait--
+20 54     ; --Wait: 32 frames--
+FE FF     ; --Wait--
+B7 16     ; Palette: Fade Out
+20 54     ; --Wait: 32 frames--
+FE FF     ; --Wait--
+30 2E     ; Play Sound (lower): Restore End
+1D 04     ; Display Tiles: ???
+00 06     ; Tile Effect: Stop
+11 00     ; Effect Mask: Delete
+FD FF     ; Cast2: resting
+36 08     ; END
+FF FF     ; EXIT

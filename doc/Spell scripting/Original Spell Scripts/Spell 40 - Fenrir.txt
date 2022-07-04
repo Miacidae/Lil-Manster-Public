@@ -1,0 +1,92 @@
+B18B6 - B1969
+
+3B 08     ; BEGIN
+77 42     ; Load Tiles: Lines- Fenrir, Stone, Venin (+pause)
+FE FF     ; --Wait--
+79 42     ; Load Tiles: Fenrir, Stone, Venin Tilemap1 (+pause)
+FE FF     ; --Wait--
+17 10     ; Battle Scene Mod2: Fade Out Battle Area to Black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+11 08     ; Battle Scene Mod: Hide Attacker
+12 08     ; Battle Scene Mod: Show Defender
+60 04     ; Display Tiles: Instant Screen Black Out 2
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+2A 08     ; Battle Scene Mod: Shift Background Up
+3C 1A     ; Placement / Scrolling: ???
+7A 16     ; Effect / Palette: ???
+78 42     ; Load Tiles: Head - Fenrir, Stone, Venin (+pause)
+FE FF     ; --Wait--
+7A 42     ; Load Tiles: Fenrir, Stone, Venin Tilemap2 (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+02 1A     ; Placement: Center of Screen
+3B 04     ; Display Tiles: ???
+05 24     ; Special Triangle Masking: ???
+23 1A     ; Placement / Scrolling: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+16 10     ; Battle Scene Mod2: Fade In Battle Area: Fast
+7B 56     ; Effect / Palette: ??? (+pause)
+FE FF     ; --Wait--
+05 22     ; Add Background Hue: Solid Blue
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+1F 2A     ; Play Sound: Fenrir
+3C 04     ; Display Tiles: ???
+06 24     ; Special Triangle Masking: ???
+7C 16     ; Effect / Palette: ???
+96 54     ; --Wait: 150 frames--
+FE FF     ; --Wait--
+7D 16     ; Effect / Palette: ???
+7E 16     ; Effect / Palette: ???
+7F 16     ; Effect / Palette: ???
+1A 54     ; --Wait: 26 frames--
+FE FF     ; --Wait--
+F9 FF     ; Dodge point
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+FA FF     ; Damage point
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+80 16     ; Effect / Palette: ???
+08 24     ; Special Triangle Masking: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+3D 04     ; Display Tiles: ???
+2B 08     ; Battle Scene Mod: Reset BG
+1F 1A     ; Placement / Scrolling: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+00 18     ; BG Mod: ???
+FE FF     ; --Wait--
+FD FF     ; Cast2.5: resting??
+01 18     ; BG Mod: ???
+17 10     ; Battle Scene Mod2: Fade Out Battle Area to Black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+06 22     ; Add Background Hue: Very Dark
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+17 10     ; Battle Scene Mod2: Fade Out Battle Area to Black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+05 0E     ; BG?: Meteor something1
+06 4E     ; BG?: Meteor something2 (+pause)
+02 18     ; BG Mod: ???
+FE FF     ; --Wait--
+26 08     ; Battle Scene Mod: Hide Defender
+37 08     ; Battle Scene Mod: Display Attacker
+61 04     ; Display Tiles: ???
+12 56     ; Effect: Reset Tile/Palette Effects (+pause)
+FE FF     ; --Wait--
+16 10     ; Battle Scene Mod2: Fade In Battle Area: Fast
+FE FF     ; --Wait--
+81 16     ; Effect / Palette: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

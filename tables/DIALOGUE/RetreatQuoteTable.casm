@@ -1,0 +1,385 @@
+	LeifChapter5RetreatQuote						= 0
+		LeifChapter5RetreatQuoteCharacter			= Leif
+		LeifChapter5RetreatQuoteChapter				= Chapter5
+		LeifChapter5RetreatQuoteFlag				= None
+		LeifChapter5RetreatQuoteDialoguePointer		= ch5leifesc
+
+	NannaChapter5RetreatQuote						= 1
+		NannaChapter5RetreatQuoteCharacter			= Nanna
+		NannaChapter5RetreatQuoteChapter			= Chapter5
+		NannaChapter5RetreatQuoteFlag				= None
+		NannaChapter5RetreatQuoteDialoguePointer	= ch5nannaesc
+
+	FinnRetreatQuote								= 2
+		FinnRetreatQuoteCharacter					= Finn
+		FinnRetreatQuoteChapter						= AnyChapter
+		FinnRetreatQuoteFlag						= None
+		FinnRetreatQuoteDialoguePointer				= finnesc
+
+	OsianRetreatQuote								= 3
+		OsianRetreatQuoteCharacter					= Osian
+		OsianRetreatQuoteChapter					= AnyChapter
+		OsianRetreatQuoteFlag						= None
+		OsianRetreatQuoteDialoguePointer			= osianesc
+
+	HalvanRetreatQuote								= 4
+		HalvanRetreatQuoteCharacter					= Halvan
+		HalvanRetreatQuoteChapter					= AnyChapter
+		HalvanRetreatQuoteFlag						= None
+		HalvanRetreatQuoteDialoguePointer			= halvanesc
+
+	EyvelRetreatQuote								= 5
+		EyvelRetreatQuoteCharacter					= Eyvel
+		EyvelRetreatQuoteChapter					= AnyChapter
+		EyvelRetreatQuoteFlag						= None
+		EyvelRetreatQuoteDialoguePointer			= eyvelesc
+
+	DagdarRetreatQuote								= 6
+		DagdarRetreatQuoteCharacter					= Dagdar
+		DagdarRetreatQuoteChapter					= AnyChapter
+		DagdarRetreatQuoteFlag						= None
+		DagdarRetreatQuoteDialoguePointer			= dagdaresc
+
+	RalphRetreatQuote								= 7
+		RalphRetreatQuoteCharacter					= Ralph
+		RalphRetreatQuoteChapter					= AnyChapter
+		RalphRetreatQuoteFlag						= None
+		RalphRetreatQuoteDialoguePointer			= ralphesc
+
+	MartyRetreatQuote								= 8
+		MartyRetreatQuoteCharacter					= Marty
+		MartyRetreatQuoteChapter					= AnyChapter
+		MartyRetreatQuoteFlag						= None
+		MartyRetreatQuoteDialoguePointer			= martyesc
+
+	RonanRetreatQuote								= 9
+		RonanRetreatQuoteCharacter					= Ronan
+		RonanRetreatQuoteChapter					= AnyChapter
+		RonanRetreatQuoteFlag						= None
+		RonanRetreatQuoteDialoguePointer			= ronanesc
+
+	MirandaRetreatQuote								= 10
+		MirandaRetreatQuoteCharacter				= Miranda
+		MirandaRetreatQuoteChapter					= AnyChapter
+		MirandaRetreatQuoteFlag						= None
+		MirandaRetreatQuoteDialoguePointer			= mirandaesc
+
+	SafyRetreatQuote								= 11
+		SafyRetreatQuoteCharacter					= Safy
+		SafyRetreatQuoteChapter						= AnyChapter
+		SafyRetreatQuoteFlag						= None
+		SafyRetreatQuoteDialoguePointer				= safieesc
+
+	LaraRetreatQuote								= 12
+		LaraRetreatQuoteCharacter					= Lara
+		LaraRetreatQuoteChapter						= AnyChapter
+		LaraRetreatQuoteFlag						= None
+		LaraRetreatQuoteDialoguePointer				= laraesc
+
+	BrightonRetreatQuote							= 13
+		BrightonRetreatQuoteCharacter				= Brighton
+		BrightonRetreatQuoteChapter					= AnyChapter
+		BrightonRetreatQuoteFlag					= None
+		BrightonRetreatQuoteDialoguePointer			= brightonesc
+
+	FergusRetreatQuote								= 14
+		FergusRetreatQuoteCharacter					= Fergus
+		FergusRetreatQuoteChapter					= AnyChapter
+		FergusRetreatQuoteFlag						= None
+		FergusRetreatQuoteDialoguePointer			= fergusesc
+
+	EdaRetreatQuote									= 15
+		EdaRetreatQuoteCharacter					= Eda
+		EdaRetreatQuoteChapter						= AnyChapter
+		EdaRetreatQuoteFlag							= None
+		EdaRetreatQuoteDialoguePointer				= edaesc
+
+	AsbelRetreatQuote								= 16
+		AsbelRetreatQuoteCharacter					= Asbel
+		AsbelRetreatQuoteChapter					= AnyChapter
+		AsbelRetreatQuoteFlag						= None
+		AsbelRetreatQuoteDialoguePointer			= asbelesc
+
+	MachaRetreatQuote								= 17
+		MachaRetreatQuoteCharacter					= Macha
+		MachaRetreatQuoteChapter					= AnyChapter
+		MachaRetreatQuoteFlag						= None
+		MachaRetreatQuoteDialoguePointer			= machaesc
+
+	HicksRetreatQuote								= 18
+		HicksRetreatQuoteCharacter					= Hicks
+		HicksRetreatQuoteChapter					= AnyChapter
+		HicksRetreatQuoteFlag						= None
+		HicksRetreatQuoteDialoguePointer			= hicksesc
+
+	NannaRetreatQuote								= 19
+		NannaRetreatQuoteCharacter					= Nanna
+		NannaRetreatQuoteChapter					= AnyChapter
+		NannaRetreatQuoteFlag						= None
+		NannaRetreatQuoteDialoguePointer			= nannaesc
+
+	SelphinaRetreatQuote							= 20
+		SelphinaRetreatQuoteCharacter				= Selphina
+		SelphinaRetreatQuoteChapter					= AnyChapter
+		SelphinaRetreatQuoteFlag					= None
+		SelphinaRetreatQuoteDialoguePointer			= selphinaesc
+
+	DahlsonRetreatQuote								= 21
+		DahlsonRetreatQuoteCharacter				= Dalsin
+		DahlsonRetreatQuoteChapter					= AnyChapter
+		DahlsonRetreatQuoteFlag						= None
+		DahlsonRetreatQuoteDialoguePointer			= dalsinesc
+
+	CallionRetreatQuote								= 22
+		CallionRetreatQuoteCharacter				= Callion
+		CallionRetreatQuoteChapter					= AnyChapter
+		CallionRetreatQuoteFlag						= None
+		CallionRetreatQuoteDialoguePointer			= callionesc
+
+	GalzusRetreatQuote								= 23
+		GalzusRetreatQuoteCharacter					= Galzus
+		GalzusRetreatQuoteChapter					= AnyChapter
+		GalzusRetreatQuoteFlag						= None
+		GalzusRetreatQuoteDialoguePointer			= galzusesc
+
+	PerneRetreatQuote								= 24
+		PerneRetreatQuoteCharacter					= Perne
+		PerneRetreatQuoteChapter					= AnyChapter
+		PerneRetreatQuoteFlag						= None
+		PerneRetreatQuoteDialoguePointer			= perneesc
+
+	GladeRetreatQuote								= 25
+		GladeRetreatQuoteCharacter					= Glade
+		GladeRetreatQuoteChapter					= AnyChapter
+		GladeRetreatQuoteFlag						= None
+		GladeRetreatQuoteDialoguePointer			= gladeesc
+
+	KaneRetreatQuote								= 26
+		KaneRetreatQuoteCharacter					= Kane
+		KaneRetreatQuoteChapter						= AnyChapter
+		KaneRetreatQuoteFlag						= None
+		KaneRetreatQuoteDialoguePointer				= kaneesc
+
+	AlbaRetreatQuote								= 27
+		AlbaRetreatQuoteCharacter					= Alba
+		AlbaRetreatQuoteChapter						= AnyChapter
+		AlbaRetreatQuoteFlag						= None
+		AlbaRetreatQuoteDialoguePointer				= albaesc
+
+	RobertRetreatQuote								= 28
+		RobertRetreatQuoteCharacter					= Robert
+		RobertRetreatQuoteChapter					= AnyChapter
+		RobertRetreatQuoteFlag						= None
+		RobertRetreatQuoteDialoguePointer			= robertesc
+
+	FredRetreatQuote								= 29
+		FredRetreatQuoteCharacter					= Fred
+		FredRetreatQuoteChapter						= AnyChapter
+		FredRetreatQuoteFlag						= None
+		FredRetreatQuoteDialoguePointer				= fredesc
+
+	OlwenRetreatQuote								= 30
+		OlwenRetreatQuoteCharacter					= Olwen
+		OlwenRetreatQuoteChapter					= AnyChapter
+		OlwenRetreatQuoteFlag						= None
+		OlwenRetreatQuoteDialoguePointer			= olwenesc
+
+	CedChp4xRetreatQuote							= 31
+		CedChp4xRetreatQuoteCharacter				= CedChp4x
+		CedChp4xRetreatQuoteChapter					= AnyChapter
+		CedChp4xRetreatQuoteFlag					= None
+		CedChp4xRetreatQuoteDialoguePointer			= ch4Xcedesc
+
+	CedChp23RetreatQuote							= 32
+		CedChp23RetreatQuoteCharacter				= CedChp23
+		CedChp23RetreatQuoteChapter					= AnyChapter
+		CedChp23RetreatQuoteFlag					= None
+		CedChp23RetreatQuoteDialoguePointer			= cedesc
+
+	LifisRetreatQuote								= 33
+		LifisRetreatQuoteCharacter					= Lifis
+		LifisRetreatQuoteChapter					= AnyChapter
+		LifisRetreatQuoteFlag						= None
+		LifisRetreatQuoteDialoguePointer			= lithisesc
+
+	KarinRetreatQuote								= 34
+		KarinRetreatQuoteCharacter					= Karin
+		KarinRetreatQuoteChapter					= AnyChapter
+		KarinRetreatQuoteFlag						= None
+		KarinRetreatQuoteDialoguePointer			= karinesc
+
+	DeanRetreatQuote								= 35
+		DeanRetreatQuoteCharacter					= Dean
+		DeanRetreatQuoteChapter						= AnyChapter
+		DeanRetreatQuoteFlag						= None
+		DeanRetreatQuoteDialoguePointer				= deanesc
+
+	ShannamRetreatQuote								= 36
+		ShannamRetreatQuoteCharacter				= Shannam
+		ShannamRetreatQuoteChapter					= AnyChapter
+		ShannamRetreatQuoteFlag						= None
+		ShannamRetreatQuoteDialoguePointer			= shannamesc
+
+	TrudeRetreatQuote								= 37
+		TrudeRetreatQuoteCharacter					= Trude
+		TrudeRetreatQuoteChapter					= AnyChapter
+		TrudeRetreatQuoteFlag						= None
+		TrudeRetreatQuoteDialoguePointer			= trudeesc
+
+	TanyaRetreatQuote								= 38
+		TanyaRetreatQuoteCharacter					= Tanya
+		TanyaRetreatQuoteChapter					= AnyChapter
+		TanyaRetreatQuoteFlag						= None
+		TanyaRetreatQuoteDialoguePointer			= tanyaesc
+
+	LinoanRetreatQuote								= 39
+		LinoanRetreatQuoteCharacter					= Linoan
+		LinoanRetreatQuoteChapter					= AnyChapter
+		LinoanRetreatQuoteFlag						= None
+		LinoanRetreatQuoteDialoguePointer			= linoanesc
+
+	MishaRetreatQuote								= 40
+		MishaRetreatQuoteCharacter					= Misha
+		MishaRetreatQuoteChapter					= AnyChapter
+		MishaRetreatQuoteFlag						= None
+		MishaRetreatQuoteDialoguePointer			= mishaesc
+
+	SalemRetreatQuote								= 41
+		SalemRetreatQuoteCharacter					= Salem
+		SalemRetreatQuoteChapter					= AnyChapter
+		SalemRetreatQuoteFlag						= None
+		SalemRetreatQuoteDialoguePointer			= salemesc
+
+	SchroffRetreatQuote								= 42
+		SchroffRetreatQuoteCharacter				= Schroff
+		SchroffRetreatQuoteChapter					= AnyChapter
+		SchroffRetreatQuoteFlag						= None
+		SchroffRetreatQuoteDialoguePointer			= schroffesc
+
+	MareetaRetreatQuote								= 43
+		MareetaRetreatQuoteCharacter				= Mareeta
+		MareetaRetreatQuoteChapter					= AnyChapter
+		MareetaRetreatQuoteFlag						= None
+		MareetaRetreatQuoteDialoguePointer			= mareetaesc
+
+	TinaRetreatQuote								= 44
+		TinaRetreatQuoteCharacter					= Tina
+		TinaRetreatQuoteChapter						= AnyChapter
+		TinaRetreatQuoteFlag						= None
+		TinaRetreatQuoteDialoguePointer				= tinaesc
+
+	GunterDialogueRetreatQuote						= 45
+		GunterDialogueRetreatQuoteCharacter			= GunterDialogue
+		GunterDialogueRetreatQuoteChapter			= AnyChapter
+		GunterDialogueRetreatQuoteFlag				= None
+		GunterDialogueRetreatQuoteDialoguePointer	= gunteresc
+
+	AmaldaRetreatQuote								= 46
+		AmaldaRetreatQuoteCharacter					= Amalda
+		AmaldaRetreatQuoteChapter					= AnyChapter
+		AmaldaRetreatQuoteFlag						= None
+		AmaldaRetreatQuoteDialoguePointer			= amaldaesc
+
+	IliosRetreatQuote								= 47
+		IliosRetreatQuoteCharacter					= Ilios
+		IliosRetreatQuoteChapter					= AnyChapter
+		IliosRetreatQuoteFlag						= None
+		IliosRetreatQuoteDialoguePointer			= iliosesc
+
+	ConomorRetreatQuote								= 48
+		ConomorRetreatQuoteCharacter				= Conomor
+		ConomorRetreatQuoteChapter					= AnyChapter
+		ConomorRetreatQuoteFlag						= None
+		ConomorRetreatQuoteDialoguePointer			= conomoresc
+
+	HomerRetreatQuote								= 49
+		HomerRetreatQuoteCharacter					= Homer
+		HomerRetreatQuoteChapter					= AnyChapter
+		HomerRetreatQuoteFlag						= None
+		HomerRetreatQuoteDialoguePointer			= homeresc
+
+	DiarmuidRetreatQuote							= 50
+		DiarmuidRetreatQuoteCharacter				= Diarmuid
+		DiarmuidRetreatQuoteChapter					= AnyChapter
+		DiarmuidRetreatQuoteFlag					= None
+		DiarmuidRetreatQuoteDialoguePointer			= dermottesc
+
+	SaraRetreatQuote								= 51
+		SaraRetreatQuoteCharacter					= Sara
+		SaraRetreatQuoteChapter						= AnyChapter
+		SaraRetreatQuoteFlag						= None
+		SaraRetreatQuoteDialoguePointer				= sarahesc
+
+	SaiasRetreatQuote								= 52
+		SaiasRetreatQuoteCharacter					= Saias
+		SaiasRetreatQuoteChapter					= AnyChapter
+		SaiasRetreatQuoteFlag						= None
+		SaiasRetreatQuoteDialoguePointer			= saiasesc
+
+	ShivaRetreatQuote								= 53
+		ShivaRetreatQuoteCharacter					= Shiva
+		ShivaRetreatQuoteChapter					= AnyChapter
+		ShivaRetreatQuoteFlag						= None
+		ShivaRetreatQuoteDialoguePointer			= shivaesc
+
+	XavierRetreatQuote								= 54
+		XavierRetreatQuoteCharacter					= Xavier
+		XavierRetreatQuoteChapter					= AnyChapter
+		XavierRetreatQuoteFlag						= None
+		XavierRetreatQuoteDialoguePointer			= xavieresc
+
+LeifChapter5RetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, LeifChapter5RetreatQuoteCharacter, LeifChapter5RetreatQuoteChapter, LeifChapter5RetreatQuoteFlag, LeifChapter5RetreatQuoteDialoguePointer
+NannaChapter5RetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, NannaChapter5RetreatQuoteCharacter, NannaChapter5RetreatQuoteChapter, NannaChapter5RetreatQuoteFlag, NannaChapter5RetreatQuoteDialoguePointer
+FinnRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, FinnRetreatQuoteCharacter, FinnRetreatQuoteChapter, FinnRetreatQuoteFlag, FinnRetreatQuoteDialoguePointer
+OsianRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, OsianRetreatQuoteCharacter, OsianRetreatQuoteChapter, OsianRetreatQuoteFlag, OsianRetreatQuoteDialoguePointer
+HalvanRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, HalvanRetreatQuoteCharacter, HalvanRetreatQuoteChapter, HalvanRetreatQuoteFlag, HalvanRetreatQuoteDialoguePointer
+EyvelRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, EyvelRetreatQuoteCharacter, EyvelRetreatQuoteChapter, EyvelRetreatQuoteFlag, EyvelRetreatQuoteDialoguePointer
+DagdarRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, DagdarRetreatQuoteCharacter, DagdarRetreatQuoteChapter, DagdarRetreatQuoteFlag, DagdarRetreatQuoteDialoguePointer
+RalphRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, RalphRetreatQuoteCharacter, RalphRetreatQuoteChapter, RalphRetreatQuoteFlag, RalphRetreatQuoteDialoguePointer
+MartyRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, MartyRetreatQuoteCharacter, MartyRetreatQuoteChapter, MartyRetreatQuoteFlag, MartyRetreatQuoteDialoguePointer
+RonanRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, RonanRetreatQuoteCharacter, RonanRetreatQuoteChapter, RonanRetreatQuoteFlag, RonanRetreatQuoteDialoguePointer
+MirandaRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, MirandaRetreatQuoteCharacter, MirandaRetreatQuoteChapter, MirandaRetreatQuoteFlag, MirandaRetreatQuoteDialoguePointer
+SafyRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, SafyRetreatQuoteCharacter, SafyRetreatQuoteChapter, SafyRetreatQuoteFlag, SafyRetreatQuoteDialoguePointer
+LaraRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, LaraRetreatQuoteCharacter, LaraRetreatQuoteChapter, LaraRetreatQuoteFlag, LaraRetreatQuoteDialoguePointer
+BrightonRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, BrightonRetreatQuoteCharacter, BrightonRetreatQuoteChapter, BrightonRetreatQuoteFlag, BrightonRetreatQuoteDialoguePointer
+FergusRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, FergusRetreatQuoteCharacter, FergusRetreatQuoteChapter, FergusRetreatQuoteFlag, FergusRetreatQuoteDialoguePointer
+EdaRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, EdaRetreatQuoteCharacter, EdaRetreatQuoteChapter, EdaRetreatQuoteFlag, EdaRetreatQuoteDialoguePointer
+AsbelRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, AsbelRetreatQuoteCharacter, AsbelRetreatQuoteChapter, AsbelRetreatQuoteFlag, AsbelRetreatQuoteDialoguePointer
+MachaRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, MachaRetreatQuoteCharacter, MachaRetreatQuoteChapter, MachaRetreatQuoteFlag, MachaRetreatQuoteDialoguePointer
+HicksRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, HicksRetreatQuoteCharacter, HicksRetreatQuoteChapter, HicksRetreatQuoteFlag, HicksRetreatQuoteDialoguePointer
+NannaRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, NannaRetreatQuoteCharacter, NannaRetreatQuoteChapter, NannaRetreatQuoteFlag, NannaRetreatQuoteDialoguePointer
+SelphinaRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, SelphinaRetreatQuoteCharacter, SelphinaRetreatQuoteChapter, SelphinaRetreatQuoteFlag, SelphinaRetreatQuoteDialoguePointer
+DahlsonRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, DahlsonRetreatQuoteCharacter, DahlsonRetreatQuoteChapter, DahlsonRetreatQuoteFlag, DahlsonRetreatQuoteDialoguePointer
+CallionRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, CallionRetreatQuoteCharacter, CallionRetreatQuoteChapter, CallionRetreatQuoteFlag, CallionRetreatQuoteDialoguePointer
+GalzusRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, GalzusRetreatQuoteCharacter, GalzusRetreatQuoteChapter, GalzusRetreatQuoteFlag, GalzusRetreatQuoteDialoguePointer
+PerneRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, PerneRetreatQuoteCharacter, PerneRetreatQuoteChapter, PerneRetreatQuoteFlag, PerneRetreatQuoteDialoguePointer
+GladeRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, GladeRetreatQuoteCharacter, GladeRetreatQuoteChapter, GladeRetreatQuoteFlag, GladeRetreatQuoteDialoguePointer
+KaneRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, KaneRetreatQuoteCharacter, KaneRetreatQuoteChapter, KaneRetreatQuoteFlag, KaneRetreatQuoteDialoguePointer
+AlbaRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, AlbaRetreatQuoteCharacter, AlbaRetreatQuoteChapter, AlbaRetreatQuoteFlag, AlbaRetreatQuoteDialoguePointer
+RobertRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, RobertRetreatQuoteCharacter, RobertRetreatQuoteChapter, RobertRetreatQuoteFlag, RobertRetreatQuoteDialoguePointer
+FredRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, FredRetreatQuoteCharacter, FredRetreatQuoteChapter, FredRetreatQuoteFlag, FredRetreatQuoteDialoguePointer
+OlwenRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, OlwenRetreatQuoteCharacter, OlwenRetreatQuoteChapter, OlwenRetreatQuoteFlag, OlwenRetreatQuoteDialoguePointer
+CedChp4xRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, CedChp4xRetreatQuoteCharacter, CedChp4xRetreatQuoteChapter, CedChp4xRetreatQuoteFlag, CedChp4xRetreatQuoteDialoguePointer
+CedChp23RetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, CedChp23RetreatQuoteCharacter, CedChp23RetreatQuoteChapter, CedChp23RetreatQuoteFlag, CedChp23RetreatQuoteDialoguePointer
+LifisRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, LifisRetreatQuoteCharacter, LifisRetreatQuoteChapter, LifisRetreatQuoteFlag, LifisRetreatQuoteDialoguePointer
+KarinRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, KarinRetreatQuoteCharacter, KarinRetreatQuoteChapter, KarinRetreatQuoteFlag, KarinRetreatQuoteDialoguePointer
+DeanRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, DeanRetreatQuoteCharacter, DeanRetreatQuoteChapter, DeanRetreatQuoteFlag, DeanRetreatQuoteDialoguePointer
+ShannamRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, ShannamRetreatQuoteCharacter, ShannamRetreatQuoteChapter, ShannamRetreatQuoteFlag, ShannamRetreatQuoteDialoguePointer
+TrudeRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, TrudeRetreatQuoteCharacter, TrudeRetreatQuoteChapter, TrudeRetreatQuoteFlag, TrudeRetreatQuoteDialoguePointer
+TanyaRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, TanyaRetreatQuoteCharacter, TanyaRetreatQuoteChapter, TanyaRetreatQuoteFlag, TanyaRetreatQuoteDialoguePointer
+LinoanRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, LinoanRetreatQuoteCharacter, LinoanRetreatQuoteChapter, LinoanRetreatQuoteFlag, LinoanRetreatQuoteDialoguePointer
+MishaRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, MishaRetreatQuoteCharacter, MishaRetreatQuoteChapter, MishaRetreatQuoteFlag, MishaRetreatQuoteDialoguePointer
+SalemRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, SalemRetreatQuoteCharacter, SalemRetreatQuoteChapter, SalemRetreatQuoteFlag, SalemRetreatQuoteDialoguePointer
+SchroffRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, SchroffRetreatQuoteCharacter, SchroffRetreatQuoteChapter, SchroffRetreatQuoteFlag, SchroffRetreatQuoteDialoguePointer
+MareetaRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, MareetaRetreatQuoteCharacter, MareetaRetreatQuoteChapter, MareetaRetreatQuoteFlag, MareetaRetreatQuoteDialoguePointer
+TinaRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, TinaRetreatQuoteCharacter, TinaRetreatQuoteChapter, TinaRetreatQuoteFlag, TinaRetreatQuoteDialoguePointer
+GunterDialogueRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, GunterDialogueRetreatQuoteCharacter, GunterDialogueRetreatQuoteChapter, GunterDialogueRetreatQuoteFlag, GunterDialogueRetreatQuoteDialoguePointer
+AmaldaRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, AmaldaRetreatQuoteCharacter, AmaldaRetreatQuoteChapter, AmaldaRetreatQuoteFlag, AmaldaRetreatQuoteDialoguePointer
+IliosRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, IliosRetreatQuoteCharacter, IliosRetreatQuoteChapter, IliosRetreatQuoteFlag, IliosRetreatQuoteDialoguePointer
+ConomorRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, ConomorRetreatQuoteCharacter, ConomorRetreatQuoteChapter, ConomorRetreatQuoteFlag, ConomorRetreatQuoteDialoguePointer
+HomerRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, HomerRetreatQuoteCharacter, HomerRetreatQuoteChapter, HomerRetreatQuoteFlag, HomerRetreatQuoteDialoguePointer
+DiarmuidRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, DiarmuidRetreatQuoteCharacter, DiarmuidRetreatQuoteChapter, DiarmuidRetreatQuoteFlag, DiarmuidRetreatQuoteDialoguePointer
+SaraRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, SaraRetreatQuoteCharacter, SaraRetreatQuoteChapter, SaraRetreatQuoteFlag, SaraRetreatQuoteDialoguePointer
+SaiasRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, SaiasRetreatQuoteCharacter, SaiasRetreatQuoteChapter, SaiasRetreatQuoteFlag, SaiasRetreatQuoteDialoguePointer
+ShivaRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, ShivaRetreatQuoteCharacter, ShivaRetreatQuoteChapter, ShivaRetreatQuoteFlag, ShivaRetreatQuoteDialoguePointer
+XavierRetreatQuoteRetreatQuoteTableEntry .dstruct structRetreatQuoteEntry, XavierRetreatQuoteCharacter, XavierRetreatQuoteChapter, XavierRetreatQuoteFlag, XavierRetreatQuoteDialoguePointer

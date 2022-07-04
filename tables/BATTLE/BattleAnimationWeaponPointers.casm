@@ -1,0 +1,312 @@
+	BA_Iron_Steel_Venin_BrokenSword				= 0
+		BA_Iron_Steel_Venin_BrokenSwordOffset	= aBAgraphics_Iron_Steel_Venin_BrokenSword
+
+	BA_SilverSword								= 1
+		BA_SilverSwordOffset					= aBAgraphics_SilverSword
+
+	BA_SlimSword								= 2
+		BA_SlimSwordOffset						= aBAgraphics_SlimSword
+
+	BA_IronBlade								= 3
+		BA_IronBladeOffset						= aBAgraphics_IronBlade
+
+	BA_KillingEdge								= 4
+		BA_KillingEdgeOffset					= aBAgraphics_KillingEdge
+
+	BA_BerserkEdge								= 5
+		BA_BerserkEdgeOffset					= aBAgraphics_BerserkEdge
+
+	BA_SleepEdge								= 6
+		BA_SleepEdgeOffset						= aBAgraphics_SleepEdge
+
+	BA_BeoBlade									= 7
+		BA_BeoBladeOffset						= aBAgraphics_BeoBlade
+
+	BA_BlessedSword								= 8
+		BA_BlessedSwordOffset					= aBAgraphics_BlessedSword
+
+	BA_LoptrianFang								= 9
+		BA_LoptrianFangOffset					= aBAgraphics_LoptrianFang
+
+	BA_BragisBlade								= 10
+		BA_BragisBladeOffset					= aBAgraphics_BragisBlade
+
+	BA_LightBrand								= 11
+		BA_LightBrandOffset						= aBAgraphics_LightBrand
+
+	BA_BraveSword								= 12
+		BA_BraveSwordOffset						= aBAgraphics_BraveSword
+
+	BA_Kingmaker								= 13
+		BA_KingmakerOffset						= aBAgraphics_Kingmaker
+
+	BA_LandsSword								= 14
+		BA_LandsSwordOffset						= aBAgraphics_LandsSword
+
+	BA_WindSword								= 15
+		BA_WindSwordOffset						= aBAgraphics_WindSword
+
+	BA_FlameSword								= 16
+		BA_FlameSwordOffset						= aBAgraphics_FlameSword
+
+	BA_LightningSword							= 17
+		BA_LightningSwordOffset					= aBAgraphics_LightningSword
+
+	BA_ParagonSword								= 18
+		BA_ParagonSwordOffset					= aBAgraphics_ParagonSword
+
+	BA_Armorslayer								= 19
+		BA_ArmorslayerOffset					= aBAgraphics_Armorslayer
+
+	BA_Rapier									= 20
+		BA_RapierOffset							= aBAgraphics_Rapier
+
+	BA_Shortsword								= 21
+		BA_ShortswordOffset						= aBAgraphics_Shortsword
+
+	BA_Longsword								= 22
+		BA_LongswordOffset						= aBAgraphics_Longsword
+
+	BA_Greatsword								= 23
+		BA_GreatswordOffset						= aBAgraphics_Greatsword
+
+	BA_MasterSword								= 24
+		BA_MasterSwordOffset					= aBAgraphics_MasterSword
+
+	BA_Shadow_MareetasSword						= 25
+		BA_Shadow_MareetasSwordOffset			= aBAgraphics_Shadow_MareetasSword
+
+	BA_Javelin									= 26
+		BA_JavelinOffset						= aBAgraphics_Javelin
+
+	BA_Iron_ShortLance							= 27
+		BA_Iron_ShortLanceOffset				= aBAgraphics_Iron_ShortLance
+
+	BA_Steel_LongLance							= 28
+		BA_Steel_LongLanceOffset				= aBAgraphics_Steel_LongLance
+
+	BA_SilverLance								= 29
+		BA_SilverLanceOffset					= aBAgraphics_SilverLance
+
+	BA_ShadowSpear								= 30
+		BA_ShadowSpearOffset					= aBAgraphics_ShadowSpear
+
+	BA_BraveLance								= 31
+		BA_BraveLanceOffset						= aBAgraphics_BraveLance
+
+	BA_Dragonpike								= 32
+		BA_DragonpikeOffset						= aBAgraphics_Dragonpike
+
+	BA_GaeBolg									= 33
+		BA_GaeBolgOffset						= aBAgraphics_GaeBolg
+
+	BA_Gungnir									= 34
+		BA_GungnirOffset						= aBAgraphics_Gungnir
+
+	BA_Killer_SlimLance							= 35
+		BA_Killer_SlimLanceOffset				= aBAgraphics_Killer_SlimLance
+
+	BA_Ridersbane								= 36
+		BA_RidersbaneOffset						= aBAgraphics_Ridersbane
+
+	BA_Venin_BrokenLance						= 37
+		BA_Venin_BrokenLanceOffset				= aBAgraphics_Venin_BrokenLance
+
+	BA_Unused26									= 38
+		BA_Unused26Offset						= aBAgraphics_Unused26
+
+	BA_Greatlance								= 39
+		BA_GreatlanceOffset						= aBAgraphics_Greatlance
+
+	BA_Unused28									= 40
+		BA_Unused28Offset						= aBAgraphics_Unused28
+
+	BA_MasterLance								= 41
+		BA_MasterLanceOffset					= aBAgraphics_MasterLance
+
+	BA_Iron_Venin_Battle_BrokenAxe				= 42
+		BA_Iron_Venin_Battle_BrokenAxeOffset	= aBAgraphics_Iron_Venin_Battle_BrokenAxe
+
+	BA_SteelAxe									= 43
+		BA_SteelAxeOffset						= aBAgraphics_SteelAxe
+
+	BA_SilverAxe								= 44
+		BA_SilverAxeOffset						= aBAgraphics_SilverAxe
+
+	BA_HandAxe									= 45
+		BA_HandAxeOffset						= aBAgraphics_HandAxe
+
+	BA_Vouge									= 46
+		BA_VougeOffset							= aBAgraphics_Vouge
+
+	BA_Poleax									= 47
+		BA_PoleaxOffset							= aBAgraphics_Poleax
+
+	BA_Hammer									= 48
+		BA_HammerOffset							= aBAgraphics_Hammer
+
+	BA_DevilAxe									= 49
+		BA_DevilAxeOffset						= aBAgraphics_DevilAxe
+
+	BA_KillerAxe								= 50
+		BA_KillerAxeOffset						= aBAgraphics_KillerAxe
+
+	BA_Unused33									= 51
+		BA_Unused33Offset						= aBAgraphics_Unused33
+
+	BA_MasterAxe								= 52
+		BA_MasterAxeOffset						= aBAgraphics_MasterAxe
+
+	BA_BraveAxe									= 53
+		BA_BraveAxeOffset						= aBAgraphics_BraveAxe
+
+	BA_Iron_Short_BrokenBow						= 54
+		BA_Iron_Short_BrokenBowOffset			= aBAgraphics_Iron_Short_BrokenBow
+
+	BA_Steel_LongBow							= 55
+		BA_Steel_LongBowOffset					= aBAgraphics_Steel_LongBow
+
+	BA_KillerBow								= 56
+		BA_KillerBowOffset						= aBAgraphics_KillerBow
+
+	BA_SilverBow								= 57
+		BA_SilverBowOffset						= aBAgraphics_SilverBow
+
+	BA_Unused3A									= 58
+		BA_Unused3AOffset						= aBAgraphics_Unused3A
+
+	BA_BraveBow									= 59
+		BA_BraveBowOffset						= aBAgraphics_BraveBow
+
+	BA_VeninBow									= 60
+		BA_VeninBowOffset						= aBAgraphics_VeninBow
+
+	BA_Unused3D									= 61
+		BA_Unused3DOffset						= aBAgraphics_Unused3D
+
+	BA_Greatbow									= 62
+		BA_GreatbowOffset						= aBAgraphics_Greatbow
+
+	BA_MasterBow								= 63
+		BA_MasterBowOffset						= aBAgraphics_MasterBow
+
+	BA_Heal										= 64
+		BA_HealOffset							= aBAgraphics_Heal
+
+	BA_Mend										= 65
+		BA_MendOffset							= aBAgraphics_Mend
+
+	BA_Recover									= 66
+		BA_RecoverOffset						= aBAgraphics_Recover
+
+	BA_Physic									= 67
+		BA_PhysicOffset							= aBAgraphics_Physic
+
+	BA_Fortify									= 68
+		BA_FortifyOffset						= aBAgraphics_Fortify
+
+	BA_Sleep									= 69
+		BA_SleepOffset							= aBAgraphics_Sleep
+
+	BA_Ensorcel									= 70
+		BA_EnsorcelOffset						= aBAgraphics_Ensorcel
+
+	BA_Berserk									= 71
+		BA_BerserkOffset						= aBAgraphics_Berserk
+
+	BA_Restore_Kia								= 72
+		BA_Restore_KiaOffset					= aBAgraphics_Restore_Kia
+
+	BA_Silence									= 73
+		BA_SilenceOffset						= aBAgraphics_Silence
+
+	BA_Ballista_VeninBallista					= 74
+		BA_Ballista_VeninBallistaOffset			= aBAgraphics_Ballista_VeninBallista
+
+	BA_IronBallista								= 75
+		BA_IronBallistaOffset					= aBAgraphics_IronBallista
+
+	BA_KillerBallista							= 76
+		BA_KillerBallistaOffset					= aBAgraphics_KillerBallista
+
+	BA_Unused4D									= 77
+		BA_Unused4DOffset						= aBAgraphics_Unused4D
+
+BA_Iron_Steel_Venin_BrokenSwordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Iron_Steel_Venin_BrokenSwordOffset
+BA_SilverSwordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_SilverSwordOffset
+BA_SlimSwordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_SlimSwordOffset
+BA_IronBladeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_IronBladeOffset
+BA_KillingEdgeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_KillingEdgeOffset
+BA_BerserkEdgeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_BerserkEdgeOffset
+BA_SleepEdgeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_SleepEdgeOffset
+BA_BeoBladeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_BeoBladeOffset
+BA_BlessedSwordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_BlessedSwordOffset
+BA_LoptrianFangBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_LoptrianFangOffset
+BA_BragisBladeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_BragisBladeOffset
+BA_LightBrandBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_LightBrandOffset
+BA_BraveSwordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_BraveSwordOffset
+BA_KingmakerBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_KingmakerOffset
+BA_LandsSwordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_LandsSwordOffset
+BA_WindSwordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_WindSwordOffset
+BA_FlameSwordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_FlameSwordOffset
+BA_LightningSwordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_LightningSwordOffset
+BA_ParagonSwordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_ParagonSwordOffset
+BA_ArmorslayerBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_ArmorslayerOffset
+BA_RapierBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_RapierOffset
+BA_ShortswordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_ShortswordOffset
+BA_LongswordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_LongswordOffset
+BA_GreatswordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_GreatswordOffset
+BA_MasterSwordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_MasterSwordOffset
+BA_Shadow_MareetasSwordBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Shadow_MareetasSwordOffset
+BA_JavelinBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_JavelinOffset
+BA_Iron_ShortLanceBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Iron_ShortLanceOffset
+BA_Steel_LongLanceBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Steel_LongLanceOffset
+BA_SilverLanceBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_SilverLanceOffset
+BA_ShadowSpearBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_ShadowSpearOffset
+BA_BraveLanceBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_BraveLanceOffset
+BA_DragonpikeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_DragonpikeOffset
+BA_GaeBolgBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_GaeBolgOffset
+BA_GungnirBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_GungnirOffset
+BA_Killer_SlimLanceBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Killer_SlimLanceOffset
+BA_RidersbaneBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_RidersbaneOffset
+BA_Venin_BrokenLanceBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Venin_BrokenLanceOffset
+BA_Unused26BattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Unused26Offset
+BA_GreatlanceBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_GreatlanceOffset
+BA_Unused28BattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Unused28Offset
+BA_MasterLanceBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_MasterLanceOffset
+BA_Iron_Venin_Battle_BrokenAxeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Iron_Venin_Battle_BrokenAxeOffset
+BA_SteelAxeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_SteelAxeOffset
+BA_SilverAxeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_SilverAxeOffset
+BA_HandAxeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_HandAxeOffset
+BA_VougeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_VougeOffset
+BA_PoleaxBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_PoleaxOffset
+BA_HammerBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_HammerOffset
+BA_DevilAxeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_DevilAxeOffset
+BA_KillerAxeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_KillerAxeOffset
+BA_Unused33BattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Unused33Offset
+BA_MasterAxeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_MasterAxeOffset
+BA_BraveAxeBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_BraveAxeOffset
+BA_Iron_Short_BrokenBowBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Iron_Short_BrokenBowOffset
+BA_Steel_LongBowBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Steel_LongBowOffset
+BA_KillerBowBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_KillerBowOffset
+BA_SilverBowBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_SilverBowOffset
+BA_Unused3ABattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Unused3AOffset
+BA_BraveBowBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_BraveBowOffset
+BA_VeninBowBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_VeninBowOffset
+BA_Unused3DBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Unused3DOffset
+BA_GreatbowBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_GreatbowOffset
+BA_MasterBowBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_MasterBowOffset
+BA_HealBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_HealOffset
+BA_MendBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_MendOffset
+BA_RecoverBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_RecoverOffset
+BA_PhysicBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_PhysicOffset
+BA_FortifyBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_FortifyOffset
+BA_SleepBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_SleepOffset
+BA_EnsorcelBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_EnsorcelOffset
+BA_BerserkBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_BerserkOffset
+BA_Restore_KiaBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Restore_KiaOffset
+BA_SilenceBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_SilenceOffset
+BA_Ballista_VeninBallistaBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Ballista_VeninBallistaOffset
+BA_IronBallistaBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_IronBallistaOffset
+BA_KillerBallistaBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_KillerBallistaOffset
+BA_Unused4DBattleAnimationWeaponPointersEntry .dstruct StructBattleAnimationWeaponPointers, BA_Unused4DOffset

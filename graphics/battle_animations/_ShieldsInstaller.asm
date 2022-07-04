@@ -1,0 +1,68 @@
+* = $28F02A
+.logical $D1F02A
+
+	aBAgraphics_Shield_KnightLord					  .binary "shields/Shield_KnightLord.4bpp.fe4"
+	aBAgraphics_Shield_MasterKnight					  .binary "shields/Shield_MasterKnight.4bpp.fe4"
+	aBAgraphics_Shield_DukeKnight					  .binary "shields/Shield_DukeKnight.4bpp.fe4"
+	aBAgraphics_Shield_GreatKnight					  .binary "shields/Shield_GreatKnight.4bpp.fe4"
+	aBAgraphics_Shield_Paladin						  .binary "shields/Shield_Paladin.4bpp.fe4"
+	aBAgraphics_Shield_MageKnight					  .binary "shields/Shield_MageKnight.4bpp.fe4"
+	aBAgraphics_Shield_Cavalier						  .binary "shields/Shield_Cavalier.4bpp.fe4"
+	aBAgraphics_Shield_SwordKnight_Ranger			  .binary "shields/Shield_SwordKnight_Ranger.4bpp.fe4"
+	aBAgraphics_Shield_LanceKnight					  .binary "shields/Shield_LanceKnight.4bpp.fe4"
+	aBAgraphics_Shield_Troubadour					  .binary "shields/Shield_Troubadour.4bpp.fe4"
+	aBAgraphics_Shield_AxeKnight					  .binary "shields/Shield_AxeKnight.4bpp.fe4"
+	aBAgraphics_Shield_Soldier						  .binary "shields/Shield_Soldier.4bpp.fe4"
+	aBAgraphics_Shield_Armors						  .binary "shields/Shield_Armors.4bpp.fe4"
+	aBAgraphics_Shield_General						  .binary "shields/Shield_General.4bpp.fe4"
+	aBAgraphics_Shield_Baron						  .binary "shields/Shield_Baron.4bpp.fe4"
+	aBAgraphics_Shield_Emperor						  .binary "shields/Shield_Emperor.4bpp.fe4"
+	aBAgraphics_Shield_Unknown10					  .binary "shields/Shield_Unknown10.4bpp.fe4"
+	aBAgraphics_Shield_Unknown11					  .binary "shields/Shield_Unknown11.4bpp.fe4"
+
+.here
+
+
+* = $203AC2
+.logical $C0BAC2 
+
+	aBApalette_Shield_MageKnight					  .binary "shield_palettes/Shield_MageKnight.pal"
+	aBApalette_Shield_Cavalier_Troubadour_AxeKnight   .binary "shield_palettes/Shield_Cavalier_Troubadour_AxeKnight.pal"
+	aBApalette_Shield_SwordKnight_Ranger              .binary "shield_palettes/Shield_SwordKnight_Ranger.pal"
+	aBApalette_Shield_KnightLord                      .binary "shield_palettes/Shield_KnightLord.pal"
+	aBApalette_Shield_MasterKnight                    .binary "shield_palettes/Shield_MasterKnight.pal"
+	aBApalette_Shield_DukeKnight                      .binary "shield_palettes/Shield_DukeKnight.pal"
+	aBApalette_Shield_GreatKnight                     .binary "shield_palettes/Shield_GreatKnight.pal"
+	aBApalette_Shield_Paladin                         .binary "shield_palettes/Shield_Paladin.pal"
+	aBApalette_Shield_LanceKnight                     .binary "shield_palettes/Shield_LanceKnight.pal"
+	aBApalette_Shield_Armors                          .binary "shield_palettes/Shield_Armors.pal"
+	aBApalette_Shield_Unknown0A                       .binary "shield_palettes/Shield_Unknown0A.pal"
+	aBApalette_Shield_General                         .binary "shield_palettes/Shield_General.pal"
+	aBApalette_Shield_Baron_Emperor                   .binary "shield_palettes/Shield_Baron_Emperor.pal"
+	aBApalette_Shield_Soldier                         .binary "shield_palettes/Shield_Soldier.pal"
+	aBApalette_Shield_Dalsin                          .binary "shield_palettes/Shield_Dalsin.pal"
+	aBApalette_Shield_Unknown0F                       .binary "shield_palettes/Shield_Unknown0F.pal"
+	aBApalette_Shield_BaseCallion                     .binary "shield_palettes/Shield_BaseCallion.pal"
+	aBApalette_Shield_PromotedCallion                 .binary "shield_palettes/Shield_PromotedCallion.pal"
+	aBApalette_Shield_Glade                           .binary "shield_palettes/Shield_Glade.pal"
+	aBApalette_Shield_BaseAlba                        .binary "shield_palettes/Shield_BaseAlba.pal"
+	aBApalette_Shield_PromotedAlba                    .binary "shield_palettes/Shield_PromotedAlba.pal"
+	aBApalette_Shield_BaseFinn                        .binary "shield_palettes/Shield_BaseFinn.pal"
+	aBApalette_Shield_PromotedFinn                    .binary "shield_palettes/Shield_PromotedFinn.pal"
+	aBApalette_Shield_Brighton                        .binary "shield_palettes/Shield_Brighton.pal"
+	aBApalette_Shield_PromotedHicks                   .binary "shield_palettes/Shield_PromotedHicks.pal"
+	aBApalette_Shield_BaseFergus                      .binary "shield_palettes/Shield_BaseFergus.pal"
+	aBApalette_Shield_PromotedFergus                  .binary "shield_palettes/Shield_PromotedFergus.pal"
+	aBApalette_Shield_Unknown1B                       .binary "shield_palettes/Shield_Unknown1B.pal"
+	aBApalette_Shield_Unknown1C                       .binary "shield_palettes/Shield_Unknown1C.pal"
+	aBApalette_Shield_Kane                            .binary "shield_palettes/Shield_Kane.pal"
+	aBApalette_Shield_Unknown1E                       .binary "shield_palettes/Shield_Unknown1E.pal"
+	aBApalette_Shield_Fred                            .binary "shield_palettes/Shield_Fred.pal"
+	aBApalette_Shield_Conomor                         .binary "shield_palettes/Shield_Conomor.pal"
+	aBApalette_Shield_Unknown21                       .binary "shield_palettes/Shield_Unknown21.pal"
+	aBApalette_Shield_Olwen                           .binary "shield_palettes/Shield_Olwen.pal"
+	aBApalette_Shield_BaseNanna                       .binary "shield_palettes/Shield_BaseNanna.pal"
+	aBApalette_Shield_PromotedNanna                   .binary "shield_palettes/Shield_PromotedNanna.pal"
+	aBApalette_Shield_Amalda                          .binary "shield_palettes/Shield_Amalda.pal"
+
+.here

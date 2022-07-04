@@ -1,0 +1,150 @@
+	BAProjectileBow00			= 0
+		BAProjectileBow00Class	= General
+		BAProjectileBow00Xcoord	= 232
+		BAProjectileBow00Ycoord	= 23
+
+	BAProjectileBow01			= 1
+		BAProjectileBow01Class	= Emperor
+		BAProjectileBow01Xcoord	= 232
+		BAProjectileBow01Ycoord	= 23
+
+	BAProjectileBow02			= 2
+		BAProjectileBow02Class	= Baron
+		BAProjectileBow02Xcoord	= 232
+		BAProjectileBow02Ycoord	= 23
+
+	BAProjectileBow03			= 3
+		BAProjectileBow03Class	= ArmoredBow
+		BAProjectileBow03Xcoord	= 232
+		BAProjectileBow03Ycoord	= 23
+
+	BAProjectileBow04			= 4
+		BAProjectileBow04Class	= Warrior
+		BAProjectileBow04Xcoord	= 232
+		BAProjectileBow04Ycoord	= 18
+
+	BAProjectileBow05			= 5
+		BAProjectileBow05Class	= Hunter
+		BAProjectileBow05Xcoord	= 232
+		BAProjectileBow05Ycoord	= 18
+
+	BAProjectileBow06			= 6
+		BAProjectileBow06Class	= ArcherEnemy
+		BAProjectileBow06Xcoord	= 232
+		BAProjectileBow06Ycoord	= 20
+
+	BAProjectileBow07			= 7
+		BAProjectileBow07Class	= Ballistician
+		BAProjectileBow07Xcoord	= 243
+		BAProjectileBow07Ycoord	= 41
+
+	BAProjectileBow08			= 8
+		BAProjectileBow08Class	= IronBallistician
+		BAProjectileBow08Xcoord	= 243
+		BAProjectileBow08Ycoord	= 41
+
+	BAProjectileBow09			= 9
+		BAProjectileBow09Class	= KillerBallistician
+		BAProjectileBow09Xcoord	= 243
+		BAProjectileBow09Ycoord	= 41
+
+	BAProjectileBow0A			= 10
+		BAProjectileBow0AClass	= VeninBallistician
+		BAProjectileBow0AXcoord	= 243
+		BAProjectileBow0AYcoord	= 41
+
+	BAProjectileBow0B			= 11
+		BAProjectileBow0BClass	= Archer
+		BAProjectileBow0BXcoord	= 232
+		BAProjectileBow0BYcoord	= 20
+
+	BAProjectileBow0C			= 12
+		BAProjectileBow0CClass	= ArcherF
+		BAProjectileBow0CXcoord	= 232
+		BAProjectileBow0CYcoord	= 20
+
+	BAProjectileBow0D			= 13
+		BAProjectileBow0DClass	= Sniper
+		BAProjectileBow0DXcoord	= 232
+		BAProjectileBow0DYcoord	= 20
+
+	BAProjectileBow0E			= 14
+		BAProjectileBow0EClass	= SniperF
+		BAProjectileBow0EXcoord	= 232
+		BAProjectileBow0EYcoord	= 20
+
+	BAProjectileBow0F			= 15
+		BAProjectileBow0FClass	= BowKnight
+		BAProjectileBow0FXcoord	= 232
+		BAProjectileBow0FYcoord	= 26
+
+	BAProjectileBow10			= 16
+		BAProjectileBow10Class	= BowKnightDismounted
+		BAProjectileBow10Xcoord	= 232
+		BAProjectileBow10Ycoord	= 20
+
+	BAProjectileBow11			= 17
+		BAProjectileBow11Class	= BowKnightF
+		BAProjectileBow11Xcoord	= 232
+		BAProjectileBow11Ycoord	= 26
+
+	BAProjectileBow12			= 18
+		BAProjectileBow12Class	= BowKnightFDismounted
+		BAProjectileBow12Xcoord	= 232
+		BAProjectileBow12Ycoord	= 20
+
+	BAProjectileBow13			= 19
+		BAProjectileBow13Class	= ArchKnight
+		BAProjectileBow13Xcoord	= 232
+		BAProjectileBow13Ycoord	= 26
+
+	BAProjectileBow14			= 20
+		BAProjectileBow14Class	= ArchKnightDismounted
+		BAProjectileBow14Xcoord	= 232
+		BAProjectileBow14Ycoord	= 20
+
+	BAProjectileBow15			= 21
+		BAProjectileBow15Class	= ArchKnightF
+		BAProjectileBow15Xcoord	= 232
+		BAProjectileBow15Ycoord	= 26
+
+	BAProjectileBow16			= 22
+		BAProjectileBow16Class	= ArchKnightFDismounted
+		BAProjectileBow16Xcoord	= 232
+		BAProjectileBow16Ycoord	= 20
+
+	BAProjectileBow17			= 23
+		BAProjectileBow17Class	= MasterKnight
+		BAProjectileBow17Xcoord	= 232
+		BAProjectileBow17Ycoord	= 26
+
+	BAProjectileBow18			= 24
+		BAProjectileBow18Class	= MasterKnightF
+		BAProjectileBow18Xcoord	= 232
+		BAProjectileBow18Ycoord	= 26
+
+BAProjectileBow00BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow00Class, BAProjectileBow00Xcoord, BAProjectileBow00Ycoord
+BAProjectileBow01BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow01Class, BAProjectileBow01Xcoord, BAProjectileBow01Ycoord
+BAProjectileBow02BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow02Class, BAProjectileBow02Xcoord, BAProjectileBow02Ycoord
+BAProjectileBow03BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow03Class, BAProjectileBow03Xcoord, BAProjectileBow03Ycoord
+BAProjectileBow04BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow04Class, BAProjectileBow04Xcoord, BAProjectileBow04Ycoord
+BAProjectileBow05BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow05Class, BAProjectileBow05Xcoord, BAProjectileBow05Ycoord
+BAProjectileBow06BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow06Class, BAProjectileBow06Xcoord, BAProjectileBow06Ycoord
+BAProjectileBow07BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow07Class, BAProjectileBow07Xcoord, BAProjectileBow07Ycoord
+BAProjectileBow08BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow08Class, BAProjectileBow08Xcoord, BAProjectileBow08Ycoord
+BAProjectileBow09BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow09Class, BAProjectileBow09Xcoord, BAProjectileBow09Ycoord
+BAProjectileBow0ABattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow0AClass, BAProjectileBow0AXcoord, BAProjectileBow0AYcoord
+BAProjectileBow0BBattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow0BClass, BAProjectileBow0BXcoord, BAProjectileBow0BYcoord
+BAProjectileBow0CBattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow0CClass, BAProjectileBow0CXcoord, BAProjectileBow0CYcoord
+BAProjectileBow0DBattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow0DClass, BAProjectileBow0DXcoord, BAProjectileBow0DYcoord
+BAProjectileBow0EBattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow0EClass, BAProjectileBow0EXcoord, BAProjectileBow0EYcoord
+BAProjectileBow0FBattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow0FClass, BAProjectileBow0FXcoord, BAProjectileBow0FYcoord
+BAProjectileBow10BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow10Class, BAProjectileBow10Xcoord, BAProjectileBow10Ycoord
+BAProjectileBow11BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow11Class, BAProjectileBow11Xcoord, BAProjectileBow11Ycoord
+BAProjectileBow12BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow12Class, BAProjectileBow12Xcoord, BAProjectileBow12Ycoord
+BAProjectileBow13BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow13Class, BAProjectileBow13Xcoord, BAProjectileBow13Ycoord
+BAProjectileBow14BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow14Class, BAProjectileBow14Xcoord, BAProjectileBow14Ycoord
+BAProjectileBow15BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow15Class, BAProjectileBow15Xcoord, BAProjectileBow15Ycoord
+BAProjectileBow16BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow16Class, BAProjectileBow16Xcoord, BAProjectileBow16Ycoord
+BAProjectileBow17BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow17Class, BAProjectileBow17Xcoord, BAProjectileBow17Ycoord
+BAProjectileBow18BattleAnimationProjectileBowTableEntry .dstruct structBAProjectileBow, BAProjectileBow18Class, BAProjectileBow18Xcoord, BAProjectileBow18Ycoord

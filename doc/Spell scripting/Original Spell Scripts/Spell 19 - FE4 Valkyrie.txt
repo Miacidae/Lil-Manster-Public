@@ -1,0 +1,64 @@
+B1042 - B10BD
+
+3B 08     ; BEGIN
+20 42     ; Load Tile: Valkyrie Highlight (+pause)
+FE FF     ; --Wait--
+21 42     ; Load Tile: Valkyrie Highlight Tilemap (+pause)
+FE FF     ; --Wait--
+14 16     ; Palette: Valkyrie Pink 1
+27 56     ; Effect / Palette: ???
+FE FF     ; --Wait--
+4D 1A     ; Placement / Scrolling: ???
+19 06     ; Tile Effect: Distortion
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+29 00     ; Effect Mask: Delete [FE4: Slow Expand]
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+6D 04     ; Display Tiles: Valkyrie: Wavy effect
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+2A 2A     ; Play Sound: Valkyrie Start
+2A 40     ; Effect Mask: Very Slow Expand (pixel-wide to max) (+pause)
+FE FF     ; --Wait--
+01 22     ; Add Background Hue: Light Blue
+28 54     ; --Wait: 40 frames--
+FE FF     ; --Wait--
+6E 04     ; Display Tiles: Valkyrie: Something???
+3F 08     ; Battle Scene Mod: Valkyrie: HUD Fade Out
+28 54     ; --Wait: 40 frames--
+FE FF     ; --Wait--
+B8 16     ; Effect: Slow Darken BG
+46 54     ; --Wait: 70 frames--
+FE FF     ; --Wait--
+6F 04     ; Display Tiles: Valkyrie: Mask
+00 06     ; Tile Effect: Stop
+0A 54     ; --Wait: 10 frames--
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+0F 04     ; Display Tiles: Defender Mask
+08 06     ; Tile Effect: Heavy Ripple
+08 1A     ; Scrolling: Up Forward
+12 08     ; Battle Scene Mod: Show Defender
+15 56     ; Palette: Valkyrie Pink 2 (+pause)
+FE FF     ; --Wait--
+16 16     ; Palette: Valkyrie Pink 3
+28 54     ; --Wait: 40 frames--
+FE FF     ; --Wait--
+47 56     ; Effect / Palette: ???
+FE FF     ; --Wait--
+17 56     ; Palette: Valkyrie Pink 4 (+pause)
+FE FF     ; --Wait--
+30 2E     ; Play Sound (lower): Valkyrie End
+00 06     ; Tile Effect: Stop
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+FB FF     ; Healing point
+12 16     ; Effect: Reset Tile/Palette Effects
+2B 40     ; Effect Mask: Fast Contract (any to very thin) (+pause)
+FE FF     ; --Wait--
+17 04     ; Display Tiles: ???
+FD FF     ; Cast2: resting
+1D 00     ; Effect Mask: Delete
+36 08     ; END
+FF FF     ; EXIT

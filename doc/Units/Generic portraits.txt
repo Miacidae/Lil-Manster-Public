@@ -1,0 +1,75 @@
+list of what portraits are used for what classes (using disassembly variable names). Duplicates are grouped together; duplicates are either unused, used for women, or used for one of the other classes represented by the same image
+
+Knight1Portrait - Cavalier
+Knight2Portrait -  Lance Knight
+Knight3/4/5/8/9/10/11/12Portrait - Duke Knight
+
+BowKnight1Portrait - Arch Knight, Cavalier (probably a mistake on that one cavalier)
+BowKnight2Portrait - Bow Knight
+BowKnight3/4Portrait - UNUSED
+
+AxeKnight1Portrait - Axe Knight
+AxeKnight2Portrait - Great Knight
+
+MagicKnight1/2/3Portrait - Troubadour
+MagicKnight4/5Portrait - Mage Knight
+
+PegasusKnight1Portrait - UNUSED
+PegasusKnight2Portrait - Pegasus Rider
+
+WyvernKnight1/3Portrait - Dragon Rider
+WyvernKnight2/4Portrait - Wyvern Rider
+
+Archer1/4Portrait - Bow Fighter
+Archer2/5Portrait - Sniper
+Archer3Portrait - Hunter
+Archer6Enemy - Archer (bow soldier)
+
+Myrmidon1/5Portrait - Myrmidon
+Myrmidon2/3/6/7/9/10Portrait - Swordmaster, Mercenary (Hero)
+Myrmidon4Portrait - Thief Fighter
+Myrmidon8Portrait - UNUSED
+
+General1Portrait - General
+General2Portrait - UNUSED
+
+Armor1Portrait - Armored Lance
+Armor2Portrait - Armored Axe
+Armor3Portrait - Bow Armor
+Armor4Portrait - Armored Sword
+
+Brigand1Portrait - Berserker
+Brigand2Portrait - Brigand, Brigand 2
+Brigand3Portrait - UNUSED
+Brigand4Portrait - Pirate
+
+Fighter1/2Portrait - Warrior, Fighter
+
+HighPriest1Portrait - UNUSED
+
+Dancer1Portrait - Dancer
+
+Priest1/4Portrait - Priest
+Priest2Portrait - Bishop
+Priest3Portrait - Dark Bishop
+
+Mage1/6/8Portrait - Mage
+Mage2/10Portrait - Mage
+Mage3/9Portrait - Mage
+Mage4/11Portrait - UNUSED
+Mage5/12Portrait - UNUSED
+Mage7Portrait - Dark Mage
+
+MagicSword1/2Portrait - Sage
+
+Thief1Portrait - UNUSED
+Thief2/3Portrait - Thief
+
+Priestess1Portrait - UNUSED
+
+Ballistician1Portrait - Ballista
+Ballistician2Portrait - Iron Ballista
+Ballistician3Portrait - UNUSED
+Ballistician4Portrait - Poison Ballista
+
+Soldier1Portrait - Soldier

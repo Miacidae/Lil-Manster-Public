@@ -1,0 +1,499 @@
+
+eventChapter12xEvents ; FD/8F98
+
+	_OpeningEventDefinitions ; FD/8F98
+		EVENT FlagAlwaysZero, _OpeningEvent
+			CMP_WORD wCurrentTurn, 0
+		END_DEFINITION
+	END_DEFINITION_ARRAY
+
+	_TurnEventDefinitions ; FD/8FA5
+		EVENT FlagBossDeath, eventMapDeathQuoteDummyEvent
+			CHECK_DEAD Perne
+			CMP_WORD wCurrentPhase, Enemy
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _MasterSealDancer
+			CMP_WORD wCurrentTurn, 25
+			CMP_WORD wCurrentPhase, Enemy
+			TEST_FLAG_UNSET $0E
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _WarpDancer
+			CMP_WORD wCurrentTurn, 30
+			CMP_WORD wCurrentPhase, Enemy
+			TEST_FLAG_UNSET $0E
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _PerneCheck
+			CMP_WORD wCurrentPhase, Enemy
+		END_DEFINITION
+		EVENT $0D, _BeginFleeing
+			CMP_WORD wCurrentPhase, Enemy
+			TEST_FLAG_SET FlagBossDeath
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _ArcherLeftReinforcements
+			CMP_WORD_RANGE wCurrentTurn, 10, 18
+			ROLL_RNG 40
+			CMP_WORD wCurrentPhase, Enemy
+			TEST_FLAG_UNSET FlagBossDeath
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _ArcherMiddleReinforcements
+			CMP_WORD_RANGE wCurrentTurn, 10, 18
+			ROLL_RNG 40
+			CMP_WORD wCurrentPhase, Enemy
+			TEST_FLAG_UNSET FlagBossDeath
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _ArcherRightReinforcements
+			CMP_WORD_RANGE wCurrentTurn, 10, 18
+			ROLL_RNG 40
+			CMP_WORD wCurrentPhase, Enemy
+			TEST_FLAG_UNSET FlagBossDeath
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _MyrmidonMiddleReinforcements
+			CMP_WORD_RANGE wCurrentTurn, 10, 18
+			ROLL_RNG 50
+			CMP_WORD wCurrentPhase, Enemy
+			TEST_FLAG_UNSET FlagBossDeath
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _MyrmidonBottomReinforcements
+			CMP_WORD_RANGE wCurrentTurn, 10, 18
+			ROLL_RNG 50
+			CMP_WORD wCurrentPhase, Enemy
+			TEST_FLAG_UNSET FlagBossDeath
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _ThiefReinforcements
+			CMP_WORD_RANGE wCurrentTurn, 11, 19
+			ROLL_RNG 50
+			CMP_WORD wCurrentPhase, Enemy
+			TEST_FLAG_UNSET FlagBossDeath
+		END_DEFINITION
+	END_DEFINITION_ARRAY
+
+	_TalkEventDefinitions ; FD/907D
+		EVENT $05, _SalemPerneTalk
+			CHECK_CHARS2 Salem, Perne
+		END_DEFINITION
+		EVENT $05, _LifisPerneTalk
+			CHECK_CHARS2 Lifis, Perne
+		END_DEFINITION
+		EVENT $05, _LaraPerneTalk
+			CHECK_CHARS2 Lara, Perne
+		END_DEFINITION
+		EVENT $07, _PerneTrudeTalk
+			CHECK_CHARS2 Perne, Trude
+		END_DEFINITION
+		EVENT $08, _SafyTinaTalk
+			CHECK_CHARS2 Safy, Tina
+		END_DEFINITION
+	END_DEFINITION_ARRAY
+
+	_LocationEventDefinitions ; FD/90B1
+		macroDoorDefinition $21, [2, 2], eventChapter12xEvents._Door1
+		macroDoorDefinition $22, [8, 12], eventChapter12xEvents._Door2
+		macroChestDefinition $23, eventChapter12xData._Chest1Events, eventChapter12xData._Chest1Coordinates
+		macroChestDefinition $24, eventChapter12xData._Chest2Events, eventChapter12xData._Chest2Coordinates
+		macroChestDefinition $25, eventChapter12xData._Chest3Events, eventChapter12xData._Chest3Coordinates
+		macroChestDefinition $26, eventChapter12xData._Chest4Events, eventChapter12xData._Chest4Coordinates
+		macroChestDefinition $27, eventChapter12xData._Chest5Events, eventChapter12xData._Chest5Coordinates
+		EVENT FlagAlwaysZero, _EndingEvent
+			macroEventConditionCheckCoords [8, 10]
+			CMP_WORD wCurrentPhase, Player
+			CMP_WORD aSelectedCharacterBuffer.Character, Leif
+		END_DEFINITION
+	END_DEFINITION_ARRAY
+
+	_BeforeActionEventDefinitions ; FD/914B
+		EVENT $0E, eventMapDeathQuoteDummyEvent
+			RUN_ASM _rlDancerKilledCheck
+		END_DEFINITION
+	END_DEFINITION_ARRAY
+
+	_AfterActionEventDefinitions ; FD/9156
+	END_DEFINITION_ARRAY
+
+	_BattleEventDefinitions ; FD/9158
+		macroBossQuoteDefinition $09, Tina
+		macroBossQuoteDefinition $0A, Trude
+		macroBossQuoteDefinition $0B, Perne
+	END_DEFINITION_ARRAY
+
+	_ShopEventDefinitions ; FD/9172
+	END_DEFINITION_ARRAY
+
+	_rlDancerKilledCheck ; FD/9174
+
+		.al
+		.xl
+		.autsiz
+		.databank ?
+
+		lda aActionStructUnit1.Character
+		cmp #DancerEnemy
+		bne +
+		lda aActionStructUnit1.CurrentHP
+		and #$00FF
+		beq _True
+
+		+
+		lda aActionStructUnit2.Character
+		cmp #DancerEnemy
+		bne _False
+		lda aActionStructUnit2.CurrentHP
+		and #$00FF
+		bne _False
+
+		_True
+		sec
+		rtl
+
+		_False
+		clc
+		rtl
+
+	_ArcherLeftReinforcements ; FD/919C
+		LOAD2 eventChapter12xData._ArcherLeftGroup
+		WAIT_MOVE
+		YIELD
+	END2
+
+	_ArcherMiddleReinforcements ; FD/91A3
+		LOAD2 eventChapter12xData._ArcherMiddleGroup
+		WAIT_MOVE
+		YIELD
+	END2
+
+	_ArcherRightReinforcements ; FD/91AA
+		LOAD2 eventChapter12xData._ArcherRightGroup
+		WAIT_MOVE
+		YIELD
+	END2
+
+	_MyrmidonMiddleReinforcements ; FD/91B1
+		LOAD2 eventChapter12xData._MyrmidonMiddleGroup
+		WAIT_MOVE
+		YIELD
+	END2
+
+	_MyrmidonBottomReinforcements ; FD/91B8
+		LOAD2 eventChapter12xData._MyrmidonBottomGroup
+		WAIT_MOVE
+		YIELD
+	END2
+
+	_ThiefReinforcements ; FD/91BF
+		LOAD2 eventChapter12xData._ThiefGroup
+		WAIT_MOVE
+		YIELD
+	END2
+
+	_PerneCheck ; FD/91C6
+		macroCheckIfRescued Perne
+		JUMP_TRUE +
+
+		macroCountEnemyUncapturedAliveUnits Perne
+		JUMP_TRUE ++
+
+		+
+		SET_FLAG FlagBossDeath
+
+		+
+	END1
+
+	_BeginFleeing ; FD/91E7
+		macroSetCharacterByte DancerEnemy, structCharacterDataRAM.AI1, $02
+		macroSetCharacterByte DancerEnemy, structCharacterDataRAM.AI4, $00
+		macroSetCharacterByte DancerEnemy, structCharacterDataRAM.AI2, $0B
+		macroSetCharacterByte DancerEnemy, structCharacterDataRAM.Unknown3E, $00
+		macroUnsetCharacterBitsWord DancerEnemy, structCharacterDataRAM.Unknown3F, $0080
+
+		macroSetCharacterByte ThiefEnemy2, structCharacterDataRAM.AI1, $02
+		macroSetCharacterByte ThiefEnemy2, structCharacterDataRAM.AI4, $00
+		macroSetCharacterByte ThiefEnemy2, structCharacterDataRAM.AI2, $0B
+		macroSetCharacterByte ThiefEnemy2, structCharacterDataRAM.Unknown3E, $00
+
+		macroSetCharacterByte ArcherEnemy1, structCharacterDataRAM.AI1, $02
+		macroSetCharacterByte ArcherEnemy1, structCharacterDataRAM.AI4, $00
+		macroSetCharacterByte ArcherEnemy1, structCharacterDataRAM.AI2, $0B
+		macroSetCharacterByte ArcherEnemy1, structCharacterDataRAM.Unknown3E, $00
+
+		macroSetCharacterByte Trude, structCharacterDataRAM.AI1, $02
+		macroSetCharacterByte Trude, structCharacterDataRAM.AI4, $00
+		macroSetCharacterByte Trude, structCharacterDataRAM.AI2, $0B
+		macroSetCharacterByte Trude, structCharacterDataRAM.Unknown3E, $00
+	END1
+
+	_MasterSealDancer ; FD/9380
+		SCROLL_CAMERA_ADDRESS eventChapter12xData._MasterSealDancerCameraCoordinates
+		YIELD
+
+		LOAD2 eventChapter12xData._MasterSealDancerGroup
+		WAIT_MOVE
+		YIELD
+
+		YIELD_UNK
+	END2
+
+	_WarpDancer ; FD/938D
+		SCROLL_CAMERA_ADDRESS eventChapter12xData._WarpDancerCameraCoordinates
+		YIELD
+
+		LOAD2 eventChapter12xData._WarpDancerGroup
+		WAIT_MOVE
+		YIELD
+
+		YIELD_UNK
+	END2
+
+	_Door1 ; FD/939A
+		macroOpenDoorByTileChangeID 0
+	END1
+
+	_Door2 ; FD/93C5
+		macroOpenDoorByTileChangeID 1
+	END1
+
+	_SalemPerneTalk ; FD/93F0
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $4A
+		YIELD
+
+		DIALOGUE ch12xpansalem
+		YIELD
+
+		macroConvertToPlayerAllegiance Perne
+		macroSetCharacterWord Perne, structCharacterDataRAM.Leader, Leif
+
+		SET_FLAG $0B
+
+		macroSetCharacterByte Perne, structCharacterDataRAM.LeadershipStars, 0
+	END2
+
+	_LifisPerneTalk ; FD/943E
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $4C
+		YIELD
+
+		DIALOGUE ch12xpanlithis
+
+		macroCountEnemyUncapturedAliveUnits Trude
+		JUMP_FALSE +
+
+		STORE_LONG lEventEngineLongParameter, ch12xpanlithis2
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		+
+		YIELD
+
+		macroConvertToPlayerAllegiance Perne
+		macroSetCharacterWord Perne, structCharacterDataRAM.Leader, Leif
+		macroSetCharacterByte Perne, structCharacterDataRAM.LeadershipStars, 0
+
+		SET_FLAG $0B
+	END2
+
+	_LaraPerneTalk ; FD/94A8
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $4A
+		YIELD
+
+		DIALOGUE ch12xpanlara
+		YIELD
+
+		macroConvertToPlayerAllegiance Perne
+		macroSetCharacterWord Perne, structCharacterDataRAM.Leader, Leif
+		macroSetCharacterByte Perne, structCharacterDataRAM.LeadershipStars, 0
+
+		SET_FLAG $0B
+
+		STORE_WORD wEventEngineCharacterTarget, Lara
+		STORE_WORD wEventEngineParameter1, Dancer
+		CALL_ASM_LOOP rlASMCPromoteUnit, $0000
+
+		ORR_BYTE aSelectedCharacterBuffer.Skills1, Skill1Steal
+		YIELD_UNK
+		YIELD_UNK
+
+		HALT_UNTIL_WORD_SKIPPABLE $7FAA14, $0000
+
+		macroUnsetCharacterTurnStatus Lara, TurnStatusHidden
+
+		STORE_WORD wUnknown001791, $FFFF
+	END1
+
+	_PerneTrudeTalk ; FD/952D
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $4A
+		YIELD
+
+		DIALOGUE ch12xpantrude
+		YIELD
+
+		macroConvertToPlayerAllegiance Trude
+		macroSetCharacterWord Trude, structCharacterDataRAM.Leader, Leif
+
+		SET_FLAG $0A
+	END2
+
+	_SafyTinaTalk ; FD/9563
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $4C
+		YIELD
+
+		DIALOGUE ch12xtinasafie
+		YIELD
+
+		macroCountEnemyUncapturedAliveUnits Tina
+		JUMP_FALSE +
+
+		macroConvertToPlayerAllegiance Tina
+		macroSetCharacterWord Tina, structCharacterDataRAM.Leader, Leif
+
+		SET_FLAG $09
+
+		+
+	END2
+
+	_PrepGroups ; FD/95A8
+		.long eventChapter12xData._PrepEnemies
+	.word $0000
+
+	_OpeningEvent ; FD/95AD
+		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
+
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $3A
+		YIELD
+
+		macroChapterTitlePopup ch12xtitlename
+
+		macroDialogueWithBackground ch12xopening1, 4
+
+		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
+		YIELD
+
+		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
+
+		macroCheckTurnStatusSet Salem, TurnStatusInvisible
+		JUMP_FALSE +
+
+		macroUnsetCharacterTurnStatus Salem, (TurnStatusInvisible | TurnStatusUnknown1)
+		macroSetUnitPosition Salem, [15, 10]
+		macroSetCharacterByte Salem, structCharacterDataRAM.Fatigue, 0
+
+		+
+		macroCountPlayerUncapturedAliveUnits Salem
+		JUMP_FALSE +
+
+		macroSetCharacterWord Salem, structCharacterDataRAM.Leader, Leif
+
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $4A
+		YIELD
+
+		SCROLL_CAMERA_CHAR Salem
+		SET_CAMERA_SPEED $04
+		YIELD
+
+		DIALOGUE ch12xopening2salem
+		YIELD
+
+		+
+		macroCountPlayerUncapturedAliveUnits Lifis
+		JUMP_FALSE +
+
+		SCROLL_CAMERA_CHAR Lifis
+		SET_CAMERA_SPEED $04
+
+		DIALOGUE ch12xopening3lithis
+		YIELD
+
+		+
+		macroCountPlayerUncapturedAliveUnits Lara
+		JUMP_FALSE +
+
+		SCROLL_CAMERA_CHAR Lara
+		SET_CAMERA_SPEED $04
+
+		DIALOGUE ch12xopening4lara
+		YIELD
+
+		+
+	END2
+
+	_EndingEvent ; FD/96C2
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 16
+		YIELD
+
+		CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd, $0000
+
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $41
+		YIELD
+
+		CALL_ASM_LOOP rlASMCSaveChapterAndTurncount, $0000
+
+		macroSetCharacterTurnStatus Leif, TurnStatusHidden
+
+		DIALOGUE ch12xending1
+
+		EVENT_TEST_FLAG_SET $07
+		JUMP_TRUE ++
+
+		macroCountPlayerUncapturedAliveUnits Perne
+		JUMP_FALSE ++
+
+		macroCheckIfRescued Trude
+		JUMP_FALSE ++
+
+		macroCheckIfCaptured Trude
+		JUMP_TRUE ++
+
+		macroClearRescue Trude
+
+		STORE_LONG lEventEngineLongParameter, ch12xending2
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		macroCheckIfRescuedByAllyOrNPC Lifis
+		JUMP_FALSE +
+
+		STORE_LONG lEventEngineLongParameter, ch12xending3
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		+
+		macroConvertToPlayerAllegiance Trude
+		macroSetCharacterWord Trude, structCharacterDataRAM.Leader, Leif
+
+		SET_FLAG $0A
+
+		+
+		YIELD
+
+		PLAY_SOUND_WORD $00E7
+		FADE_OUT $01
+		YIELD
+
+		CALL_ASM_LOOP rlASMCChapterEnd, $0000
+	END1

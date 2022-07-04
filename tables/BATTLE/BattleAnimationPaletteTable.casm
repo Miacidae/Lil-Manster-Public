@@ -1,0 +1,816 @@
+	BA_BaseCavalry_Palette																	= 0
+		BA_BaseCavalry_PaletteBA_Palette_Index												= BA_Palette6F
+
+	BA_UnknownPalette01																		= 1
+		BA_UnknownPalette01BA_Palette_Index													= BA_Palette6F
+
+	BA_UnknownPalette02																		= 2
+		BA_UnknownPalette02BA_Palette_Index													= BA_Palette6F
+
+	BA_UnknownPalette03																		= 3
+		BA_UnknownPalette03BA_Palette_Index													= BA_Palette6F
+
+	BA_SwordKnight_Palette																	= 4
+		BA_SwordKnight_PaletteBA_Palette_Index												= BA_Palette71
+
+	BA_Troubadour_Palette																	= 5
+		BA_Troubadour_PaletteBA_Palette_Index												= BA_Palette72
+
+	BA_KnightLord_Palette																	= 6
+		BA_KnightLord_PaletteBA_Palette_Index												= BA_Palette73
+
+	BA_DukeKnight_Palette																	= 7
+		BA_DukeKnight_PaletteBA_Palette_Index												= BA_Palette74
+
+	BA_MasterKnightM_Palette																= 8
+		BA_MasterKnightM_PaletteBA_Palette_Index											= BA_Palette75
+
+	BA_MasterKnightF_Palette																= 9
+		BA_MasterKnightF_PaletteBA_Palette_Index											= BA_Palette76
+
+	BA_PaladinM_ArchKnight_Palette															= 10
+		BA_PaladinM_ArchKnight_PaletteBA_Palette_Index										= BA_Palette77
+
+	BA_PaladinF_Palette																		= 11
+		BA_PaladinF_PaletteBA_Palette_Index													= BA_Palette79
+
+	BA_UnknownPalette0C																		= 12
+		BA_UnknownPalette0CBA_Palette_Index													= BA_Palette77
+
+	BA_Ranger_Palette																		= 13
+		BA_Ranger_PaletteBA_Palette_Index													= BA_Palette7A
+
+	BA_MageKnightM_Palette																	= 14
+		BA_MageKnightM_PaletteBA_Palette_Index												= BA_Palette7D
+
+	BA_GreatKnight_Palette																	= 15
+		BA_GreatKnight_PaletteBA_Palette_Index												= BA_Palette7B
+
+	BA_PegRiderKnight_Palette																= 16
+		BA_PegRiderKnight_PaletteBA_Palette_Index											= BA_Palette80
+
+	BA_UnknownPalette11																		= 17
+		BA_UnknownPalette11BA_Palette_Index													= BA_Palette81
+
+	BA_DracosM_Palette																		= 18
+		BA_DracosM_PaletteBA_Palette_Index													= BA_Palette82
+
+	BA_DracoriderF_DracoknightF_Palette														= 19
+		BA_DracoriderF_DracoknightF_PaletteBA_Palette_Index									= BA_Palette83
+
+	BA_DragonmasterF_Palette																= 20
+		BA_DragonmasterF_PaletteBA_Palette_Index											= BA_Palette84
+
+	BA_ArcherM_Palette																		= 21
+		BA_ArcherM_PaletteBA_Palette_Index													= BA_Palette89
+
+	BA_ArcherF_DismountedBowKnightF_Palette													= 22
+		BA_ArcherF_DismountedBowKnightF_PaletteBA_Palette_Index								= BA_Palette8A
+
+	BA_MyrmidonM_Palette																	= 23
+		BA_MyrmidonM_PaletteBA_Palette_Index												= BA_Palette8B
+
+	BA_MyrmidonF_Palette																	= 24
+		BA_MyrmidonF_PaletteBA_Palette_Index												= BA_Palette8D
+
+	BA_SwordmasterM_Palette																	= 25
+		BA_SwordmasterM_PaletteBA_Palette_Index												= BA_Palette8F
+
+	BA_SwordmasterF_Palette																	= 26
+		BA_SwordmasterF_PaletteBA_Palette_Index												= BA_Palette90
+
+	BA_SniperM_Palette																		= 27
+		BA_SniperM_PaletteBA_Palette_Index													= BA_Palette91
+
+	BA_SniperF_DismountedArchKnightF_Palette												= 28
+		BA_SniperF_DismountedArchKnightF_PaletteBA_Palette_Index							= BA_Palette92
+
+	BA_DismountedDracoknightM_HeroFE4M_Palette												= 29
+		BA_DismountedDracoknightM_HeroFE4M_PaletteBA_Palette_Index							= BA_Palette93
+
+	BA_HeroF_HeroFE4F_Palette																= 30
+		BA_HeroF_HeroFE4F_PaletteBA_Palette_Index											= BA_Palette94
+
+	BA_General_Palette																		= 31
+		BA_General_PaletteBA_Palette_Index													= BA_Palette95
+
+	BA_Emperor_Palette																		= 32
+		BA_Emperor_PaletteBA_Palette_Index													= BA_Palette96
+
+	BA_Baron_Palette																		= 33
+		BA_Baron_PaletteBA_Palette_Index													= BA_Palette97
+
+	BA_ArmorKnight_Palette																	= 34
+		BA_ArmorKnight_PaletteBA_Palette_Index												= BA_Palette98
+
+	BA_Hunter_Berserker_Palette																= 35
+		BA_Hunter_Berserker_PaletteBA_Palette_Index											= BA_Palette99
+
+	BA_BrigandAlt_Palette																	= 36
+		BA_BrigandAlt_PaletteBA_Palette_Index												= BA_Palette9A
+
+	BA_Brigand_Warrior_Palette																= 37
+		BA_Brigand_Warrior_PaletteBA_Palette_Index											= BA_Palette9B
+
+	BA_Pirate_Palette																		= 38
+		BA_Pirate_PaletteBA_Palette_Index													= BA_Palette9C
+
+	BA_JuniorLord_Palette																	= 39
+		BA_JuniorLord_PaletteBA_Palette_Index												= BA_Palette9D
+
+	BA_DismountedMageKnightM_Palette														= 40
+		BA_DismountedMageKnightM_PaletteBA_Palette_Index									= BA_Palette9E
+
+	BA_Lord_Prince_DismountedKnightLord_Palette												= 41
+		BA_Lord_Prince_DismountedKnightLord_PaletteBA_Palette_Index							= BA_PaletteA5
+
+	BA_DismountedMasterKnightF_Palette														= 42
+		BA_DismountedMasterKnightF_PaletteBA_Palette_Index									= BA_PaletteA6
+
+	BA_DismountedMageKnightF_Palette														= 43
+		BA_DismountedMageKnightF_PaletteBA_Palette_Index									= BA_Palette9F
+
+	BA_GlitchedBaron_Palette																= 44
+		BA_GlitchedBaron_PaletteBA_Palette_Index											= BA_PaletteA0
+
+	BA_Dancer_Palette																		= 45
+		BA_Dancer_PaletteBA_Palette_Index													= BA_PaletteA1
+
+	BA_UnknownPalette2E																		= 46
+		BA_UnknownPalette2EBA_Palette_Index													= BA_PaletteA2
+
+	BA_Priest_Palette																		= 47
+		BA_Priest_PaletteBA_Palette_Index													= BA_PaletteA3
+
+	BA_Priestess_Palette																	= 48
+		BA_Priestess_PaletteBA_Palette_Index												= BA_PaletteA4
+
+	BA_MageM_Palette																		= 49
+		BA_MageM_PaletteBA_Palette_Index													= BA_PaletteAD
+
+	BA_MageF_Palette																		= 50
+		BA_MageF_PaletteBA_Palette_Index													= BA_PaletteAE
+
+	BA_LoptrianMage_Palette																	= 51
+		BA_LoptrianMage_PaletteBA_Palette_Index												= BA_PaletteAF
+
+	BA_ThunderMage_Palette																	= 52
+		BA_ThunderMage_PaletteBA_Palette_Index												= BA_PaletteB0
+
+	BA_WindMage_Palette																		= 53
+		BA_WindMage_PaletteBA_Palette_Index													= BA_PaletteB1
+
+	BA_HighPriest_Palette																	= 54
+		BA_HighPriest_PaletteBA_Palette_Index												= BA_PaletteB2
+
+	BA_HighPriestess_Palette																= 55
+		BA_HighPriestess_PaletteBA_Palette_Index											= BA_PaletteB3
+
+	BA_Bishop_Palette																		= 56
+		BA_Bishop_PaletteBA_Palette_Index													= BA_PaletteB4
+
+	BA_SageM_Palette																		= 57
+		BA_SageM_PaletteBA_Palette_Index													= BA_PaletteB5
+
+	BA_SageF_Palette																		= 58
+		BA_SageF_PaletteBA_Palette_Index													= BA_PaletteB6
+
+	BA_UnknownPalette3B																		= 59
+		BA_UnknownPalette3BBA_Palette_Index													= BA_PaletteB7
+
+	BA_Bard_Palette																			= 60
+		BA_Bard_PaletteBA_Palette_Index														= BA_PaletteB8
+
+	BA_Cleric_Palette																		= 61
+		BA_Cleric_PaletteBA_Palette_Index													= BA_PaletteB9
+
+	BA_Sorcerer_Palette																		= 62
+		BA_Sorcerer_PaletteBA_Palette_Index													= BA_PaletteBA
+
+	BA_DarkBishop_Palette																	= 63
+		BA_DarkBishop_PaletteBA_Palette_Index												= BA_PaletteBB
+
+	BA_ThiefM_Palette																		= 64
+		BA_ThiefM_PaletteBA_Palette_Index													= BA_PaletteBC
+
+	BA_ThiefF_Palette																		= 65
+		BA_ThiefF_PaletteBA_Palette_Index													= BA_PaletteBD
+
+	BA_RogueM_Palette																		= 66
+		BA_RogueM_PaletteBA_Palette_Index													= BA_PaletteBF
+
+	BA_RogueF_Palette																		= 67
+		BA_RogueF_PaletteBA_Palette_Index													= BA_PaletteC0
+
+	BA_UnknownPalette44																		= 68
+		BA_UnknownPalette44BA_Palette_Index													= BA_Palette8F
+
+	BA_UnknownPalette45																		= 69
+		BA_UnknownPalette45BA_Palette_Index													= BA_Palette8F
+
+	BA_Ballistician_Palette																	= 70
+		BA_Ballistician_PaletteBA_Palette_Index												= BA_PaletteC2
+
+	BA_IronBallistician_Palette																= 71
+		BA_IronBallistician_PaletteBA_Palette_Index											= BA_PaletteC3
+
+	BA_KillerBallistician_Palette															= 72
+		BA_KillerBallistician_PaletteBA_Palette_Index										= BA_PaletteC4
+
+	BA_DarkPrince_Palette																	= 73
+		BA_DarkPrince_PaletteBA_Palette_Index												= BA_PaletteC5
+
+	BA_UnknownPalette4A																		= 74
+		BA_UnknownPalette4ABA_Palette_Index													= BA_Palette78
+
+	BA_UnknownPalette4B																		= 75
+		BA_UnknownPalette4BBA_Palette_Index													= BA_Palette70
+
+	BA_DismountedTroubadour_Palette															= 76
+		BA_DismountedTroubadour_PaletteBA_Palette_Index										= BA_PaletteA7
+
+	BA_DismountedPaladinF_Palette															= 77
+		BA_DismountedPaladinF_PaletteBA_Palette_Index										= BA_PaletteA8
+
+	BA_UnknownPalette4E																		= 78
+		BA_UnknownPalette4EBA_Palette_Index													= BA_PaletteA9
+
+	BA_UnknownPalette4F																		= 79
+		BA_UnknownPalette4FBA_Palette_Index													= BA_PaletteAA
+
+	BA_UnknownPalette50																		= 80
+		BA_UnknownPalette50BA_Palette_Index													= BA_PaletteAB
+
+	BA_UnknownPalette51																		= 81
+		BA_UnknownPalette51BA_Palette_Index													= BA_PaletteAC
+
+	BA_Fighter_Palette																		= 82
+		BA_Fighter_PaletteBA_Palette_Index													= BA_Palette8C
+
+	BA_UnknownPalette53																		= 83
+		BA_UnknownPalette53BA_Palette_Index													= BA_Palette69
+
+	BA_UnknownPalette54																		= 84
+		BA_UnknownPalette54BA_Palette_Index													= BA_Palette6A
+
+	BA_DismountedBowKnightM_Palette															= 85
+		BA_DismountedBowKnightM_PaletteBA_Palette_Index										= BA_Palette6B
+
+	BA_DismountedArchKnightM_Palette														= 86
+		BA_DismountedArchKnightM_PaletteBA_Palette_Index									= BA_Palette6C
+
+	BA_MageKnightF_Palette																	= 87
+		BA_MageKnightF_PaletteBA_Palette_Index												= BA_Palette7E
+
+	BA_Dismounted_BaseMeleeCavalry_Palette													= 88
+		BA_Dismounted_BaseMeleeCavalry_PaletteBA_Palette_Index								= BA_Palette67
+
+	BA_Dismounted_PromotedMeleeCavalry_DracoriderM_Dragonmaster_Palette						= 89
+		BA_Dismounted_PromotedMeleeCavalry_DracoriderM_Dragonmaster_PaletteBA_Palette_Index	= BA_Palette68
+
+	BA_UnknownPalette5A																		= 90
+		BA_UnknownPalette5ABA_Palette_Index													= BA_Palette7C
+
+	BA_BowKnightF_Palette																	= 91
+		BA_BowKnightF_PaletteBA_Palette_Index												= BA_Palette65
+
+	BA_ArchKnightF_Palette																	= 92
+		BA_ArchKnightF_PaletteBA_Palette_Index												= BA_Palette66
+
+	BA_HeroM_Palette																		= 93
+		BA_HeroM_PaletteBA_Palette_Index													= BA_Palette8E
+
+	BA_ThiefRogue_Palette																	= 94
+		BA_ThiefRogue_PaletteBA_Palette_Index												= BA_PaletteBE
+
+	BA_DismountedSwordKnight_Palette														= 95
+		BA_DismountedSwordKnight_PaletteBA_Palette_Index									= BA_Palette6D
+
+	BA_DismountedRanger_Palette																= 96
+		BA_DismountedRanger_PaletteBA_Palette_Index											= BA_Palette6E
+
+	BA_DismountedPegRiderKnight_Palette														= 97
+		BA_DismountedPegRiderKnight_PaletteBA_Palette_Index									= BA_Palette86
+
+	BA_Dismounted_Falcon_DracosF_Palette													= 98
+		BA_Dismounted_Falcon_DracosF_PaletteBA_Palette_Index								= BA_Palette87
+
+	BA_UnknownPalette63																		= 99
+		BA_UnknownPalette63BA_Palette_Index													= BA_Palette88
+
+	BA_UnknownPalette64																		= 100
+		BA_UnknownPalette64BA_Palette_Index													= BA_Palette89
+
+	BA_UnknownPalette65																		= 101
+		BA_UnknownPalette65BA_Palette_Index													= BA_Palette63
+
+	BA_Soldier_ArcherEnemy_Palette															= 102
+		BA_Soldier_ArcherEnemy_PaletteBA_Palette_Index										= BA_Palette64
+
+	BA_FalconKnight_Palette																	= 103
+		BA_FalconKnight_PaletteBA_Palette_Index												= BA_Palette7F
+
+	BA_VeninBallistician_Palette															= 104
+		BA_VeninBallistician_PaletteBA_Palette_Index										= BA_PaletteC1
+
+	BA_Finn_DracoriderM_Palette																= 105
+		BA_Finn_DracoriderM_PaletteBA_Palette_Index											= BA_Palette85
+
+	BA_Finn_Dismounted_Palette																= 106
+		BA_Finn_Dismounted_PaletteBA_Palette_Index											= BA_Palette55
+
+	BA_Finn_LanceKnight_Palette																= 107
+		BA_Finn_LanceKnight_PaletteBA_Palette_Index											= BA_Palette56
+
+	BA_Finn_DukeKnight_Palette																= 108
+		BA_Finn_DukeKnight_PaletteBA_Palette_Index											= BA_Palette57
+
+	BA_Finn_MasterKnight_Palette															= 109
+		BA_Finn_MasterKnight_PaletteBA_Palette_Index										= BA_Palette58
+
+	BA_Osian_Fighter_Palette																= 110
+		BA_Osian_Fighter_PaletteBA_Palette_Index											= BA_Palette59
+
+	BA_Osian_Hero_Palette																	= 111
+		BA_Osian_Hero_PaletteBA_Palette_Index												= BA_Palette5A
+
+	BA_Halvan_Fighter_Palette																= 112
+		BA_Halvan_Fighter_PaletteBA_Palette_Index											= BA_Palette5B
+
+	BA_Halvan_Hero_Palette																	= 113
+		BA_Halvan_Hero_PaletteBA_Palette_Index												= BA_Palette5C
+
+	BA_Dagdar_Warrior_Palette																= 114
+		BA_Dagdar_Warrior_PaletteBA_Palette_Index											= BA_Palette5D
+
+	BA_Ralph_Myrmidon_Palette																= 115
+		BA_Ralph_Myrmidon_PaletteBA_Palette_Index											= BA_Palette5E
+
+	BA_Ralph_Hero_Palette																	= 116
+		BA_Ralph_Hero_PaletteBA_Palette_Index												= BA_Palette5F
+
+	BA_Ralph_Swordmaster_Palette															= 117
+		BA_Ralph_Swordmaster_PaletteBA_Palette_Index										= BA_Palette60
+
+	BA_Ronan_Archer_Palette																	= 118
+		BA_Ronan_Archer_PaletteBA_Palette_Index												= BA_Palette61
+
+	BA_Ronan_Sniper_Palette																	= 119
+		BA_Ronan_Sniper_PaletteBA_Palette_Index												= BA_Palette62
+
+	BA_Lara_Dancer_Palette																	= 120
+		BA_Lara_Dancer_PaletteBA_Palette_Index												= BA_Palette4E
+
+	BA_Lara_Thief_Palette																	= 121
+		BA_Lara_Thief_PaletteBA_Palette_Index												= BA_Palette4F
+
+	BA_Lara_Rogue_Palette																	= 122
+		BA_Lara_Rogue_PaletteBA_Palette_Index												= BA_Palette50
+
+	BA_Mareeta_Myrmidon_Palette																= 123
+		BA_Mareeta_Myrmidon_PaletteBA_Palette_Index											= BA_Palette51
+
+	BA_Mareeta_Hero_Palette																	= 124
+		BA_Mareeta_Hero_PaletteBA_Palette_Index												= BA_Palette52
+
+	BA_Mareeta_Swordmaster_Palette															= 125
+		BA_Mareeta_Swordmaster_PaletteBA_Palette_Index										= BA_Palette53
+
+	BA_Eyvel_Swordmaster_Palette															= 126
+		BA_Eyvel_Swordmaster_PaletteBA_Palette_Index										= BA_Palette54
+
+	BA_Nanna_Troubadour_Palette																= 127
+		BA_Nanna_Troubadour_PaletteBA_Palette_Index											= BA_Palette39
+
+	BA_Nanna_Paladin_Palette																= 128
+		BA_Nanna_Paladin_PaletteBA_Palette_Index											= BA_Palette3A
+
+	BA_Nanna_Dismounted_Palette																= 129
+		BA_Nanna_Dismounted_PaletteBA_Palette_Index											= BA_Palette3B
+
+	BA_Tanya_Archer_Palette																	= 130
+		BA_Tanya_Archer_PaletteBA_Palette_Index												= BA_Palette3C
+
+	BA_Tanya_Sniper_Palette																	= 131
+		BA_Tanya_Sniper_PaletteBA_Palette_Index												= BA_Palette3D
+
+	BA_Marty_Brigand_Palette																= 132
+		BA_Marty_Brigand_PaletteBA_Palette_Index											= BA_Palette3E
+
+	BA_Marty_Warrior_Palette																= 133
+		BA_Marty_Warrior_PaletteBA_Palette_Index											= BA_Palette3F
+
+	BA_Fergus_SwordKnight_Palette															= 134
+		BA_Fergus_SwordKnight_PaletteBA_Palette_Index										= BA_Palette40
+
+	BA_Fergus_Ranger_Palette																= 135
+		BA_Fergus_Ranger_PaletteBA_Palette_Index											= BA_Palette41
+
+	BA_Fergus_SwordKnightDismounted_Palette													= 136
+		BA_Fergus_SwordKnightDismounted_PaletteBA_Palette_Index								= BA_Palette42
+
+	BA_Fergus_RangerDismounted_Palette														= 137
+		BA_Fergus_RangerDismounted_PaletteBA_Palette_Index									= BA_Palette43
+
+	BA_Shiva_Myrmidon_Palette																= 138
+		BA_Shiva_Myrmidon_PaletteBA_Palette_Index											= BA_Palette44
+
+	BA_Shiva_Swordmaster_Palette															= 139
+		BA_Shiva_Swordmaster_PaletteBA_Palette_Index										= BA_Palette45
+
+	BA_Lifis_Thief_Palette																	= 140
+		BA_Lifis_Thief_PaletteBA_Palette_Index												= BA_Palette46
+
+	BA_Lifis_Rogue_Palette																	= 141
+		BA_Lifis_Rogue_PaletteBA_Palette_Index												= BA_Palette47
+
+	BA_Galzus_Palette																		= 142
+		BA_Galzus_PaletteBA_Palette_Index													= BA_Palette48
+
+	BA_Safy_Priestess_Palette																= 143
+		BA_Safy_Priestess_PaletteBA_Palette_Index											= BA_Palette49
+
+	BA_Safy_HighPriestess_Palette															= 144
+		BA_Safy_HighPriestess_PaletteBA_Palette_Index										= BA_Palette4A
+
+	BA_Asbel_WindMage_Palette																= 145
+		BA_Asbel_WindMage_PaletteBA_Palette_Index											= BA_Palette4B
+
+	BA_Asbel_Sage_Palette																	= 146
+		BA_Asbel_Sage_PaletteBA_Palette_Index												= BA_Palette4C
+
+	BA_Saias_Palette																		= 147
+		BA_Saias_PaletteBA_Palette_Index													= BA_Palette4D
+
+	BA_Brighton_AxeKnight_Palette															= 148
+		BA_Brighton_AxeKnight_PaletteBA_Palette_Index										= BA_Palette23
+
+	BA_Brighton_GreatKnight_Palette															= 149
+		BA_Brighton_GreatKnight_PaletteBA_Palette_Index										= BA_Palette24
+
+	BA_Hicks_AxeKnight_Palette																= 150
+		BA_Hicks_AxeKnight_PaletteBA_Palette_Index											= BA_Palette25
+
+	BA_Hicks_GreatKnight_Palette															= 151
+		BA_Hicks_GreatKnight_PaletteBA_Palette_Index										= BA_Palette26
+
+	BA_Dalsin_Palette																		= 152
+		BA_Dalsin_PaletteBA_Palette_Index													= BA_Palette27
+
+	BA_Callion_Cavalier_Palette																= 153
+		BA_Callion_Cavalier_PaletteBA_Palette_Index											= BA_Palette28
+
+	BA_Callion_Paladin_Palette																= 154
+		BA_Callion_Paladin_PaletteBA_Palette_Index											= BA_Palette29
+
+	BA_Glade_DukeKnight_Palette																= 155
+		BA_Glade_DukeKnight_PaletteBA_Palette_Index											= BA_Palette2A
+
+	BA_Kane_LanceKnight_Palette																= 156
+		BA_Kane_LanceKnight_PaletteBA_Palette_Index											= BA_Palette2B
+
+	BA_Kane_DukeKnight_Palette																= 157
+		BA_Kane_DukeKnight_PaletteBA_Palette_Index											= BA_Palette2C
+
+	BA_Alba_LanceKnight_Palette																= 158
+		BA_Alba_LanceKnight_PaletteBA_Palette_Index											= BA_Palette2D
+
+	BA_Alba_DukeKnight_Palette																= 159
+		BA_Alba_DukeKnight_PaletteBA_Palette_Index											= BA_Palette2E
+
+	BA_Robert_Dismounted_Palette															= 160
+		BA_Robert_Dismounted_PaletteBA_Palette_Index										= BA_Palette2F
+
+	BA_Robert_BowKnight_Palette																= 161
+		BA_Robert_BowKnight_PaletteBA_Palette_Index											= BA_Palette30
+
+	BA_Robert_ArchKnight_Palette															= 162
+		BA_Robert_ArchKnight_PaletteBA_Palette_Index										= BA_Palette31
+
+	BA_Fred_Paladin_Palette																	= 163
+		BA_Fred_Paladin_PaletteBA_Palette_Index												= BA_Palette32
+
+	BA_Dean_Dracoknight_Palette																= 164
+		BA_Dean_Dracoknight_PaletteBA_Palette_Index											= BA_Palette33
+
+	BA_Shannam_Swordmaster_Palette															= 165
+		BA_Shannam_Swordmaster_PaletteBA_Palette_Index										= BA_Palette34
+
+	BA_Trude_Myrmidon_Palette																= 166
+		BA_Trude_Myrmidon_PaletteBA_Palette_Index											= BA_Palette35
+
+	BA_Trude_Swordmaster_Palette															= 167
+		BA_Trude_Swordmaster_PaletteBA_Palette_Index										= BA_Palette36
+
+	BA_Conomor_Paladin_Palette																= 168
+		BA_Conomor_Paladin_PaletteBA_Palette_Index											= BA_Palette37
+
+	BA_Diarmuid_Palette																		= 169
+		BA_Diarmuid_PaletteBA_Palette_Index													= BA_Palette38
+
+	BA_Olwen_Palette																		= 170
+		BA_Olwen_PaletteBA_Palette_Index													= BA_Palette19
+
+	BA_Homer_Bard_Palette																	= 171
+		BA_Homer_Bard_PaletteBA_Palette_Index												= BA_Palette1A
+
+	BA_Homer_Sage_Palette																	= 172
+		BA_Homer_Sage_PaletteBA_Palette_Index												= BA_Palette1B
+
+	BA_Miranda_WindMage_Palette																= 173
+		BA_Miranda_WindMage_PaletteBA_Palette_Index											= BA_Palette1C
+
+	BA_Miranda_MageKnight_Palette															= 174
+		BA_Miranda_MageKnight_PaletteBA_Palette_Index										= BA_Palette1D
+
+	BA_Tina_Priestess_Palette																= 175
+		BA_Tina_Priestess_PaletteBA_Palette_Index											= BA_Palette1E
+
+	BA_Tina_HighPriestess_Palette															= 176
+		BA_Tina_HighPriestess_PaletteBA_Palette_Index										= BA_Palette1F
+
+	BA_Schroff_Priest_Palette																= 177
+		BA_Schroff_Priest_PaletteBA_Palette_Index											= BA_Palette20
+
+	BA_Schroff_HighPriest_Palette															= 178
+		BA_Schroff_HighPriest_PaletteBA_Palette_Index										= BA_Palette21
+
+	BA_Ced_Palette																			= 179
+		BA_Ced_PaletteBA_Palette_Index														= BA_Palette22
+
+	BA_Selphina_BowKnight_Palette															= 180
+		BA_Selphina_BowKnight_PaletteBA_Palette_Index										= BA_Palette0B
+
+	BA_Selphina_ArchKnight_Palette															= 181
+		BA_Selphina_ArchKnight_PaletteBA_Palette_Index										= BA_Palette0C
+
+	BA_Selphina_DismountedBowKnight_Palette													= 182
+		BA_Selphina_DismountedBowKnight_PaletteBA_Palette_Index								= BA_Palette0D
+
+	BA_Selphina_DismountedArchKnight_Palette												= 183
+		BA_Selphina_DismountedArchKnight_PaletteBA_Palette_Index							= BA_Palette0E
+
+	BA_Macha_Myrmidon_Palette																= 184
+		BA_Macha_Myrmidon_PaletteBA_Palette_Index											= BA_Palette0F
+
+	BA_Macha_Hero_Palette																	= 185
+		BA_Macha_Hero_PaletteBA_Palette_Index												= BA_Palette10
+
+	BA_Misha_PegasusKnight_Palette															= 186
+		BA_Misha_PegasusKnight_PaletteBA_Palette_Index										= BA_Palette11
+
+	BA_Misha_Dismounted_Palette																= 187
+		BA_Misha_Dismounted_PaletteBA_Palette_Index											= BA_Palette12
+
+	BA_Karin_Dismounted_Palette																= 188
+		BA_Karin_Dismounted_PaletteBA_Palette_Index											= BA_Palette13
+
+	BA_Amalda_Paladin_Palette																= 189
+		BA_Amalda_Paladin_PaletteBA_Palette_Index											= BA_Palette14
+
+	BA_Amalda_Dismounted_Palette															= 190
+		BA_Amalda_Dismounted_PaletteBA_Palette_Index										= BA_Palette15
+
+	BA_Altena_Dracoknight_Palette															= 191
+		BA_Altena_Dracoknight_PaletteBA_Palette_Index										= BA_Palette16
+
+	BA_Altena_Dismounted_Palette															= 192
+		BA_Altena_Dismounted_PaletteBA_Palette_Index										= BA_Palette17
+
+	BA_Xavier_Palette																		= 193
+		BA_Xavier_PaletteBA_Palette_Index													= BA_Palette18
+
+	BA_Sara_Cleric_Palette																	= 194
+		BA_Sara_Cleric_PaletteBA_Palette_Index												= BA_Palette03
+
+	BA_Sara_Sage_Palette																	= 195
+		BA_Sara_Sage_PaletteBA_Palette_Index												= BA_Palette04
+
+	BA_Linoan_Cleric_Palette																= 196
+		BA_Linoan_Cleric_PaletteBA_Palette_Index											= BA_Palette05
+
+	BA_Linoan_Sage_Palette																	= 197
+		BA_Linoan_Sage_PaletteBA_Palette_Index												= BA_Palette06
+
+	BA_Ilios_MageKnight_Palette																= 198
+		BA_Ilios_MageKnight_PaletteBA_Palette_Index											= BA_Palette07
+
+	BA_Ilios_Dismounted_Palette																= 199
+		BA_Ilios_Dismounted_PaletteBA_Palette_Index											= BA_Palette08
+
+	BA_Eda_Dracorider_Dracoknight_Palette													= 200
+		BA_Eda_Dracorider_Dracoknight_PaletteBA_Palette_Index								= BA_Palette09
+
+	BA_Eda_Dismounted_Palette																= 201
+		BA_Eda_Dismounted_PaletteBA_Palette_Index											= BA_Palette0A
+
+	BA_Salem_LoptrianMage_Palette															= 202
+		BA_Salem_LoptrianMage_PaletteBA_Palette_Index										= BA_Palette01
+
+	BA_Salem_Sorcerer_Palette																= 203
+		BA_Salem_Sorcerer_PaletteBA_Palette_Index											= BA_Palette02
+
+BA_BaseCavalry_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_BaseCavalry_PaletteBA_Palette_Index
+BA_UnknownPalette01BattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette01BA_Palette_Index
+BA_UnknownPalette02BattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette02BA_Palette_Index
+BA_UnknownPalette03BattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette03BA_Palette_Index
+BA_SwordKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_SwordKnight_PaletteBA_Palette_Index
+BA_Troubadour_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Troubadour_PaletteBA_Palette_Index
+BA_KnightLord_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_KnightLord_PaletteBA_Palette_Index
+BA_DukeKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DukeKnight_PaletteBA_Palette_Index
+BA_MasterKnightM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_MasterKnightM_PaletteBA_Palette_Index
+BA_MasterKnightF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_MasterKnightF_PaletteBA_Palette_Index
+BA_PaladinM_ArchKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_PaladinM_ArchKnight_PaletteBA_Palette_Index
+BA_PaladinF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_PaladinF_PaletteBA_Palette_Index
+BA_UnknownPalette0CBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette0CBA_Palette_Index
+BA_Ranger_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Ranger_PaletteBA_Palette_Index
+BA_MageKnightM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_MageKnightM_PaletteBA_Palette_Index
+BA_GreatKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_GreatKnight_PaletteBA_Palette_Index
+BA_PegRiderKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_PegRiderKnight_PaletteBA_Palette_Index
+BA_UnknownPalette11BattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette11BA_Palette_Index
+BA_DracosM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DracosM_PaletteBA_Palette_Index
+BA_DracoriderF_DracoknightF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DracoriderF_DracoknightF_PaletteBA_Palette_Index
+BA_DragonmasterF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DragonmasterF_PaletteBA_Palette_Index
+BA_ArcherM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_ArcherM_PaletteBA_Palette_Index
+BA_ArcherF_DismountedBowKnightF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_ArcherF_DismountedBowKnightF_PaletteBA_Palette_Index
+BA_MyrmidonM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_MyrmidonM_PaletteBA_Palette_Index
+BA_MyrmidonF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_MyrmidonF_PaletteBA_Palette_Index
+BA_SwordmasterM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_SwordmasterM_PaletteBA_Palette_Index
+BA_SwordmasterF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_SwordmasterF_PaletteBA_Palette_Index
+BA_SniperM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_SniperM_PaletteBA_Palette_Index
+BA_SniperF_DismountedArchKnightF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_SniperF_DismountedArchKnightF_PaletteBA_Palette_Index
+BA_DismountedDracoknightM_HeroFE4M_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DismountedDracoknightM_HeroFE4M_PaletteBA_Palette_Index
+BA_HeroF_HeroFE4F_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_HeroF_HeroFE4F_PaletteBA_Palette_Index
+BA_General_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_General_PaletteBA_Palette_Index
+BA_Emperor_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Emperor_PaletteBA_Palette_Index
+BA_Baron_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Baron_PaletteBA_Palette_Index
+BA_ArmorKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_ArmorKnight_PaletteBA_Palette_Index
+BA_Hunter_Berserker_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Hunter_Berserker_PaletteBA_Palette_Index
+BA_BrigandAlt_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_BrigandAlt_PaletteBA_Palette_Index
+BA_Brigand_Warrior_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Brigand_Warrior_PaletteBA_Palette_Index
+BA_Pirate_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Pirate_PaletteBA_Palette_Index
+BA_JuniorLord_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_JuniorLord_PaletteBA_Palette_Index
+BA_DismountedMageKnightM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DismountedMageKnightM_PaletteBA_Palette_Index
+BA_Lord_Prince_DismountedKnightLord_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Lord_Prince_DismountedKnightLord_PaletteBA_Palette_Index
+BA_DismountedMasterKnightF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DismountedMasterKnightF_PaletteBA_Palette_Index
+BA_DismountedMageKnightF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DismountedMageKnightF_PaletteBA_Palette_Index
+BA_GlitchedBaron_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_GlitchedBaron_PaletteBA_Palette_Index
+BA_Dancer_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Dancer_PaletteBA_Palette_Index
+BA_UnknownPalette2EBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette2EBA_Palette_Index
+BA_Priest_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Priest_PaletteBA_Palette_Index
+BA_Priestess_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Priestess_PaletteBA_Palette_Index
+BA_MageM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_MageM_PaletteBA_Palette_Index
+BA_MageF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_MageF_PaletteBA_Palette_Index
+BA_LoptrianMage_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_LoptrianMage_PaletteBA_Palette_Index
+BA_ThunderMage_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_ThunderMage_PaletteBA_Palette_Index
+BA_WindMage_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_WindMage_PaletteBA_Palette_Index
+BA_HighPriest_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_HighPriest_PaletteBA_Palette_Index
+BA_HighPriestess_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_HighPriestess_PaletteBA_Palette_Index
+BA_Bishop_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Bishop_PaletteBA_Palette_Index
+BA_SageM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_SageM_PaletteBA_Palette_Index
+BA_SageF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_SageF_PaletteBA_Palette_Index
+BA_UnknownPalette3BBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette3BBA_Palette_Index
+BA_Bard_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Bard_PaletteBA_Palette_Index
+BA_Cleric_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Cleric_PaletteBA_Palette_Index
+BA_Sorcerer_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Sorcerer_PaletteBA_Palette_Index
+BA_DarkBishop_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DarkBishop_PaletteBA_Palette_Index
+BA_ThiefM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_ThiefM_PaletteBA_Palette_Index
+BA_ThiefF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_ThiefF_PaletteBA_Palette_Index
+BA_RogueM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_RogueM_PaletteBA_Palette_Index
+BA_RogueF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_RogueF_PaletteBA_Palette_Index
+BA_UnknownPalette44BattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette44BA_Palette_Index
+BA_UnknownPalette45BattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette45BA_Palette_Index
+BA_Ballistician_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Ballistician_PaletteBA_Palette_Index
+BA_IronBallistician_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_IronBallistician_PaletteBA_Palette_Index
+BA_KillerBallistician_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_KillerBallistician_PaletteBA_Palette_Index
+BA_DarkPrince_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DarkPrince_PaletteBA_Palette_Index
+BA_UnknownPalette4ABattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette4ABA_Palette_Index
+BA_UnknownPalette4BBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette4BBA_Palette_Index
+BA_DismountedTroubadour_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DismountedTroubadour_PaletteBA_Palette_Index
+BA_DismountedPaladinF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DismountedPaladinF_PaletteBA_Palette_Index
+BA_UnknownPalette4EBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette4EBA_Palette_Index
+BA_UnknownPalette4FBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette4FBA_Palette_Index
+BA_UnknownPalette50BattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette50BA_Palette_Index
+BA_UnknownPalette51BattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette51BA_Palette_Index
+BA_Fighter_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Fighter_PaletteBA_Palette_Index
+BA_UnknownPalette53BattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette53BA_Palette_Index
+BA_UnknownPalette54BattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette54BA_Palette_Index
+BA_DismountedBowKnightM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DismountedBowKnightM_PaletteBA_Palette_Index
+BA_DismountedArchKnightM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DismountedArchKnightM_PaletteBA_Palette_Index
+BA_MageKnightF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_MageKnightF_PaletteBA_Palette_Index
+BA_Dismounted_BaseMeleeCavalry_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Dismounted_BaseMeleeCavalry_PaletteBA_Palette_Index
+BA_Dismounted_PromotedMeleeCavalry_DracoriderM_Dragonmaster_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Dismounted_PromotedMeleeCavalry_DracoriderM_Dragonmaster_PaletteBA_Palette_Index
+BA_UnknownPalette5ABattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette5ABA_Palette_Index
+BA_BowKnightF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_BowKnightF_PaletteBA_Palette_Index
+BA_ArchKnightF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_ArchKnightF_PaletteBA_Palette_Index
+BA_HeroM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_HeroM_PaletteBA_Palette_Index
+BA_ThiefRogue_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_ThiefRogue_PaletteBA_Palette_Index
+BA_DismountedSwordKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DismountedSwordKnight_PaletteBA_Palette_Index
+BA_DismountedRanger_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DismountedRanger_PaletteBA_Palette_Index
+BA_DismountedPegRiderKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_DismountedPegRiderKnight_PaletteBA_Palette_Index
+BA_Dismounted_Falcon_DracosF_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Dismounted_Falcon_DracosF_PaletteBA_Palette_Index
+BA_UnknownPalette63BattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette63BA_Palette_Index
+BA_UnknownPalette64BattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette64BA_Palette_Index
+BA_UnknownPalette65BattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_UnknownPalette65BA_Palette_Index
+BA_Soldier_ArcherEnemy_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Soldier_ArcherEnemy_PaletteBA_Palette_Index
+BA_FalconKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_FalconKnight_PaletteBA_Palette_Index
+BA_VeninBallistician_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_VeninBallistician_PaletteBA_Palette_Index
+BA_Finn_DracoriderM_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Finn_DracoriderM_PaletteBA_Palette_Index
+BA_Finn_Dismounted_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Finn_Dismounted_PaletteBA_Palette_Index
+BA_Finn_LanceKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Finn_LanceKnight_PaletteBA_Palette_Index
+BA_Finn_DukeKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Finn_DukeKnight_PaletteBA_Palette_Index
+BA_Finn_MasterKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Finn_MasterKnight_PaletteBA_Palette_Index
+BA_Osian_Fighter_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Osian_Fighter_PaletteBA_Palette_Index
+BA_Osian_Hero_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Osian_Hero_PaletteBA_Palette_Index
+BA_Halvan_Fighter_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Halvan_Fighter_PaletteBA_Palette_Index
+BA_Halvan_Hero_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Halvan_Hero_PaletteBA_Palette_Index
+BA_Dagdar_Warrior_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Dagdar_Warrior_PaletteBA_Palette_Index
+BA_Ralph_Myrmidon_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Ralph_Myrmidon_PaletteBA_Palette_Index
+BA_Ralph_Hero_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Ralph_Hero_PaletteBA_Palette_Index
+BA_Ralph_Swordmaster_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Ralph_Swordmaster_PaletteBA_Palette_Index
+BA_Ronan_Archer_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Ronan_Archer_PaletteBA_Palette_Index
+BA_Ronan_Sniper_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Ronan_Sniper_PaletteBA_Palette_Index
+BA_Lara_Dancer_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Lara_Dancer_PaletteBA_Palette_Index
+BA_Lara_Thief_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Lara_Thief_PaletteBA_Palette_Index
+BA_Lara_Rogue_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Lara_Rogue_PaletteBA_Palette_Index
+BA_Mareeta_Myrmidon_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Mareeta_Myrmidon_PaletteBA_Palette_Index
+BA_Mareeta_Hero_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Mareeta_Hero_PaletteBA_Palette_Index
+BA_Mareeta_Swordmaster_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Mareeta_Swordmaster_PaletteBA_Palette_Index
+BA_Eyvel_Swordmaster_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Eyvel_Swordmaster_PaletteBA_Palette_Index
+BA_Nanna_Troubadour_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Nanna_Troubadour_PaletteBA_Palette_Index
+BA_Nanna_Paladin_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Nanna_Paladin_PaletteBA_Palette_Index
+BA_Nanna_Dismounted_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Nanna_Dismounted_PaletteBA_Palette_Index
+BA_Tanya_Archer_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Tanya_Archer_PaletteBA_Palette_Index
+BA_Tanya_Sniper_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Tanya_Sniper_PaletteBA_Palette_Index
+BA_Marty_Brigand_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Marty_Brigand_PaletteBA_Palette_Index
+BA_Marty_Warrior_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Marty_Warrior_PaletteBA_Palette_Index
+BA_Fergus_SwordKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Fergus_SwordKnight_PaletteBA_Palette_Index
+BA_Fergus_Ranger_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Fergus_Ranger_PaletteBA_Palette_Index
+BA_Fergus_SwordKnightDismounted_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Fergus_SwordKnightDismounted_PaletteBA_Palette_Index
+BA_Fergus_RangerDismounted_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Fergus_RangerDismounted_PaletteBA_Palette_Index
+BA_Shiva_Myrmidon_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Shiva_Myrmidon_PaletteBA_Palette_Index
+BA_Shiva_Swordmaster_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Shiva_Swordmaster_PaletteBA_Palette_Index
+BA_Lifis_Thief_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Lifis_Thief_PaletteBA_Palette_Index
+BA_Lifis_Rogue_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Lifis_Rogue_PaletteBA_Palette_Index
+BA_Galzus_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Galzus_PaletteBA_Palette_Index
+BA_Safy_Priestess_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Safy_Priestess_PaletteBA_Palette_Index
+BA_Safy_HighPriestess_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Safy_HighPriestess_PaletteBA_Palette_Index
+BA_Asbel_WindMage_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Asbel_WindMage_PaletteBA_Palette_Index
+BA_Asbel_Sage_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Asbel_Sage_PaletteBA_Palette_Index
+BA_Saias_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Saias_PaletteBA_Palette_Index
+BA_Brighton_AxeKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Brighton_AxeKnight_PaletteBA_Palette_Index
+BA_Brighton_GreatKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Brighton_GreatKnight_PaletteBA_Palette_Index
+BA_Hicks_AxeKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Hicks_AxeKnight_PaletteBA_Palette_Index
+BA_Hicks_GreatKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Hicks_GreatKnight_PaletteBA_Palette_Index
+BA_Dalsin_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Dalsin_PaletteBA_Palette_Index
+BA_Callion_Cavalier_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Callion_Cavalier_PaletteBA_Palette_Index
+BA_Callion_Paladin_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Callion_Paladin_PaletteBA_Palette_Index
+BA_Glade_DukeKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Glade_DukeKnight_PaletteBA_Palette_Index
+BA_Kane_LanceKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Kane_LanceKnight_PaletteBA_Palette_Index
+BA_Kane_DukeKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Kane_DukeKnight_PaletteBA_Palette_Index
+BA_Alba_LanceKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Alba_LanceKnight_PaletteBA_Palette_Index
+BA_Alba_DukeKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Alba_DukeKnight_PaletteBA_Palette_Index
+BA_Robert_Dismounted_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Robert_Dismounted_PaletteBA_Palette_Index
+BA_Robert_BowKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Robert_BowKnight_PaletteBA_Palette_Index
+BA_Robert_ArchKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Robert_ArchKnight_PaletteBA_Palette_Index
+BA_Fred_Paladin_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Fred_Paladin_PaletteBA_Palette_Index
+BA_Dean_Dracoknight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Dean_Dracoknight_PaletteBA_Palette_Index
+BA_Shannam_Swordmaster_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Shannam_Swordmaster_PaletteBA_Palette_Index
+BA_Trude_Myrmidon_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Trude_Myrmidon_PaletteBA_Palette_Index
+BA_Trude_Swordmaster_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Trude_Swordmaster_PaletteBA_Palette_Index
+BA_Conomor_Paladin_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Conomor_Paladin_PaletteBA_Palette_Index
+BA_Diarmuid_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Diarmuid_PaletteBA_Palette_Index
+BA_Olwen_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Olwen_PaletteBA_Palette_Index
+BA_Homer_Bard_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Homer_Bard_PaletteBA_Palette_Index
+BA_Homer_Sage_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Homer_Sage_PaletteBA_Palette_Index
+BA_Miranda_WindMage_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Miranda_WindMage_PaletteBA_Palette_Index
+BA_Miranda_MageKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Miranda_MageKnight_PaletteBA_Palette_Index
+BA_Tina_Priestess_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Tina_Priestess_PaletteBA_Palette_Index
+BA_Tina_HighPriestess_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Tina_HighPriestess_PaletteBA_Palette_Index
+BA_Schroff_Priest_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Schroff_Priest_PaletteBA_Palette_Index
+BA_Schroff_HighPriest_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Schroff_HighPriest_PaletteBA_Palette_Index
+BA_Ced_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Ced_PaletteBA_Palette_Index
+BA_Selphina_BowKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Selphina_BowKnight_PaletteBA_Palette_Index
+BA_Selphina_ArchKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Selphina_ArchKnight_PaletteBA_Palette_Index
+BA_Selphina_DismountedBowKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Selphina_DismountedBowKnight_PaletteBA_Palette_Index
+BA_Selphina_DismountedArchKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Selphina_DismountedArchKnight_PaletteBA_Palette_Index
+BA_Macha_Myrmidon_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Macha_Myrmidon_PaletteBA_Palette_Index
+BA_Macha_Hero_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Macha_Hero_PaletteBA_Palette_Index
+BA_Misha_PegasusKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Misha_PegasusKnight_PaletteBA_Palette_Index
+BA_Misha_Dismounted_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Misha_Dismounted_PaletteBA_Palette_Index
+BA_Karin_Dismounted_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Karin_Dismounted_PaletteBA_Palette_Index
+BA_Amalda_Paladin_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Amalda_Paladin_PaletteBA_Palette_Index
+BA_Amalda_Dismounted_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Amalda_Dismounted_PaletteBA_Palette_Index
+BA_Altena_Dracoknight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Altena_Dracoknight_PaletteBA_Palette_Index
+BA_Altena_Dismounted_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Altena_Dismounted_PaletteBA_Palette_Index
+BA_Xavier_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Xavier_PaletteBA_Palette_Index
+BA_Sara_Cleric_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Sara_Cleric_PaletteBA_Palette_Index
+BA_Sara_Sage_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Sara_Sage_PaletteBA_Palette_Index
+BA_Linoan_Cleric_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Linoan_Cleric_PaletteBA_Palette_Index
+BA_Linoan_Sage_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Linoan_Sage_PaletteBA_Palette_Index
+BA_Ilios_MageKnight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Ilios_MageKnight_PaletteBA_Palette_Index
+BA_Ilios_Dismounted_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Ilios_Dismounted_PaletteBA_Palette_Index
+BA_Eda_Dracorider_Dracoknight_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Eda_Dracorider_Dracoknight_PaletteBA_Palette_Index
+BA_Eda_Dismounted_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Eda_Dismounted_PaletteBA_Palette_Index
+BA_Salem_LoptrianMage_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Salem_LoptrianMage_PaletteBA_Palette_Index
+BA_Salem_Sorcerer_PaletteBattleAnimationPaletteTableEntry .dstruct structBattleAnimationPaletteTable, BA_Salem_Sorcerer_PaletteBA_Palette_Index

@@ -1,0 +1,630 @@
+	BAWeaponTypeDummy										= 0
+		BAWeaponTypeDummyBA_WeaponType						= BA_WeaponItem
+		BAWeaponTypeDummyBA_WeaponAnimationType				= BA_WeaponAnimSword
+
+	BAWeaponTypeNoneItem									= 1
+		BAWeaponTypeNoneItemBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeNoneItemBA_WeaponAnimationType			= BA_WeaponAnimSword
+
+	BAWeaponTypeIronSword									= 2
+		BAWeaponTypeIronSwordBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeIronSwordBA_WeaponAnimationType			= BA_WeaponAnimSword
+
+	BAWeaponTypeSteelSword									= 3
+		BAWeaponTypeSteelSwordBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeSteelSwordBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeSilverSword									= 4
+		BAWeaponTypeSilverSwordBA_WeaponType				= BA_WeaponSword
+		BAWeaponTypeSilverSwordBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeSlimSword									= 5
+		BAWeaponTypeSlimSwordBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeSlimSwordBA_WeaponAnimationType			= BA_WeaponAnimSword
+
+	BAWeaponTypeIronBlade									= 6
+		BAWeaponTypeIronBladeBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeIronBladeBA_WeaponAnimationType			= BA_WeaponAnimSword
+
+	BAWeaponTypeKillingEdge									= 7
+		BAWeaponTypeKillingEdgeBA_WeaponType				= BA_WeaponSword
+		BAWeaponTypeKillingEdgeBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeVeninEdge									= 8
+		BAWeaponTypeVeninEdgeBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeVeninEdgeBA_WeaponAnimationType			= BA_WeaponAnimSword
+
+	BAWeaponTypeBerserkEdge									= 9
+		BAWeaponTypeBerserkEdgeBA_WeaponType				= BA_WeaponSword
+		BAWeaponTypeBerserkEdgeBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeSleepEdge									= 10
+		BAWeaponTypeSleepEdgeBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeSleepEdgeBA_WeaponAnimationType			= BA_WeaponAnimSword
+
+	BAWeaponTypeBeoBlade									= 11
+		BAWeaponTypeBeoBladeBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeBeoBladeBA_WeaponAnimationType			= BA_WeaponAnimSword
+
+	BAWeaponTypeBlessedSword								= 12
+		BAWeaponTypeBlessedSwordBA_WeaponType				= BA_WeaponSword
+		BAWeaponTypeBlessedSwordBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeLoptrianFang								= 13
+		BAWeaponTypeLoptrianFangBA_WeaponType				= BA_WeaponSword
+		BAWeaponTypeLoptrianFangBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeBragisBlade									= 14
+		BAWeaponTypeBragisBladeBA_WeaponType				= BA_WeaponSword
+		BAWeaponTypeBragisBladeBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeLightBrand									= 15
+		BAWeaponTypeLightBrandBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeLightBrandBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeBraveSword									= 16
+		BAWeaponTypeBraveSwordBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeBraveSwordBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeKingmaker									= 17
+		BAWeaponTypeKingmakerBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeKingmakerBA_WeaponAnimationType			= BA_WeaponAnimSword
+
+	BAWeaponTypeEarthSword									= 18
+		BAWeaponTypeEarthSwordBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeEarthSwordBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeWindSword									= 19
+		BAWeaponTypeWindSwordBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeWindSwordBA_WeaponAnimationType			= BA_WeaponAnimSword
+
+	BAWeaponTypeFlameSword									= 20
+		BAWeaponTypeFlameSwordBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeFlameSwordBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeLightningSword								= 21
+		BAWeaponTypeLightningSwordBA_WeaponType				= BA_WeaponSword
+		BAWeaponTypeLightningSwordBA_WeaponAnimationType	= BA_WeaponAnimSword
+
+	BAWeaponTypeParagonSword								= 22
+		BAWeaponTypeParagonSwordBA_WeaponType				= BA_WeaponSword
+		BAWeaponTypeParagonSwordBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeArmorslayer									= 23
+		BAWeaponTypeArmorslayerBA_WeaponType				= BA_WeaponSword
+		BAWeaponTypeArmorslayerBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeRapier										= 24
+		BAWeaponTypeRapierBA_WeaponType						= BA_WeaponSword
+		BAWeaponTypeRapierBA_WeaponAnimationType			= BA_WeaponAnimSword
+
+	BAWeaponTypeShortsword									= 25
+		BAWeaponTypeShortswordBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeShortswordBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeLongsword									= 26
+		BAWeaponTypeLongswordBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeLongswordBA_WeaponAnimationType			= BA_WeaponAnimSword
+
+	BAWeaponTypeGreatsword									= 27
+		BAWeaponTypeGreatswordBA_WeaponType					= BA_WeaponSword
+		BAWeaponTypeGreatswordBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeMasterSword									= 28
+		BAWeaponTypeMasterSwordBA_WeaponType				= BA_WeaponSword
+		BAWeaponTypeMasterSwordBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeShadowSword									= 29
+		BAWeaponTypeShadowSwordBA_WeaponType				= BA_WeaponSword
+		BAWeaponTypeShadowSwordBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeMareetasSword								= 30
+		BAWeaponTypeMareetasSwordBA_WeaponType				= BA_WeaponSword
+		BAWeaponTypeMareetasSwordBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeBrokenSword									= 31
+		BAWeaponTypeBrokenSwordBA_WeaponType				= BA_WeaponSword
+		BAWeaponTypeBrokenSwordBA_WeaponAnimationType		= BA_WeaponAnimSword
+
+	BAWeaponTypeIronLance									= 32
+		BAWeaponTypeIronLanceBA_WeaponType					= BA_WeaponLance
+		BAWeaponTypeIronLanceBA_WeaponAnimationType			= BA_WeaponAnimLance
+
+	BAWeaponTypeSteelLance									= 33
+		BAWeaponTypeSteelLanceBA_WeaponType					= BA_WeaponLance
+		BAWeaponTypeSteelLanceBA_WeaponAnimationType		= BA_WeaponAnimLance
+
+	BAWeaponTypeSilverLance									= 34
+		BAWeaponTypeSilverLanceBA_WeaponType				= BA_WeaponLance
+		BAWeaponTypeSilverLanceBA_WeaponAnimationType		= BA_WeaponAnimLance
+
+	BAWeaponTypeSlimLance									= 35
+		BAWeaponTypeSlimLanceBA_WeaponType					= BA_WeaponLance
+		BAWeaponTypeSlimLanceBA_WeaponAnimationType			= BA_WeaponAnimLance
+
+	BAWeaponTypeVeninLance									= 36
+		BAWeaponTypeVeninLanceBA_WeaponType					= BA_WeaponLance
+		BAWeaponTypeVeninLanceBA_WeaponAnimationType		= BA_WeaponAnimLance
+
+	BAWeaponTypeDragonpike									= 37
+		BAWeaponTypeDragonpikeBA_WeaponType					= BA_WeaponLance
+		BAWeaponTypeDragonpikeBA_WeaponAnimationType		= BA_WeaponAnimLance
+
+	BAWeaponTypeShadowSpear									= 38
+		BAWeaponTypeShadowSpearBA_WeaponType				= BA_WeaponThrownLance
+		BAWeaponTypeShadowSpearBA_WeaponAnimationType		= BA_WeaponAnimLance
+
+	BAWeaponTypeBraveLance									= 39
+		BAWeaponTypeBraveLanceBA_WeaponType					= BA_WeaponLance
+		BAWeaponTypeBraveLanceBA_WeaponAnimationType		= BA_WeaponAnimLance
+
+	BAWeaponTypeShortLance									= 40
+		BAWeaponTypeShortLanceBA_WeaponType					= BA_WeaponLance
+		BAWeaponTypeShortLanceBA_WeaponAnimationType		= BA_WeaponAnimLance
+
+	BAWeaponTypeLongLance									= 41
+		BAWeaponTypeLongLanceBA_WeaponType					= BA_WeaponLance
+		BAWeaponTypeLongLanceBA_WeaponAnimationType			= BA_WeaponAnimLance
+
+	BAWeaponTypeGreatlance									= 42
+		BAWeaponTypeGreatlanceBA_WeaponType					= BA_WeaponLance
+		BAWeaponTypeGreatlanceBA_WeaponAnimationType		= BA_WeaponAnimLance
+
+	BAWeaponTypeJavelin										= 43
+		BAWeaponTypeJavelinBA_WeaponType					= BA_WeaponThrownLance
+		BAWeaponTypeJavelinBA_WeaponAnimationType			= BA_WeaponAnimLance
+
+	BAWeaponTypeMasterLance									= 44
+		BAWeaponTypeMasterLanceBA_WeaponType				= BA_WeaponThrownLance
+		BAWeaponTypeMasterLanceBA_WeaponAnimationType		= BA_WeaponAnimLance
+
+	BAWeaponTypeRidersbane									= 45
+		BAWeaponTypeRidersbaneBA_WeaponType					= BA_WeaponLance
+		BAWeaponTypeRidersbaneBA_WeaponAnimationType		= BA_WeaponAnimLance
+
+	BAWeaponTypeKillerLance									= 46
+		BAWeaponTypeKillerLanceBA_WeaponType				= BA_WeaponLance
+		BAWeaponTypeKillerLanceBA_WeaponAnimationType		= BA_WeaponAnimLance
+
+	BAWeaponTypeGaeBolg										= 47
+		BAWeaponTypeGaeBolgBA_WeaponType					= BA_WeaponLance
+		BAWeaponTypeGaeBolgBA_WeaponAnimationType			= BA_WeaponAnimLance
+
+	BAWeaponTypeGungnir										= 48
+		BAWeaponTypeGungnirBA_WeaponType					= BA_WeaponLance
+		BAWeaponTypeGungnirBA_WeaponAnimationType			= BA_WeaponAnimLance
+
+	BAWeaponTypeBrokenLance									= 49
+		BAWeaponTypeBrokenLanceBA_WeaponType				= BA_WeaponLance
+		BAWeaponTypeBrokenLanceBA_WeaponAnimationType		= BA_WeaponAnimLance
+
+	BAWeaponTypeIronAxe										= 50
+		BAWeaponTypeIronAxeBA_WeaponType					= BA_WeaponAxe
+		BAWeaponTypeIronAxeBA_WeaponAnimationType			= BA_WeaponAnimAxe
+
+	BAWeaponTypeVeninAxe									= 51
+		BAWeaponTypeVeninAxeBA_WeaponType					= BA_WeaponAxe
+		BAWeaponTypeVeninAxeBA_WeaponAnimationType			= BA_WeaponAnimAxe
+
+	BAWeaponTypeSteelAxe									= 52
+		BAWeaponTypeSteelAxeBA_WeaponType					= BA_WeaponAxe
+		BAWeaponTypeSteelAxeBA_WeaponAnimationType			= BA_WeaponAnimAxe
+
+	BAWeaponTypeSilverAxe									= 53
+		BAWeaponTypeSilverAxeBA_WeaponType					= BA_WeaponAxe
+		BAWeaponTypeSilverAxeBA_WeaponAnimationType			= BA_WeaponAnimAxe
+
+	BAWeaponTypeHandAxe										= 54
+		BAWeaponTypeHandAxeBA_WeaponType					= BA_WeaponThrownAxe
+		BAWeaponTypeHandAxeBA_WeaponAnimationType			= BA_WeaponAnimAxe
+
+	BAWeaponTypeHammer										= 55
+		BAWeaponTypeHammerBA_WeaponType						= BA_WeaponAxe
+		BAWeaponTypeHammerBA_WeaponAnimationType			= BA_WeaponAnimAxe
+
+	BAWeaponTypeKillerAxe									= 56
+		BAWeaponTypeKillerAxeBA_WeaponType					= BA_WeaponThrownAxe
+		BAWeaponTypeKillerAxeBA_WeaponAnimationType			= BA_WeaponAnimAxe
+
+	BAWeaponTypeVouge										= 57
+		BAWeaponTypeVougeBA_WeaponType						= BA_WeaponThrownAxe
+		BAWeaponTypeVougeBA_WeaponAnimationType				= BA_WeaponAnimAxe
+
+	BAWeaponTypeBraveAxe									= 58
+		BAWeaponTypeBraveAxeBA_WeaponType					= BA_WeaponAxe
+		BAWeaponTypeBraveAxeBA_WeaponAnimationType			= BA_WeaponAnimAxe
+
+	BAWeaponTypeDevilAxe									= 59
+		BAWeaponTypeDevilAxeBA_WeaponType					= BA_WeaponAxe
+		BAWeaponTypeDevilAxeBA_WeaponAnimationType			= BA_WeaponAnimAxe
+
+	BAWeaponTypeBattleAxe									= 60
+		BAWeaponTypeBattleAxeBA_WeaponType					= BA_WeaponAxe
+		BAWeaponTypeBattleAxeBA_WeaponAnimationType			= BA_WeaponAnimAxe
+
+	BAWeaponTypePoleax										= 61
+		BAWeaponTypePoleaxBA_WeaponType						= BA_WeaponAxe
+		BAWeaponTypePoleaxBA_WeaponAnimationType			= BA_WeaponAnimAxe
+
+	BAWeaponTypeMasterAxe									= 62
+		BAWeaponTypeMasterAxeBA_WeaponType					= BA_WeaponThrownAxe
+		BAWeaponTypeMasterAxeBA_WeaponAnimationType			= BA_WeaponAnimAxe
+
+	BAWeaponTypeBrokenAxe									= 63
+		BAWeaponTypeBrokenAxeBA_WeaponType					= BA_WeaponAxe
+		BAWeaponTypeBrokenAxeBA_WeaponAnimationType			= BA_WeaponAnimAxe
+
+	BAWeaponTypeIronBow										= 64
+		BAWeaponTypeIronBowBA_WeaponType					= BA_WeaponBow
+		BAWeaponTypeIronBowBA_WeaponAnimationType			= BA_WeaponAnimBow
+
+	BAWeaponTypeSteelBow									= 65
+		BAWeaponTypeSteelBowBA_WeaponType					= BA_WeaponBow
+		BAWeaponTypeSteelBowBA_WeaponAnimationType			= BA_WeaponAnimBow
+
+	BAWeaponTypeSilverBow									= 66
+		BAWeaponTypeSilverBowBA_WeaponType					= BA_WeaponBow
+		BAWeaponTypeSilverBowBA_WeaponAnimationType			= BA_WeaponAnimBow
+
+	BAWeaponTypeVeninBow									= 67
+		BAWeaponTypeVeninBowBA_WeaponType					= BA_WeaponBow
+		BAWeaponTypeVeninBowBA_WeaponAnimationType			= BA_WeaponAnimBow
+
+	BAWeaponTypeKillerBow									= 68
+		BAWeaponTypeKillerBowBA_WeaponType					= BA_WeaponBow
+		BAWeaponTypeKillerBowBA_WeaponAnimationType			= BA_WeaponAnimBow
+
+	BAWeaponTypeBraveBow									= 69
+		BAWeaponTypeBraveBowBA_WeaponType					= BA_WeaponBow
+		BAWeaponTypeBraveBowBA_WeaponAnimationType			= BA_WeaponAnimBow
+
+	BAWeaponTypeShortbow									= 70
+		BAWeaponTypeShortbowBA_WeaponType					= BA_WeaponBow
+		BAWeaponTypeShortbowBA_WeaponAnimationType			= BA_WeaponAnimBow
+
+	BAWeaponTypeLongbow										= 71
+		BAWeaponTypeLongbowBA_WeaponType					= BA_WeaponBow
+		BAWeaponTypeLongbowBA_WeaponAnimationType			= BA_WeaponAnimBow
+
+	BAWeaponTypeGreatbow									= 72
+		BAWeaponTypeGreatbowBA_WeaponType					= BA_WeaponBow
+		BAWeaponTypeGreatbowBA_WeaponAnimationType			= BA_WeaponAnimBow
+
+	BAWeaponTypeMasterBow									= 73
+		BAWeaponTypeMasterBowBA_WeaponType					= BA_WeaponBow
+		BAWeaponTypeMasterBowBA_WeaponAnimationType			= BA_WeaponAnimBow
+
+	BAWeaponTypeBallista									= 74
+		BAWeaponTypeBallistaBA_WeaponType					= BA_WeaponBow
+		BAWeaponTypeBallistaBA_WeaponAnimationType			= BA_WeaponAnimBow
+
+	BAWeaponTypeIronBallista								= 75
+		BAWeaponTypeIronBallistaBA_WeaponType				= BA_WeaponBow
+		BAWeaponTypeIronBallistaBA_WeaponAnimationType		= BA_WeaponAnimBow
+
+	BAWeaponTypeKillerBallista								= 76
+		BAWeaponTypeKillerBallistaBA_WeaponType				= BA_WeaponBow
+		BAWeaponTypeKillerBallistaBA_WeaponAnimationType	= BA_WeaponAnimBow
+
+	BAWeaponTypeVeninBallista								= 77
+		BAWeaponTypeVeninBallistaBA_WeaponType				= BA_WeaponBow
+		BAWeaponTypeVeninBallistaBA_WeaponAnimationType		= BA_WeaponAnimBow
+
+	BAWeaponTypeBrokenBow									= 78
+		BAWeaponTypeBrokenBowBA_WeaponType					= BA_WeaponBow
+		BAWeaponTypeBrokenBowBA_WeaponAnimationType			= BA_WeaponAnimBow
+
+	BAWeaponTypeFire										= 79
+		BAWeaponTypeFireBA_WeaponType						= BA_WeaponMagic
+		BAWeaponTypeFireBA_WeaponAnimationType				= BA_WeaponAnimTome
+
+	BAWeaponTypeElfire										= 80
+		BAWeaponTypeElfireBA_WeaponType						= BA_WeaponMagic
+		BAWeaponTypeElfireBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeBolganone									= 81
+		BAWeaponTypeBolganoneBA_WeaponType					= BA_WeaponMagic
+		BAWeaponTypeBolganoneBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeValflame									= 82
+		BAWeaponTypeValflameBA_WeaponType					= BA_WeaponMagic
+		BAWeaponTypeValflameBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeThunder										= 83
+		BAWeaponTypeThunderBA_WeaponType					= BA_WeaponMagic
+		BAWeaponTypeThunderBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeDireThunder									= 84
+		BAWeaponTypeDireThunderBA_WeaponType				= BA_WeaponMagic
+		BAWeaponTypeDireThunderBA_WeaponAnimationType		= BA_WeaponAnimTome
+
+	BAWeaponTypeThoron										= 85
+		BAWeaponTypeThoronBA_WeaponType						= BA_WeaponMagic
+		BAWeaponTypeThoronBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeMjolnir										= 86
+		BAWeaponTypeMjolnirBA_WeaponType					= BA_WeaponMagic
+		BAWeaponTypeMjolnirBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeWind										= 87
+		BAWeaponTypeWindBA_WeaponType						= BA_WeaponMagic
+		BAWeaponTypeWindBA_WeaponAnimationType				= BA_WeaponAnimTome
+
+	BAWeaponTypeGrafcalibur									= 88
+		BAWeaponTypeGrafcaliburBA_WeaponType				= BA_WeaponMagic
+		BAWeaponTypeGrafcaliburBA_WeaponAnimationType		= BA_WeaponAnimTome
+
+	BAWeaponTypeTornado										= 89
+		BAWeaponTypeTornadoBA_WeaponType					= BA_WeaponMagic
+		BAWeaponTypeTornadoBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeForseti										= 90
+		BAWeaponTypeForsetiBA_WeaponType					= BA_WeaponMagic
+		BAWeaponTypeForsetiBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeLight										= 91
+		BAWeaponTypeLightBA_WeaponType						= BA_WeaponMagic
+		BAWeaponTypeLightBA_WeaponAnimationType				= BA_WeaponAnimTome
+
+	BAWeaponTypeNosferatu									= 92
+		BAWeaponTypeNosferatuBA_WeaponType					= BA_WeaponMagic
+		BAWeaponTypeNosferatuBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeAura										= 93
+		BAWeaponTypeAuraBA_WeaponType						= BA_WeaponMagic
+		BAWeaponTypeAuraBA_WeaponAnimationType				= BA_WeaponAnimTome
+
+	BAWeaponTypeJormungand									= 94
+		BAWeaponTypeJormungandBA_WeaponType					= BA_WeaponMagic
+		BAWeaponTypeJormungandBA_WeaponAnimationType		= BA_WeaponAnimTome
+
+	BAWeaponTypeFenrir										= 95
+		BAWeaponTypeFenrirBA_WeaponType						= BA_WeaponMagic
+		BAWeaponTypeFenrirBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeHel											= 96
+		BAWeaponTypeHelBA_WeaponType						= BA_WeaponMagic
+		BAWeaponTypeHelBA_WeaponAnimationType				= BA_WeaponAnimTome
+
+	BAWeaponTypeLoptous										= 97
+		BAWeaponTypeLoptousBA_WeaponType					= BA_WeaponMagic
+		BAWeaponTypeLoptousBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeMeteor										= 98
+		BAWeaponTypeMeteorBA_WeaponType						= BA_WeaponMagic
+		BAWeaponTypeMeteorBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeBolting										= 99
+		BAWeaponTypeBoltingBA_WeaponType					= BA_WeaponMagic
+		BAWeaponTypeBoltingBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeBlizzard									= 100
+		BAWeaponTypeBlizzardBA_WeaponType					= BA_WeaponMagic
+		BAWeaponTypeBlizzardBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeVenin										= 101
+		BAWeaponTypeVeninBA_WeaponType						= BA_WeaponMagic
+		BAWeaponTypeVeninBA_WeaponAnimationType				= BA_WeaponAnimTome
+
+	BAWeaponTypePetrify										= 102
+		BAWeaponTypePetrifyBA_WeaponType					= BA_WeaponMagic
+		BAWeaponTypePetrifyBA_WeaponAnimationType			= BA_WeaponAnimTome
+
+	BAWeaponTypeForsetiInfinite								= 103
+		BAWeaponTypeForsetiInfiniteBA_WeaponType			= BA_WeaponMagic
+		BAWeaponTypeForsetiInfiniteBA_WeaponAnimationType	= BA_WeaponAnimTome
+
+	BAWeaponTypeBrokenTome									= 104
+		BAWeaponTypeBrokenTomeBA_WeaponType					= BA_WeaponMagic
+		BAWeaponTypeBrokenTomeBA_WeaponAnimationType		= BA_WeaponAnimTome
+
+	BAWeaponTypeHeal										= 105
+		BAWeaponTypeHealBA_WeaponType						= BA_WeaponStaff
+		BAWeaponTypeHealBA_WeaponAnimationType				= BA_WeaponAnimStaff
+
+	BAWeaponTypeMend										= 106
+		BAWeaponTypeMendBA_WeaponType						= BA_WeaponStaff
+		BAWeaponTypeMendBA_WeaponAnimationType				= BA_WeaponAnimStaff
+
+	BAWeaponTypeRecover										= 107
+		BAWeaponTypeRecoverBA_WeaponType					= BA_WeaponStaff
+		BAWeaponTypeRecoverBA_WeaponAnimationType			= BA_WeaponAnimStaff
+
+	BAWeaponTypePhysic										= 108
+		BAWeaponTypePhysicBA_WeaponType						= BA_WeaponStaff
+		BAWeaponTypePhysicBA_WeaponAnimationType			= BA_WeaponAnimStaff
+
+	BAWeaponTypeFortify										= 109
+		BAWeaponTypeFortifyBA_WeaponType					= BA_WeaponStaff
+		BAWeaponTypeFortifyBA_WeaponAnimationType			= BA_WeaponAnimStaff
+
+	BAWeaponTypeRescue										= 110
+		BAWeaponTypeRescueBA_WeaponType						= BA_WeaponStaff
+		BAWeaponTypeRescueBA_WeaponAnimationType			= BA_WeaponAnimStaff
+
+	BAWeaponTypeWarp										= 111
+		BAWeaponTypeWarpBA_WeaponType						= BA_WeaponStaff
+		BAWeaponTypeWarpBA_WeaponAnimationType				= BA_WeaponAnimStaff
+
+	BAWeaponTypeRestore										= 112
+		BAWeaponTypeRestoreBA_WeaponType					= BA_WeaponStaff
+		BAWeaponTypeRestoreBA_WeaponAnimationType			= BA_WeaponAnimStaff
+
+	BAWeaponTypeSilence										= 113
+		BAWeaponTypeSilenceBA_WeaponType					= BA_WeaponStaff
+		BAWeaponTypeSilenceBA_WeaponAnimationType			= BA_WeaponAnimStaff
+
+	BAWeaponTypeSleep										= 114
+		BAWeaponTypeSleepBA_WeaponType						= BA_WeaponStaff
+		BAWeaponTypeSleepBA_WeaponAnimationType				= BA_WeaponAnimStaff
+
+	BAWeaponTypeTorchStaff									= 115
+		BAWeaponTypeTorchStaffBA_WeaponType					= BA_WeaponStaff
+		BAWeaponTypeTorchStaffBA_WeaponAnimationType		= BA_WeaponAnimStaff
+
+	BAWeaponTypeReturnStaff									= 116
+		BAWeaponTypeReturnStaffBA_WeaponType				= BA_WeaponStaff
+		BAWeaponTypeReturnStaffBA_WeaponAnimationType		= BA_WeaponAnimStaff
+
+	BAWeaponTypeHammerne									= 117
+		BAWeaponTypeHammerneBA_WeaponType					= BA_WeaponStaff
+		BAWeaponTypeHammerneBA_WeaponAnimationType			= BA_WeaponAnimStaff
+
+	BAWeaponTypeThiefStaff									= 118
+		BAWeaponTypeThiefStaffBA_WeaponType					= BA_WeaponStaff
+		BAWeaponTypeThiefStaffBA_WeaponAnimationType		= BA_WeaponAnimStaff
+
+	BAWeaponTypeWatch										= 119
+		BAWeaponTypeWatchBA_WeaponType						= BA_WeaponStaff
+		BAWeaponTypeWatchBA_WeaponAnimationType				= BA_WeaponAnimStaff
+
+	BAWeaponTypeBerserk										= 120
+		BAWeaponTypeBerserkBA_WeaponType					= BA_WeaponStaff
+		BAWeaponTypeBerserkBA_WeaponAnimationType			= BA_WeaponAnimStaff
+
+	BAWeaponTypeUnlock										= 121
+		BAWeaponTypeUnlockBA_WeaponType						= BA_WeaponStaff
+		BAWeaponTypeUnlockBA_WeaponAnimationType			= BA_WeaponAnimStaff
+
+	BAWeaponTypeEnsorcel									= 122
+		BAWeaponTypeEnsorcelBA_WeaponType					= BA_WeaponStaff
+		BAWeaponTypeEnsorcelBA_WeaponAnimationType			= BA_WeaponAnimStaff
+
+	BAWeaponTypeRewarp										= 123
+		BAWeaponTypeRewarpBA_WeaponType						= BA_WeaponStaff
+		BAWeaponTypeRewarpBA_WeaponAnimationType			= BA_WeaponAnimStaff
+
+	BAWeaponTypeKia											= 124
+		BAWeaponTypeKiaBA_WeaponType						= BA_WeaponStaff
+		BAWeaponTypeKiaBA_WeaponAnimationType				= BA_WeaponAnimStaff
+
+	BAWeaponTypeBrokenStaff									= 125
+		BAWeaponTypeBrokenStaffBA_WeaponType				= BA_WeaponStaff
+		BAWeaponTypeBrokenStaffBA_WeaponAnimationType		= BA_WeaponAnimStaff
+
+BAWeaponTypeDummyBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeDummyBA_WeaponType, BAWeaponTypeDummyBA_WeaponAnimationType
+BAWeaponTypeNoneItemBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeNoneItemBA_WeaponType, BAWeaponTypeNoneItemBA_WeaponAnimationType
+BAWeaponTypeIronSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeIronSwordBA_WeaponType, BAWeaponTypeIronSwordBA_WeaponAnimationType
+BAWeaponTypeSteelSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeSteelSwordBA_WeaponType, BAWeaponTypeSteelSwordBA_WeaponAnimationType
+BAWeaponTypeSilverSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeSilverSwordBA_WeaponType, BAWeaponTypeSilverSwordBA_WeaponAnimationType
+BAWeaponTypeSlimSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeSlimSwordBA_WeaponType, BAWeaponTypeSlimSwordBA_WeaponAnimationType
+BAWeaponTypeIronBladeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeIronBladeBA_WeaponType, BAWeaponTypeIronBladeBA_WeaponAnimationType
+BAWeaponTypeKillingEdgeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeKillingEdgeBA_WeaponType, BAWeaponTypeKillingEdgeBA_WeaponAnimationType
+BAWeaponTypeVeninEdgeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeVeninEdgeBA_WeaponType, BAWeaponTypeVeninEdgeBA_WeaponAnimationType
+BAWeaponTypeBerserkEdgeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBerserkEdgeBA_WeaponType, BAWeaponTypeBerserkEdgeBA_WeaponAnimationType
+BAWeaponTypeSleepEdgeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeSleepEdgeBA_WeaponType, BAWeaponTypeSleepEdgeBA_WeaponAnimationType
+BAWeaponTypeBeoBladeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBeoBladeBA_WeaponType, BAWeaponTypeBeoBladeBA_WeaponAnimationType
+BAWeaponTypeBlessedSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBlessedSwordBA_WeaponType, BAWeaponTypeBlessedSwordBA_WeaponAnimationType
+BAWeaponTypeLoptrianFangBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeLoptrianFangBA_WeaponType, BAWeaponTypeLoptrianFangBA_WeaponAnimationType
+BAWeaponTypeBragisBladeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBragisBladeBA_WeaponType, BAWeaponTypeBragisBladeBA_WeaponAnimationType
+BAWeaponTypeLightBrandBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeLightBrandBA_WeaponType, BAWeaponTypeLightBrandBA_WeaponAnimationType
+BAWeaponTypeBraveSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBraveSwordBA_WeaponType, BAWeaponTypeBraveSwordBA_WeaponAnimationType
+BAWeaponTypeKingmakerBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeKingmakerBA_WeaponType, BAWeaponTypeKingmakerBA_WeaponAnimationType
+BAWeaponTypeEarthSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeEarthSwordBA_WeaponType, BAWeaponTypeEarthSwordBA_WeaponAnimationType
+BAWeaponTypeWindSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeWindSwordBA_WeaponType, BAWeaponTypeWindSwordBA_WeaponAnimationType
+BAWeaponTypeFlameSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeFlameSwordBA_WeaponType, BAWeaponTypeFlameSwordBA_WeaponAnimationType
+BAWeaponTypeLightningSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeLightningSwordBA_WeaponType, BAWeaponTypeLightningSwordBA_WeaponAnimationType
+BAWeaponTypeParagonSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeParagonSwordBA_WeaponType, BAWeaponTypeParagonSwordBA_WeaponAnimationType
+BAWeaponTypeArmorslayerBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeArmorslayerBA_WeaponType, BAWeaponTypeArmorslayerBA_WeaponAnimationType
+BAWeaponTypeRapierBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeRapierBA_WeaponType, BAWeaponTypeRapierBA_WeaponAnimationType
+BAWeaponTypeShortswordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeShortswordBA_WeaponType, BAWeaponTypeShortswordBA_WeaponAnimationType
+BAWeaponTypeLongswordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeLongswordBA_WeaponType, BAWeaponTypeLongswordBA_WeaponAnimationType
+BAWeaponTypeGreatswordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeGreatswordBA_WeaponType, BAWeaponTypeGreatswordBA_WeaponAnimationType
+BAWeaponTypeMasterSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeMasterSwordBA_WeaponType, BAWeaponTypeMasterSwordBA_WeaponAnimationType
+BAWeaponTypeShadowSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeShadowSwordBA_WeaponType, BAWeaponTypeShadowSwordBA_WeaponAnimationType
+BAWeaponTypeMareetasSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeMareetasSwordBA_WeaponType, BAWeaponTypeMareetasSwordBA_WeaponAnimationType
+BAWeaponTypeBrokenSwordBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBrokenSwordBA_WeaponType, BAWeaponTypeBrokenSwordBA_WeaponAnimationType
+BAWeaponTypeIronLanceBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeIronLanceBA_WeaponType, BAWeaponTypeIronLanceBA_WeaponAnimationType
+BAWeaponTypeSteelLanceBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeSteelLanceBA_WeaponType, BAWeaponTypeSteelLanceBA_WeaponAnimationType
+BAWeaponTypeSilverLanceBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeSilverLanceBA_WeaponType, BAWeaponTypeSilverLanceBA_WeaponAnimationType
+BAWeaponTypeSlimLanceBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeSlimLanceBA_WeaponType, BAWeaponTypeSlimLanceBA_WeaponAnimationType
+BAWeaponTypeVeninLanceBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeVeninLanceBA_WeaponType, BAWeaponTypeVeninLanceBA_WeaponAnimationType
+BAWeaponTypeDragonpikeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeDragonpikeBA_WeaponType, BAWeaponTypeDragonpikeBA_WeaponAnimationType
+BAWeaponTypeShadowSpearBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeShadowSpearBA_WeaponType, BAWeaponTypeShadowSpearBA_WeaponAnimationType
+BAWeaponTypeBraveLanceBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBraveLanceBA_WeaponType, BAWeaponTypeBraveLanceBA_WeaponAnimationType
+BAWeaponTypeShortLanceBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeShortLanceBA_WeaponType, BAWeaponTypeShortLanceBA_WeaponAnimationType
+BAWeaponTypeLongLanceBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeLongLanceBA_WeaponType, BAWeaponTypeLongLanceBA_WeaponAnimationType
+BAWeaponTypeGreatlanceBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeGreatlanceBA_WeaponType, BAWeaponTypeGreatlanceBA_WeaponAnimationType
+BAWeaponTypeJavelinBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeJavelinBA_WeaponType, BAWeaponTypeJavelinBA_WeaponAnimationType
+BAWeaponTypeMasterLanceBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeMasterLanceBA_WeaponType, BAWeaponTypeMasterLanceBA_WeaponAnimationType
+BAWeaponTypeRidersbaneBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeRidersbaneBA_WeaponType, BAWeaponTypeRidersbaneBA_WeaponAnimationType
+BAWeaponTypeKillerLanceBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeKillerLanceBA_WeaponType, BAWeaponTypeKillerLanceBA_WeaponAnimationType
+BAWeaponTypeGaeBolgBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeGaeBolgBA_WeaponType, BAWeaponTypeGaeBolgBA_WeaponAnimationType
+BAWeaponTypeGungnirBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeGungnirBA_WeaponType, BAWeaponTypeGungnirBA_WeaponAnimationType
+BAWeaponTypeBrokenLanceBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBrokenLanceBA_WeaponType, BAWeaponTypeBrokenLanceBA_WeaponAnimationType
+BAWeaponTypeIronAxeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeIronAxeBA_WeaponType, BAWeaponTypeIronAxeBA_WeaponAnimationType
+BAWeaponTypeVeninAxeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeVeninAxeBA_WeaponType, BAWeaponTypeVeninAxeBA_WeaponAnimationType
+BAWeaponTypeSteelAxeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeSteelAxeBA_WeaponType, BAWeaponTypeSteelAxeBA_WeaponAnimationType
+BAWeaponTypeSilverAxeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeSilverAxeBA_WeaponType, BAWeaponTypeSilverAxeBA_WeaponAnimationType
+BAWeaponTypeHandAxeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeHandAxeBA_WeaponType, BAWeaponTypeHandAxeBA_WeaponAnimationType
+BAWeaponTypeHammerBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeHammerBA_WeaponType, BAWeaponTypeHammerBA_WeaponAnimationType
+BAWeaponTypeKillerAxeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeKillerAxeBA_WeaponType, BAWeaponTypeKillerAxeBA_WeaponAnimationType
+BAWeaponTypeVougeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeVougeBA_WeaponType, BAWeaponTypeVougeBA_WeaponAnimationType
+BAWeaponTypeBraveAxeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBraveAxeBA_WeaponType, BAWeaponTypeBraveAxeBA_WeaponAnimationType
+BAWeaponTypeDevilAxeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeDevilAxeBA_WeaponType, BAWeaponTypeDevilAxeBA_WeaponAnimationType
+BAWeaponTypeBattleAxeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBattleAxeBA_WeaponType, BAWeaponTypeBattleAxeBA_WeaponAnimationType
+BAWeaponTypePoleaxBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypePoleaxBA_WeaponType, BAWeaponTypePoleaxBA_WeaponAnimationType
+BAWeaponTypeMasterAxeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeMasterAxeBA_WeaponType, BAWeaponTypeMasterAxeBA_WeaponAnimationType
+BAWeaponTypeBrokenAxeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBrokenAxeBA_WeaponType, BAWeaponTypeBrokenAxeBA_WeaponAnimationType
+BAWeaponTypeIronBowBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeIronBowBA_WeaponType, BAWeaponTypeIronBowBA_WeaponAnimationType
+BAWeaponTypeSteelBowBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeSteelBowBA_WeaponType, BAWeaponTypeSteelBowBA_WeaponAnimationType
+BAWeaponTypeSilverBowBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeSilverBowBA_WeaponType, BAWeaponTypeSilverBowBA_WeaponAnimationType
+BAWeaponTypeVeninBowBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeVeninBowBA_WeaponType, BAWeaponTypeVeninBowBA_WeaponAnimationType
+BAWeaponTypeKillerBowBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeKillerBowBA_WeaponType, BAWeaponTypeKillerBowBA_WeaponAnimationType
+BAWeaponTypeBraveBowBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBraveBowBA_WeaponType, BAWeaponTypeBraveBowBA_WeaponAnimationType
+BAWeaponTypeShortbowBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeShortbowBA_WeaponType, BAWeaponTypeShortbowBA_WeaponAnimationType
+BAWeaponTypeLongbowBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeLongbowBA_WeaponType, BAWeaponTypeLongbowBA_WeaponAnimationType
+BAWeaponTypeGreatbowBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeGreatbowBA_WeaponType, BAWeaponTypeGreatbowBA_WeaponAnimationType
+BAWeaponTypeMasterBowBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeMasterBowBA_WeaponType, BAWeaponTypeMasterBowBA_WeaponAnimationType
+BAWeaponTypeBallistaBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBallistaBA_WeaponType, BAWeaponTypeBallistaBA_WeaponAnimationType
+BAWeaponTypeIronBallistaBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeIronBallistaBA_WeaponType, BAWeaponTypeIronBallistaBA_WeaponAnimationType
+BAWeaponTypeKillerBallistaBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeKillerBallistaBA_WeaponType, BAWeaponTypeKillerBallistaBA_WeaponAnimationType
+BAWeaponTypeVeninBallistaBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeVeninBallistaBA_WeaponType, BAWeaponTypeVeninBallistaBA_WeaponAnimationType
+BAWeaponTypeBrokenBowBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBrokenBowBA_WeaponType, BAWeaponTypeBrokenBowBA_WeaponAnimationType
+BAWeaponTypeFireBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeFireBA_WeaponType, BAWeaponTypeFireBA_WeaponAnimationType
+BAWeaponTypeElfireBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeElfireBA_WeaponType, BAWeaponTypeElfireBA_WeaponAnimationType
+BAWeaponTypeBolganoneBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBolganoneBA_WeaponType, BAWeaponTypeBolganoneBA_WeaponAnimationType
+BAWeaponTypeValflameBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeValflameBA_WeaponType, BAWeaponTypeValflameBA_WeaponAnimationType
+BAWeaponTypeThunderBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeThunderBA_WeaponType, BAWeaponTypeThunderBA_WeaponAnimationType
+BAWeaponTypeDireThunderBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeDireThunderBA_WeaponType, BAWeaponTypeDireThunderBA_WeaponAnimationType
+BAWeaponTypeThoronBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeThoronBA_WeaponType, BAWeaponTypeThoronBA_WeaponAnimationType
+BAWeaponTypeMjolnirBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeMjolnirBA_WeaponType, BAWeaponTypeMjolnirBA_WeaponAnimationType
+BAWeaponTypeWindBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeWindBA_WeaponType, BAWeaponTypeWindBA_WeaponAnimationType
+BAWeaponTypeGrafcaliburBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeGrafcaliburBA_WeaponType, BAWeaponTypeGrafcaliburBA_WeaponAnimationType
+BAWeaponTypeTornadoBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeTornadoBA_WeaponType, BAWeaponTypeTornadoBA_WeaponAnimationType
+BAWeaponTypeForsetiBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeForsetiBA_WeaponType, BAWeaponTypeForsetiBA_WeaponAnimationType
+BAWeaponTypeLightBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeLightBA_WeaponType, BAWeaponTypeLightBA_WeaponAnimationType
+BAWeaponTypeNosferatuBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeNosferatuBA_WeaponType, BAWeaponTypeNosferatuBA_WeaponAnimationType
+BAWeaponTypeAuraBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeAuraBA_WeaponType, BAWeaponTypeAuraBA_WeaponAnimationType
+BAWeaponTypeJormungandBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeJormungandBA_WeaponType, BAWeaponTypeJormungandBA_WeaponAnimationType
+BAWeaponTypeFenrirBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeFenrirBA_WeaponType, BAWeaponTypeFenrirBA_WeaponAnimationType
+BAWeaponTypeHelBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeHelBA_WeaponType, BAWeaponTypeHelBA_WeaponAnimationType
+BAWeaponTypeLoptousBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeLoptousBA_WeaponType, BAWeaponTypeLoptousBA_WeaponAnimationType
+BAWeaponTypeMeteorBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeMeteorBA_WeaponType, BAWeaponTypeMeteorBA_WeaponAnimationType
+BAWeaponTypeBoltingBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBoltingBA_WeaponType, BAWeaponTypeBoltingBA_WeaponAnimationType
+BAWeaponTypeBlizzardBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBlizzardBA_WeaponType, BAWeaponTypeBlizzardBA_WeaponAnimationType
+BAWeaponTypeVeninBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeVeninBA_WeaponType, BAWeaponTypeVeninBA_WeaponAnimationType
+BAWeaponTypePetrifyBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypePetrifyBA_WeaponType, BAWeaponTypePetrifyBA_WeaponAnimationType
+BAWeaponTypeForsetiInfiniteBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeForsetiInfiniteBA_WeaponType, BAWeaponTypeForsetiInfiniteBA_WeaponAnimationType
+BAWeaponTypeBrokenTomeBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBrokenTomeBA_WeaponType, BAWeaponTypeBrokenTomeBA_WeaponAnimationType
+BAWeaponTypeHealBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeHealBA_WeaponType, BAWeaponTypeHealBA_WeaponAnimationType
+BAWeaponTypeMendBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeMendBA_WeaponType, BAWeaponTypeMendBA_WeaponAnimationType
+BAWeaponTypeRecoverBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeRecoverBA_WeaponType, BAWeaponTypeRecoverBA_WeaponAnimationType
+BAWeaponTypePhysicBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypePhysicBA_WeaponType, BAWeaponTypePhysicBA_WeaponAnimationType
+BAWeaponTypeFortifyBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeFortifyBA_WeaponType, BAWeaponTypeFortifyBA_WeaponAnimationType
+BAWeaponTypeRescueBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeRescueBA_WeaponType, BAWeaponTypeRescueBA_WeaponAnimationType
+BAWeaponTypeWarpBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeWarpBA_WeaponType, BAWeaponTypeWarpBA_WeaponAnimationType
+BAWeaponTypeRestoreBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeRestoreBA_WeaponType, BAWeaponTypeRestoreBA_WeaponAnimationType
+BAWeaponTypeSilenceBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeSilenceBA_WeaponType, BAWeaponTypeSilenceBA_WeaponAnimationType
+BAWeaponTypeSleepBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeSleepBA_WeaponType, BAWeaponTypeSleepBA_WeaponAnimationType
+BAWeaponTypeTorchStaffBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeTorchStaffBA_WeaponType, BAWeaponTypeTorchStaffBA_WeaponAnimationType
+BAWeaponTypeReturnStaffBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeReturnStaffBA_WeaponType, BAWeaponTypeReturnStaffBA_WeaponAnimationType
+BAWeaponTypeHammerneBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeHammerneBA_WeaponType, BAWeaponTypeHammerneBA_WeaponAnimationType
+BAWeaponTypeThiefStaffBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeThiefStaffBA_WeaponType, BAWeaponTypeThiefStaffBA_WeaponAnimationType
+BAWeaponTypeWatchBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeWatchBA_WeaponType, BAWeaponTypeWatchBA_WeaponAnimationType
+BAWeaponTypeBerserkBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBerserkBA_WeaponType, BAWeaponTypeBerserkBA_WeaponAnimationType
+BAWeaponTypeUnlockBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeUnlockBA_WeaponType, BAWeaponTypeUnlockBA_WeaponAnimationType
+BAWeaponTypeEnsorcelBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeEnsorcelBA_WeaponType, BAWeaponTypeEnsorcelBA_WeaponAnimationType
+BAWeaponTypeRewarpBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeRewarpBA_WeaponType, BAWeaponTypeRewarpBA_WeaponAnimationType
+BAWeaponTypeKiaBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeKiaBA_WeaponType, BAWeaponTypeKiaBA_WeaponAnimationType
+BAWeaponTypeBrokenStaffBattleAnimationWeaponTypeEntry .dstruct structAnimationWeaponType, BAWeaponTypeBrokenStaffBA_WeaponType, BAWeaponTypeBrokenStaffBA_WeaponAnimationType

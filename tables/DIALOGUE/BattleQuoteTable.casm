@@ -1,0 +1,448 @@
+	FredChapter10BattleQuote						= 0
+		FredChapter10BattleQuoteCharacter			= Fred
+		FredChapter10BattleQuoteChapter				= Chapter10
+		FredChapter10BattleQuoteFlag				= None
+		FredChapter10BattleQuoteDialoguePointer		= ch10fredboss
+
+	OlwenChapter10BattleQuote						= 1
+		OlwenChapter10BattleQuoteCharacter			= Olwen
+		OlwenChapter10BattleQuoteChapter			= Chapter10
+		OlwenChapter10BattleQuoteFlag				= None
+		OlwenChapter10BattleQuoteDialoguePointer	= ch10olwenboss
+
+	KempfChapter11BattleQuote						= 2
+		KempfChapter11BattleQuoteCharacter			= Kempf
+		KempfChapter11BattleQuoteChapter			= Chapter11
+		KempfChapter11BattleQuoteFlag				= $09
+		KempfChapter11BattleQuoteDialoguePointer	= ch11kemphboss
+
+	BaldachChapter13BattleQuote						= 3
+		BaldachChapter13BattleQuoteCharacter		= Baldach
+		BaldachChapter13BattleQuoteChapter			= Chapter13
+		BaldachChapter13BattleQuoteFlag				= None
+		BaldachChapter13BattleQuoteDialoguePointer	= ch13baldackboss
+
+	ConomorChapter16ABattleQuote					= 4
+		ConomorChapter16ABattleQuoteCharacter		= Conomor
+		ConomorChapter16ABattleQuoteChapter			= Chapter16A
+		ConomorChapter16ABattleQuoteFlag			= None
+		ConomorChapter16ABattleQuoteDialoguePointer	= ch16Aconomorboss
+
+	AmaldaChapter17BBattleQuote						= 5
+		AmaldaChapter17BBattleQuoteCharacter		= Amalda
+		AmaldaChapter17BBattleQuoteChapter			= Chapter17B
+		AmaldaChapter17BBattleQuoteFlag				= None
+		AmaldaChapter17BBattleQuoteDialoguePointer	= ch17Bamaldaboss
+
+	WolfeChapter19BattleQuote						= 6
+		WolfeChapter19BattleQuoteCharacter			= Wolfe
+		WolfeChapter19BattleQuoteChapter			= Chapter19
+		WolfeChapter19BattleQuoteFlag				= None
+		WolfeChapter19BattleQuoteDialoguePointer	= ch19wolfeboss
+
+	WeissmannBattleQuote							= 7
+		WeissmannBattleQuoteCharacter				= Weissmann
+		WeissmannBattleQuoteChapter					= AnyChapter
+		WeissmannBattleQuoteFlag					= None
+		WeissmannBattleQuoteDialoguePointer			= weismannboss
+
+	BucksBattleQuote								= 8
+		BucksBattleQuoteCharacter					= Bucks
+		BucksBattleQuoteChapter						= AnyChapter
+		BucksBattleQuoteFlag						= None
+		BucksBattleQuoteDialoguePointer				= bucksboss
+
+	ShivaBattleQuote1								= 9
+		ShivaBattleQuote1Character					= Shiva
+		ShivaBattleQuote1Chapter					= AnyChapter
+		ShivaBattleQuote1Flag						= None
+		ShivaBattleQuote1DialoguePointer			= shivaboss
+
+	LifisBattleQuote								= 10
+		LifisBattleQuoteCharacter					= Lifis
+		LifisBattleQuoteChapter						= AnyChapter
+		LifisBattleQuoteFlag						= None
+		LifisBattleQuoteDialoguePointer				= lithisboss
+
+	LobosBattleQuote								= 11
+		LobosBattleQuoteCharacter					= Lobos
+		LobosBattleQuoteChapter						= AnyChapter
+		LobosBattleQuoteFlag						= None
+		LobosBattleQuoteDialoguePointer				= lobosboss
+
+	DalsinBattleQuote								= 12
+		DalsinBattleQuoteCharacter					= Dalsin
+		DalsinBattleQuoteChapter					= AnyChapter
+		DalsinBattleQuoteFlag						= None
+		DalsinBattleQuoteDialoguePointer			= dalsinboss
+
+	GalzusBattleQuote								= 13
+		GalzusBattleQuoteCharacter					= Galzus
+		GalzusBattleQuoteChapter					= AnyChapter
+		GalzusBattleQuoteFlag						= None
+		GalzusBattleQuoteDialoguePointer			= galzusboss
+
+	ShivaBattleQuote2								= 14
+		ShivaBattleQuote2Character					= Shiva
+		ShivaBattleQuote2Chapter					= AnyChapter
+		ShivaBattleQuote2Flag						= None
+		ShivaBattleQuote2DialoguePointer			= shivaboss
+
+	EisenhauBattleQuote								= 15
+		EisenhauBattleQuoteCharacter				= Eisenhau
+		EisenhauBattleQuoteChapter					= AnyChapter
+		EisenhauBattleQuoteFlag						= None
+		EisenhauBattleQuoteDialoguePointer			= eisenauboss
+
+	RaydrikBattleQuote								= 16
+		RaydrikBattleQuoteCharacter					= Raydrik
+		RaydrikBattleQuoteChapter					= AnyChapter
+		RaydrikBattleQuoteFlag						= None
+		RaydrikBattleQuoteDialoguePointer			= raydrikboss
+
+	RumaighBattleQuote								= 17
+		RumaighBattleQuoteCharacter					= Rumaigh
+		RumaighBattleQuoteChapter					= AnyChapter
+		RumaighBattleQuoteFlag						= None
+		RumaighBattleQuoteDialoguePointer			= rumaighboss
+
+	MartyBattleQuote								= 18
+		MartyBattleQuoteCharacter					= Marty
+		MartyBattleQuoteChapter						= AnyChapter
+		MartyBattleQuoteFlag						= None
+		MartyBattleQuoteDialoguePointer				= martyboss
+
+	GomezBattleQuote								= 19
+		GomezBattleQuoteCharacter					= Gomez
+		GomezBattleQuoteChapter						= AnyChapter
+		GomezBattleQuoteFlag						= None
+		GomezBattleQuoteDialoguePointer				= gomezboss
+
+	MerlochBattleQuote								= 20
+		MerlochBattleQuoteCharacter					= Merloch
+		MerlochBattleQuoteChapter					= AnyChapter
+		MerlochBattleQuoteFlag						= None
+		MerlochBattleQuoteDialoguePointer			= merlochboss
+
+	LargoBattleQuote								= 21
+		LargoBattleQuoteCharacter					= Largo
+		LargoBattleQuoteChapter						= AnyChapter
+		LargoBattleQuoteFlag						= None
+		LargoBattleQuoteDialoguePointer				= largoboss
+
+	FredBattleQuote									= 22
+		FredBattleQuoteCharacter					= Fred
+		FredBattleQuoteChapter						= AnyChapter
+		FredBattleQuoteFlag							= None
+		FredBattleQuoteDialoguePointer				= fredboss
+
+	OltophBattleQuote								= 23
+		OltophBattleQuoteCharacter					= Oltoph
+		OltophBattleQuoteChapter					= AnyChapter
+		OltophBattleQuoteFlag						= None
+		OltophBattleQuoteDialoguePointer			= oltophboss
+
+	SalemBattleQuote								= 24
+		SalemBattleQuoteCharacter					= Salem
+		SalemBattleQuoteChapter						= AnyChapter
+		SalemBattleQuoteFlag						= None
+		SalemBattleQuoteDialoguePointer				= salemboss
+
+	ColhoBattleQuote								= 25
+		ColhoBattleQuoteCharacter					= Colho
+		ColhoBattleQuoteChapter						= AnyChapter
+		ColhoBattleQuoteFlag						= None
+		ColhoBattleQuoteDialoguePointer				= colhoboss
+
+	PerneBattleQuote								= 26
+		PerneBattleQuoteCharacter					= Perne
+		PerneBattleQuoteChapter						= AnyChapter
+		PerneBattleQuoteFlag						= None
+		PerneBattleQuoteDialoguePointer				= perneboss
+
+	TrudeBattleQuote								= 27
+		TrudeBattleQuoteCharacter					= Trude
+		TrudeBattleQuoteChapter						= AnyChapter
+		TrudeBattleQuoteFlag						= None
+		TrudeBattleQuoteDialoguePointer				= trudeboss
+
+	TinaBattleQuote									= 28
+		TinaBattleQuoteCharacter					= Tina
+		TinaBattleQuoteChapter						= AnyChapter
+		TinaBattleQuoteFlag							= None
+		TinaBattleQuoteDialoguePointer				= tinaboss
+
+	LisztBattleQuote								= 29
+		LisztBattleQuoteCharacter					= Liszt
+		LisztBattleQuoteChapter						= AnyChapter
+		LisztBattleQuoteFlag						= None
+		LisztBattleQuoteDialoguePointer				= lisztboss
+
+	PaulusBattleQuote								= 30
+		PaulusBattleQuoteCharacter					= Paulus
+		PaulusBattleQuoteChapter					= AnyChapter
+		PaulusBattleQuoteFlag						= None
+		PaulusBattleQuoteDialoguePointer			= paulusboss
+
+	BaldachBattleQuote								= 31
+		BaldachBattleQuoteCharacter					= Baldach
+		BaldachBattleQuoteChapter					= AnyChapter
+		BaldachBattleQuoteFlag						= None
+		BaldachBattleQuoteDialoguePointer			= baldachboss
+
+	CodhaBattleQuote								= 32
+		CodhaBattleQuoteCharacter					= Codha
+		CodhaBattleQuoteChapter						= AnyChapter
+		CodhaBattleQuoteFlag						= None
+		CodhaBattleQuoteDialoguePointer				= codhaboss
+
+	SeilBattleQuote									= 33
+		SeilBattleQuoteCharacter					= Seil
+		SeilBattleQuoteChapter						= AnyChapter
+		SeilBattleQuoteFlag							= None
+		SeilBattleQuoteDialoguePointer				= seilboss
+
+	KempfBattleQuote								= 34
+		KempfBattleQuoteCharacter					= Kempf
+		KempfBattleQuoteChapter						= AnyChapter
+		KempfBattleQuoteFlag						= None
+		KempfBattleQuoteDialoguePointer				= ch16Akempfboss
+
+	BrookBattleQuote								= 35
+		BrookBattleQuoteCharacter					= Brook
+		BrookBattleQuoteChapter						= AnyChapter
+		BrookBattleQuoteFlag						= None
+		BrookBattleQuoteDialoguePointer				= brookboss
+
+	IliosBattleQuote								= 36
+		IliosBattleQuoteCharacter					= Ilios
+		IliosBattleQuoteChapter						= AnyChapter
+		IliosBattleQuoteFlag						= None
+		IliosBattleQuoteDialoguePointer				= iliosboss
+
+	NicolovBattleQuote								= 37
+		NicolovBattleQuoteCharacter					= Nicolov
+		NicolovBattleQuoteChapter					= AnyChapter
+		NicolovBattleQuoteFlag						= None
+		NicolovBattleQuoteDialoguePointer			= nicolovboss
+
+	MooreBattleQuote								= 38
+		MooreBattleQuoteCharacter					= Moore
+		MooreBattleQuoteChapter						= AnyChapter
+		MooreBattleQuoteFlag						= None
+		MooreBattleQuoteDialoguePointer				= mooreboss
+
+	MullerBattleQuote								= 39
+		MullerBattleQuoteCharacter					= Muller
+		MullerBattleQuoteChapter					= AnyChapter
+		MullerBattleQuoteFlag						= None
+		MullerBattleQuoteDialoguePointer			= mullerboss
+
+	SaiasBattleQuot1								= 40
+		SaiasBattleQuot1Character					= Saias
+		SaiasBattleQuot1Chapter						= AnyChapter
+		SaiasBattleQuot1Flag						= None
+		SaiasBattleQuot1DialoguePointer				= saiasboss
+
+	MishaBattleQuote								= 41
+		MishaBattleQuoteCharacter					= Misha
+		MishaBattleQuoteChapter						= AnyChapter
+		MishaBattleQuoteFlag						= None
+		MishaBattleQuoteDialoguePointer				= mishaboss
+
+	SaraBattleQuote									= 42
+		SaraBattleQuoteCharacter					= Sara
+		SaraBattleQuoteChapter						= AnyChapter
+		SaraBattleQuoteFlag							= None
+		SaraBattleQuoteDialoguePointer				= sarahboss
+
+	ReinkochBattleQuote								= 43
+		ReinkochBattleQuoteCharacter				= Reinkoch
+		ReinkochBattleQuoteChapter					= AnyChapter
+		ReinkochBattleQuoteFlag						= None
+		ReinkochBattleQuoteDialoguePointer			= reinkochboss
+
+	ShannamBattleQuote								= 44
+		ShannamBattleQuoteCharacter					= Shannam
+		ShannamBattleQuoteChapter					= AnyChapter
+		ShannamBattleQuoteFlag						= None
+		ShannamBattleQuoteDialoguePointer			= shannamboss
+
+	PalmanBattleQuote								= 45
+		PalmanBattleQuoteCharacter					= Palman
+		PalmanBattleQuoteChapter					= AnyChapter
+		PalmanBattleQuoteFlag						= None
+		PalmanBattleQuoteDialoguePointer			= palmanboss
+
+	AmaldaBattleQuote								= 46
+		AmaldaBattleQuoteCharacter					= Amalda
+		AmaldaBattleQuoteChapter					= AnyChapter
+		AmaldaBattleQuoteFlag						= None
+		AmaldaBattleQuoteDialoguePointer			= amaldaboss
+
+	IshtarBattleQuote								= 47
+		IshtarBattleQuoteCharacter					= Ishtar
+		IshtarBattleQuoteChapter					= AnyChapter
+		IshtarBattleQuoteFlag						= None
+		IshtarBattleQuoteDialoguePointer			= ishtarboss
+
+	BharatBattleQuote								= 48
+		BharatBattleQuoteCharacter					= Bharat
+		BharatBattleQuoteChapter					= AnyChapter
+		BharatBattleQuoteFlag						= None
+		BharatBattleQuoteDialoguePointer			= bharatboss
+
+	ConomorBattleQuote								= 49
+		ConomorBattleQuoteCharacter					= Conomor
+		ConomorBattleQuoteChapter					= AnyChapter
+		ConomorBattleQuoteFlag						= None
+		ConomorBattleQuoteDialoguePointer			= conomorboss
+
+	MannheimBattleQuote								= 50
+		MannheimBattleQuoteCharacter				= Mannheim
+		MannheimBattleQuoteChapter					= AnyChapter
+		MannheimBattleQuoteFlag						= None
+		MannheimBattleQuoteDialoguePointer			= mannheimboss
+
+	GustavBattleQuote								= 51
+		GustavBattleQuoteCharacter					= Gustav
+		GustavBattleQuoteChapter					= AnyChapter
+		GustavBattleQuoteFlag						= None
+		GustavBattleQuoteDialoguePointer			= gustavboss
+
+	XavierBattleQuote								= 52
+		XavierBattleQuoteCharacter					= Xavier
+		XavierBattleQuoteChapter					= AnyChapter
+		XavierBattleQuoteFlag						= None
+		XavierBattleQuoteDialoguePointer			= xavierboss
+
+	FrausBattleQuote								= 53
+		FrausBattleQuoteCharacter					= Fraus
+		FrausBattleQuoteChapter						= AnyChapter
+		FrausBattleQuoteFlag						= None
+		FrausBattleQuoteDialoguePointer				= frausboss
+
+	SeimetzBattleQuote								= 54
+		SeimetzBattleQuoteCharacter					= Seimetz
+		SeimetzBattleQuoteChapter					= AnyChapter
+		SeimetzBattleQuoteFlag						= None
+		SeimetzBattleQuoteDialoguePointer			= seimetzboss
+
+	ZaunBattleQuote									= 55
+		ZaunBattleQuoteCharacter					= Zaun
+		ZaunBattleQuoteChapter						= AnyChapter
+		ZaunBattleQuoteFlag							= None
+		ZaunBattleQuoteDialoguePointer				= zaunboss
+
+	CohenBattleQuote								= 56
+		CohenBattleQuoteCharacter					= Cohen
+		CohenBattleQuoteChapter						= AnyChapter
+		CohenBattleQuoteFlag						= None
+		CohenBattleQuoteDialoguePointer				= cohenboss
+
+	SaiasBattleQuote2								= 57
+		SaiasBattleQuote2Character					= Saias
+		SaiasBattleQuote2Chapter					= AnyChapter
+		SaiasBattleQuote2Flag						= None
+		SaiasBattleQuote2DialoguePointer			= saiasboss
+
+	ReinhardtBattleQuote							= 58
+		ReinhardtBattleQuoteCharacter				= Reinhardt
+		ReinhardtBattleQuoteChapter					= AnyChapter
+		ReinhardtBattleQuoteFlag					= None
+		ReinhardtBattleQuoteDialoguePointer			= reinhardtboss
+
+	CoulterBattleQuote								= 59
+		CoulterBattleQuoteCharacter					= Coulter
+		CoulterBattleQuoteChapter					= AnyChapter
+		CoulterBattleQuoteFlag						= None
+		CoulterBattleQuoteDialoguePointer			= coulterboss
+
+	AlphandBattleQuote								= 60
+		AlphandBattleQuoteCharacter					= Alphand
+		AlphandBattleQuoteChapter					= AnyChapter
+		AlphandBattleQuoteFlag						= None
+		AlphandBattleQuoteDialoguePointer			= alphandboss
+
+	FadenBattleQuote								= 61
+		FadenBattleQuoteCharacter					= Faden
+		FadenBattleQuoteChapter						= AnyChapter
+		FadenBattleQuoteFlag						= None
+		FadenBattleQuoteDialoguePointer				= fadenboss
+
+	RaydrikChp24BattleQuote							= 62
+		RaydrikChp24BattleQuoteCharacter			= RaydrikChp24
+		RaydrikChp24BattleQuoteChapter				= AnyChapter
+		RaydrikChp24BattleQuoteFlag					= None
+		RaydrikChp24BattleQuoteDialoguePointer		= raydrikboss
+
+	VeldBattleQuote									= 63
+		VeldBattleQuoteCharacter					= Veld
+		VeldBattleQuoteChapter						= AnyChapter
+		VeldBattleQuoteFlag							= None
+		VeldBattleQuoteDialoguePointer				= veldboss
+
+FredChapter10BattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, FredChapter10BattleQuoteCharacter, FredChapter10BattleQuoteChapter, FredChapter10BattleQuoteFlag, FredChapter10BattleQuoteDialoguePointer
+OlwenChapter10BattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, OlwenChapter10BattleQuoteCharacter, OlwenChapter10BattleQuoteChapter, OlwenChapter10BattleQuoteFlag, OlwenChapter10BattleQuoteDialoguePointer
+KempfChapter11BattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, KempfChapter11BattleQuoteCharacter, KempfChapter11BattleQuoteChapter, KempfChapter11BattleQuoteFlag, KempfChapter11BattleQuoteDialoguePointer
+BaldachChapter13BattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, BaldachChapter13BattleQuoteCharacter, BaldachChapter13BattleQuoteChapter, BaldachChapter13BattleQuoteFlag, BaldachChapter13BattleQuoteDialoguePointer
+ConomorChapter16ABattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, ConomorChapter16ABattleQuoteCharacter, ConomorChapter16ABattleQuoteChapter, ConomorChapter16ABattleQuoteFlag, ConomorChapter16ABattleQuoteDialoguePointer
+AmaldaChapter17BBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, AmaldaChapter17BBattleQuoteCharacter, AmaldaChapter17BBattleQuoteChapter, AmaldaChapter17BBattleQuoteFlag, AmaldaChapter17BBattleQuoteDialoguePointer
+WolfeChapter19BattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, WolfeChapter19BattleQuoteCharacter, WolfeChapter19BattleQuoteChapter, WolfeChapter19BattleQuoteFlag, WolfeChapter19BattleQuoteDialoguePointer
+WeissmannBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, WeissmannBattleQuoteCharacter, WeissmannBattleQuoteChapter, WeissmannBattleQuoteFlag, WeissmannBattleQuoteDialoguePointer
+BucksBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, BucksBattleQuoteCharacter, BucksBattleQuoteChapter, BucksBattleQuoteFlag, BucksBattleQuoteDialoguePointer
+ShivaBattleQuote1BattleQuoteTableEntry .dstruct structBattleQuoteEntry, ShivaBattleQuote1Character, ShivaBattleQuote1Chapter, ShivaBattleQuote1Flag, ShivaBattleQuote1DialoguePointer
+LifisBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, LifisBattleQuoteCharacter, LifisBattleQuoteChapter, LifisBattleQuoteFlag, LifisBattleQuoteDialoguePointer
+LobosBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, LobosBattleQuoteCharacter, LobosBattleQuoteChapter, LobosBattleQuoteFlag, LobosBattleQuoteDialoguePointer
+DalsinBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, DalsinBattleQuoteCharacter, DalsinBattleQuoteChapter, DalsinBattleQuoteFlag, DalsinBattleQuoteDialoguePointer
+GalzusBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, GalzusBattleQuoteCharacter, GalzusBattleQuoteChapter, GalzusBattleQuoteFlag, GalzusBattleQuoteDialoguePointer
+ShivaBattleQuote2BattleQuoteTableEntry .dstruct structBattleQuoteEntry, ShivaBattleQuote2Character, ShivaBattleQuote2Chapter, ShivaBattleQuote2Flag, ShivaBattleQuote2DialoguePointer
+EisenhauBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, EisenhauBattleQuoteCharacter, EisenhauBattleQuoteChapter, EisenhauBattleQuoteFlag, EisenhauBattleQuoteDialoguePointer
+RaydrikBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, RaydrikBattleQuoteCharacter, RaydrikBattleQuoteChapter, RaydrikBattleQuoteFlag, RaydrikBattleQuoteDialoguePointer
+RumaighBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, RumaighBattleQuoteCharacter, RumaighBattleQuoteChapter, RumaighBattleQuoteFlag, RumaighBattleQuoteDialoguePointer
+MartyBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, MartyBattleQuoteCharacter, MartyBattleQuoteChapter, MartyBattleQuoteFlag, MartyBattleQuoteDialoguePointer
+GomezBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, GomezBattleQuoteCharacter, GomezBattleQuoteChapter, GomezBattleQuoteFlag, GomezBattleQuoteDialoguePointer
+MerlochBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, MerlochBattleQuoteCharacter, MerlochBattleQuoteChapter, MerlochBattleQuoteFlag, MerlochBattleQuoteDialoguePointer
+LargoBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, LargoBattleQuoteCharacter, LargoBattleQuoteChapter, LargoBattleQuoteFlag, LargoBattleQuoteDialoguePointer
+FredBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, FredBattleQuoteCharacter, FredBattleQuoteChapter, FredBattleQuoteFlag, FredBattleQuoteDialoguePointer
+OltophBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, OltophBattleQuoteCharacter, OltophBattleQuoteChapter, OltophBattleQuoteFlag, OltophBattleQuoteDialoguePointer
+SalemBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, SalemBattleQuoteCharacter, SalemBattleQuoteChapter, SalemBattleQuoteFlag, SalemBattleQuoteDialoguePointer
+ColhoBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, ColhoBattleQuoteCharacter, ColhoBattleQuoteChapter, ColhoBattleQuoteFlag, ColhoBattleQuoteDialoguePointer
+PerneBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, PerneBattleQuoteCharacter, PerneBattleQuoteChapter, PerneBattleQuoteFlag, PerneBattleQuoteDialoguePointer
+TrudeBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, TrudeBattleQuoteCharacter, TrudeBattleQuoteChapter, TrudeBattleQuoteFlag, TrudeBattleQuoteDialoguePointer
+TinaBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, TinaBattleQuoteCharacter, TinaBattleQuoteChapter, TinaBattleQuoteFlag, TinaBattleQuoteDialoguePointer
+LisztBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, LisztBattleQuoteCharacter, LisztBattleQuoteChapter, LisztBattleQuoteFlag, LisztBattleQuoteDialoguePointer
+PaulusBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, PaulusBattleQuoteCharacter, PaulusBattleQuoteChapter, PaulusBattleQuoteFlag, PaulusBattleQuoteDialoguePointer
+BaldachBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, BaldachBattleQuoteCharacter, BaldachBattleQuoteChapter, BaldachBattleQuoteFlag, BaldachBattleQuoteDialoguePointer
+CodhaBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, CodhaBattleQuoteCharacter, CodhaBattleQuoteChapter, CodhaBattleQuoteFlag, CodhaBattleQuoteDialoguePointer
+SeilBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, SeilBattleQuoteCharacter, SeilBattleQuoteChapter, SeilBattleQuoteFlag, SeilBattleQuoteDialoguePointer
+KempfBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, KempfBattleQuoteCharacter, KempfBattleQuoteChapter, KempfBattleQuoteFlag, KempfBattleQuoteDialoguePointer
+BrookBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, BrookBattleQuoteCharacter, BrookBattleQuoteChapter, BrookBattleQuoteFlag, BrookBattleQuoteDialoguePointer
+IliosBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, IliosBattleQuoteCharacter, IliosBattleQuoteChapter, IliosBattleQuoteFlag, IliosBattleQuoteDialoguePointer
+NicolovBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, NicolovBattleQuoteCharacter, NicolovBattleQuoteChapter, NicolovBattleQuoteFlag, NicolovBattleQuoteDialoguePointer
+MooreBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, MooreBattleQuoteCharacter, MooreBattleQuoteChapter, MooreBattleQuoteFlag, MooreBattleQuoteDialoguePointer
+MullerBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, MullerBattleQuoteCharacter, MullerBattleQuoteChapter, MullerBattleQuoteFlag, MullerBattleQuoteDialoguePointer
+SaiasBattleQuot1BattleQuoteTableEntry .dstruct structBattleQuoteEntry, SaiasBattleQuot1Character, SaiasBattleQuot1Chapter, SaiasBattleQuot1Flag, SaiasBattleQuot1DialoguePointer
+MishaBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, MishaBattleQuoteCharacter, MishaBattleQuoteChapter, MishaBattleQuoteFlag, MishaBattleQuoteDialoguePointer
+SaraBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, SaraBattleQuoteCharacter, SaraBattleQuoteChapter, SaraBattleQuoteFlag, SaraBattleQuoteDialoguePointer
+ReinkochBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, ReinkochBattleQuoteCharacter, ReinkochBattleQuoteChapter, ReinkochBattleQuoteFlag, ReinkochBattleQuoteDialoguePointer
+ShannamBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, ShannamBattleQuoteCharacter, ShannamBattleQuoteChapter, ShannamBattleQuoteFlag, ShannamBattleQuoteDialoguePointer
+PalmanBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, PalmanBattleQuoteCharacter, PalmanBattleQuoteChapter, PalmanBattleQuoteFlag, PalmanBattleQuoteDialoguePointer
+AmaldaBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, AmaldaBattleQuoteCharacter, AmaldaBattleQuoteChapter, AmaldaBattleQuoteFlag, AmaldaBattleQuoteDialoguePointer
+IshtarBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, IshtarBattleQuoteCharacter, IshtarBattleQuoteChapter, IshtarBattleQuoteFlag, IshtarBattleQuoteDialoguePointer
+BharatBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, BharatBattleQuoteCharacter, BharatBattleQuoteChapter, BharatBattleQuoteFlag, BharatBattleQuoteDialoguePointer
+ConomorBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, ConomorBattleQuoteCharacter, ConomorBattleQuoteChapter, ConomorBattleQuoteFlag, ConomorBattleQuoteDialoguePointer
+MannheimBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, MannheimBattleQuoteCharacter, MannheimBattleQuoteChapter, MannheimBattleQuoteFlag, MannheimBattleQuoteDialoguePointer
+GustavBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, GustavBattleQuoteCharacter, GustavBattleQuoteChapter, GustavBattleQuoteFlag, GustavBattleQuoteDialoguePointer
+XavierBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, XavierBattleQuoteCharacter, XavierBattleQuoteChapter, XavierBattleQuoteFlag, XavierBattleQuoteDialoguePointer
+FrausBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, FrausBattleQuoteCharacter, FrausBattleQuoteChapter, FrausBattleQuoteFlag, FrausBattleQuoteDialoguePointer
+SeimetzBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, SeimetzBattleQuoteCharacter, SeimetzBattleQuoteChapter, SeimetzBattleQuoteFlag, SeimetzBattleQuoteDialoguePointer
+ZaunBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, ZaunBattleQuoteCharacter, ZaunBattleQuoteChapter, ZaunBattleQuoteFlag, ZaunBattleQuoteDialoguePointer
+CohenBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, CohenBattleQuoteCharacter, CohenBattleQuoteChapter, CohenBattleQuoteFlag, CohenBattleQuoteDialoguePointer
+SaiasBattleQuote2BattleQuoteTableEntry .dstruct structBattleQuoteEntry, SaiasBattleQuote2Character, SaiasBattleQuote2Chapter, SaiasBattleQuote2Flag, SaiasBattleQuote2DialoguePointer
+ReinhardtBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, ReinhardtBattleQuoteCharacter, ReinhardtBattleQuoteChapter, ReinhardtBattleQuoteFlag, ReinhardtBattleQuoteDialoguePointer
+CoulterBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, CoulterBattleQuoteCharacter, CoulterBattleQuoteChapter, CoulterBattleQuoteFlag, CoulterBattleQuoteDialoguePointer
+AlphandBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, AlphandBattleQuoteCharacter, AlphandBattleQuoteChapter, AlphandBattleQuoteFlag, AlphandBattleQuoteDialoguePointer
+FadenBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, FadenBattleQuoteCharacter, FadenBattleQuoteChapter, FadenBattleQuoteFlag, FadenBattleQuoteDialoguePointer
+RaydrikChp24BattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, RaydrikChp24BattleQuoteCharacter, RaydrikChp24BattleQuoteChapter, RaydrikChp24BattleQuoteFlag, RaydrikChp24BattleQuoteDialoguePointer
+VeldBattleQuoteBattleQuoteTableEntry .dstruct structBattleQuoteEntry, VeldBattleQuoteCharacter, VeldBattleQuoteChapter, VeldBattleQuoteFlag, VeldBattleQuoteDialoguePointer

@@ -1,0 +1,14 @@
+structBAProjectileAxe 0,Class,Xcoord,Ycoord
+BAProjectileAxe00,AxeKnight,232,26
+BAProjectileAxe01,MasterKnight,232,26
+BAProjectileAxe02,GreatKnight,232,26
+BAProjectileAxe03,General,226,4
+BAProjectileAxe04,Emperor,226,4
+BAProjectileAxe05,Baron,226,4
+BAProjectileAxe06,ArmoredAxe,226,2
+BAProjectileAxe07,Berserker,224,6
+BAProjectileAxe08,Brigand,224,6
+BAProjectileAxe09,BrigandAlternate,224,6
+BAProjectileAxe0A,Warrior,224,6
+BAProjectileAxe0B,Pirate,224,6
+BAProjectileAxe0C,MasterKnightF,232,26

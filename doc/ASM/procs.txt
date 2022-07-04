@@ -1,0 +1,197 @@
+
+.comment
+
+proc type structure
+2 byte | name
+2 byte | start pointer
+2 byte | on cycle pointer
+2 byte | proc code pointer
+
+proc state
+
+header
+$055B - (2*n) | type structure offset lower word
+$057B - (2*n) | type structure offset bank
+$059B - (2*n) | two letter name
+$05BB - (2*n) | state bits
+$05DB - (2*n) | on-cycle pointer
+$05FB - (2*n) | proc code pointer
+$061B - (2*n) | sleep timer
+
+body
+$063B - (2*n) | free past here?
+$065B - (2*n) | 
+$067B - (2*n) | 
+$069B - (2*n) | 
+$06BB - (2*n) | 
+$06DB - (2*n) | 
+$06FB - (2*n) | 
+$071B - (2*n) | 
+$073B - (2*n) | 
+
+.endc
+
+proc_start ; $829BF1 ($011BF1)
+	.al
+	.xl
+	php 
+	phb 
+	phx 
+	phy 
+	sep #$20
+	.as
+	lda $6F
+	pha 
+	rep #$20
+	.al
+	plb 
+	ldy $6D ; new proc
+	ldx #$001E ; max $20 proc states
+
+_searchloop
+	lda $0526 ; flag if executing proc?
+	bpl _not_busy
+	cpx $0528 ; slot of last still-running proc
+	beq _slot_free
+
+_not_busy
+	lda $053D,x ; check if proc in slot
+	beq init_proc_state
+
+_slot_free
+	dex 
+	dex 
+	bpl _searchloop
+	ply 
+	plx 
+	plb 
+	plp 
+	sec ; if unable to write state
+	rtl 
+
+init_proc_state ; $829C1B ($011C1B)
+	.al
+	.xl
+	tya 
+	sta $053D,x ; type structure offset lower
+	lda $6E
+	and #$FF00 ; get type structure offset bank
+	sta $052B ; store for start routine
+	xba 
+	sta $055D,x ; store bank
+	lda #$0001
+	sta $05FD,x ; store initial timer
+	lda #$0000
+	sta $059D,x ; clear state bits
+	sta $061D,x ; these clear the body
+	sta $063D,x
+	sta $065D,x
+	sta $067D,x
+	sta $069D,x
+	sta $06BD,x
+	sta $06DD,x
+	sta $06FD,x
+	sta $071D,x
+	lda $0000,y ; type name
+	sta $057D,x
+	lda $0002,y ; start routine lower
+	sta $052A
+	lda $0004,y ; on-cycle
+	sta $05BD,x
+	lda $0006,y ; proc code
+	sta $05DD,x
+	phx 
+	lda $0528 ; this stuff keeps
+	pha       ; track of last still-running proc
+	stx $0528
+	jsl try_exec_proc_start ; runs start code if it exists
+	ldx $0528
+	jsr proc_on_cycle
+	lda $059D,x ; set state to executed
+	ora #$4000
+	sta $059D,x
+	pla 
+	sta $0528 ; replace last still-running proc
+	pla 
+	ply 
+	plx 
+	plb 
+	plp 
+	clc ; return that state was written
+	rtl 
+
+try_exec_proc_start ; $829C90 ($011C90)
+	.al
+	.xl
+	lda $052A ; check if ROM pointer
+	bmi +
+	rtl 
+
++
+	jmp [$052A] ; execute
+
+; there's unknown stuff here
+
+
+
+proc_on_cycle ; $829D49 ($011D49)
+	.al
+	.xl
+	sep #$20
+	.as
+	lda $055D,x ; proc type bank
+	pha 
+	rep #$20
+	.al
+	plb 
+	lda $059D,x ; proc state
+	bit #$1000
+	bne _sleep
+	bit #$4000 ; if already executed
+	beq _exec
+
+_sleep
+	rts 
+
+_exec
+	phb 
+	jsl try_exec_proc_on_cycle
+	plb 
+	ldx $0528
+	dec $05FD,x ; dec timer
+	bne _return ; if sleep time remaining
+	ldy $05DD,x ; proc code
+	bpl _return
+
+_loop
+	lda $0000,y ; get proc code word
+	bpl _not_pointer
+	sta $052A ; if pointer, execute
+	iny 
+	iny 
+	pea _loop-1 ; run proc code
+	jmp ($052A) ; until sleep time encountered
+
+_not_pointer
+	sta $05FD,x ; store to timer
+	tya 
+	clc 
+	adc #$0002
+	sta $05DD,x ; advance current proc code
+
+_return
+	rts 
+
+try_exec_proc_on_cycle ; $829D8F ($011D8F)
+	.al
+	.xl
+	lda $055D,x ; proc type bank
+	xba 
+	sta $052B
+	lda $05BD,x ; on-cycle pointer lower
+	bmi + ; if ROM pointer
+	rtl 
+
++
+	sta $052A
+	jmp [$052A] ; execute

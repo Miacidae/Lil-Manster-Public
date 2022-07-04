@@ -1,0 +1,582 @@
+	BattlePalette0					= 0
+		BattlePalette0Character		= Finn
+		BattlePalette0Class			= LanceKnightDismounted
+		BattlePalette0BA_Palette	= BA_Finn_Dismounted_Palette
+
+	BattlePalette1					= 1
+		BattlePalette1Character		= Finn
+		BattlePalette1Class			= DukeKnightDismounted
+		BattlePalette1BA_Palette	= BA_Finn_Dismounted_Palette
+
+	BattlePalette2					= 2
+		BattlePalette2Character		= Finn
+		BattlePalette2Class			= MasterKnight
+		BattlePalette2BA_Palette	= BA_Finn_MasterKnight_Palette
+
+	BattlePalette3					= 3
+		BattlePalette3Character		= Osian
+		BattlePalette3Class			= Fighter
+		BattlePalette3BA_Palette	= BA_Osian_Fighter_Palette
+
+	BattlePalette4					= 4
+		BattlePalette4Character		= Osian
+		BattlePalette4Class			= Hero
+		BattlePalette4BA_Palette	= BA_Osian_Hero_Palette
+
+	BattlePalette5					= 5
+		BattlePalette5Character		= Halvan
+		BattlePalette5Class			= Fighter
+		BattlePalette5BA_Palette	= BA_Halvan_Fighter_Palette
+
+	BattlePalette6					= 6
+		BattlePalette6Character		= Halvan
+		BattlePalette6Class			= Hero
+		BattlePalette6BA_Palette	= BA_Halvan_Hero_Palette
+
+	BattlePalette7					= 7
+		BattlePalette7Character		= Dagdar
+		BattlePalette7Class			= Warrior
+		BattlePalette7BA_Palette	= BA_Dagdar_Warrior_Palette
+
+	BattlePalette8					= 8
+		BattlePalette8Character		= Ralph
+		BattlePalette8Class			= Myrmidon
+		BattlePalette8BA_Palette	= BA_Ralph_Myrmidon_Palette
+
+	BattlePalette9					= 9
+		BattlePalette9Character		= Ralph
+		BattlePalette9Class			= Hero
+		BattlePalette9BA_Palette	= BA_Ralph_Hero_Palette
+
+	BattlePaletteA					= 10
+		BattlePaletteACharacter		= Ralph
+		BattlePaletteAClass			= Swordmaster
+		BattlePaletteABA_Palette	= BA_Ralph_Swordmaster_Palette
+
+	BattlePaletteB					= 11
+		BattlePaletteBCharacter		= Marty
+		BattlePaletteBClass			= Brigand
+		BattlePaletteBBA_Palette	= BA_Marty_Brigand_Palette
+
+	BattlePaletteC					= 12
+		BattlePaletteCCharacter		= Marty
+		BattlePaletteCClass			= Warrior
+		BattlePaletteCBA_Palette	= BA_Marty_Warrior_Palette
+
+	BattlePaletteD					= 13
+		BattlePaletteDCharacter		= Ronan
+		BattlePaletteDClass			= Archer
+		BattlePaletteDBA_Palette	= BA_Ronan_Archer_Palette
+
+	BattlePaletteE					= 14
+		BattlePaletteECharacter		= Ronan
+		BattlePaletteEClass			= Sniper
+		BattlePaletteEBA_Palette	= BA_Ronan_Sniper_Palette
+
+	BattlePaletteF					= 15
+		BattlePaletteFCharacter		= Safy
+		BattlePaletteFClass			= Priestess
+		BattlePaletteFBA_Palette	= BA_Safy_Priestess_Palette
+
+	BattlePalette10					= 16
+		BattlePalette10Character	= Safy
+		BattlePalette10Class		= HighPriestess
+		BattlePalette10BA_Palette	= BA_Safy_HighPriestess_Palette
+
+	BattlePalette11					= 17
+		BattlePalette11Character	= Lara
+		BattlePalette11Class		= Dancer
+		BattlePalette11BA_Palette	= BA_Lara_Dancer_Palette
+
+	BattlePalette12					= 18
+		BattlePalette12Character	= Lara
+		BattlePalette12Class		= ThiefF
+		BattlePalette12BA_Palette	= BA_Lara_Thief_Palette
+
+	BattlePalette13					= 19
+		BattlePalette13Character	= Lara
+		BattlePalette13Class		= RogueF
+		BattlePalette13BA_Palette	= BA_Lara_Rogue_Palette
+
+	BattlePalette14					= 20
+		BattlePalette14Character	= Salem
+		BattlePalette14Class		= LoptrianMage
+		BattlePalette14BA_Palette	= BA_Salem_LoptrianMage_Palette
+
+	BattlePalette15					= 21
+		BattlePalette15Character	= Salem
+		BattlePalette15Class		= Sorcerer
+		BattlePalette15BA_Palette	= BA_Salem_Sorcerer_Palette
+
+	BattlePalette16					= 22
+		BattlePalette16Character	= Asbel
+		BattlePalette16Class		= WindMage
+		BattlePalette16BA_Palette	= BA_Asbel_WindMage_Palette
+
+	BattlePalette17					= 23
+		BattlePalette17Character	= Asbel
+		BattlePalette17Class		= Sage
+		BattlePalette17BA_Palette	= BA_Asbel_Sage_Palette
+
+	BattlePalette18					= 24
+		BattlePalette18Character	= Sara
+		BattlePalette18Class		= Cleric
+		BattlePalette18BA_Palette	= BA_Sara_Cleric_Palette
+
+	BattlePalette19					= 25
+		BattlePalette19Character	= Sara
+		BattlePalette19Class		= SageF
+		BattlePalette19BA_Palette	= BA_Sara_Sage_Palette
+
+	BattlePalette1A					= 26
+		BattlePalette1ACharacter	= Linoan
+		BattlePalette1AClass		= Cleric
+		BattlePalette1ABA_Palette	= BA_Linoan_Cleric_Palette
+
+	BattlePalette1B					= 27
+		BattlePalette1BCharacter	= Linoan
+		BattlePalette1BClass		= SageF
+		BattlePalette1BBA_Palette	= BA_Linoan_Sage_Palette
+
+	BattlePalette1C					= 28
+		BattlePalette1CCharacter	= Ilios
+		BattlePalette1CClass		= MageKnightDismounted
+		BattlePalette1CBA_Palette	= BA_Ilios_Dismounted_Palette
+
+	BattlePalette1D					= 29
+		BattlePalette1DCharacter	= Selphina
+		BattlePalette1DClass		= BowKnightF
+		BattlePalette1DBA_Palette	= BA_Selphina_BowKnight_Palette
+
+	BattlePalette1E					= 30
+		BattlePalette1ECharacter	= Selphina
+		BattlePalette1EClass		= ArchKnightF
+		BattlePalette1EBA_Palette	= BA_Selphina_ArchKnight_Palette
+
+	BattlePalette1F					= 31
+		BattlePalette1FCharacter	= Selphina
+		BattlePalette1FClass		= BowKnightFDismounted
+		BattlePalette1FBA_Palette	= BA_Selphina_DismountedBowKnight_Palette
+
+	BattlePalette20					= 32
+		BattlePalette20Character	= Selphina
+		BattlePalette20Class		= ArchKnightFDismounted
+		BattlePalette20BA_Palette	= BA_Selphina_DismountedArchKnight_Palette
+
+	BattlePalette21					= 33
+		BattlePalette21Character	= Macha
+		BattlePalette21Class		= MyrmidonF
+		BattlePalette21BA_Palette	= BA_Macha_Myrmidon_Palette
+
+	BattlePalette22					= 34
+		BattlePalette22Character	= Macha
+		BattlePalette22Class		= HeroF
+		BattlePalette22BA_Palette	= BA_Macha_Hero_Palette
+
+	BattlePalette23					= 35
+		BattlePalette23Character	= Misha
+		BattlePalette23Class		= PegasusKnight
+		BattlePalette23BA_Palette	= BA_Misha_PegasusKnight_Palette
+
+	BattlePalette24					= 36
+		BattlePalette24Character	= Misha
+		BattlePalette24Class		= PegasusKnightDismounted
+		BattlePalette24BA_Palette	= BA_Misha_Dismounted_Palette
+
+	BattlePalette25					= 37
+		BattlePalette25Character	= Karin
+		BattlePalette25Class		= PegasusRiderDismounted
+		BattlePalette25BA_Palette	= BA_Karin_Dismounted_Palette
+
+	BattlePalette26					= 38
+		BattlePalette26Character	= Karin
+		BattlePalette26Class		= PegasusKnightDismounted
+		BattlePalette26BA_Palette	= BA_Karin_Dismounted_Palette
+
+	BattlePalette27					= 39
+		BattlePalette27Character	= Amalda
+		BattlePalette27Class		= PaladinF
+		BattlePalette27BA_Palette	= BA_Amalda_Paladin_Palette
+
+	BattlePalette28					= 40
+		BattlePalette28Character	= Amalda
+		BattlePalette28Class		= PaladinFDismounted
+		BattlePalette28BA_Palette	= BA_Amalda_Dismounted_Palette
+
+	BattlePalette29					= 41
+		BattlePalette29Character	= Altena
+		BattlePalette29Class		= DracoknightF
+		BattlePalette29BA_Palette	= BA_Altena_Dracoknight_Palette
+
+	BattlePalette2A					= 42
+		BattlePalette2ACharacter	= Altena
+		BattlePalette2AClass		= DracoknightFDismounted
+		BattlePalette2ABA_Palette	= BA_Altena_Dismounted_Palette
+
+	BattlePalette2B					= 43
+		BattlePalette2BCharacter	= Eda
+		BattlePalette2BClass		= DracoriderF
+		BattlePalette2BBA_Palette	= BA_Eda_Dracorider_Dracoknight_Palette
+
+	BattlePalette2C					= 44
+		BattlePalette2CCharacter	= Eda
+		BattlePalette2CClass		= DracoknightF
+		BattlePalette2CBA_Palette	= BA_Eda_Dracorider_Dracoknight_Palette
+
+	BattlePalette2D					= 45
+		BattlePalette2DCharacter	= Eda
+		BattlePalette2DClass		= DracoriderFDismounted
+		BattlePalette2DBA_Palette	= BA_Eda_Dismounted_Palette
+
+	BattlePalette2E					= 46
+		BattlePalette2ECharacter	= Eda
+		BattlePalette2EClass		= DracoknightFDismounted
+		BattlePalette2EBA_Palette	= BA_Eda_Dismounted_Palette
+
+	BattlePalette2F					= 47
+		BattlePalette2FCharacter	= Olwen
+		BattlePalette2FClass		= MageKnightF
+		BattlePalette2FBA_Palette	= BA_Olwen_Palette
+
+	BattlePalette30					= 48
+		BattlePalette30Character	= Olwen
+		BattlePalette30Class		= MageKnightFDismounted
+		BattlePalette30BA_Palette	= BA_Olwen_Palette
+
+	BattlePalette31					= 49
+		BattlePalette31Character	= Miranda
+		BattlePalette31Class		= MageKnightF
+		BattlePalette31BA_Palette	= BA_Miranda_MageKnight_Palette
+
+	BattlePalette32					= 50
+		BattlePalette32Character	= Miranda
+		BattlePalette32Class		= MageKnightFDismounted
+		BattlePalette32BA_Palette	= BA_Miranda_MageKnight_Palette
+
+	BattlePalette33					= 51
+		BattlePalette33Character	= Homer
+		BattlePalette33Class		= Bard
+		BattlePalette33BA_Palette	= BA_Homer_Bard_Palette
+
+	BattlePalette34					= 52
+		BattlePalette34Character	= Homer
+		BattlePalette34Class		= Sage
+		BattlePalette34BA_Palette	= BA_Homer_Sage_Palette
+
+	BattlePalette35					= 53
+		BattlePalette35Character	= Miranda
+		BattlePalette35Class		= WindMageF
+		BattlePalette35BA_Palette	= BA_Miranda_WindMage_Palette
+
+	BattlePalette36					= 54
+		BattlePalette36Character	= Tina
+		BattlePalette36Class		= Priestess
+		BattlePalette36BA_Palette	= BA_Tina_Priestess_Palette
+
+	BattlePalette37					= 55
+		BattlePalette37Character	= Tina
+		BattlePalette37Class		= HighPriestess
+		BattlePalette37BA_Palette	= BA_Tina_HighPriestess_Palette
+
+	BattlePalette38					= 56
+		BattlePalette38Character	= Schroff
+		BattlePalette38Class		= Priest
+		BattlePalette38BA_Palette	= BA_Schroff_Priest_Palette
+
+	BattlePalette39					= 57
+		BattlePalette39Character	= Schroff
+		BattlePalette39Class		= HighPriest
+		BattlePalette39BA_Palette	= BA_Schroff_HighPriest_Palette
+
+	BattlePalette3A					= 58
+		BattlePalette3ACharacter	= Cedchp23
+		BattlePalette3AClass		= Sage
+		BattlePalette3ABA_Palette	= BA_Ced_Palette
+
+	BattlePalette3B					= 59
+		BattlePalette3BCharacter	= Cedchp4x
+		BattlePalette3BClass		= Sage
+		BattlePalette3BBA_Palette	= BA_Ced_Palette
+
+	BattlePalette3C					= 60
+		BattlePalette3CCharacter	= Brighton
+		BattlePalette3CClass		= AxeKnightDismounted
+		BattlePalette3CBA_Palette	= BA_Brighton_AxeKnight_Palette
+
+	BattlePalette3D					= 61
+		BattlePalette3DCharacter	= Brighton
+		BattlePalette3DClass		= GreatKnightDismounted
+		BattlePalette3DBA_Palette	= BA_Brighton_GreatKnight_Palette
+
+	BattlePalette3E					= 62
+		BattlePalette3ECharacter	= Hicks
+		BattlePalette3EClass		= AxeKnightDismounted
+		BattlePalette3EBA_Palette	= BA_Hicks_AxeKnight_Palette
+
+	BattlePalette3F					= 63
+		BattlePalette3FCharacter	= Hicks
+		BattlePalette3FClass		= GreatKnightDismounted
+		BattlePalette3FBA_Palette	= BA_Hicks_GreatKnight_Palette
+
+	BattlePalette40					= 64
+		BattlePalette40Character	= Callion
+		BattlePalette40Class		= CavalierDismounted
+		BattlePalette40BA_Palette	= BA_Callion_Cavalier_Palette
+
+	BattlePalette41					= 65
+		BattlePalette41Character	= Callion
+		BattlePalette41Class		= PaladinDismounted
+		BattlePalette41BA_Palette	= BA_Callion_Paladin_Palette
+
+	BattlePalette42					= 66
+		BattlePalette42Character	= Glade
+		BattlePalette42Class		= DukeKnightDismounted
+		BattlePalette42BA_Palette	= BA_Glade_DukeKnight_Palette
+
+	BattlePalette43					= 67
+		BattlePalette43Character	= Kane
+		BattlePalette43Class		= LanceKnightDismounted
+		BattlePalette43BA_Palette	= BA_Kane_LanceKnight_Palette
+
+	BattlePalette44					= 68
+		BattlePalette44Character	= Kane
+		BattlePalette44Class		= DukeKnightDismounted
+		BattlePalette44BA_Palette	= BA_Kane_DukeKnight_Palette
+
+	BattlePalette45					= 69
+		BattlePalette45Character	= Alba
+		BattlePalette45Class		= LanceKnightDismounted
+		BattlePalette45BA_Palette	= BA_Alba_LanceKnight_Palette
+
+	BattlePalette46					= 70
+		BattlePalette46Character	= Alba
+		BattlePalette46Class		= DukeKnightDismounted
+		BattlePalette46BA_Palette	= BA_Alba_DukeKnight_Palette
+
+	BattlePalette47					= 71
+		BattlePalette47Character	= Robert
+		BattlePalette47Class		= BowKnightDismounted
+		BattlePalette47BA_Palette	= BA_Robert_Dismounted_Palette
+
+	BattlePalette48					= 72
+		BattlePalette48Character	= Robert
+		BattlePalette48Class		= ArchKnightDismounted
+		BattlePalette48BA_Palette	= BA_Robert_Dismounted_Palette
+
+	BattlePalette49					= 73
+		BattlePalette49Character	= Fred
+		BattlePalette49Class		= PaladinDismounted
+		BattlePalette49BA_Palette	= BA_Fred_Paladin_Palette
+
+	BattlePalette4A					= 74
+		BattlePalette4ACharacter	= Dean
+		BattlePalette4AClass		= DracoknightDismounted
+		BattlePalette4ABA_Palette	= BA_Dean_Dracoknight_Palette
+
+	BattlePalette4B					= 75
+		BattlePalette4BCharacter	= Conomor
+		BattlePalette4BClass		= PaladinDismounted
+		BattlePalette4BBA_Palette	= BA_Conomor_Paladin_Palette
+
+	BattlePalette4C					= 76
+		BattlePalette4CCharacter	= Dalsin
+		BattlePalette4CClass		= General
+		BattlePalette4CBA_Palette	= BA_Dalsin_Palette
+
+	BattlePalette4D					= 77
+		BattlePalette4DCharacter	= Dalsin
+		BattlePalette4DClass		= ArmoredAxe
+		BattlePalette4DBA_Palette	= BA_Dalsin_Palette
+
+	BattlePalette4E					= 78
+		BattlePalette4ECharacter	= Xavier
+		BattlePalette4EClass		= General
+		BattlePalette4EBA_Palette	= BA_Xavier_Palette
+
+	BattlePalette4F					= 79
+		BattlePalette4FCharacter	= Diarmuid
+		BattlePalette4FClass		= Ranger
+		BattlePalette4FBA_Palette	= BA_Diarmuid_Palette
+
+	BattlePalette50					= 80
+		BattlePalette50Character	= Diarmuid
+		BattlePalette50Class		= RangerDismounted
+		BattlePalette50BA_Palette	= BA_Diarmuid_Palette
+
+	BattlePalette51					= 81
+		BattlePalette51Character	= Fergus
+		BattlePalette51Class		= SwordKnight
+		BattlePalette51BA_Palette	= BA_Fergus_SwordKnight_Palette
+
+	BattlePalette52					= 82
+		BattlePalette52Character	= Fergus
+		BattlePalette52Class		= Ranger
+		BattlePalette52BA_Palette	= BA_Fergus_Ranger_Palette
+
+	BattlePalette53					= 83
+		BattlePalette53Character	= Fergus
+		BattlePalette53Class		= SwordKnightDismounted
+		BattlePalette53BA_Palette	= BA_Fergus_SwordKnightDismounted_Palette
+
+	BattlePalette54					= 84
+		BattlePalette54Character	= Fergus
+		BattlePalette54Class		= RangerDismounted
+		BattlePalette54BA_Palette	= BA_Fergus_RangerDismounted_Palette
+
+	BattlePalette55					= 85
+		BattlePalette55Character	= Nanna
+		BattlePalette55Class		= Troubadour
+		BattlePalette55BA_Palette	= BA_Nanna_Troubadour_Palette
+
+	BattlePalette56					= 86
+		BattlePalette56Character	= Nanna
+		BattlePalette56Class		= PaladinF
+		BattlePalette56BA_Palette	= BA_Nanna_Paladin_Palette
+
+	BattlePalette57					= 87
+		BattlePalette57Character	= Nanna
+		BattlePalette57Class		= TroubadourDismounted
+		BattlePalette57BA_Palette	= BA_Nanna_Dismounted_Palette
+
+	BattlePalette58					= 88
+		BattlePalette58Character	= Nanna
+		BattlePalette58Class		= PaladinFDismounted
+		BattlePalette58BA_Palette	= BA_Nanna_Dismounted_Palette
+
+	BattlePalette59					= 89
+		BattlePalette59Character	= Tanya
+		BattlePalette59Class		= ArcherF
+		BattlePalette59BA_Palette	= BA_Tanya_Archer_Palette
+
+	BattlePalette5A					= 90
+		BattlePalette5ACharacter	= Tanya
+		BattlePalette5AClass		= SniperF
+		BattlePalette5ABA_Palette	= BA_Tanya_Sniper_Palette
+
+	BattlePalette5B					= 91
+		BattlePalette5BCharacter	= Shiva
+		BattlePalette5BClass		= Myrmidon
+		BattlePalette5BBA_Palette	= BA_Shiva_Myrmidon_Palette
+
+	BattlePalette5C					= 92
+		BattlePalette5CCharacter	= Shiva
+		BattlePalette5CClass		= Swordmaster
+		BattlePalette5CBA_Palette	= BA_Shiva_Swordmaster_Palette
+
+	BattlePalette5D					= 93
+		BattlePalette5DCharacter	= Lifis
+		BattlePalette5DClass		= Thief
+		BattlePalette5DBA_Palette	= BA_Lifis_Thief_Palette
+
+	BattlePalette5E					= 94
+		BattlePalette5ECharacter	= Lifis
+		BattlePalette5EClass		= Rogue
+		BattlePalette5EBA_Palette	= BA_Lifis_Rogue_Palette
+
+	BattlePalette5F					= 95
+		BattlePalette5FCharacter	= Saias
+		BattlePalette5FClass		= HighPriest
+		BattlePalette5FBA_Palette	= BA_Saias_Palette
+
+	BattlePalette60					= 96
+		BattlePalette60Character	= Galzus
+		BattlePalette60Class		= Hero
+		BattlePalette60BA_Palette	= BA_Galzus_Palette
+
+BattlePalette0BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette0Character, BattlePalette0Class, BattlePalette0BA_Palette
+BattlePalette1BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette1Character, BattlePalette1Class, BattlePalette1BA_Palette
+BattlePalette2BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette2Character, BattlePalette2Class, BattlePalette2BA_Palette
+BattlePalette3BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette3Character, BattlePalette3Class, BattlePalette3BA_Palette
+BattlePalette4BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette4Character, BattlePalette4Class, BattlePalette4BA_Palette
+BattlePalette5BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette5Character, BattlePalette5Class, BattlePalette5BA_Palette
+BattlePalette6BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette6Character, BattlePalette6Class, BattlePalette6BA_Palette
+BattlePalette7BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette7Character, BattlePalette7Class, BattlePalette7BA_Palette
+BattlePalette8BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette8Character, BattlePalette8Class, BattlePalette8BA_Palette
+BattlePalette9BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette9Character, BattlePalette9Class, BattlePalette9BA_Palette
+BattlePaletteABattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePaletteACharacter, BattlePaletteAClass, BattlePaletteABA_Palette
+BattlePaletteBBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePaletteBCharacter, BattlePaletteBClass, BattlePaletteBBA_Palette
+BattlePaletteCBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePaletteCCharacter, BattlePaletteCClass, BattlePaletteCBA_Palette
+BattlePaletteDBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePaletteDCharacter, BattlePaletteDClass, BattlePaletteDBA_Palette
+BattlePaletteEBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePaletteECharacter, BattlePaletteEClass, BattlePaletteEBA_Palette
+BattlePaletteFBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePaletteFCharacter, BattlePaletteFClass, BattlePaletteFBA_Palette
+BattlePalette10BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette10Character, BattlePalette10Class, BattlePalette10BA_Palette
+BattlePalette11BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette11Character, BattlePalette11Class, BattlePalette11BA_Palette
+BattlePalette12BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette12Character, BattlePalette12Class, BattlePalette12BA_Palette
+BattlePalette13BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette13Character, BattlePalette13Class, BattlePalette13BA_Palette
+BattlePalette14BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette14Character, BattlePalette14Class, BattlePalette14BA_Palette
+BattlePalette15BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette15Character, BattlePalette15Class, BattlePalette15BA_Palette
+BattlePalette16BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette16Character, BattlePalette16Class, BattlePalette16BA_Palette
+BattlePalette17BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette17Character, BattlePalette17Class, BattlePalette17BA_Palette
+BattlePalette18BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette18Character, BattlePalette18Class, BattlePalette18BA_Palette
+BattlePalette19BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette19Character, BattlePalette19Class, BattlePalette19BA_Palette
+BattlePalette1ABattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette1ACharacter, BattlePalette1AClass, BattlePalette1ABA_Palette
+BattlePalette1BBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette1BCharacter, BattlePalette1BClass, BattlePalette1BBA_Palette
+BattlePalette1CBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette1CCharacter, BattlePalette1CClass, BattlePalette1CBA_Palette
+BattlePalette1DBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette1DCharacter, BattlePalette1DClass, BattlePalette1DBA_Palette
+BattlePalette1EBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette1ECharacter, BattlePalette1EClass, BattlePalette1EBA_Palette
+BattlePalette1FBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette1FCharacter, BattlePalette1FClass, BattlePalette1FBA_Palette
+BattlePalette20BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette20Character, BattlePalette20Class, BattlePalette20BA_Palette
+BattlePalette21BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette21Character, BattlePalette21Class, BattlePalette21BA_Palette
+BattlePalette22BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette22Character, BattlePalette22Class, BattlePalette22BA_Palette
+BattlePalette23BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette23Character, BattlePalette23Class, BattlePalette23BA_Palette
+BattlePalette24BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette24Character, BattlePalette24Class, BattlePalette24BA_Palette
+BattlePalette25BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette25Character, BattlePalette25Class, BattlePalette25BA_Palette
+BattlePalette26BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette26Character, BattlePalette26Class, BattlePalette26BA_Palette
+BattlePalette27BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette27Character, BattlePalette27Class, BattlePalette27BA_Palette
+BattlePalette28BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette28Character, BattlePalette28Class, BattlePalette28BA_Palette
+BattlePalette29BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette29Character, BattlePalette29Class, BattlePalette29BA_Palette
+BattlePalette2ABattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette2ACharacter, BattlePalette2AClass, BattlePalette2ABA_Palette
+BattlePalette2BBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette2BCharacter, BattlePalette2BClass, BattlePalette2BBA_Palette
+BattlePalette2CBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette2CCharacter, BattlePalette2CClass, BattlePalette2CBA_Palette
+BattlePalette2DBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette2DCharacter, BattlePalette2DClass, BattlePalette2DBA_Palette
+BattlePalette2EBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette2ECharacter, BattlePalette2EClass, BattlePalette2EBA_Palette
+BattlePalette2FBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette2FCharacter, BattlePalette2FClass, BattlePalette2FBA_Palette
+BattlePalette30BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette30Character, BattlePalette30Class, BattlePalette30BA_Palette
+BattlePalette31BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette31Character, BattlePalette31Class, BattlePalette31BA_Palette
+BattlePalette32BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette32Character, BattlePalette32Class, BattlePalette32BA_Palette
+BattlePalette33BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette33Character, BattlePalette33Class, BattlePalette33BA_Palette
+BattlePalette34BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette34Character, BattlePalette34Class, BattlePalette34BA_Palette
+BattlePalette35BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette35Character, BattlePalette35Class, BattlePalette35BA_Palette
+BattlePalette36BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette36Character, BattlePalette36Class, BattlePalette36BA_Palette
+BattlePalette37BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette37Character, BattlePalette37Class, BattlePalette37BA_Palette
+BattlePalette38BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette38Character, BattlePalette38Class, BattlePalette38BA_Palette
+BattlePalette39BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette39Character, BattlePalette39Class, BattlePalette39BA_Palette
+BattlePalette3ABattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette3ACharacter, BattlePalette3AClass, BattlePalette3ABA_Palette
+BattlePalette3BBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette3BCharacter, BattlePalette3BClass, BattlePalette3BBA_Palette
+BattlePalette3CBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette3CCharacter, BattlePalette3CClass, BattlePalette3CBA_Palette
+BattlePalette3DBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette3DCharacter, BattlePalette3DClass, BattlePalette3DBA_Palette
+BattlePalette3EBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette3ECharacter, BattlePalette3EClass, BattlePalette3EBA_Palette
+BattlePalette3FBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette3FCharacter, BattlePalette3FClass, BattlePalette3FBA_Palette
+BattlePalette40BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette40Character, BattlePalette40Class, BattlePalette40BA_Palette
+BattlePalette41BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette41Character, BattlePalette41Class, BattlePalette41BA_Palette
+BattlePalette42BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette42Character, BattlePalette42Class, BattlePalette42BA_Palette
+BattlePalette43BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette43Character, BattlePalette43Class, BattlePalette43BA_Palette
+BattlePalette44BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette44Character, BattlePalette44Class, BattlePalette44BA_Palette
+BattlePalette45BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette45Character, BattlePalette45Class, BattlePalette45BA_Palette
+BattlePalette46BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette46Character, BattlePalette46Class, BattlePalette46BA_Palette
+BattlePalette47BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette47Character, BattlePalette47Class, BattlePalette47BA_Palette
+BattlePalette48BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette48Character, BattlePalette48Class, BattlePalette48BA_Palette
+BattlePalette49BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette49Character, BattlePalette49Class, BattlePalette49BA_Palette
+BattlePalette4ABattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette4ACharacter, BattlePalette4AClass, BattlePalette4ABA_Palette
+BattlePalette4BBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette4BCharacter, BattlePalette4BClass, BattlePalette4BBA_Palette
+BattlePalette4CBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette4CCharacter, BattlePalette4CClass, BattlePalette4CBA_Palette
+BattlePalette4DBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette4DCharacter, BattlePalette4DClass, BattlePalette4DBA_Palette
+BattlePalette4EBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette4ECharacter, BattlePalette4EClass, BattlePalette4EBA_Palette
+BattlePalette4FBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette4FCharacter, BattlePalette4FClass, BattlePalette4FBA_Palette
+BattlePalette50BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette50Character, BattlePalette50Class, BattlePalette50BA_Palette
+BattlePalette51BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette51Character, BattlePalette51Class, BattlePalette51BA_Palette
+BattlePalette52BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette52Character, BattlePalette52Class, BattlePalette52BA_Palette
+BattlePalette53BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette53Character, BattlePalette53Class, BattlePalette53BA_Palette
+BattlePalette54BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette54Character, BattlePalette54Class, BattlePalette54BA_Palette
+BattlePalette55BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette55Character, BattlePalette55Class, BattlePalette55BA_Palette
+BattlePalette56BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette56Character, BattlePalette56Class, BattlePalette56BA_Palette
+BattlePalette57BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette57Character, BattlePalette57Class, BattlePalette57BA_Palette
+BattlePalette58BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette58Character, BattlePalette58Class, BattlePalette58BA_Palette
+BattlePalette59BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette59Character, BattlePalette59Class, BattlePalette59BA_Palette
+BattlePalette5ABattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette5ACharacter, BattlePalette5AClass, BattlePalette5ABA_Palette
+BattlePalette5BBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette5BCharacter, BattlePalette5BClass, BattlePalette5BBA_Palette
+BattlePalette5CBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette5CCharacter, BattlePalette5CClass, BattlePalette5CBA_Palette
+BattlePalette5DBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette5DCharacter, BattlePalette5DClass, BattlePalette5DBA_Palette
+BattlePalette5EBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette5ECharacter, BattlePalette5EClass, BattlePalette5EBA_Palette
+BattlePalette5FBattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette5FCharacter, BattlePalette5FClass, BattlePalette5FBA_Palette
+BattlePalette60BattleAnimationCharacterPalettesEntry .dstruct structBattleAnimationCharacterPalettes, BattlePalette60Character, BattlePalette60Class, BattlePalette60BA_Palette

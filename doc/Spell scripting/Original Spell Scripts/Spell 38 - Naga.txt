@@ -1,0 +1,77 @@
+B17C6 - B185B
+
+3B 08     ; BEGIN
+65 42	  ; Load Tiles: Naga BG Shine (+pause)
+FE FF	  ; --Wait--
+67 42	  ; Load Tiles: Naga Small Square? (+pause)     
+FE FF	  ; --Wait--
+68 42	  ; Load Tiles: Naga BG Shine Tilemap (+pause)     
+FE FF	  ; --Wait--
+6A 42	  ; Load Tiles: Naga Small Square? Tilemap?? (+pause)     
+FE FF	  ; --Wait--
+09 5E     ; Scroll to Defender: Normal (+pause)
+FE FF	  ; --Wait--
+4D 16     ; Palette: ???				[Naga gold]
+07 56     ; Effect: Fade Out 1 (+pause)
+FE FF	  ; --Wait--
+2E 04     ; Display Tiles: ???
+66 42	  ; Load Tiles: Naga Dragon (+pause)     
+FE FF	  ; --Wait--
+0D 1C     ; Secondary Palette: ??? [Gold Palette Expanding Middle Circle]
+2A 08     ; Battle Scene Mod: Shift BG Up
+69 42	  ; Load Tiles: Naga Dragon Tilemap (+pause)     
+FE FF	  ; --Wait--
+49 1A     ; Placement / Scrolling: ???
+34 1A     ; Placement / Scrolling: ???
+44 04     ; Display Tiles: ???
+39 08     ; Battle Scene Mod: Naga Fade In + HUD Fade In
+01 54     ; --Wait: 1 frame--
+FE FF	  ; --Wait--
+1D 2A     ; Play Sound: Naga
+35 1A     ; Scrolling: Restore Staff
+70 56     ; Effect: Naga Dragon Fade In (+pause)
+FE FF	  ; --Wait--
+23 00     ; Effect Mask: Delete [FE4: Naga blast]
+4B 54     ; --Wait: 75 frames--
+FE FF	  ; --Wait--
+74 16     ; Palette: Naga Brightness
+01 54     ; --Wait: 1 frame--
+FE FF	  ; --Wait--
+45 04     ; Display Tiles: ???
+25 00     ; Effect Mask: Slow Expand (pixel-wide to max)
+3C 54     ; --Wait: 60 frames--
+FE FF	  ; --Wait--
+35 08     ; Battle Scene Mod: ???
+14 54     ; --Wait: 20 frames--
+FE FF	  ; --Wait--
+F9 FF     ; Dodge point
+10 54     ; --Wait: 16 frames--
+FE FF	  ; --Wait--
+FA FF     ; Damage point
+FD FF     ; Cast1: Starts the animation loop on the caster
+20 54     ; --Wait: 32 frames--
+FE FF	  ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+20 54     ; --Wait: 32 frames--
+FE FF	  ; --Wait--
+72 16     ; Palette: ???
+FE FF	  ; --Wait--
+2F 04     ; Display Tiles: ???
+2B 08     ; Battle Scene Mod: Reset BG
+04 58     ; BG Mod: ??? (+pause)
+FE FF	  ; --Wait--
+05 58     ; BG Mod: ??? (+pause)
+FE FF	  ; --Wait--
+05 0E     ; BG?: Meteor Something 1
+06 4E     ; BG?: Meteor Something 2 (+pause)
+06 18     ; BG Mod: ???
+FE FF	  ; --Wait--
+73 16     ; Palette: ???
+01 54     ; --Wait: 1 frame--
+FE FF	  ; --Wait--
+46 04     ; Display Tiles: ???
+12 56     ; Effect: Reset Tile/Palette Effects (+pause)
+FE FF	  ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

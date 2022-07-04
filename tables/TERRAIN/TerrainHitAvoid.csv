@@ -1,0 +1,3 @@
+structTerrainEntry 0,MapEdge,Peak,Thicket,Cliff,Plain,Forest,Sea,River,Mountain,Sand,Castle,Fort,HouseOpen,Gate,ImpassableOutdoors,Desert,Bridge,Lake,Village,Ruins,ImpassableUnused,ImpassableHidden,Supply,ChurchOpen,HouseClosed,Road,Armory,Vendor,Arena,Floor,ImpassableIndoors,Throne,Door,ChestIndoors,Exit,Pillar,Drawbridge,Secret,ImpassableCrack,SandySoil,Altar,Seal,ChurchClosed,ChestOutdoors
+GroundHitAvoid,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FlyingHitAvoid,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

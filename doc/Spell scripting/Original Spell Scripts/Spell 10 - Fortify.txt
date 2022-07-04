@@ -1,0 +1,33 @@
+B0D6E - B0DAB
+
+3B 08     ; BEGIN
+0C 42     ; Load Tile: Fortify (+pause)
+FE FF     ; --Wait--
+0D 42     ; Load Tile: Fortify Tileset (+pause)
+FE FF     ; --Wait--
+0B 16     ; Palette: Fortify gold1
+0A 54     ; --Wait: 10 frames--
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+0A 54     ; --Wait: 10 frames--
+FE FF     ; --Wait--
+26 2A     ; Play Sound: Fortify start
+02 1A     ; Placement: Center of Screen
+06 04     ; Display Tiles: Basic Display
+AD 16     ; Effects: ???
+AB 56     ; Effects: ??? (+pause)
+FE FF     ; --Wait--
+0C 56     ; Palette: Fortify gold2 (+pause)
+FE FF     ; --Wait--
+0C 56     ; Palette: Fortify gold2 (+pause)
+FE FF     ; --Wait--
+0C 56     ; Palette: Fortify gold2 (+pause)
+FE FF     ; --Wait--
+AE 16     ; Effects: ???
+AC 16     ; Effects: ???
+3C 54     ; --Wait: 60 frames--
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+02 04     ; Display Tiles: ???
+3E 08     ; Battle Scene Mod: ???
+FF FF     ; EXIT

@@ -1,0 +1,990 @@
+	BA_Palette00			= 0
+		BA_Palette00Offset	= aBAUnitPalette86F802
+		BA_Palette00Size	= $3E
+
+	BA_Palette01			= 1
+		BA_Palette01Offset	= aBAUnitPaletteC08CE4
+		BA_Palette01Size	= $1E
+
+	BA_Palette02			= 2
+		BA_Palette02Offset	= aBAUnitPaletteC08D02
+		BA_Palette02Size	= $1E
+
+	BA_Palette03			= 3
+		BA_Palette03Offset	= aBAUnitPaletteC08F64
+		BA_Palette03Size	= $1E
+
+	BA_Palette04			= 4
+		BA_Palette04Offset	= aBAUnitPaletteC08F82
+		BA_Palette04Size	= $1E
+
+	BA_Palette05			= 5
+		BA_Palette05Offset	= aBAUnitPaletteC08FA0
+		BA_Palette05Size	= $1E
+
+	BA_Palette06			= 6
+		BA_Palette06Offset	= aBAUnitPaletteC08FBE
+		BA_Palette06Size	= $1E
+
+	BA_Palette07			= 7
+		BA_Palette07Offset	= aBAUnitPaletteC08FDC
+		BA_Palette07Size	= $3E
+
+	BA_Palette08			= 8
+		BA_Palette08Offset	= aBAUnitPaletteC08FDC
+		BA_Palette08Size	= $1E
+
+	BA_Palette09			= 9
+		BA_Palette09Offset	= aBAUnitPaletteC09C8A
+		BA_Palette09Size	= $3E
+
+	BA_Palette0A			= 10
+		BA_Palette0AOffset	= aBAUnitPaletteC09CC8
+		BA_Palette0ASize	= $1E
+
+	BA_Palette0B			= 11
+		BA_Palette0BOffset	= aBAUnitPaletteC08D3E
+		BA_Palette0BSize	= $3E
+
+	BA_Palette0C			= 12
+		BA_Palette0COffset	= aBAUnitPaletteC08D7C
+		BA_Palette0CSize	= $3E
+
+	BA_Palette0D			= 13
+		BA_Palette0DOffset	= aBAUnitPaletteC08DBA
+		BA_Palette0DSize	= $1E
+
+	BA_Palette0E			= 14
+		BA_Palette0EOffset	= aBAUnitPaletteC08DD8
+		BA_Palette0ESize	= $1E
+
+	BA_Palette0F			= 15
+		BA_Palette0FOffset	= aBAUnitPaletteC08DF6
+		BA_Palette0FSize	= $1E
+
+	BA_Palette10			= 16
+		BA_Palette10Offset	= aBAUnitPaletteC08E14
+		BA_Palette10Size	= $1E
+
+	BA_Palette11			= 17
+		BA_Palette11Offset	= aBAUnitPaletteC08E32
+		BA_Palette11Size	= $3E
+
+	BA_Palette12			= 18
+		BA_Palette12Offset	= aBAUnitPaletteC08E70
+		BA_Palette12Size	= $1E
+
+	BA_Palette13			= 19
+		BA_Palette13Offset	= aBAUnitPaletteC08E8E
+		BA_Palette13Size	= $1E
+
+	BA_Palette14			= 20
+		BA_Palette14Offset	= aBAUnitPaletteC08EAC
+		BA_Palette14Size	= $3E
+
+	BA_Palette15			= 21
+		BA_Palette15Offset	= aBAUnitPaletteC08EEA
+		BA_Palette15Size	= $1E
+
+	BA_Palette16			= 22
+		BA_Palette16Offset	= aBAUnitPaletteC08F08
+		BA_Palette16Size	= $3E
+
+	BA_Palette17			= 23
+		BA_Palette17Offset	= aBAUnitPaletteC08F46
+		BA_Palette17Size	= $1E
+
+	BA_Palette18			= 24
+		BA_Palette18Offset	= aBAUnitPaletteC09C6C
+		BA_Palette18Size	= $1E
+
+	BA_Palette19			= 25
+		BA_Palette19Offset	= aBAUnitPaletteC0901A
+		BA_Palette19Size	= $3E
+
+	BA_Palette1A			= 26
+		BA_Palette1AOffset	= aBAUnitPaletteC09058
+		BA_Palette1ASize	= $1E
+
+	BA_Palette1B			= 27
+		BA_Palette1BOffset	= aBAUnitPaletteC09076
+		BA_Palette1BSize	= $1E
+
+	BA_Palette1C			= 28
+		BA_Palette1COffset	= aBAUnitPaletteC09094
+		BA_Palette1CSize	= $1E
+
+	BA_Palette1D			= 29
+		BA_Palette1DOffset	= aBAUnitPaletteC090B2
+		BA_Palette1DSize	= $3E
+
+	BA_Palette1E			= 30
+		BA_Palette1EOffset	= aBAUnitPaletteC090F0
+		BA_Palette1ESize	= $1E
+
+	BA_Palette1F			= 31
+		BA_Palette1FOffset	= aBAUnitPaletteC0910E
+		BA_Palette1FSize	= $1E
+
+	BA_Palette20			= 32
+		BA_Palette20Offset	= aBAUnitPaletteC0914C
+		BA_Palette20Size	= $1E
+
+	BA_Palette21			= 33
+		BA_Palette21Offset	= aBAUnitPaletteC0916A
+		BA_Palette21Size	= $1E
+
+	BA_Palette22			= 34
+		BA_Palette22Offset	= aBAUnitPaletteC091A8
+		BA_Palette22Size	= $1E
+
+	BA_Palette23			= 35
+		BA_Palette23Offset	= aBAUnitPaletteC091C6
+		BA_Palette23Size	= $3E
+
+	BA_Palette24			= 36
+		BA_Palette24Offset	= aBAUnitPaletteC09204
+		BA_Palette24Size	= $3E
+
+	BA_Palette25			= 37
+		BA_Palette25Offset	= aBAUnitPaletteC09242
+		BA_Palette25Size	= $3E
+
+	BA_Palette26			= 38
+		BA_Palette26Offset	= aBAUnitPaletteC09280
+		BA_Palette26Size	= $3E
+
+	BA_Palette27			= 39
+		BA_Palette27Offset	= aBAUnitPaletteC092BE
+		BA_Palette27Size	= $1E
+
+	BA_Palette28			= 40
+		BA_Palette28Offset	= aBAUnitPaletteC092DC
+		BA_Palette28Size	= $3E
+
+	BA_Palette29			= 41
+		BA_Palette29Offset	= aBAUnitPaletteC0931A
+		BA_Palette29Size	= $3E
+
+	BA_Palette2A			= 42
+		BA_Palette2AOffset	= aBAUnitPaletteC09358
+		BA_Palette2ASize	= $3E
+
+	BA_Palette2B			= 43
+		BA_Palette2BOffset	= aBAUnitPaletteC09396
+		BA_Palette2BSize	= $3E
+
+	BA_Palette2C			= 44
+		BA_Palette2COffset	= aBAUnitPaletteC093D4
+		BA_Palette2CSize	= $3E
+
+	BA_Palette2D			= 45
+		BA_Palette2DOffset	= aBAUnitPaletteC09412
+		BA_Palette2DSize	= $3E
+
+	BA_Palette2E			= 46
+		BA_Palette2EOffset	= aBAUnitPaletteC09450
+		BA_Palette2ESize	= $3E
+
+	BA_Palette2F			= 47
+		BA_Palette2FOffset	= aBAUnitPaletteC0948E
+		BA_Palette2FSize	= $3E
+
+	BA_Palette30			= 48
+		BA_Palette30Offset	= aBAUnitPaletteC094AC
+		BA_Palette30Size	= $3E
+
+	BA_Palette31			= 49
+		BA_Palette31Offset	= aBAUnitPaletteC094EA
+		BA_Palette31Size	= $3E
+
+	BA_Palette32			= 50
+		BA_Palette32Offset	= aBAUnitPaletteC09528
+		BA_Palette32Size	= $3E
+
+	BA_Palette33			= 51
+		BA_Palette33Offset	= aBAUnitPaletteC09566
+		BA_Palette33Size	= $3E
+
+	BA_Palette34			= 52
+		BA_Palette34Offset	= aBAUnitPaletteC095A4
+		BA_Palette34Size	= $1E
+
+	BA_Palette35			= 53
+		BA_Palette35Offset	= aBAUnitPaletteC095E2
+		BA_Palette35Size	= $1E
+
+	BA_Palette36			= 54
+		BA_Palette36Offset	= aBAUnitPaletteC09620
+		BA_Palette36Size	= $1E
+
+	BA_Palette37			= 55
+		BA_Palette37Offset	= aBAUnitPaletteC0965E
+		BA_Palette37Size	= $3E
+
+	BA_Palette38			= 56
+		BA_Palette38Offset	= aBAUnitPaletteC0969C
+		BA_Palette38Size	= $3E
+
+	BA_Palette39			= 57
+		BA_Palette39Offset	= aBAUnitPaletteC09992
+		BA_Palette39Size	= $3E
+
+	BA_Palette3A			= 58
+		BA_Palette3AOffset	= aBAUnitPaletteC099D0
+		BA_Palette3ASize	= $3E
+
+	BA_Palette3B			= 59
+		BA_Palette3BOffset	= aBAUnitPaletteC09A0E
+		BA_Palette3BSize	= $1E
+
+	BA_Palette3C			= 60
+		BA_Palette3COffset	= aBAUnitPaletteC09A2C
+		BA_Palette3CSize	= $1E
+
+	BA_Palette3D			= 61
+		BA_Palette3DOffset	= aBAUnitPaletteC09A4A
+		BA_Palette3DSize	= $1E
+
+	BA_Palette3E			= 62
+		BA_Palette3EOffset	= aBAUnitPaletteC09A68
+		BA_Palette3ESize	= $1E
+
+	BA_Palette3F			= 63
+		BA_Palette3FOffset	= aBAUnitPaletteC09A86
+		BA_Palette3FSize	= $1E
+
+	BA_Palette40			= 64
+		BA_Palette40Offset	= aBAUnitPaletteC09AA4
+		BA_Palette40Size	= $3E
+
+	BA_Palette41			= 65
+		BA_Palette41Offset	= aBAUnitPaletteC09AE2
+		BA_Palette41Size	= $3E
+
+	BA_Palette42			= 66
+		BA_Palette42Offset	= aBAUnitPaletteC09AA4
+		BA_Palette42Size	= $1E
+
+	BA_Palette43			= 67
+		BA_Palette43Offset	= aBAUnitPaletteC09AE2
+		BA_Palette43Size	= $1E
+
+	BA_Palette44			= 68
+		BA_Palette44Offset	= aBAUnitPaletteC09B20
+		BA_Palette44Size	= $1E
+
+	BA_Palette45			= 69
+		BA_Palette45Offset	= aBAUnitPaletteC09B3E
+		BA_Palette45Size	= $1E
+
+	BA_Palette46			= 70
+		BA_Palette46Offset	= aBAUnitPaletteC09B5C
+		BA_Palette46Size	= $1E
+
+	BA_Palette47			= 71
+		BA_Palette47Offset	= aBAUnitPaletteC09B7A
+		BA_Palette47Size	= $1E
+
+	BA_Palette48			= 72
+		BA_Palette48Offset	= aBAUnitPaletteC09B98
+		BA_Palette48Size	= $1E
+
+	BA_Palette49			= 73
+		BA_Palette49Offset	= aBAUnitPaletteC09BB6
+		BA_Palette49Size	= $1E
+
+	BA_Palette4A			= 74
+		BA_Palette4AOffset	= aBAUnitPaletteC09BD4
+		BA_Palette4ASize	= $1E
+
+	BA_Palette4B			= 75
+		BA_Palette4BOffset	= aBAUnitPaletteC09BF2
+		BA_Palette4BSize	= $1E
+
+	BA_Palette4C			= 76
+		BA_Palette4COffset	= aBAUnitPaletteC09C10
+		BA_Palette4CSize	= $3E
+
+	BA_Palette4D			= 77
+		BA_Palette4DOffset	= aBAUnitPaletteC09C4E
+		BA_Palette4DSize	= $1E
+
+	BA_Palette4E			= 78
+		BA_Palette4EOffset	= aBAUnitPaletteC096DA
+		BA_Palette4ESize	= $1E
+
+	BA_Palette4F			= 79
+		BA_Palette4FOffset	= aBAUnitPaletteC096F8
+		BA_Palette4FSize	= $1E
+
+	BA_Palette50			= 80
+		BA_Palette50Offset	= aBAUnitPaletteC09716
+		BA_Palette50Size	= $1E
+
+	BA_Palette51			= 81
+		BA_Palette51Offset	= aBAUnitPaletteC09734
+		BA_Palette51Size	= $1E
+
+	BA_Palette52			= 82
+		BA_Palette52Offset	= aBAUnitPaletteC09752
+		BA_Palette52Size	= $1E
+
+	BA_Palette53			= 83
+		BA_Palette53Offset	= aBAUnitPaletteC09770
+		BA_Palette53Size	= $1E
+
+	BA_Palette54			= 84
+		BA_Palette54Offset	= aBAUnitPaletteC0978E
+		BA_Palette54Size	= $1E
+
+	BA_Palette55			= 85
+		BA_Palette55Offset	= aBAUnitPaletteC09828
+		BA_Palette55Size	= $1E
+
+	BA_Palette56			= 86
+		BA_Palette56Offset	= aBAUnitPaletteC097AC
+		BA_Palette56Size	= $3E
+
+	BA_Palette57			= 87
+		BA_Palette57Offset	= aBAUnitPaletteC097EA
+		BA_Palette57Size	= $3E
+
+	BA_Palette58			= 88
+		BA_Palette58Offset	= aBAUnitPaletteC09828
+		BA_Palette58Size	= $3E
+
+	BA_Palette59			= 89
+		BA_Palette59Offset	= aBAUnitPaletteC09866
+		BA_Palette59Size	= $1E
+
+	BA_Palette5A			= 90
+		BA_Palette5AOffset	= aBAUnitPaletteC09884
+		BA_Palette5ASize	= $1E
+
+	BA_Palette5B			= 91
+		BA_Palette5BOffset	= aBAUnitPaletteC098A2
+		BA_Palette5BSize	= $1E
+
+	BA_Palette5C			= 92
+		BA_Palette5COffset	= aBAUnitPaletteC098C0
+		BA_Palette5CSize	= $1E
+
+	BA_Palette5D			= 93
+		BA_Palette5DOffset	= aBAUnitPaletteC098DE
+		BA_Palette5DSize	= $1E
+
+	BA_Palette5E			= 94
+		BA_Palette5EOffset	= aBAUnitPaletteC098FC
+		BA_Palette5ESize	= $1E
+
+	BA_Palette5F			= 95
+		BA_Palette5FOffset	= aBAUnitPaletteC0991A
+		BA_Palette5FSize	= $1E
+
+	BA_Palette60			= 96
+		BA_Palette60Offset	= aBAUnitPaletteC09938
+		BA_Palette60Size	= $1E
+
+	BA_Palette61			= 97
+		BA_Palette61Offset	= aBAUnitPaletteC09956
+		BA_Palette61Size	= $1E
+
+	BA_Palette62			= 98
+		BA_Palette62Offset	= aBAUnitPaletteC09974
+		BA_Palette62Size	= $1E
+
+	BA_Palette63			= 99
+		BA_Palette63Offset	= aBAUnitPaletteC0A4A2
+		BA_Palette63Size	= $1E
+
+	BA_Palette64			= 100
+		BA_Palette64Offset	= aBAUnitPaletteC0A4C0
+		BA_Palette64Size	= $1E
+
+	BA_Palette65			= 101
+		BA_Palette65Offset	= aBAUnitPaletteC0A3CC
+		BA_Palette65Size	= $3E
+
+	BA_Palette66			= 102
+		BA_Palette66Offset	= aBAUnitPaletteC0A38E
+		BA_Palette66Size	= $3E
+
+	BA_Palette67			= 103
+		BA_Palette67Offset	= aBAUnitPaletteC0A332
+		BA_Palette67Size	= $1E
+
+	BA_Palette68			= 104
+		BA_Palette68Offset	= aBAUnitPaletteC0A314
+		BA_Palette68Size	= $1E
+
+	BA_Palette69			= 105
+		BA_Palette69Offset	= aBAUnitPaletteC0A21E
+		BA_Palette69Size	= $3E
+
+	BA_Palette6A			= 106
+		BA_Palette6AOffset	= aBAUnitPaletteC0A25C
+		BA_Palette6ASize	= $3E
+
+	BA_Palette6B			= 107
+		BA_Palette6BOffset	= aBAUnitPaletteC0A29A
+		BA_Palette6BSize	= $1E
+
+	BA_Palette6C			= 108
+		BA_Palette6COffset	= aBAUnitPaletteC0A2B8
+		BA_Palette6CSize	= $1E
+
+	BA_Palette6D			= 109
+		BA_Palette6DOffset	= aBAUnitPaletteC0A428
+		BA_Palette6DSize	= $1E
+
+	BA_Palette6E			= 110
+		BA_Palette6EOffset	= aBAUnitPaletteC0A446
+		BA_Palette6ESize	= $1E
+
+	BA_Palette6F			= 111
+		BA_Palette6FOffset	= aBAUnitPaletteC0BEAC
+		BA_Palette6FSize	= $3E
+
+	BA_Palette70			= 112
+		BA_Palette70Offset	= aBAUnitPaletteC0A1A4
+		BA_Palette70Size	= $3E
+
+	BA_Palette71			= 113
+		BA_Palette71Offset	= aBAUnitPaletteC0BEEA
+		BA_Palette71Size	= $3E
+
+	BA_Palette72			= 114
+		BA_Palette72Offset	= aBAUnitPaletteC0BF66
+		BA_Palette72Size	= $3E
+
+	BA_Palette73			= 115
+		BA_Palette73Offset	= aBAUnitPaletteC0BFA4
+		BA_Palette73Size	= $3E
+
+	BA_Palette74			= 116
+		BA_Palette74Offset	= aBAUnitPaletteC0BFE2
+		BA_Palette74Size	= $3E
+
+	BA_Palette75			= 117
+		BA_Palette75Offset	= aBAUnitPaletteC0C020
+		BA_Palette75Size	= $3E
+
+	BA_Palette76			= 118
+		BA_Palette76Offset	= aBAUnitPaletteC0C05E
+		BA_Palette76Size	= $3E
+
+	BA_Palette77			= 119
+		BA_Palette77Offset	= aBAUnitPaletteC0ADF8
+		BA_Palette77Size	= $3E
+
+	BA_Palette78			= 120
+		BA_Palette78Offset	= aBAUnitPaletteC0A166
+		BA_Palette78Size	= $3E
+
+	BA_Palette79			= 121
+		BA_Palette79Offset	= aBAUnitPaletteC0AE36
+		BA_Palette79Size	= $3E
+
+	BA_Palette7A			= 122
+		BA_Palette7AOffset	= aBAUnitPaletteC0C09C
+		BA_Palette7ASize	= $3E
+
+	BA_Palette7B			= 123
+		BA_Palette7BOffset	= aBAUnitPaletteC0C118
+		BA_Palette7BSize	= $3E
+
+	BA_Palette7C			= 124
+		BA_Palette7COffset	= aBAUnitPaletteC0A350
+		BA_Palette7CSize	= $3E
+
+	BA_Palette7D			= 125
+		BA_Palette7DOffset	= aBAUnitPaletteC0C0DA
+		BA_Palette7DSize	= $3E
+
+	BA_Palette7E			= 126
+		BA_Palette7EOffset	= aBAUnitPaletteC0A2D6
+		BA_Palette7ESize	= $3E
+
+	BA_Palette7F			= 127
+		BA_Palette7FOffset	= aBAUnitPaletteC0A594
+		BA_Palette7FSize	= $3E
+
+	BA_Palette80			= 128
+		BA_Palette80Offset	= aBAUnitPaletteC0AB4A
+		BA_Palette80Size	= $3E
+
+	BA_Palette81			= 129
+		BA_Palette81Offset	= aBAUnitPaletteC0AB88
+		BA_Palette81Size	= $3E
+
+	BA_Palette82			= 130
+		BA_Palette82Offset	= aBAUnitPaletteC0ABC6
+		BA_Palette82Size	= $3E
+
+	BA_Palette83			= 131
+		BA_Palette83Offset	= aBAUnitPaletteC0AC04
+		BA_Palette83Size	= $3E
+
+	BA_Palette84			= 132
+		BA_Palette84Offset	= aBAUnitPaletteC0AC42
+		BA_Palette84Size	= $3E
+
+	BA_Palette85			= 133
+		BA_Palette85Offset	= aBAUnitPaletteC0A464
+		BA_Palette85Size	= $3E
+
+	BA_Palette86			= 134
+		BA_Palette86Offset	= aBAUnitPaletteC0A558
+		BA_Palette86Size	= $1E
+
+	BA_Palette87			= 135
+		BA_Palette87Offset	= aBAUnitPaletteC0A51C
+		BA_Palette87Size	= $1E
+
+	BA_Palette88			= 136
+		BA_Palette88Offset	= aBAUnitPaletteC0A53A
+		BA_Palette88Size	= $1E
+
+	BA_Palette89			= 137
+		BA_Palette89Offset	= aBAUnitPaletteC0AE74
+		BA_Palette89Size	= $1E
+
+	BA_Palette8A			= 138
+		BA_Palette8AOffset	= aBAUnitPaletteC0AE92
+		BA_Palette8ASize	= $1E
+
+	BA_Palette8B			= 139
+		BA_Palette8BOffset	= aBAUnitPaletteC0BD80
+		BA_Palette8BSize	= $1E
+
+	BA_Palette8C			= 140
+		BA_Palette8COffset	= aBAUnitPaletteC0A1E2
+		BA_Palette8CSize	= $1E
+
+	BA_Palette8D			= 141
+		BA_Palette8DOffset	= aBAUnitPaletteC0BD9E
+		BA_Palette8DSize	= $1E
+
+	BA_Palette8E			= 142
+		BA_Palette8EOffset	= aBAUnitPaletteC0A200
+		BA_Palette8ESize	= $1E
+
+	BA_Palette8F			= 143
+		BA_Palette8FOffset	= aBAUnitPaletteC0BDBC
+		BA_Palette8FSize	= $1E
+
+	BA_Palette90			= 144
+		BA_Palette90Offset	= aBAUnitPaletteC0BDDA
+		BA_Palette90Size	= $1E
+
+	BA_Palette91			= 145
+		BA_Palette91Offset	= aBAUnitPaletteC0BE52
+		BA_Palette91Size	= $1E
+
+	BA_Palette92			= 146
+		BA_Palette92Offset	= aBAUnitPaletteC0BE70
+		BA_Palette92Size	= $1E
+
+	BA_Palette93			= 147
+		BA_Palette93Offset	= aBAUnitPaletteC0BDF8
+		BA_Palette93Size	= $1E
+
+	BA_Palette94			= 148
+		BA_Palette94Offset	= aBAUnitPaletteC0BE16
+		BA_Palette94Size	= $1E
+
+	BA_Palette95			= 149
+		BA_Palette95Offset	= aBAUnitPaletteC0AD9E
+		BA_Palette95Size	= $1E
+
+	BA_Palette96			= 150
+		BA_Palette96Offset	= aBAUnitPaletteC0ADDA
+		BA_Palette96Size	= $1E
+
+	BA_Palette97			= 151
+		BA_Palette97Offset	= aBAUnitPaletteC0ADBC
+		BA_Palette97Size	= $1E
+
+	BA_Palette98			= 152
+		BA_Palette98Offset	= aBAUnitPaletteC0C248
+		BA_Palette98Size	= $1E
+
+	BA_Palette99			= 153
+		BA_Palette99Offset	= aBAUnitPaletteC08CC6
+		BA_Palette99Size	= $1E
+
+	BA_Palette9A			= 154
+		BA_Palette9AOffset	= aBAUnitPaletteC0C174
+		BA_Palette9ASize	= $1E
+
+	BA_Palette9B			= 155
+		BA_Palette9BOffset	= aBAUnitPaletteC0C156
+		BA_Palette9BSize	= $1E
+
+	BA_Palette9C			= 156
+		BA_Palette9COffset	= aBAUnitPaletteC0C1B2
+		BA_Palette9CSize	= $1E
+
+	BA_Palette9D			= 157
+		BA_Palette9DOffset	= aBAUnitPaletteC0A7E4
+		BA_Palette9DSize	= $1E
+
+	BA_Palette9E			= 158
+		BA_Palette9EOffset	= aBAUnitPaletteC0A802
+		BA_Palette9ESize	= $1E
+
+	BA_Palette9F			= 159
+		BA_Palette9FOffset	= aBAUnitPaletteC0A820
+		BA_Palette9FSize	= $1E
+
+	BA_PaletteA0			= 160
+		BA_PaletteA0Offset	= aBAUnitPaletteC0A92E
+		BA_PaletteA0Size	= $1E
+
+	BA_PaletteA1			= 161
+		BA_PaletteA1Offset	= aBAUnitPaletteC0A94C
+		BA_PaletteA1Size	= $1E
+
+	BA_PaletteA2			= 162
+		BA_PaletteA2Offset	= aBAUnitPaletteC0A96A
+		BA_PaletteA2Size	= $1E
+
+	BA_PaletteA3			= 163
+		BA_PaletteA3Offset	= aBAUnitPaletteC0A96A
+		BA_PaletteA3Size	= $1E
+
+	BA_PaletteA4			= 164
+		BA_PaletteA4Offset	= aBAUnitPaletteC0A988
+		BA_PaletteA4Size	= $1E
+
+	BA_PaletteA5			= 165
+		BA_PaletteA5Offset	= aBAUnitPaletteC0A83E
+		BA_PaletteA5Size	= $1E
+
+	BA_PaletteA6			= 166
+		BA_PaletteA6Offset	= aBAUnitPaletteC0A85C
+		BA_PaletteA6Size	= $1E
+
+	BA_PaletteA7			= 167
+		BA_PaletteA7Offset	= aBAUnitPaletteC0A87A
+		BA_PaletteA7Size	= $1E
+
+	BA_PaletteA8			= 168
+		BA_PaletteA8Offset	= aBAUnitPaletteC0A898
+		BA_PaletteA8Size	= $1E
+
+	BA_PaletteA9			= 169
+		BA_PaletteA9Offset	= aBAUnitPaletteC0A8B6
+		BA_PaletteA9Size	= $1E
+
+	BA_PaletteAA			= 170
+		BA_PaletteAAOffset	= aBAUnitPaletteC0A8D4
+		BA_PaletteAASize	= $1E
+
+	BA_PaletteAB			= 171
+		BA_PaletteABOffset	= aBAUnitPaletteC0A8F2
+		BA_PaletteABSize	= $1E
+
+	BA_PaletteAC			= 172
+		BA_PaletteACOffset	= aBAUnitPaletteC0A910
+		BA_PaletteACSize	= $1E
+
+	BA_PaletteAD			= 173
+		BA_PaletteADOffset	= aBAUnitPaletteC0A9A6
+		BA_PaletteADSize	= $1E
+
+	BA_PaletteAE			= 174
+		BA_PaletteAEOffset	= aBAUnitPaletteC0A9C4
+		BA_PaletteAESize	= $1E
+
+	BA_PaletteAF			= 175
+		BA_PaletteAFOffset	= aBAUnitPaletteC0A9E2
+		BA_PaletteAFSize	= $1E
+
+	BA_PaletteB0			= 176
+		BA_PaletteB0Offset	= aBAUnitPaletteC0AA00
+		BA_PaletteB0Size	= $1E
+
+	BA_PaletteB1			= 177
+		BA_PaletteB1Offset	= aBAUnitPaletteC0AA1E
+		BA_PaletteB1Size	= $1E
+
+	BA_PaletteB2			= 178
+		BA_PaletteB2Offset	= aBAUnitPaletteC0AA3C
+		BA_PaletteB2Size	= $1E
+
+	BA_PaletteB3			= 179
+		BA_PaletteB3Offset	= aBAUnitPaletteC0AA5A
+		BA_PaletteB3Size	= $1E
+
+	BA_PaletteB4			= 180
+		BA_PaletteB4Offset	= aBAUnitPaletteC0AA78
+		BA_PaletteB4Size	= $1E
+
+	BA_PaletteB5			= 181
+		BA_PaletteB5Offset	= aBAUnitPaletteC0AAF0
+		BA_PaletteB5Size	= $1E
+
+	BA_PaletteB6			= 182
+		BA_PaletteB6Offset	= aBAUnitPaletteC0AB0E
+		BA_PaletteB6Size	= $1E
+
+	BA_PaletteB7			= 183
+		BA_PaletteB7Offset	= aBAUnitPaletteC0AB2C
+		BA_PaletteB7Size	= $1E
+
+	BA_PaletteB8			= 184
+		BA_PaletteB8Offset	= aBAUnitPaletteC0AA96
+		BA_PaletteB8Size	= $1E
+
+	BA_PaletteB9			= 185
+		BA_PaletteB9Offset	= aBAUnitPaletteC0AAB4
+		BA_PaletteB9Size	= $1E
+
+	BA_PaletteBA			= 186
+		BA_PaletteBAOffset	= aBAUnitPaletteC08D20
+		BA_PaletteBASize	= $1E
+
+	BA_PaletteBB			= 187
+		BA_PaletteBBOffset	= aBAUnitPaletteC0AAD2
+		BA_PaletteBBSize	= $1E
+
+	BA_PaletteBC			= 188
+		BA_PaletteBCOffset	= aBAUnitPaletteC0C1D0
+		BA_PaletteBCSize	= $1E
+
+	BA_PaletteBD			= 189
+		BA_PaletteBDOffset	= aBAUnitPaletteC0C1EE
+		BA_PaletteBDSize	= $1E
+
+	BA_PaletteBE			= 190
+		BA_PaletteBEOffset	= aBAUnitPaletteC0A40A
+		BA_PaletteBESize	= $1E
+
+	BA_PaletteBF			= 191
+		BA_PaletteBFOffset	= aBAUnitPaletteC0C20C
+		BA_PaletteBFSize	= $1E
+
+	BA_PaletteC0			= 192
+		BA_PaletteC0Offset	= aBAUnitPaletteC0C22A
+		BA_PaletteC0Size	= $1E
+
+	BA_PaletteC1			= 193
+		BA_PaletteC1Offset	= aBAUnitPaletteC0A4DE
+		BA_PaletteC1Size	= $3E
+
+	BA_PaletteC2			= 194
+		BA_PaletteC2Offset	= aBAUnitPaletteC0C266
+		BA_PaletteC2Size	= $3E
+
+	BA_PaletteC3			= 195
+		BA_PaletteC3Offset	= aBAUnitPaletteC0C2A4
+		BA_PaletteC3Size	= $3E
+
+	BA_PaletteC4			= 196
+		BA_PaletteC4Offset	= aBAUnitPaletteC0C2E2
+		BA_PaletteC4Size	= $3E
+
+	BA_PaletteC5			= 197
+		BA_PaletteC5Offset	= aBAUnitPaletteC0C320
+		BA_PaletteC5Size	= $1E
+
+BA_Palette00BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette00Offset, BA_Palette00Size
+BA_Palette01BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette01Offset, BA_Palette01Size
+BA_Palette02BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette02Offset, BA_Palette02Size
+BA_Palette03BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette03Offset, BA_Palette03Size
+BA_Palette04BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette04Offset, BA_Palette04Size
+BA_Palette05BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette05Offset, BA_Palette05Size
+BA_Palette06BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette06Offset, BA_Palette06Size
+BA_Palette07BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette07Offset, BA_Palette07Size
+BA_Palette08BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette08Offset, BA_Palette08Size
+BA_Palette09BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette09Offset, BA_Palette09Size
+BA_Palette0ABattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette0AOffset, BA_Palette0ASize
+BA_Palette0BBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette0BOffset, BA_Palette0BSize
+BA_Palette0CBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette0COffset, BA_Palette0CSize
+BA_Palette0DBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette0DOffset, BA_Palette0DSize
+BA_Palette0EBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette0EOffset, BA_Palette0ESize
+BA_Palette0FBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette0FOffset, BA_Palette0FSize
+BA_Palette10BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette10Offset, BA_Palette10Size
+BA_Palette11BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette11Offset, BA_Palette11Size
+BA_Palette12BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette12Offset, BA_Palette12Size
+BA_Palette13BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette13Offset, BA_Palette13Size
+BA_Palette14BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette14Offset, BA_Palette14Size
+BA_Palette15BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette15Offset, BA_Palette15Size
+BA_Palette16BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette16Offset, BA_Palette16Size
+BA_Palette17BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette17Offset, BA_Palette17Size
+BA_Palette18BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette18Offset, BA_Palette18Size
+BA_Palette19BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette19Offset, BA_Palette19Size
+BA_Palette1ABattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette1AOffset, BA_Palette1ASize
+BA_Palette1BBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette1BOffset, BA_Palette1BSize
+BA_Palette1CBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette1COffset, BA_Palette1CSize
+BA_Palette1DBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette1DOffset, BA_Palette1DSize
+BA_Palette1EBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette1EOffset, BA_Palette1ESize
+BA_Palette1FBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette1FOffset, BA_Palette1FSize
+BA_Palette20BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette20Offset, BA_Palette20Size
+BA_Palette21BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette21Offset, BA_Palette21Size
+BA_Palette22BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette22Offset, BA_Palette22Size
+BA_Palette23BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette23Offset, BA_Palette23Size
+BA_Palette24BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette24Offset, BA_Palette24Size
+BA_Palette25BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette25Offset, BA_Palette25Size
+BA_Palette26BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette26Offset, BA_Palette26Size
+BA_Palette27BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette27Offset, BA_Palette27Size
+BA_Palette28BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette28Offset, BA_Palette28Size
+BA_Palette29BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette29Offset, BA_Palette29Size
+BA_Palette2ABattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette2AOffset, BA_Palette2ASize
+BA_Palette2BBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette2BOffset, BA_Palette2BSize
+BA_Palette2CBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette2COffset, BA_Palette2CSize
+BA_Palette2DBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette2DOffset, BA_Palette2DSize
+BA_Palette2EBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette2EOffset, BA_Palette2ESize
+BA_Palette2FBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette2FOffset, BA_Palette2FSize
+BA_Palette30BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette30Offset, BA_Palette30Size
+BA_Palette31BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette31Offset, BA_Palette31Size
+BA_Palette32BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette32Offset, BA_Palette32Size
+BA_Palette33BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette33Offset, BA_Palette33Size
+BA_Palette34BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette34Offset, BA_Palette34Size
+BA_Palette35BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette35Offset, BA_Palette35Size
+BA_Palette36BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette36Offset, BA_Palette36Size
+BA_Palette37BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette37Offset, BA_Palette37Size
+BA_Palette38BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette38Offset, BA_Palette38Size
+BA_Palette39BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette39Offset, BA_Palette39Size
+BA_Palette3ABattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette3AOffset, BA_Palette3ASize
+BA_Palette3BBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette3BOffset, BA_Palette3BSize
+BA_Palette3CBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette3COffset, BA_Palette3CSize
+BA_Palette3DBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette3DOffset, BA_Palette3DSize
+BA_Palette3EBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette3EOffset, BA_Palette3ESize
+BA_Palette3FBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette3FOffset, BA_Palette3FSize
+BA_Palette40BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette40Offset, BA_Palette40Size
+BA_Palette41BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette41Offset, BA_Palette41Size
+BA_Palette42BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette42Offset, BA_Palette42Size
+BA_Palette43BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette43Offset, BA_Palette43Size
+BA_Palette44BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette44Offset, BA_Palette44Size
+BA_Palette45BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette45Offset, BA_Palette45Size
+BA_Palette46BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette46Offset, BA_Palette46Size
+BA_Palette47BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette47Offset, BA_Palette47Size
+BA_Palette48BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette48Offset, BA_Palette48Size
+BA_Palette49BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette49Offset, BA_Palette49Size
+BA_Palette4ABattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette4AOffset, BA_Palette4ASize
+BA_Palette4BBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette4BOffset, BA_Palette4BSize
+BA_Palette4CBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette4COffset, BA_Palette4CSize
+BA_Palette4DBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette4DOffset, BA_Palette4DSize
+BA_Palette4EBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette4EOffset, BA_Palette4ESize
+BA_Palette4FBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette4FOffset, BA_Palette4FSize
+BA_Palette50BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette50Offset, BA_Palette50Size
+BA_Palette51BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette51Offset, BA_Palette51Size
+BA_Palette52BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette52Offset, BA_Palette52Size
+BA_Palette53BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette53Offset, BA_Palette53Size
+BA_Palette54BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette54Offset, BA_Palette54Size
+BA_Palette55BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette55Offset, BA_Palette55Size
+BA_Palette56BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette56Offset, BA_Palette56Size
+BA_Palette57BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette57Offset, BA_Palette57Size
+BA_Palette58BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette58Offset, BA_Palette58Size
+BA_Palette59BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette59Offset, BA_Palette59Size
+BA_Palette5ABattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette5AOffset, BA_Palette5ASize
+BA_Palette5BBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette5BOffset, BA_Palette5BSize
+BA_Palette5CBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette5COffset, BA_Palette5CSize
+BA_Palette5DBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette5DOffset, BA_Palette5DSize
+BA_Palette5EBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette5EOffset, BA_Palette5ESize
+BA_Palette5FBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette5FOffset, BA_Palette5FSize
+BA_Palette60BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette60Offset, BA_Palette60Size
+BA_Palette61BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette61Offset, BA_Palette61Size
+BA_Palette62BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette62Offset, BA_Palette62Size
+BA_Palette63BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette63Offset, BA_Palette63Size
+BA_Palette64BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette64Offset, BA_Palette64Size
+BA_Palette65BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette65Offset, BA_Palette65Size
+BA_Palette66BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette66Offset, BA_Palette66Size
+BA_Palette67BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette67Offset, BA_Palette67Size
+BA_Palette68BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette68Offset, BA_Palette68Size
+BA_Palette69BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette69Offset, BA_Palette69Size
+BA_Palette6ABattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette6AOffset, BA_Palette6ASize
+BA_Palette6BBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette6BOffset, BA_Palette6BSize
+BA_Palette6CBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette6COffset, BA_Palette6CSize
+BA_Palette6DBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette6DOffset, BA_Palette6DSize
+BA_Palette6EBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette6EOffset, BA_Palette6ESize
+BA_Palette6FBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette6FOffset, BA_Palette6FSize
+BA_Palette70BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette70Offset, BA_Palette70Size
+BA_Palette71BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette71Offset, BA_Palette71Size
+BA_Palette72BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette72Offset, BA_Palette72Size
+BA_Palette73BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette73Offset, BA_Palette73Size
+BA_Palette74BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette74Offset, BA_Palette74Size
+BA_Palette75BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette75Offset, BA_Palette75Size
+BA_Palette76BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette76Offset, BA_Palette76Size
+BA_Palette77BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette77Offset, BA_Palette77Size
+BA_Palette78BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette78Offset, BA_Palette78Size
+BA_Palette79BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette79Offset, BA_Palette79Size
+BA_Palette7ABattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette7AOffset, BA_Palette7ASize
+BA_Palette7BBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette7BOffset, BA_Palette7BSize
+BA_Palette7CBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette7COffset, BA_Palette7CSize
+BA_Palette7DBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette7DOffset, BA_Palette7DSize
+BA_Palette7EBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette7EOffset, BA_Palette7ESize
+BA_Palette7FBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette7FOffset, BA_Palette7FSize
+BA_Palette80BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette80Offset, BA_Palette80Size
+BA_Palette81BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette81Offset, BA_Palette81Size
+BA_Palette82BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette82Offset, BA_Palette82Size
+BA_Palette83BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette83Offset, BA_Palette83Size
+BA_Palette84BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette84Offset, BA_Palette84Size
+BA_Palette85BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette85Offset, BA_Palette85Size
+BA_Palette86BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette86Offset, BA_Palette86Size
+BA_Palette87BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette87Offset, BA_Palette87Size
+BA_Palette88BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette88Offset, BA_Palette88Size
+BA_Palette89BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette89Offset, BA_Palette89Size
+BA_Palette8ABattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette8AOffset, BA_Palette8ASize
+BA_Palette8BBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette8BOffset, BA_Palette8BSize
+BA_Palette8CBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette8COffset, BA_Palette8CSize
+BA_Palette8DBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette8DOffset, BA_Palette8DSize
+BA_Palette8EBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette8EOffset, BA_Palette8ESize
+BA_Palette8FBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette8FOffset, BA_Palette8FSize
+BA_Palette90BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette90Offset, BA_Palette90Size
+BA_Palette91BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette91Offset, BA_Palette91Size
+BA_Palette92BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette92Offset, BA_Palette92Size
+BA_Palette93BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette93Offset, BA_Palette93Size
+BA_Palette94BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette94Offset, BA_Palette94Size
+BA_Palette95BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette95Offset, BA_Palette95Size
+BA_Palette96BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette96Offset, BA_Palette96Size
+BA_Palette97BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette97Offset, BA_Palette97Size
+BA_Palette98BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette98Offset, BA_Palette98Size
+BA_Palette99BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette99Offset, BA_Palette99Size
+BA_Palette9ABattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette9AOffset, BA_Palette9ASize
+BA_Palette9BBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette9BOffset, BA_Palette9BSize
+BA_Palette9CBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette9COffset, BA_Palette9CSize
+BA_Palette9DBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette9DOffset, BA_Palette9DSize
+BA_Palette9EBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette9EOffset, BA_Palette9ESize
+BA_Palette9FBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_Palette9FOffset, BA_Palette9FSize
+BA_PaletteA0BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteA0Offset, BA_PaletteA0Size
+BA_PaletteA1BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteA1Offset, BA_PaletteA1Size
+BA_PaletteA2BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteA2Offset, BA_PaletteA2Size
+BA_PaletteA3BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteA3Offset, BA_PaletteA3Size
+BA_PaletteA4BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteA4Offset, BA_PaletteA4Size
+BA_PaletteA5BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteA5Offset, BA_PaletteA5Size
+BA_PaletteA6BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteA6Offset, BA_PaletteA6Size
+BA_PaletteA7BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteA7Offset, BA_PaletteA7Size
+BA_PaletteA8BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteA8Offset, BA_PaletteA8Size
+BA_PaletteA9BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteA9Offset, BA_PaletteA9Size
+BA_PaletteAABattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteAAOffset, BA_PaletteAASize
+BA_PaletteABBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteABOffset, BA_PaletteABSize
+BA_PaletteACBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteACOffset, BA_PaletteACSize
+BA_PaletteADBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteADOffset, BA_PaletteADSize
+BA_PaletteAEBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteAEOffset, BA_PaletteAESize
+BA_PaletteAFBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteAFOffset, BA_PaletteAFSize
+BA_PaletteB0BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteB0Offset, BA_PaletteB0Size
+BA_PaletteB1BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteB1Offset, BA_PaletteB1Size
+BA_PaletteB2BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteB2Offset, BA_PaletteB2Size
+BA_PaletteB3BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteB3Offset, BA_PaletteB3Size
+BA_PaletteB4BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteB4Offset, BA_PaletteB4Size
+BA_PaletteB5BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteB5Offset, BA_PaletteB5Size
+BA_PaletteB6BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteB6Offset, BA_PaletteB6Size
+BA_PaletteB7BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteB7Offset, BA_PaletteB7Size
+BA_PaletteB8BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteB8Offset, BA_PaletteB8Size
+BA_PaletteB9BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteB9Offset, BA_PaletteB9Size
+BA_PaletteBABattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteBAOffset, BA_PaletteBASize
+BA_PaletteBBBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteBBOffset, BA_PaletteBBSize
+BA_PaletteBCBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteBCOffset, BA_PaletteBCSize
+BA_PaletteBDBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteBDOffset, BA_PaletteBDSize
+BA_PaletteBEBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteBEOffset, BA_PaletteBESize
+BA_PaletteBFBattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteBFOffset, BA_PaletteBFSize
+BA_PaletteC0BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteC0Offset, BA_PaletteC0Size
+BA_PaletteC1BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteC1Offset, BA_PaletteC1Size
+BA_PaletteC2BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteC2Offset, BA_PaletteC2Size
+BA_PaletteC3BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteC3Offset, BA_PaletteC3Size
+BA_PaletteC4BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteC4Offset, BA_PaletteC4Size
+BA_PaletteC5BattleAnimationPaletteDataEntry .dstruct structBattleAnimationPaletteData, BA_PaletteC5Offset, BA_PaletteC5Size

@@ -1,0 +1,488 @@
+	NullClassGender							= 1
+		NullClassGenderGender				= GenderMale
+
+	CavalierGender							= 2
+		CavalierGenderGender				= GenderMale
+
+	LanceKnightGender						= 3
+		LanceKnightGenderGender				= GenderMale
+
+	BowKnightGender							= 4
+		BowKnightGenderGender				= GenderMale
+
+	AxeKnightGender							= 5
+		AxeKnightGenderGender				= GenderMale
+
+	SwordKnightGender						= 6
+		SwordKnightGenderGender				= GenderMale
+
+	TroubadourGender						= 7
+		TroubadourGenderGender				= GenderFemale
+
+	KnightLordGender						= 8
+		KnightLordGenderGender				= GenderMale
+
+	DukeKnightGender						= 9
+		DukeKnightGenderGender				= GenderMale
+
+	MasterKnightGender						= 10
+		MasterKnightGenderGender			= GenderMale
+
+	PaladinGender							= 11
+		PaladinGenderGender					= GenderMale
+
+	PaladinFGender							= 12
+		PaladinFGenderGender				= GenderFemale
+
+	ArchKnightGender						= 13
+		ArchKnightGenderGender				= GenderMale
+
+	RangerGender							= 14
+		RangerGenderGender					= GenderMale
+
+	MageKnightGender						= 15
+		MageKnightGenderGender				= GenderMale
+
+	GreatKnightGender						= 16
+		GreatKnightGenderGender				= GenderMale
+
+	PegasusKnightGender						= 17
+		PegasusKnightGenderGender			= GenderFemale
+
+	FalconKnightGender						= 18
+		FalconKnightGenderGender			= GenderFemale
+
+	DracoriderGender						= 19
+		DracoriderGenderGender				= GenderMale
+
+	DracoknightGender						= 20
+		DracoknightGenderGender				= GenderMale
+
+	DragonMasterGender						= 21
+		DragonMasterGenderGender			= GenderMale
+
+	ArcherGender							= 22
+		ArcherGenderGender					= GenderMale
+
+	MyrmidonGender							= 23
+		MyrmidonGenderGender				= GenderMale
+
+	SwordmasterGender						= 24
+		SwordmasterGenderGender				= GenderMale
+
+	SniperGender							= 25
+		SniperGenderGender					= GenderMale
+
+	HeroFe4Gender							= 26
+		HeroFe4GenderGender					= GenderMale
+
+	GeneralGender							= 27
+		GeneralGenderGender					= GenderMale
+
+	EmperorGender							= 28
+		EmperorGenderGender					= GenderMale
+
+	BaronGender								= 29
+		BaronGenderGender					= GenderMale
+
+	ArmoredLanceGender						= 30
+		ArmoredLanceGenderGender			= GenderMale
+
+	ArmoredAxeGender						= 31
+		ArmoredAxeGenderGender				= GenderMale
+
+	ArmoredBowGender						= 32
+		ArmoredBowGenderGender				= GenderMale
+
+	ArmoredSwordGender						= 33
+		ArmoredSwordGenderGender			= GenderMale
+
+	BerserkerGender							= 34
+		BerserkerGenderGender				= GenderMale
+
+	BrigandGender							= 35
+		BrigandGenderGender					= GenderMale
+
+	BrigandAlternateGender					= 36
+		BrigandAlternateGenderGender		= GenderMale
+
+	WarriorGender							= 37
+		WarriorGenderGender					= GenderMale
+
+	HunterGender							= 38
+		HunterGenderGender					= GenderMale
+
+	PirateGender							= 39
+		PirateGenderGender					= GenderMale
+
+	JuniorLordGender						= 40
+		JuniorLordGenderGender				= GenderMale
+
+	MageKnightDismountedGender				= 41
+		MageKnightDismountedGenderGender	= GenderMale
+
+	LordGender								= 42
+		LordGenderGender					= GenderMale
+
+	PrinceGender							= 43
+		PrinceGenderGender					= GenderMale
+
+	MageKnightFDismountedGender				= 44
+		MageKnightFDismountedGenderGender	= GenderFemale
+
+	BaronGlitchedGender						= 45
+		BaronGlitchedGenderGender			= GenderFemale
+
+	DancerGender							= 46
+		DancerGenderGender					= GenderFemale
+
+	PriestGender							= 47
+		PriestGenderGender					= GenderMale
+
+	MageGender								= 48
+		MageGenderGender					= GenderMale
+
+	LoptrianMageGender						= 49
+		LoptrianMageGenderGender			= GenderMale
+
+	ThunderMageGender						= 50
+		ThunderMageGenderGender				= GenderMale
+
+	WindMageGender							= 51
+		WindMageGenderGender				= GenderMale
+
+	HighPriestGender						= 52
+		HighPriestGenderGender				= GenderMale
+
+	BishopGender							= 53
+		BishopGenderGender					= GenderMale
+
+	SageGender								= 54
+		SageGenderGender					= GenderMale
+
+	BardGender								= 55
+		BardGenderGender					= GenderMale
+
+	ClericGender							= 56
+		ClericGenderGender					= GenderFemale
+
+	SorcererGender							= 57
+		SorcererGenderGender				= GenderMale
+
+	DarkBishopGender						= 58
+		DarkBishopGenderGender				= GenderMale
+
+	ThiefGender								= 59
+		ThiefGenderGender					= GenderMale
+
+	RogueGender								= 60
+		RogueGenderGender					= GenderMale
+
+	CivilianGender							= 61
+		CivilianGenderGender				= GenderMale
+
+	BallisticianGender						= 62
+		BallisticianGenderGender			= GenderMale
+
+	IronBallisticianGender					= 63
+		IronBallisticianGenderGender		= GenderMale
+
+	KillerBallisticianGender				= 64
+		KillerBallisticianGenderGender		= GenderMale
+
+	DarkPrinceGender						= 65
+		DarkPrinceGenderGender				= GenderMale
+
+	FighterGender							= 66
+		FighterGenderGender					= GenderMale
+
+	CavalierDismountedGender				= 67
+		CavalierDismountedGenderGender		= GenderMale
+
+	LanceKnightDismountedGender				= 68
+		LanceKnightDismountedGenderGender	= GenderMale
+
+	BowKnightDismountedGender				= 69
+		BowKnightDismountedGenderGender		= GenderMale
+
+	AxeKnightDismountedGender				= 70
+		AxeKnightDismountedGenderGender		= GenderMale
+
+	SwordKnightDismountedGender				= 71
+		SwordKnightDismountedGenderGender	= GenderMale
+
+	TroubadourDismountedGender				= 72
+		TroubadourDismountedGenderGender	= GenderFemale
+
+	KnightLordDismountedGender				= 73
+		KnightLordDismountedGenderGender	= GenderMale
+
+	DukeKnightDismountedGender				= 74
+		DukeKnightDismountedGenderGender	= GenderMale
+
+	MasterKnightDismountedGender			= 75
+		MasterKnightDismountedGenderGender	= GenderMale
+
+	PaladinDismountedGender					= 76
+		PaladinDismountedGenderGender		= GenderMale
+
+	PaladinFDismountedGender				= 77
+		PaladinFDismountedGenderGender		= GenderFemale
+
+	ArchKnightDismountedGender				= 78
+		ArchKnightDismountedGenderGender	= GenderMale
+
+	RangerDismountedGender					= 79
+		RangerDismountedGenderGender		= GenderMale
+
+	GreatKnightDismountedGender				= 80
+		GreatKnightDismountedGenderGender	= GenderMale
+
+	PegasusKnightDismountedGender			= 81
+		PegasusKnightDismountedGenderGender	= GenderFemale
+
+	FalconKnightDismountedGender			= 82
+		FalconKnightDismountedGenderGender	= GenderFemale
+
+	DracoriderDismountedGender				= 83
+		DracoriderDismountedGenderGender	= GenderMale
+
+	DracoknightDismountedGender				= 84
+		DracoknightDismountedGenderGender	= GenderMale
+
+	DragonMasterDismountedGender			= 85
+		DragonMasterDismountedGenderGender	= GenderMale
+
+	BowKnightFGender						= 86
+		BowKnightFGenderGender				= GenderFemale
+
+	BowKnightFDismountedGender				= 87
+		BowKnightFDismountedGenderGender	= GenderFemale
+
+	ArchKnightFGender						= 88
+		ArchKnightFGenderGender				= GenderFemale
+
+	ArchKnightFDismountedGender				= 89
+		ArchKnightFDismountedGenderGender	= GenderFemale
+
+	MasterKnightFGender						= 90
+		MasterKnightFGenderGender			= GenderFemale
+
+	MasterKnightFDismountedGender			= 91
+		MasterKnightFDismountedGenderGender	= GenderFemale
+
+	DracoriderFGender						= 92
+		DracoriderFGenderGender				= GenderFemale
+
+	DracoriderFDismountedGender				= 93
+		DracoriderFDismountedGenderGender	= GenderFemale
+
+	DracoknightFGender						= 94
+		DracoknightFGenderGender			= GenderFemale
+
+	DracoknightFDismountedGender			= 95
+		DracoknightFDismountedGenderGender	= GenderFemale
+
+	DragonMasterFGender						= 96
+		DragonMasterFGenderGender			= GenderFemale
+
+	DragonMasterFDismountedGender			= 97
+		DragonMasterFDismountedGenderGender	= GenderFemale
+
+	VeninBallisticianGender					= 98
+		VeninBallisticianGenderGender		= GenderMale
+
+	MageFGender								= 99
+		MageFGenderGender					= GenderFemale
+
+	ThunderMageFGender						= 100
+		ThunderMageFGenderGender			= GenderFemale
+
+	LoptrianMageFGender						= 101
+		LoptrianMageFGenderGender			= GenderFemale
+
+	WindMageFGender							= 102
+		WindMageFGenderGender				= GenderFemale
+
+	MageKnightFGender						= 103
+		MageKnightFGenderGender				= GenderFemale
+
+	SageFGender								= 104
+		SageFGenderGender					= GenderFemale
+
+	PriestessGender							= 105
+		PriestessGenderGender				= GenderFemale
+
+	HighPriestessGender						= 106
+		HighPriestessGenderGender			= GenderFemale
+
+	MyrmidonFGender							= 107
+		MyrmidonFGenderGender				= GenderFemale
+
+	HeroFE4FGender							= 108
+		HeroFE4FGenderGender				= GenderFemale
+
+	SwordmasterFGender						= 109
+		SwordmasterFGenderGender			= GenderFemale
+
+	ArcherFGender							= 110
+		ArcherFGenderGender					= GenderFemale
+
+	SniperFGender							= 111
+		SniperFGenderGender					= GenderFemale
+
+	ThiefFGender							= 112
+		ThiefFGenderGender					= GenderFemale
+
+	RogueFGender							= 113
+		RogueFGenderGender					= GenderFemale
+
+	HeroGender								= 114
+		HeroGenderGender					= GenderMale
+
+	ThiefRogueGender						= 115
+		ThiefRogueGenderGender				= GenderMale
+
+	PegasusRiderGender						= 116
+		PegasusRiderGenderGender			= GenderFemale
+
+	PegasusRiderDismountedGender			= 117
+		PegasusRiderDismountedGenderGender	= GenderFemale
+
+	SoldierGender							= 118
+		SoldierGenderGender					= GenderMale
+
+	ArcherEnemyGender						= 119
+		ArcherEnemyGenderGender				= GenderMale
+
+	HeroFGender								= 120
+		HeroFGenderGender					= GenderFemale
+
+	Unknown78Gender							= 121
+		Unknown78GenderGender				= GenderMale
+
+	Unknown79Gender							= 122
+		Unknown79GenderGender				= GenderMale
+
+NullClassGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, NullClassGenderGender
+CavalierGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, CavalierGenderGender
+LanceKnightGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, LanceKnightGenderGender
+BowKnightGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, BowKnightGenderGender
+AxeKnightGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, AxeKnightGenderGender
+SwordKnightGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, SwordKnightGenderGender
+TroubadourGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, TroubadourGenderGender
+KnightLordGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, KnightLordGenderGender
+DukeKnightGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DukeKnightGenderGender
+MasterKnightGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, MasterKnightGenderGender
+PaladinGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, PaladinGenderGender
+PaladinFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, PaladinFGenderGender
+ArchKnightGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ArchKnightGenderGender
+RangerGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, RangerGenderGender
+MageKnightGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, MageKnightGenderGender
+GreatKnightGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, GreatKnightGenderGender
+PegasusKnightGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, PegasusKnightGenderGender
+FalconKnightGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, FalconKnightGenderGender
+DracoriderGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DracoriderGenderGender
+DracoknightGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DracoknightGenderGender
+DragonMasterGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DragonMasterGenderGender
+ArcherGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ArcherGenderGender
+MyrmidonGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, MyrmidonGenderGender
+SwordmasterGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, SwordmasterGenderGender
+SniperGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, SniperGenderGender
+HeroFe4GenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, HeroFe4GenderGender
+GeneralGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, GeneralGenderGender
+EmperorGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, EmperorGenderGender
+BaronGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, BaronGenderGender
+ArmoredLanceGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ArmoredLanceGenderGender
+ArmoredAxeGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ArmoredAxeGenderGender
+ArmoredBowGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ArmoredBowGenderGender
+ArmoredSwordGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ArmoredSwordGenderGender
+BerserkerGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, BerserkerGenderGender
+BrigandGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, BrigandGenderGender
+BrigandAlternateGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, BrigandAlternateGenderGender
+WarriorGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, WarriorGenderGender
+HunterGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, HunterGenderGender
+PirateGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, PirateGenderGender
+JuniorLordGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, JuniorLordGenderGender
+MageKnightDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, MageKnightDismountedGenderGender
+LordGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, LordGenderGender
+PrinceGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, PrinceGenderGender
+MageKnightFDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, MageKnightFDismountedGenderGender
+BaronGlitchedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, BaronGlitchedGenderGender
+DancerGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DancerGenderGender
+PriestGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, PriestGenderGender
+MageGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, MageGenderGender
+LoptrianMageGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, LoptrianMageGenderGender
+ThunderMageGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ThunderMageGenderGender
+WindMageGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, WindMageGenderGender
+HighPriestGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, HighPriestGenderGender
+BishopGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, BishopGenderGender
+SageGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, SageGenderGender
+BardGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, BardGenderGender
+ClericGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ClericGenderGender
+SorcererGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, SorcererGenderGender
+DarkBishopGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DarkBishopGenderGender
+ThiefGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ThiefGenderGender
+RogueGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, RogueGenderGender
+CivilianGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, CivilianGenderGender
+BallisticianGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, BallisticianGenderGender
+IronBallisticianGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, IronBallisticianGenderGender
+KillerBallisticianGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, KillerBallisticianGenderGender
+DarkPrinceGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DarkPrinceGenderGender
+FighterGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, FighterGenderGender
+CavalierDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, CavalierDismountedGenderGender
+LanceKnightDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, LanceKnightDismountedGenderGender
+BowKnightDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, BowKnightDismountedGenderGender
+AxeKnightDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, AxeKnightDismountedGenderGender
+SwordKnightDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, SwordKnightDismountedGenderGender
+TroubadourDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, TroubadourDismountedGenderGender
+KnightLordDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, KnightLordDismountedGenderGender
+DukeKnightDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DukeKnightDismountedGenderGender
+MasterKnightDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, MasterKnightDismountedGenderGender
+PaladinDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, PaladinDismountedGenderGender
+PaladinFDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, PaladinFDismountedGenderGender
+ArchKnightDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ArchKnightDismountedGenderGender
+RangerDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, RangerDismountedGenderGender
+GreatKnightDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, GreatKnightDismountedGenderGender
+PegasusKnightDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, PegasusKnightDismountedGenderGender
+FalconKnightDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, FalconKnightDismountedGenderGender
+DracoriderDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DracoriderDismountedGenderGender
+DracoknightDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DracoknightDismountedGenderGender
+DragonMasterDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DragonMasterDismountedGenderGender
+BowKnightFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, BowKnightFGenderGender
+BowKnightFDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, BowKnightFDismountedGenderGender
+ArchKnightFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ArchKnightFGenderGender
+ArchKnightFDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ArchKnightFDismountedGenderGender
+MasterKnightFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, MasterKnightFGenderGender
+MasterKnightFDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, MasterKnightFDismountedGenderGender
+DracoriderFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DracoriderFGenderGender
+DracoriderFDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DracoriderFDismountedGenderGender
+DracoknightFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DracoknightFGenderGender
+DracoknightFDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DracoknightFDismountedGenderGender
+DragonMasterFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DragonMasterFGenderGender
+DragonMasterFDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, DragonMasterFDismountedGenderGender
+VeninBallisticianGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, VeninBallisticianGenderGender
+MageFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, MageFGenderGender
+ThunderMageFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ThunderMageFGenderGender
+LoptrianMageFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, LoptrianMageFGenderGender
+WindMageFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, WindMageFGenderGender
+MageKnightFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, MageKnightFGenderGender
+SageFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, SageFGenderGender
+PriestessGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, PriestessGenderGender
+HighPriestessGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, HighPriestessGenderGender
+MyrmidonFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, MyrmidonFGenderGender
+HeroFE4FGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, HeroFE4FGenderGender
+SwordmasterFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, SwordmasterFGenderGender
+ArcherFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ArcherFGenderGender
+SniperFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, SniperFGenderGender
+ThiefFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ThiefFGenderGender
+RogueFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, RogueFGenderGender
+HeroGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, HeroGenderGender
+ThiefRogueGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ThiefRogueGenderGender
+PegasusRiderGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, PegasusRiderGenderGender
+PegasusRiderDismountedGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, PegasusRiderDismountedGenderGender
+SoldierGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, SoldierGenderGender
+ArcherEnemyGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, ArcherEnemyGenderGender
+HeroFGenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, HeroFGenderGender
+Unknown78GenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, Unknown78GenderGender
+Unknown79GenderBattleAnimationClassGendersEntry .dstruct structBattleAnimationClassGenders, Unknown79GenderGender

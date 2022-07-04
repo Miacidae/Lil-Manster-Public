@@ -1,0 +1,48 @@
+B0C32 - B0C8D
+
+3B 08     ; BEGIN
+03 42     ; Load Tile: Mend (+pause)
+FE FF     ; --Wait--
+04 42     ; Load Tile: Mend Tilemap (+pause)
+FE FF     ; --Wait--
+00 1A     ; Placement: Above attacker
+06 56     ; Effects: ??? (+pause)
+FE FF     ; --Wait--
+25 2A     ; Play sound: Ranged Mend start
+00 04     ; Display tiles: ???
+04 58     ; BG mod: Clear1? (+pause)
+FE FF     ; --Wait--
+05 58     ; BG mod: Clear2? (+pause)
+FE FF     ; --Wait--
+A3 56     ; Palette: Heal1 (+pause)
+FE FF     ; --Wait--
+A4 16     ; Palette: Heal2
+28 54     ; --Wait: 40 frames--
+FE FF     ; --Wait--
+17 10     ; Battle Scene Mod2: Fade out battle area to black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+05 0E     ; BG??: Meteo something1?
+06 4E     ; BG??: Meteo something1? (+pause)
+06 18     ; BG Mod: Clear3?
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+11 08     ; Battle Scene Mod: Hide Attacker
+12 08     ; Battle Scene Mod: Show Defender
+01 04     ; Display Tiles: ???
+A5 16     ; Palette: Heal3
+01 1A     ; Placement: Defender
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+16 10     ; Battle Scene Mod2: Fade In Battle Area: Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+26 54     ; --Wait: 38 frames--
+FE FF     ; --Wait--
+FB FF     ; Healing point
+A6 56     ; Palette: Heal4 (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+02 04     ; Display Tiles: ???
+36 08     ; END
+FF FF     ; EXIT

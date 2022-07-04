@@ -1,0 +1,27 @@
+B1F0A - B1F3B
+
+3B 08     ; BEGIN
+18 42     ; Load Tile: Sleep (+pause)
+FE FF     ; --Wait--
+19 42     ; Load Tile: Sleep Tilemap (+pause)
+FE FF     ; --Wait--
+2E 2A     ; Play Sound: Sleep
+2A 04     ; Display Tiles: Sleep Pattern
+08 06     ; Tile Effect: Heavy Ripple
+20 1A     ; Scrolling: Sleep
+3C 16     ; Palette: Sleep 3
+3D 56     ; Palette: Sleep 4 (+pause)
+FE FF     ; --Wait--
+3A 16     ; Palette: Sleep 1
+3B 16     ; Palette: Sleep 2
+C0 54     ; --Wait: 192 frames--
+FE FF     ; --Wait--
+3E 16     ; Palette: Sleep 5
+3F 56     ; Palette: Sleep 6 (+pause)
+FE FF     ; --Wait--
+2B 04     ; Display Tiles: ???
+00 06     ; Tile Effect: Stop
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

@@ -1,0 +1,16 @@
+12: Text Speed via argument
+
+14: Text SFX via argument
+	00=nothing
+	01=boops
+	02=scritches
+	03=low boops
+
+17: Combined 03 and 08
+(useful for 1 line > Wait > More lines)
+
+text-pause (variable depending on byte)
+	.word $1D00
+	.byte $20
+	
+	

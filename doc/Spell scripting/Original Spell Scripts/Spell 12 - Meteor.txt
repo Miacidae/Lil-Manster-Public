@@ -1,0 +1,85 @@
+B0E1A - B0EBF
+
+3B 08     ; BEGIN
+2F 42     ; Load Tile: Meteor Outlines (+pause)
+FE FF     ; --Wait--
+31 42     ; Load Tile: Prob Meteor Tilemap (+pause)
+FE FF     ; --Wait--
+17 10     ; Battle Scene Mod2: Fade Out Battle Area to Black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+11 08     ; Battle Scene Mod: Hide Attacker
+12 08     ; Battle Scene Mod: Show Defender
+30 42     ; Load Tile: Meteor Explosion+Lines (+pause)
+FE FF     ; --Wait--
+32 42     ; Load Tile: Prob Meteor Explosion Tilemap (+pause)
+FE FF     ; --Wait--
+5E 16     ; Effect: Meteor Charge Lines 6
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+2A 08     ; Battle Scene Mod: Shift Background Up
+38 04     ; Display Tiles: Meteor something1
+02 1A     ; Placement: Center of Screen
+29 1A     ; Placement/Scroll: ???
+2C 08     ; Battle Scene Mod: Meteor Something
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+07 2A     ; Play Sound: Meteor Charging
+58 16     ; Effect: Meteor Charge Lines 4
+59 16     ; Effect: Meteor Charge BG 2
+24 54     ; --Wait: 36 frames--
+FE FF     ; --Wait--
+56 16     ; Effect: Meteor Charge Lines 3
+57 16     ; Effect: Meteor Charge BG 1
+5A 54     ; --Wait: 90 frames--
+FE FF     ; --Wait--
+5A 16     ; Effect: Meteor Charge BG 3
+5B 16     ; Effect: Meteor Charge BG 4
+8D 54     ; --Wait: 141 frames--
+FE FF     ; --Wait--
+39 04     ; Display Tiles: Meteor something2
+29 1A     ; Placement/Scroll: ???
+5F 16     ; Effect: Meteor Charge ???
+33 42     ; Load Tile: Prob Meteor Explosion Tilemap2 (+pause)
+FE FF     ; --Wait--
+08 2A     ; Play Sound: Meteor Exploding
+FD FF     ; Cast1: Starts the animation loop on the caster
+F9 FF     ; Dodge point
+5C 16     ; Effect: Meteor Charge Lines 5
+5D 16     ; Effect: Meteor Charge BG 5
+2E 54     ; --Wait: 46 frames--
+FE FF     ; --Wait--
+FA FF     ; Damage point
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+3A 04     ; Display Tiles: Meteor something3
+2B 08     ; Battle Scene Mod: Reset BG
+55 16     ; Effect: Meteor Charge Lines 2
+FD FF     ; Cast2: Resting
+FC FF     ; Reaction point
+00 18     ; BG Mod: ???
+FE FF     ; --Wait--
+FD FF     ; Cast3: ???
+01 18     ; BG Mod: ???
+17 10     ; Battle Scene Mod2: Fade Out Battle Area to Black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+17 10     ; Battle Scene Mod2: Fade Out Battle Area to Black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+05 0E     ; BG?: Meteor something1
+06 4E     ; BG?: Meteor something2
+02 18     ; BG Mod: ???
+FE FF     ; --Wait--
+26 08     ; Battle Scene Mod: Hide Defender
+37 08     ; Battle Scene Mod: Display Attacker
+51 04     ; Display Tiles: ???
+12 56     ; Effect: Reset Tile/Palette Effects (+pause)
+FE FF     ; --Wait--
+16 10     ; Battle Scene Mod2: Fade In Battle Area: Fast
+FE FF     ; --Wait--
+81 16     ; Effect: Meteor ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

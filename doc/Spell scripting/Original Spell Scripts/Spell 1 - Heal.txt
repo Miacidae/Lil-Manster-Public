@@ -1,0 +1,30 @@
+B0AA0 - B0AD7
+
+3B 08     ; BEGIN
+01 42     ; Load Tile: Heal (+pause)
+FE FF     ; --Wait--
+02 42     ; Load Tile: Heal Tileset (+pause)
+FE FF     ; --Wait--
+00 1A     ; Placement: Above attacker
+06 56     ; Palette: ??? (+pause)
+FE FF     ; --Wait--
+22 2A     ; Play sound: Heal-start
+00 04     ; Display tiles: ???
+02 56     ; Effects: ??? (+pause)
+FE FF     ; --Wait--
+03 56     ; Effects: ??? (+pause)
+FD FF     ; Cast1: Starts the animation loop on the caster
+FE FF     ; --Wait--
+01 04     ; Display tiles: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+01 1A     ; Placement: Defender location
+04 56     ; Effects: ??? (+pause)
+FE FF     ; --Wait--
+FB FF     ; Healing point
+05 56     ; Effects: ??? (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+02 04     ; Display tiles: ???
+36 08     ; END
+FF FF     ; EXIT

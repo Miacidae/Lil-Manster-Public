@@ -1,0 +1,58 @@
+B140E - B147D
+
+3B 08     ; BEGIN
+4E 42     ; Load Tiles: Mjölnir Bolts Tilemap (+pause)
+FE FF     ; --Wait--
+4D 42     ; Load Tiles: Mjölnir Static Tilemap (+pause)
+FE FF     ; --Wait--
+4B 42     ; Load Tiles: Mjölnir Static (+pause)
+FE FF     ; --Wait--
+09 1C     ; Secondary Palette: ???
+4C 42     ; Load Tiles: Mjölnir Bolts - 2bpp (+pause)
+FE FF     ; --Wait--
+09 5E     ; Scroll to Defender: Normal (+pause)
+FE FF     ; --Wait--
+82 16     ; Effect / Palette: ???
+01 22     ; Add Background Hue: Light Blue
+02 1A     ; Placement: Center of Screen
+14 06     ; Tile Effect: Mjölnir Orb
+13 56     ; Effect: Fade Out 2 (+pause)
+FE FF     ; --Wait--
+0F 2A     ; Play Sound: Mjölnir Orb Arrive
+3E 1A     ; Placement / Scrolling: ??? 
+16 40     ; Effect Mask: Create Orb Hole + Slow Expand (+pause)
+FE FF     ; --Wait--
+4B 04     ; Display Tiles: Mjölnir Whooshy BG
+83 56     ; Effect / Palette: Flashing Teal/Pink?? (+pause)
+FE FF     ; --Wait--
+11 2A     ; Play Sound: Mjölnir Bolts
+FD FF     ; Cast1: Starts the animation loop on the caster
+F9 FF     ; Dodge point
+84 16     ; Effect / Palette: ???
+4C 04     ; Display Tiles: Mjölnir Shock
+3D 1A     ; Placement: Center of Screen 2
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+FA FF     ; Damage point
+78 54     ; --Wait: 120 frames--
+FE FF     ; --Wait--
+10 2A     ; Play Sound: Mjölnir Orb Leave
+4D 04     ; Display Tiles: Mjölnir Thing???
+85 16     ; Effect / Palette: ???
+17 00     ; Effect Mask: Fast Contract (any to pixel-wide)
+20 54     ; --Wait: 32 frames--
+FE FF     ; --Wait--
+62 04     ; Clear Tiles?
+18 00     ; Effect Mask: Delete (Hole)
+01 06     ; Tile Effect: ???
+82 16     ; Effect / Palette: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+00 06     ; Tile Effect: Stop
+1F 1A     ; Placement: ???
+12 56     ; Effect: Reset Tile/Palette Effects (+pause)
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

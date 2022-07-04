@@ -1,0 +1,750 @@
+
+eventChapter7Events ; 99/B023
+
+	_OpeningEventDefinitions ; 99/B023
+		EVENT FlagAlwaysZero, _OpeningEvent
+			CMP_WORD wCurrentTurn, 0
+		END_DEFINITION
+	END_DEFINITION_ARRAY
+
+	_TurnEventDefinitions ; 99/B030	
+		EVENT FlagBossDeath, eventMapDeathQuoteDummyEvent
+			CHECK_DEAD Eisenhau
+			CMP_WORD wCurrentPhase, Enemy
+		END_DEFINITION
+		EVENT FlagAlliedDeath, eventMapDeathQuoteDummyEvent
+			TEST_FLAG_SET FlagPlayerDeath
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _EisenhauSpawn
+			CMP_WORD wCurrentTurn, 2
+			CMP_WORD wCurrentPhase, Enemy
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _HannibalGroupAIChange
+			CMP_WORD wCurrentPhase, NPC
+		END_DEFINITION
+		EVENT $0D, _EisenhauAIChange
+			CMP_WORD wCurrentTurn, 13
+			CMP_WORD wCurrentPhase, Player
+			TEST_FLAG_UNSET $0A
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _FinnSafyAppear
+			CMP_WORD wCurrentTurn, 2
+			CMP_WORD wCurrentPhase, Player
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _CavalierReinforcements
+			CMP_WORD_RANGE wCurrentTurn, 2, 5
+			CMP_WORD wCurrentPhase, Enemy
+			TEST_FLAG_UNSET $0A
+			TEST_FLAG_UNSET FlagBossDeath
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _MageBishopReinforcements
+			CMP_WORD_RANGE wCurrentTurn, 6, 7
+			CMP_WORD wCurrentPhase, Enemy
+			TEST_FLAG_UNSET $0A
+			TEST_FLAG_UNSET FlagBossDeath
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _MageBishopReinforcements
+			CMP_WORD_RANGE wCurrentTurn, 11, 12
+			CMP_WORD wCurrentPhase, Enemy
+			TEST_FLAG_UNSET $0A
+			TEST_FLAG_UNSET FlagBossDeath
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _SoldierArmorReinforcements
+			CMP_WORD_RANGE wCurrentTurn, 8, 10
+			CMP_WORD wCurrentPhase, Enemy
+			TEST_FLAG_UNSET $0A
+			TEST_FLAG_UNSET FlagBossDeath
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _RaydrikDialogue
+			TEST_FLAG_SET $06
+			TEST_FLAG_UNSET $0A
+			CMP_WORD wCurrentPhase, Enemy
+		END_DEFINITION
+	END_DEFINITION_ARRAY
+
+	_TalkEventDefinitions ; 99/B0F2
+		EVENT $0F, _SafyShivaTalk
+			CHECK_CHARS2 Safy, Shiva
+		END_DEFINITION
+		EVENT $10, _LeifFinnTalk
+			CHECK_CHARS2 Leif, Finn
+		END_DEFINITION
+		EVENT $12, _NannaFinnTalk
+			CHECK_CHARS2 Nanna, Finn
+		END_DEFINITION
+	END_DEFINITION_ARRAY
+
+	_LocationEventDefinitions ; 99/B112
+		EVENT $21, _PureWaterHouse
+			macroEventConditionCheckCoords [6, 46]
+			CMP_WORD wCurrentPhase, Player
+		END_DEFINITION
+		EVENT $22, _AntitoxinHouse
+			macroEventConditionCheckCoords [2, 12]
+			CMP_WORD wCurrentPhase, Player
+		END_DEFINITION
+		EVENT $23, _MasterSealHouse
+			macroEventConditionCheckCoords [2, 13]
+			CMP_WORD wCurrentPhase, Player
+		END_DEFINITION
+	END_DEFINITION_ARRAY
+
+	_BeforeActionEventDefinitions ; 99/B153
+		macroPlayerRetreatDefinition $14, eventChapter7Events._PlayerRetreat
+	END_DEFINITION_ARRAY
+
+	_AfterActionEventDefinitions ; 99/B193
+		EVENT $06, _HannibalAppearCheck
+			macroEventConditionCheckCoords [10, 48]
+			CMP_WORD wCurrentPhase, Player
+			RUN_ASM _rlEnemyCheck
+			TEST_FLAG_UNSET $14
+		END_DEFINITION
+		EVENT FlagAlwaysZero, _EndingEvent
+			TEST_FLAG_SET $14
+		END_DEFINITION
+	END_DEFINITION_ARRAY
+
+	_BattleEventDefinitions ; 99/B1B7
+		EVENT $0B, eventBattleQuoteDummyEvent
+			CHECK_SINGLE Eisenhau
+		END_DEFINITION
+		EVENT $0C, eventBattleQuoteDummyEvent
+			CHECK_SINGLE Shiva
+		END_DEFINITION
+		EVENT $0E, eventBattleQuoteDummyEvent
+			CHECK_SINGLE Raydrik
+		END_DEFINITION
+	END_DEFINITION_ARRAY
+
+	_ShopEventDefinitions ; 99/B1D1
+		macroShopDefinition eventChapter7Data._Vendor
+	END_DEFINITION_ARRAY
+
+	_rlEnemyCheck ; 99/B1E6
+
+		.al
+		.xl
+		.autsiz
+		.databank ?
+
+		lda #(`_EnemyTable)<<8
+		sta lEventEngineLongParameter+1,b
+		lda #<>_EnemyTable
+		sta lEventEngineLongParameter,b
+		jsl rlASMCCountAllUnitUncapturedAliveByTable
+		lda wEventEngineParameter1,b
+		bne +
+
+		clc
+		rtl
+
+		+
+		sec
+		rtl
+
+	_EnemyTable ; 99/B1FF
+		.word Eisenhau
+		.word MunsterCavalier
+		.word MunsterBowKnight
+		.word MunsterTroubadour
+		.word MunsterAxeKnight
+		.word Raydrik
+	.word $0000
+
+	_CavalierReinforcements ; 99/B20D
+		SCROLL_CAMERA_ADDRESS eventChapter7Data._CavalierReinforcementsCameraCoordinates
+		YIELD
+
+		LOAD2 eventChapter7Data._CavalierReinforcementsGroup
+		WAIT_MOVE
+		YIELD
+
+		YIELD_UNK
+	END2
+
+	_MageBishopReinforcements ; 99/B21A
+		SCROLL_CAMERA_ADDRESS eventChapter7Data._MageBishopReinforcementsCameraCoordinates
+		YIELD
+
+		LOAD2 eventChapter7Data._MageBishopReinforcementsGroup
+		WAIT_MOVE
+		YIELD
+
+		YIELD_UNK
+	END2
+
+	_SoldierArmorReinforcements ; 99/B227
+		SCROLL_CAMERA_ADDRESS eventChapter7Data._SoldierArmorReinforcementsCameraCoordinates
+		YIELD
+
+		LOAD2 eventChapter7Data._SoldierArmorReinforcementsGroup
+		WAIT_MOVE
+		YIELD
+
+		YIELD_UNK
+	END2
+
+	_FinnSafyAppear ; 99/B234
+		SCROLL_CAMERA_SPEED [10, 48], 4
+		YIELD
+
+		macroCheckTurnStatusSet Finn, TurnStatusInvisible
+		JUMP_FALSE +
+
+		macroUnsetCharacterTurnStatus Finn, (TurnStatusUnknown1 | TurnStatusInvisible)
+
+		macroSetUnitPosition Finn, [1, 35]
+		macroSetCharacterByte Finn, structCharacterDataRAM.Fatigue, 0
+
+		+
+		macroCheckTurnStatusSet Safy, TurnStatusInvisible
+		JUMP_FALSE +
+
+		macroUnsetCharacterTurnStatus Safy, (TurnStatusUnknown1 | TurnStatusInvisible)
+
+		macroSetUnitPosition Safy, [2, 35]
+		macroSetCharacterByte Safy, structCharacterDataRAM.Fatigue, 0
+
+		+
+		CALL_ASM_LOOP rlUpdateUnitMapsAndFog, $0000
+
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $3D
+		YIELD
+
+		macroCheckTurnStatusSet Finn, (TurnStatusDead | TurnStatusUnknown1 | TurnStatusInvisible | TurnStatusCaptured)
+		JUMP_TRUE +
+
+		macroDialogueWithBackground ch7finnsafie1, 1
+
+		STORE_LONG lEventEngineLongParameter, ch7finnsafie2
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		STORE_LONG lEventEngineLongParameter, ch7finnsafie3
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		JUMP ++
+
+		+
+		macroDialogueWithBackground ch7finnsafie1, 1
+
+		STORE_LONG lEventEngineLongParameter, ch7finnsafie3
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		+
+		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
+		YIELD
+
+		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
+
+		macroCountAllUncapturedAliveUnits Finn
+		JUMP_FALSE ++
+
+		SCROLL_CAMERA_CHAR Finn
+		SET_CAMERA_SPEED 4
+		YIELD
+
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $33
+		YIELD
+
+		DIALOGUE ch7finnsafie4onlyfinn
+
+		macroCountAllUncapturedAliveUnits Safy
+		JUMP_FALSE +
+
+		STORE_LONG lEventEngineLongParameter, ch7finnsafie5
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		+
+		YIELD
+		JUMP ++
+
+		+
+		macroCountAllUncapturedAliveUnits Safy
+		JUMP_FALSE +
+
+		SCROLL_CAMERA_CHAR Safy
+		SET_CAMERA_SPEED 4
+		YIELD
+
+		DIALOGUE ch7finnsafie4safieonly
+		YIELD
+
+		+
+	END2
+
+	_UnknownDialogue ; 99/B3D6
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $39
+		YIELD
+
+		DIALOGUE ch6saiasgalzus1
+		YIELD
+	END2
+
+	_SafyShivaTalk ; 99/B3E6
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $4A
+		YIELD
+
+		DIALOGUE ch7safieshiva
+		YIELD
+
+		macroConvertToPlayerAllegiance Shiva
+
+		macroSetCharacterWord Shiva, structCharacterDataRAM.Leader, Leif
+
+		SET_FLAG $0C
+	END2
+
+	_LeifFinnTalk ; 99/B41C
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $4B
+		YIELD
+
+		DIALOGUE ch7finnleif
+		YIELD
+	END2
+
+	_NannaFinnTalk ; 99/B42C
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $4B
+		YIELD
+
+		DIALOGUE ch7finnnanna
+		YIELD
+	END2
+
+	_HannibalAppearCheck ; 99/B43C
+		EVENT_CMP_WORD_AT_EQ aSelectedCharacterBuffer.Character, Leif
+		JUMP_FALSE +
+
+		UNSET_FLAG $06
+		JUMP ++
+
+		+
+		SCROLL_CAMERA_SPEED [10, 48], 4
+		YIELD
+
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $3D
+		YIELD
+
+		DIALOGUE ch7hannibalappear
+		YIELD
+
+		SCROLL_CAMERA_ADDRESS eventChapter7Data._HannibalCameraCoordinates
+		YIELD
+
+		LOAD1 eventChapter7Data._HannibalGroup
+		WAIT_MOVE
+		YIELD
+
+		SCROLL_CAMERA_ADDRESS eventChapter7Data._HannibalArmorCameraCoordinates
+		YIELD
+
+		LOAD1 eventChapter7Data._HannibalArmorGroup
+		WAIT_MOVE
+		YIELD
+
+		+
+	END2
+
+	_RaydrikDialogue ; 99/B475
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $39
+		YIELD
+
+		DIALOGUE ch7raydrikdialogue
+		YIELD
+
+		SET_FLAG $0A
+
+		macroSetCharacterByte Eisenhau, structCharacterDataRAM.Unknown3F, $1000
+		macroSetCharacterByte MunsterCavalier, structCharacterDataRAM.Unknown3F, $1000
+		macroSetCharacterByte MunsterBowKnight, structCharacterDataRAM.Unknown3F, $1000
+		macroSetCharacterByte MunsterTroubadour, structCharacterDataRAM.Unknown3F, $1000
+		macroSetCharacterByte MunsterAxeKnight, structCharacterDataRAM.Unknown3F, $1000
+
+		macroSetCharacterByte Eisenhau, structCharacterDataRAM.AI1, $02
+		macroSetCharacterByte Eisenhau, structCharacterDataRAM.AI4, $00
+		macroSetCharacterByte Eisenhau, structCharacterDataRAM.AI2, $0B
+		macroSetCharacterByte Eisenhau, structCharacterDataRAM.Unknown3E, $00
+
+		macroSetCharacterByte MunsterCavalier, structCharacterDataRAM.AI1, $02
+		macroSetCharacterByte MunsterCavalier, structCharacterDataRAM.AI4, $00
+		macroSetCharacterByte MunsterCavalier, structCharacterDataRAM.AI2, $0B
+		macroSetCharacterByte MunsterCavalier, structCharacterDataRAM.Unknown3E, $00
+
+		macroSetCharacterByte MunsterBowKnight, structCharacterDataRAM.AI1, $02
+		macroSetCharacterByte MunsterBowKnight, structCharacterDataRAM.AI4, $00
+		macroSetCharacterByte MunsterBowKnight, structCharacterDataRAM.AI2, $0B
+		macroSetCharacterByte MunsterBowKnight, structCharacterDataRAM.Unknown3E, $00
+
+		macroSetCharacterByte MunsterTroubadour, structCharacterDataRAM.AI1, $02
+		macroSetCharacterByte MunsterTroubadour, structCharacterDataRAM.AI4, $00
+		macroSetCharacterByte MunsterTroubadour, structCharacterDataRAM.AI2, $0B
+		macroSetCharacterByte MunsterTroubadour, structCharacterDataRAM.Unknown3E, $00
+
+		macroSetCharacterByte MunsterAxeKnight, structCharacterDataRAM.AI1, $02
+		macroSetCharacterByte MunsterAxeKnight, structCharacterDataRAM.AI4, $00
+		macroSetCharacterByte MunsterAxeKnight, structCharacterDataRAM.AI2, $0B
+		macroSetCharacterByte MunsterAxeKnight, structCharacterDataRAM.Unknown3E, $00
+
+		macroSetCharacterByte MunsterThunderMage, structCharacterDataRAM.Unknown3F, $1000
+		macroSetCharacterByte MunsterBishop1, structCharacterDataRAM.Unknown3F, $1000
+		macroSetCharacterByte MunsterSoldier2, structCharacterDataRAM.Unknown3F, $1000
+		macroSetCharacterByte MunsterArmoredSword, structCharacterDataRAM.Unknown3F, $1000
+
+		macroSetCharacterByte MunsterThunderMage, structCharacterDataRAM.AI1, $02
+		macroSetCharacterByte MunsterThunderMage, structCharacterDataRAM.AI4, $00
+		macroSetCharacterByte MunsterThunderMage, structCharacterDataRAM.AI2, $0B
+		macroSetCharacterByte MunsterThunderMage, structCharacterDataRAM.Unknown3E, $00
+
+		macroSetCharacterByte MunsterBishop1, structCharacterDataRAM.AI1, $02
+		macroSetCharacterByte MunsterBishop1, structCharacterDataRAM.AI4, $00
+		macroSetCharacterByte MunsterBishop1, structCharacterDataRAM.AI2, $0B
+		macroSetCharacterByte MunsterBishop1, structCharacterDataRAM.Unknown3E, $00
+
+		macroSetCharacterByte MunsterSoldier2, structCharacterDataRAM.AI1, $02
+		macroSetCharacterByte MunsterSoldier2, structCharacterDataRAM.AI4, $00
+		macroSetCharacterByte MunsterSoldier2, structCharacterDataRAM.AI2, $0B
+		macroSetCharacterByte MunsterSoldier2, structCharacterDataRAM.Unknown3E, $00
+
+		macroSetCharacterByte MunsterArmoredSword, structCharacterDataRAM.AI1, $02
+		macroSetCharacterByte MunsterArmoredSword, structCharacterDataRAM.AI4, $00
+		macroSetCharacterByte MunsterArmoredSword, structCharacterDataRAM.AI2, $0B
+		macroSetCharacterByte MunsterArmoredSword, structCharacterDataRAM.Unknown3E, $00
+	END2
+
+	_HannibalGroupAIChange ; 99/B8BF
+		macroCountAllUnitsWithCharacterDataWord structCharacterDataRAM.Leader, Eisenhau
+
+		EVENT_CMP_BYTE_AT_EQ wEventEngineParameter1, $00
+		JUMP_FALSE +
+
+		SET_FLAG $15
+
+		macroSetAllCharacterByteIfCharacterWord structCharacterDataRAM.AI1, $02, Hannibal, structCharacterDataRAM.Leader
+		macroSetAllCharacterByteIfCharacterWord structCharacterDataRAM.AI4, $00, Hannibal, structCharacterDataRAM.Leader
+		macroSetAllCharacterByteIfCharacterWord structCharacterDataRAM.AI2, $13, Hannibal, structCharacterDataRAM.Leader
+		macroSetAllCharacterByteIfCharacterWord structCharacterDataRAM.Unknown3E, $00, Hannibal, structCharacterDataRAM.Leader
+
+		+
+	END2
+
+	_EisenhauAIChange ; 99/B954
+
+		macroSetCharacterByte Eisenhau, structCharacterDataRAM.AI1, $00
+		macroSetCharacterByte Eisenhau, structCharacterDataRAM.AI4, $00
+		macroSetCharacterByte Eisenhau, structCharacterDataRAM.AI2, $00
+		macroSetCharacterByte Eisenhau, structCharacterDataRAM.Unknown3E, $00
+	END2
+
+	_EisenhauSpawn ; 99/B9B5
+		SCROLL_CAMERA_ADDRESS eventChapter7Data._RaydrikCameraCoordinates
+		YIELD
+
+		LOAD2 eventChapter7Data._RaydrikGroup
+		WAIT_MOVE
+		YIELD
+
+		YIELD_UNK
+
+		SCROLL_CAMERA_ADDRESS eventChapter7Data._EisenhauCameraCoordinates
+		YIELD
+
+		LOAD2 eventChapter7Data._EisenhauGroup
+		WAIT_MOVE
+		YIELD
+
+		YIELD_UNK
+
+		MOVE_UNIT Raydrik, [0, 0], [9, 5], 1, None
+		YIELD_UNK
+
+		WAIT_MOVE
+		YIELD
+
+		SCROLL_CAMERA_SPEED [7, 9], 3
+		YIELD
+
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $39
+		YIELD
+
+		DIALOGUE ch7eisenauspawn
+		YIELD
+
+		UNSET_FLAG FlagBossDeath
+
+		MOVE_UNIT Raydrik, [0, 0], [7, 1], 1, None
+		YIELD_UNK
+
+		WAIT_MOVE
+		YIELD
+
+		macroRemoveUnit Raydrik
+
+		WAIT_MOVE
+		YIELD
+	END2
+
+	_PureWaterHouse ; 99/BA0E
+		macroItemHouse ch7purewaterhouse, PureWater, [6, 46], $0021
+	END2
+
+	_AntitoxinHouse ; 99/BA71
+		PLAY_SOUND_WORD $00F7
+
+		macroSingleTileChangeByCoordinates [2, 12], $0021
+
+		DIALOGUE ch7antitoxinhouse
+		YIELD
+
+		STORE_WORD wEventEngineParameter1, TurnStatusHidden
+		CALL_ASM_LOOP rlASMCActiveUnitSetTurnStatus, $0000
+
+		macroGiveItemToActiveUnit Antitoxin
+
+		STORE_WORD wEventEngineParameter1, TurnStatusHidden
+		CALL_ASM_LOOP rlASMCActiveUnitUnsetTurnStatus, $0000
+	END2
+
+	_MasterSealHouse ; 99/BAD4
+		macroItemHouse ch7mastersealhouse, MasterSeal, [2, 13], $0021
+	END2
+
+	_PlayerRetreat ; 99/BB37
+		PAUSE_SKIPPABLE 15
+		YIELD
+
+		macroHaveActiveUnitRetreat eventChapter7Events._RetreatMovestring
+	END2
+
+	_RetreatMovestring ; 99/BB74
+	MS_END
+
+	_OpeningEvent ; 99/BB75
+		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
+
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $33
+		YIELD
+
+		macroChapterTitlePopup ch7titlename
+
+		macroSetAllCharacterTurnStatus (TurnStatusUnknown1 | TurnStatusHidden)
+
+		macroUnsetAllCharacterTurnStatus (TurnStatusGrayed | TurnStatusMovementStar | TurnStatusMoved)
+
+		STORE_WORD lEventEngineUnitGroupPointer, $000002
+		CALL_ASM_LOOP rlASMCGetStartingPositionsArrayPointerAndLength, $0000
+
+		CALL_ASM_LOOP rlASMCLoadPlayerUnitsByStartingPositions, $0000
+		CALL_ASM_SKIPPABLE rlUpdateVisibilityMap, $0000
+		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
+
+		DIALOGUE ch7op1
+		YIELD
+
+		SCROLL_CAMERA_ADDRESS eventChapter7Data._BanditCameraCoordinates
+		YIELD
+
+		LOAD1 eventChapter7Data._BanditGroup
+		WAIT_MOVE
+		YIELD
+
+		EVENT_TEST_FLAG_SET FlagShivaDiedInChp2x
+		JUMP_TRUE +
+
+		SCROLL_CAMERA_ADDRESS eventChapter7Data._ShivaCameraCoordinates
+		YIELD
+
+		LOAD1 eventChapter7Data._ShivaGroup
+		WAIT_MOVE
+		YIELD
+
+		SCROLL_CAMERA_CHAR Shiva
+		SET_CAMERA_SPEED 4
+		YIELD
+
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $3A
+		YIELD
+
+		DIALOGUE ch7op2
+		YIELD
+
+		+
+	END2
+
+	_EndingEvent ; 99/BC0A
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 16
+		YIELD
+
+		CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd, $0000
+
+		PLAY_SOUND_WORD $00E0
+		PAUSE_SKIPPABLE 32
+		YIELD
+
+		SET_MUSIC $41
+		YIELD
+
+		CALL_ASM_LOOP rlASMCSaveChapterAndTurncount, $0000
+
+		macroDialogueWithBackground ch7ending1, 1
+
+		macroCheckAlive Osian
+		JUMP_TRUE +
+
+		macroCheckAlive Halvan
+		JUMP_TRUE +
+
+		macroCheckAlive Ronan
+		JUMP_FALSE ++
+
+		+
+		STORE_LONG lEventEngineLongParameter, ch7ending2
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		+
+		macroCheckAlive Halvan
+		JUMP_FALSE +
+
+		STORE_LONG lEventEngineLongParameter, ch7ending3halvan
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		+
+		macroCheckAlive Osian
+		JUMP_FALSE +
+
+		STORE_LONG lEventEngineLongParameter, ch7ending4osian
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		+
+		macroCheckAlive Ronan
+		JUMP_FALSE +
+
+		STORE_LONG lEventEngineLongParameter, ch7ending5ronan
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		+
+		macroCheckAlive Osian
+		JUMP_TRUE +
+
+		macroCheckAlive Halvan
+		JUMP_TRUE +
+
+		macroCheckAlive Ronan
+		JUMP_FALSE ++
+
+		+
+		STORE_LONG lEventEngineLongParameter, ch7hannibalportrait
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		STORE_LONG lEventEngineLongParameter, ch7ending6hannibal
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		+
+		STORE_LONG lEventEngineLongParameter, ch7ending7callion
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		EVENT_TEST_FLAG_SET FlagCairpreSaved
+		JUMP_FALSE +
+
+		STORE_LONG lEventEngineLongParameter, ch7ending8cairpre
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+
+		STORE_WORD wEventEngineParameter1, Warp
+		CALL_ASM_LOOP rlASMCSetRewardGivenItem, $0000
+
+		+
+		STORE_LONG lEventEngineLongParameter, ch7ending9
+		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
+		YIELD
+
+		HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000
+
+		FADE_OUT $01
+		YIELD
+
+		CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut, $0000
+
+		STORE_BYTE bBuf_INIDISP, INIDISP_Setting(False, 0)
+
+		PLAY_SOUND_WORD $00E7
+
+		CALL_ASM_LOOP rlASMCSetUnitsLeftBehindAsCaptured, $0000
+
+		macroCheckTurnStatusSet Osian, TurnStatusInvisible
+		JUMP_FALSE +
+
+		macroUnsetCharacterTurnStatus Osian, (TurnStatusUnknown1 | TurnStatusInvisible)
+		macroSetUnitPosition Osian, [12, 42]
+		macroSetCharacterByte Osian, structCharacterDataRAM.Fatigue, 0
+
+		+
+		macroCheckTurnStatusSet Halvan, TurnStatusInvisible
+		JUMP_FALSE +
+
+		macroUnsetCharacterTurnStatus Halvan, (TurnStatusUnknown1 | TurnStatusInvisible)
+		macroSetUnitPosition Halvan, [10, 41]
+		macroSetCharacterByte Halvan, structCharacterDataRAM.Fatigue, 0
+
+		+
+		macroCheckTurnStatusSet Ronan, TurnStatusInvisible
+		JUMP_FALSE +
+
+		macroUnsetCharacterTurnStatus Ronan, (TurnStatusUnknown1 | TurnStatusInvisible)
+		macroSetUnitPosition Ronan, [10, 42]
+		macroSetCharacterByte Ronan, structCharacterDataRAM.Fatigue, 0
+
+		+
+		FADE_OUT $01
+		YIELD
+
+		CALL_ASM_LOOP rlASMCChapterEnd, $0000
+	END1
+
+
+
+
+

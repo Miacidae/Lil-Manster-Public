@@ -1,0 +1,4 @@
+Create Readme in root which gives a quick explanation of every major folder.
+Explain what this is, requirements, how to make it work, and credits.
+
+REMOVE THE TO DO

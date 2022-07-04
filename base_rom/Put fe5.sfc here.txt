@@ -1,0 +1,16 @@
+Your ROM must be an unheadered, unpatched, Japanese Fire Emblem - Thracia 776 ROM.
+You will need the physical (V-ROM) version. The Nintendo Power (NP) version is untested as a base and thus discouraged.
+
+No physical roms will be provided in this repository.
+If you really struggle to extract the exact ROM from your legally-obtained cartridge of FE5...
+I hear adding the magic number 27615 to one's google searches can prove fruitful.
+
+Once acquired, you will need to expand your base ROM with Lunar Expand.
+The correct setting is > 48 Mbit ExLoROM (6 MB) 2 < (80:8000 - FF:FFFF map)
+
+From there, it is heavily recommended not to edit your base ROM with other tools.
+Unless you are required by the limitations of the current build files.
+(For example, you may need to use Min's FE5 Map Editor tool on the base ROM.)
+
+All Nightmare modules I'm aware of have already been converted to individual files, mostly in tables.
+Editing those is preferable to using Nightmare on the base ROM.

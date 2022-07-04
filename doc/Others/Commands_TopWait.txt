@@ -1,0 +1,32 @@
+;	Paste this in the first part of text_menus/MenuCommands.asm
+
+.word    <>menu_commands._Seize_command
+.word    <>menu_commands._Retreat_command
+.word    <>menu_commands._Arrive_command
+.word    <>menu_commands._Talk_command
+.word    <>menu_commands._Attack_command
+.word    <>menu_commands._Capture_command
+.word    <>menu_commands._Steal_command
+.word    <>menu_commands._Visit_command
+.word    <>menu_commands._Supply_command
+.word    <>menu_commands._Armory_command
+.word    <>menu_commands._Vendor_command
+.word    <>menu_commands._Secret_command
+.word    <>menu_commands._Arena_command
+.word    <>menu_commands._Chest_command
+.word    <>menu_commands._Bridge_command
+.word    <>menu_commands._Door_command
+.word    <>menu_commands._Dance_command
+.word    <>menu_commands._Wait_command
+.word    <>menu_commands._Staff_command
+.word    <>menu_commands._Item_command
+.word    <>menu_commands._Rescue_command
+.word    <>menu_commands._Drop_command
+.word    <>menu_commands._Release_command
+.word    <>menu_commands._Transfer_command
+.word    <>menu_commands._Transfer2_command
+.word    <>menu_commands._Trade_command
+.word    <>menu_commands._Mount_command
+.word    <>menu_commands._Dismount_command
+.word    <>menu_commands._Animation_command
+.word    $0000

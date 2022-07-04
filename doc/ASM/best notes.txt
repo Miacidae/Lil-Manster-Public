@@ -1,0 +1,844 @@
+
+RAM doc
+
+$000000 - $00000A - Decompression vars
+
+$00000B - $00006F - Routine parameters
+
+$00007B - $0000AB - Register buffer
+
+$0000E4 - Controller 1 raw input
+$0000E8 - Controller 1 new input
+$0000F0 - Controller 1 previous input
+
+$0000E6 - Controller 2 raw input
+$0000EA - Controller 2 new input
+$0000F8 - Controller 2 previous input
+
+$000100 - $000300 - Palette buffer
+
+$00046B - Random number table
+        - 55 random numbers
+$0004A2 - Next RN's index in table
+$0004A4 - RN shuffle counter
+$0004A5 - RN shuffle value
+
+$000E05 - In-game time
+$000E07 - some kind of menu-opening count
+$000E09 - Wins
+$000E0B - Captures
+$000E0D - Paragon Mode (Set to 1 to enable)
+$000E0F - Cursor cycle timer
+$000E11 - current chapter
+$000E13 - current turn
+$000E15 - current phase
+        - $0000 - player phase
+        - $0040 - enemy phase
+        - $0080 - other phase
+$000E17 - Default visibility word? (Should be $0101)
+$000E19 - Vision Range
+$000E1B - Offset of save slot in save data
+
+$000E21 - Chapter boss character ID
+
+$000E2D - current map music
+        - can be interrupted, doesn't
+        - change when something else uses music
+        - changed every phase
+$000E2F - map width in 16x16 tiles
+$000E31 - map height in 16x16 tiles
+$000E33 - map width in pixels
+$000E35 - map height in pixels
+
+$000E37 - map horizontal scroll amount in tiles
+$000E39 - map vertical scroll amount in tiles
+
+$000E3B - map horizontal scroll amount in pixels
+$000E3D - map vertical scroll amount in pixels
+
+$000E47 - horizontal scroll flag?
+        - $FFFC - if not scrolled
+        - $0004 - if scrolled
+
+$000E49 - vertical scroll flag
+        - $FFFC - if not scrolled
+        - $0004 - if scrolled
+
+$000E4B - map tile index that the cursor is at
+
+$000E4D - x coordinate of cursor
+$000E4F - y coordinate of cursor
+        - both of these are used when determining
+        - position during events or unit selection
+
+$000E51 - Cursor x offset in pixels
+$000E53 - Cursor y offset in pixels
+
+$000E55 - Same as previous?
+$000E57 - 
+
+$000E59 - Cursor x offset from screen edge in pixels
+$000E5B - Cursor y offset from screen edge in pixels
+
+$000E61 - x coord of unit being selected
+$000E63 - y coord of unit being selected
+
+$000E69 - Map width in tiles
+
+$000E6B - Flag for displaying range tiles
+
+$000E6F - Data for currently selected character, copied from character data struct
+    $00 - $40 - Character data
+    $41 - Deployment number
+    $42 - $43 - Short pointer to chardata in RAM
+
+$000EB3 - Temporary buffer for characters, character data struct written during targeting
+    $00 - $40 - Character data
+    $41 - Deployment number
+    $42 - $43 - Short pointer to chardata in RAM
+
+$000EF7 - Burst menu character buffer
+    $00 - $40 - Character data
+    $41 - Deployment number
+    $42 - $43 - Short pointer to chardata in RAM
+
+$000F3B - Item Data buffer
+    $00 - Item type
+        - $00 - Sword
+        - $01 - Lance
+        - $02 - Axe
+        - $03 - Bow
+        - $04 - Staff
+        - $05 - Fire
+        - $06 - Thunder
+        - $07 - Wind
+        - $08 - Light
+        - $09 - Dark
+        - $0A - 
+        - $0B - Item
+        - $50 - Fire Sword
+        - $60 - Thunder Sword
+        - $70 - Wind Sword
+        - $80 - Light Sword
+    $01 - Might
+    $02 - Accuracy
+    $03 - Weight
+    $04 - Durability
+    $05 - Critical rate
+    $06 - Range, upper nybble max, lower min
+    $07 - Weapon Rank or Lock Pointer
+        - Lock Pointers are short pointers
+        - to a null-terminated list of character IDs
+        - (As bytes). Must be within bank $B0 by default
+    $09 - Effectiveness pointer
+        - short pointer to a null-terminated list of
+        - class IDs. Must be within bank $B0 by default
+    $0B - Stat Bonus Pointer
+        - short pointer to a list of stats to raise
+        - while equipped. Stats:
+        - $00 - Strength
+        - $01 - Magic
+        - $02 - Skill
+        - $03 - Speed
+        - $04 - Defense
+        - $05 - Constitution (Not used or read)
+        - $06 - Luck
+    $0D - Cost per use
+        - (durability * cost per use) + 200d = price
+    $0F - Description pointer
+        - short pointer to description. Must be
+        - within bank $B0 by default
+    $11 - Use/Staff Effect
+        - $00 - None
+        - $02 - Luck Ring
+        - $04 - Life Ring
+        - $06 - Speed Ring
+        - $08 - Magic Ring
+        - $0A - Strength Ring
+        - $0C - Body Ring
+        - $0E - Shield Ring
+        - $10 - Skill Ring
+        - $12 - Leg Ring
+        - $14 - Knight Crest
+        - $16 - Master Seal
+        - $18 - Chest Key
+        - $1A - Door Key
+        - $1C - Bridge Key
+        - $1E - Lockpick
+        - $20 - Vulnerary
+        - $22 - Pure Water
+        - $24 - Torch
+        - $26 - Antitoxin
+        - $28 - Paragon Manual
+        - $2A - Assail Manual
+        - $2C - Bargain Manual
+        - $2E - Vantage Manual
+        - $30 - Wrath Manual
+        - $32 - Adept Manual
+        - $34 - Miracle Manual
+        - $36 - Nihil Manual
+        - $38 - Sol Manual
+        - $3A - Luna Manual
+        - $3C - Heal Staff
+        - $3E - Mend Staff
+        - $40 - Recover Staff
+        - $42 - Physic Staff
+        - $44 - Fortify Staff
+        - $46 - Rescue Staff
+        - $48 - Warp Staff
+        - $4A - Restore Staff
+        - $4C - Silence Staff
+        - $4E - Sleep Staff
+        - $50 - Torch Staff
+        - $52 - Return Staff
+        - $54 - Hammerne Staff
+        - $56 - Thief Staff
+        - $58 - Watch Staff
+        - $5A - Berserk Staff
+        - $5C - Unlock Staff
+        - $5E - Ward Staff
+        - $60 - Rewarp Staff
+        - $66 - Stamina Drink
+        - $68 - Kia Staff
+    $12 - Weapon Effects
+        - $00 - None
+        - $02 - Poison
+        - $04 - Devil
+        - $06 - Steal HP
+        - $08 - Stone
+        - $0A - Hel
+        - $0C - Berserk
+        - $0E - Sleep
+    $13 - Weapon Skills 1 (char/class skills 2)
+        - $00 - None
+        - $01 - Adept
+        - $02 - Charm
+        - $04 - Immortal?
+        - $08 - Miracle
+        - $10 - Vantage
+        - $20 - Assail
+        - $40 - Pavise
+        - $80 - Nihil
+    $14 - Weapon Skills 2 (char/class skills 3)
+        - $00 - None
+        - $01 - Wrath
+        - $02 - Astra
+        - $04 - Luna
+        - $08 - Sol
+        - $10 - Paragon
+        - $20 - 
+        - $40 - Brave
+        - $80 - Immortal
+    $15 - Weapon Traits
+        - $00 - Item
+        - $01 - 
+        - $02 - Magic at Range
+        - $04 - Weapon
+        - $08 - Tome
+        - $10 - Staff
+        - $20 - Unbreakable
+        - $40 - Unsellable
+        - $80 - Broken
+    $16 - Weapon Icon index
+    $17 - Displayed weapon
+    $18 - Base weapon (for broken weapons)
+
+$000F54 - Some kind of menu flag?
+
+$000F55 - Movement cost cap(?), should be $71
+        - Value keeps cursor from automatically leaving range
+
+$000F56 - looks to be the same as the battle buffer struct
+
+$000FC7 - another character data buffer?
+        - seems like it's only used to fetch item skills?
+    $00 - $40 - Character data
+    $41 - Deployment number
+    $42 - $43 - Short pointer to chardata in RAM
+
+$00100B - $001037 - unknown
+
+$001038 - $001537 - Range tile stuff
+        - two sets, many entries
+        - each entry has two parts, first being tile num
+        - second unknown, seems like a flag when end of path
+        - sets are $0280 apart
+        - sets alternate between tiles
+
+$001538 - Menu type?
+        - Possible settings:
+        - $0000 - trading
+        - $0001 - armory
+        - $0002 - supply
+        - $0003 - options menu
+        - $0004 - status screen
+        - $0005 - arena
+        - $0006 - inventory
+        - $0007 - when setting up inventory
+        - $0009 - when setting up prep unit selection
+        - $000A - prep unit selection
+        - $000B - when setting up prep items menu
+        - $000C - prep items menu
+        - $000D - when setting up prep item trading
+        - $000E - when setting up prep supply
+        - $000F - when setting up prep armory (but after $0001 once)
+        - $0010 - when setting up prep item trading
+
+$001C00 - OAM Buffer (128d entries)
+        - See $001E00 and $001E20
+        - Unused entries are moved offscreen
+        - Entries here are 4 bytes:
+        - $00 - X coordinate lower 8 bits (See $001E00)
+        - $01 - Y coordinate
+        - $02 - Tile number lower 8 bits
+        - $03 - Attribute bits
+              - $01 - Tile number upper bit
+              - $02 - 3 palette bits (upper 7 palettes)
+              - $10 - 2 priority bits (0=Low..3=High)
+              - $40 - X flip bit
+              - $80 - Y flip bit
+
+$001E00 - OAM Buffer 2 (128d entries)
+        - 2 bits per entry, corresponding to other buf
+        - $00 - Object size (0=Small..1=Large)
+        - $01 - X coordinate upper bit
+
+$001E20 - Offset into OAM Buffer, used to get next entry
+
+$700000 - Save data header (8 bytes)
+        - $00 - 0-2 last used file number
+        - $01 - 0-2 suspended file number
+        - $02 - Completion count (unlocks movement speedup)
+        - $03 - Completion flag (unlocks sound room)
+        - $04 - Irregularity magic number (6A19)
+              - set when the game starts up incorrectly
+              - due to potential copier/cheat device stuff
+              - cleared if nothing bad is detected
+              - If detected twice in a row, an antipiracy screen
+              - is shown
+        - $06 - unused
+
+$700008 - Save data slot ($1FF8 bytes) (4 entries, last is suspend)
+        - $0000 - Magic number $200A
+                - $0000 if no data in slot
+        - $0002 - Checksum of all bytes $0006-$1FF8
+        - $0004 - 
+        - $0006 - In-game time
+        - $0008 - some type of counter for menu presses
+        - $000A - Current chapter
+        - $000B - Current turn
+        - $000D - Tile setting
+        - $000F - Tile setting 1 Red upper setting (24d - intensity)
+        - $0011 - "            " Green "                         "
+        - $0013 - "            " Blue  "                         "
+        - $0015 - "            " Red lower setting (24d - intensity)
+        - $0017 - "            " Green "                         "
+        - $0019 - "            " Blue  "                         "
+        - $001B - Tile setting 2 Red upper setting (24d - intensity)
+        - $001D - "            " Green "                         "
+        - $001F - "            " Blue  "                         "
+        - $0021 - "            " Red lower setting (24d - intensity)
+        - $0023 - "            " Green "                         "
+        - $0025 - "            " Blue  "                         "
+        - $0027 - Tile setting 3 Red upper setting (24d - intensity)
+        - $0029 - "            " Green "                         "
+        - $002B - "            " Blue  "                         "
+        - $002D - "            " Red lower setting (24d - intensity)
+        - $002F - "            " Green "                         "
+        - $0031 - "            " Blue  "                         "
+        - $0033 - Tile setting 4 Red upper setting (24d - intensity)
+        - $0035 - "            " Green "                         "
+        - $0037 - "            " Blue  "                         "
+        - $0039 - "            " Red lower setting (24d - intensity)
+        - $003B - "            " Green "                         "
+        - $003D - "            " Blue  "                         "
+        - $003F - Tile setting 5 Red upper setting (24d - intensity)
+        - $0041 - "            " Green "                         "
+        - $0043 - "            " Blue  "                         "
+        - $0045 - "            " Red lower setting (24d - intensity)
+        - $0047 - "            " Green "                         "
+        - $0049 - "            " Blue  "                         "
+        - $004B - Animation setting
+                - $00 - Normal
+                - $01 - Map
+                - $02 - Manual
+        - $004D - Terrain window setting
+                - $00 - Enabled
+                - $01 - Disabled
+        - $004F - Burst window setting
+                - $00 - Enabled
+                - $01 - Disabled
+        - $0051 - Text speed setting
+                - $00 - Slow
+                - $01 - Normal
+                - $02 - Fast
+        - $0053 - Unit speed setting
+                - $00 - Normal
+                - $01 - Fast
+        - $0055 - Sound setting
+                - $00 - Stereo
+                - $01 - Mono
+        - $0057 - BGM setting
+                - $00 - Enabled
+                - $00 - Disabled
+        - $0059 - Autocursor setting
+                - $00 - Enabled
+                - $01 - Disabled
+        - $005B - Volume
+                - $00 - 3 notes (Max)
+                - $01 - 2 notes
+                - $02 - 1 note
+                - $03 - Disabled
+        - $005D - Default visibility (Should be $01)?
+        - $005E - Vision Range
+        - $005F - Phase
+                - $00 - Ally
+                - $40 - Enemy
+                - $80 - NPC
+        - $0060 - Gold
+        - $0063 - Horizontal map scroll in pixels
+        - $0065 - Vertical "                  "
+        - $0067 - Cursor X coordinate
+        - $0068 - Cursor Y coordinate
+        - $0069 - Chapter Boss character ID
+        - $006B - Wins
+        - $006D - Captures
+        - $006F - Allied team enemies
+                - $00 - Attack none
+                - $01 - Attack Ally allegiance
+                - $02 - Attack Enemy allegiance
+                - $03 - Attack NPC allegiance?
+        - $0070 - Enemy team enemies
+                - $00 - Attack none
+                - $01 - Attack Ally allegiance
+                - $02 - Attack Enemy allegiance
+                - $03 - Attack NPC allegiance?
+        - $0071 - NPC team enemies
+                - $00 - Attack none
+                - $01 - Attack Ally allegiance
+                - $02 - Attack Enemy allegiance
+                - $03 - Attack NPC allegiance?
+        - $0072 - 
+        - $0073 - Player phase controller
+                - $00 - NPC (skipped if no NPC units on map)
+                - $02 - Player
+                - $04 - Enemy (hangs)
+        - $0074 - Enemy phase controller
+                - $00 - NPC (skipped if no NPC units on map)
+                - $02 - Player
+                - $04 - Enemy (hangs)
+        - $0075 - NPC phase controller
+                - $00 - NPC (skipped if no NPC units on map)
+                - $02 - Player
+                - $04 - Enemy (hangs)
+        - $0076 - 
+        - $0077 - Permanent Event IDs (40d bits/5d bytes)
+        - $007C - Temporary Event IDs (96d bits/12d bytes)
+        - $0088 - Randomized items? (Used in chp4) ($20 bytes)
+        - $00A8 - Randomized numbers? (Used with random items) ($40 bytes)
+        - $00E8 - Ally Character data (48d slots)
+        - $0D18 - Enemy Character data (51d slots)
+        - $1A0B - NPC Character data (16d slots)
+        - $1E1B - Convoy (256d items)
+        - $1F1B - Losses table (49d entries)
+        - $1F4C - Wins table (49d entries)
+        - $1F7D - Turncount table (40d entries)
+                - $00 - Chapter number byte
+                - $01 - Turn short
+        - $1FF5 - Paragon Mode word (Set to 1 for Paragon mode)
+
+
+
+$7E50E6 - Class data buffer
+        - copied from $868000+($24*n)
+    $00 - HP
+    $01 - Strength
+    $02 - Magic
+    $03 - Skill
+    $04 - Speed
+    $05 - Defense
+    $06 - Constitution
+    $07 - Movement
+    $08 - Class relative power
+    $09 - Sword rank
+    $0A - Lance " "
+    $0B - Axe " "
+    $0C - Bow " "
+    $0D - Staff " "
+    $0E - Fire " "
+    $0F - Thunder " "
+    $10 - Wind " "
+    $11 - Light " "
+    $12 - Dark " "
+    $13 - Skills 1
+        - $00 - None
+        - $01 - Dance
+        - $02 - Steal
+        - $04 - Immortal/move thing?
+        - $08 - Bargain
+        - $10 - Renewal
+        - $20 - Mount/Dismount (requires mount/dismount data)
+        - $40 - Mounted movement (outdoors only)
+        - $80 - 
+    $14 - Skills 2
+        - $00 - None
+        - $01 - Adept
+        - $02 - Charm
+        - $04 - 
+        - $08 - Miracle
+        - $10 - Vantage
+        - $20 - Assail
+        - $40 - Pavise
+        - $80 - Nihil
+    $15 - Skills 3
+        - $00 - None
+        - $01 - Wrath
+        - $02 - Astra
+        - $04 - Luna
+        - $08 - Sol
+        - $10 - Paragon
+        - $20 - 
+        - $40 - Brave
+        - $80 - Immortal, no display
+    $16 - Map sprite
+    $17 - Movement type short pointer
+    $19 - Terrain avoid short pointer
+    $1B - Terrain defense
+    $1D - Terrain avoid/hit
+    $1F - Constant? $FFFFFFFF
+    $23 - Class assumed to be promoted from
+
+$7E520C - Terrain cost buffer
+    $00 - Map Edge
+    $01 - Peak
+    $02 - Thicket
+    $03 - Cliff
+    $04 - Plains
+    $05 - Forest
+    $06 - Sea
+    $07 - River
+    $08 - Mountain
+    $09 - Sand ("Sandy Land")
+    $0A - Castle
+    $0B - Fort
+    $0C - House
+    $0D - Gate
+    $0E - --
+    $0F - Wasteland
+    $10 - Bridge
+    $11 - Lake
+    $12 - Village
+    $13 - Ruins
+    $14 - Warehouse?
+    $15 - 
+    $16 - Supply
+    $17 - Church
+    $18 - House
+    $19 - Road
+    $1A - Armory
+    $1B - Vendor
+    $1C - Arena
+    $1D - Floor
+    $1E - 
+    $1F - Throne
+    $20 - Door
+    $21 - Chest
+    $22 - Exit
+    $23 - Pillar
+    $24 - Drawbridge
+    $25 - Secret Shop
+    $26 - 
+    $27 - Sand ("Sandy Soil")
+    $28 - Floor (Magic)
+    $29 - Floor (Magic)
+    $2A - Church
+    $2B - Chest
+
+$7E5298 - Ally Character data (48d slots)
+    $00 - Character Word
+    $02 - Class byte
+    $03 - X position
+    $04 - Y position
+    $05 - Turn status
+        - $00 - Normal
+        - $01 - Dead
+        - $02 - Animation mode (set for map)
+        - $04 - 
+        - $08 - Unselectable (in fog)
+        - $10 - Rescued
+        - $20 - Rescuing
+        - $40 - Acting, don't draw
+        - $80 - Has moved, grayed
+    $06 - More status?
+        - $00 - Normal
+        - $01 - Movement star activated
+        - $02 - Has moved
+        - $04 - Invisible, unselectable
+        - $08 - Captured, left map
+        - $10 - 
+        - $20 - 
+        - $40 - 
+        - $80 - 
+    $07 - Level
+    $08 - Experience
+    $09 - Max HP
+    $0A - Current HP
+    $0B - Strength Bonus
+    $0C - Magic Bonus
+    $0D - Skill Bonus
+    $0E - Speed Bonus
+    $0F - Defense bonus
+    $10 - Luck Bonus
+    $11 - Constitution Bonus
+    $12 - Rescued/captured character
+    $13 - Movement bonus (signed)
+    $14 - Fatigue ($FF for unfatigable)
+    $15 - Status
+        - $00 - Normal
+        - $01 - Sleep
+        - $02 - Berserk
+        - $03 - Poison
+        - $04 - Silence
+        - $05 - Stone
+        - $06 or higher - Crash
+    $16 - Temporary Magic bonus
+    $17 - Torch vision range bonus
+    $18 - Movement stars * 5
+    $19 - Leadership stars
+    $1A - Leader word
+    $1C - Skills 1
+        - $00 - None
+        - $01 - Dance
+        - $02 - Steal
+        - $04 - Immortal?
+              - Also sets terrain costs for terrain types $1E and $0E
+              - to $08, usually $FF
+        - $08 - Bargain
+        - $10 - Renewal
+        - $20 - Mount/Dismount (requires mount/dismount data)
+        - $40 - Mounted movement (outdoors only)
+        - $80 - 
+    $1D - Skills 2
+        - $00 - None
+        - $01 - Adept
+        - $02 - Charm
+        - $04 - 
+        - $08 - Miracle
+        - $10 - Vantage
+        - $20 - Assail
+        - $40 - Pavise
+        - $80 - Nihil
+    $1E - Skills 3
+        - $00 - None
+        - $01 - Wrath
+        - $02 - Astra
+        - $04 - Luna
+        - $08 - Sol
+        - $10 - Paragon
+        - $20 - Scroll?
+        - $40 - Brave
+        - $80 - Immortal, no display
+    $1F - Item 1
+    $20 - Item 1 durability
+    $21 - Item 2
+    $22 - Item 2    " "
+    $23 - Item 3
+    $24 - Item 3    " "
+    $25 - Item 4
+    $26 - Item 4    " "
+    $27 - Item 5
+    $28 - Item 5    " "
+    $29 - Item 6
+    $2A - Item 6    " "
+    $2B - Item 7
+    $2C - Item 7    " "
+    $2D - Sword rank
+    $2E - Lance rank
+    $2F - Axe rank
+    $30 - Bow rank
+    $31 - Staff rank
+    $32 - Fire rank
+    $33 - Thunder rank
+    $34 - Wind rank
+    $35 - Light rank
+    $36 - Dark rank
+    $37 - Map sprite upper/moving sprite index
+    $38 - Tile offset of lower sprite
+    $3A - AI 1 byte / total EXP word for ally units
+    $3B - AI 2
+    $3C - AI 3
+    $3D - AI 4
+    $3E - These seem like AI stuff
+    $3F - 
+    $40 - 
+
+$7E5EC8 - Enemy Character data (51d slots)
+
+$7E6BBB - NPC Character data (16d slots)
+
+$7E6FCB - Unit Map
+        - Tiles are $00 if no unit is on them,
+        - otherwise unit's deployment index
+        - to get unit at cursor:
+        - ldx @w$0E4B    ; tile index at cursor
+        - lda @w$6FCB,x    ; get char id from map
+        - and #$00FF
+
+$7E8DCB - Visibility Map
+        - Tiles are $00 if not in any
+        - allied unit's vision range
+
+
+$7EA4EF - Attacker battle buffer struct
+        - $71 bytes long, followed immediately by defender
+        - used for most stat shenanigans
+        - The first 0x41 bytes are mostly the same as $7E5298+($41*n)
+        - although bonuses and class bases are added
+    $00 - $40 - Character data
+    $41 - Deployment number
+    $42 - $43 - Short pointer to chardata in RAM
+    $44 - Might
+    $45 - Defense
+    $46 - Attack Speed
+    $47 - Hit
+    $48 - Avoid
+    $49 - 
+    $4A - Crit
+    $4B - Crit evade
+    $4C - 
+    $4D - Equipped item ID
+    $4E - Same as $4D?
+    $4F - Equipped item max uses
+    $50 - offset of equipped item in inventory
+    $51 - Weapon (attack) type
+        - Magic swords get turned into their
+        - respective magic types at range
+    $52 - Weapon abilities
+    $53 - Terrain type
+    $54 - Terrain avoid
+    $55 - Terrain defense
+    $56 - Terrain Avoid/Hit
+        - Vanilla uses a blank set for this, always
+    $57 - 
+    $58 - Avoid bonus 
+    $59 - 
+    $5A - Crit coefficient
+    $5B - 
+    $5C - Gained EXP?
+    $5D - 
+    $5E - 
+    $5F - 
+
+$7EA937 - Movement Map
+        - Tiles are $FF if unreachable,
+        - otherwise the cost to move to there
+
+ROM
+
+Routines
+
+$808002 - Get Joypad Input
+
+$80AA27 - Multiplication routine
+    $1F - multiplicand
+    $21 - multiplier
+    $23 - result
+
+$80AE2E - DMA setup routine, inputs are data after jump, like:
+    jsl $80AE2E
+    .byte $02        ; unknown, usually $02
+    .long $7FB0F5    ; RAM buffer
+    .word $1A00        ; length?
+    .byte $80        ; DMA flags?
+    .word $2800        ; destination?
+
+$80B00A - decompression routine
+    $2F - long pointer to source
+    $32 - long pointer to destination
+
+$80B340 - memcopy routine, used for palettes
+    $2F - source
+    $32 - destination
+    $35 - number of bytes to write
+
+$80E43B - class movement type copier
+        - copies costs to $7E520C
+        - also copies class to $7E50E6
+    $11 - Class byte
+
+$81D39B - portrait writer
+        - char word in A
+        - portrait slot in X
+    $0B - coordinates, YYXX in tiles
+
+$829BF1 - queue setup routine
+    $6D - pointer to queue data
+
+$838E76 - gets map tile index of [x, y]
+        - returns index in A
+    $0B - x coord
+    $0D - y coord
+
+$83901C - char data copier, deployment slot
+    $0B - deployment slot index
+    $0D - short pointer to destination
+
+$83905C - char data copier, RAM pointer
+    $0B - short pointer to char in RAM
+    $0D - short pointer to destination
+
+$839094 - char data buffer clearer
+    $0D - short pointer to buffer in RAM
+
+$839334 - name getter: given char number in A, return name pointer at $2F
+
+$839351 - class name getter: given class byte in A, return class name pointer at $2F
+
+$8393E0 - class data buffer writer
+        - Class in A
+        - writes to $7E50E6
+
+$83941A - char data buffer writer
+        - char number in A
+        - writes to $7E510A
+
+$83965E - check if item in item buffer is equippable
+    $0D - short pointer to unit data
+        - returns carry set if equippable
+
+$839705 - Get index of equipped item in inventory
+        - returns 2*item number in inventory
+    $0D - Short pointer to battle buffer struct
+
+$83B00D - write item data to buffer
+        - Item number in A
+        - writes to $7E0F3B
+
+$83CE64 - Single character battle struct writer
+        - Writes to $7EA4EF
+    $0B - Short pointer to char data in RAM
+
+$84A3FF - stat bar tilemap writer
+    $0B - width in tiles
+    $0D - height in tiles
+    $2F - source
+    $32 - destination
+
+$87E728 - Menu text writer
+        - coordinates in X, format is YYXX in tiles
+    $2F - long pointer to text
+  $0DDE - long pointer to tilemap dimensions
+        - format is XXYY, in tiles
+  $0DE7 - base tile word
+        - formula unknown, usually $2180
+
+$8A821B - icon tilemap writer
+        - coordinates in X, format is YYXX in tiles
+    $0B - tilemap buffer to write to
+  $0DE7 - VRAM buffer base position?
+
+
+$8A8286 - icon image writer
+    $0B - icon image index
+    $0D - buffer position to write to
+

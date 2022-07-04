@@ -1,0 +1,236 @@
+//type	string						enc			upper							lower
+
+//Tilemap sanity. Only keep if using English menus or porting from the old TextAssembler. Remove otherwise.
+fixed	(0, 0)
+
+//?? Borders
+fixed	(112, 32)
+fixed	(120, 32)
+fixed	(112, 40)
+
+string	"  "						0x4081		[(120, 40), False, False, 0]	[(120, 40), False, False, 0]
+
+string	"{/}"						0x5E81		[(104, 96), False, False, 0]	[(104, 104), False, False, 0]
+
+//Small slash
+fixed	(112, 96)
+
+string	"{-}"						0x5B81		[(120, 40), False, False, 0]	[(112, 104), False, False, 0]
+string	"{blue-}"					0x5B91		[(120, 40), False, False, 2]	[(112, 104), False, False, 2]
+
+string	"{?}"						0x3F3F		[(120, 96), False, False, 0]	[(120, 104), False, False, 0]
+
+//?? Diagonal
+fixed	(120, 120)
+
+string	"{>}"						0x3E7C		[(120, 40), False, False, 0]	[(48, 128), False, False, 0]
+
+//Small percent
+fixed	(56, 128)
+
+//Period
+fixed	(64, 128)
+
+//?? black border
+fixed	(72, 128)
+
+//Small dash
+fixed	(80, 128)
+
+//Small numbers 0-9
+fixed	(0, 136)
+fixed	(8, 136)
+fixed	(16, 136)
+fixed	(24, 136)
+fixed	(32, 136)
+fixed	(40, 136)
+fixed	(48, 136)
+fixed	(56, 136)
+fixed	(64, 136)
+fixed	(72, 136)
+
+string	"{small+}"					0x2B82		[(120, 40), False, False, 0]	[(80, 136), False, False, 0]
+string	"{+}"						0x2B83		[(120, 40), False, False, 0]	[(8, 304), False, False, 0]
+
+string	"{0}"						0x4F82		[(0, 144), False, False, 0]		[(0, 152), False, False, 0]
+string	"{1}"						0x5082		[(8, 144), False, False, 0]		[(8, 152), False, False, 0]
+string	"{blue1}"					0x5092		[(8, 144), False, False, 2]		[(8, 152), False, False, 2]
+string	"{2}"						0x5182		[(16, 144), False, False, 0]	[(16, 152), False, False, 0]
+string	"{3}"						0x5282		[(24, 144), False, False, 0]	[(24, 152), False, False, 0]
+string	"{4}"						0x5382		[(32, 144), False, False, 0]	[(32, 152), False, False, 0]
+string	"{5}"						0x5482		[(40, 144), False, False, 0]	[(40, 152), False, False, 0]
+string	"{6}"						0x5582		[(48, 144), False, False, 0]	[(48, 152), False, False, 0]
+string	"{7}"						0x5682		[(56, 144), False, False, 0]	[(56, 152), False, False, 0]
+string	"{8}"						0x5782		[(64, 144), False, False, 0]	[(64, 152), False, False, 0]
+string	"{9}"						0x5882		[(72, 144), False, False, 0]	[(72, 152), False, False, 0]
+
+string	"{A}"						0x6082		[(0, 160), False, False, 0]		[(0, 168), False, False, 0]
+string	"{B}"						0x6182		[(8, 160), False, False, 0]		[(8, 168), False, False, 0]
+string	"{C}"						0x6282		[(16, 160), False, False, 0]	[(16, 168), False, False, 0]
+string	"{D}"						0x6382		[(8, 160), False, False, 0]		[(24, 168), False, False, 0]
+string	"{E}"						0x6482		[(32, 160), False, False, 0]	[(32, 168), False, False, 0]
+
+//Moved wide letters
+string	"{F}"						0x6582		[(32, 160), False, False, 0]	[(120, 296), False, False, 0]
+string	"{G}"						0x6682		[(16, 160), False, False, 0]	[(0, 312), False, False, 0]
+string	"{H}"						0x6782		[(0, 208), False, False, 0]		[(0, 216), False, False, 0]
+string	"{L}"						0x6B82		[(112, 192), False, False, 0]	[(112, 200), False, False, 0]
+string	"{M}"						0x6D82		[(8, 240), False, False, 0]		[(8, 248), False, False, 0]
+string	"{P}"						0x6F82		[(8, 208), False, False, 0]		[(8, 216), False, False, 0]
+string	"{S}"						0x7282		[(64, 160), False, False, 0]	[(64, 168), False, False, 0]
+string	"{V}"						0x7582		[(120, 192), False, False, 0]	[(120, 200), False, False, 0]
+string	"{X}"						0x9882		[(120, 192), False, False, 0]	[(120, 256), False, False, 0]
+
+//Small EXP
+fixed	(48, 160)
+fixed	(56, 160)
+
+//?? Borders
+fixed	(40, 160)
+fixed	(40, 168)
+fixed	(48, 168)
+fixed	(56, 168)
+
+//Push Start
+fixed	(88, 160)
+fixed	(96, 160)
+fixed	(104, 160)
+fixed	(112, 160)
+fixed	(120, 160)
+
+string	"{*}"						0x9A81		[(80, 168), False, False, 0]	[(88, 168), False, False, 0]
+
+//?? Black borders
+fixed	(120, 168)
+fixed	(120, 176)
+fixed	(120, 184)
+
+//FCM
+fixed	(0, 176)
+fixed	(8, 176)
+fixed	(0, 184)
+fixed	(8, 184)
+
+//Subscript characters
+
+string	"{st}"						0x3173		[(24, 176), False, False, 0]	[(120, 40), False, False, 0]
+string	"{nd}"						0x3273		[(32, 176), False, False, 0]	[(120, 40), False, False, 0]
+string	"{rd}"						0x3373		[(24, 184), False, False, 0]	[(120, 40), False, False, 0]
+string	"{th}"						0x3473		[(32, 184), False, False, 0]	[(120, 40), False, False, 0]
+
+//Lock icon
+
+string	"{Lock}"					0x3E3C		[(16, 176), False, False, 0]	[(16, 184), False, False, 0]
+
+//Slim letters (mm is followed by an n)
+
+string	"{im}"						0x6D69		[(40, 176), False, False, 0]	[(40, 184), False, False, 0]
+string	"{mm}"						0x6D31		[(120, 40), False, False, 0]	[(48, 176), False, False, 0]
+string	"{m}"						0x6D32		[(120, 40), False, False, 0]	[(48, 184), False, False, 0]
+
+//Window borders
+fixed	(0, 192)
+fixed	(8, 192)
+fixed	(16, 192)
+
+//Small E
+fixed	(0, 200)
+
+//Small HP
+fixed	(8, 200)
+fixed	(16, 200)
+
+string	"{up}"						0xAA81		[(32, 192), False, False, 0]	[(32, 200), False, False, 0]
+string	"{down}"					0xAB81		[(32, 200), False, True, 0]		[(32, 192), False, True, 0]
+
+//Blue infinity symbol
+string	"{INF1}"					0x0B03		[(80, 208), False, False, 2]	[(80, 216), False, False, 2]
+string	"{INF2}"					0x0C03		[(96, 208), False, False, 2]	[(88, 216), False, False, 2]
+
+string	"{~}"						0x6081		[(120, 40), False, False, 0]	[(96, 216), False, False, 0]
+
+//Brave symbol
+string	"{BRA1}"					0x3132		[(112, 208), False, False, 0]	[(112, 216), False, False, 0]
+string	"{BRA2}"					0x3232		[(120, 208), False, False, 0]	[(120, 216), False, False, 0]
+
+string	"{(}"						0xBD95		[(0, 224), False, False, 0]		[(0, 232), False, False, 0]
+string	"{)}"						0xBE95		[(64, 224), False, False, 0]	[(64, 232), False, False, 0]
+
+//SEL symbol
+string	"{SEL1}"					0x7982		[(48, 224), False, False, 0]	[(48, 232), False, False, 0]
+string	"{SEL2}"					0x7A82		[(56, 224), False, False, 0]	[(56, 232), False, False, 0]
+
+//% symbol
+string	"{%}"						0x2582		[(0, 240), False, False, 0]		[(0, 248), False, False, 0]
+
+//Armor symbol
+string	"{ARM1}"					0x3141		[(80, 240), False, False, 0]	[(80, 248), False, False, 0]
+string	"{ARM2}"					0x3241		[(88, 240), False, False, 0]	[(88, 248), False, False, 0]
+
+//Cavalry symbol
+string	"{CAV1}"					0x3148		[(96, 240), False, False, 0]	[(96, 248), False, False, 0]
+string	"{CAV2}"					0x3248		[(104, 240), False, False, 0]	[(104, 248), False, False, 0]
+
+//Flier symbol
+string	"{FLY1}"					0x3146		[(96, 240), False, False, 0]	[(96, 248), False, False, 0]
+string	"{FLY2}"					0x3246		[(112, 240), False, False, 0]	[(112, 248), False, False, 0]
+
+string	"{note}"					0x8481		[(120, 240), False, False, 0]	[(120, 248), False, False, 0]
+
+fixed	(40, 288)
+fixed	(48, 288)
+fixed	(56, 288)
+fixed	(64, 288)
+fixed	(72, 288)
+fixed	(80, 288)
+fixed	(88, 288)
+fixed	(96, 288)
+fixed	(104, 288)
+fixed	(112, 288)
+
+fixed	(40, 296)
+fixed	(48, 296)
+fixed	(56, 296)
+fixed	(64, 296)
+fixed	(72, 296)
+fixed	(80, 296)
+fixed	(88, 296)
+
+fixed	(112, 296)
+
+fixed	(8, 312)
+
+fixed	(80, 320)
+fixed	(96, 320)
+
+fixed	(80, 328)
+fixed	(88, 328)
+fixed	(96, 328)
+
+fixed	(48, 336)
+fixed	(56, 336)
+fixed	(64, 336)
+
+fixed	(48, 344)
+fixed	(56, 344)
+fixed	(64, 344)
+
+fixed	(0, 352)
+fixed	(8, 352)
+
+fixed	(0, 360)
+fixed	(8, 360)
+
+fixed	(80, 352)
+fixed	(88, 352)
+fixed	(96, 352)
+fixed	(104, 352)
+fixed	(112, 352)
+fixed	(120, 352)
+
+fixed	(80, 360)
+fixed	(88, 360)
+fixed	(96, 360)
+fixed	(104, 360)
+fixed	(112, 360)
+fixed	(120, 360)

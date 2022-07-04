@@ -1,0 +1,26 @@
+B205C - B208B
+
+3B 08     ; BEGIN
+07 42     ; Load Tile: Berserk (+pause)
+FE FF     ; --Wait--
+08 42     ; Load Tile: Berserk Tilemap (+pause)
+FE FF     ; --Wait--
+09 16     ; Palette: Berserk 1
+0C 5E     ; Scroll to Defender: Medium 4 (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+2F 2A     ; Play Sound: Berserk
+01 1A     ; Placement: Defender
+04 04     ; Display Tiles: ???
+07 00     ; Effect Mask: Create Circle (large, around Target)
+08 56     ; Palette: Berserk 2 (+pause)
+FE FF     ; --Wait--
+F9 FF     ; Dodge point
+08 00     ; Effect Mask: Very Fast Contract (large to nothing)
+0A 56     ; Palette: Berserk 3 (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+02 04     ; Display Tiles: ???
+36 08     ; END
+FF FF     ; EXIT

@@ -1,0 +1,52 @@
+B131E-B1381
+
+3B 08     ; BEGIN
+0B 1C     ; Secondary Palette: ???
+23 16     ; Effect / Palette: ???
+5D 42     ; Load Tiles: Dire Thunder/Bolting Tilemap2 (+pause)
+FE FF     ; --Wait--
+0B 2A     ; Play Sound: Dire Thunder/Bolting Start
+01 22     ; Add Background Hue: Light Blue
+13 56     ; Effect: Fade Out (+pause)
+5A 42     ; Load Tiles: Dire Thunder/Bolting Impact (+pause)
+FE FF     ; --Wait--
+5C 42     ; Load Tiles: Dire Thunder/Bolting Tilemap1 (+pause)
+FE FF     ; --Wait--
+5B 42     ; Load Tiles: Dire Thunder/Bolting Bolt - 2bpp (+pause)
+FE FF     ; --Wait--
+09 5E     ; Scroll to Defender: Normal (+pause)
+FE FF     ; --Wait--
+01 1A     ; Placement: Defender
+1A 1A     ; Placement / Scrolling: ???
+03 26     ; BG2?: ???
+F9 FF     ; Dodge point
+06 54     ; --Wait: 6 frames--
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+22 04     ; Display Tiles: ???
+01 22     ; Add Background Hue: Light Blue
+21 16     ; Effect: Instant White
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+0C 2E     ; Play Sound (lower): Dire Thunder End
+25 16     ; Effect / Palette: ???
+26 16     ; Effect / Palette: ???
+1B 1A     ; Placement / Scrolling: ???
+06 54     ; --Wait: 6 frames--
+FE FF     ; --Wait--
+FA FF     ; Damage point
+03 54     ; --Wait: 3 frames--
+FE FF     ; --Wait--
+24 56     ; Effect / Palette: ??? (+pause)
+FE FF     ; --Wait--
+23 04     ; Display Tiles: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+FF 26     ; BG2?: ???
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+24 04     ; Display Tiles: ???
+12 56     ; Effect: Reset Tile/Palette Effects (+pause)
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

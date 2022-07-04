@@ -1,0 +1,424 @@
+	MA_AlternateSoldierMapSpriteIndex						= 0
+		MA_AlternateSoldierMapSpriteIndexMapSound			= $00
+
+	MA_CavalierMapSpriteIndex								= 1
+		MA_CavalierMapSpriteIndexMapSound					= MS_SoundMountedTier1
+
+	MA_LanceKnightMapSpriteIndex							= 2
+		MA_LanceKnightMapSpriteIndexMapSound				= MS_SoundMountedTier1
+
+	MA_BowKnightMapSpriteIndex								= 3
+		MA_BowKnightMapSpriteIndexMapSound					= MS_SoundMountedTier1
+
+	MA_AxeKnightMapSpriteIndex								= 4
+		MA_AxeKnightMapSpriteIndexMapSound					= MS_SoundMountedTier1
+
+	MA_SwordKnightMapSpriteIndex							= 5
+		MA_SwordKnightMapSpriteIndexMapSound				= MS_SoundMountedTier1
+
+	MA_TroubadourMapSpriteIndex								= 6
+		MA_TroubadourMapSpriteIndexMapSound					= MS_SoundMountedTier1
+
+	MA_KnightLord_1_2_MapSpriteIndex						= 7
+		MA_KnightLord_1_2_MapSpriteIndexMapSound			= MS_SoundMountedTier2
+
+	MA_DukeKnightMapSpriteIndex								= 8
+		MA_DukeKnightMapSpriteIndexMapSound					= MS_SoundMountedTier2
+
+	MA_MasterKnightMapSpriteIndex							= 9
+		MA_MasterKnightMapSpriteIndexMapSound				= MS_SoundMountedTier2
+
+	MA_MasterKnightFMapSpriteIndex							= 10
+		MA_MasterKnightFMapSpriteIndexMapSound				= MS_SoundMountedTier2
+
+	MA_PaladinMapSpriteIndex								= 11
+		MA_PaladinMapSpriteIndexMapSound					= MS_SoundMountedTier2
+
+	MA_PaladinFMapSpriteIndex								= 12
+		MA_PaladinFMapSpriteIndexMapSound					= MS_SoundMountedTier2
+
+	MA_ArchKnightMapSpriteIndex								= 13
+		MA_ArchKnightMapSpriteIndexMapSound					= MS_SoundMountedTier2
+
+	MA_RangerMapSpriteIndex									= 14
+		MA_RangerMapSpriteIndexMapSound						= MS_SoundMountedTier2
+
+	MA_MageKnightMapSpriteIndex								= 15
+		MA_MageKnightMapSpriteIndexMapSound					= MS_SoundMountedTier2
+
+	MA_MageKnightFMapSpriteIndex							= 16
+		MA_MageKnightFMapSpriteIndexMapSound				= MS_SoundMountedTier2
+
+	MA_GreatKnightMapSpriteIndex							= 17
+		MA_GreatKnightMapSpriteIndexMapSound				= MS_SoundMountedTier2
+
+	MA_PegasusKnightMapSpriteIndex							= 18
+		MA_PegasusKnightMapSpriteIndexMapSound				= MS_SoundFlying
+
+	MA_FalconKnightMapSpriteIndex							= 19
+		MA_FalconKnightMapSpriteIndexMapSound				= MS_SoundFlying
+
+	MA_DracoriderMapSpriteIndex								= 20
+		MA_DracoriderMapSpriteIndexMapSound					= MS_SoundFlying
+
+	MA_DracoknightMapSpriteIndex							= 21
+		MA_DracoknightMapSpriteIndexMapSound				= MS_SoundFlying
+
+	MA_DracoknightFMapSpriteIndex							= 22
+		MA_DracoknightFMapSpriteIndexMapSound				= MS_SoundFlying
+
+	MA_DragonMasterMapSpriteIndex							= 23
+		MA_DragonMasterMapSpriteIndexMapSound				= MS_SoundFlying
+
+	MA_DragonMasterFMapSpriteIndex							= 24
+		MA_DragonMasterFMapSpriteIndexMapSound				= MS_SoundFlying
+
+	MA_ArcherMapSpriteIndex									= 25
+		MA_ArcherMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_ArcherFMapSpriteIndex								= 26
+		MA_ArcherFMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_MyrmidonMapSpriteIndex								= 27
+		MA_MyrmidonMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_MyrmidonFMapSpriteIndex								= 28
+		MA_MyrmidonFMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_SwordmasterMapSpriteIndex							= 29
+		MA_SwordmasterMapSpriteIndexMapSound				= MS_SoundInfantry
+
+	MA_SwordmasterFMapSpriteIndex							= 30
+		MA_SwordmasterFMapSpriteIndexMapSound				= MS_SoundInfantry
+
+	MA_SniperMapSpriteIndex									= 31
+		MA_SniperMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_SniperFMapSpriteIndex								= 32
+		MA_SniperFMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_HeroFE4MapSpriteIndex								= 33
+		MA_HeroFE4MapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_Unused22MapSpriteIndex								= 34
+		MA_Unused22MapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_GeneralMapSpriteIndex								= 35
+		MA_GeneralMapSpriteIndexMapSound					= MS_SoundArmor
+
+	MA_EmperorMapSpriteIndex								= 36
+		MA_EmperorMapSpriteIndexMapSound					= MS_SoundArmor
+
+	MA_BaronMapSpriteIndex									= 37
+		MA_BaronMapSpriteIndexMapSound						= MS_SoundArmor
+
+	MA_ArmoredLanceMapSpriteIndex							= 38
+		MA_ArmoredLanceMapSpriteIndexMapSound				= MS_SoundArmor
+
+	MA_ArmoredAxeMapSpriteIndex								= 39
+		MA_ArmoredAxeMapSpriteIndexMapSound					= MS_SoundArmor
+
+	MA_ArmoredBowMapSpriteIndex								= 40
+		MA_ArmoredBowMapSpriteIndexMapSound					= MS_SoundArmor
+
+	MA_ArmoredSwordMapSpriteIndex							= 41
+		MA_ArmoredSwordMapSpriteIndexMapSound				= MS_SoundArmor
+
+	MA_BerserkerMapSpriteIndex								= 42
+		MA_BerserkerMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_BrigandMapSpriteIndex								= 43
+		MA_BrigandMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_BrigandAlternateMapSpriteIndex						= 44
+		MA_BrigandAlternateMapSpriteIndexMapSound			= MS_SoundInfantry
+
+	MA_WarriorMapSpriteIndex								= 45
+		MA_WarriorMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_HunterMapSpriteIndex									= 46
+		MA_HunterMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_PirateMapSpriteIndex									= 47
+		MA_PirateMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_JuniorLordMapSpriteIndex								= 48
+		MA_JuniorLordMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_MageKnightDismountedMapSpriteIndex					= 49
+		MA_MageKnightDismountedMapSpriteIndexMapSound		= MS_SoundInfantry
+
+	MA_MageKnightFDismountedMapSpriteIndex					= 50
+		MA_MageKnightFDismountedMapSpriteIndexMapSound		= MS_SoundInfantry
+
+	MA_LordMapSpriteIndex									= 51
+		MA_LordMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_PrincessMapSpriteIndex								= 52
+		MA_PrincessMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_QueenMapSpriteIndex									= 53
+		MA_QueenMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_DancerMapSpriteIndex									= 54
+		MA_DancerMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_PriestMapSpriteIndex									= 55
+		MA_PriestMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_PriestessMapSpriteIndex								= 56
+		MA_PriestessMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_MageMapSpriteIndex									= 57
+		MA_MageMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_MageFMapSpriteIndex									= 58
+		MA_MageFMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_LoptrianMageMapSpriteIndex							= 59
+		MA_LoptrianMageMapSpriteIndexMapSound				= MS_SoundInfantry
+
+	MA_LoptrianMageFMapSpriteIndex							= 60
+		MA_LoptrianMageFMapSpriteIndexMapSound				= MS_SoundInfantry
+
+	MA_ThunderMageMapSpriteIndex							= 61
+		MA_ThunderMageMapSpriteIndexMapSound				= MS_SoundInfantry
+
+	MA_ThunderMageFMapSpriteIndex							= 62
+		MA_ThunderMageFMapSpriteIndexMapSound				= MS_SoundInfantry
+
+	MA_WindMageMapSpriteIndex								= 63
+		MA_WindMageMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_WindMageFMapSpriteIndex								= 64
+		MA_WindMageFMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_HighPriestMapSpriteIndex								= 65
+		MA_HighPriestMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_HighPriestessMapSpriteIndex							= 66
+		MA_HighPriestessMapSpriteIndexMapSound				= MS_SoundInfantry
+
+	MA_BishopMapSpriteIndex									= 67
+		MA_BishopMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_SageMapSpriteIndex									= 68
+		MA_SageMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_SageFMapSpriteIndex									= 69
+		MA_SageFMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_BardMapSpriteIndex									= 70
+		MA_BardMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_ClericMapSpriteIndex									= 71
+		MA_ClericMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_SorcererMapSpriteIndex								= 72
+		MA_SorcererMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_DarkBishopMapSpriteIndex								= 73
+		MA_DarkBishopMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_ThiefMapSpriteIndex									= 74
+		MA_ThiefMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_ThiefFMapSpriteIndex									= 75
+		MA_ThiefFMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_RogueMapSpriteIndex									= 76
+		MA_RogueMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_RogueFMapSpriteIndex									= 77
+		MA_RogueFMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_ChildMapSpriteIndex									= 78
+		MA_ChildMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_ChildFMapSpriteIndex									= 79
+		MA_ChildFMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_CivilianMapSpriteIndex								= 80
+		MA_CivilianMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_CivilianFMapSpriteIndex								= 81
+		MA_CivilianFMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_BallisticianMapSpriteIndex							= 82
+		MA_BallisticianMapSpriteIndexMapSound				= MS_SoundInfantry
+
+	MA_IronBallisticianMapSpriteIndex						= 83
+		MA_IronBallisticianMapSpriteIndexMapSound			= MS_SoundInfantry
+
+	MA_KillerBallisticianMapSpriteIndex						= 84
+		MA_KillerBallisticianMapSpriteIndexMapSound			= MS_SoundInfantry
+
+	MA_DarkPrinceMapSpriteIndex								= 85
+		MA_DarkPrinceMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_BowKnightFMapSpriteIndex								= 86
+		MA_BowKnightFMapSpriteIndexMapSound					= MS_SoundMountedTier1
+
+	MA_ArchKnightFMapSpriteIndex							= 87
+		MA_ArchKnightFMapSpriteIndexMapSound				= MS_SoundMountedTier2
+
+	MA_PromotedKnightDismountedMapSpriteIndex				= 88
+		MA_PromotedKnightDismountedMapSpriteIndexMapSound	= MS_SoundInfantry
+
+	MA_PromotedKnightFDismountedMapSpriteIndex				= 89
+		MA_PromotedKnightFDismountedMapSpriteIndexMapSound	= MS_SoundInfantry
+
+	MA_KnightDismountedMapSpriteIndex						= 90
+		MA_KnightDismountedMapSpriteIndexMapSound			= MS_SoundInfantry
+
+	MA_KnightFDismountedMapSpriteIndex						= 91
+		MA_KnightFDismountedMapSpriteIndexMapSound			= MS_SoundInfantry
+
+	MA_BowKnightDismountedMapSpriteIndex					= 92
+		MA_BowKnightDismountedMapSpriteIndexMapSound		= MS_SoundInfantry
+
+	MA_BowKnightFDismountedMapSpriteIndex					= 93
+		MA_BowKnightFDismountedMapSpriteIndexMapSound		= MS_SoundInfantry
+
+	MA_ArchKnightDismountedMapSpriteIndex					= 94
+		MA_ArchKnightDismountedMapSpriteIndexMapSound		= MS_SoundInfantry
+
+	MA_ArchKnightFDismountedMapSpriteIndex					= 95
+		MA_ArchKnightFDismountedMapSpriteIndexMapSound		= MS_SoundInfantry
+
+	MA_PegasusRiderMapSpriteIndex							= 96
+		MA_PegasusRiderMapSpriteIndexMapSound				= MS_SoundFlying
+
+	MA_DracoriderFMapSpriteIndex							= 97
+		MA_DracoriderFMapSpriteIndexMapSound				= MS_SoundFlying
+
+	MA_Great_Venin_BallisticianMapSpriteIndex				= 98
+		MA_Great_Venin_BallisticianMapSpriteIndexMapSound	= MS_SoundInfantry
+
+	MA_SwordKnightDismountedMapSpriteIndex					= 99
+		MA_SwordKnightDismountedMapSpriteIndexMapSound		= MS_SoundInfantry
+
+	MA_RangerDismountedMapSpriteIndex						= 100
+		MA_RangerDismountedMapSpriteIndexMapSound			= MS_SoundInfantry
+
+	MA_FighterMapSpriteIndex								= 101
+		MA_FighterMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_HeroMapSpriteIndex									= 102
+		MA_HeroMapSpriteIndexMapSound						= MS_SoundInfantry
+
+	MA_SoldierMapSpriteIndex								= 103
+		MA_SoldierMapSpriteIndexMapSound					= MS_SoundInfantry
+
+	MA_ArcherEnemyMapSpriteIndex							= 104
+		MA_ArcherEnemyMapSpriteIndexMapSound				= MS_SoundInfantry
+
+	MA_HeroFMapSpriteIndex									= 105
+		MA_HeroFMapSpriteIndexMapSound						= MS_SoundInfantry
+
+MA_AlternateSoldierMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_AlternateSoldierMapSpriteIndexMapSound
+MA_CavalierMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_CavalierMapSpriteIndexMapSound
+MA_LanceKnightMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_LanceKnightMapSpriteIndexMapSound
+MA_BowKnightMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_BowKnightMapSpriteIndexMapSound
+MA_AxeKnightMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_AxeKnightMapSpriteIndexMapSound
+MA_SwordKnightMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_SwordKnightMapSpriteIndexMapSound
+MA_TroubadourMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_TroubadourMapSpriteIndexMapSound
+MA_KnightLord_1_2_MapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_KnightLord_1_2_MapSpriteIndexMapSound
+MA_DukeKnightMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_DukeKnightMapSpriteIndexMapSound
+MA_MasterKnightMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_MasterKnightMapSpriteIndexMapSound
+MA_MasterKnightFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_MasterKnightFMapSpriteIndexMapSound
+MA_PaladinMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_PaladinMapSpriteIndexMapSound
+MA_PaladinFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_PaladinFMapSpriteIndexMapSound
+MA_ArchKnightMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ArchKnightMapSpriteIndexMapSound
+MA_RangerMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_RangerMapSpriteIndexMapSound
+MA_MageKnightMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_MageKnightMapSpriteIndexMapSound
+MA_MageKnightFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_MageKnightFMapSpriteIndexMapSound
+MA_GreatKnightMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_GreatKnightMapSpriteIndexMapSound
+MA_PegasusKnightMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_PegasusKnightMapSpriteIndexMapSound
+MA_FalconKnightMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_FalconKnightMapSpriteIndexMapSound
+MA_DracoriderMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_DracoriderMapSpriteIndexMapSound
+MA_DracoknightMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_DracoknightMapSpriteIndexMapSound
+MA_DracoknightFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_DracoknightFMapSpriteIndexMapSound
+MA_DragonMasterMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_DragonMasterMapSpriteIndexMapSound
+MA_DragonMasterFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_DragonMasterFMapSpriteIndexMapSound
+MA_ArcherMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ArcherMapSpriteIndexMapSound
+MA_ArcherFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ArcherFMapSpriteIndexMapSound
+MA_MyrmidonMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_MyrmidonMapSpriteIndexMapSound
+MA_MyrmidonFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_MyrmidonFMapSpriteIndexMapSound
+MA_SwordmasterMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_SwordmasterMapSpriteIndexMapSound
+MA_SwordmasterFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_SwordmasterFMapSpriteIndexMapSound
+MA_SniperMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_SniperMapSpriteIndexMapSound
+MA_SniperFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_SniperFMapSpriteIndexMapSound
+MA_HeroFE4MapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_HeroFE4MapSpriteIndexMapSound
+MA_Unused22MapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_Unused22MapSpriteIndexMapSound
+MA_GeneralMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_GeneralMapSpriteIndexMapSound
+MA_EmperorMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_EmperorMapSpriteIndexMapSound
+MA_BaronMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_BaronMapSpriteIndexMapSound
+MA_ArmoredLanceMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ArmoredLanceMapSpriteIndexMapSound
+MA_ArmoredAxeMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ArmoredAxeMapSpriteIndexMapSound
+MA_ArmoredBowMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ArmoredBowMapSpriteIndexMapSound
+MA_ArmoredSwordMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ArmoredSwordMapSpriteIndexMapSound
+MA_BerserkerMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_BerserkerMapSpriteIndexMapSound
+MA_BrigandMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_BrigandMapSpriteIndexMapSound
+MA_BrigandAlternateMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_BrigandAlternateMapSpriteIndexMapSound
+MA_WarriorMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_WarriorMapSpriteIndexMapSound
+MA_HunterMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_HunterMapSpriteIndexMapSound
+MA_PirateMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_PirateMapSpriteIndexMapSound
+MA_JuniorLordMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_JuniorLordMapSpriteIndexMapSound
+MA_MageKnightDismountedMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_MageKnightDismountedMapSpriteIndexMapSound
+MA_MageKnightFDismountedMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_MageKnightFDismountedMapSpriteIndexMapSound
+MA_LordMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_LordMapSpriteIndexMapSound
+MA_PrincessMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_PrincessMapSpriteIndexMapSound
+MA_QueenMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_QueenMapSpriteIndexMapSound
+MA_DancerMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_DancerMapSpriteIndexMapSound
+MA_PriestMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_PriestMapSpriteIndexMapSound
+MA_PriestessMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_PriestessMapSpriteIndexMapSound
+MA_MageMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_MageMapSpriteIndexMapSound
+MA_MageFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_MageFMapSpriteIndexMapSound
+MA_LoptrianMageMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_LoptrianMageMapSpriteIndexMapSound
+MA_LoptrianMageFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_LoptrianMageFMapSpriteIndexMapSound
+MA_ThunderMageMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ThunderMageMapSpriteIndexMapSound
+MA_ThunderMageFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ThunderMageFMapSpriteIndexMapSound
+MA_WindMageMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_WindMageMapSpriteIndexMapSound
+MA_WindMageFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_WindMageFMapSpriteIndexMapSound
+MA_HighPriestMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_HighPriestMapSpriteIndexMapSound
+MA_HighPriestessMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_HighPriestessMapSpriteIndexMapSound
+MA_BishopMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_BishopMapSpriteIndexMapSound
+MA_SageMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_SageMapSpriteIndexMapSound
+MA_SageFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_SageFMapSpriteIndexMapSound
+MA_BardMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_BardMapSpriteIndexMapSound
+MA_ClericMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ClericMapSpriteIndexMapSound
+MA_SorcererMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_SorcererMapSpriteIndexMapSound
+MA_DarkBishopMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_DarkBishopMapSpriteIndexMapSound
+MA_ThiefMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ThiefMapSpriteIndexMapSound
+MA_ThiefFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ThiefFMapSpriteIndexMapSound
+MA_RogueMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_RogueMapSpriteIndexMapSound
+MA_RogueFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_RogueFMapSpriteIndexMapSound
+MA_ChildMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ChildMapSpriteIndexMapSound
+MA_ChildFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ChildFMapSpriteIndexMapSound
+MA_CivilianMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_CivilianMapSpriteIndexMapSound
+MA_CivilianFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_CivilianFMapSpriteIndexMapSound
+MA_BallisticianMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_BallisticianMapSpriteIndexMapSound
+MA_IronBallisticianMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_IronBallisticianMapSpriteIndexMapSound
+MA_KillerBallisticianMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_KillerBallisticianMapSpriteIndexMapSound
+MA_DarkPrinceMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_DarkPrinceMapSpriteIndexMapSound
+MA_BowKnightFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_BowKnightFMapSpriteIndexMapSound
+MA_ArchKnightFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ArchKnightFMapSpriteIndexMapSound
+MA_PromotedKnightDismountedMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_PromotedKnightDismountedMapSpriteIndexMapSound
+MA_PromotedKnightFDismountedMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_PromotedKnightFDismountedMapSpriteIndexMapSound
+MA_KnightDismountedMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_KnightDismountedMapSpriteIndexMapSound
+MA_KnightFDismountedMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_KnightFDismountedMapSpriteIndexMapSound
+MA_BowKnightDismountedMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_BowKnightDismountedMapSpriteIndexMapSound
+MA_BowKnightFDismountedMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_BowKnightFDismountedMapSpriteIndexMapSound
+MA_ArchKnightDismountedMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ArchKnightDismountedMapSpriteIndexMapSound
+MA_ArchKnightFDismountedMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ArchKnightFDismountedMapSpriteIndexMapSound
+MA_PegasusRiderMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_PegasusRiderMapSpriteIndexMapSound
+MA_DracoriderFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_DracoriderFMapSpriteIndexMapSound
+MA_Great_Venin_BallisticianMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_Great_Venin_BallisticianMapSpriteIndexMapSound
+MA_SwordKnightDismountedMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_SwordKnightDismountedMapSpriteIndexMapSound
+MA_RangerDismountedMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_RangerDismountedMapSpriteIndexMapSound
+MA_FighterMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_FighterMapSpriteIndexMapSound
+MA_HeroMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_HeroMapSpriteIndexMapSound
+MA_SoldierMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_SoldierMapSpriteIndexMapSound
+MA_ArcherEnemyMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_ArcherEnemyMapSpriteIndexMapSound
+MA_HeroFMapSpriteIndexMapMovementSoundsEntry .dstruct structMapMouvementSoundsEntry, MA_HeroFMapSpriteIndexMapSound

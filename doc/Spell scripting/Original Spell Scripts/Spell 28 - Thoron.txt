@@ -1,0 +1,72 @@
+B1382 - B140D
+
+3B 08     ; BEGIN
+4F 42     ; Load Tile: Thoron Pulse (+pause)
+FE FF     ; --Wait--
+50 42     ; Load Tile: Thoron Line (+pause)
+FE FF     ; --Wait--
+01 22     ; BG Hue: Light Blue
+13 16     ; Effect: Fade Out
+53 42     ; Load Tilemap: Thoron Tilemap3 (+pause)
+FE FF     ; --Wait--
+51 68     ; Load2 Tilemap: Thoron Tilemap1 (+pause)
+FE FF     ; --Wait--
+54 42     ; Load Tilemap: Thoron Tilemap4 (+pause)
+FE FF     ; --Wait--
+16 1C     ; Secondary palette: ???
+8B 16     ; Effects: ???
+1C 1A     ; Placement: Behind attacker (2)
+40 1A     ; Scrolling: ???
+55 42     ; Load Tile: Thoron Tilemap5 (+pause)
+FE FF     ; --Wait--
+0D 2A     ; Play SFX: ???
+43 1A     ; Placement/Scrolling: ???
+15 06     ; Tile Effects: ???
+66 04     ; Display tiles: ???
+01 54     ; --Wait: 1 frame-- 
+FE FF     ; --Wait--
+48 04     ; Display tiles: ???
+86 16     ; Effects, palette: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+88 16     ; Effects, palette: ???
+06 1E     ; Scroll to defender: Medium
+3F 5A     ; Scrolling: forward, defender detection (+pause)
+FE FF     ; --Wait--
+4A 04     ; Display tiles: ???
+67 04     ; Display tiles: ???
+00 06     ; Tile effects: Stop
+42 1A     ; Placement/scrolling: ???
+14 1A     ; Placement/scrolling: ???
+45 1A     ; Placement: Defender location
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+0E 2E     ; Play sound (lower+ pitch): ???
+44 1A     ; Placement: Defender location
+01 26     ; ? (deals with foreground): ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+49 04     ; Display tiles: ???
+89 16     ; Effects: Flashing Teal
+20 54     ; --Wait: 32 frames--
+FE FF     ; --Wait--
+F9 FF     ; Dodge point
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+FA FF     ; Damage point
+20 54     ; --Wait: 32 frames--
+FE FF     ; --Wait--
+64 04     ; Display tiles: ???
+8A 16     ; Effects: ???
+FF 26     ; ? (deals with foreground): ???
+1F 1A     ; Placement/scrolling: ???
+20 54     ; --Wait: 32 frames--
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+65 04     ; Display tiles: ???
+12 56     ; Effects: Reset (+pause)
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

@@ -1,0 +1,13 @@
+structScrollBonuses 0,Item,HP,Strength,Magic,Skill,Speed,Defense,Constitution,Luck,Movement
+ScrollBonus00,OdsScroll,0,0,0,30,0,0,0,0,0
+ScrollBonus01,BaldrsScroll,5,5,0,5,5,5,0,5,0
+ScrollBonus02,HezulsScroll,30,10,0,0,0,0,0,-10,0
+ScrollBonus03,DainnsScroll,0,5,0,0,-10,30,0,0,5
+ScrollBonus04,NjorunsScroll,0,30,-10,0,10,5,0,-5,0
+ScrollBonus05,NalsScroll,10,10,0,-10,0,10,10,0,0
+ScrollBonus06,UllursScroll,0,0,0,10,10,0,0,10,0
+ScrollBonus07,ThrudsScroll,5,5,5,10,0,0,0,5,0
+ScrollBonus08,FjalarsScroll,0,5,5,10,10,0,0,0,0
+ScrollBonus09,CedsScroll,-10,0,10,0,30,0,0,0,0
+ScrollBonus0A,BragisScroll,0,-10,10,0,0,0,0,30,0
+ScrollBonus0B,HeimsScroll,0,0,30,0,0,-10,0,10,0

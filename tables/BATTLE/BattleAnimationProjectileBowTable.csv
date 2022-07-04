@@ -1,0 +1,26 @@
+structBAProjectileBow 0,Class,Xcoord,Ycoord
+BAProjectileBow00,General,232,23
+BAProjectileBow01,Emperor,232,23
+BAProjectileBow02,Baron,232,23
+BAProjectileBow03,ArmoredBow,232,23
+BAProjectileBow04,Warrior,232,18
+BAProjectileBow05,Hunter,232,18
+BAProjectileBow06,ArcherEnemy,232,20
+BAProjectileBow07,Ballistician,243,41
+BAProjectileBow08,IronBallistician,243,41
+BAProjectileBow09,KillerBallistician,243,41
+BAProjectileBow0A,VeninBallistician,243,41
+BAProjectileBow0B,Archer,232,20
+BAProjectileBow0C,ArcherF,232,20
+BAProjectileBow0D,Sniper,232,20
+BAProjectileBow0E,SniperF,232,20
+BAProjectileBow0F,BowKnight,232,26
+BAProjectileBow10,BowKnightDismounted,232,20
+BAProjectileBow11,BowKnightF,232,26
+BAProjectileBow12,BowKnightFDismounted,232,20
+BAProjectileBow13,ArchKnight,232,26
+BAProjectileBow14,ArchKnightDismounted,232,20
+BAProjectileBow15,ArchKnightF,232,26
+BAProjectileBow16,ArchKnightFDismounted,232,20
+BAProjectileBow17,MasterKnight,232,26
+BAProjectileBow18,MasterKnightF,232,26

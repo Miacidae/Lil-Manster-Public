@@ -1,0 +1,47 @@
+B185C - B18B5
+
+3B 08     ; BEGIN
+6F 42     ; Load Tiles: Jörmungandr (+pause)
+FE FF     ; --Wait--
+02 1C     ; Secondary Palette: ???
+70 68     ; Load Tiles2: Jörmungandr Tilemap (+pause)
+FE FF     ; --Wait--
+01 5E     ; Scroll to Defender: Slow 1 (+pause)
+FE FF     ; --Wait--
+AF 16     ; Effect / Palette: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+01 22     ; Add Background Hue: Light Blue
+13 56     ; Effect: Fade Out 2 (+pause)
+FE FF     ; --Wait--
+0D 04     ; Display Tiles: Dim
+14 54     ; --Wait: 20 frames--
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+1E 2A     ; Play Sound: Jörmungandr
+08 06     ; Tile Effect: Heavy Ripple
+07 1A     ; Placement / Scrolling: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+B0 16     ; Effect / Palette: ???
+77 54     ; --Wait: 119 frames--
+FE FF     ; --Wait--
+F9 FF     ; Dodge point
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+FA FF     ; Damage point
+3C 54     ; --Wait: 60 frames--
+FE FF     ; --Wait--
+B1 16     ; Effect / Palette: ???
+50 54     ; --Wait: 80 frames--
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+28 54     ; --Wait: 40 frames--
+FE FF     ; --Wait--
+0E 04     ; Display Tiles: 
+00 06     ; Tile Effect: Stop
+12 56     ; Effect: Reset Tile/Palette Effects (+pause)
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

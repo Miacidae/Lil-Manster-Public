@@ -1,0 +1,77 @@
+B1222 - B12B7
+
+3B 08     ; BEGIN
+29 42     ; Load Tile: Valflame Lines (+pause)
+FE FF     ; --Wait--
+2A 42     ; Load Tile: Valflame Triangle Lines -2bpp (+pause)
+FE FF     ; --Wait--
+2B 42     ; Load Tile: Valflame Lines Tilemap (+pause)
+FE FF     ; --Wait--
+15 1C     ; Secondary Palette: ???
+2E 42     ; Load Tile: Valflame Triangle Lines Tilemap (+pause)
+FE FF     ; --Wait--
+09 5E     ; Scroll to Defender: Normal (+pause)
+FE FF     ; --Wait--
+68 16     ; Effect / Palette: ???
+07 56     ; Effect: Fade Out (+pause)
+FE FF     ; --Wait--
+69 16     ; Effect / Palette: ???
+34 04     ; Display Tiles: Black out BG
+02 1A     ; Placement: Center of Screen
+2A 08     ; Battle Scene Mod: Shift Background Up
+2F 1A     ; Placement / Scrolling: ???
+28 42     ; Load Tile: Valflame Sun (+pause)
+FE FF     ; --Wait--
+2C 68     ; Load Tile2: Valflame Sun Tilemap 1 (+pause)
+FE FF     ; --Wait--
+06 2A     ; Play Sound: Valflame Start
+35 04     ; Display Tiles: ???
+4F 16     ; Palette: Valflame Red 1
+65 56     ; Effect / Palette: ???
+FE FF     ; --Wait--
+50 16     ; Palette: Valflame Red 2
+66 16     ; Effect / Palette: ???
+30 1A     ; Placement / Scrolling: ???
+0D 64     ; Special Triangle Masking: ??? (+pause)
+FE FF     ; --Wait--
+36 04     ; Display Tiles: ???
+FD FF     ; Cast1: Starts the animation loop on the caster
+0B 24     ; Special Triangle Masking: ???
+73 54     ; --Wait: 115 frames--
+F9 FF     ; Dodge point
+FE FF     ; --Wait--
+67 16     ; Effect / Palette: ???
+51 16     ; Palette: Valflame Red 2
+14 54     ; --Wait: 20 frames--
+FE FF     ; --Wait--
+6A 16     ; Effect / Palette: ???
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+FA FF     ; Damage point
+12 54     ; --Wait: 18 frames--
+FE FF     ; --Wait--
+57 04     ; Display Tiles: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+37 04     ; Display Tiles: ???
+B2 56     ; Effect / Palette: ???
+04 58     ; BG Mod: Clear?? (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+05 58     ; BG Mod: Clear?? (+pause)
+FE FF     ; --Wait--
+2B 08     ; Battle Scene Mod: Reset BG
+05 4E     ; BG?: Meteor something1 (+pause)
+FE FF     ; --Wait--
+06 4E     ; BG?: Meteor something2 (+pause)
+06 18     ; BG Mod: ???
+FE FF     ; --Wait--
+60 16     ; Effect / Palette: Fade In
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+56 04     ; Display Tiles: ???
+12 56     ; Effect: Reset Tile/Palette Effects
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

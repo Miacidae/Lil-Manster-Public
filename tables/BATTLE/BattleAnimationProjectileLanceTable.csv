@@ -1,0 +1,23 @@
+structBAProjectileLance 0,Class,Xcoord,Ycoord
+BAProjectileLance00,Cavalier,232,48
+BAProjectileLance01,LanceKnight,232,48
+BAProjectileLance02,KnightLord,232,48
+BAProjectileLance03,DukeKnight,232,48
+BAProjectileLance04,MasterKnight,232,48
+BAProjectileLance05,Paladin,232,48
+BAProjectileLance06,PaladinF,232,48
+BAProjectileLance07,PegasusKnight,232,50
+BAProjectileLance08,FalconKnight,232,50
+BAProjectileLance09,Dracorider,232,53
+BAProjectileLance0A,Dracoknight,232,53
+BAProjectileLance0B,DragonMaster,232,53
+BAProjectileLance0C,General,232,26
+BAProjectileLance0D,Emperor,232,26
+BAProjectileLance0E,Baron,232,26
+BAProjectileLance0F,MasterKnightF,232,48
+BAProjectileLance10,DracoriderF,232,53
+BAProjectileLance11,DracoknightF,232,53
+BAProjectileLance12,DragonMasterF,232,53
+BAProjectileLance13,PegasusRider,232,50
+BAProjectileLance14,Soldier,242,29
+BAProjectileLance15,ArmoredLance,232,31

@@ -1,0 +1,30 @@
+B0C8E - B0CC5
+
+3B 08     ; BEGIN
+03 42     ; Load Tile: Mend (+pause)
+FE FF     ; --Wait--
+04 42     ; Load Tile: Mend Tilemap (+pause)
+FE FF     ; --Wait--
+00 1A     ; Placement: Above attacker
+06 56     ; Effects: ??? (+pause)
+FE FF     ; --Wait--
+23 2A     ; Play sound: Ensorcel/Mend start
+00 04     ; Display Tiles: ???
+C9 56     ; Palette: Ensorcel1 (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+CA 56     ; Palette: Ensorcel2 (+pause)
+FE FF     ; --Wait--
+01 04     ; Display Tiles: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+01 1A     ; Placement: Defender
+CB 56     ; Palette: Ensorcel3 (+pause)
+FE FF     ; --Wait--
+FB FF     ; Healing point
+CC 56     ; Palette: Ensorcel4 (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+02 04     ; Display Tiles: ???
+36 08     ; END
+FF FF     ; EXIT

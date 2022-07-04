@@ -1,0 +1,57 @@
+B0DAC - B0E19
+
+3B 08     ; BEGIN
+0E 42     ; Load Tile: Bolganone Ground - 2bpp (+pause)
+FE FF     ; --Wait--
+0F 42     ; Load Tile: Bolganone Ground Tilemap (+pause)
+FE FF     ; --Wait--
+00 22     ; Add Background Hue: Red
+11 16     ; Effect: Slow Fade Out
+00 1C     ; Secondary Palette: ???
+0A 54     ; --Wait: 10 frames--
+FE FF     ; --Wait--
+04 2A     ; Play Sound: Bolganone Hole Open
+01 20     ; Screen Shake: Magnitude 1
+00 5E     ; Scroll to Defender: Slowest (+pause)
+FE FF     ; --Wait--
+03 1A     ; Placement: ???
+07 04     ; Display Tiles: ???
+10 42     ; Load Tile: Bolganone Flame (+pause)
+FE FF     ; --Wait--
+09 00     ; Effect Mask: Create Large Ground Hole + Very Slow Expand
+0B 40     ; Effect Mask: Create “Out of a pit” mask (+pause)
+FE FF     ; --Wait--
+11 42     ; Load Tile: Bolganone Tilemap (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+05 2A     ; Play Sound: Bolganone Gush
+04 1A     ; Placement: ???
+08 04     ; Display Tiles: Dim Display
+0E 56     ; Palette: Bolganone Red1 start (+pause)
+FE FF     ; --Wait--
+0F 56     ; Palette: Bolganone Red2 loop (+pause)
+FE FF     ; --Wait--
+0F 56     ; Palette: Bolganone Red2 loop (+pause)
+FE FF     ; --Wait--
+0F 56     ; Palette: Bolganone Red2 loop (+pause)
+FE FF     ; --Wait--
+F9 FF     ; Dodge point
+0F 56     ; Palette: Bolganone Red2 loop (+pause)
+FE FF     ; --Wait--
+FA FF     ; Damage point
+0F 56     ; Palette: Bolganone Red2 loop (+pause)
+FE FF     ; --Wait--
+10 56     ; Palette: Bolganone Red3 end (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+09 04     ; Display Tiles: Remove Display?
+0A 40     ; Effect Mask: Fast Contract (Large Ground Hole) (+pause)
+FE FF     ; --Wait--
+12 56     ; Effect: Reset Tile/Palette Effects
+FE FF     ; --Wait--
+00 20     ; Screen Shake: Stop
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

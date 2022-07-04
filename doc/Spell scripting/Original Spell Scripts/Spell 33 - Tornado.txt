@@ -1,0 +1,36 @@
+B1598 - B15DB
+
+3B 08     ; BEGIN
+40 42     ; Load Tiles: Tornado (+pause)
+FE FF     ; --Wait--
+43 42     ; Load Tiles: Blizzard/Tornado (+pause)
+FE FF     ; --Wait--
+41 68     ; Load Tiles2: Tornado Tilemap (+pause)
+FE FF     ; --Wait--
+B3 16     ; Effect / Palette: ???
+44 42     ; Load Tiles: Blizzard/Tornado Tilemap (+pause)
+FE FF     ; --Wait--
+16 2A     ; Play Sound: Tornado
+09 06     ; Tile Effect: Restore Wavy
+0B 1A     ; Placement: Just below Attacker
+18 04     ; Display Tiles: ???
+B4 16     ; Effect / Palette: ???
+4C 1A     ; Scrolling: Upward Foreground
+B5 56     ; Effect / Palette: ??? (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+F9 FF     ; Dodge point
+02 1E     ; Scroll to Defender: Fast 1
+0C 5A     ; Scrolling: Slow Forward, Defender Detection (+pause)
+FE FF     ; --Wait--
+FA FF     ; Damage point
+0D 5A     ; Scrolling: ??? (+pause)
+FE FF     ; --Wait--
+B6 56     ; Effect / Palette: ??? (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+00 06     ; Tile Effect: Stop
+19 04     ; Display Tiles: ???
+36 08     ; END
+FF FF     ; EXIT

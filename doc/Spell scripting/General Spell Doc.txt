@@ -1,0 +1,91 @@
+Spell Script Start: B0AA0
+
+3B 08 Starts Animation
+36 08 Ends Animation
+
+
+
+
+
+
+
+
+B0AA0 - B0AD7 	Spell 1 - Heal
+(b0ab8-b0ae9, b0aea-b0b29, bob2a-b0b2f, bob30-b0b35, b0b36-bob5b)
+B0B5C - B0B91	Spell 2 - Fire
+B0B92 - B0BC5	Spell 3 - another Heal
+B0BC6 - BOC31	Spell 4 - Aura
+B0C32 - B0C8D	Spell 5 - Unused Ranged Phyisc?
+B0C8E - B0CC5	Spell 6	- Ensorcel
+B0CC6 - B0CFD	Spell 7 - Unused Hammerne?
+B0CFE - B0D35	Spell 8 - Mend
+B0D36 - B0D6D	Spell 9 - Recover
+B0D6E - B0DAB	Spell 10 - Fortify
+B0DAC - B0E19	Spell 11 - Bolganone
+B0E1A - B0EBF	Spell 12 - Meteor / removes attacker and defender
+B0EC0 - B0EF5	Spell 13 - FE4 Return
+B0EF6 - B0F33	Spell 14 - FE4 Warp
+B0F34 - B0F77	Spell 15 - FE4 Rescue / broken
+B0F78 - B0FB9	Spell 16 - FE4 Charm?
+B0FBA - B0FFD	Spell 17 - Restore
+B0FFE - B1041	Spell 18 - Kaia
+B1042 - B10BD	Spell 19 - FE4 Valkyrie
+B10BE - B1125	Spell 20 - Silence, melee
+B1126 - B1171	Spell 21 - Silence, ranged
+B1172 - B11B3	Spell 22 - Sleep
+B11B4 - B11D3	Spell 23 - no animation
+B11D4 - B1221	Spell 24 - Elfire
+B1222 - B12B7	Spell 25 - Valflame, ranged, misses circle on target
+B12B8 - B131D	Spell 26 - Thunder
+B131E - B1381	Spell 27 - Dire Thunder
+B1382 - B140D	Spell 28 - Thoron
+B140E - B147D	Spell 29 - Mjölnir
+B147E - B1527	Spell 30 - Bolting  / removes attacker and defender
+B1528 - B1561	Spell 31 - Wind
+B1562 - B1597	Spell 32 - Grafcalibur
+B1598 - B15DB	Spell 33 - Tornado
+B15DC - B1643	Spell 34 - Forseti
+B1644 - B16E1	Spell 35 - Blizzard
+B16E2 - B173D	Spell 36 - Light
+B173E - B17C5	Spell 37 - Nosferatu
+B17C6 - B185B	Spell 38 - Naga, ranged
+B185C - B18B5	Spell 39 - Jormungand
+B18B6 - B1969	Spell 40 - Fenrir
+B196A - B1A1D	Spell 41 - Stone
+B1A1E - B1AD1	Spell 42 - Venin
+B1AD2 - B1B69	Spell 43 - Hel
+B1B6A - B1C03	Spell 44 - Loptous
+(B1C04 - B1D9D)
+B1D9E - B1E25	Spell 45 - Promotion
+(B1E26 - B1E83)
+B1E84 - B1ECB	Spell 46 - Silence, softlocks
+(B1ECC - B1EE5)
+B1EE6 - B1F09	Spell 47 - Berserk(-effect of Sword)
+B1F0A - B1F3B	Spell 48 - Sleep(-effect of Sword)
+B1F3C - ~B1F51	- Holy Weapon Flash
+B1F52 - B1F8F	Spell 49 - Ranged Mend?
+B1F90 - B1FF5	Spell 50 - Ranged Restore?
+B1FF6 - B205B	Spell 51 - Same as previous spell
+B205C - B208B	Spell 52 - Berserk, dodgable
+B208C - B20EF	Spell 53 - Sleep, dodgable
+B20F0 - B2145	Spell 54 - Berserk, dodgable
+(B2146 - B218B)
+B218C - ~B21AB	(has usual spell start but no end) darkens screen, black/white background
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

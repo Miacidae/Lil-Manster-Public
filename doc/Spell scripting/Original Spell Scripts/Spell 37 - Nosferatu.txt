@@ -1,0 +1,70 @@
+B173E - B17C5
+
+3B 08     ; BEGIN
+34 42     ; Load Tiles: Nosferatu (+pause)
+FE FF     ; --Wait--
+35 42     ; Load Tiles: Nosferatu Tilemap 1 (+pause)
+FE FF     ; --Wait--
+09 5E     ; Scroll to Defender: Normal (+pause)
+FE FF     ; --Wait--
+07 56     ; Effect: Fade Out 1 (+pause)
+FE FF     ; --Wait--
+2C 04     ; Display Tiles: ???
+01 1A     ; Placement: Defender
+3B 1A     ; Placement / Scrolling: ???
+32 16     ; Palette: ???
+79 16     ; Palette: ???
+2A 08     ; Battle Scene Mod: Shift Background Up
+36 42     ; Load Tiles: Nosferatu Tilemap 2 (+pause)
+FE FF     ; --Wait--
+1A 2E     ; Play Sound (lower): Nosferatu Start
+5F 04     ; Display Tiles: ???
+32 16     ; Palette: ???
+33 16     ; Palette: ???
+34 16     ; Palette: ???
+35 56     ; Effect: ??? (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+F9 FF     ; Dodge point
+2A 16     ; Palette: ???
+2B 16     ; Palette: ???
+2C 16     ; Palette: ???
+2D 16     ; Palette: ???
+78 54     ; --Wait: 120 frames--
+FE FF     ; --Wait--
+0A 5E     ; Scroll to Defender: Medium 3 (+pause)
+FE FF     ; --Wait--
+21 5A     ; Placement / Scrolling: ??? (+pause)
+FE FF     ; --Wait--
+1B 2C     ; Play Sound (low): Nosferatu End
+FA FF     ; Damage point
+F8 FF     ; Absorb point
+2E 16     ; Palette: ???
+2F 16     ; Palette: ???
+30 16     ; Palette: ???
+31 16     ; Palette: ???
+78 54     ; --Wait: 120 frames--
+FE FF     ; --Wait--
+FC FF     ; Reaction point
+FD FF     ; Cast2: resting
+36 16     ; Palette: ???
+37 16     ; Palette: ???
+38 16     ; Palette: ???
+39 16     ; Palette: ???
+3C 54     ; --Wait: 60 frames--
+FE FF     ; --Wait--
+2D 04     ; Display Tiles: ???
+05 58     ; BG Mod: ??? (+pause)
+FE FF     ; --Wait--
+2B 08     ; Battle Scene Mod: Reset BG
+06 4E     ; BG?: ??? (+pause)
+06 18     ; BG Mod: ???
+FE FF     ; --Wait--
+55 16     ; Palette: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+5E 04     ; Display Tiles: ???
+12 56     ; Effect: Reset Tile/Palette Effects (+pause)
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

@@ -1,0 +1,71 @@
+
+aBattleAnimationsOnMusicTable .block	; 96/846C
+.word	Marty
+.word	Dalsin
+.word	Wolfe	;used to be Callion
+.word	Shiva
+.word	Perne
+.word	Fred
+.word	Olwen
+.word	Shannam
+.word	Trude
+.word	Misha
+.word	Salem
+.word	Mareeta
+.word	Amalda
+.word	Conomor
+.word	Saias
+.word	Galzus
+.word	Ilios
+.word	Xavier
+.word	Weissmann
+.word	Bucks
+.word	Lobos
+.word	Rumaigh	;used to be Ishtar
+.word	Eisenhau
+.word	Gomez
+.word	Merloch
+.word	Largo
+.word	Kempf
+.word	Oltoph
+.word	Colho
+.word	Liszt
+.word	Paulus
+.word	Baldach
+.word	McCloy
+.word	Codha
+.word	Brook
+.word	Nicolov
+.word	Moore
+.word	Muller
+.word	Reinkoch
+.word	Palman
+.word	Kant
+.word	Gustav
+.word	Mannheim
+.word	Fraus
+.word	Seimetz
+.word	Zaun
+.word	Cohen
+.word	Alphand
+.word	Bandole	;used to be Orvis
+.word	Faden
+.word	Coulter
+.word	Reinhardt
+.word	Tolman
+.word	Dvorak
+.word	Eichner
+.word	Seil
+.word	Bharat
+.word	Mus
+.word	Tigris
+.word	TigrisDagdar
+.word	CanisSara
+.word	Canis
+.word	BovisGalzus
+.word	Bovis
+.word	PorcusLifis
+.word	Porcus
+.word	DracoEyvel
+.word	Draco
+.bend

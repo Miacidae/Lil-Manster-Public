@@ -1,0 +1,162 @@
+	RangedWeaponUnknown00				= 0
+		RangedWeaponUnknown00Item		= $FF
+		RangedWeaponUnknown00Unknown1	= $04
+		RangedWeaponUnknown00Unknown2	= $04
+
+	RangedWeaponUnknown01				= 1
+		RangedWeaponUnknown01Item		= $FF
+		RangedWeaponUnknown01Unknown1	= $04
+		RangedWeaponUnknown01Unknown2	= $04
+
+	RangedWeaponUnknown02				= 2
+		RangedWeaponUnknown02Item		= $FF
+		RangedWeaponUnknown02Unknown1	= $04
+		RangedWeaponUnknown02Unknown2	= $04
+
+	RangedWeaponUnknown03				= 3
+		RangedWeaponUnknown03Item		= FlameSword
+		RangedWeaponUnknown03Unknown1	= $04
+		RangedWeaponUnknown03Unknown2	= $04
+
+	RangedWeaponUnknown04				= 4
+		RangedWeaponUnknown04Item		= EarthSword
+		RangedWeaponUnknown04Unknown1	= $04
+		RangedWeaponUnknown04Unknown2	= $04
+
+	RangedWeaponUnknown05				= 5
+		RangedWeaponUnknown05Item		= LightningSword
+		RangedWeaponUnknown05Unknown1	= $04
+		RangedWeaponUnknown05Unknown2	= $04
+
+	RangedWeaponUnknown06				= 6
+		RangedWeaponUnknown06Item		= WindSword
+		RangedWeaponUnknown06Unknown1	= $04
+		RangedWeaponUnknown06Unknown2	= $04
+
+	RangedWeaponUnknown07				= 7
+		RangedWeaponUnknown07Item		= LightBrand
+		RangedWeaponUnknown07Unknown1	= $04
+		RangedWeaponUnknown07Unknown2	= $04
+
+	RangedWeaponUnknown08				= 8
+		RangedWeaponUnknown08Item		= Ballista
+		RangedWeaponUnknown08Unknown1	= $00
+		RangedWeaponUnknown08Unknown2	= $00
+
+	RangedWeaponUnknown09				= 9
+		RangedWeaponUnknown09Item		= IronBallista
+		RangedWeaponUnknown09Unknown1	= $00
+		RangedWeaponUnknown09Unknown2	= $00
+
+	RangedWeaponUnknown0A				= 10
+		RangedWeaponUnknown0AItem		= KillerBallista
+		RangedWeaponUnknown0AUnknown1	= $00
+		RangedWeaponUnknown0AUnknown2	= $00
+
+	RangedWeaponUnknown0B				= 11
+		RangedWeaponUnknown0BItem		= VeninBallista
+		RangedWeaponUnknown0BUnknown1	= $00
+		RangedWeaponUnknown0BUnknown2	= $00
+
+	RangedWeaponUnknown0C				= 12
+		RangedWeaponUnknown0CItem		= Meteor
+		RangedWeaponUnknown0CUnknown1	= $00
+		RangedWeaponUnknown0CUnknown2	= $00
+
+	RangedWeaponUnknown0D				= 13
+		RangedWeaponUnknown0DItem		= Bolting
+		RangedWeaponUnknown0DUnknown1	= $00
+		RangedWeaponUnknown0DUnknown2	= $00
+
+	RangedWeaponUnknown0E				= 14
+		RangedWeaponUnknown0EItem		= Blizzard
+		RangedWeaponUnknown0EUnknown1	= $00
+		RangedWeaponUnknown0EUnknown2	= $00
+
+	RangedWeaponUnknown0F				= 15
+		RangedWeaponUnknown0FItem		= Fenrir
+		RangedWeaponUnknown0FUnknown1	= $00
+		RangedWeaponUnknown0FUnknown2	= $00
+
+	RangedWeaponUnknown10				= 16
+		RangedWeaponUnknown10Item		= Venin
+		RangedWeaponUnknown10Unknown1	= $00
+		RangedWeaponUnknown10Unknown2	= $00
+
+	RangedWeaponUnknown11				= 17
+		RangedWeaponUnknown11Item		= Petrify
+		RangedWeaponUnknown11Unknown1	= $00
+		RangedWeaponUnknown11Unknown2	= $00
+
+	RangedWeaponUnknown12				= 18
+		RangedWeaponUnknown12Item		= Physic
+		RangedWeaponUnknown12Unknown1	= $FF
+		RangedWeaponUnknown12Unknown2	= $00
+
+	RangedWeaponUnknown13				= 19
+		RangedWeaponUnknown13Item		= Fortify
+		RangedWeaponUnknown13Unknown1	= $01
+		RangedWeaponUnknown13Unknown2	= $01
+
+	RangedWeaponUnknown14				= 20
+		RangedWeaponUnknown14Item		= $FF
+		RangedWeaponUnknown14Unknown1	= $02
+		RangedWeaponUnknown14Unknown2	= $02
+
+	RangedWeaponUnknown15				= 21
+		RangedWeaponUnknown15Item		= Restore
+		RangedWeaponUnknown15Unknown1	= $FF
+		RangedWeaponUnknown15Unknown2	= $00
+
+	RangedWeaponUnknown16				= 22
+		RangedWeaponUnknown16Item		= Kia
+		RangedWeaponUnknown16Unknown1	= $FF
+		RangedWeaponUnknown16Unknown2	= $00
+
+	RangedWeaponUnknown17				= 23
+		RangedWeaponUnknown17Item		= $FF
+		RangedWeaponUnknown17Unknown1	= $02
+		RangedWeaponUnknown17Unknown2	= $02
+
+	RangedWeaponUnknown18				= 24
+		RangedWeaponUnknown18Item		= Silence
+		RangedWeaponUnknown18Unknown1	= $FF
+		RangedWeaponUnknown18Unknown2	= $00
+
+	RangedWeaponUnknown19				= 25
+		RangedWeaponUnknown19Item		= Sleep
+		RangedWeaponUnknown19Unknown1	= $FF
+		RangedWeaponUnknown19Unknown2	= $00
+
+	RangedWeaponUnknown1A				= 26
+		RangedWeaponUnknown1AItem		= Berserk
+		RangedWeaponUnknown1AUnknown1	= $FF
+		RangedWeaponUnknown1AUnknown2	= $00
+
+RangedWeaponUnknown00BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown00Item, RangedWeaponUnknown00Unknown1, RangedWeaponUnknown00Unknown2
+RangedWeaponUnknown01BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown01Item, RangedWeaponUnknown01Unknown1, RangedWeaponUnknown01Unknown2
+RangedWeaponUnknown02BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown02Item, RangedWeaponUnknown02Unknown1, RangedWeaponUnknown02Unknown2
+RangedWeaponUnknown03BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown03Item, RangedWeaponUnknown03Unknown1, RangedWeaponUnknown03Unknown2
+RangedWeaponUnknown04BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown04Item, RangedWeaponUnknown04Unknown1, RangedWeaponUnknown04Unknown2
+RangedWeaponUnknown05BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown05Item, RangedWeaponUnknown05Unknown1, RangedWeaponUnknown05Unknown2
+RangedWeaponUnknown06BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown06Item, RangedWeaponUnknown06Unknown1, RangedWeaponUnknown06Unknown2
+RangedWeaponUnknown07BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown07Item, RangedWeaponUnknown07Unknown1, RangedWeaponUnknown07Unknown2
+RangedWeaponUnknown08BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown08Item, RangedWeaponUnknown08Unknown1, RangedWeaponUnknown08Unknown2
+RangedWeaponUnknown09BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown09Item, RangedWeaponUnknown09Unknown1, RangedWeaponUnknown09Unknown2
+RangedWeaponUnknown0ABattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown0AItem, RangedWeaponUnknown0AUnknown1, RangedWeaponUnknown0AUnknown2
+RangedWeaponUnknown0BBattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown0BItem, RangedWeaponUnknown0BUnknown1, RangedWeaponUnknown0BUnknown2
+RangedWeaponUnknown0CBattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown0CItem, RangedWeaponUnknown0CUnknown1, RangedWeaponUnknown0CUnknown2
+RangedWeaponUnknown0DBattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown0DItem, RangedWeaponUnknown0DUnknown1, RangedWeaponUnknown0DUnknown2
+RangedWeaponUnknown0EBattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown0EItem, RangedWeaponUnknown0EUnknown1, RangedWeaponUnknown0EUnknown2
+RangedWeaponUnknown0FBattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown0FItem, RangedWeaponUnknown0FUnknown1, RangedWeaponUnknown0FUnknown2
+RangedWeaponUnknown10BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown10Item, RangedWeaponUnknown10Unknown1, RangedWeaponUnknown10Unknown2
+RangedWeaponUnknown11BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown11Item, RangedWeaponUnknown11Unknown1, RangedWeaponUnknown11Unknown2
+RangedWeaponUnknown12BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown12Item, RangedWeaponUnknown12Unknown1, RangedWeaponUnknown12Unknown2
+RangedWeaponUnknown13BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown13Item, RangedWeaponUnknown13Unknown1, RangedWeaponUnknown13Unknown2
+RangedWeaponUnknown14BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown14Item, RangedWeaponUnknown14Unknown1, RangedWeaponUnknown14Unknown2
+RangedWeaponUnknown15BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown15Item, RangedWeaponUnknown15Unknown1, RangedWeaponUnknown15Unknown2
+RangedWeaponUnknown16BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown16Item, RangedWeaponUnknown16Unknown1, RangedWeaponUnknown16Unknown2
+RangedWeaponUnknown17BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown17Item, RangedWeaponUnknown17Unknown1, RangedWeaponUnknown17Unknown2
+RangedWeaponUnknown18BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown18Item, RangedWeaponUnknown18Unknown1, RangedWeaponUnknown18Unknown2
+RangedWeaponUnknown19BattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown19Item, RangedWeaponUnknown19Unknown1, RangedWeaponUnknown19Unknown2
+RangedWeaponUnknown1ABattleAnimationRangedWeaponUnknownEntry .dstruct structAnimationRangedWeaponUnknown, RangedWeaponUnknown1AItem, RangedWeaponUnknown1AUnknown1, RangedWeaponUnknown1AUnknown2

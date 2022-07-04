@@ -1,0 +1,52 @@
+B208C - B20EF
+
+3B 08     ; BEGIN
+18 42     ; Load Tile: Sleep (+pause)
+FE FF     ; --Wait--
+B9 16     ; Effect: ???
+19 42     ; Load Tile: Sleep Tilemap (+pause)
+FE FF     ; --Wait--
+04 58	  ; BG mod: Clear1? (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+05 58     ; BG mod: Clear2? (+pause)
+FE FF     ; --Wait--
+17 10     ; Battle Scene Mod2: Fade out battle area to black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+05 0E     ; BG??: Meteo something1?
+06 4E     ; BG??: Meteo something1? (+pause)
+06 18     ; BG Mod: Clear3?
+FE FF     ; --Wait--
+FD FF     ; Cast2.5: resting??
+11 08     ; Battle Scene Mod: Hide Attacker
+12 08     ; Battle Scene Mod: Show Defender
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+16 10     ; Battle Scene Mod2: Fade In Battle Area: Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+2E 2A     ; Play Sound: Sleep
+2A 04     ; Display Tiles: Sleep Pattern
+08 06     ; Tile Effect: Heavy Ripple
+20 1A     ; Scrolling: Sleep
+3C 16     ; Palette: Sleep 3
+3D 56     ; Palette: Sleep 4 (+pause)
+FE FF     ; --Wait--
+3A 16     ; Palette: Sleep 1
+3B 16     ; Palette: Sleep 2
+B0 54     ; --Wait: 176 frames--
+FE FF     ; --Wait--
+F9 FF     ; Dodge point
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+3E 16     ; Palette: Sleep 5
+3F 56     ; Palette: Sleep 6 (+pause)
+FE FF     ; --Wait--
+2B 04     ; Display Tiles: ???
+00 06     ; Tile Effect: Stop
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+36 08     ; END
+FF FF     ; EXIT

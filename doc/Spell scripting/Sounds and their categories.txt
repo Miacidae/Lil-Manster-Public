@@ -1,0 +1,84 @@
+--09--						BOWS
+00	Fire ignite			C
+01	Fire flame			A
+02	???					
+03	Elfire				E
+04?
+05?
+06?
+
+--0B--							TuToWiTaFoBiLiNo
+07	Meteor Charging		A		    X
+08	Meteor Exploding	A		X X   X X X X X
+
+--0D--
+09	Thunder Start		A
+0A	Thunder/Bolting End	EA
+0B	Dire/Bolting Start	A
+0C	Dire End			E
+
+--0F--
+0D	Thoron Start		A
+0E	Thoron End			E
+0F?
+10?
+11?
+
+--11--
+12	Wind Start			A
+13	Wind End			A
+14	Graf Start			A
+15	Graf End			A
+
+--13--
+16	Tornado				A
+
+--15--
+17	Forseti				A
+
+--17--
+18	Blizzard			A
+
+--19--
+19	Light				A
+
+--1B--
+1A	Nosferatu Start		E
+1B	Nosferatu End		C
+1C?
+1D?	??? Fenrir?
+
+--1D--
+1E	Jormungand			A
+
+--1F--
+1F	Fenrirs				A
+
+--21--
+20	Hel					A
+21?
+
+-05-
+22	Heal Start			A
+23	Ensorcel/Mend Start	A
+24	Recover				A
+25	Ranged Mend			A
+26	Fortify				A
+27?
+28?
+29?
+2A	Valkyrie Start		A
+2E	Sleep				A
+2F	Berserk				A
+
+--23--
+2B	Restore/Kaia Start	A
+30	Restore/Kaia End	E
+
+--25--
+2C	Silence Start		A
+2D	Silence End			A
+
+--??--
+31	Hammerne 1			A
+32	Hammerne 2			A

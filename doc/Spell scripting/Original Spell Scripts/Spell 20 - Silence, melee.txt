@@ -1,0 +1,54 @@
+B10BE - B1125
+
+3B 08     ; BEGIN
+7B 42     ; Load Tile: Silence (+pause)
+FE FF     ; --Wait--
+7C 42     ; Load Tile: Silence Tilemap (+pause)
+1D 16     ; Palette: Silence 1
+FE FF     ; --Wait--
+04 18     ; BG Mod: ???
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+05 18     ; BG Mod: ???
+17 10     ; Battle Scene Mod2: Fade Out Battle Area to Black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+05 0E     ; BG?: Meteor something1
+06 4E     ; BG?: Meteor something2 (+pause)
+06 18     ; BG Mod: ???
+FE FF     ; --Wait--
+11 08     ; Battle Scene Mod: Hide Attacker
+12 08     ; Battle Scene Mod: Show Defender
+FE FF     ; --Wait--
+16 10     ; Battle Scene Mod2: Fade In Battle Area: Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+2C 2A     ; Play Sound: Silence Start
+03 64     ; Special Triangle Masking: ???
+FE FF     ; --Wait--
+0F 1A     ; Scrolling: Fast Upward
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+1A 04     ; Display Tiles: ???
+1E 16     ; Palette: Silence 2
+04 24     ; Special Triangle Masking: ???
+53 54     ; --Wait: 83 frames--
+FE FF     ; --Wait--
+02 22     ; Add Background Hue: Purple
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+1F 16     ; Effect: Enable XX 22 code
+20 54     ; --Wait: 32 frames--
+FE FF     ; --Wait--
+F9 FF     ; Dodge point
+2D 2A     ; Play Sound: Silence End
+42 08     ; Battle Scene Mod: Mute Music 1
+1B 04     ; Display Tiles: ???
+21 16     ; Effect: Instant White
+03 22     ; Add Background Hue: Grey
+20 56     ; Effect: Heavy Darkness (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+36 08     ; END
+FF FF     ; EXIT

@@ -1,0 +1,53 @@
+B1FF6-B205B
+
+3B 08     ; BEGIN
+16 42     ; Load Tile: Restore (+pause)
+FE FF     ; --Wait--
+17 42     ; Load Tile: Restore Tilemap (+pause)
+FE FF     ; --Wait--
+04 58	  ; BG mod: Clear1? (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+05 58     ; BG mod: Clear2? (+pause)
+FE FF     ; --Wait--
+17 10     ; Battle Scene Mod2: Fade out battle area to black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+05 0E     ; BG??: Meteo something1?
+06 4E     ; BG??: Meteo something1? (+pause)
+06 18     ; BG Mod: Clear3?
+FE FF     ; --Wait--
+FD FF     ; Cast2.5: resting??
+11 08     ; Battle Scene Mod: Hide Attacker
+12 08     ; Battle Scene Mod: Show Defender
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+16 10     ; Battle Scene Mod2: Fade In Battle Area: Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+13 1C     ; Secondary Palette: ???
+10 00     ; Effect Mask: Create Pillar (medium)
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+22 16     ; Palette: Restore Blue
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+2B 2A     ; Play Sound: Restore Start
+11 1A     ; Placement / Scrolling: ???
+1C 04     ; Display Tiles: ???
+08 06     ; Tile Effect: Heavy Ripple
+10 1A     ; Placement / Scrolling: ???
+4C 54     ; --Wait: 76 frames--
+FE FF     ; --Wait--
+20 54     ; --Wait: 32 frames--
+FE FF     ; --Wait--
+B7 16     ; Palette: Fade Out
+20 54     ; --Wait: 32 frames--
+FE FF     ; --Wait--
+30 2E     ; Play Sound (lower): Restore End
+1D 04     ; Display Tiles: ???
+00 06     ; Tile Effect: Stop
+11 00     ; Effect Mask: Delete
+FD FF     ; Cast2: resting
+36 08     ; END
+FF FF     ; EXIT

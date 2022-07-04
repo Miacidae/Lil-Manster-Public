@@ -1,0 +1,408 @@
+	Support00				= 0
+		Support00Getter		= Leif
+		Support00Giver		= Nanna
+		Support00Support	= 10
+
+	Support01				= 1
+		Support01Getter		= Finn
+		Support01Giver		= Leif
+		Support01Support	= 10
+
+	Support02				= 2
+		Support02Getter		= Finn
+		Support02Giver		= Nanna
+		Support02Support	= 10
+
+	Support03				= 3
+		Support03Getter		= Osian
+		Support03Giver		= Eyvel
+		Support03Support	= 10
+
+	Support04				= 4
+		Support04Getter		= Osian
+		Support04Giver		= Tanya
+		Support04Support	= 10
+
+	Support05				= 5
+		Support05Getter		= Halvan
+		Support05Giver		= Eyvel
+		Support05Support	= 10
+
+	Support06				= 6
+		Support06Getter		= Eyvel
+		Support06Giver		= Leif
+		Support06Support	= 10
+
+	Support07				= 7
+		Support07Getter		= Eyvel
+		Support07Giver		= Mareeta
+		Support07Support	= 10
+
+	Support08				= 8
+		Support08Getter		= Dagdar
+		Support08Giver		= Eyvel
+		Support08Support	= 10
+
+	Support09				= 9
+		Support09Getter		= Dagdar
+		Support09Giver		= Tanya
+		Support09Support	= 10
+
+	Support0A				= 10
+		Support0AGetter		= Marty
+		Support0AGiver		= Dagdar
+		Support0ASupport	= 10
+
+	Support0B				= 11
+		Support0BGetter		= Ronan
+		Support0BGiver		= Leif
+		Support0BSupport	= 10
+
+	Support0C				= 12
+		Support0CGetter		= Miranda
+		Support0CGiver		= Leif
+		Support0CSupport	= 10
+
+	Support0D				= 13
+		Support0DGetter		= Safy
+		Support0DGiver		= Tina
+		Support0DSupport	= 10
+
+	Support0E				= 14
+		Support0EGetter		= Safy
+		Support0EGiver		= Leif
+		Support0ESupport	= 10
+
+	Support0F				= 15
+		Support0FGetter		= Lara
+		Support0FGiver		= Perne
+		Support0FSupport	= 10
+
+	Support10				= 16
+		Support10Getter		= Brighton
+		Support10Giver		= Macha
+		Support10Support	= 10
+
+	Support11				= 17
+		Support11Getter		= Fergus
+		Support11Giver		= Karin
+		Support11Support	= 10
+
+	Support12				= 18
+		Support12Getter		= Eda
+		Support12Giver		= Dean
+		Support12Support	= 10
+
+	Support13				= 19
+		Support13Getter		= Asbel
+		Support13Giver		= Leif
+		Support13Support	= 10
+
+	Support14				= 20
+		Support14Getter		= Asbel
+		Support14Giver		= CedChp23
+		Support14Support	= 10
+
+	Support15				= 21
+		Support15Getter		= Asbel
+		Support15Giver		= CedChp4x
+		Support15Support	= 10
+
+	Support16				= 22
+		Support16Getter		= Macha
+		Support16Giver		= CedChp23
+		Support16Support	= 10
+
+	Support17				= 23
+		Support17Getter		= Macha
+		Support17Giver		= CedChp4x
+		Support17Support	= 10
+
+	Support18				= 24
+		Support18Getter		= Hicks
+		Support18Giver		= Leif
+		Support18Support	= 10
+
+	Support19				= 25
+		Support19Getter		= Nanna
+		Support19Giver		= Leif
+		Support19Support	= 10
+
+	Support1A				= 26
+		Support1AGetter		= Nanna
+		Support1AGiver		= Diarmuid
+		Support1ASupport	= 10
+
+	Support1B				= 27
+		Support1BGetter		= Selphina
+		Support1BGiver		= Glade
+		Support1BSupport	= 10
+
+	Support1C				= 28
+		Support1CGetter		= Selphina
+		Support1CGiver		= Leif
+		Support1CSupport	= 10
+
+	Support1D				= 29
+		Support1DGetter		= Dalsin
+		Support1DGiver		= Leif
+		Support1DSupport	= 10
+
+	Support1E				= 30
+		Support1EGetter		= Callion
+		Support1EGiver		= Leif
+		Support1ESupport	= 10
+
+	Support1F				= 31
+		Support1FGetter		= Callion
+		Support1FGiver		= Selphina
+		Support1FSupport	= 10
+
+	Support20				= 32
+		Support20Getter		= Shiva
+		Support20Giver		= Safy
+		Support20Support	= 10
+
+	Support21				= 33
+		Support21Getter		= Perne
+		Support21Giver		= Lara
+		Support21Support	= 10
+
+	Support22				= 34
+		Support22Getter		= Glade
+		Support22Giver		= Selphina
+		Support22Support	= 20
+
+	Support23				= 35
+		Support23Getter		= Kane
+		Support23Giver		= Glade
+		Support23Support	= 10
+
+	Support24				= 36
+		Support24Getter		= Kane
+		Support24Giver		= Selphina
+		Support24Support	= 10
+
+	Support25				= 37
+		Support25Getter		= Alba
+		Support25Giver		= Glade
+		Support25Support	= 10
+
+	Support26				= 38
+		Support26Getter		= Alba
+		Support26Giver		= Selphina
+		Support26Support	= 10
+
+	Support27				= 39
+		Support27Getter		= Robert
+		Support27Giver		= Glade
+		Support27Support	= 10
+
+	Support28				= 40
+		Support28Getter		= Robert
+		Support28Giver		= Selphina
+		Support28Support	= 10
+
+	Support29				= 41
+		Support29Getter		= Fred
+		Support29Giver		= Olwen
+		Support29Support	= 10
+
+	Support2A				= 42
+		Support2AGetter		= Olwen
+		Support2AGiver		= Leif
+		Support2ASupport	= 10
+
+	Support2B				= 43
+		Support2BGetter		= Olwen
+		Support2BGiver		= ReinhardtDialogue
+		Support2BSupport	= 10
+
+	Support2C				= 44
+		Support2CGetter		= Olwen
+		Support2CGiver		= Reinhardt
+		Support2CSupport	= 10
+
+	Support2D				= 45
+		Support2DGetter		= Lifis
+		Support2DGiver		= Safy
+		Support2DSupport	= 10
+
+	Support2E				= 46
+		Support2EGetter		= Karin
+		Support2EGiver		= Fergus
+		Support2ESupport	= 10
+
+	Support2F				= 47
+		Support2FGetter		= Karin
+		Support2FGiver		= CedChp23
+		Support2FSupport	= 10
+
+	Support30				= 48
+		Support30Getter		= Karin
+		Support30Giver		= CedChp4x
+		Support30Support	= 10
+
+	Support31				= 49
+		Support31Getter		= Dean
+		Support31Giver		= Linoan
+		Support31Support	= 20
+
+	Support32				= 50
+		Support32Getter		= Dean
+		Support32Giver		= Eda
+		Support32Support	= 10
+
+	Support33				= 51
+		Support33Getter		= Trude
+		Support33Giver		= Perne
+		Support33Support	= 10
+
+	Support34				= 52
+		Support34Getter		= Tanya
+		Support34Giver		= Osian
+		Support34Support	= 10
+
+	Support35				= 53
+		Support35Getter		= Linoan
+		Support35Giver		= Dean
+		Support35Support	= 10
+
+	Support36				= 54
+		Support36Getter		= Linoan
+		Support36Giver		= Leif
+		Support36Support	= 10
+
+	Support37				= 55
+		Support37Getter		= Misha
+		Support37Giver		= Karin
+		Support37Support	= 10
+
+	Support38				= 56
+		Support38Getter		= Salem
+		Support38Giver		= Perne
+		Support38Support	= 10
+
+	Support39				= 57
+		Support39Getter		= Salem
+		Support39Giver		= Sara
+		Support39Support	= 10
+
+	Support3A				= 58
+		Support3AGetter		= Mareeta
+		Support3AGiver		= Eyvel
+		Support3ASupport	= 10
+
+	Support3B				= 59
+		Support3BGetter		= Mareeta
+		Support3BGiver		= Galzus
+		Support3BSupport	= 10
+
+	Support3C				= 60
+		Support3CGetter		= Tina
+		Support3CGiver		= Leif
+		Support3CSupport	= 10
+
+	Support3D				= 61
+		Support3DGetter		= Tina
+		Support3DGiver		= Safy
+		Support3DSupport	= 10
+
+	Support3E				= 62
+		Support3EGetter		= Xavier
+		Support3EGiver		= Leif
+		Support3ESupport	= 10
+
+	Support3F				= 63
+		Support3FGetter		= Conomor
+		Support3FGiver		= Miranda
+		Support3FSupport	= 20
+
+	Support40				= 64
+		Support40Getter		= Homer
+		Support40Giver		= Nanna
+		Support40Support	= 10
+
+	Support41				= 65
+		Support41Getter		= Diarmuid
+		Support41Giver		= Nanna
+		Support41Support	= 10
+
+	Support42				= 66
+		Support42Getter		= Sara
+		Support42Giver		= Leif
+		Support42Support	= 10
+
+	Support43				= 67
+		Support43Getter		= Galzus
+		Support43Giver		= Mareeta
+		Support43Support	= 20
+
+Support00SupportsTableEntry .dstruct structSupports, Support00Getter, Support00Giver, Support00Support
+Support01SupportsTableEntry .dstruct structSupports, Support01Getter, Support01Giver, Support01Support
+Support02SupportsTableEntry .dstruct structSupports, Support02Getter, Support02Giver, Support02Support
+Support03SupportsTableEntry .dstruct structSupports, Support03Getter, Support03Giver, Support03Support
+Support04SupportsTableEntry .dstruct structSupports, Support04Getter, Support04Giver, Support04Support
+Support05SupportsTableEntry .dstruct structSupports, Support05Getter, Support05Giver, Support05Support
+Support06SupportsTableEntry .dstruct structSupports, Support06Getter, Support06Giver, Support06Support
+Support07SupportsTableEntry .dstruct structSupports, Support07Getter, Support07Giver, Support07Support
+Support08SupportsTableEntry .dstruct structSupports, Support08Getter, Support08Giver, Support08Support
+Support09SupportsTableEntry .dstruct structSupports, Support09Getter, Support09Giver, Support09Support
+Support0ASupportsTableEntry .dstruct structSupports, Support0AGetter, Support0AGiver, Support0ASupport
+Support0BSupportsTableEntry .dstruct structSupports, Support0BGetter, Support0BGiver, Support0BSupport
+Support0CSupportsTableEntry .dstruct structSupports, Support0CGetter, Support0CGiver, Support0CSupport
+Support0DSupportsTableEntry .dstruct structSupports, Support0DGetter, Support0DGiver, Support0DSupport
+Support0ESupportsTableEntry .dstruct structSupports, Support0EGetter, Support0EGiver, Support0ESupport
+Support0FSupportsTableEntry .dstruct structSupports, Support0FGetter, Support0FGiver, Support0FSupport
+Support10SupportsTableEntry .dstruct structSupports, Support10Getter, Support10Giver, Support10Support
+Support11SupportsTableEntry .dstruct structSupports, Support11Getter, Support11Giver, Support11Support
+Support12SupportsTableEntry .dstruct structSupports, Support12Getter, Support12Giver, Support12Support
+Support13SupportsTableEntry .dstruct structSupports, Support13Getter, Support13Giver, Support13Support
+Support14SupportsTableEntry .dstruct structSupports, Support14Getter, Support14Giver, Support14Support
+Support15SupportsTableEntry .dstruct structSupports, Support15Getter, Support15Giver, Support15Support
+Support16SupportsTableEntry .dstruct structSupports, Support16Getter, Support16Giver, Support16Support
+Support17SupportsTableEntry .dstruct structSupports, Support17Getter, Support17Giver, Support17Support
+Support18SupportsTableEntry .dstruct structSupports, Support18Getter, Support18Giver, Support18Support
+Support19SupportsTableEntry .dstruct structSupports, Support19Getter, Support19Giver, Support19Support
+Support1ASupportsTableEntry .dstruct structSupports, Support1AGetter, Support1AGiver, Support1ASupport
+Support1BSupportsTableEntry .dstruct structSupports, Support1BGetter, Support1BGiver, Support1BSupport
+Support1CSupportsTableEntry .dstruct structSupports, Support1CGetter, Support1CGiver, Support1CSupport
+Support1DSupportsTableEntry .dstruct structSupports, Support1DGetter, Support1DGiver, Support1DSupport
+Support1ESupportsTableEntry .dstruct structSupports, Support1EGetter, Support1EGiver, Support1ESupport
+Support1FSupportsTableEntry .dstruct structSupports, Support1FGetter, Support1FGiver, Support1FSupport
+Support20SupportsTableEntry .dstruct structSupports, Support20Getter, Support20Giver, Support20Support
+Support21SupportsTableEntry .dstruct structSupports, Support21Getter, Support21Giver, Support21Support
+Support22SupportsTableEntry .dstruct structSupports, Support22Getter, Support22Giver, Support22Support
+Support23SupportsTableEntry .dstruct structSupports, Support23Getter, Support23Giver, Support23Support
+Support24SupportsTableEntry .dstruct structSupports, Support24Getter, Support24Giver, Support24Support
+Support25SupportsTableEntry .dstruct structSupports, Support25Getter, Support25Giver, Support25Support
+Support26SupportsTableEntry .dstruct structSupports, Support26Getter, Support26Giver, Support26Support
+Support27SupportsTableEntry .dstruct structSupports, Support27Getter, Support27Giver, Support27Support
+Support28SupportsTableEntry .dstruct structSupports, Support28Getter, Support28Giver, Support28Support
+Support29SupportsTableEntry .dstruct structSupports, Support29Getter, Support29Giver, Support29Support
+Support2ASupportsTableEntry .dstruct structSupports, Support2AGetter, Support2AGiver, Support2ASupport
+Support2BSupportsTableEntry .dstruct structSupports, Support2BGetter, Support2BGiver, Support2BSupport
+Support2CSupportsTableEntry .dstruct structSupports, Support2CGetter, Support2CGiver, Support2CSupport
+Support2DSupportsTableEntry .dstruct structSupports, Support2DGetter, Support2DGiver, Support2DSupport
+Support2ESupportsTableEntry .dstruct structSupports, Support2EGetter, Support2EGiver, Support2ESupport
+Support2FSupportsTableEntry .dstruct structSupports, Support2FGetter, Support2FGiver, Support2FSupport
+Support30SupportsTableEntry .dstruct structSupports, Support30Getter, Support30Giver, Support30Support
+Support31SupportsTableEntry .dstruct structSupports, Support31Getter, Support31Giver, Support31Support
+Support32SupportsTableEntry .dstruct structSupports, Support32Getter, Support32Giver, Support32Support
+Support33SupportsTableEntry .dstruct structSupports, Support33Getter, Support33Giver, Support33Support
+Support34SupportsTableEntry .dstruct structSupports, Support34Getter, Support34Giver, Support34Support
+Support35SupportsTableEntry .dstruct structSupports, Support35Getter, Support35Giver, Support35Support
+Support36SupportsTableEntry .dstruct structSupports, Support36Getter, Support36Giver, Support36Support
+Support37SupportsTableEntry .dstruct structSupports, Support37Getter, Support37Giver, Support37Support
+Support38SupportsTableEntry .dstruct structSupports, Support38Getter, Support38Giver, Support38Support
+Support39SupportsTableEntry .dstruct structSupports, Support39Getter, Support39Giver, Support39Support
+Support3ASupportsTableEntry .dstruct structSupports, Support3AGetter, Support3AGiver, Support3ASupport
+Support3BSupportsTableEntry .dstruct structSupports, Support3BGetter, Support3BGiver, Support3BSupport
+Support3CSupportsTableEntry .dstruct structSupports, Support3CGetter, Support3CGiver, Support3CSupport
+Support3DSupportsTableEntry .dstruct structSupports, Support3DGetter, Support3DGiver, Support3DSupport
+Support3ESupportsTableEntry .dstruct structSupports, Support3EGetter, Support3EGiver, Support3ESupport
+Support3FSupportsTableEntry .dstruct structSupports, Support3FGetter, Support3FGiver, Support3FSupport
+Support40SupportsTableEntry .dstruct structSupports, Support40Getter, Support40Giver, Support40Support
+Support41SupportsTableEntry .dstruct structSupports, Support41Getter, Support41Giver, Support41Support
+Support42SupportsTableEntry .dstruct structSupports, Support42Getter, Support42Giver, Support42Support
+Support43SupportsTableEntry .dstruct structSupports, Support43Getter, Support43Giver, Support43Support

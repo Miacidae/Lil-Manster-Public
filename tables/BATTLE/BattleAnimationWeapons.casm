@@ -1,0 +1,625 @@
+	NoneItemGraphics									= 0
+		NoneItemGraphicsBA_WeaponIndex					= BA_Iron_Steel_Venin_BrokenSword
+		NoneItemGraphicsBA_WeaponPaletteIndex			= BA_IronSword_PaletteIndex
+
+	IronSwordGraphics									= 1
+		IronSwordGraphicsBA_WeaponIndex					= BA_Iron_Steel_Venin_BrokenSword
+		IronSwordGraphicsBA_WeaponPaletteIndex			= BA_IronSword_PaletteIndex
+
+	SteelSwordGraphics									= 2
+		SteelSwordGraphicsBA_WeaponIndex				= BA_Iron_Steel_Venin_BrokenSword
+		SteelSwordGraphicsBA_WeaponPaletteIndex			= BA_SteelSword_PaletteIndex
+
+	SilverSwordGraphics									= 3
+		SilverSwordGraphicsBA_WeaponIndex				= BA_SilverSword
+		SilverSwordGraphicsBA_WeaponPaletteIndex		= BA_SilverSword_PaletteIndex
+
+	SlimSwordGraphics									= 4
+		SlimSwordGraphicsBA_WeaponIndex					= BA_SlimSword
+		SlimSwordGraphicsBA_WeaponPaletteIndex			= BA_SlimSword_PaletteIndex
+
+	IronBladeGraphics									= 5
+		IronBladeGraphicsBA_WeaponIndex					= BA_IronBlade
+		IronBladeGraphicsBA_WeaponPaletteIndex			= BA_IronBlade_PaletteIndex
+
+	KillingEdgeGraphics									= 6
+		KillingEdgeGraphicsBA_WeaponIndex				= BA_KillingEdge
+		KillingEdgeGraphicsBA_WeaponPaletteIndex		= BA_KillingEdge_PaletteIndex
+
+	VeninEdgeGraphics									= 7
+		VeninEdgeGraphicsBA_WeaponIndex					= BA_Iron_Steel_Venin_BrokenSword
+		VeninEdgeGraphicsBA_WeaponPaletteIndex			= BA_VeninEdge_PaletteIndex
+
+	BerserkEdgeGraphics									= 8
+		BerserkEdgeGraphicsBA_WeaponIndex				= BA_BerserkEdge
+		BerserkEdgeGraphicsBA_WeaponPaletteIndex		= BA_BerserkEdge_PaletteIndex
+
+	SleepEdgeGraphics									= 9
+		SleepEdgeGraphicsBA_WeaponIndex					= BA_SleepEdge
+		SleepEdgeGraphicsBA_WeaponPaletteIndex			= BA_SleepEdge_PaletteIndex
+
+	BeoBladeGraphics									= 10
+		BeoBladeGraphicsBA_WeaponIndex					= BA_BeoBlade
+		BeoBladeGraphicsBA_WeaponPaletteIndex			= BA_BeoBlade_PaletteIndex
+
+	BlessedSwordGraphics								= 11
+		BlessedSwordGraphicsBA_WeaponIndex				= BA_BlessedSword
+		BlessedSwordGraphicsBA_WeaponPaletteIndex		= BA_BlessedSword_PaletteIndex
+
+	LoptrianFangGraphics								= 12
+		LoptrianFangGraphicsBA_WeaponIndex				= BA_LoptrianFang
+		LoptrianFangGraphicsBA_WeaponPaletteIndex		= BA_LoptrianFang_PaletteIndex
+
+	BragisBladeGraphics									= 13
+		BragisBladeGraphicsBA_WeaponIndex				= BA_BragisBlade
+		BragisBladeGraphicsBA_WeaponPaletteIndex		= BA_BragisBlade_PaletteIndex
+
+	LightBrandGraphics									= 14
+		LightBrandGraphicsBA_WeaponIndex				= BA_LightBrand
+		LightBrandGraphicsBA_WeaponPaletteIndex			= BA_LightBrand_PaletteIndex
+
+	BraveSwordGraphics									= 15
+		BraveSwordGraphicsBA_WeaponIndex				= BA_BraveSword
+		BraveSwordGraphicsBA_WeaponPaletteIndex			= BA_BraveSword_PaletteIndex
+
+	KingmakerGraphics									= 16
+		KingmakerGraphicsBA_WeaponIndex					= BA_Kingmaker
+		KingmakerGraphicsBA_WeaponPaletteIndex			= BA_Kingmaker_PaletteIndex
+
+	EarthSwordGraphics									= 17
+		EarthSwordGraphicsBA_WeaponIndex				= BA_LandsSword
+		EarthSwordGraphicsBA_WeaponPaletteIndex			= BA_LandsSword_PaletteIndex
+
+	WindSwordGraphics									= 18
+		WindSwordGraphicsBA_WeaponIndex					= BA_WindSword
+		WindSwordGraphicsBA_WeaponPaletteIndex			= BA_WindSword_PaletteIndex
+
+	FlameSwordGraphics									= 19
+		FlameSwordGraphicsBA_WeaponIndex				= BA_FlameSword
+		FlameSwordGraphicsBA_WeaponPaletteIndex			= BA_FlameSword_PaletteIndex
+
+	LightningSwordGraphics								= 20
+		LightningSwordGraphicsBA_WeaponIndex			= BA_LightningSword
+		LightningSwordGraphicsBA_WeaponPaletteIndex		= BA_LightningSword_PaletteIndex
+
+	ParagonSwordGraphics								= 21
+		ParagonSwordGraphicsBA_WeaponIndex				= BA_ParagonSword
+		ParagonSwordGraphicsBA_WeaponPaletteIndex		= BA_ParagonSword_PaletteIndex
+
+	ArmorslayerGraphics									= 22
+		ArmorslayerGraphicsBA_WeaponIndex				= BA_Armorslayer
+		ArmorslayerGraphicsBA_WeaponPaletteIndex		= BA_Armorslayer_PaletteIndex
+
+	RapierGraphics										= 23
+		RapierGraphicsBA_WeaponIndex					= BA_Rapier
+		RapierGraphicsBA_WeaponPaletteIndex				= BA_Rapier_PaletteIndex
+
+	ShortswordGraphics									= 24
+		ShortswordGraphicsBA_WeaponIndex				= BA_Shortsword
+		ShortswordGraphicsBA_WeaponPaletteIndex			= BA_Shortsword_PaletteIndex
+
+	LongswordGraphics									= 25
+		LongswordGraphicsBA_WeaponIndex					= BA_Longsword
+		LongswordGraphicsBA_WeaponPaletteIndex			= BA_Longsword_PaletteIndex
+
+	GreatswordGraphics									= 26
+		GreatswordGraphicsBA_WeaponIndex				= BA_Greatsword
+		GreatswordGraphicsBA_WeaponPaletteIndex			= BA_Greatsword_PaletteIndex
+
+	MasterSwordGraphics									= 27
+		MasterSwordGraphicsBA_WeaponIndex				= BA_MasterSword
+		MasterSwordGraphicsBA_WeaponPaletteIndex		= BA_MasterSword_PaletteIndex
+
+	ShadowSwordGraphics									= 28
+		ShadowSwordGraphicsBA_WeaponIndex				= BA_Shadow_MareetasSword
+		ShadowSwordGraphicsBA_WeaponPaletteIndex		= BA_ShadowSword_PaletteIndex
+
+	MareetasSwordGraphics								= 29
+		MareetasSwordGraphicsBA_WeaponIndex				= BA_Shadow_MareetasSword
+		MareetasSwordGraphicsBA_WeaponPaletteIndex		= BA_MareetaSword_PaletteIndex
+
+	BrokenSwordGraphics									= 30
+		BrokenSwordGraphicsBA_WeaponIndex				= BA_Iron_Steel_Venin_BrokenSword
+		BrokenSwordGraphicsBA_WeaponPaletteIndex		= BA_BrokenSword_PaletteIndex
+
+	IronLanceGraphics									= 31
+		IronLanceGraphicsBA_WeaponIndex					= BA_Iron_ShortLance
+		IronLanceGraphicsBA_WeaponPaletteIndex			= BA_Iron_ShortLance_PaletteIndex
+
+	SteelLanceGraphics									= 32
+		SteelLanceGraphicsBA_WeaponIndex				= BA_Steel_LongLance
+		SteelLanceGraphicsBA_WeaponPaletteIndex			= BA_Steel_LongLance_PaletteIndex
+
+	SilverLanceGraphics									= 33
+		SilverLanceGraphicsBA_WeaponIndex				= BA_SilverLance
+		SilverLanceGraphicsBA_WeaponPaletteIndex		= BA_SilverLance_PaletteIndex
+
+	SlimLanceGraphics									= 34
+		SlimLanceGraphicsBA_WeaponIndex					= BA_Killer_SlimLance
+		SlimLanceGraphicsBA_WeaponPaletteIndex			= BA_Slim_KillerLance_PaletteIndex
+
+	VeninLanceGraphics									= 35
+		VeninLanceGraphicsBA_WeaponIndex				= BA_Venin_BrokenLance
+		VeninLanceGraphicsBA_WeaponPaletteIndex			= BA_VeninLance_PaletteIndex
+
+	DragonpikeGraphics									= 36
+		DragonpikeGraphicsBA_WeaponIndex				= BA_Dragonpike
+		DragonpikeGraphicsBA_WeaponPaletteIndex			= BA_Dragonpike_PaletteIndex
+
+	ShadowSpearGraphics									= 37
+		ShadowSpearGraphicsBA_WeaponIndex				= BA_ShadowSpear
+		ShadowSpearGraphicsBA_WeaponPaletteIndex		= BA_ShadowSpear_PaletteIndex
+
+	BraveLanceGraphics									= 38
+		BraveLanceGraphicsBA_WeaponIndex				= BA_BraveLance
+		BraveLanceGraphicsBA_WeaponPaletteIndex			= BA_BraveLance_PaletteIndex
+
+	ShortLanceGraphics									= 39
+		ShortLanceGraphicsBA_WeaponIndex				= BA_Iron_ShortLance
+		ShortLanceGraphicsBA_WeaponPaletteIndex			= BA_Iron_ShortLance_PaletteIndex
+
+	LongLanceGraphics									= 40
+		LongLanceGraphicsBA_WeaponIndex					= BA_Steel_LongLance
+		LongLanceGraphicsBA_WeaponPaletteIndex			= BA_Steel_LongLance_PaletteIndex
+
+	GreatlanceGraphics									= 41
+		GreatlanceGraphicsBA_WeaponIndex				= BA_Greatlance
+		GreatlanceGraphicsBA_WeaponPaletteIndex			= BA_Greatlance_PaletteIndex
+
+	JavelinGraphics										= 42
+		JavelinGraphicsBA_WeaponIndex					= BA_Javelin
+		JavelinGraphicsBA_WeaponPaletteIndex			= BA_Javelin_PaletteIndex
+
+	MasterLanceGraphics									= 43
+		MasterLanceGraphicsBA_WeaponIndex				= BA_MasterLance
+		MasterLanceGraphicsBA_WeaponPaletteIndex		= BA_MasterLance_PaletteIndex
+
+	RidersbaneGraphics									= 44
+		RidersbaneGraphicsBA_WeaponIndex				= BA_Ridersbane
+		RidersbaneGraphicsBA_WeaponPaletteIndex			= BA_Ridersbane_PaletteIndex
+
+	KillerLanceGraphics									= 45
+		KillerLanceGraphicsBA_WeaponIndex				= BA_Killer_SlimLance
+		KillerLanceGraphicsBA_WeaponPaletteIndex		= BA_Slim_KillerLance_PaletteIndex
+
+	GaeBolgGraphics										= 46
+		GaeBolgGraphicsBA_WeaponIndex					= BA_GaeBolg
+		GaeBolgGraphicsBA_WeaponPaletteIndex			= BA_GaeBolg_PaletteIndex
+
+	GungnirGraphics										= 47
+		GungnirGraphicsBA_WeaponIndex					= BA_Gungnir
+		GungnirGraphicsBA_WeaponPaletteIndex			= BA_Gungnir_PaletteIndex
+
+	BrokenLanceGraphics									= 48
+		BrokenLanceGraphicsBA_WeaponIndex				= BA_Venin_BrokenLance
+		BrokenLanceGraphicsBA_WeaponPaletteIndex		= BA_BrokenLance_PaletteIndex
+
+	IronAxeGraphics										= 49
+		IronAxeGraphicsBA_WeaponIndex					= BA_Iron_Venin_Battle_BrokenAxe
+		IronAxeGraphicsBA_WeaponPaletteIndex			= BA_Iron_BattleAxe_PaletteIndex
+
+	VeninAxeGraphics									= 50
+		VeninAxeGraphicsBA_WeaponIndex					= BA_Iron_Venin_Battle_BrokenAxe
+		VeninAxeGraphicsBA_WeaponPaletteIndex			= BA_VeninAxe_PaletteIndex
+
+	SteelAxeGraphics									= 51
+		SteelAxeGraphicsBA_WeaponIndex					= BA_SteelAxe
+		SteelAxeGraphicsBA_WeaponPaletteIndex			= BA_SteelAxe_PaletteIndex
+
+	SilverAxeGraphics									= 52
+		SilverAxeGraphicsBA_WeaponIndex					= BA_SilverAxe
+		SilverAxeGraphicsBA_WeaponPaletteIndex			= BA_SilverAxe_PaletteIndex
+
+	HandAxeGraphics										= 53
+		HandAxeGraphicsBA_WeaponIndex					= BA_HandAxe
+		HandAxeGraphicsBA_WeaponPaletteIndex			= BA_Vouge_HandAxe_PaletteIndex
+
+	HammerGraphics										= 54
+		HammerGraphicsBA_WeaponIndex					= BA_Hammer
+		HammerGraphicsBA_WeaponPaletteIndex				= BA_Hammer_PaletteIndex
+
+	KillerAxeGraphics									= 55
+		KillerAxeGraphicsBA_WeaponIndex					= BA_KillerAxe
+		KillerAxeGraphicsBA_WeaponPaletteIndex			= BA_KillerAxe_PaletteIndex
+
+	VougeGraphics										= 56
+		VougeGraphicsBA_WeaponIndex						= BA_Vouge
+		VougeGraphicsBA_WeaponPaletteIndex				= BA_Vouge_HandAxe_PaletteIndex
+
+	BraveAxeGraphics									= 57
+		BraveAxeGraphicsBA_WeaponIndex					= BA_BraveAxe
+		BraveAxeGraphicsBA_WeaponPaletteIndex			= BA_BraveAxe_PaletteIndex
+
+	DevilAxeGraphics									= 58
+		DevilAxeGraphicsBA_WeaponIndex					= BA_DevilAxe
+		DevilAxeGraphicsBA_WeaponPaletteIndex			= BA_DevilAxe_PaletteIndex
+
+	BattleAxeGraphics									= 59
+		BattleAxeGraphicsBA_WeaponIndex					= BA_Iron_Venin_Battle_BrokenAxe
+		BattleAxeGraphicsBA_WeaponPaletteIndex			= BA_Iron_BattleAxe_PaletteIndex
+
+	PoleaxGraphics										= 60
+		PoleaxGraphicsBA_WeaponIndex					= BA_Poleax
+		PoleaxGraphicsBA_WeaponPaletteIndex				= BA_Poleax_PaletteIndex
+
+	MasterAxeGraphics									= 61
+		MasterAxeGraphicsBA_WeaponIndex					= BA_MasterAxe
+		MasterAxeGraphicsBA_WeaponPaletteIndex			= BA_MasterAxe_PaletteIndex
+
+	BrokenAxeGraphics									= 62
+		BrokenAxeGraphicsBA_WeaponIndex					= BA_Iron_Venin_Battle_BrokenAxe
+		BrokenAxeGraphicsBA_WeaponPaletteIndex			= BA_BrokenAxe_PaletteIndex
+
+	IronBowGraphics										= 63
+		IronBowGraphicsBA_WeaponIndex					= BA_Iron_Short_BrokenBow
+		IronBowGraphicsBA_WeaponPaletteIndex			= BA_Iron_Shortbow_PaletteIndex
+
+	SteelBowGraphics									= 64
+		SteelBowGraphicsBA_WeaponIndex					= BA_Steel_LongBow
+		SteelBowGraphicsBA_WeaponPaletteIndex			= BA_Steel_Longbow_PaletteIndex
+
+	SilverBowGraphics									= 65
+		SilverBowGraphicsBA_WeaponIndex					= BA_SilverBow
+		SilverBowGraphicsBA_WeaponPaletteIndex			= BA_SilverBow_PaletteIndex
+
+	VeninBowGraphics									= 66
+		VeninBowGraphicsBA_WeaponIndex					= BA_VeninBow
+		VeninBowGraphicsBA_WeaponPaletteIndex			= BA_VeninBow_PaletteIndex
+
+	KillerBowGraphics									= 67
+		KillerBowGraphicsBA_WeaponIndex					= BA_KillerBow
+		KillerBowGraphicsBA_WeaponPaletteIndex			= BA_KillerBow_PaletteIndex
+
+	BraveBowGraphics									= 68
+		BraveBowGraphicsBA_WeaponIndex					= BA_BraveBow
+		BraveBowGraphicsBA_WeaponPaletteIndex			= BA_BraveBow_PaletteIndex
+
+	ShortbowGraphics									= 69
+		ShortbowGraphicsBA_WeaponIndex					= BA_Iron_Short_BrokenBow
+		ShortbowGraphicsBA_WeaponPaletteIndex			= BA_Iron_Shortbow_PaletteIndex
+
+	LongbowGraphics										= 70
+		LongbowGraphicsBA_WeaponIndex					= BA_Steel_LongBow
+		LongbowGraphicsBA_WeaponPaletteIndex			= BA_Steel_Longbow_PaletteIndex
+
+	GreatbowGraphics									= 71
+		GreatbowGraphicsBA_WeaponIndex					= BA_Greatbow
+		GreatbowGraphicsBA_WeaponPaletteIndex			= BA_Greatbow_PaletteIndex
+
+	MasterBowGraphics									= 72
+		MasterBowGraphicsBA_WeaponIndex					= BA_MasterBow
+		MasterBowGraphicsBA_WeaponPaletteIndex			= BA_MasterBow_PaletteIndex
+
+	BallistaGraphics									= 73
+		BallistaGraphicsBA_WeaponIndex					= BA_Ballista_VeninBallista
+		BallistaGraphicsBA_WeaponPaletteIndex			= BA_Ballista_VeninBallista_PaletteIndex
+
+	IronBallistaGraphics								= 74
+		IronBallistaGraphicsBA_WeaponIndex				= BA_IronBallista
+		IronBallistaGraphicsBA_WeaponPaletteIndex		= BA_IronBallista_PaletteIndex
+
+	KillerBallistaGraphics								= 75
+		KillerBallistaGraphicsBA_WeaponIndex			= BA_KillerBallista
+		KillerBallistaGraphicsBA_WeaponPaletteIndex		= BA_KillerBallista_PaletteIndex
+
+	VeninBallistaGraphics								= 76
+		VeninBallistaGraphicsBA_WeaponIndex				= BA_Ballista_VeninBallista
+		VeninBallistaGraphicsBA_WeaponPaletteIndex		= BA_Ballista_VeninBallista_PaletteIndex
+
+	BrokenBowGraphics									= 77
+		BrokenBowGraphicsBA_WeaponIndex					= BA_Iron_Short_BrokenBow
+		BrokenBowGraphicsBA_WeaponPaletteIndex			= BA_BrokenBow_PaletteIndex
+
+	FireGraphics										= 78
+		FireGraphicsBA_WeaponIndex						= BA_MagicTome
+		FireGraphicsBA_WeaponPaletteIndex				= BA_MagicTome_PaletteIndex
+
+	ElfireGraphics										= 79
+		ElfireGraphicsBA_WeaponIndex					= BA_MagicTome
+		ElfireGraphicsBA_WeaponPaletteIndex				= BA_MagicTome_PaletteIndex
+
+	BolganoneGraphics									= 80
+		BolganoneGraphicsBA_WeaponIndex					= BA_MagicTome
+		BolganoneGraphicsBA_WeaponPaletteIndex			= BA_MagicTome_PaletteIndex
+
+	ValflameGraphics									= 81
+		ValflameGraphicsBA_WeaponIndex					= BA_MagicTome
+		ValflameGraphicsBA_WeaponPaletteIndex			= BA_MagicTome_PaletteIndex
+
+	ThunderGraphics										= 82
+		ThunderGraphicsBA_WeaponIndex					= BA_MagicTome
+		ThunderGraphicsBA_WeaponPaletteIndex			= BA_MagicTome_PaletteIndex
+
+	DireThunderGraphics									= 83
+		DireThunderGraphicsBA_WeaponIndex				= BA_MagicTome
+		DireThunderGraphicsBA_WeaponPaletteIndex		= BA_MagicTome_PaletteIndex
+
+	ThoronGraphics										= 84
+		ThoronGraphicsBA_WeaponIndex					= BA_MagicTome
+		ThoronGraphicsBA_WeaponPaletteIndex				= BA_MagicTome_PaletteIndex
+
+	MjolnirGraphics										= 85
+		MjolnirGraphicsBA_WeaponIndex					= BA_MagicTome
+		MjolnirGraphicsBA_WeaponPaletteIndex			= BA_MagicTome_PaletteIndex
+
+	WindGraphics										= 86
+		WindGraphicsBA_WeaponIndex						= BA_MagicTome
+		WindGraphicsBA_WeaponPaletteIndex				= BA_MagicTome_PaletteIndex
+
+	GrafcaliburGraphics									= 87
+		GrafcaliburGraphicsBA_WeaponIndex				= BA_MagicTome
+		GrafcaliburGraphicsBA_WeaponPaletteIndex		= BA_MagicTome_PaletteIndex
+
+	TornadoGraphics										= 88
+		TornadoGraphicsBA_WeaponIndex					= BA_MagicTome
+		TornadoGraphicsBA_WeaponPaletteIndex			= BA_MagicTome_PaletteIndex
+
+	ForsetiGraphics										= 89
+		ForsetiGraphicsBA_WeaponIndex					= BA_MagicTome
+		ForsetiGraphicsBA_WeaponPaletteIndex			= BA_MagicTome_PaletteIndex
+
+	LightGraphics										= 90
+		LightGraphicsBA_WeaponIndex						= BA_MagicTome
+		LightGraphicsBA_WeaponPaletteIndex				= BA_MagicTome_PaletteIndex
+
+	NosferatuGraphics									= 91
+		NosferatuGraphicsBA_WeaponIndex					= BA_MagicTome
+		NosferatuGraphicsBA_WeaponPaletteIndex			= BA_MagicTome_PaletteIndex
+
+	AuraGraphics										= 92
+		AuraGraphicsBA_WeaponIndex						= BA_MagicTome
+		AuraGraphicsBA_WeaponPaletteIndex				= BA_MagicTome_PaletteIndex
+
+	JormungandGraphics									= 93
+		JormungandGraphicsBA_WeaponIndex				= BA_MagicTome
+		JormungandGraphicsBA_WeaponPaletteIndex			= BA_MagicTome_PaletteIndex
+
+	FenrirGraphics										= 94
+		FenrirGraphicsBA_WeaponIndex					= BA_MagicTome
+		FenrirGraphicsBA_WeaponPaletteIndex				= BA_MagicTome_PaletteIndex
+
+	HelGraphics											= 95
+		HelGraphicsBA_WeaponIndex						= BA_MagicTome
+		HelGraphicsBA_WeaponPaletteIndex				= BA_MagicTome_PaletteIndex
+
+	LoptousGraphics										= 96
+		LoptousGraphicsBA_WeaponIndex					= BA_MagicTome
+		LoptousGraphicsBA_WeaponPaletteIndex			= BA_MagicTome_PaletteIndex
+
+	MeteorGraphics										= 97
+		MeteorGraphicsBA_WeaponIndex					= BA_MagicTome
+		MeteorGraphicsBA_WeaponPaletteIndex				= BA_MagicTome_PaletteIndex
+
+	BoltingGraphics										= 98
+		BoltingGraphicsBA_WeaponIndex					= BA_MagicTome
+		BoltingGraphicsBA_WeaponPaletteIndex			= BA_MagicTome_PaletteIndex
+
+	BlizzardGraphics									= 99
+		BlizzardGraphicsBA_WeaponIndex					= BA_MagicTome
+		BlizzardGraphicsBA_WeaponPaletteIndex			= BA_MagicTome_PaletteIndex
+
+	VeninGraphics										= 100
+		VeninGraphicsBA_WeaponIndex						= BA_MagicTome
+		VeninGraphicsBA_WeaponPaletteIndex				= BA_MagicTome_PaletteIndex
+
+	PetrifyGraphics										= 101
+		PetrifyGraphicsBA_WeaponIndex					= BA_MagicTome
+		PetrifyGraphicsBA_WeaponPaletteIndex			= BA_MagicTome_PaletteIndex
+
+	ForsetiInfiniteGraphics								= 102
+		ForsetiInfiniteGraphicsBA_WeaponIndex			= BA_MagicTome
+		ForsetiInfiniteGraphicsBA_WeaponPaletteIndex	= BA_MagicTome_PaletteIndex
+
+	BrokenTomeGraphics									= 103
+		BrokenTomeGraphicsBA_WeaponIndex				= BA_MagicTome
+		BrokenTomeGraphicsBA_WeaponPaletteIndex			= BA_MagicTome_PaletteIndex
+
+	HealGraphics										= 104
+		HealGraphicsBA_WeaponIndex						= BA_Heal
+		HealGraphicsBA_WeaponPaletteIndex				= BA_Heal_PaletteIndex
+
+	MendGraphics										= 105
+		MendGraphicsBA_WeaponIndex						= BA_Mend
+		MendGraphicsBA_WeaponPaletteIndex				= BA_Mend_PaletteIndex
+
+	RecoverGraphics										= 106
+		RecoverGraphicsBA_WeaponIndex					= BA_Recover
+		RecoverGraphicsBA_WeaponPaletteIndex			= BA_Recover_PaletteIndex
+
+	PhysicGraphics										= 107
+		PhysicGraphicsBA_WeaponIndex					= BA_Physic
+		PhysicGraphicsBA_WeaponPaletteIndex				= BA_Physic_PaletteIndex
+
+	FortifyGraphics										= 108
+		FortifyGraphicsBA_WeaponIndex					= BA_Fortify
+		FortifyGraphicsBA_WeaponPaletteIndex			= BA_Fortify_PaletteIndex
+
+	RescueGraphics										= 109
+		RescueGraphicsBA_WeaponIndex					= BA_Heal
+		RescueGraphicsBA_WeaponPaletteIndex				= BA_Heal_PaletteIndex
+
+	WarpGraphics										= 110
+		WarpGraphicsBA_WeaponIndex						= BA_Heal
+		WarpGraphicsBA_WeaponPaletteIndex				= BA_Heal_PaletteIndex
+
+	RestoreGraphics										= 111
+		RestoreGraphicsBA_WeaponIndex					= BA_Restore_Kia
+		RestoreGraphicsBA_WeaponPaletteIndex			= BA_Restore_Kia_PaletteIndex
+
+	SilenceGraphics										= 112
+		SilenceGraphicsBA_WeaponIndex					= BA_Silence
+		SilenceGraphicsBA_WeaponPaletteIndex			= BA_Silence_PaletteIndex
+
+	SleepGraphics										= 113
+		SleepGraphicsBA_WeaponIndex						= BA_Sleep
+		SleepGraphicsBA_WeaponPaletteIndex				= BA_Sleep_PaletteIndex
+
+	TorchStaffGraphics									= 114
+		TorchStaffGraphicsBA_WeaponIndex				= BA_Heal
+		TorchStaffGraphicsBA_WeaponPaletteIndex			= BA_Heal_PaletteIndex
+
+	ReturnStaffGraphics									= 115
+		ReturnStaffGraphicsBA_WeaponIndex				= BA_Heal
+		ReturnStaffGraphicsBA_WeaponPaletteIndex		= BA_Heal_PaletteIndex
+
+	HammerneGraphics									= 116
+		HammerneGraphicsBA_WeaponIndex					= BA_Heal
+		HammerneGraphicsBA_WeaponPaletteIndex			= BA_Heal_PaletteIndex
+
+	ThiefStaffGraphics									= 117
+		ThiefStaffGraphicsBA_WeaponIndex				= BA_Heal
+		ThiefStaffGraphicsBA_WeaponPaletteIndex			= BA_Heal_PaletteIndex
+
+	WatchGraphics										= 118
+		WatchGraphicsBA_WeaponIndex						= BA_Heal
+		WatchGraphicsBA_WeaponPaletteIndex				= BA_Heal_PaletteIndex
+
+	BerserkGraphics										= 119
+		BerserkGraphicsBA_WeaponIndex					= BA_Berserk
+		BerserkGraphicsBA_WeaponPaletteIndex			= BA_Berserk_PaletteIndex
+
+	UnlockGraphics										= 120
+		UnlockGraphicsBA_WeaponIndex					= BA_Heal
+		UnlockGraphicsBA_WeaponPaletteIndex				= BA_Heal_PaletteIndex
+
+	EnsorcelGraphics									= 121
+		EnsorcelGraphicsBA_WeaponIndex					= BA_Ensorcel
+		EnsorcelGraphicsBA_WeaponPaletteIndex			= BA_Ensorcel_PaletteIndex
+
+	RewarpGraphics										= 122
+		RewarpGraphicsBA_WeaponIndex					= BA_Heal
+		RewarpGraphicsBA_WeaponPaletteIndex				= BA_Heal_PaletteIndex
+
+	KiaGraphics											= 123
+		KiaGraphicsBA_WeaponIndex						= BA_Restore_Kia
+		KiaGraphicsBA_WeaponPaletteIndex				= BA_Restore_Kia_PaletteIndex
+
+	BrokenStaffGraphics									= 124
+		BrokenStaffGraphicsBA_WeaponIndex				= BA_Heal
+		BrokenStaffGraphicsBA_WeaponPaletteIndex		= BA_Heal_PaletteIndex
+
+NoneItemGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, NoneItemGraphicsBA_WeaponIndex, NoneItemGraphicsBA_WeaponPaletteIndex
+IronSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, IronSwordGraphicsBA_WeaponIndex, IronSwordGraphicsBA_WeaponPaletteIndex
+SteelSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, SteelSwordGraphicsBA_WeaponIndex, SteelSwordGraphicsBA_WeaponPaletteIndex
+SilverSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, SilverSwordGraphicsBA_WeaponIndex, SilverSwordGraphicsBA_WeaponPaletteIndex
+SlimSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, SlimSwordGraphicsBA_WeaponIndex, SlimSwordGraphicsBA_WeaponPaletteIndex
+IronBladeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, IronBladeGraphicsBA_WeaponIndex, IronBladeGraphicsBA_WeaponPaletteIndex
+KillingEdgeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, KillingEdgeGraphicsBA_WeaponIndex, KillingEdgeGraphicsBA_WeaponPaletteIndex
+VeninEdgeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, VeninEdgeGraphicsBA_WeaponIndex, VeninEdgeGraphicsBA_WeaponPaletteIndex
+BerserkEdgeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BerserkEdgeGraphicsBA_WeaponIndex, BerserkEdgeGraphicsBA_WeaponPaletteIndex
+SleepEdgeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, SleepEdgeGraphicsBA_WeaponIndex, SleepEdgeGraphicsBA_WeaponPaletteIndex
+BeoBladeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BeoBladeGraphicsBA_WeaponIndex, BeoBladeGraphicsBA_WeaponPaletteIndex
+BlessedSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BlessedSwordGraphicsBA_WeaponIndex, BlessedSwordGraphicsBA_WeaponPaletteIndex
+LoptrianFangGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, LoptrianFangGraphicsBA_WeaponIndex, LoptrianFangGraphicsBA_WeaponPaletteIndex
+BragisBladeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BragisBladeGraphicsBA_WeaponIndex, BragisBladeGraphicsBA_WeaponPaletteIndex
+LightBrandGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, LightBrandGraphicsBA_WeaponIndex, LightBrandGraphicsBA_WeaponPaletteIndex
+BraveSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BraveSwordGraphicsBA_WeaponIndex, BraveSwordGraphicsBA_WeaponPaletteIndex
+KingmakerGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, KingmakerGraphicsBA_WeaponIndex, KingmakerGraphicsBA_WeaponPaletteIndex
+EarthSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, EarthSwordGraphicsBA_WeaponIndex, EarthSwordGraphicsBA_WeaponPaletteIndex
+WindSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, WindSwordGraphicsBA_WeaponIndex, WindSwordGraphicsBA_WeaponPaletteIndex
+FlameSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, FlameSwordGraphicsBA_WeaponIndex, FlameSwordGraphicsBA_WeaponPaletteIndex
+LightningSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, LightningSwordGraphicsBA_WeaponIndex, LightningSwordGraphicsBA_WeaponPaletteIndex
+ParagonSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ParagonSwordGraphicsBA_WeaponIndex, ParagonSwordGraphicsBA_WeaponPaletteIndex
+ArmorslayerGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ArmorslayerGraphicsBA_WeaponIndex, ArmorslayerGraphicsBA_WeaponPaletteIndex
+RapierGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, RapierGraphicsBA_WeaponIndex, RapierGraphicsBA_WeaponPaletteIndex
+ShortswordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ShortswordGraphicsBA_WeaponIndex, ShortswordGraphicsBA_WeaponPaletteIndex
+LongswordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, LongswordGraphicsBA_WeaponIndex, LongswordGraphicsBA_WeaponPaletteIndex
+GreatswordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, GreatswordGraphicsBA_WeaponIndex, GreatswordGraphicsBA_WeaponPaletteIndex
+MasterSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, MasterSwordGraphicsBA_WeaponIndex, MasterSwordGraphicsBA_WeaponPaletteIndex
+ShadowSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ShadowSwordGraphicsBA_WeaponIndex, ShadowSwordGraphicsBA_WeaponPaletteIndex
+MareetasSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, MareetasSwordGraphicsBA_WeaponIndex, MareetasSwordGraphicsBA_WeaponPaletteIndex
+BrokenSwordGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BrokenSwordGraphicsBA_WeaponIndex, BrokenSwordGraphicsBA_WeaponPaletteIndex
+IronLanceGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, IronLanceGraphicsBA_WeaponIndex, IronLanceGraphicsBA_WeaponPaletteIndex
+SteelLanceGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, SteelLanceGraphicsBA_WeaponIndex, SteelLanceGraphicsBA_WeaponPaletteIndex
+SilverLanceGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, SilverLanceGraphicsBA_WeaponIndex, SilverLanceGraphicsBA_WeaponPaletteIndex
+SlimLanceGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, SlimLanceGraphicsBA_WeaponIndex, SlimLanceGraphicsBA_WeaponPaletteIndex
+VeninLanceGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, VeninLanceGraphicsBA_WeaponIndex, VeninLanceGraphicsBA_WeaponPaletteIndex
+DragonpikeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, DragonpikeGraphicsBA_WeaponIndex, DragonpikeGraphicsBA_WeaponPaletteIndex
+ShadowSpearGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ShadowSpearGraphicsBA_WeaponIndex, ShadowSpearGraphicsBA_WeaponPaletteIndex
+BraveLanceGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BraveLanceGraphicsBA_WeaponIndex, BraveLanceGraphicsBA_WeaponPaletteIndex
+ShortLanceGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ShortLanceGraphicsBA_WeaponIndex, ShortLanceGraphicsBA_WeaponPaletteIndex
+LongLanceGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, LongLanceGraphicsBA_WeaponIndex, LongLanceGraphicsBA_WeaponPaletteIndex
+GreatlanceGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, GreatlanceGraphicsBA_WeaponIndex, GreatlanceGraphicsBA_WeaponPaletteIndex
+JavelinGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, JavelinGraphicsBA_WeaponIndex, JavelinGraphicsBA_WeaponPaletteIndex
+MasterLanceGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, MasterLanceGraphicsBA_WeaponIndex, MasterLanceGraphicsBA_WeaponPaletteIndex
+RidersbaneGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, RidersbaneGraphicsBA_WeaponIndex, RidersbaneGraphicsBA_WeaponPaletteIndex
+KillerLanceGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, KillerLanceGraphicsBA_WeaponIndex, KillerLanceGraphicsBA_WeaponPaletteIndex
+GaeBolgGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, GaeBolgGraphicsBA_WeaponIndex, GaeBolgGraphicsBA_WeaponPaletteIndex
+GungnirGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, GungnirGraphicsBA_WeaponIndex, GungnirGraphicsBA_WeaponPaletteIndex
+BrokenLanceGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BrokenLanceGraphicsBA_WeaponIndex, BrokenLanceGraphicsBA_WeaponPaletteIndex
+IronAxeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, IronAxeGraphicsBA_WeaponIndex, IronAxeGraphicsBA_WeaponPaletteIndex
+VeninAxeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, VeninAxeGraphicsBA_WeaponIndex, VeninAxeGraphicsBA_WeaponPaletteIndex
+SteelAxeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, SteelAxeGraphicsBA_WeaponIndex, SteelAxeGraphicsBA_WeaponPaletteIndex
+SilverAxeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, SilverAxeGraphicsBA_WeaponIndex, SilverAxeGraphicsBA_WeaponPaletteIndex
+HandAxeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, HandAxeGraphicsBA_WeaponIndex, HandAxeGraphicsBA_WeaponPaletteIndex
+HammerGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, HammerGraphicsBA_WeaponIndex, HammerGraphicsBA_WeaponPaletteIndex
+KillerAxeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, KillerAxeGraphicsBA_WeaponIndex, KillerAxeGraphicsBA_WeaponPaletteIndex
+VougeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, VougeGraphicsBA_WeaponIndex, VougeGraphicsBA_WeaponPaletteIndex
+BraveAxeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BraveAxeGraphicsBA_WeaponIndex, BraveAxeGraphicsBA_WeaponPaletteIndex
+DevilAxeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, DevilAxeGraphicsBA_WeaponIndex, DevilAxeGraphicsBA_WeaponPaletteIndex
+BattleAxeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BattleAxeGraphicsBA_WeaponIndex, BattleAxeGraphicsBA_WeaponPaletteIndex
+PoleaxGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, PoleaxGraphicsBA_WeaponIndex, PoleaxGraphicsBA_WeaponPaletteIndex
+MasterAxeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, MasterAxeGraphicsBA_WeaponIndex, MasterAxeGraphicsBA_WeaponPaletteIndex
+BrokenAxeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BrokenAxeGraphicsBA_WeaponIndex, BrokenAxeGraphicsBA_WeaponPaletteIndex
+IronBowGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, IronBowGraphicsBA_WeaponIndex, IronBowGraphicsBA_WeaponPaletteIndex
+SteelBowGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, SteelBowGraphicsBA_WeaponIndex, SteelBowGraphicsBA_WeaponPaletteIndex
+SilverBowGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, SilverBowGraphicsBA_WeaponIndex, SilverBowGraphicsBA_WeaponPaletteIndex
+VeninBowGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, VeninBowGraphicsBA_WeaponIndex, VeninBowGraphicsBA_WeaponPaletteIndex
+KillerBowGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, KillerBowGraphicsBA_WeaponIndex, KillerBowGraphicsBA_WeaponPaletteIndex
+BraveBowGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BraveBowGraphicsBA_WeaponIndex, BraveBowGraphicsBA_WeaponPaletteIndex
+ShortbowGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ShortbowGraphicsBA_WeaponIndex, ShortbowGraphicsBA_WeaponPaletteIndex
+LongbowGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, LongbowGraphicsBA_WeaponIndex, LongbowGraphicsBA_WeaponPaletteIndex
+GreatbowGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, GreatbowGraphicsBA_WeaponIndex, GreatbowGraphicsBA_WeaponPaletteIndex
+MasterBowGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, MasterBowGraphicsBA_WeaponIndex, MasterBowGraphicsBA_WeaponPaletteIndex
+BallistaGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BallistaGraphicsBA_WeaponIndex, BallistaGraphicsBA_WeaponPaletteIndex
+IronBallistaGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, IronBallistaGraphicsBA_WeaponIndex, IronBallistaGraphicsBA_WeaponPaletteIndex
+KillerBallistaGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, KillerBallistaGraphicsBA_WeaponIndex, KillerBallistaGraphicsBA_WeaponPaletteIndex
+VeninBallistaGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, VeninBallistaGraphicsBA_WeaponIndex, VeninBallistaGraphicsBA_WeaponPaletteIndex
+BrokenBowGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BrokenBowGraphicsBA_WeaponIndex, BrokenBowGraphicsBA_WeaponPaletteIndex
+FireGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, FireGraphicsBA_WeaponIndex, FireGraphicsBA_WeaponPaletteIndex
+ElfireGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ElfireGraphicsBA_WeaponIndex, ElfireGraphicsBA_WeaponPaletteIndex
+BolganoneGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BolganoneGraphicsBA_WeaponIndex, BolganoneGraphicsBA_WeaponPaletteIndex
+ValflameGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ValflameGraphicsBA_WeaponIndex, ValflameGraphicsBA_WeaponPaletteIndex
+ThunderGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ThunderGraphicsBA_WeaponIndex, ThunderGraphicsBA_WeaponPaletteIndex
+DireThunderGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, DireThunderGraphicsBA_WeaponIndex, DireThunderGraphicsBA_WeaponPaletteIndex
+ThoronGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ThoronGraphicsBA_WeaponIndex, ThoronGraphicsBA_WeaponPaletteIndex
+MjolnirGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, MjolnirGraphicsBA_WeaponIndex, MjolnirGraphicsBA_WeaponPaletteIndex
+WindGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, WindGraphicsBA_WeaponIndex, WindGraphicsBA_WeaponPaletteIndex
+GrafcaliburGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, GrafcaliburGraphicsBA_WeaponIndex, GrafcaliburGraphicsBA_WeaponPaletteIndex
+TornadoGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, TornadoGraphicsBA_WeaponIndex, TornadoGraphicsBA_WeaponPaletteIndex
+ForsetiGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ForsetiGraphicsBA_WeaponIndex, ForsetiGraphicsBA_WeaponPaletteIndex
+LightGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, LightGraphicsBA_WeaponIndex, LightGraphicsBA_WeaponPaletteIndex
+NosferatuGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, NosferatuGraphicsBA_WeaponIndex, NosferatuGraphicsBA_WeaponPaletteIndex
+AuraGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, AuraGraphicsBA_WeaponIndex, AuraGraphicsBA_WeaponPaletteIndex
+JormungandGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, JormungandGraphicsBA_WeaponIndex, JormungandGraphicsBA_WeaponPaletteIndex
+FenrirGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, FenrirGraphicsBA_WeaponIndex, FenrirGraphicsBA_WeaponPaletteIndex
+HelGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, HelGraphicsBA_WeaponIndex, HelGraphicsBA_WeaponPaletteIndex
+LoptousGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, LoptousGraphicsBA_WeaponIndex, LoptousGraphicsBA_WeaponPaletteIndex
+MeteorGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, MeteorGraphicsBA_WeaponIndex, MeteorGraphicsBA_WeaponPaletteIndex
+BoltingGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BoltingGraphicsBA_WeaponIndex, BoltingGraphicsBA_WeaponPaletteIndex
+BlizzardGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BlizzardGraphicsBA_WeaponIndex, BlizzardGraphicsBA_WeaponPaletteIndex
+VeninGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, VeninGraphicsBA_WeaponIndex, VeninGraphicsBA_WeaponPaletteIndex
+PetrifyGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, PetrifyGraphicsBA_WeaponIndex, PetrifyGraphicsBA_WeaponPaletteIndex
+ForsetiInfiniteGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ForsetiInfiniteGraphicsBA_WeaponIndex, ForsetiInfiniteGraphicsBA_WeaponPaletteIndex
+BrokenTomeGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BrokenTomeGraphicsBA_WeaponIndex, BrokenTomeGraphicsBA_WeaponPaletteIndex
+HealGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, HealGraphicsBA_WeaponIndex, HealGraphicsBA_WeaponPaletteIndex
+MendGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, MendGraphicsBA_WeaponIndex, MendGraphicsBA_WeaponPaletteIndex
+RecoverGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, RecoverGraphicsBA_WeaponIndex, RecoverGraphicsBA_WeaponPaletteIndex
+PhysicGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, PhysicGraphicsBA_WeaponIndex, PhysicGraphicsBA_WeaponPaletteIndex
+FortifyGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, FortifyGraphicsBA_WeaponIndex, FortifyGraphicsBA_WeaponPaletteIndex
+RescueGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, RescueGraphicsBA_WeaponIndex, RescueGraphicsBA_WeaponPaletteIndex
+WarpGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, WarpGraphicsBA_WeaponIndex, WarpGraphicsBA_WeaponPaletteIndex
+RestoreGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, RestoreGraphicsBA_WeaponIndex, RestoreGraphicsBA_WeaponPaletteIndex
+SilenceGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, SilenceGraphicsBA_WeaponIndex, SilenceGraphicsBA_WeaponPaletteIndex
+SleepGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, SleepGraphicsBA_WeaponIndex, SleepGraphicsBA_WeaponPaletteIndex
+TorchStaffGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, TorchStaffGraphicsBA_WeaponIndex, TorchStaffGraphicsBA_WeaponPaletteIndex
+ReturnStaffGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ReturnStaffGraphicsBA_WeaponIndex, ReturnStaffGraphicsBA_WeaponPaletteIndex
+HammerneGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, HammerneGraphicsBA_WeaponIndex, HammerneGraphicsBA_WeaponPaletteIndex
+ThiefStaffGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, ThiefStaffGraphicsBA_WeaponIndex, ThiefStaffGraphicsBA_WeaponPaletteIndex
+WatchGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, WatchGraphicsBA_WeaponIndex, WatchGraphicsBA_WeaponPaletteIndex
+BerserkGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BerserkGraphicsBA_WeaponIndex, BerserkGraphicsBA_WeaponPaletteIndex
+UnlockGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, UnlockGraphicsBA_WeaponIndex, UnlockGraphicsBA_WeaponPaletteIndex
+EnsorcelGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, EnsorcelGraphicsBA_WeaponIndex, EnsorcelGraphicsBA_WeaponPaletteIndex
+RewarpGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, RewarpGraphicsBA_WeaponIndex, RewarpGraphicsBA_WeaponPaletteIndex
+KiaGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, KiaGraphicsBA_WeaponIndex, KiaGraphicsBA_WeaponPaletteIndex
+BrokenStaffGraphicsBattleAnimationWeaponsEntry .dstruct StructBattleAnimationWeapons, BrokenStaffGraphicsBA_WeaponIndex, BrokenStaffGraphicsBA_WeaponPaletteIndex

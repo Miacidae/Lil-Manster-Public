@@ -1,0 +1,31 @@
+B1528 - B1561
+
+3B 08     ; BEGIN
+3A 42     ; Load Tiles: Wind (+pause)
+FE FF     ; --Wait--
+3B 68     ; Load Tile2: Wind Tilemap1 (+pause)
+1C 1A     ; Placement / Scrolling: ???
+FE FF     ; --Wait--
+42 16     ; Effect / Palette: ???
+0A 46     ; Tile Effect: Unflatten Appear 1 (+pause)
+FE FF     ; --Wait--
+12 2A     ; Play Sound: Wind Start
+27 04     ; Display Tiles: ???
+0B 46     ; Tile Effect: Unflatten Appear 2 (+pause)
+FE FF     ; --Wait--
+13 2A     ; Play Sound: Wind End
+FD FF     ; Cast1: Starts the animation loop on the caster
+F9 FF     ; Dodge point
+04 1E     ; Scroll to Defender: Beyond Fast
+1D 5A     ; Scrolling: Very Fast Horizontal (+pause)
+FE FF     ; --Wait--
+FA FF     ; Damage point
+1E 5A     ; Scrolling: Bypasses Target (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+28 04     ; Display Tiles: ???
+61 56     ; Effect / Palette: ??? (+pause)
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

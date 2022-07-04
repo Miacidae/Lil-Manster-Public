@@ -1,0 +1,1 @@
+When doanloading the Tileset Editor's latest release, make sure to get the zip appropriate for your operating system.

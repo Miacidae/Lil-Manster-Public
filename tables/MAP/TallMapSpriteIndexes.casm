@@ -1,0 +1,136 @@
+	DracoriderMapSprite						= 128
+		DracoriderMapSpriteIndex			= MA_DracoriderMapSpriteIndex
+
+	CavalierMapSprite						= 129
+		CavalierMapSpriteIndex				= MA_CavalierMapSpriteIndex
+
+	PegasusRiderMapSprite					= 130
+		PegasusRiderMapSpriteIndex			= MA_PegasusRiderMapSpriteIndex
+
+	DukeKnightMapSprite						= 131
+		DukeKnightMapSpriteIndex			= MA_DukeKnightMapSpriteIndex
+
+	AxeKnightMapSprite						= 132
+		AxeKnightMapSpriteIndex				= MA_AxeKnightMapSpriteIndex
+
+	SwordKnightMapSprite					= 133
+		SwordKnightMapSpriteIndex			= MA_SwordKnightMapSpriteIndex
+
+	BowKnightMapSprite						= 134
+		BowKnightMapSpriteIndex				= MA_BowKnightMapSpriteIndex
+
+	LanceKnightMapSprite					= 135
+		LanceKnightMapSpriteIndex			= MA_LanceKnightMapSpriteIndex
+
+	KnightLordMapSprite						= 136
+		KnightLordMapSpriteIndex			= MA_KnightLord_1_2_MapSpriteIndex
+
+	TroubadourMapSprite						= 137
+		TroubadourMapSpriteIndex			= MA_TroubadourMapSpriteIndex
+
+	KnightLordFE4MapSprite					= 138
+		KnightLordFE4MapSpriteIndex			= MA_KnightLord_1_2_MapSpriteIndex
+
+	PaladinMapSprite						= 139
+		PaladinMapSpriteIndex				= MA_PaladinMapSpriteIndex
+
+	DragonMasterMapSprite					= 140
+		DragonMasterMapSpriteIndex			= MA_DragonMasterMapSpriteIndex
+
+	ArchKnightMapSprite						= 141
+		ArchKnightMapSpriteIndex			= MA_ArchKnightMapSpriteIndex
+
+	GreatKnightMapSprite					= 142
+		GreatKnightMapSpriteIndex			= MA_GreatKnightMapSpriteIndex
+
+	MageKnightMapSprite						= 143
+		MageKnightMapSpriteIndex			= MA_MageKnightMapSpriteIndex
+
+	DracoknightMapSprite					= 144
+		DracoknightMapSpriteIndex			= MA_DracoknightMapSpriteIndex
+
+	PegasusKnightMapSprite					= 145
+		PegasusKnightMapSpriteIndex			= MA_PegasusKnightMapSpriteIndex
+
+	FalconKnightMapSprite					= 146
+		FalconKnightMapSpriteIndex			= MA_FalconKnightMapSpriteIndex
+
+	MasterKnightMapSprite					= 147
+		MasterKnightMapSpriteIndex			= MA_MasterKnightMapSpriteIndex
+
+	RangerMapSprite							= 148
+		RangerMapSpriteIndex				= MA_RangerMapSpriteIndex
+
+	BallisticianMapSprite					= 149
+		BallisticianMapSpriteIndex			= MA_BallisticianMapSpriteIndex
+
+	IronBallisticianMapSprite				= 150
+		IronBallisticianMapSpriteIndex		= MA_IronBallisticianMapSpriteIndex
+
+	KillerBallisticianMapSprite				= 151
+		KillerBallisticianMapSpriteIndex	= MA_KillerBallisticianMapSpriteIndex
+
+	GreatBallisticianMapSprite				= 152
+		GreatBallisticianMapSpriteIndex		= MA_Great_Venin_BallisticianMapSpriteIndex
+
+	DracoriderFMapSprite					= 153
+		DracoriderFMapSpriteIndex			= MA_DracoriderFMapSpriteIndex
+
+	DracoknightFMapSprite					= 154
+		DracoknightFMapSpriteIndex			= MA_DracoknightFMapSpriteIndex
+
+	DragonMasterFMapSprite					= 155
+		DragonMasterFMapSpriteIndex			= MA_DragonMasterFMapSpriteIndex
+
+	PaladinFMapSprite						= 156
+		PaladinFMapSpriteIndex				= MA_PaladinFMapSpriteIndex
+
+	MageKnightFMapSprite					= 157
+		MageKnightFMapSpriteIndex			= MA_MageKnightFMapSpriteIndex
+
+	MasterKnightFMapSprite					= 158
+		MasterKnightFMapSpriteIndex			= MA_MasterKnightFMapSpriteIndex
+
+	BowKnightFMapSprite						= 159
+		BowKnightFMapSpriteIndex			= MA_BowKnightFMapSpriteIndex
+
+	ArchKnightFMapSprite					= 160
+		ArchKnightFMapSpriteIndex			= MA_ArchKnightFMapSpriteIndex
+
+	VeninBallisiticianMapSprite				= 161
+		VeninBallisiticianMapSpriteIndex	= MA_Great_Venin_BallisticianMapSpriteIndex
+
+DracoriderMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, DracoriderMapSpriteIndex
+CavalierMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, CavalierMapSpriteIndex
+PegasusRiderMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, PegasusRiderMapSpriteIndex
+DukeKnightMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, DukeKnightMapSpriteIndex
+AxeKnightMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, AxeKnightMapSpriteIndex
+SwordKnightMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, SwordKnightMapSpriteIndex
+BowKnightMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, BowKnightMapSpriteIndex
+LanceKnightMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, LanceKnightMapSpriteIndex
+KnightLordMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, KnightLordMapSpriteIndex
+TroubadourMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, TroubadourMapSpriteIndex
+KnightLordFE4MapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, KnightLordFE4MapSpriteIndex
+PaladinMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, PaladinMapSpriteIndex
+DragonMasterMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, DragonMasterMapSpriteIndex
+ArchKnightMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ArchKnightMapSpriteIndex
+GreatKnightMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, GreatKnightMapSpriteIndex
+MageKnightMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, MageKnightMapSpriteIndex
+DracoknightMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, DracoknightMapSpriteIndex
+PegasusKnightMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, PegasusKnightMapSpriteIndex
+FalconKnightMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, FalconKnightMapSpriteIndex
+MasterKnightMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, MasterKnightMapSpriteIndex
+RangerMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, RangerMapSpriteIndex
+BallisticianMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, BallisticianMapSpriteIndex
+IronBallisticianMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, IronBallisticianMapSpriteIndex
+KillerBallisticianMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, KillerBallisticianMapSpriteIndex
+GreatBallisticianMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, GreatBallisticianMapSpriteIndex
+DracoriderFMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, DracoriderFMapSpriteIndex
+DracoknightFMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, DracoknightFMapSpriteIndex
+DragonMasterFMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, DragonMasterFMapSpriteIndex
+PaladinFMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, PaladinFMapSpriteIndex
+MageKnightFMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, MageKnightFMapSpriteIndex
+MasterKnightFMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, MasterKnightFMapSpriteIndex
+BowKnightFMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, BowKnightFMapSpriteIndex
+ArchKnightFMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ArchKnightFMapSpriteIndex
+VeninBallisiticianMapSpriteTallMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, VeninBallisiticianMapSpriteIndex

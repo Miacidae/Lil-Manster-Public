@@ -1,0 +1,41 @@
+B11D4 - B1221
+
+3B 08     ; BEGIN
+24 42     ; Load Tile: Fire/Elfire (+pause)
+FE FF     ; --Wait--
+06 1C     ; Secondary Palette: ???
+25 42     ; Load Tile: Elfire Tilemap (+pause)
+FE FF     ; --Wait--
+09 5E     ; Scroll to Defender: Normal (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+11 1A     ; Placement / Scrolling: ???
+14 00     ; Effect Mask: Create Empty Circle under Target
+02 40     ; Effect Mask: Create pillar (medium) (+pause)
+FE FF     ; --Wait--
+03 2E     ; Play Sound (lower): Elfire
+20 04     ; Display Tiles: ???
+14 1A     ; Placement / Scrolling: ???
+16 06     ; Tile Effect: Wavy
+18 5A     ; Placement / Scrolling: ??? (+pause)
+FE FF     ; --Wait--
+F9 FF     ; Damage point
+4A 5A     ; Placement / Scrolling: ??? (+pause)
+FE FF     ; --Wait--
+FA FF     ; Damage point
+4B 1A     ; Scrolling: Elfire Dual Flicker
+20 54     ; --Wait: 32 frames--
+FE FF     ; --Wait--
+FE FF     ; --Wait--
+A2 16     ; Palette: Elfire Red
+20 54     ; --Wait: 32 frames--
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+00 06     ; Tile Effect: Stop
+21 04     ; Display Tiles: ???
+15 00     ; Effect Mask: Delete (Empty Circle)
+03 40     ; Effect Mask: Delete (Pillar)
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

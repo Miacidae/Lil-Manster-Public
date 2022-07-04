@@ -1,0 +1,81 @@
+B1644 - B16E1
+
+3B 08     ; BEGIN
+45 42     ; Load Tiles: Blizzard Snowflakes (+pause)
+FE FF     ; --Wait--
+47 68     ; Load Tiles2: Blizzard Tilemap2 (+pause)
+FE FF     ; --Wait--
+46 42     ; Load Tiles: More Blizzard (+pause)
+FE FF     ; --Wait--
+BA 16     ; Effect / Palette: ???
+49 68     ; Load Tiles2: Blizzard Tilemap4 (+pause)
+FE FF     ; --Wait--
+04 18     ; BG Mod: ???
+FE FF     ; --Wait
+FD FF     ; Cast1: Starts the animation loop on the caster
+05 18     ; BG Mod: ???
+17 10     ; Battle Scene Mod2: Fade Out Battle Area to Black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+05 0E     ; BG?: Meteor something1
+06 4E     ; BG?: Meteor something2 (+pause)
+06 18     ; BG Mod: ???
+11 08     ; Battle Scene Mod: Hide Attacker
+12 08     ; Battle Scene Mod: Show Defender
+FE FF     ; --Wait--
+16 10     ; Battle Scene Mod2: Fade In Battle Area: Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+07 22     ; Add Background Hue: Very Dark
+13 56     ; Effect: Fade Out (+pause)
+FE FF     ; --Wait--
+0A 04     ; Display Tiles: ???
+05 1A     ; Scrolling: Blizzard/Jörmungandr
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+06 1A     ; Placement / Scrolling
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+18 2A     ; Play Sound: Blizzard
+00 16     ; Effect / Palette: ???
+5C 54     ; --Wait: 92 frames--
+FE FF     ; --Wait--
+F9 FF     ; Dodge point
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+FA FF     ; Damage point
+1E 54     ; --Wait: 30 frames--
+FE FF     ; --Wait--
+01 16     ; Effect / Palette: ???
+20 54     ; --Wait: 32 frames--
+FE FF     ; --Wait--
+00 18     ; BG Mod: ???
+FE FF     ; --Wait--
+FD FF     ; Cast2.5: resting??
+01 18     ; BG Mod: ???
+17 10     ; Battle Scene Mod2: Fade Out Battle Area to Black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+0C 04     ; Display Tiles: ???
+0A 54     ; --Wait: 10 frames--
+FE FF     ; --Wait--
+17 10     ; Battle Scene Mod2: Fade Out Battle Area to Black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+05 0E     ; BG?: Meteor something1
+06 4E     ; BG?: Meteor something2 (+pause)
+02 18     ; BG Mod: ???
+FE FF     ; --Wait--
+26 08     ; Battle Scene Mod: Hide Defender
+37 08     ; Battle Scene Mod: Display Attacker
+12 56     ; Effect: Reset Tile/Palette Effects (+pause)
+FE FF     ; --Wait--
+16 10     ; Battle Scene Mod2: Fade In Battle Area: Fast
+FE FF     ; --Wait--
+81 16     ; Effect / Palette: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

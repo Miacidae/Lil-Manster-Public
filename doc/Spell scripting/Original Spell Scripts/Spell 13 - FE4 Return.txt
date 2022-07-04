@@ -1,0 +1,29 @@
+B0EC0 - B0EF5
+
+3B 08     ; BEGIN
+14 42     ; Load Tile: FE4 Return (+pause)
+FE FF     ; --Wait--
+15 42     ; Load Tile: FE4 Return Tilemap (+pause)
+FE FF     ; --Wait--
+27 2A     ; Play Sound: FE4 Return
+40 16     ; Palette: Return Gold
+0C 40     ; Effect Mask: Create Pillar (very thin) (+pause)
+FE FF     ; --Wait--
+01 1A     ; Placement: Defender
+12 04     ; Display Tiles: ???
+0D 40     ; Effect Mask: Slow Expand (very thin to medium) (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+25 50     ; Battle Scene Mod2: Defender Raises Offscreen (+pause)
+FE FF     ; --Wait--
+26 08     ; Battle Scene Mod: Hide Defender
+0E 40     ; Effect Mask: Slow Contract (very thin to medium) (+pause)
+FE FF     ; --Wait--
+13 04     ; Display Tiles: ???
+FD FF     ; Cast2: resting
+0F 40     ; Effect Mask: Delete (+pause)
+FE FF     ; --Wait--
+41 56     ; Palette: Return ??? (+pause)
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

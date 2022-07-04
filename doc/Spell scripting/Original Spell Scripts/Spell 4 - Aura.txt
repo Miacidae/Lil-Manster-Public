@@ -1,0 +1,56 @@
+B0BC6 - B0C31
+
+3B 08     ; BEGIN
+0A 42     ; Load Tile: Aura (+pause)
+FE FF     ; --Wait--
+09 42     ; Load Tile: Aura Tilemap (+pause)
+FE FF     ; --Wait--
+09 5E     ; Scroll to defender: Normal (+pause)
+FE FF     ; --Wait--
+07 56     ; Effects: Interruptible Fade out (+pause)
+FE FF     ; --Wait--
+05 04     ; Display tiles: ???
+10 00     ; Effect mask: Large Pillar
+2A 08     ; Battle Scene Mod: Shift BG Up
+0B 42     ; Load Tile: Thoron Pulse (+pause)
+FE FF     ; --Wait--
+07 1C     ; Secondary Palette: ???
+11 1A     ; Placement/Scrolling: ???
+0F 08     ; Battle Scene Mod: Aura BG Scroll
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+5B 04     ; Display tiles: ???
+49 56     ; Effects: Change Floor Color 1 (+pause)
+FE FF     ; --Wait--
+1C 2E     ; Play sound: NOTHING (lower)
+08 06     ; Tile effects: Heavy Ripple (Does not move, need to animate layer) (+special horizontal split?)
+4A 16     ; Effects: Change Floor Color 2
+36 1A     ; Scrolling: Upward, slightly forward
+50 54     ; --Wait: 80 frames--
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+F9 FF     ; Dodge point
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+FA FF     ; Damage point
+40 54     ; --Wait: 64 frames--
+FE FF     ; --Wait--
+4B 56     ; Effects: Change Floor Color 3 (+pause)
+FE FF     ; --Wait--
+29 04     ; Display tiles: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+00 06     ; Tile effects: Valkyrie something??
+11 00     ; Effect mask: ???
+2B 08     ; Battle Scene Mod: Reset BG
+06 18     ; BG Mod: ???
+60 16     ; Effects: Fade In
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+5A 04     ; Display tiles: ???
+12 56     ; Effects: Reset (+pause)
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

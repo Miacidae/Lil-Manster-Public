@@ -1,0 +1,25 @@
+-- Opening:
+ch5op1					-ch5op2
+
+-- Turn1:
+ch5raydrikveldturn1
+
+-- Mareeta appears:
+-- The "Mareeta Loaded 3" string only triggers if Nanna is still present.
+ch5mareetaloaded1			→ch5mareetaloaded2			→ch5mareetaloaded3		→ch5mareetaloaded4
+
+-- Mareeta has fought:
+ch5mareetaresist
+
+-- Combat is interrupted in one of three possible ways.
+-- The "Nanna left alone" string only triggers if Nanna is still present.
+ch5mareetacaptured			→ch5raydrikpanicsA			→ch5eyvelstone			→ch5nannaleftalone			
+ch5mareetakilled			→ch5raydrikpanicsA			→ch5eyvelstone			→ch5nannaleftalone
+ch5eyvelcaptured										→ch5eyvelstone			→ch5nannaleftalone
+
+-- Arena door is opened:
+ch5arenaopeneyvelnanna		→ch5raydrikpanicsB1			→ch5raydrikpanicsB2			→ch5eyvelstone		→ch5raydriktauntsleif		→ch5raydriktauntsleif
+ch5arenaopennannacaptured	→ch5raydrikpanicsB1			→ch5raydrikpanicsB2			→ch5eyvelstone		→ch5raydriktauntsleif		→ch5raydriktauntsleif
+ch5arenaopennannadead		→ch5raydrikpanicsB1			→ch5raydrikpanicsB2			→ch5eyvelstone		→ch5raydriktauntsleif		→ch5raydriktauntsleif
+ch5arenaopennannaalone		→ch5arenaopenafterstone
+ch5arenaopenbothgone		→ch5arenaopenafterstone

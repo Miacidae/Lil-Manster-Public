@@ -1,0 +1,13 @@
+B1F3C - ~B1F51		(has usual spell start but no end)
+
+3B 08      ; BEGIN
+6B 04	   ; Display Tiles: ???
+17 46	   ; Tile Effect: ??? (+pause)
+FE FF      ; --Wait--
+6C 04	   ; Display Tiles: ???
+01 54	   ; --Wait: 1 frame--
+FF FF      ; EXIT
+23 08	   ; Battle Scene Mod: ???
+1D 50	   ; Battle Scene Mod2: ??? (+pause)
+FE FF      ; --Wait--
+FF FF      ; EXIT

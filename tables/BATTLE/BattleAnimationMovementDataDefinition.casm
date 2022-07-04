@@ -1,0 +1,1356 @@
+	BAprop00					= 0
+		BAprop00Class			= Cavalier
+		BAprop00BA_WeaponType	= BA_WeaponSword
+		BAprop00BA_MovementData	= BAprop_BaseCavSwordAxe
+
+	BAprop01					= 1
+		BAprop01Class			= Cavalier
+		BAprop01BA_WeaponType	= BA_WeaponLance
+		BAprop01BA_MovementData	= BAprop_BaseCavLance
+
+	BAprop02					= 2
+		BAprop02Class			= Cavalier
+		BAprop02BA_WeaponType	= BA_WeaponThrownLance
+		BAprop02BA_MovementData	= BAprop_BaseCavThrownLance
+
+	BAprop03					= 3
+		BAprop03Class			= LanceKnight
+		BAprop03BA_WeaponType	= BA_WeaponLance
+		BAprop03BA_MovementData	= BAprop_BaseCavLance
+
+	BAprop04					= 4
+		BAprop04Class			= LanceKnight
+		BAprop04BA_WeaponType	= BA_WeaponThrownLance
+		BAprop04BA_MovementData	= BAprop_BaseCavThrownLance
+
+	BAprop05					= 5
+		BAprop05Class			= AxeKnight
+		BAprop05BA_WeaponType	= BA_WeaponAxe
+		BAprop05BA_MovementData	= BAprop_BaseCavSwordAxe
+
+	BAprop06					= 6
+		BAprop06Class			= AxeKnight
+		BAprop06BA_WeaponType	= BA_WeaponThrownAxe
+		BAprop06BA_MovementData	= BAprop_BaseCavThrownAxe
+
+	BAprop07					= 7
+		BAprop07Class			= SwordKnight
+		BAprop07BA_WeaponType	= BA_WeaponSword
+		BAprop07BA_MovementData	= BAprop_BaseCavSwordAxe
+
+	BAprop08					= 8
+		BAprop08Class			= Troubadour
+		BAprop08BA_WeaponType	= BA_WeaponSword
+		BAprop08BA_MovementData	= BAprop_BaseCavSwordAxe
+
+	BAprop09					= 9
+		BAprop09Class			= Troubadour
+		BAprop09BA_WeaponType	= BA_WeaponStaff
+		BAprop09BA_MovementData	= BAprop_BaseCavStaff
+
+	BAprop0A					= 10
+		BAprop0AClass			= KnightLord
+		BAprop0ABA_WeaponType	= BA_WeaponSword
+		BAprop0ABA_MovementData	= BAprop_PromotedCavSwordAxe
+
+	BAprop0B					= 11
+		BAprop0BClass			= KnightLord
+		BAprop0BBA_WeaponType	= BA_WeaponLance
+		BAprop0BBA_MovementData	= BAprop_PromotedCavLance
+
+	BAprop0C					= 12
+		BAprop0CClass			= KnightLord
+		BAprop0CBA_WeaponType	= BA_WeaponThrownLance
+		BAprop0CBA_MovementData	= BAprop_PromotedCavThrownLance
+
+	BAprop0D					= 13
+		BAprop0DClass			= DukeKnight
+		BAprop0DBA_WeaponType	= BA_WeaponLance
+		BAprop0DBA_MovementData	= BAprop_PromotedCavLance
+
+	BAprop0E					= 14
+		BAprop0EClass			= DukeKnight
+		BAprop0EBA_WeaponType	= BA_WeaponThrownLance
+		BAprop0EBA_MovementData	= BAprop_PromotedCavThrownLance
+
+	BAprop0						= 15
+		BAprop0Class			= MasterKnight
+		BAprop0BA_WeaponType	= BA_WeaponSword
+		BAprop0BA_MovementData	= BAprop_PromotedCavSwordAxe
+
+	BAprop10					= 16
+		BAprop10Class			= MasterKnight
+		BAprop10BA_WeaponType	= BA_WeaponLance
+		BAprop10BA_MovementData	= BAprop_PromotedCavLance
+
+	BAprop11					= 17
+		BAprop11Class			= MasterKnight
+		BAprop11BA_WeaponType	= BA_WeaponAxe
+		BAprop11BA_MovementData	= BAprop_PromotedCavSwordAxe
+
+	BAprop12					= 18
+		BAprop12Class			= MasterKnight
+		BAprop12BA_WeaponType	= BA_WeaponBow
+		BAprop12BA_MovementData	= BAprop_CavBow
+
+	BAprop13					= 19
+		BAprop13Class			= MasterKnight
+		BAprop13BA_WeaponType	= BA_WeaponThrownLance
+		BAprop13BA_MovementData	= BAprop_PromotedCavThrownLance
+
+	BAprop14					= 20
+		BAprop14Class			= MasterKnight
+		BAprop14BA_WeaponType	= BA_WeaponThrownAxe
+		BAprop14BA_MovementData	= BAprop_PromotedCavThrownAxe
+
+	BAprop15					= 21
+		BAprop15Class			= MasterKnight
+		BAprop15BA_WeaponType	= BA_WeaponStaff
+		BAprop15BA_MovementData	= BAprop_PromotedCavStaff
+
+	BAprop16					= 22
+		BAprop16Class			= Paladin
+		BAprop16BA_WeaponType	= BA_WeaponSword
+		BAprop16BA_MovementData	= BAprop_PromotedCavSwordAxe
+
+	BAprop17					= 23
+		BAprop17Class			= Paladin
+		BAprop17BA_WeaponType	= BA_WeaponLance
+		BAprop17BA_MovementData	= BAprop_PromotedCavLance
+
+	BAprop18					= 24
+		BAprop18Class			= Paladin
+		BAprop18BA_WeaponType	= BA_WeaponThrownLance
+		BAprop18BA_MovementData	= BAprop_PromotedCavThrownLance
+
+	BAprop19					= 25
+		BAprop19Class			= PaladinF
+		BAprop19BA_WeaponType	= BA_WeaponSword
+		BAprop19BA_MovementData	= BAprop_PromotedCavSwordAxe
+
+	BAprop1A					= 26
+		BAprop1AClass			= PaladinF
+		BAprop1ABA_WeaponType	= BA_WeaponLance
+		BAprop1ABA_MovementData	= BAprop_PromotedCavLance
+
+	BAprop1B					= 27
+		BAprop1BClass			= PaladinF
+		BAprop1BBA_WeaponType	= BA_WeaponThrownLance
+		BAprop1BBA_MovementData	= BAprop_PromotedCavThrownLance
+
+	BAprop1C					= 28
+		BAprop1CClass			= PaladinF
+		BAprop1CBA_WeaponType	= BA_WeaponStaff
+		BAprop1CBA_MovementData	= BAprop_PromotedCavStaff
+
+	BAprop1D					= 29
+		BAprop1DClass			= Ranger
+		BAprop1DBA_WeaponType	= BA_WeaponSword
+		BAprop1DBA_MovementData	= BAprop_PromotedCavSwordAxe
+
+	BAprop1E					= 30
+		BAprop1EClass			= MageKnight
+		BAprop1EBA_WeaponType	= BA_WeaponSword
+		BAprop1EBA_MovementData	= BAprop_PromotedCavSwordAxe
+
+	BAprop1F					= 31
+		BAprop1FClass			= MageKnight
+		BAprop1FBA_WeaponType	= BA_WeaponStaff
+		BAprop1FBA_MovementData	= BAprop_PromotedCavStaff
+
+	BAprop20					= 32
+		BAprop20Class			= GreatKnight
+		BAprop20BA_WeaponType	= BA_WeaponAxe
+		BAprop20BA_MovementData	= BAprop_PromotedCavSwordAxe
+
+	BAprop21					= 33
+		BAprop21Class			= GreatKnight
+		BAprop21BA_WeaponType	= BA_WeaponThrownAxe
+		BAprop21BA_MovementData	= BAprop_PromotedCavThrownAxe
+
+	BAprop22					= 34
+		BAprop22Class			= PegasusKnight
+		BAprop22BA_WeaponType	= BA_WeaponSword
+		BAprop22BA_MovementData	= BAprop_PegasusSword
+
+	BAprop23					= 35
+		BAprop23Class			= PegasusKnight
+		BAprop23BA_WeaponType	= BA_WeaponLance
+		BAprop23BA_MovementData	= BAprop_PegasusLance
+
+	BAprop24					= 36
+		BAprop24Class			= PegasusKnight
+		BAprop24BA_WeaponType	= BA_WeaponThrownLance
+		BAprop24BA_MovementData	= BAprop_PegasusThrownLance
+
+	BAprop25					= 37
+		BAprop25Class			= FalconKnight
+		BAprop25BA_WeaponType	= BA_WeaponSword
+		BAprop25BA_MovementData	= BAprop_PegasusSword
+
+	BAprop26					= 38
+		BAprop26Class			= FalconKnight
+		BAprop26BA_WeaponType	= BA_WeaponLance
+		BAprop26BA_MovementData	= BAprop_PegasusLance
+
+	BAprop27					= 39
+		BAprop27Class			= FalconKnight
+		BAprop27BA_WeaponType	= BA_WeaponThrownLance
+		BAprop27BA_MovementData	= BAprop_PegasusThrownLance
+
+	BAprop28					= 40
+		BAprop28Class			= FalconKnight
+		BAprop28BA_WeaponType	= BA_WeaponStaff
+		BAprop28BA_MovementData	= BAprop_FalconKnightStaff
+
+	BAprop29					= 41
+		BAprop29Class			= Dracorider
+		BAprop29BA_WeaponType	= BA_WeaponSword
+		BAprop29BA_MovementData	= BAprop_DragonSword
+
+	BAprop2A					= 42
+		BAprop2AClass			= Dracorider
+		BAprop2ABA_WeaponType	= BA_WeaponLance
+		BAprop2ABA_MovementData	= BAprop_DragonLance
+
+	BAprop2B					= 43
+		BAprop2BClass			= Dracorider
+		BAprop2BBA_WeaponType	= BA_WeaponThrownLance
+		BAprop2BBA_MovementData	= BAprop_DragonThrownLance
+
+	BAprop2C					= 44
+		BAprop2CClass			= Dracoknight
+		BAprop2CBA_WeaponType	= BA_WeaponSword
+		BAprop2CBA_MovementData	= BAprop_DragonSword
+
+	BAprop2D					= 45
+		BAprop2DClass			= Dracoknight
+		BAprop2DBA_WeaponType	= BA_WeaponLance
+		BAprop2DBA_MovementData	= BAprop_DragonLance
+
+	BAprop2E					= 46
+		BAprop2EClass			= Dracoknight
+		BAprop2EBA_WeaponType	= BA_WeaponThrownLance
+		BAprop2EBA_MovementData	= BAprop_DragonThrownLance
+
+	BAprop2F					= 47
+		BAprop2FClass			= DragonMaster
+		BAprop2FBA_WeaponType	= BA_WeaponSword
+		BAprop2FBA_MovementData	= BAprop_DragonSword
+
+	BAprop30					= 48
+		BAprop30Class			= DragonMaster
+		BAprop30BA_WeaponType	= BA_WeaponLance
+		BAprop30BA_MovementData	= BAprop_DragonLance
+
+	BAprop31					= 49
+		BAprop31Class			= DragonMaster
+		BAprop31BA_WeaponType	= BA_WeaponThrownLance
+		BAprop31BA_MovementData	= BAprop_DragonThrownLance
+
+	BAprop32					= 50
+		BAprop32Class			= Myrmidon
+		BAprop32BA_WeaponType	= BA_WeaponSword
+		BAprop32BA_MovementData	= BAprop_MyrmidonFighterHero
+
+	BAprop33					= 51
+		BAprop33Class			= Swordmaster
+		BAprop33BA_WeaponType	= BA_WeaponSword
+		BAprop33BA_MovementData	= BAprop_SwordmasterHeroFE4
+
+	BAprop34					= 52
+		BAprop34Class			= HeroFe4
+		BAprop34BA_WeaponType	= BA_WeaponSword
+		BAprop34BA_MovementData	= BAprop_SwordmasterHeroFE4
+
+	BAprop35					= 53
+		BAprop35Class			= General
+		BAprop35BA_WeaponType	= BA_WeaponSword
+		BAprop35BA_MovementData	= BAprop_ArmorSwordAxe
+
+	BAprop36					= 54
+		BAprop36Class			= General
+		BAprop36BA_WeaponType	= BA_WeaponLance
+		BAprop36BA_MovementData	= BAprop_ArmorLance
+
+	BAprop37					= 55
+		BAprop37Class			= General
+		BAprop37BA_WeaponType	= BA_WeaponAxe
+		BAprop37BA_MovementData	= BAprop_ArmorSwordAxe
+
+	BAprop38					= 56
+		BAprop38Class			= General
+		BAprop38BA_WeaponType	= BA_WeaponBow
+		BAprop38BA_MovementData	= BAprop_ArmorBow
+
+	BAprop39					= 57
+		BAprop39Class			= General
+		BAprop39BA_WeaponType	= BA_WeaponThrownLance
+		BAprop39BA_MovementData	= BAprop_ArmorThrownLance
+
+	BAprop3A					= 58
+		BAprop3AClass			= General
+		BAprop3ABA_WeaponType	= BA_WeaponThrownAxe
+		BAprop3ABA_MovementData	= BAprop_ArmorThrownAxe
+
+	BAprop3B					= 59
+		BAprop3BClass			= Emperor
+		BAprop3BBA_WeaponType	= BA_WeaponSword
+		BAprop3BBA_MovementData	= BAprop_ArmorSwordAxe
+
+	BAprop3C					= 60
+		BAprop3CClass			= Emperor
+		BAprop3CBA_WeaponType	= BA_WeaponLance
+		BAprop3CBA_MovementData	= BAprop_ArmorLance
+
+	BAprop3D					= 61
+		BAprop3DClass			= Emperor
+		BAprop3DBA_WeaponType	= BA_WeaponAxe
+		BAprop3DBA_MovementData	= BAprop_ArmorSwordAxe
+
+	BAprop3E					= 62
+		BAprop3EClass			= Emperor
+		BAprop3EBA_WeaponType	= BA_WeaponBow
+		BAprop3EBA_MovementData	= BAprop_ArmorBow
+
+	BAprop3F					= 63
+		BAprop3FClass			= Emperor
+		BAprop3FBA_WeaponType	= BA_WeaponThrownLance
+		BAprop3FBA_MovementData	= BAprop_ArmorThrownLance
+
+	BAprop40					= 64
+		BAprop40Class			= Emperor
+		BAprop40BA_WeaponType	= BA_WeaponThrownAxe
+		BAprop40BA_MovementData	= BAprop_ArmorThrownAxe
+
+	BAprop41					= 65
+		BAprop41Class			= Emperor
+		BAprop41BA_WeaponType	= BA_WeaponStaff
+		BAprop41BA_MovementData	= BAprop_ArmorStaff
+
+	BAprop42					= 66
+		BAprop42Class			= Emperor
+		BAprop42BA_WeaponType	= BA_WeaponMagic
+		BAprop42BA_MovementData	= BAprop_ArmorMagic
+
+	BAprop43					= 67
+		BAprop43Class			= Baron
+		BAprop43BA_WeaponType	= BA_WeaponSword
+		BAprop43BA_MovementData	= BAprop_ArmorSwordAxe
+
+	BAprop44					= 68
+		BAprop44Class			= Baron
+		BAprop44BA_WeaponType	= BA_WeaponLance
+		BAprop44BA_MovementData	= BAprop_ArmorLance
+
+	BAprop45					= 69
+		BAprop45Class			= Baron
+		BAprop45BA_WeaponType	= BA_WeaponAxe
+		BAprop45BA_MovementData	= BAprop_ArmorSwordAxe
+
+	BAprop46					= 70
+		BAprop46Class			= Baron
+		BAprop46BA_WeaponType	= BA_WeaponBow
+		BAprop46BA_MovementData	= BAprop_ArmorBow
+
+	BAprop47					= 71
+		BAprop47Class			= Baron
+		BAprop47BA_WeaponType	= BA_WeaponThrownLance
+		BAprop47BA_MovementData	= BAprop_ArmorThrownLance
+
+	BAprop48					= 72
+		BAprop48Class			= Baron
+		BAprop48BA_WeaponType	= BA_WeaponThrownAxe
+		BAprop48BA_MovementData	= BAprop_ArmorThrownAxe
+
+	BAprop49					= 73
+		BAprop49Class			= Baron
+		BAprop49BA_WeaponType	= BA_WeaponStaff
+		BAprop49BA_MovementData	= BAprop_ArmorStaff
+
+	BAprop4A					= 74
+		BAprop4AClass			= Baron
+		BAprop4ABA_WeaponType	= BA_WeaponMagic
+		BAprop4ABA_MovementData	= BAprop_ArmorMagic
+
+	BAprop4B					= 75
+		BAprop4BClass			= ArmoredLance
+		BAprop4BBA_WeaponType	= BA_WeaponLance
+		BAprop4BBA_MovementData	= BAprop_ArmorLance
+
+	BAprop4C					= 76
+		BAprop4CClass			= ArmoredLance
+		BAprop4CBA_WeaponType	= BA_WeaponThrownLance
+		BAprop4CBA_MovementData	= BAprop_ArmorThrownLance
+
+	BAprop4D					= 77
+		BAprop4DClass			= ArmoredAxe
+		BAprop4DBA_WeaponType	= BA_WeaponAxe
+		BAprop4DBA_MovementData	= BAprop_ArmorSwordAxe
+
+	BAprop4E					= 78
+		BAprop4EClass			= ArmoredAxe
+		BAprop4EBA_WeaponType	= BA_WeaponThrownAxe
+		BAprop4EBA_MovementData	= BAprop_ArmorThrownAxe
+
+	BAprop4F					= 79
+		BAprop4FClass			= ArmoredBow
+		BAprop4FBA_WeaponType	= BA_WeaponBow
+		BAprop4FBA_MovementData	= BAprop_ArmoredBow
+
+	BAprop50					= 80
+		BAprop50Class			= ArmoredSword
+		BAprop50BA_WeaponType	= BA_WeaponSword
+		BAprop50BA_MovementData	= BAprop_ArmorSwordAxe
+
+	BAprop51					= 81
+		BAprop51Class			= Berserker
+		BAprop51BA_WeaponType	= BA_WeaponAxe
+		BAprop51BA_MovementData	= BAprop_BrigandsAxe
+
+	BAprop52					= 82
+		BAprop52Class			= Berserker
+		BAprop52BA_WeaponType	= BA_WeaponThrownAxe
+		BAprop52BA_MovementData	= BAprop_BrigandsThrownAxe
+
+	BAprop53					= 83
+		BAprop53Class			= Brigand
+		BAprop53BA_WeaponType	= BA_WeaponAxe
+		BAprop53BA_MovementData	= BAprop_BrigandsAxe
+
+	BAprop54					= 84
+		BAprop54Class			= Brigand
+		BAprop54BA_WeaponType	= BA_WeaponThrownAxe
+		BAprop54BA_MovementData	= BAprop_BrigandsThrownAxe
+
+	BAprop55					= 85
+		BAprop55Class			= BrigandAlternate
+		BAprop55BA_WeaponType	= BA_WeaponAxe
+		BAprop55BA_MovementData	= BAprop_BrigandsAxe
+
+	BAprop56					= 86
+		BAprop56Class			= BrigandAlternate
+		BAprop56BA_WeaponType	= BA_WeaponThrownAxe
+		BAprop56BA_MovementData	= BAprop_BrigandsThrownAxe
+
+	BAprop57					= 87
+		BAprop57Class			= Warrior
+		BAprop57BA_WeaponType	= BA_WeaponAxe
+		BAprop57BA_MovementData	= BAprop_BrigandsAxe
+
+	BAprop58					= 88
+		BAprop58Class			= Warrior
+		BAprop58BA_WeaponType	= BA_WeaponBow
+		BAprop58BA_MovementData	= BAprop_BrigandsBow
+
+	BAprop59					= 89
+		BAprop59Class			= Warrior
+		BAprop59BA_WeaponType	= BA_WeaponThrownAxe
+		BAprop59BA_MovementData	= BAprop_BrigandsThrownAxe
+
+	BAprop5A					= 90
+		BAprop5AClass			= Hunter
+		BAprop5ABA_WeaponType	= BA_WeaponBow
+		BAprop5ABA_MovementData	= BAprop_BrigandsBow
+
+	BAprop5B					= 91
+		BAprop5BClass			= Pirate
+		BAprop5BBA_WeaponType	= BA_WeaponAxe
+		BAprop5BBA_MovementData	= BAprop_BrigandsAxe
+
+	BAprop5C					= 92
+		BAprop5CClass			= Pirate
+		BAprop5CBA_WeaponType	= BA_WeaponThrownAxe
+		BAprop5CBA_MovementData	= BAprop_BrigandsThrownAxe
+
+	BAprop5D					= 93
+		BAprop5DClass			= JuniorLord
+		BAprop5DBA_WeaponType	= BA_WeaponSword
+		BAprop5DBA_MovementData	= BAprop_InfantrySword
+
+	BAprop5E					= 94
+		BAprop5EClass			= MageKnightDismounted
+		BAprop5EBA_WeaponType	= BA_WeaponSword
+		BAprop5EBA_MovementData	= BAprop_InfantrySword
+
+	BAprop5F					= 95
+		BAprop5FClass			= MageKnightDismounted
+		BAprop5FBA_WeaponType	= BA_WeaponStaff
+		BAprop5FBA_MovementData	= BAprop_InfantryStaff
+
+	BAprop60					= 96
+		BAprop60Class			= MageKnightDismounted
+		BAprop60BA_WeaponType	= BA_WeaponMagic
+		BAprop60BA_MovementData	= BAprop_InfantryMagic
+
+	BAprop61					= 97
+		BAprop61Class			= Lord
+		BAprop61BA_WeaponType	= BA_WeaponSword
+		BAprop61BA_MovementData	= BAprop_Lord
+
+	BAprop62					= 98
+		BAprop62Class			= Prince
+		BAprop62BA_WeaponType	= BA_WeaponSword
+		BAprop62BA_MovementData	= BAprop_InfantrySword
+
+	BAprop63					= 99
+		BAprop63Class			= Prince
+		BAprop63BA_WeaponType	= BA_WeaponStaff
+		BAprop63BA_MovementData	= BAprop_InfantryStaff
+
+	BAprop64					= 100
+		BAprop64Class			= MageKnightFDismounted
+		BAprop64BA_WeaponType	= BA_WeaponSword
+		BAprop64BA_MovementData	= BAprop_InfantrySword
+
+	BAprop65					= 101
+		BAprop65Class			= MageKnightFDismounted
+		BAprop65BA_WeaponType	= BA_WeaponStaff
+		BAprop65BA_MovementData	= BAprop_InfantryStaff
+
+	BAprop66					= 102
+		BAprop66Class			= MageKnightFDismounted
+		BAprop66BA_WeaponType	= BA_WeaponMagic
+		BAprop66BA_MovementData	= BAprop_InfantryMagic
+
+	BAprop67					= 103
+		BAprop67Class			= BaronGlitched
+		BAprop67BA_WeaponType	= BA_WeaponStaff
+		BAprop67BA_MovementData	= BAprop_InfantryStaff
+
+	BAprop68					= 104
+		BAprop68Class			= BaronGlitched
+		BAprop68BA_WeaponType	= BA_WeaponMagic
+		BAprop68BA_MovementData	= BAprop_InfantryMagic
+
+	BAprop69					= 105
+		BAprop69Class			= Dancer
+		BAprop69BA_WeaponType	= BA_WeaponSword
+		BAprop69BA_MovementData	= BAprop_DancerThieves
+
+	BAprop6A					= 106
+		BAprop6AClass			= Priest
+		BAprop6ABA_WeaponType	= BA_WeaponStaff
+		BAprop6ABA_MovementData	= BAprop_InfantryStaff
+
+	BAprop6B					= 107
+		BAprop6BClass			= Mage
+		BAprop6BBA_WeaponType	= BA_WeaponMagic
+		BAprop6BBA_MovementData	= BAprop_InfantryMagic
+
+	BAprop6C					= 108
+		BAprop6CClass			= LoptrianMage
+		BAprop6CBA_WeaponType	= BA_WeaponMagic
+		BAprop6CBA_MovementData	= BAprop_InfantryMagic
+
+	BAprop6D					= 109
+		BAprop6DClass			= LoptrianMage
+		BAprop6DBA_WeaponType	= BA_WeaponStaff
+		BAprop6DBA_MovementData	= BAprop_InfantryStaff
+
+	BAprop6E					= 110
+		BAprop6EClass			= ThunderMage
+		BAprop6EBA_WeaponType	= BA_WeaponMagic
+		BAprop6EBA_MovementData	= BAprop_InfantryMagic
+
+	BAprop6F					= 111
+		BAprop6FClass			= WindMage
+		BAprop6FBA_WeaponType	= BA_WeaponMagic
+		BAprop6FBA_MovementData	= BAprop_InfantryMagic
+
+	BAprop70					= 112
+		BAprop70Class			= HighPriest
+		BAprop70BA_WeaponType	= BA_WeaponMagic
+		BAprop70BA_MovementData	= BAprop_InfantryMagic
+
+	BAprop71					= 113
+		BAprop71Class			= HighPriest
+		BAprop71BA_WeaponType	= BA_WeaponStaff
+		BAprop71BA_MovementData	= BAprop_InfantryStaff
+
+	BAprop72					= 114
+		BAprop72Class			= Bishop
+		BAprop72BA_WeaponType	= BA_WeaponMagic
+		BAprop72BA_MovementData	= BAprop_InfantryMagic
+
+	BAprop73					= 115
+		BAprop73Class			= Bishop
+		BAprop73BA_WeaponType	= BA_WeaponStaff
+		BAprop73BA_MovementData	= BAprop_InfantryStaff
+
+	BAprop74					= 116
+		BAprop74Class			= Sage
+		BAprop74BA_WeaponType	= BA_WeaponMagic
+		BAprop74BA_MovementData	= BAprop_InfantryMagic
+
+	BAprop75					= 117
+		BAprop75Class			= Sage
+		BAprop75BA_WeaponType	= BA_WeaponStaff
+		BAprop75BA_MovementData	= BAprop_InfantryStaff
+
+	BAprop76					= 118
+		BAprop76Class			= Bard
+		BAprop76BA_WeaponType	= BA_WeaponMagic
+		BAprop76BA_MovementData	= BAprop_InfantryMagic
+
+	BAprop77					= 119
+		BAprop77Class			= Cleric
+		BAprop77BA_WeaponType	= BA_WeaponMagic
+		BAprop77BA_MovementData	= BAprop_InfantryMagic
+
+	BAprop78					= 120
+		BAprop78Class			= Cleric
+		BAprop78BA_WeaponType	= BA_WeaponStaff
+		BAprop78BA_MovementData	= BAprop_InfantryStaff
+
+	BAprop79					= 121
+		BAprop79Class			= Sorcerer
+		BAprop79BA_WeaponType	= BA_WeaponMagic
+		BAprop79BA_MovementData	= BAprop_InfantryMagic
+
+	BAprop7A					= 122
+		BAprop7AClass			= Sorcerer
+		BAprop7ABA_WeaponType	= BA_WeaponStaff
+		BAprop7ABA_MovementData	= BAprop_InfantryStaff
+
+	BAprop7B					= 123
+		BAprop7BClass			= DarkBishop
+		BAprop7BBA_WeaponType	= BA_WeaponMagic
+		BAprop7BBA_MovementData	= BAprop_InfantryMagic
+
+	BAprop7C					= 124
+		BAprop7CClass			= DarkBishop
+		BAprop7CBA_WeaponType	= BA_WeaponStaff
+		BAprop7CBA_MovementData	= BAprop_InfantryStaff
+
+	BAprop7D					= 125
+		BAprop7DClass			= Thief
+		BAprop7DBA_WeaponType	= BA_WeaponSword
+		BAprop7DBA_MovementData	= BAprop_DancerThieves
+
+	BAprop7E					= 126
+		BAprop7EClass			= Rogue
+		BAprop7EBA_WeaponType	= BA_WeaponSword
+		BAprop7EBA_MovementData	= BAprop_DancerThieves
+
+	BAprop7F					= 127
+		BAprop7FClass			= Ballistician
+		BAprop7FBA_WeaponType	= BA_WeaponBow
+		BAprop7FBA_MovementData	= BAprop_Ballisticians
+
+	BAprop80					= 128
+		BAprop80Class			= IronBallistician
+		BAprop80BA_WeaponType	= BA_WeaponBow
+		BAprop80BA_MovementData	= BAprop_Ballisticians
+
+	BAprop81					= 129
+		BAprop81Class			= KillerBallistician
+		BAprop81BA_WeaponType	= BA_WeaponBow
+		BAprop81BA_MovementData	= BAprop_Ballisticians
+
+	BAprop82					= 130
+		BAprop82Class			= VeninBallistician
+		BAprop82BA_WeaponType	= BA_WeaponBow
+		BAprop82BA_MovementData	= BAprop_Ballisticians
+
+	BAprop83					= 131
+		BAprop83Class			= DarkPrince
+		BAprop83BA_WeaponType	= BA_WeaponMagic
+		BAprop83BA_MovementData	= BAprop_DarkPrince
+
+	BAprop84					= 132
+		BAprop84Class			= Fighter
+		BAprop84BA_WeaponType	= BA_WeaponAxe
+		BAprop84BA_MovementData	= BAprop_MyrmidonFighterHero
+
+	BAprop85					= 133
+		BAprop85Class			= CavalierDismounted
+		BAprop85BA_WeaponType	= BA_WeaponSword
+		BAprop85BA_MovementData	= BAprop_InfantrySword
+
+	BAprop86					= 134
+		BAprop86Class			= LanceKnightDismounted
+		BAprop86BA_WeaponType	= BA_WeaponSword
+		BAprop86BA_MovementData	= BAprop_InfantrySword
+
+	BAprop87					= 135
+		BAprop87Class			= AxeKnightDismounted
+		BAprop87BA_WeaponType	= BA_WeaponSword
+		BAprop87BA_MovementData	= BAprop_InfantrySword
+
+	BAprop88					= 136
+		BAprop88Class			= SwordKnightDismounted
+		BAprop88BA_WeaponType	= BA_WeaponSword
+		BAprop88BA_MovementData	= BAprop_InfantrySword
+
+	BAprop89					= 137
+		BAprop89Class			= TroubadourDismounted
+		BAprop89BA_WeaponType	= BA_WeaponSword
+		BAprop89BA_MovementData	= BAprop_InfantrySword
+
+	BAprop8A					= 138
+		BAprop8AClass			= TroubadourDismounted
+		BAprop8ABA_WeaponType	= BA_WeaponStaff
+		BAprop8ABA_MovementData	= BAprop_InfantryStaff
+
+	BAprop8B					= 139
+		BAprop8BClass			= KnightLordDismounted
+		BAprop8BBA_WeaponType	= BA_WeaponSword
+		BAprop8BBA_MovementData	= BAprop_InfantrySword
+
+	BAprop8C					= 140
+		BAprop8CClass			= DukeKnightDismounted
+		BAprop8CBA_WeaponType	= BA_WeaponSword
+		BAprop8CBA_MovementData	= BAprop_InfantrySword
+
+	BAprop8D					= 141
+		BAprop8DClass			= MasterKnightDismounted
+		BAprop8DBA_WeaponType	= BA_WeaponSword
+		BAprop8DBA_MovementData	= BAprop_InfantrySword
+
+	BAprop8E					= 142
+		BAprop8EClass			= PaladinDismounted
+		BAprop8EBA_WeaponType	= BA_WeaponSword
+		BAprop8EBA_MovementData	= BAprop_InfantrySword
+
+	BAprop8F					= 143
+		BAprop8FClass			= PaladinFDismounted
+		BAprop8FBA_WeaponType	= BA_WeaponSword
+		BAprop8FBA_MovementData	= BAprop_InfantrySword
+
+	BAprop90					= 144
+		BAprop90Class			= PaladinFDismounted
+		BAprop90BA_WeaponType	= BA_WeaponStaff
+		BAprop90BA_MovementData	= BAprop_InfantryStaff
+
+	BAprop91					= 145
+		BAprop91Class			= RangerDismounted
+		BAprop91BA_WeaponType	= BA_WeaponSword
+		BAprop91BA_MovementData	= BAprop_InfantrySword
+
+	BAprop92					= 146
+		BAprop92Class			= GreatKnightDismounted
+		BAprop92BA_WeaponType	= BA_WeaponSword
+		BAprop92BA_MovementData	= BAprop_InfantrySword
+
+	BAprop93					= 147
+		BAprop93Class			= PegasusKnightDismounted
+		BAprop93BA_WeaponType	= BA_WeaponSword
+		BAprop93BA_MovementData	= BAprop_InfantrySword
+
+	BAprop94					= 148
+		BAprop94Class			= FalconKnightDismounted
+		BAprop94BA_WeaponType	= BA_WeaponSword
+		BAprop94BA_MovementData	= BAprop_InfantrySword
+
+	BAprop95					= 149
+		BAprop95Class			= FalconKnightDismounted
+		BAprop95BA_WeaponType	= BA_WeaponStaff
+		BAprop95BA_MovementData	= BAprop_InfantryStaff
+
+	BAprop96					= 150
+		BAprop96Class			= DracoriderDismounted
+		BAprop96BA_WeaponType	= BA_WeaponSword
+		BAprop96BA_MovementData	= BAprop_InfantrySword
+
+	BAprop97					= 151
+		BAprop97Class			= DracoknightDismounted
+		BAprop97BA_WeaponType	= BA_WeaponSword
+		BAprop97BA_MovementData	= BAprop_InfantrySword
+
+	BAprop98					= 152
+		BAprop98Class			= DragonMasterDismounted
+		BAprop98BA_WeaponType	= BA_WeaponSword
+		BAprop98BA_MovementData	= BAprop_InfantrySword
+
+	BAprop99					= 153
+		BAprop99Class			= BowKnight
+		BAprop99BA_WeaponType	= BA_WeaponBow
+		BAprop99BA_MovementData	= BAprop_CavBow
+
+	BAprop9A					= 154
+		BAprop9AClass			= BowKnightDismounted
+		BAprop9ABA_WeaponType	= BA_WeaponBow
+		BAprop9ABA_MovementData	= BAprop_InfantryBow
+
+	BAprop9B					= 155
+		BAprop9BClass			= BowKnightF
+		BAprop9BBA_WeaponType	= BA_WeaponBow
+		BAprop9BBA_MovementData	= BAprop_CavBow
+
+	BAprop9C					= 156
+		BAprop9CClass			= BowKnightFDismounted
+		BAprop9CBA_WeaponType	= BA_WeaponBow
+		BAprop9CBA_MovementData	= BAprop_InfantryBow
+
+	BAprop9D					= 157
+		BAprop9DClass			= ArchKnight
+		BAprop9DBA_WeaponType	= BA_WeaponBow
+		BAprop9DBA_MovementData	= BAprop_CavBow
+
+	BAprop9E					= 158
+		BAprop9EClass			= ArchKnightDismounted
+		BAprop9EBA_WeaponType	= BA_WeaponBow
+		BAprop9EBA_MovementData	= BAprop_InfantryBow
+
+	BAprop9F					= 159
+		BAprop9FClass			= ArchKnightF
+		BAprop9FBA_WeaponType	= BA_WeaponBow
+		BAprop9FBA_MovementData	= BAprop_CavBow
+
+	BApropA0					= 160
+		BApropA0Class			= ArchKnightFDismounted
+		BApropA0BA_WeaponType	= BA_WeaponBow
+		BApropA0BA_MovementData	= BAprop_InfantryBow
+
+	BApropA1					= 161
+		BApropA1Class			= MasterKnightF
+		BApropA1BA_WeaponType	= BA_WeaponSword
+		BApropA1BA_MovementData	= BAprop_PromotedCavSwordAxe
+
+	BApropA2					= 162
+		BApropA2Class			= MasterKnightF
+		BApropA2BA_WeaponType	= BA_WeaponLance
+		BApropA2BA_MovementData	= BAprop_PromotedCavLance
+
+	BApropA3					= 163
+		BApropA3Class			= MasterKnightF
+		BApropA3BA_WeaponType	= BA_WeaponAxe
+		BApropA3BA_MovementData	= BAprop_PromotedCavSwordAxe
+
+	BApropA4					= 164
+		BApropA4Class			= MasterKnightF
+		BApropA4BA_WeaponType	= BA_WeaponBow
+		BApropA4BA_MovementData	= BAprop_CavBow
+
+	BApropA5					= 165
+		BApropA5Class			= MasterKnightF
+		BApropA5BA_WeaponType	= BA_WeaponThrownLance
+		BApropA5BA_MovementData	= BAprop_PromotedCavThrownLance
+
+	BApropA6					= 166
+		BApropA6Class			= MasterKnightF
+		BApropA6BA_WeaponType	= BA_WeaponThrownAxe
+		BApropA6BA_MovementData	= BAprop_PromotedCavThrownAxe
+
+	BApropA7					= 167
+		BApropA7Class			= MasterKnightF
+		BApropA7BA_WeaponType	= BA_WeaponStaff
+		BApropA7BA_MovementData	= BAprop_PromotedCavStaff
+
+	BApropA8					= 168
+		BApropA8Class			= MasterKnightFDismounted
+		BApropA8BA_WeaponType	= BA_WeaponSword
+		BApropA8BA_MovementData	= BAprop_InfantrySword
+
+	BApropA9					= 169
+		BApropA9Class			= MasterKnightFDismounted
+		BApropA9BA_WeaponType	= BA_WeaponStaff
+		BApropA9BA_MovementData	= BAprop_InfantryStaff
+
+	BApropAA					= 170
+		BApropAAClass			= DracoriderF
+		BApropAABA_WeaponType	= BA_WeaponSword
+		BApropAABA_MovementData	= BAprop_DragonSword
+
+	BApropAB					= 171
+		BApropABClass			= DracoriderF
+		BApropABBA_WeaponType	= BA_WeaponLance
+		BApropABBA_MovementData	= BAprop_DragonLance
+
+	BApropAC					= 172
+		BApropACClass			= DracoriderF
+		BApropACBA_WeaponType	= BA_WeaponThrownLance
+		BApropACBA_MovementData	= BAprop_DragonThrownLance
+
+	BApropAD					= 173
+		BApropADClass			= DracoriderFDismounted
+		BApropADBA_WeaponType	= BA_WeaponSword
+		BApropADBA_MovementData	= BAprop_InfantrySword
+
+	BApropAE					= 174
+		BApropAEClass			= DracoknightF
+		BApropAEBA_WeaponType	= BA_WeaponSword
+		BApropAEBA_MovementData	= BAprop_DragonSword
+
+	BApropAF					= 175
+		BApropAFClass			= DracoknightF
+		BApropAFBA_WeaponType	= BA_WeaponLance
+		BApropAFBA_MovementData	= BAprop_DragonLance
+
+	BApropB0					= 176
+		BApropB0Class			= DracoknightF
+		BApropB0BA_WeaponType	= BA_WeaponThrownLance
+		BApropB0BA_MovementData	= BAprop_DragonThrownLance
+
+	BApropB1					= 177
+		BApropB1Class			= DracoknightFDismounted
+		BApropB1BA_WeaponType	= BA_WeaponSword
+		BApropB1BA_MovementData	= BAprop_InfantrySword
+
+	BApropB2					= 178
+		BApropB2Class			= DragonMasterF
+		BApropB2BA_WeaponType	= BA_WeaponSword
+		BApropB2BA_MovementData	= BAprop_DragonSword
+
+	BApropB3					= 179
+		BApropB3Class			= DragonMasterF
+		BApropB3BA_WeaponType	= BA_WeaponLance
+		BApropB3BA_MovementData	= BAprop_DragonLance
+
+	BApropB4					= 180
+		BApropB4Class			= DragonMasterF
+		BApropB4BA_WeaponType	= BA_WeaponThrownLance
+		BApropB4BA_MovementData	= BAprop_DragonThrownLance
+
+	BApropB5					= 181
+		BApropB5Class			= DragonMasterFDismounted
+		BApropB5BA_WeaponType	= BA_WeaponSword
+		BApropB5BA_MovementData	= BAprop_InfantrySword
+
+	BApropB6					= 182
+		BApropB6Class			= MageF
+		BApropB6BA_WeaponType	= BA_WeaponMagic
+		BApropB6BA_MovementData	= BAprop_InfantryMagic
+
+	BApropB7					= 183
+		BApropB7Class			= ThunderMageF
+		BApropB7BA_WeaponType	= BA_WeaponMagic
+		BApropB7BA_MovementData	= BAprop_InfantryMagic
+
+	BApropB8					= 184
+		BApropB8Class			= LoptrianMageF
+		BApropB8BA_WeaponType	= BA_WeaponMagic
+		BApropB8BA_MovementData	= BAprop_InfantryMagic
+
+	BApropB9					= 185
+		BApropB9Class			= WindMageF
+		BApropB9BA_WeaponType	= BA_WeaponMagic
+		BApropB9BA_MovementData	= BAprop_InfantryMagic
+
+	BApropBA					= 186
+		BApropBAClass			= MageKnightF
+		BApropBABA_WeaponType	= BA_WeaponSword
+		BApropBABA_MovementData	= BAprop_PromotedCavSwordAxe
+
+	BApropBB					= 187
+		BApropBBClass			= MageKnightF
+		BApropBBBA_WeaponType	= BA_WeaponStaff
+		BApropBBBA_MovementData	= BAprop_PromotedCavStaff
+
+	BApropBC					= 188
+		BApropBCClass			= MageKnightF
+		BApropBCBA_WeaponType	= BA_WeaponMagic
+		BApropBCBA_MovementData	= BAprop_CavMagic
+
+	BApropBD					= 189
+		BApropBDClass			= SageF
+		BApropBDBA_WeaponType	= BA_WeaponMagic
+		BApropBDBA_MovementData	= BAprop_InfantryMagic
+
+	BApropBE					= 190
+		BApropBEClass			= SageF
+		BApropBEBA_WeaponType	= BA_WeaponStaff
+		BApropBEBA_MovementData	= BAprop_InfantryStaff
+
+	BApropBF					= 191
+		BApropBFClass			= Priestess
+		BApropBFBA_WeaponType	= BA_WeaponStaff
+		BApropBFBA_MovementData	= BAprop_InfantryStaff
+
+	BApropC0					= 192
+		BApropC0Class			= HighPriestess
+		BApropC0BA_WeaponType	= BA_WeaponMagic
+		BApropC0BA_MovementData	= BAprop_InfantryMagic
+
+	BApropC1					= 193
+		BApropC1Class			= HighPriestess
+		BApropC1BA_WeaponType	= BA_WeaponStaff
+		BApropC1BA_MovementData	= BAprop_InfantryStaff
+
+	BApropC2					= 194
+		BApropC2Class			= MyrmidonF
+		BApropC2BA_WeaponType	= BA_WeaponSword
+		BApropC2BA_MovementData	= BAprop_MyrmidonFighterHero
+
+	BApropC3					= 195
+		BApropC3Class			= HeroFE4F
+		BApropC3BA_WeaponType	= BA_WeaponSword
+		BApropC3BA_MovementData	= BAprop_SwordmasterHeroFE4
+
+	BApropC4					= 196
+		BApropC4Class			= SwordmasterF
+		BApropC4BA_WeaponType	= BA_WeaponSword
+		BApropC4BA_MovementData	= BAprop_SwordmasterHeroFE4
+
+	BApropC5					= 197
+		BApropC5Class			= Archer
+		BApropC5BA_WeaponType	= BA_WeaponBow
+		BApropC5BA_MovementData	= BAprop_InfantryBow
+
+	BApropC6					= 198
+		BApropC6Class			= ArcherF
+		BApropC6BA_WeaponType	= BA_WeaponBow
+		BApropC6BA_MovementData	= BAprop_InfantryBow
+
+	BApropC7					= 199
+		BApropC7Class			= Sniper
+		BApropC7BA_WeaponType	= BA_WeaponBow
+		BApropC7BA_MovementData	= BAprop_InfantryBow
+
+	BApropC8					= 200
+		BApropC8Class			= SniperF
+		BApropC8BA_WeaponType	= BA_WeaponBow
+		BApropC8BA_MovementData	= BAprop_InfantryBow
+
+	BApropC9					= 201
+		BApropC9Class			= ThiefF
+		BApropC9BA_WeaponType	= BA_WeaponSword
+		BApropC9BA_MovementData	= BAprop_DancerThieves
+
+	BApropCA					= 202
+		BApropCAClass			= RogueF
+		BApropCABA_WeaponType	= BA_WeaponSword
+		BApropCABA_MovementData	= BAprop_DancerThieves
+
+	BApropCB					= 203
+		BApropCBClass			= Hero
+		BApropCBBA_WeaponType	= BA_WeaponAxe
+		BApropCBBA_MovementData	= BAprop_MyrmidonFighterHero
+
+	BApropCC					= 204
+		BApropCCClass			= ThiefRogue
+		BApropCCBA_WeaponType	= BA_WeaponSword
+		BApropCCBA_MovementData	= BAprop_DancerThieves
+
+	BApropCD					= 205
+		BApropCDClass			= PegasusRider
+		BApropCDBA_WeaponType	= BA_WeaponSword
+		BApropCDBA_MovementData	= BAprop_PegasusSword
+
+	BApropCE					= 206
+		BApropCEClass			= PegasusRider
+		BApropCEBA_WeaponType	= BA_WeaponLance
+		BApropCEBA_MovementData	= BAprop_PegasusLance
+
+	BApropCF					= 207
+		BApropCFClass			= PegasusRider
+		BApropCFBA_WeaponType	= BA_WeaponThrownLance
+		BApropCFBA_MovementData	= BAprop_PegasusThrownLance
+
+	BApropD0					= 208
+		BApropD0Class			= PegasusRiderDismounted
+		BApropD0BA_WeaponType	= BA_WeaponSword
+		BApropD0BA_MovementData	= BAprop_InfantrySword
+
+	BApropD1					= 209
+		BApropD1Class			= Soldier
+		BApropD1BA_WeaponType	= BA_WeaponLance
+		BApropD1BA_MovementData	= BAprop_SoldierLance
+
+	BApropD2					= 210
+		BApropD2Class			= Soldier
+		BApropD2BA_WeaponType	= BA_WeaponThrownLance
+		BApropD2BA_MovementData	= BAprop_SoldierThrownLance
+
+	BApropD3					= 211
+		BApropD3Class			= ArcherEnemy
+		BApropD3BA_WeaponType	= BA_WeaponBow
+		BApropD3BA_MovementData	= BAprop_ArmorBow
+
+	BApropD4					= 212
+		BApropD4Class			= HeroF
+		BApropD4BA_WeaponType	= BA_WeaponAxe
+		BApropD4BA_MovementData	= BAprop_MyrmidonFighterHero
+
+	BApropD5					= 213
+		BApropD5Class			= MageKnight
+		BApropD5BA_WeaponType	= BA_WeaponMagic
+		BApropD5BA_MovementData	= BAprop_CavMagic
+
+	BApropD6					= 214
+		BApropD6Class			= Fighter
+		BApropD6BA_WeaponType	= BA_WeaponThrownAxe
+		BApropD6BA_MovementData	= BAprop_InfantryThrownAxe
+
+	BApropD7					= 215
+		BApropD7Class			= Hero
+		BApropD7BA_WeaponType	= BA_WeaponSword
+		BApropD7BA_MovementData	= BAprop_MyrmidonFighterHero
+
+	BApropD8					= 216
+		BApropD8Class			= Hero
+		BApropD8BA_WeaponType	= BA_WeaponThrownAxe
+		BApropD8BA_MovementData	= BAprop_InfantryThrownAxe
+
+	BApropD9					= 217
+		BApropD9Class			= HeroF
+		BApropD9BA_WeaponType	= BA_WeaponSword
+		BApropD9BA_MovementData	= BAprop_InfantrySword
+
+	BApropDA					= 218
+		BApropDAClass			= Hero
+		BApropDABA_WeaponType	= BA_WeaponThrownAxe
+		BApropDABA_MovementData	= BAprop_InfantryThrownAxe
+
+	BApropDB					= 219
+		BApropDBClass			= MasterKnight
+		BApropDBBA_WeaponType	= BA_WeaponMagic
+		BApropDBBA_MovementData	= BAprop_CavMagic
+
+	BApropDC					= 220
+		BApropDCClass			= MasterKnightF
+		BApropDCBA_WeaponType	= BA_WeaponMagic
+		BApropDCBA_MovementData	= BAprop_CavMagic
+
+	BApropDD					= 221
+		BApropDDClass			= LoptrianMageF
+		BApropDDBA_WeaponType	= BA_WeaponStaff
+		BApropDDBA_MovementData	= BAprop_InfantryStaff
+
+	BApropDE					= 222
+		BApropDEClass			= HeroFe4
+		BApropDEBA_WeaponType	= BA_WeaponAxe
+		BApropDEBA_MovementData	= BAprop_MyrmidonFighterHero
+
+	BApropDF					= 223
+		BApropDFClass			= HeroFe4
+		BApropDFBA_WeaponType	= BA_WeaponThrownAxe
+		BApropDFBA_MovementData	= BAprop_InfantryThrownAxe
+
+	BApropE0					= 224
+		BApropE0Class			= HeroFE4F
+		BApropE0BA_WeaponType	= BA_WeaponAxe
+		BApropE0BA_MovementData	= BAprop_MyrmidonFighterHero
+
+	BApropE1					= 225
+		BApropE1Class			= HeroFE4F
+		BApropE1BA_WeaponType	= BA_WeaponThrownAxe
+		BApropE1BA_MovementData	= BAprop_InfantryThrownAxe
+
+BAprop00BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop00Class, BAprop00BA_WeaponType, BAprop00BA_MovementData
+BAprop01BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop01Class, BAprop01BA_WeaponType, BAprop01BA_MovementData
+BAprop02BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop02Class, BAprop02BA_WeaponType, BAprop02BA_MovementData
+BAprop03BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop03Class, BAprop03BA_WeaponType, BAprop03BA_MovementData
+BAprop04BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop04Class, BAprop04BA_WeaponType, BAprop04BA_MovementData
+BAprop05BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop05Class, BAprop05BA_WeaponType, BAprop05BA_MovementData
+BAprop06BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop06Class, BAprop06BA_WeaponType, BAprop06BA_MovementData
+BAprop07BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop07Class, BAprop07BA_WeaponType, BAprop07BA_MovementData
+BAprop08BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop08Class, BAprop08BA_WeaponType, BAprop08BA_MovementData
+BAprop09BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop09Class, BAprop09BA_WeaponType, BAprop09BA_MovementData
+BAprop0ABattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop0AClass, BAprop0ABA_WeaponType, BAprop0ABA_MovementData
+BAprop0BBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop0BClass, BAprop0BBA_WeaponType, BAprop0BBA_MovementData
+BAprop0CBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop0CClass, BAprop0CBA_WeaponType, BAprop0CBA_MovementData
+BAprop0DBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop0DClass, BAprop0DBA_WeaponType, BAprop0DBA_MovementData
+BAprop0EBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop0EClass, BAprop0EBA_WeaponType, BAprop0EBA_MovementData
+BAprop0BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop0Class, BAprop0BA_WeaponType, BAprop0BA_MovementData
+BAprop10BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop10Class, BAprop10BA_WeaponType, BAprop10BA_MovementData
+BAprop11BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop11Class, BAprop11BA_WeaponType, BAprop11BA_MovementData
+BAprop12BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop12Class, BAprop12BA_WeaponType, BAprop12BA_MovementData
+BAprop13BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop13Class, BAprop13BA_WeaponType, BAprop13BA_MovementData
+BAprop14BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop14Class, BAprop14BA_WeaponType, BAprop14BA_MovementData
+BAprop15BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop15Class, BAprop15BA_WeaponType, BAprop15BA_MovementData
+BAprop16BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop16Class, BAprop16BA_WeaponType, BAprop16BA_MovementData
+BAprop17BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop17Class, BAprop17BA_WeaponType, BAprop17BA_MovementData
+BAprop18BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop18Class, BAprop18BA_WeaponType, BAprop18BA_MovementData
+BAprop19BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop19Class, BAprop19BA_WeaponType, BAprop19BA_MovementData
+BAprop1ABattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop1AClass, BAprop1ABA_WeaponType, BAprop1ABA_MovementData
+BAprop1BBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop1BClass, BAprop1BBA_WeaponType, BAprop1BBA_MovementData
+BAprop1CBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop1CClass, BAprop1CBA_WeaponType, BAprop1CBA_MovementData
+BAprop1DBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop1DClass, BAprop1DBA_WeaponType, BAprop1DBA_MovementData
+BAprop1EBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop1EClass, BAprop1EBA_WeaponType, BAprop1EBA_MovementData
+BAprop1FBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop1FClass, BAprop1FBA_WeaponType, BAprop1FBA_MovementData
+BAprop20BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop20Class, BAprop20BA_WeaponType, BAprop20BA_MovementData
+BAprop21BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop21Class, BAprop21BA_WeaponType, BAprop21BA_MovementData
+BAprop22BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop22Class, BAprop22BA_WeaponType, BAprop22BA_MovementData
+BAprop23BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop23Class, BAprop23BA_WeaponType, BAprop23BA_MovementData
+BAprop24BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop24Class, BAprop24BA_WeaponType, BAprop24BA_MovementData
+BAprop25BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop25Class, BAprop25BA_WeaponType, BAprop25BA_MovementData
+BAprop26BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop26Class, BAprop26BA_WeaponType, BAprop26BA_MovementData
+BAprop27BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop27Class, BAprop27BA_WeaponType, BAprop27BA_MovementData
+BAprop28BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop28Class, BAprop28BA_WeaponType, BAprop28BA_MovementData
+BAprop29BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop29Class, BAprop29BA_WeaponType, BAprop29BA_MovementData
+BAprop2ABattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop2AClass, BAprop2ABA_WeaponType, BAprop2ABA_MovementData
+BAprop2BBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop2BClass, BAprop2BBA_WeaponType, BAprop2BBA_MovementData
+BAprop2CBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop2CClass, BAprop2CBA_WeaponType, BAprop2CBA_MovementData
+BAprop2DBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop2DClass, BAprop2DBA_WeaponType, BAprop2DBA_MovementData
+BAprop2EBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop2EClass, BAprop2EBA_WeaponType, BAprop2EBA_MovementData
+BAprop2FBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop2FClass, BAprop2FBA_WeaponType, BAprop2FBA_MovementData
+BAprop30BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop30Class, BAprop30BA_WeaponType, BAprop30BA_MovementData
+BAprop31BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop31Class, BAprop31BA_WeaponType, BAprop31BA_MovementData
+BAprop32BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop32Class, BAprop32BA_WeaponType, BAprop32BA_MovementData
+BAprop33BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop33Class, BAprop33BA_WeaponType, BAprop33BA_MovementData
+BAprop34BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop34Class, BAprop34BA_WeaponType, BAprop34BA_MovementData
+BAprop35BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop35Class, BAprop35BA_WeaponType, BAprop35BA_MovementData
+BAprop36BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop36Class, BAprop36BA_WeaponType, BAprop36BA_MovementData
+BAprop37BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop37Class, BAprop37BA_WeaponType, BAprop37BA_MovementData
+BAprop38BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop38Class, BAprop38BA_WeaponType, BAprop38BA_MovementData
+BAprop39BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop39Class, BAprop39BA_WeaponType, BAprop39BA_MovementData
+BAprop3ABattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop3AClass, BAprop3ABA_WeaponType, BAprop3ABA_MovementData
+BAprop3BBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop3BClass, BAprop3BBA_WeaponType, BAprop3BBA_MovementData
+BAprop3CBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop3CClass, BAprop3CBA_WeaponType, BAprop3CBA_MovementData
+BAprop3DBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop3DClass, BAprop3DBA_WeaponType, BAprop3DBA_MovementData
+BAprop3EBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop3EClass, BAprop3EBA_WeaponType, BAprop3EBA_MovementData
+BAprop3FBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop3FClass, BAprop3FBA_WeaponType, BAprop3FBA_MovementData
+BAprop40BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop40Class, BAprop40BA_WeaponType, BAprop40BA_MovementData
+BAprop41BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop41Class, BAprop41BA_WeaponType, BAprop41BA_MovementData
+BAprop42BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop42Class, BAprop42BA_WeaponType, BAprop42BA_MovementData
+BAprop43BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop43Class, BAprop43BA_WeaponType, BAprop43BA_MovementData
+BAprop44BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop44Class, BAprop44BA_WeaponType, BAprop44BA_MovementData
+BAprop45BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop45Class, BAprop45BA_WeaponType, BAprop45BA_MovementData
+BAprop46BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop46Class, BAprop46BA_WeaponType, BAprop46BA_MovementData
+BAprop47BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop47Class, BAprop47BA_WeaponType, BAprop47BA_MovementData
+BAprop48BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop48Class, BAprop48BA_WeaponType, BAprop48BA_MovementData
+BAprop49BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop49Class, BAprop49BA_WeaponType, BAprop49BA_MovementData
+BAprop4ABattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop4AClass, BAprop4ABA_WeaponType, BAprop4ABA_MovementData
+BAprop4BBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop4BClass, BAprop4BBA_WeaponType, BAprop4BBA_MovementData
+BAprop4CBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop4CClass, BAprop4CBA_WeaponType, BAprop4CBA_MovementData
+BAprop4DBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop4DClass, BAprop4DBA_WeaponType, BAprop4DBA_MovementData
+BAprop4EBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop4EClass, BAprop4EBA_WeaponType, BAprop4EBA_MovementData
+BAprop4FBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop4FClass, BAprop4FBA_WeaponType, BAprop4FBA_MovementData
+BAprop50BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop50Class, BAprop50BA_WeaponType, BAprop50BA_MovementData
+BAprop51BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop51Class, BAprop51BA_WeaponType, BAprop51BA_MovementData
+BAprop52BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop52Class, BAprop52BA_WeaponType, BAprop52BA_MovementData
+BAprop53BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop53Class, BAprop53BA_WeaponType, BAprop53BA_MovementData
+BAprop54BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop54Class, BAprop54BA_WeaponType, BAprop54BA_MovementData
+BAprop55BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop55Class, BAprop55BA_WeaponType, BAprop55BA_MovementData
+BAprop56BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop56Class, BAprop56BA_WeaponType, BAprop56BA_MovementData
+BAprop57BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop57Class, BAprop57BA_WeaponType, BAprop57BA_MovementData
+BAprop58BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop58Class, BAprop58BA_WeaponType, BAprop58BA_MovementData
+BAprop59BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop59Class, BAprop59BA_WeaponType, BAprop59BA_MovementData
+BAprop5ABattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop5AClass, BAprop5ABA_WeaponType, BAprop5ABA_MovementData
+BAprop5BBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop5BClass, BAprop5BBA_WeaponType, BAprop5BBA_MovementData
+BAprop5CBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop5CClass, BAprop5CBA_WeaponType, BAprop5CBA_MovementData
+BAprop5DBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop5DClass, BAprop5DBA_WeaponType, BAprop5DBA_MovementData
+BAprop5EBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop5EClass, BAprop5EBA_WeaponType, BAprop5EBA_MovementData
+BAprop5FBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop5FClass, BAprop5FBA_WeaponType, BAprop5FBA_MovementData
+BAprop60BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop60Class, BAprop60BA_WeaponType, BAprop60BA_MovementData
+BAprop61BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop61Class, BAprop61BA_WeaponType, BAprop61BA_MovementData
+BAprop62BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop62Class, BAprop62BA_WeaponType, BAprop62BA_MovementData
+BAprop63BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop63Class, BAprop63BA_WeaponType, BAprop63BA_MovementData
+BAprop64BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop64Class, BAprop64BA_WeaponType, BAprop64BA_MovementData
+BAprop65BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop65Class, BAprop65BA_WeaponType, BAprop65BA_MovementData
+BAprop66BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop66Class, BAprop66BA_WeaponType, BAprop66BA_MovementData
+BAprop67BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop67Class, BAprop67BA_WeaponType, BAprop67BA_MovementData
+BAprop68BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop68Class, BAprop68BA_WeaponType, BAprop68BA_MovementData
+BAprop69BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop69Class, BAprop69BA_WeaponType, BAprop69BA_MovementData
+BAprop6ABattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop6AClass, BAprop6ABA_WeaponType, BAprop6ABA_MovementData
+BAprop6BBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop6BClass, BAprop6BBA_WeaponType, BAprop6BBA_MovementData
+BAprop6CBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop6CClass, BAprop6CBA_WeaponType, BAprop6CBA_MovementData
+BAprop6DBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop6DClass, BAprop6DBA_WeaponType, BAprop6DBA_MovementData
+BAprop6EBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop6EClass, BAprop6EBA_WeaponType, BAprop6EBA_MovementData
+BAprop6FBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop6FClass, BAprop6FBA_WeaponType, BAprop6FBA_MovementData
+BAprop70BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop70Class, BAprop70BA_WeaponType, BAprop70BA_MovementData
+BAprop71BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop71Class, BAprop71BA_WeaponType, BAprop71BA_MovementData
+BAprop72BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop72Class, BAprop72BA_WeaponType, BAprop72BA_MovementData
+BAprop73BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop73Class, BAprop73BA_WeaponType, BAprop73BA_MovementData
+BAprop74BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop74Class, BAprop74BA_WeaponType, BAprop74BA_MovementData
+BAprop75BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop75Class, BAprop75BA_WeaponType, BAprop75BA_MovementData
+BAprop76BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop76Class, BAprop76BA_WeaponType, BAprop76BA_MovementData
+BAprop77BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop77Class, BAprop77BA_WeaponType, BAprop77BA_MovementData
+BAprop78BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop78Class, BAprop78BA_WeaponType, BAprop78BA_MovementData
+BAprop79BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop79Class, BAprop79BA_WeaponType, BAprop79BA_MovementData
+BAprop7ABattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop7AClass, BAprop7ABA_WeaponType, BAprop7ABA_MovementData
+BAprop7BBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop7BClass, BAprop7BBA_WeaponType, BAprop7BBA_MovementData
+BAprop7CBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop7CClass, BAprop7CBA_WeaponType, BAprop7CBA_MovementData
+BAprop7DBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop7DClass, BAprop7DBA_WeaponType, BAprop7DBA_MovementData
+BAprop7EBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop7EClass, BAprop7EBA_WeaponType, BAprop7EBA_MovementData
+BAprop7FBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop7FClass, BAprop7FBA_WeaponType, BAprop7FBA_MovementData
+BAprop80BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop80Class, BAprop80BA_WeaponType, BAprop80BA_MovementData
+BAprop81BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop81Class, BAprop81BA_WeaponType, BAprop81BA_MovementData
+BAprop82BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop82Class, BAprop82BA_WeaponType, BAprop82BA_MovementData
+BAprop83BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop83Class, BAprop83BA_WeaponType, BAprop83BA_MovementData
+BAprop84BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop84Class, BAprop84BA_WeaponType, BAprop84BA_MovementData
+BAprop85BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop85Class, BAprop85BA_WeaponType, BAprop85BA_MovementData
+BAprop86BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop86Class, BAprop86BA_WeaponType, BAprop86BA_MovementData
+BAprop87BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop87Class, BAprop87BA_WeaponType, BAprop87BA_MovementData
+BAprop88BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop88Class, BAprop88BA_WeaponType, BAprop88BA_MovementData
+BAprop89BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop89Class, BAprop89BA_WeaponType, BAprop89BA_MovementData
+BAprop8ABattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop8AClass, BAprop8ABA_WeaponType, BAprop8ABA_MovementData
+BAprop8BBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop8BClass, BAprop8BBA_WeaponType, BAprop8BBA_MovementData
+BAprop8CBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop8CClass, BAprop8CBA_WeaponType, BAprop8CBA_MovementData
+BAprop8DBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop8DClass, BAprop8DBA_WeaponType, BAprop8DBA_MovementData
+BAprop8EBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop8EClass, BAprop8EBA_WeaponType, BAprop8EBA_MovementData
+BAprop8FBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop8FClass, BAprop8FBA_WeaponType, BAprop8FBA_MovementData
+BAprop90BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop90Class, BAprop90BA_WeaponType, BAprop90BA_MovementData
+BAprop91BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop91Class, BAprop91BA_WeaponType, BAprop91BA_MovementData
+BAprop92BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop92Class, BAprop92BA_WeaponType, BAprop92BA_MovementData
+BAprop93BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop93Class, BAprop93BA_WeaponType, BAprop93BA_MovementData
+BAprop94BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop94Class, BAprop94BA_WeaponType, BAprop94BA_MovementData
+BAprop95BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop95Class, BAprop95BA_WeaponType, BAprop95BA_MovementData
+BAprop96BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop96Class, BAprop96BA_WeaponType, BAprop96BA_MovementData
+BAprop97BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop97Class, BAprop97BA_WeaponType, BAprop97BA_MovementData
+BAprop98BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop98Class, BAprop98BA_WeaponType, BAprop98BA_MovementData
+BAprop99BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop99Class, BAprop99BA_WeaponType, BAprop99BA_MovementData
+BAprop9ABattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop9AClass, BAprop9ABA_WeaponType, BAprop9ABA_MovementData
+BAprop9BBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop9BClass, BAprop9BBA_WeaponType, BAprop9BBA_MovementData
+BAprop9CBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop9CClass, BAprop9CBA_WeaponType, BAprop9CBA_MovementData
+BAprop9DBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop9DClass, BAprop9DBA_WeaponType, BAprop9DBA_MovementData
+BAprop9EBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop9EClass, BAprop9EBA_WeaponType, BAprop9EBA_MovementData
+BAprop9FBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BAprop9FClass, BAprop9FBA_WeaponType, BAprop9FBA_MovementData
+BApropA0BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropA0Class, BApropA0BA_WeaponType, BApropA0BA_MovementData
+BApropA1BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropA1Class, BApropA1BA_WeaponType, BApropA1BA_MovementData
+BApropA2BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropA2Class, BApropA2BA_WeaponType, BApropA2BA_MovementData
+BApropA3BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropA3Class, BApropA3BA_WeaponType, BApropA3BA_MovementData
+BApropA4BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropA4Class, BApropA4BA_WeaponType, BApropA4BA_MovementData
+BApropA5BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropA5Class, BApropA5BA_WeaponType, BApropA5BA_MovementData
+BApropA6BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropA6Class, BApropA6BA_WeaponType, BApropA6BA_MovementData
+BApropA7BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropA7Class, BApropA7BA_WeaponType, BApropA7BA_MovementData
+BApropA8BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropA8Class, BApropA8BA_WeaponType, BApropA8BA_MovementData
+BApropA9BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropA9Class, BApropA9BA_WeaponType, BApropA9BA_MovementData
+BApropAABattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropAAClass, BApropAABA_WeaponType, BApropAABA_MovementData
+BApropABBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropABClass, BApropABBA_WeaponType, BApropABBA_MovementData
+BApropACBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropACClass, BApropACBA_WeaponType, BApropACBA_MovementData
+BApropADBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropADClass, BApropADBA_WeaponType, BApropADBA_MovementData
+BApropAEBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropAEClass, BApropAEBA_WeaponType, BApropAEBA_MovementData
+BApropAFBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropAFClass, BApropAFBA_WeaponType, BApropAFBA_MovementData
+BApropB0BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropB0Class, BApropB0BA_WeaponType, BApropB0BA_MovementData
+BApropB1BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropB1Class, BApropB1BA_WeaponType, BApropB1BA_MovementData
+BApropB2BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropB2Class, BApropB2BA_WeaponType, BApropB2BA_MovementData
+BApropB3BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropB3Class, BApropB3BA_WeaponType, BApropB3BA_MovementData
+BApropB4BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropB4Class, BApropB4BA_WeaponType, BApropB4BA_MovementData
+BApropB5BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropB5Class, BApropB5BA_WeaponType, BApropB5BA_MovementData
+BApropB6BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropB6Class, BApropB6BA_WeaponType, BApropB6BA_MovementData
+BApropB7BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropB7Class, BApropB7BA_WeaponType, BApropB7BA_MovementData
+BApropB8BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropB8Class, BApropB8BA_WeaponType, BApropB8BA_MovementData
+BApropB9BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropB9Class, BApropB9BA_WeaponType, BApropB9BA_MovementData
+BApropBABattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropBAClass, BApropBABA_WeaponType, BApropBABA_MovementData
+BApropBBBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropBBClass, BApropBBBA_WeaponType, BApropBBBA_MovementData
+BApropBCBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropBCClass, BApropBCBA_WeaponType, BApropBCBA_MovementData
+BApropBDBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropBDClass, BApropBDBA_WeaponType, BApropBDBA_MovementData
+BApropBEBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropBEClass, BApropBEBA_WeaponType, BApropBEBA_MovementData
+BApropBFBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropBFClass, BApropBFBA_WeaponType, BApropBFBA_MovementData
+BApropC0BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropC0Class, BApropC0BA_WeaponType, BApropC0BA_MovementData
+BApropC1BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropC1Class, BApropC1BA_WeaponType, BApropC1BA_MovementData
+BApropC2BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropC2Class, BApropC2BA_WeaponType, BApropC2BA_MovementData
+BApropC3BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropC3Class, BApropC3BA_WeaponType, BApropC3BA_MovementData
+BApropC4BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropC4Class, BApropC4BA_WeaponType, BApropC4BA_MovementData
+BApropC5BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropC5Class, BApropC5BA_WeaponType, BApropC5BA_MovementData
+BApropC6BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropC6Class, BApropC6BA_WeaponType, BApropC6BA_MovementData
+BApropC7BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropC7Class, BApropC7BA_WeaponType, BApropC7BA_MovementData
+BApropC8BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropC8Class, BApropC8BA_WeaponType, BApropC8BA_MovementData
+BApropC9BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropC9Class, BApropC9BA_WeaponType, BApropC9BA_MovementData
+BApropCABattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropCAClass, BApropCABA_WeaponType, BApropCABA_MovementData
+BApropCBBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropCBClass, BApropCBBA_WeaponType, BApropCBBA_MovementData
+BApropCCBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropCCClass, BApropCCBA_WeaponType, BApropCCBA_MovementData
+BApropCDBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropCDClass, BApropCDBA_WeaponType, BApropCDBA_MovementData
+BApropCEBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropCEClass, BApropCEBA_WeaponType, BApropCEBA_MovementData
+BApropCFBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropCFClass, BApropCFBA_WeaponType, BApropCFBA_MovementData
+BApropD0BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropD0Class, BApropD0BA_WeaponType, BApropD0BA_MovementData
+BApropD1BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropD1Class, BApropD1BA_WeaponType, BApropD1BA_MovementData
+BApropD2BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropD2Class, BApropD2BA_WeaponType, BApropD2BA_MovementData
+BApropD3BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropD3Class, BApropD3BA_WeaponType, BApropD3BA_MovementData
+BApropD4BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropD4Class, BApropD4BA_WeaponType, BApropD4BA_MovementData
+BApropD5BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropD5Class, BApropD5BA_WeaponType, BApropD5BA_MovementData
+BApropD6BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropD6Class, BApropD6BA_WeaponType, BApropD6BA_MovementData
+BApropD7BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropD7Class, BApropD7BA_WeaponType, BApropD7BA_MovementData
+BApropD8BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropD8Class, BApropD8BA_WeaponType, BApropD8BA_MovementData
+BApropD9BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropD9Class, BApropD9BA_WeaponType, BApropD9BA_MovementData
+BApropDABattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropDAClass, BApropDABA_WeaponType, BApropDABA_MovementData
+BApropDBBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropDBClass, BApropDBBA_WeaponType, BApropDBBA_MovementData
+BApropDCBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropDCClass, BApropDCBA_WeaponType, BApropDCBA_MovementData
+BApropDDBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropDDClass, BApropDDBA_WeaponType, BApropDDBA_MovementData
+BApropDEBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropDEClass, BApropDEBA_WeaponType, BApropDEBA_MovementData
+BApropDFBattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropDFClass, BApropDFBA_WeaponType, BApropDFBA_MovementData
+BApropE0BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropE0Class, BApropE0BA_WeaponType, BApropE0BA_MovementData
+BApropE1BattleAnimationMovementDataDefinitionEntry .dstruct structAnimationMovementDataDefinition, BApropE1Class, BApropE1BA_WeaponType, BApropE1BA_MovementData

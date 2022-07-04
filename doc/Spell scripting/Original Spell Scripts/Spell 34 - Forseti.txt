@@ -1,0 +1,54 @@
+B15DC - B1643
+
+3B 08     ; BEGIN
+37 42     ; Load Tiles: Forseti (+pause)
+FE FF     ; --Wait--
+38 42     ; Load Tiles: Forseti Tilemap1 (+pause)
+FE FF     ; --Wait--
+1C 1A     ; Placement / Scrolling: ???		[Screen Scroll: Fast?]
+39 42     ; Load Tiles: Forseti Tilemap2 (+pause)
+FE FF     ; --Wait--
+05 1E     ; Scroll to Defender: Slow 2
+FE FF     ; --Wait--
+07 56     ; Effect: Fade Out 1 (+pause)
+FE FF     ; --Wait--
+64 16     ; Effect / Palette: ???			[Palette: green?]
+27 40     ; Effect Mask: Create Full mask (pixel-wide) (+pause)
+FE FF     ; --Wait--
+17 2A     ; Play Sound: Forseti
+52 04     ; Display Tiles: Forseti BG Break?
+2A 08     ; Battle Scene Mod: Shift Background Up
+2E 1A     ; Placement / Scrolling: ???
+43 16     ; Effect / Palette: ???			[Forseti green?]
+18 06     ; Tile Effect: ???				[Background Scroll]
+2B 1A     ; Scrolling: Scroll Fast Horizontal
+62 56     ; Effect / Palette: ??? (+pause)	[Fade in?]
+FE FF     ; --Wait--
+53 04     ; Display Tiles: ???				[Background2?]
+28 40     ; Effect Mask: Fast Expand (pixel-wide to max) (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+1E 54     ; --Wait: 30 frames--
+FE FF     ; --Wait--
+F9 FF     ; Dodge point
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+FA FF     ; Damage point
+1E 54     ; --Wait: 30 frames--
+FE FF     ; --Wait--
+63 16     ; Effect / Palette: ???			[Fade out?]
+44 56     ; Effect / Palette: ??? (+pause)	[Forseti green]
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+54 04     ; Display Tiles: Instant Screen Black Out 1
+2B 08     ; Battle Scene Mod: Reset BG
+60 16     ; Effect / Palette: Fade In
+00 06     ; Tile Effect: Stop
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+55 04     ; Display Tiles: ???				[Fade Out Background2?]
+12 56     ; Effect: Reset Tile/Palette Effects (+pause)
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

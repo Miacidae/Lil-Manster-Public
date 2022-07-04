@@ -1,0 +1,33 @@
+B0EF6 - B0F33
+
+3B 08     ; BEGIN
+12 42     ; Load Tile: FE4 Warp (+pause)
+FE FF     ; --Wait--
+14 1C     ; Secondary Palette: ???
+13 42     ; Load Tile: FE4 Warp Tilemap (+pause)
+FE FF     ; --Wait--
+22 1A     ; Placement: Defender Ground
+0C 46     ; Tile Effect: 3D Flatten to Ground (+pause)
+FE FF     ; --Wait--
+28 2A     ; Play Sound: FE4 Warp
+45 16     ; Palette: Warp Gold/Purple 1
+46 16     ; Palette: Warp Gold/Purple 2
+19 40     ; Effect Mask: Create Pillar + Expand Up (very thin) (+pause)
+FE FF     ; --Wait--
+32 04     ; Display Tiles: Draw behind Defender
+1A 40     ; Effect Mask: Fast Expand (very thin to large) (+pause)
+FE FF     ; --Wait--
+30 04     ; Display Tiles: Translucent over Defender
+0D 46     ; Tile Effect: 3D Undo Flatten (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+25 50     ; Battle Scene Mod2: Defender Raises Offscreen (+pause)
+FE FF     ; --Wait--
+26 08     ; Battle Scene Mod: Hide Defender
+1C 40     ; Effect Mask: Nothing [FE4: Contract] (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+31 04     ; Display Tiles: ???
+1D 00     ; Effect Mask: Delete
+36 08     ; END
+FF FF     ; EXIT

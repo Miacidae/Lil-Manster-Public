@@ -1,0 +1,48 @@
+B16E2 - B173D
+
+3B 08     ; BEGIN
+63 42     ; Load Tiles: Light (+pause)
+FE FF     ; --Wait--
+64 42     ; Load Tiles: Light Tilemap (+pause)
+FE FF     ; --Wait--
+7D 42     ; Load Tiles: Light Triangle (+pause)
+FE FF     ; --Wait--
+12 1C     ; Secondary Palette: ???
+14 16     ; Effect / Palette: ???
+7E 42     ; Load Tiles: Light Triangle Tilemap (+pause)
+FE FF     ; --Wait--
+01 5E     ; Scroll to Defender: Slow 1 (+pause)
+FE FF     ; --Wait--
+02 1A     ; Placement: Center of Screen
+14 04     ; Display Tiles: ???
+18 56     ; Effect / Palette: ??? (+pause)
+FE FF     ; --Wait--
+19 16     ; Effect / Palette: ???
+0E 1A     ; Placement / Scrolling: ???
+0A 64     ; Special Triangle Masking: ??? (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+19 2A     ; Play Sound: Light Start
+15 04     ; Display Tiles: ???
+0B 24     ; Special Triangle Masking: ???
+73 54     ; --Wait: 115 frames--
+FE FF     ; --Wait--
+1A 16     ; Effect / Palette: ???
+1B 16     ; Effect / Palette: ???
+1C 16     ; Effect / Palette: ???
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+F9 FF     ; Dodge point
+1E 54     ; --Wait: 30 frames--
+FE FF     ; --Wait--
+09 24     ; Special Triangle Masking: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+FA FF     ; Damage point
+16 04     ; Display Tiles: ???
+12 56     ; Effect: Reset Tile/Palette Effects (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+36 08     ; END
+FF FF     ; EXIT

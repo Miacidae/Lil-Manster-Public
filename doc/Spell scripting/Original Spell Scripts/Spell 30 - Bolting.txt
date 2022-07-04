@@ -1,0 +1,87 @@
+B147E - B1527
+
+3B 08     ; BEGIN
+0B 1C     ; Secondary Palette: ???
+23 16     ; Effect / Palette: ???
+5D 42     ; Load Tiles: Dire Thunder/Bolting Tilemap2 (+pause)
+FE FF     ; --Wait--
+5A 42     ; Load Tiles: Dire Thunder/Bolting Impact (+pause)
+FE FF     ; --Wait--
+5C 42     ; Load Tiles: Dire Thunder/Bolting Tilemap1 (+pause)
+FE FF     ; --Wait--
+5B 42     ; Load Tiles: Dire Thunder/Bolting Bolt - 2bpp (+pause)
+FE FF     ; --Wait--
+04 18     ; BG Mod: ???
+FE FF     ; --Wait--
+05 18     ; BG Mod: ???
+17 10     ; Battle Scene Mod2: Fade Out Battle Area to Black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+0B 2A     ; Play Sound: Dire Thunder/Bolting Start
+01 22     ; Add Background Hue: Light Blue
+13 56     ; Effect: Fade Out (+pause)
+FE FF     ; --Wait--
+05 0E     ; BG?: Meteor something1
+06 4E     ; BG?: Meteor something2 (+pause)
+06 18     ; BG Mod: ???
+11 08     ; Battle Scene Mod: Hide Attacker
+12 08     ; Battle Scene Mod: Show Defender
+FE FF     ; --Wait--
+01 22     ; Add Background Hue: Light Blue
+29 16     ; Effect / Palette: ???
+16 10     ; Battle Scene Mod2: Fade In Battle Area: Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+01 1A     ; Placement: Defender
+1A 1A     ; Placement / Scrolling: ???
+03 26     ; BG2?: ???
+F9 FF     ; Dodge point
+06 54     ; --Wait: 6 frames--
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+22 04     ; Display Tiles: ???
+01 22     ; Add Background Hue: Light Blue
+21 16     ; Effect: Instant White
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+0A 2A     ; Play Sound: Bolting End
+25 16     ; Effect / Palette: ???
+26 16     ; Effect / Palette: ???
+1B 1A     ; Placement / Scrolling: ???
+06 54     ; --Wait: 6 frames--
+FE FF     ; --Wait--
+FA FF     ; Damage point
+03 54     ; --Wait: 3 frames--
+FE FF     ; --Wait--
+24 56     ; Effect / Palette: ??? (+pause)
+FE FF     ; --Wait--
+23 04     ; Display Tiles: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+FF 26     ; BG2?: ???
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+FE FF     ; --Wait--
+00 18     ; BG Mod: ???
+FE FF     ; --Wait--
+01 18     ; BG Mod: ???
+FE FF     ; --Wait--
+17 10     ; Battle Scene Mod2: Fade Out Battle Area to Black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+05 0E     ; BG?: Meteor something1
+06 4E     ; BG?: Meteor something2 (+pause)
+02 18     ; BG Mod: ???
+FE FF     ; --Wait--
+26 08     ; Battle Scene Mod: Hide Defender
+37 08     ; Battle Scene Mod: Display Attacker
+24 04     ; Display Tiles: ???
+12 56     ; Effect: Reset Tile/Palette Effects (+pause)
+FE FF     ; --Wait--
+16 10     ; Battle Scene Mod2: Fade In Battle Area: Fast
+FE FF     ; --Wait--
+81 16     ; Effect / Palette: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

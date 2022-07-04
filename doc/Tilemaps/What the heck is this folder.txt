@@ -1,0 +1,10 @@
+These are the maps of the various menus that have menu text baked into a tilemap.
+Each word (two bytes, or 4 characters) represents a tile.
+
+Some of these files may not be entirely accurate to how the tilemaps are in LM nowadays,
+but what's important isn't the content of each word, but the highlighted regions.
+This allows you to more easily find out each tilemap is organized.
+
+You can edit the contents of the box to create and visualize your own tilemaps
+(particularly useful for translations), and paste the result into the appropriate files
+in text_menus/tilemaps and graphics.

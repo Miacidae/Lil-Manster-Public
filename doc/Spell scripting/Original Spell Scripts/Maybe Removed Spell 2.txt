@@ -1,0 +1,18 @@
+B218C - ~B21AB		(has usual spell start but no end)
+
+3B 08      ; BEGIN
+86 42      ; Load Tile: NOTHING (+pause)
+FE FF      ; --Wait--
+87 42      ; Load Tile: NOTHING (+pause)
+FE FF      ; --Wait--
+07 22      ; Add Background Hue: Very Dark
+BE 16      ; Palette: ???
+3C 54      ; --Wait: 60 frames--
+FE FF      ; --Wait--
+46 08      ; Battle Scene Mod: ???
+01 54      ; --Wait: 1 frame--
+FE FF      ; --Wait--
+BD 56      ; Palette: ??? (+pause)
+FE FF      ; --Wait--
+47 08      ; Battle Scene Mod: ???
+FF FF      ; EXIT

@@ -1,0 +1,78 @@
+	BAProjectileAxe00			= 0
+		BAProjectileAxe00Class	= AxeKnight
+		BAProjectileAxe00Xcoord	= 232
+		BAProjectileAxe00Ycoord	= 26
+
+	BAProjectileAxe01			= 1
+		BAProjectileAxe01Class	= MasterKnight
+		BAProjectileAxe01Xcoord	= 232
+		BAProjectileAxe01Ycoord	= 26
+
+	BAProjectileAxe02			= 2
+		BAProjectileAxe02Class	= GreatKnight
+		BAProjectileAxe02Xcoord	= 232
+		BAProjectileAxe02Ycoord	= 26
+
+	BAProjectileAxe03			= 3
+		BAProjectileAxe03Class	= General
+		BAProjectileAxe03Xcoord	= 226
+		BAProjectileAxe03Ycoord	= 4
+
+	BAProjectileAxe04			= 4
+		BAProjectileAxe04Class	= Emperor
+		BAProjectileAxe04Xcoord	= 226
+		BAProjectileAxe04Ycoord	= 4
+
+	BAProjectileAxe05			= 5
+		BAProjectileAxe05Class	= Baron
+		BAProjectileAxe05Xcoord	= 226
+		BAProjectileAxe05Ycoord	= 4
+
+	BAProjectileAxe06			= 6
+		BAProjectileAxe06Class	= ArmoredAxe
+		BAProjectileAxe06Xcoord	= 226
+		BAProjectileAxe06Ycoord	= 2
+
+	BAProjectileAxe07			= 7
+		BAProjectileAxe07Class	= Berserker
+		BAProjectileAxe07Xcoord	= 224
+		BAProjectileAxe07Ycoord	= 6
+
+	BAProjectileAxe08			= 8
+		BAProjectileAxe08Class	= Brigand
+		BAProjectileAxe08Xcoord	= 224
+		BAProjectileAxe08Ycoord	= 6
+
+	BAProjectileAxe09			= 9
+		BAProjectileAxe09Class	= BrigandAlternate
+		BAProjectileAxe09Xcoord	= 224
+		BAProjectileAxe09Ycoord	= 6
+
+	BAProjectileAxe0A			= 10
+		BAProjectileAxe0AClass	= Warrior
+		BAProjectileAxe0AXcoord	= 224
+		BAProjectileAxe0AYcoord	= 6
+
+	BAProjectileAxe0B			= 11
+		BAProjectileAxe0BClass	= Pirate
+		BAProjectileAxe0BXcoord	= 224
+		BAProjectileAxe0BYcoord	= 6
+
+	BAProjectileAxe0C			= 12
+		BAProjectileAxe0CClass	= MasterKnightF
+		BAProjectileAxe0CXcoord	= 232
+		BAProjectileAxe0CYcoord	= 26
+
+BAProjectileAxe00BattleAnimationProjectileAxeTableEntry .dstruct structBAProjectileAxe, BAProjectileAxe00Class, BAProjectileAxe00Xcoord, BAProjectileAxe00Ycoord
+BAProjectileAxe01BattleAnimationProjectileAxeTableEntry .dstruct structBAProjectileAxe, BAProjectileAxe01Class, BAProjectileAxe01Xcoord, BAProjectileAxe01Ycoord
+BAProjectileAxe02BattleAnimationProjectileAxeTableEntry .dstruct structBAProjectileAxe, BAProjectileAxe02Class, BAProjectileAxe02Xcoord, BAProjectileAxe02Ycoord
+BAProjectileAxe03BattleAnimationProjectileAxeTableEntry .dstruct structBAProjectileAxe, BAProjectileAxe03Class, BAProjectileAxe03Xcoord, BAProjectileAxe03Ycoord
+BAProjectileAxe04BattleAnimationProjectileAxeTableEntry .dstruct structBAProjectileAxe, BAProjectileAxe04Class, BAProjectileAxe04Xcoord, BAProjectileAxe04Ycoord
+BAProjectileAxe05BattleAnimationProjectileAxeTableEntry .dstruct structBAProjectileAxe, BAProjectileAxe05Class, BAProjectileAxe05Xcoord, BAProjectileAxe05Ycoord
+BAProjectileAxe06BattleAnimationProjectileAxeTableEntry .dstruct structBAProjectileAxe, BAProjectileAxe06Class, BAProjectileAxe06Xcoord, BAProjectileAxe06Ycoord
+BAProjectileAxe07BattleAnimationProjectileAxeTableEntry .dstruct structBAProjectileAxe, BAProjectileAxe07Class, BAProjectileAxe07Xcoord, BAProjectileAxe07Ycoord
+BAProjectileAxe08BattleAnimationProjectileAxeTableEntry .dstruct structBAProjectileAxe, BAProjectileAxe08Class, BAProjectileAxe08Xcoord, BAProjectileAxe08Ycoord
+BAProjectileAxe09BattleAnimationProjectileAxeTableEntry .dstruct structBAProjectileAxe, BAProjectileAxe09Class, BAProjectileAxe09Xcoord, BAProjectileAxe09Ycoord
+BAProjectileAxe0ABattleAnimationProjectileAxeTableEntry .dstruct structBAProjectileAxe, BAProjectileAxe0AClass, BAProjectileAxe0AXcoord, BAProjectileAxe0AYcoord
+BAProjectileAxe0BBattleAnimationProjectileAxeTableEntry .dstruct structBAProjectileAxe, BAProjectileAxe0BClass, BAProjectileAxe0BXcoord, BAProjectileAxe0BYcoord
+BAProjectileAxe0CBattleAnimationProjectileAxeTableEntry .dstruct structBAProjectileAxe, BAProjectileAxe0CClass, BAProjectileAxe0CXcoord, BAProjectileAxe0CYcoord

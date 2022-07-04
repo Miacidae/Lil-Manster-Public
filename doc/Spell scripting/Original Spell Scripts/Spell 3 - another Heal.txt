@@ -1,0 +1,28 @@
+B0B92 - B0BC5
+
+3B 08     ; BEGIN
+01 42     ; Load Tile: Heal (+pause)
+FE FF     ; --Wait--
+02 42     ; Load Tile: Heal Tileset (+pause)
+FE FF     ; --Wait--
+06 56     ; Palette: ??? (+pause)
+FE FF     ; --Wait--
+01 04     ; Display tiles: ???
+FE FF     ; --Wait--
+FE FF     ; --Wait--
+02 56     ; ? (deals with foreground) (+pause)
+FE FF     ; --Wait--
+03 56     ; ? (deals with foreground) (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+01 04     ; Display tiles: ???
+FE FF     ; --Wait--
+04 56     ; ? (deals with foreground) (+pause)
+FE FF     ; --Wait--
+FB FF     ; Healing point
+05 56     ; ? (deals with foreground) (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+02 04     ; Display tiles: ???
+36 08     ; END
+FF FF     ; EXIT

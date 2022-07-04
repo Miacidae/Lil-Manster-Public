@@ -1,0 +1,29 @@
+B1562 - B1597
+
+3B 08     ; BEGIN
+3D 42     ; Load Tiles: Grafcalibur (+pause)
+FE FF     ; --Wait--
+3E 68     ; Load Tile2: Grafcalibur Tilemap1 (+pause)
+1C 1A     ; Placement / Scrolling: ???		[Screen Scroll: Fast?]
+FE FF     ; --Wait--
+14 2A     ; Play Sound: Grafcalibur Start
+28 16     ; Effect / Palette: ???			[Palette: Grafcalibur]
+0A 46     ; Tile Effect: Unflatten Appear 1 (+pause)
+FE FF     ; --Wait--
+25 04     ; Display Tiles: ???
+0B 46     ; Tile Effect: Unflatten Appear 2 (+pause)
+FE FF     ; --Wait--
+15 2A     ; Play Sound: Grafcalibur End
+FD FF     ; Cast1: Starts the animation loop on the caster
+F9 FF     ; Dodge point
+04 1E     ; Scroll to Defender: Beyond Fast
+1D 5A     ; Scrolling: Very Fast Horizontal (+pause)
+FE FF     ; --Wait--
+FA FF     ; Damage point
+1E 5A     ; Scrolling: Bypasses Target (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+26 04     ; Display Tiles: ???
+36 08     ; END
+FF FF     ; EXIT

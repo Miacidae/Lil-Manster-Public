@@ -1,0 +1,97 @@
+00:D83C - 00:D8A1 	display settings for skill icons on the inventory screen
+00:D635  		display for stat bonuses on the inventory screen
+0C:A404  		Eyvels item in Ch5
+01:AA7E  		effective Con used by mounted units for capturing
+03:9A3E  		Classes that cant be stolen from (Ballistician, Iron Ballistician, Poison Ballistician)
+00:5F13 - 00:5F20 	Level display setting when promoting (?)
+01:E625 		Leadership star %-bonus (needs more info)
+33:8CE5			Class leif promotes to in Ch18	
+0D:AEA4			melee weapons that are able to steal hp (only Earth Sword)
+01:D8A1‬ - 01:D8C3	activation code for Pavise
+
+(values read after BD or B9 are based on the character struct: 
+07 = Level
+08 = EXP
+09 = Max HP
+0A = HP
+0B = Str
+0C = Magic
+0D = Skill
+0E = Speed
+0F = Def
+10 = Luck
+11 = Con
+46 = AS)
+
+01:D3B7 - 01:D3D2 	Accuracy calculation
+01:D3DD - 01:D3F7	Evasion calculation
+01:D3F8 - 01:D41B	Crit calculation
+01:D41C - 01:D42B 	Dodge calculation
+01:D70C 		activation code for Adept 
+01:E4E6			personal WEXP cap (FA =250) ("setting the FA at 01:E4EC to C8 seems like it makes
+			the unpromoted weapon rank cap B and promoted cap A")
+01:F429 - 01:F437	WEXP gained via staves (^ set first 00 to 01 to avoid getting A on unpromoted units)
+01:D8CC			activation code for Wrath (for FE4 wrath write E22020D1FFC230EAEAEAEAEAEAEAEA here and
+ 						   at 01:FFD1 write BD09004ADD0A009005A9648D91A660)
+Graphics for using a skill manual:
+
+01:C8DF5 - 01:C90DC (02E8h → 0800h) Paragon
+01:C90DD - 01:C93CF (02F3h → 0800h) Accost
+01:C93D0 - 01:C96B3 (02E4h → 0800h) Bargain
+01:C96B4 - 01:C9976 (02C3h → 0800h) Vantage
+01:C9977 - 01:C9C35 (02BFh → 0800h) Wrath
+01:C9C36 - 01:C9F1D (02E8h → 0800h) Adept
+01:C9F1E - 01:CA21D (0300h → 0800h) Miracle
+01:CA21E - 01:CA526 (0309h → 0800h) Nihil
+01:CA527 - 01:CA812 (02ECh → 0800h) Luna
+01:CA813 - 01:CAAFE (02ECh → 0800h) Sol
+01:CAAFF - 01:CADF5 (02F7h → 0800h) Astra
+
+0D:A580			Weapons with Holy Weapon Flash (to add more write jump instruction to free
+							space = C92E00 -> 20A5FE, at 0D:FEA5 write
+							c9 2e 00 f0 0a c9 01 00 f0 05 c9 13 00 f0 00 60
+							"C9 [Item ID] 00 F0 [distance to the 60 at the end]"
+
+01:D36A			Weapon that prevents halving of atk
+01:D371			Weapon that halves atk
+01:D37F			(Hel)
+01:D383			^ Weapons might gets set to FF (shown as --)
+
+01:E141 - 01:E16B	Devil Axe backfire calculation
+01:D4AC - 01:D4E4	activation code for Miracle (automatically executes jump when input is 100; 34 luck,
+						     guarantees survival)
+01:D805			FCM calculation
+01:D810			crit cap of first attack
+01:D860			Luna dmg reduction (set to 4e to make it only halve enemy def)
+02:99DB			Range interpretation routine
+01:CE08 - 01:CE1D	Table for forced combat or map battle (01 (Forced map battle) or 02 (Forced combat)
+
+01:B0ED - 01:B0F8	Table for what weapons break into (Order: Sword, Lance, Axe, Bow, Staff, Fire, Thunder, Wind, Light, Dark, Ballista(?), Item)
+
+04:9B21 - 04:9B34	Table for staff using classes that dont display a staff graphic in combat
+			(includes male Paladin for some reason?)
+
+03:C113 - 03:C1B1	routine to automatically dismount when promoting when indoors
+			(setting D0 at 3C13A to 80 makes you promote to mounted version)
+
+
+05:0A18 - 05:0A80	Table for moving sounds of map sprites
+			01 = Infantry
+			02 = Armor
+			03 = unpromoted Cavalier
+			04 = promoted Cavalier
+			05 = Flier
+
+01:A85D 		Classes that also use effective Cavalier Con (Ballistician, Iron Ballistician, 
+								      Poison Ballistician)
+01:D38B			AS calculation
+
+01:D445			Lower Hit Cap
+01:D44D			Upper Hit Cap
+01:D6A0			AS difference required for follow up attack
+01:D6EC			Number of hits during Astra 
+01:D718			Number of hits during Adept 
+01:D31C			Attack power of Astra calculation
+01:D2BE			Calls ^
+01:D6D8			activation code for Astra
+

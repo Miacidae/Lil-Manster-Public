@@ -1,0 +1,300 @@
+	MageFMapSprite								= 0
+		MageFMapSpriteIndex						= MA_MageFMapSpriteIndex
+
+	MageMapSprite								= 1
+		MageMapSpriteIndex						= MA_MageMapSpriteIndex
+
+	PriestessMapSprite							= 2
+		PriestessMapSpriteIndex					= MA_PriestessMapSpriteIndex
+
+	JuniorLordMapSprite							= 3
+		JuniorLordMapSpriteIndex				= MA_JuniorLordMapSpriteIndex
+
+	MyrmidonMapSprite							= 4
+		MyrmidonMapSpriteIndex					= MA_MyrmidonMapSpriteIndex
+
+	ArmoredLanceMapSprite						= 5
+		ArmoredLanceMapSpriteIndex				= MA_ArmoredLanceMapSpriteIndex
+
+	BerserkerMapSprite							= 6
+		BerserkerMapSpriteIndex					= MA_BerserkerMapSpriteIndex
+
+	ArcherMapSprite								= 7
+		ArcherMapSpriteIndex					= MA_ArcherMapSpriteIndex
+
+	SoldierMapSprite							= 8
+		SoldierMapSpriteIndex					= MA_SoldierMapSpriteIndex
+
+	ArcherFMapSprite							= 9
+		ArcherFMapSpriteIndex					= MA_ArcherFMapSpriteIndex
+
+	ArmoredAxeMapSprite							= 10
+		ArmoredAxeMapSpriteIndex				= MA_ArmoredAxeMapSpriteIndex
+
+	ArcherEnemyMapSprite						= 11
+		ArcherEnemyMapSpriteIndex				= MA_ArcherEnemyMapSpriteIndex
+
+	DancerMapSprite								= 12
+		DancerMapSpriteIndex					= MA_DancerMapSpriteIndex
+
+	MyrmidonFMapSprite							= 13
+		MyrmidonFMapSpriteIndex					= MA_MyrmidonFMapSpriteIndex
+
+	PrincessMapSprite							= 14
+		PrincessMapSpriteIndex					= MA_PrincessMapSpriteIndex
+
+	ThiefMapSprite								= 15
+		ThiefMapSpriteIndex						= MA_ThiefMapSpriteIndex
+
+	GeneralMapSprite							= 16
+		GeneralMapSpriteIndex					= MA_GeneralMapSpriteIndex
+
+	ClericMapSprite								= 17
+		ClericMapSpriteIndex					= MA_ClericMapSpriteIndex
+
+	BrigandMapSprite							= 18
+		BrigandMapSpriteIndex					= MA_BrigandMapSpriteIndex
+
+	WindMageMapSprite							= 19
+		WindMageMapSpriteIndex					= MA_WindMageMapSpriteIndex
+
+	WindMageFMapSprite							= 20
+		WindMageFMapSpriteIndex					= MA_WindMageFMapSpriteIndex
+
+	PriestMapSprite								= 21
+		PriestMapSpriteIndex					= MA_PriestMapSpriteIndex
+
+	HunterMapSprite								= 22
+		HunterMapSpriteIndex					= MA_HunterMapSpriteIndex
+
+	SwordmasterMapSprite						= 23
+		SwordmasterMapSpriteIndex				= MA_SwordmasterMapSpriteIndex
+
+	HeroMapSprite								= 24
+		HeroMapSpriteIndex						= MA_HeroMapSpriteIndex
+
+	WarriorMapSprite							= 25
+		WarriorMapSpriteIndex					= MA_WarriorMapSpriteIndex
+
+	BrigandAlternateMapSprite					= 26
+		BrigandAlternateMapSpriteIndex			= MA_BrigandAlternateMapSpriteIndex
+
+	PirateMapSprite								= 27
+		PirateMapSpriteIndex					= MA_PirateMapSpriteIndex
+
+	HeroFMapSprite								= 28
+		HeroFMapSpriteIndex						= MA_HeroFMapSpriteIndex
+
+	BaronMapSprite								= 29
+		BaronMapSpriteIndex						= MA_BaronMapSpriteIndex
+
+	HighPriestessMapSprite						= 30
+		HighPriestessMapSpriteIndex				= MA_HighPriestessMapSpriteIndex
+
+	SwordmasterFMapSprite						= 31
+		SwordmasterFMapSpriteIndex				= MA_SwordmasterFMapSpriteIndex
+
+	SniperFMapSprite							= 32
+		SniperFMapSpriteIndex					= MA_SniperFMapSpriteIndex
+
+	SniperMapSprite								= 33
+		SniperMapSpriteIndex					= MA_SniperMapSpriteIndex
+
+	EmperorMapSprite							= 34
+		EmperorMapSpriteIndex					= MA_EmperorMapSpriteIndex
+
+	SwordSoldierMapSprite						= 35
+		SwordSoldierMapSpriteIndex				= MA_AlternateSoldierMapSpriteIndex
+
+	AxeSoldierMapSprite							= 36
+		AxeSoldierMapSpriteIndex				= MA_AlternateSoldierMapSpriteIndex
+
+	LanceSoldierMapSprite						= 37
+		LanceSoldierMapSpriteIndex				= MA_AlternateSoldierMapSpriteIndex
+
+	ArmoredSwordMapSprite						= 38
+		ArmoredSwordMapSpriteIndex				= MA_ArmoredSwordMapSpriteIndex
+
+	ArmoredBowMapSprite							= 39
+		ArmoredBowMapSpriteIndex				= MA_ArmoredBowMapSpriteIndex
+
+	LoptrianMageFMapSprite						= 40
+		LoptrianMageFMapSpriteIndex				= MA_LoptrianMageFMapSpriteIndex
+
+	LoptrianMageMapSprite						= 41
+		LoptrianMageMapSpriteIndex				= MA_LoptrianMageMapSpriteIndex
+
+	ThunderMageFMapSprite						= 42
+		ThunderMageFMapSpriteIndex				= MA_ThunderMageFMapSpriteIndex
+
+	ThunderMageMapSprite						= 43
+		ThunderMageMapSpriteIndex				= MA_ThunderMageMapSpriteIndex
+
+	HighPriestMapSprite							= 44
+		HighPriestMapSpriteIndex				= MA_HighPriestMapSpriteIndex
+
+	MageKnightFDismountedMapSprite				= 45
+		MageKnightFDismountedMapSpriteIndex		= MA_MageKnightFDismountedMapSpriteIndex
+
+	DarkBishopMapSprite							= 46
+		DarkBishopMapSpriteIndex				= MA_DarkBishopMapSpriteIndex
+
+	SorcererMapSprite							= 47
+		SorcererMapSpriteIndex					= MA_SorcererMapSpriteIndex
+
+	LordMapSprite								= 48
+		LordMapSpriteIndex						= MA_LordMapSpriteIndex
+
+	MageKnightDismountedMapSprite				= 49
+		MageKnightDismountedMapSpriteIndex		= MA_MageKnightDismountedMapSpriteIndex
+
+	ChildFMapSprite								= 50
+		ChildFMapSpriteIndex					= MA_ChildFMapSpriteIndex
+
+	ChildMapSprite								= 51
+		ChildMapSpriteIndex						= MA_ChildMapSpriteIndex
+
+	QueenMapSprite								= 52
+		QueenMapSpriteIndex						= MA_QueenMapSpriteIndex
+
+	BishopMapSprite								= 53
+		BishopMapSpriteIndex					= MA_BishopMapSpriteIndex
+
+	CivilianMapSprite							= 54
+		CivilianMapSpriteIndex					= MA_CivilianMapSpriteIndex
+
+	CivilianFMapSprite							= 55
+		CivilianFMapSpriteIndex					= MA_CivilianFMapSpriteIndex
+
+	RogueFMapSprite								= 56
+		RogueFMapSpriteIndex					= MA_RogueFMapSpriteIndex
+
+	BardMapSprite								= 57
+		BardMapSpriteIndex						= MA_BardMapSpriteIndex
+
+	ThiefFMapSprite								= 58
+		ThiefFMapSpriteIndex					= MA_ThiefFMapSpriteIndex
+
+	RogueMapSprite								= 59
+		RogueMapSpriteIndex						= MA_RogueMapSpriteIndex
+
+	SageMapSprite								= 60
+		SageMapSpriteIndex						= MA_SageMapSpriteIndex
+
+	SageFMapSprite								= 61
+		SageFMapSpriteIndex						= MA_SageFMapSpriteIndex
+
+	DarkPrinceMapSprite							= 62
+		DarkPrinceMapSpriteIndex				= MA_DarkPrinceMapSpriteIndex
+
+	KnightDismountedMapSprite					= 63
+		KnightDismountedMapSpriteIndex			= MA_KnightDismountedMapSpriteIndex
+
+	KnightFDismountedMapSprite					= 64
+		KnightFDismountedMapSpriteIndex			= MA_KnightFDismountedMapSpriteIndex
+
+	PromotedKnightDismountedMapSprite			= 65
+		PromotedKnightDismountedMapSpriteIndex	= MA_PromotedKnightDismountedMapSpriteIndex
+
+	PromotedKnightFDismountedMapSprite			= 66
+		PromotedKnightFDismountedMapSpriteIndex	= MA_PromotedKnightFDismountedMapSpriteIndex
+
+	BowKnightDismountedMapSprite				= 67
+		BowKnightDismountedMapSpriteIndex		= MA_BowKnightDismountedMapSpriteIndex
+
+	ArchKnightDismountedMapSprite				= 68
+		ArchKnightDismountedMapSpriteIndex		= MA_ArchKnightDismountedMapSpriteIndex
+
+	FighterMapSprite							= 69
+		FighterMapSpriteIndex					= MA_FighterMapSpriteIndex
+
+	HeroFE4MapSprite							= 70
+		HeroFE4MapSpriteIndex					= MA_HeroFE4MapSpriteIndex
+
+	BowKnightFDismountedMapSprite				= 71
+		BowKnightFDismountedMapSpriteIndex		= MA_BowKnightFDismountedMapSpriteIndex
+
+	ArchKnightFDismountedMapSprite				= 72
+		ArchKnightFDismountedMapSpriteIndex		= MA_ArchKnightFDismountedMapSpriteIndex
+
+	SwordKnightDismountedMapSprite				= 73
+		SwordKnightDismountedMapSpriteIndex		= MA_SwordKnightDismountedMapSpriteIndex
+
+	RangerDismountedMapSprite					= 74
+		RangerDismountedMapSpriteIndex			= MA_RangerDismountedMapSpriteIndex
+
+MageFMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, MageFMapSpriteIndex
+MageMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, MageMapSpriteIndex
+PriestessMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, PriestessMapSpriteIndex
+JuniorLordMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, JuniorLordMapSpriteIndex
+MyrmidonMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, MyrmidonMapSpriteIndex
+ArmoredLanceMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ArmoredLanceMapSpriteIndex
+BerserkerMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, BerserkerMapSpriteIndex
+ArcherMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ArcherMapSpriteIndex
+SoldierMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, SoldierMapSpriteIndex
+ArcherFMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ArcherFMapSpriteIndex
+ArmoredAxeMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ArmoredAxeMapSpriteIndex
+ArcherEnemyMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ArcherEnemyMapSpriteIndex
+DancerMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, DancerMapSpriteIndex
+MyrmidonFMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, MyrmidonFMapSpriteIndex
+PrincessMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, PrincessMapSpriteIndex
+ThiefMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ThiefMapSpriteIndex
+GeneralMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, GeneralMapSpriteIndex
+ClericMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ClericMapSpriteIndex
+BrigandMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, BrigandMapSpriteIndex
+WindMageMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, WindMageMapSpriteIndex
+WindMageFMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, WindMageFMapSpriteIndex
+PriestMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, PriestMapSpriteIndex
+HunterMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, HunterMapSpriteIndex
+SwordmasterMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, SwordmasterMapSpriteIndex
+HeroMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, HeroMapSpriteIndex
+WarriorMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, WarriorMapSpriteIndex
+BrigandAlternateMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, BrigandAlternateMapSpriteIndex
+PirateMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, PirateMapSpriteIndex
+HeroFMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, HeroFMapSpriteIndex
+BaronMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, BaronMapSpriteIndex
+HighPriestessMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, HighPriestessMapSpriteIndex
+SwordmasterFMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, SwordmasterFMapSpriteIndex
+SniperFMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, SniperFMapSpriteIndex
+SniperMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, SniperMapSpriteIndex
+EmperorMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, EmperorMapSpriteIndex
+SwordSoldierMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, SwordSoldierMapSpriteIndex
+AxeSoldierMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, AxeSoldierMapSpriteIndex
+LanceSoldierMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, LanceSoldierMapSpriteIndex
+ArmoredSwordMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ArmoredSwordMapSpriteIndex
+ArmoredBowMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ArmoredBowMapSpriteIndex
+LoptrianMageFMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, LoptrianMageFMapSpriteIndex
+LoptrianMageMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, LoptrianMageMapSpriteIndex
+ThunderMageFMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ThunderMageFMapSpriteIndex
+ThunderMageMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ThunderMageMapSpriteIndex
+HighPriestMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, HighPriestMapSpriteIndex
+MageKnightFDismountedMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, MageKnightFDismountedMapSpriteIndex
+DarkBishopMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, DarkBishopMapSpriteIndex
+SorcererMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, SorcererMapSpriteIndex
+LordMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, LordMapSpriteIndex
+MageKnightDismountedMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, MageKnightDismountedMapSpriteIndex
+ChildFMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ChildFMapSpriteIndex
+ChildMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ChildMapSpriteIndex
+QueenMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, QueenMapSpriteIndex
+BishopMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, BishopMapSpriteIndex
+CivilianMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, CivilianMapSpriteIndex
+CivilianFMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, CivilianFMapSpriteIndex
+RogueFMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, RogueFMapSpriteIndex
+BardMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, BardMapSpriteIndex
+ThiefFMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ThiefFMapSpriteIndex
+RogueMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, RogueMapSpriteIndex
+SageMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, SageMapSpriteIndex
+SageFMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, SageFMapSpriteIndex
+DarkPrinceMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, DarkPrinceMapSpriteIndex
+KnightDismountedMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, KnightDismountedMapSpriteIndex
+KnightFDismountedMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, KnightFDismountedMapSpriteIndex
+PromotedKnightDismountedMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, PromotedKnightDismountedMapSpriteIndex
+PromotedKnightFDismountedMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, PromotedKnightFDismountedMapSpriteIndex
+BowKnightDismountedMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, BowKnightDismountedMapSpriteIndex
+ArchKnightDismountedMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ArchKnightDismountedMapSpriteIndex
+FighterMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, FighterMapSpriteIndex
+HeroFE4MapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, HeroFE4MapSpriteIndex
+BowKnightFDismountedMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, BowKnightFDismountedMapSpriteIndex
+ArchKnightFDismountedMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, ArchKnightFDismountedMapSpriteIndex
+SwordKnightDismountedMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, SwordKnightDismountedMapSpriteIndex
+RangerDismountedMapSpriteNormalMapSpriteIndexesEntry .dstruct structMapSpriteIndexEntry, RangerDismountedMapSpriteIndex

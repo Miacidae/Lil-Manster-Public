@@ -1,0 +1,45 @@
+B20F0 - B2145
+
+3B 08     ; BEGIN
+07 42     ; Load Tile: Berserk (+pause)
+FE FF     ; --Wait--
+08 42     ; Load Tile: Berserk Tilemap (+pause)
+FE FF     ; --Wait--
+04 18     ; BG mod: Clear1?
+FE FF     ; --Wait--
+05 18     ; BG Mod: Clear2?
+17 10     ; Battle Scene Mod2: Fade out battle area to black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+17 10     ; Battle Scene Mod2: Fade out battle area to black (+characters): Super Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+05 0E     ; BG??: Meteo something1?
+06 4E     ; BG??: Meteo something1? (+pause)
+06 18     ; BG Mod: Clear3?
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+11 08     ; Battle Scene Mod: Hide Attacker
+12 08     ; Battle Scene Mod: Show Defender
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+09 16     ; Palette: Berserk 2
+16 10     ; Battle Scene Mod2: Fade In Battle Area: Fast
+08 54     ; --Wait: 8 frames--
+FE FF     ; --Wait--
+FD FF     ; Cast2.5: resting???
+2F 2A     ; Play Sound: Berserk
+01 1A     ; Placement: Defender
+04 04     ; Display Tiles: ???
+07 00     ; Effect Mask: Create Circle (large, around Target)
+08 56     ; Palette: Berserk 1 (+pause)
+FE FF     ; --Wait--
+F9 FF     ; Dodge point
+08 00     ; Effect Mask: Very Fast Contract (large to nothing)
+0A 56     ; Palette: Berserk 3 (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+02 04     ; Display Tiles: ???
+36 08     ; END
+FF FF     ; EXIT

@@ -1,0 +1,305 @@
+	LeifBattleBanner							= 0
+		LeifBattleBannerCharacter				= Leif
+		LeifBattleBannerIndex					= $00
+
+	XavierBattleBanner							= 1
+		XavierBattleBannerCharacter				= Xavier
+		XavierBattleBannerIndex					= $00
+
+	GladeBattleBanner							= 2
+		GladeBattleBannerCharacter				= Glade
+		GladeBattleBannerIndex					= $00
+
+	RaydrikBattleBanner							= 3
+		RaydrikBattleBannerCharacter			= Raydrik
+		RaydrikBattleBannerIndex				= $08
+
+	RumaighBattleBanner							= 4
+		RumaighBattleBannerCharacter			= Rumaigh
+		RumaighBattleBannerIndex				= $08
+
+	DeanBattleBanner							= 5
+		DeanBattleBannerCharacter				= Dean
+		DeanBattleBannerIndex					= $08
+
+	LobosBattleBanner							= 6
+		LobosBattleBannerCharacter				= Lobos
+		LobosBattleBannerIndex					= $03
+
+	EisenhauBattleBanner						= 7
+		EisenhauBattleBannerCharacter			= Eisenhau
+		EisenhauBattleBannerIndex				= $03
+
+	BandoleBattleBanner							= 8
+		BandoleBattleBannerCharacter			= Bandole
+		BandoleBattleBannerIndex				= $03
+
+	TolmanBattleBanner							= 9
+		TolmanBattleBannerCharacter				= Tolman
+		TolmanBattleBannerIndex					= $03
+
+	FadenBattleBanner							= 10
+		FadenBattleBannerCharacter				= Faden
+		FadenBattleBannerIndex					= $03
+
+	RaydrikChp24BattleBanner					= 11
+		RaydrikChp24BattleBannerCharacter		= RaydrikChp24
+		RaydrikChp24BattleBannerIndex			= $03
+
+	HannibalBattleBanner						= 12
+		HannibalBattleBannerCharacter			= Hannibal
+		HannibalBattleBannerIndex				= $05
+
+	MerlochBattleBanner							= 13
+		MerlochBattleBannerCharacter			= Merloch
+		MerlochBattleBannerIndex				= $05
+
+	ArionBattleBanner							= 14
+		ArionBattleBannerCharacter				= Arion
+		ArionBattleBannerIndex					= $05
+
+	SeimetzBattleBanner							= 15
+		SeimetzBattleBannerCharacter			= Seimetz
+		SeimetzBattleBannerIndex				= $05
+
+	CoulterBattleBanner							= 16
+		CoulterBattleBannerCharacter			= Coulter
+		CoulterBattleBannerIndex				= $05
+
+	DvorakBattleBanner							= 17
+		DvorakBattleBannerCharacter				= Dvorak
+		DvorakBattleBannerIndex					= $05
+
+	McCloyBattleBanner							= 18
+		McCloyBattleBannerCharacter				= McCloy
+		McCloyBattleBannerIndex					= $05
+
+	IshtarBattleBanner							= 19
+		IshtarBattleBannerCharacter				= Ishtar
+		IshtarBattleBannerIndex					= $08
+
+	OlwenBattleBanner							= 20
+		OlwenBattleBannerCharacter				= Olwen
+		OlwenBattleBannerIndex					= $06
+
+	GustavBattleBanner							= 21
+		GustavBattleBannerCharacter				= Gustav
+		GustavBattleBannerIndex					= $06
+
+	NicolovBattleBanner							= 22
+		NicolovBattleBannerCharacter			= Nicolov
+		NicolovBattleBannerIndex				= $06
+
+	BharatBattleBanner							= 23
+		BharatBattleBannerCharacter				= Bharat
+		BharatBattleBannerIndex					= $06
+
+	WolfeBattleBanner							= 24
+		WolfeBattleBannerCharacter				= Wolfe
+		WolfeBattleBannerIndex					= $06
+
+	PaulusBattleBanner							= 25
+		PaulusBattleBannerCharacter				= Paulus
+		PaulusBattleBannerIndex					= $06
+
+	BrookBattleBanner							= 26
+		BrookBattleBannerCharacter				= Brook
+		BrookBattleBannerIndex					= $06
+
+	BaldachBattleBanner							= 27
+		BaldachBattleBannerCharacter			= Baldach
+		BaldachBattleBannerIndex				= $06
+
+	AmaldaBattleBanner							= 28
+		AmaldaBattleBannerCharacter				= Amalda
+		AmaldaBattleBannerIndex					= $06
+
+	KempfBattleBanner							= 29
+		KempfBattleBannerCharacter				= Kempf
+		KempfBattleBannerIndex					= $06
+
+	OltophBattleBanner							= 30
+		OltophBattleBannerCharacter				= Oltoph
+		OltophBattleBannerIndex					= $06
+
+	IliosBattleBanner							= 31
+		IliosBattleBannerCharacter				= Ilios
+		IliosBattleBannerIndex					= $06
+
+	PalmanBattleBanner							= 32
+		PalmanBattleBannerCharacter				= Palman
+		PalmanBattleBannerIndex					= $06
+
+	RilkeKempfPortraitBattleBanner				= 33
+		RilkeKempfPortraitBattleBannerCharacter	= RilkeKempfPortrait
+		RilkeKempfPortraitBattleBannerIndex		= $06
+
+	LisztBattleBanner							= 34
+		LisztBattleBannerCharacter				= Liszt
+		LisztBattleBannerIndex					= $06
+
+	LargoBattleBanner							= 35
+		LargoBattleBannerCharacter				= Largo
+		LargoBattleBannerIndex					= $06
+
+	CohenBattleBanner							= 36
+		CohenBattleBannerCharacter				= Cohen
+		CohenBattleBannerIndex					= $06
+
+	ZaunBattleBanner							= 37
+		ZaunBattleBannerCharacter				= Zaun
+		ZaunBattleBannerIndex					= $06
+
+	FrausBattleBanner							= 38
+		FrausBattleBannerCharacter				= Fraus
+		FrausBattleBannerIndex					= $06
+
+	MullerBattleBanner							= 39
+		MullerBattleBannerCharacter				= Muller
+		MullerBattleBannerIndex					= $06
+
+	ConomorBattleBanner							= 40
+		ConomorBattleBannerCharacter			= Conomor
+		ConomorBattleBannerIndex				= $02
+
+	VeldBattleBanner							= 41
+		VeldBattleBannerCharacter				= Veld
+		VeldBattleBannerIndex					= $08
+
+	CodhaBattleBanner							= 42
+		CodhaBattleBannerCharacter				= Codha
+		CodhaBattleBannerIndex					= $08
+
+	MooreBattleBanner							= 43
+		MooreBattleBannerCharacter				= Moore
+		MooreBattleBannerIndex					= $08
+
+	ReinkochBattleBanner						= 44
+		ReinkochBattleBannerCharacter			= Reinkoch
+		ReinkochBattleBannerIndex				= $08
+
+	AlphandBattleBanner							= 45
+		AlphandBattleBannerCharacter			= Alphand
+		AlphandBattleBannerIndex				= $08
+
+	LoptrianDarkBishopBattleBanner				= 46
+		LoptrianDarkBishopBattleBannerCharacter	= LoptrianDarkBishop
+		LoptrianDarkBishopBattleBannerIndex		= $08
+
+	LifisBattleBanner							= 47
+		LifisBattleBannerCharacter				= Lifis
+		LifisBattleBannerIndex					= $08
+
+	BucksBattleBanner							= 48
+		BucksBattleBannerCharacter				= Bucks
+		BucksBattleBannerIndex					= $08
+
+	JabalBattleBanner							= 49
+		JabalBattleBannerCharacter				= Jabal
+		JabalBattleBannerIndex					= $08
+
+	CedChp23BattleBanner						= 50
+		CedChp23BattleBannerCharacter			= CedChp23
+		CedChp23BattleBannerIndex				= $08
+
+	CedChp4xBattleBanner						= 51
+		CedChp4xBattleBannerCharacter			= CedChp4x
+		CedChp4xBattleBannerIndex				= $08
+
+	GomezBattleBanner							= 52
+		GomezBattleBannerCharacter				= Gomez
+		GomezBattleBannerIndex					= $08
+
+	SeilBattleBanner							= 53
+		SeilBattleBannerCharacter				= Seil
+		SeilBattleBannerIndex					= $08
+
+	EmilyBattleBanner							= 54
+		EmilyBattleBannerCharacter				= Emily
+		EmilyBattleBannerIndex					= $08
+
+	MishaBattleBanner							= 55
+		MishaBattleBannerCharacter				= Misha
+		MishaBattleBannerIndex					= $08
+
+	ColhoBattleBanner							= 56
+		ColhoBattleBannerCharacter				= Colho
+		ColhoBattleBannerIndex					= $08
+
+	PerneBattleBanner							= 57
+		PerneBattleBannerCharacter				= Perne
+		PerneBattleBannerIndex					= $08
+
+	ShivaBattleBanner							= 58
+		ShivaBattleBannerCharacter				= Shiva
+		ShivaBattleBannerIndex					= $08
+
+	Civilian8BattleBanner						= 59
+		Civilian8BattleBannerCharacter			= Civilian8
+		Civilian8BattleBannerIndex				= $08
+
+	RalphBattleBanner							= 60
+		RalphBattleBannerCharacter				= Ralph
+		RalphBattleBannerIndex					= $08
+
+LeifBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, LeifBattleBannerCharacter, LeifBattleBannerIndex
+XavierBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, XavierBattleBannerCharacter, XavierBattleBannerIndex
+GladeBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, GladeBattleBannerCharacter, GladeBattleBannerIndex
+RaydrikBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, RaydrikBattleBannerCharacter, RaydrikBattleBannerIndex
+RumaighBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, RumaighBattleBannerCharacter, RumaighBattleBannerIndex
+DeanBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, DeanBattleBannerCharacter, DeanBattleBannerIndex
+LobosBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, LobosBattleBannerCharacter, LobosBattleBannerIndex
+EisenhauBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, EisenhauBattleBannerCharacter, EisenhauBattleBannerIndex
+BandoleBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, BandoleBattleBannerCharacter, BandoleBattleBannerIndex
+TolmanBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, TolmanBattleBannerCharacter, TolmanBattleBannerIndex
+FadenBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, FadenBattleBannerCharacter, FadenBattleBannerIndex
+RaydrikChp24BattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, RaydrikChp24BattleBannerCharacter, RaydrikChp24BattleBannerIndex
+HannibalBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, HannibalBattleBannerCharacter, HannibalBattleBannerIndex
+MerlochBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, MerlochBattleBannerCharacter, MerlochBattleBannerIndex
+ArionBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, ArionBattleBannerCharacter, ArionBattleBannerIndex
+SeimetzBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, SeimetzBattleBannerCharacter, SeimetzBattleBannerIndex
+CoulterBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, CoulterBattleBannerCharacter, CoulterBattleBannerIndex
+DvorakBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, DvorakBattleBannerCharacter, DvorakBattleBannerIndex
+McCloyBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, McCloyBattleBannerCharacter, McCloyBattleBannerIndex
+IshtarBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, IshtarBattleBannerCharacter, IshtarBattleBannerIndex
+OlwenBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, OlwenBattleBannerCharacter, OlwenBattleBannerIndex
+GustavBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, GustavBattleBannerCharacter, GustavBattleBannerIndex
+NicolovBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, NicolovBattleBannerCharacter, NicolovBattleBannerIndex
+BharatBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, BharatBattleBannerCharacter, BharatBattleBannerIndex
+WolfeBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, WolfeBattleBannerCharacter, WolfeBattleBannerIndex
+PaulusBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, PaulusBattleBannerCharacter, PaulusBattleBannerIndex
+BrookBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, BrookBattleBannerCharacter, BrookBattleBannerIndex
+BaldachBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, BaldachBattleBannerCharacter, BaldachBattleBannerIndex
+AmaldaBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, AmaldaBattleBannerCharacter, AmaldaBattleBannerIndex
+KempfBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, KempfBattleBannerCharacter, KempfBattleBannerIndex
+OltophBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, OltophBattleBannerCharacter, OltophBattleBannerIndex
+IliosBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, IliosBattleBannerCharacter, IliosBattleBannerIndex
+PalmanBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, PalmanBattleBannerCharacter, PalmanBattleBannerIndex
+RilkeKempfPortraitBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, RilkeKempfPortraitBattleBannerCharacter, RilkeKempfPortraitBattleBannerIndex
+LisztBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, LisztBattleBannerCharacter, LisztBattleBannerIndex
+LargoBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, LargoBattleBannerCharacter, LargoBattleBannerIndex
+CohenBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, CohenBattleBannerCharacter, CohenBattleBannerIndex
+ZaunBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, ZaunBattleBannerCharacter, ZaunBattleBannerIndex
+FrausBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, FrausBattleBannerCharacter, FrausBattleBannerIndex
+MullerBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, MullerBattleBannerCharacter, MullerBattleBannerIndex
+ConomorBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, ConomorBattleBannerCharacter, ConomorBattleBannerIndex
+VeldBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, VeldBattleBannerCharacter, VeldBattleBannerIndex
+CodhaBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, CodhaBattleBannerCharacter, CodhaBattleBannerIndex
+MooreBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, MooreBattleBannerCharacter, MooreBattleBannerIndex
+ReinkochBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, ReinkochBattleBannerCharacter, ReinkochBattleBannerIndex
+AlphandBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, AlphandBattleBannerCharacter, AlphandBattleBannerIndex
+LoptrianDarkBishopBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, LoptrianDarkBishopBattleBannerCharacter, LoptrianDarkBishopBattleBannerIndex
+LifisBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, LifisBattleBannerCharacter, LifisBattleBannerIndex
+BucksBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, BucksBattleBannerCharacter, BucksBattleBannerIndex
+JabalBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, JabalBattleBannerCharacter, JabalBattleBannerIndex
+CedChp23BattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, CedChp23BattleBannerCharacter, CedChp23BattleBannerIndex
+CedChp4xBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, CedChp4xBattleBannerCharacter, CedChp4xBattleBannerIndex
+GomezBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, GomezBattleBannerCharacter, GomezBattleBannerIndex
+SeilBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, SeilBattleBannerCharacter, SeilBattleBannerIndex
+EmilyBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, EmilyBattleBannerCharacter, EmilyBattleBannerIndex
+MishaBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, MishaBattleBannerCharacter, MishaBattleBannerIndex
+ColhoBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, ColhoBattleBannerCharacter, ColhoBattleBannerIndex
+PerneBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, PerneBattleBannerCharacter, PerneBattleBannerIndex
+ShivaBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, ShivaBattleBannerCharacter, ShivaBattleBannerIndex
+Civilian8BattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, Civilian8BattleBannerCharacter, Civilian8BattleBannerIndex
+RalphBattleBannerBattleBannerTableEntry .dstruct structBattleBannerTableEntry, RalphBattleBannerCharacter, RalphBattleBannerIndex

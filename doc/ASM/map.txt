@@ -1,0 +1,104 @@
+
+|Start   |   | End    | Description
+|:------:|:-:|:------:|:--------
+| 00CB33 |   |        | Skill Description/Name Data
+| 00DB6B | - | 00DB80 | Leadership star text (short) pointers
+| 00DB81 | - | 00DBDC | Leadership star text
+| 0D0B1B |   |        | Battle Transition Data
+| 0D9800 | - | ???    | Battle Data
+| 020000 | - | 020049 | Chapter data (short) pointer table
+| 02004A | - | 0207CE | Chapter data
+| 02CFF4 |   |        | ??? Names
+| 030000 |   |        | Class Data
+| 0318DF |   |        | Terrain Name Pointers
+| 031917 |   |        | Terrain Name Data
+| 031A2D |   |        | Character Data
+| 035A49 | - | 035CFA | Character Name Pointers
+| 035CFB | - | 0363A0 | Character Name Data
+| 0402F1 |   |        | Promotion Data
+| 0431E5 | - | 043206 | ??? Pointers
+| 043207 | - | 04329F | ??? Data
+| 0464BA | - | 04654B | Pointers?
+| 048002 | - | 047FFF | Class Name Pointers
+| 0482F0 |   |        | Class Name Data
+| 048CC2 |   |        | 4-bit pointers?
+| 054F52 |   |        | Pointers?
+| 054FCC | - | 0550C1 | 4-bit pointers?
+| 0550C3 |   |        | Pointers?
+| 05525C |   |        | Data?
+| 0553C7 |   |        | Pointers
+| 055FF6 |   |        | Custom Battle Sprite Data
+| 058000 |   |        | Pointers?
+| 064842 |   |        | Some kind of data separated by zeroes...
+| 06512E | - | 06550D | Portrait pointer/palette byte table
+| 074110 |   |        | 4-bit pointers?
+| 074289 | - | 07444E | 79 88
+| 07445A | - | 07460B | 75 8B
+| 076F60 | - | 076FDD | Names?
+| 078706 | - | 07878F | Pointers?
+| 090000 | - | 097D44 | Dialogue
+| 097D45 | - | 097FFF | Free space
+| 098000 | - | 09ECEE | Dialogue
+| 09ECEF | - | 09FFFF | Free space
+| 0AA493 | - | 0AFD4B | Dialogue
+| 0AFD4C | - | 0AFFFF | Free space
+| 0B7711 | - | 0B7FFF | Free space
+| 0BFB88 | - | 0BFFFF | Free space
+| 0C0000 | - | 0C6C5F | Dialogue
+| 0C6C60 | - | 0C7FFF | Free space
+| 0CFEE7 | - | 0CFFFF | Free space
+| 0D3770 | - | 0D6133 | Chapter names, character endings
+| 0D7E28 | - | 0D7FFF | Free space
+| 0DFE95 | - | 0DFFFF | Free space
+| 0E7D36 | - | 0E7F70 | FE4 dialogue
+| 0E7F71 | - | 0E7FFF | Free space
+| 0F5BFD | - | 0F5D57 | Inventory screen brown bar tilemap
+| 0F5D58 | - | 0F5F1B | Inventory screen tilemap
+| 0F5F1C | - | 0F6C9B | Statbar image
+| 0F73B3 | - | 0F7FFF | Free space
+| 0F81C0 |   |        | Leftover FE4 skill/menu graphics
+| 0FF4C4 | - | 0FFFFF | Free space
+| 0FB1C0 |   |        | Leftover FE4 statscreen text
+| 1007A0 |   |        | Menu screen background?
+| 1012C0 |   |        | Realtime Level Up bar graphics
+| 102200 |   |        | Map Level Up graphics
+| 102BE0 |   |        | Map weapon graphics
+| 106060 |   |        | ! and extra turn balloon graphics
+| 17F5B7 | - | 17FFFF | Free space
+| 1800C3 |   |        | Item Data
+| 180FC5 | - | 181112 | Item Name Pointers
+| 181113 |   |        | Item Name Data
+| 182EBC | - | 18755B | Dialogue
+| 18755C | - | 187FFF | Free Space
+| 18FB39 |   |        | Ch.1 Army Data
+| 18FD6D | - | 18FFFF | Free space
+| 190000 |   |        | A few map sprite walking graphics
+| 1CFEE6 | - | 1CFFFF | Free space
+| 1FB703 | - | 1FFFFF | Free space
+| 2D3EF8 | - | 2D4FFF | Free space
+| 2D5000 | - | 2D7EFA | Dialogue
+| 2D7EFB | - | 2D7FFF | Free space
+| 33F67C | - | 33FFFF | Free space
+| 340000 |   |        | Text graphics
+| 354000 | - |  ???   | Portrait Palettes
+| 386C71 | - | 387FFF | Free space
+| 388000 |   |        | Map sprite idle graphics
+| 38F080 |   |        | Misc. map graphics
+| 38F880 |   |        | Realtime Level Up number graphics
+| 390000 |   |        | Item graphics
+| 395380 |   |        | Weapon Type graphics
+| 395880 |   |        | Skill graphics
+| 396200 |   |        | Configuration graphics
+| 396780 |   |        | Player/Enemy/NPC Phase graphics
+| 398000 |   |        | Mounted map sprite idle graphics
+| 39CC80 |   |        | Menu text graphics
+| 3A0000 |   |        | Menu style backgrounds graphics
+| 3A6000 |   |        | Player/Enemy/NPC Phase graphics
+| 3A6860 |   |        | More menu text graphics
+| 3A7700 |   |        | Dialogue border graphics
+| 3A7940 |   |        | Movement tile graphics
+| 3A8000 |   |        | Various animated terrain tiles
+| 3E7758 | - | 3E7FFF | Free space
+| 3E8000 |   |        | Ch.1 Event Data
+| 3EFDD1 | - | 3EFFFF | Free space
+| 3F0000 | - | 400000 | Various water terrain tiles

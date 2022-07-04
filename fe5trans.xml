@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cartridge region='NTSC'>
+  <rom name="FE5ProjectExile.sfc">
+    <map mode='linear' address='00-7d:8000-ffff' offset='0x400000'/>
+    <map mode='linear' address='80-ff:8000-ffff' offset='0x000000'/>
+  </rom>
+  <ram size='0x8000'>
+    <map mode='linear' address='20-3f:6000-7fff'/>
+    <map mode='linear' address='a0-bf:6000-7fff'/>
+    <map mode='linear' address='70-7f:0000-7fff'/>
+  </ram>
+</cartridge>

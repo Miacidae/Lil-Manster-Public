@@ -1,0 +1,165 @@
+	Promotion00					= 0
+		Promotion00Character	= Finn
+		Promotion00Promotion	= DukeKnight
+
+	Promotion01					= 1
+		Promotion01Character	= Osian
+		Promotion01Promotion	= Hero
+
+	Promotion02					= 2
+		Promotion02Character	= Halvan
+		Promotion02Promotion	= Hero
+
+	Promotion03					= 3
+		Promotion03Character	= Ralph
+		Promotion03Promotion	= Hero
+
+	Promotion04					= 4
+		Promotion04Character	= Marty
+		Promotion04Promotion	= Warrior
+
+	Promotion05					= 5
+		Promotion05Character	= Ronan
+		Promotion05Promotion	= Sniper
+
+	Promotion06					= 6
+		Promotion06Character	= Miranda
+		Promotion06Promotion	= MageKnightF
+
+	Promotion07					= 7
+		Promotion07Character	= Safy
+		Promotion07Promotion	= HighPriestess
+
+	Promotion08					= 8
+		Promotion08Character	= Lara
+		Promotion08Promotion	= RogueF
+
+	Promotion09					= 9
+		Promotion09Character	= Brighton
+		Promotion09Promotion	= GreatKnight
+
+	Promotion0A					= 10
+		Promotion0ACharacter	= Fergus
+		Promotion0APromotion	= Ranger
+
+	Promotion0B					= 11
+		Promotion0BCharacter	= Eda
+		Promotion0BPromotion	= DracoknightF
+
+	Promotion0C					= 12
+		Promotion0CCharacter	= Asbel
+		Promotion0CPromotion	= Sage
+
+	Promotion0D					= 13
+		Promotion0DCharacter	= Macha
+		Promotion0DPromotion	= HeroF
+
+	Promotion0E					= 14
+		Promotion0ECharacter	= Hicks
+		Promotion0EPromotion	= GreatKnight
+
+	Promotion0F					= 15
+		Promotion0FCharacter	= Nanna
+		Promotion0FPromotion	= PaladinF
+
+	Promotion10					= 16
+		Promotion10Character	= Selphina
+		Promotion10Promotion	= ArchKnightF
+
+	Promotion11					= 17
+		Promotion11Character	= Dalsin
+		Promotion11Promotion	= General
+
+	Promotion12					= 18
+		Promotion12Character	= Callion
+		Promotion12Promotion	= Paladin
+
+	Promotion13					= 19
+		Promotion13Character	= Shiva
+		Promotion13Promotion	= Swordmaster
+
+	Promotion14					= 20
+		Promotion14Character	= Kane
+		Promotion14Promotion	= DukeKnight
+
+	Promotion15					= 21
+		Promotion15Character	= Alba
+		Promotion15Promotion	= DukeKnight
+
+	Promotion16					= 22
+		Promotion16Character	= Robert
+		Promotion16Promotion	= ArchKnight
+
+	Promotion17					= 23
+		Promotion17Character	= Lifis
+		Promotion17Promotion	= Rogue
+
+	Promotion18					= 24
+		Promotion18Character	= Karin
+		Promotion18Promotion	= PegasusKnight
+
+	Promotion19					= 25
+		Promotion19Character	= Trude
+		Promotion19Promotion	= Swordmaster
+
+	Promotion1A					= 26
+		Promotion1ACharacter	= Tanya
+		Promotion1APromotion	= SniperF
+
+	Promotion1B					= 27
+		Promotion1BCharacter	= Salem
+		Promotion1BPromotion	= Sorcerer
+
+	Promotion1C					= 28
+		Promotion1CCharacter	= Schroff
+		Promotion1CPromotion	= HighPriest
+
+	Promotion1D					= 29
+		Promotion1DCharacter	= Mareeta
+		Promotion1DPromotion	= SwordmasterF
+
+	Promotion1E					= 30
+		Promotion1ECharacter	= Tina
+		Promotion1EPromotion	= HighPriestess
+
+	Promotion1F					= 31
+		Promotion1FCharacter	= Homer
+		Promotion1FPromotion	= Sage
+
+	Promotion20					= 32
+		Promotion20Character	= Sara
+		Promotion20Promotion	= SageF
+
+Promotion00PromotionTableEntry .dstruct structPromotion, Promotion00Character, Promotion00Promotion
+Promotion01PromotionTableEntry .dstruct structPromotion, Promotion01Character, Promotion01Promotion
+Promotion02PromotionTableEntry .dstruct structPromotion, Promotion02Character, Promotion02Promotion
+Promotion03PromotionTableEntry .dstruct structPromotion, Promotion03Character, Promotion03Promotion
+Promotion04PromotionTableEntry .dstruct structPromotion, Promotion04Character, Promotion04Promotion
+Promotion05PromotionTableEntry .dstruct structPromotion, Promotion05Character, Promotion05Promotion
+Promotion06PromotionTableEntry .dstruct structPromotion, Promotion06Character, Promotion06Promotion
+Promotion07PromotionTableEntry .dstruct structPromotion, Promotion07Character, Promotion07Promotion
+Promotion08PromotionTableEntry .dstruct structPromotion, Promotion08Character, Promotion08Promotion
+Promotion09PromotionTableEntry .dstruct structPromotion, Promotion09Character, Promotion09Promotion
+Promotion0APromotionTableEntry .dstruct structPromotion, Promotion0ACharacter, Promotion0APromotion
+Promotion0BPromotionTableEntry .dstruct structPromotion, Promotion0BCharacter, Promotion0BPromotion
+Promotion0CPromotionTableEntry .dstruct structPromotion, Promotion0CCharacter, Promotion0CPromotion
+Promotion0DPromotionTableEntry .dstruct structPromotion, Promotion0DCharacter, Promotion0DPromotion
+Promotion0EPromotionTableEntry .dstruct structPromotion, Promotion0ECharacter, Promotion0EPromotion
+Promotion0FPromotionTableEntry .dstruct structPromotion, Promotion0FCharacter, Promotion0FPromotion
+Promotion10PromotionTableEntry .dstruct structPromotion, Promotion10Character, Promotion10Promotion
+Promotion11PromotionTableEntry .dstruct structPromotion, Promotion11Character, Promotion11Promotion
+Promotion12PromotionTableEntry .dstruct structPromotion, Promotion12Character, Promotion12Promotion
+Promotion13PromotionTableEntry .dstruct structPromotion, Promotion13Character, Promotion13Promotion
+Promotion14PromotionTableEntry .dstruct structPromotion, Promotion14Character, Promotion14Promotion
+Promotion15PromotionTableEntry .dstruct structPromotion, Promotion15Character, Promotion15Promotion
+Promotion16PromotionTableEntry .dstruct structPromotion, Promotion16Character, Promotion16Promotion
+Promotion17PromotionTableEntry .dstruct structPromotion, Promotion17Character, Promotion17Promotion
+Promotion18PromotionTableEntry .dstruct structPromotion, Promotion18Character, Promotion18Promotion
+Promotion19PromotionTableEntry .dstruct structPromotion, Promotion19Character, Promotion19Promotion
+Promotion1APromotionTableEntry .dstruct structPromotion, Promotion1ACharacter, Promotion1APromotion
+Promotion1BPromotionTableEntry .dstruct structPromotion, Promotion1BCharacter, Promotion1BPromotion
+Promotion1CPromotionTableEntry .dstruct structPromotion, Promotion1CCharacter, Promotion1CPromotion
+Promotion1DPromotionTableEntry .dstruct structPromotion, Promotion1DCharacter, Promotion1DPromotion
+Promotion1EPromotionTableEntry .dstruct structPromotion, Promotion1ECharacter, Promotion1EPromotion
+Promotion1FPromotionTableEntry .dstruct structPromotion, Promotion1FCharacter, Promotion1FPromotion
+Promotion20PromotionTableEntry .dstruct structPromotion, Promotion20Character, Promotion20Promotion

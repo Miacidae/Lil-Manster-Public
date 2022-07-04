@@ -1,0 +1,29 @@
+B0B5C - B0B91
+
+3B 08      ; BEGIN
+24 42      ; Load Tile: Fire/Elfire (+pause)
+FE FF      ; --Wait--
+26 68      ; Load2 Tilemap: Fire Tilemap (+pause)
+FE FF      ; --Wait--
+17 1A      ; Placement: Behind attacker
+0A 46      ; ? (deals with foreground) (+pause)
+FE FF      ; --Wait--
+00 2C      ; Play sound: Fire ignite (low)
+1E 04      ; Display tiles: Wind pattern?
+A1 16      ; Palette: Fire red
+0B 46      ; ? (deals with foreground) (+pause)
+FE FF      ; --Wait--
+FD FF      ; Cast1: Starts the animation loop on the caster
+F9 FF      ; Dodge point
+01 2A      ; Play sound: Fire flame
+03 1E      ; Scroll to defender: Super Fast
+12 5A      ; Scrolling: Forward fast, defender detection
+FE FF      ; --Wait--
+FA FF      ; Damage point
+48 5A      ; Scrolling: Bypass target
+FE FF      ; --Wait--
+FD FF      ; Cast2: resting
+FC FF      ; Reaction point
+1F 04      ; Display tiles: Clear wind pattern?
+36 08      ; END
+FF FF      ; EXIT

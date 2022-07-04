@@ -1,0 +1,1330 @@
+//THESE WORDS ARE BAKED INTO TILEMAPS
+
+List
+Trade
+Ar[mory
+Supply
+Discard
+
+Select Units
+Status
+
++Na[me
+Class
+Equip[ment
+Attack
+Hit
+Avoid
+Str
+(Mag
+Skl
+Spd
+Lck
+Def
+Con
+(Mov
+Fatg
+Status
+Traveler
+Skills
+
+Objective
+Captures
+)Wins
+Turn
+Funds
+Factions
+//Commander, with nn for tilemap sanity
+  Connnander
+
+
+Atk
+Crit
+Rng
+Avo
+Ddg
+
+Affil.
+Auth.
+Vigor
+Trv
+(Mov
+Fatigue
+Status
+
+Take
+Give
+Discard
+
+//"Status" kept for sanity
+Cond
+
+//Combat forecast
+
+
+//NAMES-----------------------------
+
+Supply
+Leif
+Finn
+Osian
+Halvan
+Eyvel
+Dagdar
+Tanya
+(Marty
+Ronan
+Safy
+Lifis
+(Macha
+Brighton
+Lara
+Fergus
+Karin
+Dalsin
+Asbel
++Nanna
+Hicks
+Shiva
+Callion
+Selphina
+Kane
+Alba
+Robert
+Fred
+Ol]wen
+(Mareeta
+//Salem
+  Sale
+Perne
+Trude
+Tina
+Glade
+Dean
+Eda
+Ho[mer
+Linoan
+Ralph
+Ilios
+Schroff
+(Misha
+Sara
+//Shannam
+  Shanna
+(Miranda
+Xavier
+A[malda
+Cono[mor
+Diar[muid
+Saias
+Ced
+Galzus
+
+)Weis[mann
+Bucks
+Lobos
+Bandole
+Tol[man
+Eisenhau
+Le[may
+Go[mez
+(Merloch
+Dvorak
+Largo
+Ke[mpf
+Oltoph
+Colho
+Liszt
+Baldach
+Paulus
+(McCloy
+Codha
+Eichner
+Seil
+Brook
+(Moore
++Nicolov
+(Mueller
+Reinkoch
+Pal[man
+Gustav
+)Wolfe
+Bharat
+//Seimetz
+  Seetz
+Fraus
+Zaun
+Cohen
+Reinhardt
+Alphan
+Farden
+Coulter
+Altena
+Raydrik
+Porcus
+Bovis
+Canis
+Draco
+(Mus
+Tigris
+Veld
+
+Ro[meo
+Luccia
+Jubel
+Cairpre
+E[mily
+Bella
+Cliff
+(Murphy
+Leena
+Bo]wie
+Hannibal
+Rosa
+Sera
+Peter
+
+(Mia
+Frieda
+Chris
+Daphnée
+Stella
+Edgar
+A[my
++Nira
+(Marlon
+Frank
+Charles
+Dirk
+Sean
+Ed]ward
+Andre]w
++Nicholas
+
+Ulster
+Lifis Pirates
+Friege
+Gelbenritter
+Pitfighter
+Leonster
+Loptrian
+(Magi
+(Munster
+Sells]word
+Resistance
+Silesse
+Tahra
+Thracia
+
+//-Archer
+//-Ballistician
+//-Bo]w Knight
+//-Dracorider
+//-Dracoknight
+//-Cleric
+//-Dancer
+//-Bishop
+//-Paladin
+//-Pirate
+//-Priest
+//-Soldier
+//-Civilian
+//-Thief
+
+Arion
+Gunter
+Ishtar
+Jabal
+Julius
+Kant
+(Manfroy
+//(Mannheim
+  (Mannhei
++Nancy
+Orvis
+Rilke
+Schuper
+Travant
+
+
+//FACTIONS-------------------------------------------------
+
+Leif's Ar[my
+Raydrik's Unit
+Unkno]wn Party
+Tahra's Ar[my
+//Leonster's Ar[my
+  Leonster34Ar[my
+//(Munster's Ar[my
+  (Munster34Ar[my
+Thracia's Ar[my
+Civilians
+Friege's Ar[my
+ Division
+Gelbenritter
+Ulster's Ar[my
+)Welkenrosen
+Lifis Pirates
+(Magi Squad
+Bandits
+Resistance
+Pegasus Corps
+Colho's Boys
+Dandelion
+Sells]words
+
+
+//TERRAIN--------------------------------------------------
+
+Peak
+Thicket
+Cliff
+Plain
+Forest
+Sea
+River
+(Mountain
+Sand
+Castle
+Fort
+House
+Gate
+)Wasteland
+Bridge
+Lake
+Village
+Ruins
+Supply
+Church
+Closed
+Road
+Ar[mory
+Vendor
+Arena
+Floor
+Throne
+Door
+Chest
+Exit
+Pillar
+Dra]wbridge
+Secret
+Altar
+Seal
+
+
+//MENU COMMANDS---------------------------------------------
+
+Seize
+Escape
+Arrive
+Talk
+Attack
+Capture
+Steal
+Arena
+Ar[mory
+Door
+Secret
+Visit
+Supply
+Vendor
+Bridge
+Chest
+Dance
+)Wait
+Staff
+Ite[m
+Rescue
+Drop
+Release
+Give
+Take
+Trade
+(Mount
+Dis[mount
+//Animation
+  Anation
+
+Use
+Equip
+Drop
+Yes
++No
+On
+Off
+
+
+//TEXTINSTALLER--------------------------------------------
+
+Type
+Hit
+(Might
+Crit
+Range
+)Weight
+
+Type
+)Weight
+
+Type
+Atk
+Hit
+Crit
+Avo
+
+//+No commander is deployed
++No conander is deployed
+
+Prf
+
+
+Trvlr
+Skills
+
+Vulnerary used
+Pure )Water used
+Poisoned
+Torch used
+By Ethlyn used
+Brionac used
+Antitoxin used
+
+
+//MENU COMMANDS 2---------------------------------------------
+
+Unit
+Status
+Options
+Suspend
+End
+
+
+//PREP OPTIONS------------------------------------------------
+
+(Map
+Ite[ms
+Deploy
+Unit
+Options
+Save
+
+
+//PREP ITEM OPTIONS----------------------------------------
+
+Exit [menu
+Pick ite[ms fro[m a list
+Trade ite[ms a[mong units
+Visit Supply
+Discard ite[ms
+Visit the shop
+
+Type
+Alphabet
+Holder
+
+Discard ite[m?
+Yes
++No
+
+
+//STATUS TEXT----------------------------------------------
+
+Sleep
+Poison
+Silence
+Berserk
+Stone
+Fatigued
+S Drink
+
+
+//CLASSES----------------------------------------------------
+
+Cavalier
+Lance Knight
+Arch Knight
+Axe Knight
+S]word Knight
+Troubadour
+Knight Lord
+Duke Knight
+(Master Knight
+Paladin
+Bo]w Knight
+Ranger
+(Mage Knight
+Great Knight
+Pegasus Knight
+Falcon Knight
+Dracorider
+Dracoknight
+Dragon[master
+Archer
+(Myr[midon
+S]word[master
+Sniper
+Hero
+General
+E[mperor
+Baron
+Ar[mored Lance
+Ar[mored Axe
+Ar[mored Bo12
+Ar[mored S]word
+Berserker
+Brigand
+)Warrior
+Hunter
+Pirate
+Lord
+Prince
+Dancer
+Priest
+Cleric
+Priestess
+(Mage
+Sorcerer
+High Priest
+High Priestess
+Bishop
+Sage
+Bard
+Dark Bishop
+Thief
+Rogue
+Civilian
+Ballistician
+Dark Prince
+Fighter
+Pegasus Rider
+Soldier
+Loptrian (Mage
+
+
+//ITEMS-------------------------------------------
+
+Iron S]word
+Steel S]word
+Silver S]word
+Iron Blade
+Killing Edge
+Venin Edge
+Berserk Edge
+Sleep Edge
+Beo Blade
+Blessed S]word
+Loptrian Fang
+Bragi's Blade
+Light Brand
+Brave S]word
+King[maker
+Lands S]word
+)Wind S]word
+Fla[me S]word
+Lightning S]word
+Paragon S]word
+Ar[morslayer
+Rapier
+Shorts]word
+Longs]word
+Greats]word
+(Master S]word
+Shado]w S]word
+//(Mareeta's S]word
+  (Mareeta34S]word
+//Slim S]word
+  Sl S]word
+
+Iron Lance
+Steel Lance
+Silver Lance
+Venin Lance
+Dragonpike
+Brave Lance
+Short Lance
+Long Lance
+Greatlance
+Javelin
+(Master Lance
+Ridersbane
+Killer Lance
+//Slim Lance
+  Sl Lance
+
+Iron Axe
+Venin Axe
+Steel Axe
+Silver Axe
+Hand Axe
+//Hammer
+  Haner
+Killer Axe
+//Vouge			Moved to the fuse box
+Brave Axe
+Devil Axe
+Battle Axe
+Poleax
+(Master Axe
+
+Iron Bo12
+Steel Bo12
+Silver Bo12
+Venin Bo12
+Killer Bo12
+Brave Bo12
+Shortbo12
+Longbo12
+Greatbo12
+(Master Bo12
+Ballista
+Iron Ballista
+Venin Ballista
+
+Fire
+Elfire
+Thunder
+Dire Thunder
+Thoron
+)Wind
+Grafcalibur
+Tornado
+Forseti
+Light
++Nosferatu
+J0r[mungandr
+Fenrir
+Hel
+(Meteor
+Bolting
+Blizzard
+Venin
+Petrify
+
+Heal
+(Mend
+Recover
+Physic
+Fortify
+Rescue
+)Warp
+Restore
+Silence
+Sleep
+Torch
+//Hammerne
+  Hanerne
+Thief
+Berserk
+Unlock
+Ensorcel
+Re]warp
+Kia
+
+Luck Ring
+Life Ring
+Speed Ring
+(Magic Ring
+Strength Ring
+Body Ring
+Shield Ring
+Skill Ring
+Leg Ring
+
+(Master Seal
+Chest Key
+Door Key
+Bridge Key
+Lockpick
+Sta[mina Drink
+Vulnerary
+Pure )Water
+Antitoxin
+(Me[mber Card
+
+Od's Scroll
+Baldr's Scroll
+Hoðr's Scroll
+Dáinn's Scroll
++Njörun's Scroll
++Nál's Scroll
+Ullr's Scroll
+Thrud's Scroll
+Fjalar's Scroll
+Ced's Scroll
+Bragi's Scroll
+//Heim's Scroll
+  He's Scroll
+
+Paragon (Manual
+Accost (Manual
+Vantage (Manual
+)Wrath (Manual
+Adept (Manual
++Nihil (Manual
+Sol (Manual
+Luna (Manual
+
+
+//MISC BOXES-----------------------------------------------
+
+ received
+(Mov increased
+)Weapon level increased
+Too [many ite[ms.
+Pick an ite[m to
+send to Supply
+Unit escaped
+ ]was stolen
+ purchased
+ ]was taken
+
+
+//SUSPEND TEXT---------------------------------------------
+
+Suspend the ga[me?
+You [may resu[me
+this chapter
+fro[m the [main
+[menu.
+
+
+//SKILL DESCRIPTIONS----------------------------------------
+
+)Wrath
+Anchor
+Adept
+Pavise
+//Charm
+  Char
++Nonco[mbatant
++Nihil
+(Miracle
+//(Miracle+
+Vantage
+Accost
+Astra
+Luna
+Sol
+Rene]wal
+Paragon
+Steal
+Dance
+Bargain
+
+If ene[my attacks
+first, the user's
+counterattack ]will
+be a critical hit
+
+Prevents unit fro[m
+being captured
+
+ chance
+to perfor[m a
+consecutive attack
+
+ chance 
+to negate ene[my's
+attack
+
+Gives
+ Hit and
+Avoid to allies
+]within
+ tiles
+of the user
+
+Prevents unit fro[m
+being attacked
+
++Negates all ene[my
+co[mbat skills
+except for
++Nihil itself 
+
+Lck x
+chance to avoid all
+fatal da[mage for
+the rest of co[mbat
+
++Nullifies ene[my
+staves and status
+conditions. Avoids
+all fatal da[mage
+
+User attacks first
+]when the ene[my
+initiates co[mbat
+
+If user's
+ and
+ are higher than
+the ene[my's, adds
+one round of co[mbat
+
+Skl
+ chance
+to attack five
+consecutive ti[mes
+
+Skl
+ chance
+for attack to ignore
+ene[my's defense
+
+Skl
+ chance
+for attack to heal
+for da[mage dealt
+
+Recover
+of [maxi[mu[m
+every turn
+
+Doubles experience
+gained by the user
+
+If user outspeeds a
+target, can Steal an
+ite[m ]with less )Wt
+than the user's Con 
+
+//Use Dance command
+  Use Dance conand
+to grant an ally
+another action
+
+Allo]ws user to
+buy fro[m shops
+at half price
+
+Class Skill
+Personal Skill
+)Weapon Skill
+
+ learned
+
+
+//ITEM DESCRIPTIONS-----------------------
+
+Strength
+(Magic
+Skill
+Speed
+Luck
+Defense
+Constitution
+(Move[ment
+
+//Common, quality
+  Conon, quality
+Strong, quality
+Rare, quality
+//Common, simple
+  Conon, sple
+Strong, si[mple
+(Massive, si[mple
+s]word
+lance
+axe
+ axe
+bo12
+ bo12
+
+High critical rate
+
+Deadly axe, but
+ s]word,
+difficult to ]wield
+Light]weight and
+si[mple to hit ]with
+
+Basic
+Potent
+Superior
+Long range
+Super long range
+
+fire [magic
+ fire [magic
+thunder [magic
+]wind [magic
+light [magic
+ light [magic
+dark [magic
+ dark [magic
+
+Effective against
+Eff against
+ units
+
+Berserks a target
+Silences a target
+]with lo]wer (Mag
+Puts a target ]with
+lo]wer (Mag to Sleep
+Ene[mies on thrones
+//or gates are immune
+  or gates are inune
+
+Berserks the target
+on hit
+Puts the target to
+Sleep on hit
+Targets on thrones
+//or gates are immune
+  or gates are inune
+
+Poisons on hit
+Poisons the target
+on hit
+on hit if used
+by ene[my [mages
+
+Turns into an iron
+]weapon if stolen
+
+Gives
+ (Mag
+ Skl
+ Spd
+ Def
+
+Casts fire [magic
+Casts thunder [magic
+Casts ]wind [magic
+at range
+
+Increases
+Teaches
+Can attack at range
+Vanishes after use
+Blocks criticals
+(Modifies gro]wths
+
+ & Str
+Skl & Spd
+Lck & Def
+
+Restore
+user's (Mag
+Restore all
+to an ally
+to all allies
+
+Transports an ally
+to a traversable
+tile next to
+the user		
+
+Transports an ally
+to any traversable
+tile on the [map
+
+Re[moves any status
+except Stone
+fro[m an ally
+
+Gives
+ vision
+in fog of ]war
+Effect decreases by
+ every turn
+
+Gives
+vision in fog of
+]war. Effect
+decreases by
+ every turn
+
+Safy
+Restore an ally's
+staff or ]weapon to
+pristine condition
+
+Tina, Steals a
+]weapon, staff or
+ite[m fro[m a target
+]with lo]wer (Mag
+
+Tina
+Opens a door or
+chest, or lo]wers
+a dra]wbridge
+
+Gives
+ (Mag 
+to an ally
+Effect decreases by
+ every turn
+
+Gives
+ (Mag to
+the user. Effect
+decreases by
+ every turn
+
+Transports the user
+to any traversable
+tile on the [map
+
+Sara
+Re[moves the Stone
+status fro[m an ally
+
+Opens chests
+Opens a door
+Lo]wers a
+dra]wbridge
+Opens doors and
+chests, or lo]wers
+dra]wbridges
+Units ]with the
+Steal skill
+
+Leif, Casts light
+[magic at range
+Increases Lck
+Use to heal all
+
+Finn,
+Increases Lck
+
+Osian
+High critical rate
+Can attack at range
+
+Asbel
+High critical rate
+Effective against
+ units
+
++Nanna
+Casts potent light
+[magic at range
+Drains target's
+
+(Mareeta, 
+Gives +Nihil
+
+Ol]wen, Reinhardt
+
+Ol]wen, High crit
+Eff against
+, Gives (Miracle
+Increases (Mag
+
+Dean, Altena
+, Gives Vantage
+
+Fergus, Diar[muid
+High critical rate
+Gives Vantage
+and )Wrath
+
+Ced, Gives 
+Skl & Spd, High crit
+Exalted ]wind [magic
+Eff against
+
+Raydrik
+Halves ene[my's
+attack po]wer
+Increases (Mag
+
+Heirs of rebels
+Pierces Fang's curse
+Eff against
+Gives (Miracle
+
+Potent light [magic
+Drains target's
+
+Long range [magic
+Applies Sleep on hit
+Targets on thrones
+//or gates are immune
+  or gates are inune
+
+Long range dark
+[magic, Poisons on
+hit, Turns into
+Fenrir if stolen
+
+Long range dark
+[magic, Petrifies on
+hit, Turns into
+Fenrir if stolen
+
+Luck
+chance to da[mage
+its user instead
+
+Loptrians
+Reduces target's
+ to
+Cannot kill
+
+Pro[motes [most
+base class units
+that are at least
+Level 
+ to
+an advanced class
+
+Re[moves Fatigue
+or allo]ws a
+fatigued unit
+to be deployed
+
+Restore all
+to the user
+
+Re[moves Poison
+status
+
+If so[meone ]with
+this card stops
+in a suspicious
+space...
+
+Increases
+Luck by
+ by
+Speed by
+(Magic by
+Strength by
+Constitution by
+Defense by
+Skill by
+(Move[ment by
+
+A broken ]weapon
+Al[most unusable
+
+Drained of its
+[magic and
+unusable
+
+//OPTIONS--------------------------------------------------
+
+//Animations
+  Anations
+//Turn attack animations on or off
+  Turn attack anations on or off
+On
+Off
+By Unit
+
+(Map Data
+Turn terrain ]windo]w and 
+ bars on or off
+Detail
+Si[mple
+Off
+
+Units )Windo12
+Set the unit ]windo]w's level of detail
+
+Autocursor
+Set cursor to start on Leif
+
+(Message Speed
+Adjust ho]w fast text [messages display
+Slo12
++Nor[mal
+Fast
+
+Ga[me Speed
+Adjust ho]w fast the ga[me progresses
+
+Hidden Data
+: +None
+: Inventory
+: Chapter
+: Hidden Skills
+
+Deploy[ment
+: Default
+: Display units
+: Rearrange units
+
+Audio
+Adjust audio settings
+Stereo
+(Mono
+
+(Music
+Turn [music on or off
+
+Sound Effects
+Adjust volu[me of sound effects
+
+)Windo]w Pattern
+Change the [menu ]windo12
+
+)Windo]w Color
+Upper
+Lo]wer
+Default
+
+Set color for the upper layer
+Set color for the lo]wer layer
+Restore color to default
+
+//SOUND ROOM----------------------------
+//Sound Room
+  Sound Roo
+ to play
+ to stop
+Start to exit
+
+Thracia
+Leif's Search for Victory
+Pressing Threat
+Serving Justice
+A[midst the Battle
+Chapter End
+(Mid Chapter
+Finale
+
+Begins
+Fire E[mble[m The[me
+(Map
+(Map
+(Map
+Sally Forth
+
+Base
+Assault
+Assault
+Adversity
+The Cusp of Victory
+The Edge of Defeat
+Reconnoissance
+Leif
+
+Base
+Base
+Assault
+Dark Bishops
+Reconnoissance
+Endga[me
+
+Attack
+Defense
+Recovery
+Recovery
+Dance
+Class Change
+Boss Battle
+Against Raydrik
+Against Veld
+Arena Battle
+Level Up
+Level Up
+
+Crisis
+Assault
+Destiny
+Battalion
+Bandits
+Raydrik
+Loptrians
+Thracia
+Loptrians
+Battalion
+
+Victory
+(Minor Victory
+August Speaks
+August Speaks
+Go, Leif, Go!
+Conquest
+
+Arena's Front Desk
+Recruit[ment
+Encounters and Reunions
+Co[mic Relief
+Church
+Sorro12
+Sara
+Eyvel
+
+Ga[me Over
+Results
+Epilogue
+Ballad
+(Music Box
+
+//UNUSED ITEMS-----------------------
+
+(Miracle (Manual
+Teaches (Miracle
+Vanishes after use
+
+Bargain (Manual
+Teaches Bargain
+Vanishes after use
+
+Bolganone
+Superior fire [magic
+
+Aura
+Superior
+light [magic
+
+Shado]w Spear
+Can attack at range
+Gives +Nihil
+
+Gáe Bolg
+High crit rate,
+Gives 
+ Str, 
++Nihil, )Wrath
+//Vantage and Charm
+  Vantage and Char
+
+Gungnir
+High crit rate,
+Gives 
+ Def,
++Nihil, )Wrath
+Vantage and Paragon
+
+Killer Ballista
+Long range
+High critical rate
+Effective against
+ units
+
+Valfla[me
+Exalted fire [magic
+High critical rate
+
+(Mjölnir
+Exalted thunder
+[magic
+High critical rate
+
+Loptous
++No special effect
+
+Return
+Allo]ws an ally
+to escape
+the chapter
+
+)Watch
+Reveals concealed
+areas under a roof
+
+(Master Cro]wn
+Does nothing
+
+
+//CONTROL GROUP-----------------
+
+Vouge

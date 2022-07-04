@@ -1,0 +1,132 @@
+	BAProjectileLance00				= 0
+		BAProjectileLance00Class	= Cavalier
+		BAProjectileLance00Xcoord	= 232
+		BAProjectileLance00Ycoord	= 48
+
+	BAProjectileLance01				= 1
+		BAProjectileLance01Class	= LanceKnight
+		BAProjectileLance01Xcoord	= 232
+		BAProjectileLance01Ycoord	= 48
+
+	BAProjectileLance02				= 2
+		BAProjectileLance02Class	= KnightLord
+		BAProjectileLance02Xcoord	= 232
+		BAProjectileLance02Ycoord	= 48
+
+	BAProjectileLance03				= 3
+		BAProjectileLance03Class	= DukeKnight
+		BAProjectileLance03Xcoord	= 232
+		BAProjectileLance03Ycoord	= 48
+
+	BAProjectileLance04				= 4
+		BAProjectileLance04Class	= MasterKnight
+		BAProjectileLance04Xcoord	= 232
+		BAProjectileLance04Ycoord	= 48
+
+	BAProjectileLance05				= 5
+		BAProjectileLance05Class	= Paladin
+		BAProjectileLance05Xcoord	= 232
+		BAProjectileLance05Ycoord	= 48
+
+	BAProjectileLance06				= 6
+		BAProjectileLance06Class	= PaladinF
+		BAProjectileLance06Xcoord	= 232
+		BAProjectileLance06Ycoord	= 48
+
+	BAProjectileLance07				= 7
+		BAProjectileLance07Class	= PegasusKnight
+		BAProjectileLance07Xcoord	= 232
+		BAProjectileLance07Ycoord	= 50
+
+	BAProjectileLance08				= 8
+		BAProjectileLance08Class	= FalconKnight
+		BAProjectileLance08Xcoord	= 232
+		BAProjectileLance08Ycoord	= 50
+
+	BAProjectileLance09				= 9
+		BAProjectileLance09Class	= Dracorider
+		BAProjectileLance09Xcoord	= 232
+		BAProjectileLance09Ycoord	= 53
+
+	BAProjectileLance0A				= 10
+		BAProjectileLance0AClass	= Dracoknight
+		BAProjectileLance0AXcoord	= 232
+		BAProjectileLance0AYcoord	= 53
+
+	BAProjectileLance0B				= 11
+		BAProjectileLance0BClass	= DragonMaster
+		BAProjectileLance0BXcoord	= 232
+		BAProjectileLance0BYcoord	= 53
+
+	BAProjectileLance0C				= 12
+		BAProjectileLance0CClass	= General
+		BAProjectileLance0CXcoord	= 232
+		BAProjectileLance0CYcoord	= 26
+
+	BAProjectileLance0D				= 13
+		BAProjectileLance0DClass	= Emperor
+		BAProjectileLance0DXcoord	= 232
+		BAProjectileLance0DYcoord	= 26
+
+	BAProjectileLance0E				= 14
+		BAProjectileLance0EClass	= Baron
+		BAProjectileLance0EXcoord	= 232
+		BAProjectileLance0EYcoord	= 26
+
+	BAProjectileLance0F				= 15
+		BAProjectileLance0FClass	= MasterKnightF
+		BAProjectileLance0FXcoord	= 232
+		BAProjectileLance0FYcoord	= 48
+
+	BAProjectileLance10				= 16
+		BAProjectileLance10Class	= DracoriderF
+		BAProjectileLance10Xcoord	= 232
+		BAProjectileLance10Ycoord	= 53
+
+	BAProjectileLance11				= 17
+		BAProjectileLance11Class	= DracoknightF
+		BAProjectileLance11Xcoord	= 232
+		BAProjectileLance11Ycoord	= 53
+
+	BAProjectileLance12				= 18
+		BAProjectileLance12Class	= DragonMasterF
+		BAProjectileLance12Xcoord	= 232
+		BAProjectileLance12Ycoord	= 53
+
+	BAProjectileLance13				= 19
+		BAProjectileLance13Class	= PegasusRider
+		BAProjectileLance13Xcoord	= 232
+		BAProjectileLance13Ycoord	= 50
+
+	BAProjectileLance14				= 20
+		BAProjectileLance14Class	= Soldier
+		BAProjectileLance14Xcoord	= 242
+		BAProjectileLance14Ycoord	= 29
+
+	BAProjectileLance15				= 21
+		BAProjectileLance15Class	= ArmoredLance
+		BAProjectileLance15Xcoord	= 232
+		BAProjectileLance15Ycoord	= 31
+
+BAProjectileLance00BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance00Class, BAProjectileLance00Xcoord, BAProjectileLance00Ycoord
+BAProjectileLance01BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance01Class, BAProjectileLance01Xcoord, BAProjectileLance01Ycoord
+BAProjectileLance02BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance02Class, BAProjectileLance02Xcoord, BAProjectileLance02Ycoord
+BAProjectileLance03BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance03Class, BAProjectileLance03Xcoord, BAProjectileLance03Ycoord
+BAProjectileLance04BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance04Class, BAProjectileLance04Xcoord, BAProjectileLance04Ycoord
+BAProjectileLance05BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance05Class, BAProjectileLance05Xcoord, BAProjectileLance05Ycoord
+BAProjectileLance06BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance06Class, BAProjectileLance06Xcoord, BAProjectileLance06Ycoord
+BAProjectileLance07BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance07Class, BAProjectileLance07Xcoord, BAProjectileLance07Ycoord
+BAProjectileLance08BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance08Class, BAProjectileLance08Xcoord, BAProjectileLance08Ycoord
+BAProjectileLance09BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance09Class, BAProjectileLance09Xcoord, BAProjectileLance09Ycoord
+BAProjectileLance0ABattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance0AClass, BAProjectileLance0AXcoord, BAProjectileLance0AYcoord
+BAProjectileLance0BBattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance0BClass, BAProjectileLance0BXcoord, BAProjectileLance0BYcoord
+BAProjectileLance0CBattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance0CClass, BAProjectileLance0CXcoord, BAProjectileLance0CYcoord
+BAProjectileLance0DBattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance0DClass, BAProjectileLance0DXcoord, BAProjectileLance0DYcoord
+BAProjectileLance0EBattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance0EClass, BAProjectileLance0EXcoord, BAProjectileLance0EYcoord
+BAProjectileLance0FBattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance0FClass, BAProjectileLance0FXcoord, BAProjectileLance0FYcoord
+BAProjectileLance10BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance10Class, BAProjectileLance10Xcoord, BAProjectileLance10Ycoord
+BAProjectileLance11BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance11Class, BAProjectileLance11Xcoord, BAProjectileLance11Ycoord
+BAProjectileLance12BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance12Class, BAProjectileLance12Xcoord, BAProjectileLance12Ycoord
+BAProjectileLance13BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance13Class, BAProjectileLance13Xcoord, BAProjectileLance13Ycoord
+BAProjectileLance14BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance14Class, BAProjectileLance14Xcoord, BAProjectileLance14Ycoord
+BAProjectileLance15BattleAnimationProjectileLanceTableEntry .dstruct structBAProjectileLance, BAProjectileLance15Class, BAProjectileLance15Xcoord, BAProjectileLance15Ycoord

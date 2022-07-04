@@ -1,0 +1,5 @@
+[target right]
+くっ
+[pause $08]･･･わしをぐろうするか･･･
+[pause $10]殺せ！[pause $08]　情けなどいらぬわ！！
+[end scene]

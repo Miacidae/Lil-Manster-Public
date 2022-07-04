@@ -1,0 +1,35 @@
+B0F78 - B0FB9
+
+3B 08     ; BEGIN
+20 42     ; Load Tile: Valkyrie Highlight (+pause)
+FE FF     ; --Wait--
+21 42     ; Load Tile: Valkyrie Highlight Tilemap (+pause)
+FE FF     ; --Wait--
+22 42     ; Load Tile: Nothing, here (+pause)
+FE FF     ; --Wait--
+03 1C     ; Secondary Palette: ???
+14 16     ; Palette: Valkyrie Pink 1
+23 42     ; Load Tile: Nothing, again (+pause)
+FE FF     ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+0F 04     ; Display Tiles: Defender Mask
+08 06     ; Tile Effect: Heavy Ripple
+08 1A     ; Scrolling: Up Forward
+01 22     ; Add Background Hue: Light Blue
+13 16     ; Palette: Charm Red 2
+15 56     ; Palette: Valkyrie Pink 2 (+pause)
+FE FF     ; --Wait--
+16 16     ; Palette: Valkyrie Pink 3
+0A 1A     ; Scrolling: ???
+10 04     ; Display Tiles: ???
+09 5A     ; Placement / Scrolling: ??? (+pause)
+FE FF     ; --Wait--
+11 04     ; Display Tiles: ???
+12 16     ; Palette: Charm Red 2
+17 56     ; Palette: Valkyrie Pink 4 (+pause)
+FE FF     ; --Wait--
+17 04     ; Display Tiles: ???
+00 06     ; Tile Effect: Stop
+FD FF     ; Cast2: resting
+36 08     ; END
+FF FF     ; EXIT

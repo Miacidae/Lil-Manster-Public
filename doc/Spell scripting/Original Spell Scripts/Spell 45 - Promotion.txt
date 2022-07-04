@@ -1,0 +1,70 @@
+B1D9E - B1E25
+
+3B 08     ; BEGIN
+7F 42     ; Load Tiles: Promotion Unit Highlight, different (+pause)
+FE FF     ; --Wait--
+89 42     ; Load Tiles: Promotion BG Tilemap (+pause)
+FE FF     ; --Wait--
+80 42     ; Load Tiles: Promotion Tilemap, different (+pause)
+FE FF     ; --Wait--
+46 1A     ; Placement: Ground Center
+10 46     ; Tile Effect: ??? (+pause)
+1E 40     ; Effect Mask: Create Pillar + Expand Up (pixel-thin) (+pause)
+FE FF     ; --Wait--
+32 04     ; Display Tiles: Draw behind Defender
+2C 40     ; Effect Mask: Fast Expand (very thin to large) (+pause)
+FE FF     ; --Wait--
+3C 08     ; Battle Scene Mod: ???
+90 16     ; Effect / Palette: ???
+97 16     ; Effect / Palette: ???
+9D 16     ; Effect / Palette: ???
+30 50     ; Battle Scene Mod2: ??? (+pause)
+FE FF     ; --Wait--
+91 16     ; Effect / Palette: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+98 16     ; Effect / Palette: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+0F 06     ; Tile Effect: ???
+94 16     ; Effect / Palette: ???
+32 08     ; Battle Scene Mod: ???
+47 1A     ; Scrolling: Upward Scroll
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+68 04     ; Display Tiles: Slow Fade In?
+95 56     ; Effect / Palette: ??? (+pause)
+FE FF     ; --Wait--
+99 16     ; Effect / Palette: ???
+9A 16     ; Effect / Palette: ???
+9B 16     ; Effect / Palette: ???
+9C 16     ; Effect / Palette: ???
+12 08     ; Battle Scene Mod: Show Defender
+2F 50     ; Battle Scene Mod2: Promotion Change Attacker to Defender (+pause)
+FE FF     ; --Wait--
+11 08     ; Battle Scene Mod: Hide Attacker
+9E 16     ; Effect / Palette: ???
+96 56     ; Effect / Palette: ??? (+pause)
+FE FF     ; --Wait--
+92 16     ; Effect / Palette: ???
+8C 16     ; Effect / Palette: ???
+8D 16     ; Effect / Palette: ???
+10 54     ; --Wait: 16 frames--
+FE FF     ; --Wait--
+69 04     ; Display Tiles: ???
+46 1A     ; Placement: Ground Center
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+8F 16     ; Effect / Palette: ???
+93 16     ; Effect / Palette: ???
+9F 16     ; Effect / Palette: ???
+31 50     ; Battle Scene Mod2: ??? (+pause)
+FE FF     ; --Wait--
+1F 00	  ; Effect Mask: Instant Expand (any to large)
+1D 00	  ; Effect Mask: Delete
+FE FF     ; --Wait--
+6A 04	  ; Display Tiles: ???
+0F 46	  ; Tile Effect: ??? (+pause)
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

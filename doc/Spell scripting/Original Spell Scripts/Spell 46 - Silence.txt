@@ -1,0 +1,38 @@
+B1E84 - B1ECB
+
+3B 08     ; BEGIN
+7B 42     ; Load Tile: Silence (+pause)
+FE FF     ; --Wait--
+7C 42     ; Load Tile: Silence Tilemap (+pause)
+1D 16     ; Palette: Silence 1
+FE FF     ; --Wait--
+2C 2A     ; Play Sound: Silence Start
+03 64     ; Special Triangle Masking: ???
+FE FF     ; --Wait--
+0F 1A     ; Scrolling: Fast Upward
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+1A 04     ; Display Tiles: ???
+1E 16     ; Palette: Silence 2
+04 24     ; Special Triangle Masking: ???
+53 54     ; --Wait: 83 frames--
+FE FF     ; --Wait--
+02 22     ; Add Background Hue: Purple
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+1F 16     ; Effect: Enable XX 22 code
+20 54     ; --Wait: 32 frames--
+FE FF     ; --Wait--
+2D 2A     ; Play Sound: Silence End
+42 08     ; Battle Scene Mod: Mute Music 1
+1B 04     ; Display Tiles: ???
+21 16     ; Effect: Instant White
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+08 22     ; Add Background Hue: ???
+01 54     ; --Wait: 1 frame--
+FE FF     ; --Wait--
+20 56	  ; Effect: Heavy Darkness (+pause)
+FE FF     ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

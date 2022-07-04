@@ -1,0 +1,83 @@
+B1AD2 - B1B69
+
+3B 08     ; BEGIN
+09 4C     ; The fuck is this command???
+FE FF	  ; --Wait--
+09 5E     ; Scroll to Defender: Normal (+pause)
+FE FF	  ; --Wait--
+07 56     ; Effect: Fade Out 1 (+pause)
+FE FF	  ; --Wait--
+41 04     ; Display Tiles: ???
+0F 4E     ; BG?: ??? (+pause)
+FE FF	  ; --Wait--
+6B 42     ; Load Tiles: Hel Circle (+pause)
+FE FF	  ; --Wait--
+6D 42     ; Load Tiles: Hel Circle Tilemap (+pause)
+FE FF	  ; --Wait--
+0E 1C     ; Secondary Palette: ???
+6E 42     ; Load Tiles: Hel Background Tilemap (+pause)
+FE FF	  ; --Wait--
+6C 16     ; Palette: ???
+2A 08     ; Battle Scene Mod: Shift Background Up
+31 1A     ; Placement / Scrolling: ???
+12 06     ; Tile Effect: ???
+01 54     ; --Wait: 1 frame--
+FE FF	  ; --Wait--
+44 08     ; Battle Scene Mod: ???
+01 54     ; --Wait: 1 frame--
+FE FF	  ; --Wait--
+20 2A     ; Play Sound: Hel
+42 04     ; Display Tiles: ???
+32 1A     ; Placement / Scrolling: ???
+6D 56     ; Palette: ??? (+pause)
+FE FF	  ; --Wait--
+3C 54     ; --Wait: 60 frames--
+FE FF	  ; --Wait--
+FD FF     ; Cast1: Starts the animation loop on the caster
+02 1A     ; Placement: Center of Screen
+20 00     ; Effect Mask: Create Dome (pixel-wide)
+01 54     ; --Wait: 1 frame--
+FE FF	  ; --Wait--
+11 06     ; Tile Effect: Ripple Effect
+01 54     ; --Wait: 1 frame--
+FE FF	  ; --Wait--
+59 04     ; Display Tiles: ???
+33 1A     ; Placement / Scrolling: ???
+21 00     ; Effect Mask: Slow Expand (pixel-wide to max)
+35 54     ; --Wait: 53 frames--
+FE FF	  ; --Wait--
+F9 FF     ; Dodge point
+10 54     ; --Wait: 16 frames--
+FE FF	  ; --Wait--
+FA FF     ; Damage point
+08 54     ; --Wait: 8 frames--
+FE FF	  ; --Wait--
+6E 56     ; Palette: ??? (+pause)
+FE FF	  ; --Wait--
+00 06     ; Tile Effect: Stop
+01 06     ; Tile Effect: ???
+43 04     ; Display Tiles: ???
+FD FF     ; Cast2: resting
+FC FF     ; Reaction point
+04 58     ; BG Mod: ??? (+pause)
+FE FF	  ; --Wait--
+05 58     ; BG Mod: ??? (+pause)
+FE FF	  ; --Wait--
+05 0E     ; BG?: Meteor Something 1
+06 4E     ; BG?: Meteor Something 2 (+pause)
+06 18     ; BG Mod: ???FE FF
+05 58	  ; BG Mod: ??? (+pause)
+FE FF	  ; --Wait--
+05 0E     ; BG?: Meteor Something 1
+06 4E     ; BG?: Meteor Something 2 (+pause)
+06 18     ; BG Mod: ???
+FE FF	  ; --Wait--
+2B 08	  ; Battle Scene Mod: Reset BG
+60 16     ; Palette: ???
+01 54     ; --Wait: 1 frame--
+FE FF	  ; --Wait--
+58 04     ; Display Tiles: ???
+12 56     ; Effect: Reset Tile/Palette Effects (+pause)
+FE FF	  ; --Wait--
+36 08     ; END
+FF FF     ; EXIT

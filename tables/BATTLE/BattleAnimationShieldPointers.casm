@@ -1,0 +1,72 @@
+	Shield_KnightLord						= 0
+		Shield_KnightLordPointer			= aBAgraphics_Shield_KnightLord
+
+	Shield_MasterKnight						= 1
+		Shield_MasterKnightPointer			= aBAgraphics_Shield_MasterKnight
+
+	Shield_DukeKnight						= 2
+		Shield_DukeKnightPointer			= aBAgraphics_Shield_DukeKnight
+
+	Shield_GreatKnight						= 3
+		Shield_GreatKnightPointer			= aBAgraphics_Shield_GreatKnight
+
+	Shield_Paladin							= 4
+		Shield_PaladinPointer				= aBAgraphics_Shield_Paladin
+
+	Shield_MageKnight						= 5
+		Shield_MageKnightPointer			= aBAgraphics_Shield_MageKnight
+
+	Shield_Cavalier							= 6
+		Shield_CavalierPointer				= aBAgraphics_Shield_Cavalier
+
+	Shield_SwordKnight_Ranger				= 7
+		Shield_SwordKnight_RangerPointer	= aBAgraphics_Shield_SwordKnight_Ranger
+
+	Shield_LanceKnight						= 8
+		Shield_LanceKnightPointer			= aBAgraphics_Shield_LanceKnight
+
+	Shield_Troubadour						= 9
+		Shield_TroubadourPointer			= aBAgraphics_Shield_Troubadour
+
+	Shield_AxeKnight						= 10
+		Shield_AxeKnightPointer				= aBAgraphics_Shield_AxeKnight
+
+	Shield_Soldier							= 11
+		Shield_SoldierPointer				= aBAgraphics_Shield_Soldier
+
+	Shield_Armors							= 12
+		Shield_ArmorsPointer				= aBAgraphics_Shield_Armors
+
+	Shield_General							= 13
+		Shield_GeneralPointer				= aBAgraphics_Shield_General
+
+	Shield_Baron							= 14
+		Shield_BaronPointer					= aBAgraphics_Shield_Baron
+
+	Shield_Emperor							= 15
+		Shield_EmperorPointer				= aBAgraphics_Shield_Emperor
+
+	Shield_Unknown10						= 16
+		Shield_Unknown10Pointer				= aBAgraphics_Shield_Unknown10
+
+	Shield_Unknown11						= 17
+		Shield_Unknown11Pointer				= aBAgraphics_Shield_Unknown11
+
+Shield_KnightLordBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_KnightLordPointer
+Shield_MasterKnightBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_MasterKnightPointer
+Shield_DukeKnightBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_DukeKnightPointer
+Shield_GreatKnightBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_GreatKnightPointer
+Shield_PaladinBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_PaladinPointer
+Shield_MageKnightBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_MageKnightPointer
+Shield_CavalierBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_CavalierPointer
+Shield_SwordKnight_RangerBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_SwordKnight_RangerPointer
+Shield_LanceKnightBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_LanceKnightPointer
+Shield_TroubadourBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_TroubadourPointer
+Shield_AxeKnightBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_AxeKnightPointer
+Shield_SoldierBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_SoldierPointer
+Shield_ArmorsBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_ArmorsPointer
+Shield_GeneralBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_GeneralPointer
+Shield_BaronBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_BaronPointer
+Shield_EmperorBattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_EmperorPointer
+Shield_Unknown10BattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_Unknown10Pointer
+Shield_Unknown11BattleAnimationShieldPointersEntry .dstruct StructBattleAnimationShieldPointers, Shield_Unknown11Pointer
