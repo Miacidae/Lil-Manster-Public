@@ -9,15 +9,15 @@ FE5 Map Editor is a standalone program that allows you to edit FE5 maps.
 The current build files do not yet allow map editing.
 Therefore, if you plan to edit maps, you will need to edit your base fe5.sfc ROM with this program, then replace it with the result before building.
 
+FLIPS allows you to generate a patch file to share your project.
+BPS format is the default.
+IPS format does not perform a ROM check. Only use this if you want your players to be able to patch onto an edited Thracia ROM.
+
 Lunar Address allows you to easily convert ROM addresses to memory addresses and vice-versa.
 Use the ExLoRom setting, and do not include a header.
 
 Lunar Expand is required once, to expand your base ROM before putting it in its folder.
 See the text file in base_rom for more details.
-
-Lunar IPS allows you to generate a patch file to share your project.
-BPS format is the default.
-IPS format does not perform a rom check. Only use this if you want your players to be able to patch onto an edited Thracia ROM.
 
 SnesGFX allows you to turn your image files into insertable graphics and palettes.
 
