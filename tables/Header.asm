@@ -19,7 +19,7 @@ CartridgeRAMSize     = $9000
 CartridgeDestination = DestinationJapanese
 CartridgeNew         = True
 CartridgeVersion     = 0
-CartridgeChecksum    = $E390
+CartridgeChecksum    = $9554
 
 ; Now to actually create the header
 

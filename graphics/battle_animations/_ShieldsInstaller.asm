@@ -19,7 +19,7 @@
 	aBAgraphics_Shield_Emperor						  .binary "shields/Shield_Emperor.4bpp.fe4"
 	aBAgraphics_Shield_Unknown10					  .binary "shields/Shield_Unknown10.4bpp.fe4"
 	aBAgraphics_Shield_Unknown11					  .binary "shields/Shield_Unknown11.4bpp.fe4"
-
+	.fill $D1FA15 - *, $FF
 .here
 
 

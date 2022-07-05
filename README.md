@@ -11,19 +11,23 @@ Setup
 - A recent version of [**python 3**](https://www.python.org/) must be installed and in your path.
   During setup, make sure to install pip and to add python to your environment variables.
 
+- Install the Pillow module by running `python -m pip install pillow` in cmd.
+
 - Go through the `tools` folders and install said tools wherever you see an `.url` file.
   64tass, SuperFamiconv and Lunar Expand are required downloads, and the others are all strongly recommended.
  
 - A hex editor like [**HxD**](https://mh-nexus.de/en/hxd/) and a decent text editor like [**Sublime**](https://www.sublimetext.com/) or [**Notepad++**](https://notepad-plus-plus.org/) are also recommended.
 
 - Place a headerless copy Fire Emblem: Thracia 776 in the `base_rom` folder and name it `FE5.sfc`.
-  The text file in `base_rom` gives you further instructions on how to expand the ROM with Lunar Expand.
+  Then, it needs to be expanded to 48 Mbit ExLoROM (6 MB) 2.
+  Read the text file in `base_rom` for detailed instructions on how to expand the ROM with Lunar Expand.
 
 -----------------
 Operation
 -----------------
 
-- Click the `build.bat` file to generate a copy of the current developper version of Lil' Manster, as well as an UPS patch.
+- Click the `build.bat` file to generate a copy of the current developper version of Lil' Manster.
+  Mac/Linux users should instead use `build.sh`.
 
 - If no ROM is generated, consult the command line prompt and the `log.txt` file for possible error messages.
   Do ignore the "Warning messages" in the log, as they do not prevent the build process and are generally unconsequential.
@@ -65,8 +69,6 @@ Units, class, item, chapter data, but also battle animation properties, arena op
 Keep in mind that dialogue text and menu text are completely different systems and that they do not interact with one another.
 
 `tools` holds all the tools (or at least links to them) needed to edit Fire Emblem 5.
-
-`ups` holds the UPS patch generated when building the ROM.
 
 ----------------
 Credits

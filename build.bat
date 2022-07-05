@@ -8,8 +8,4 @@ python %textasm% text_menus/textformatter/Vanilla.png text_menus/textformatter/F
 
 %as% -f -o "fe5trans.sfc" -l "labels.txt" "buildfile.asm" 1>"log.txt" 2>&1
 
-cd "%startDir%/ups"
-
-ups diff -b "%startDir%/base_rom/fe5.sfc" -m "%startDir%/fe5trans.sfc" -o "%startDir%/ups/fe5trans.ups"
-
 pause

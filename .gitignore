@@ -30,6 +30,9 @@ tools/Lunar Address/*.exe
 tools/Lunar Expand/*.exe
 tools/Lunar Expand/*.txt
 
+tools/Lunar IPS/*.exe
+tools/Lunar IPS/*.txt
+
 tools/SnesGFX/*.exe
 tools/SnesGFX/*.txt
 tools/SnesGFX/*.config

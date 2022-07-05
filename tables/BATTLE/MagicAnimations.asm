@@ -246,5 +246,3 @@ _0x30
 	.byte 123 ; Item Number
 	.byte 81 ; Close Range Animation
 	.byte 82 ; Long Range Animation
-	
-	.word $FFFF
