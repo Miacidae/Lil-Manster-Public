@@ -430,13 +430,14 @@ Yes
 
 //STATUS TEXT----------------------------------------------
 
+Fatigued
+S Drink
+
 Sleep
 Poison
 Silence
 Berserk
 Stone
-Fatigued
-S Drink
 
 
 //CLASSES----------------------------------------------------
