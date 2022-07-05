@@ -225,7 +225,7 @@ aEndEventCodeTable ; 8C/80F7
 .byte $00
 .byte $00
 
-aEventCodeTable .include "../TABLES/SYSTEM/EventCodeHandlerPointers.casm" ; 8C/80FF
+aEventCodeTable .include "../tables/SYSTEM/EventCodeHandlerPointers.casm" ; 8C/80FF
 .word $0000
 
 rsUnknown8C818F ; 8C/818F
@@ -15188,7 +15188,7 @@ rlGetActiveSpeakerAssociation ; 8C/C82B
 	plb
 	rtl
 
-.include "../TABLES/DIALOGUE/ActiveSpeakerAssociationTable.asm"
+.include "../tables/DIALOGUE/ActiveSpeakerAssociationTable.asm"
 
 rlGetTilesetFadePalettePointer ; 8C/C9D2
 
@@ -15229,7 +15229,7 @@ rlGetTilesetFadePalettePointer ; 8C/C9D2
 	plb
 	rtl
 
-.include "../TABLES/CHAPTERS/ChapterTilesetFadePaletteTable.asm"
+.include "../tables/CHAPTERS/ChapterTilesetFadePaletteTable.asm"
 
 rlGetWorldMapEventPointer ; 8C/CA65
 

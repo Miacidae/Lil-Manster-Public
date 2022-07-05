@@ -398,7 +398,7 @@ rsProcEventTestUpdateText ; 82/81AF
 	_aMapSelectNumberCoordinates ; 82/82BB
 		.word (14 << 8) | 18
 
-.include "../../TABLES/EventTestMapSelectNames.asm"
+.include "../../tables/EventTestMapSelectNames.asm"
 
 .include "../../TEXT/EVENTTEST/Map01.asm"
 .include "../../TEXT/EVENTTEST/Map02.asm"

@@ -1,5 +1,5 @@
 
-aMainPrepItemsActionTable .binclude "../TABLES/PrepItemsActionTable.casm" ; 81/E14D
+aMainPrepItemsActionTable .binclude "../tables/PrepItemsActionTable.casm" ; 81/E14D
 
 aUnknown81E1B9 ; 81/E1B9
 	.sint  0
@@ -2720,7 +2720,7 @@ rsPrepItemsClearMenuDescriptionTextSpace ; 81/F37B
 	pla
 	rts
 
-.include "../TABLES/PrepItemsDescriptions.asm"
+.include "../tables/PrepItemsDescriptions.asm"
 
 .include "../TEXT/PREPITEMS/DescriptionLine1.asm"
 .include "../TEXT/PREPITEMS/DescriptionLine2.asm"

@@ -802,4 +802,4 @@ rlGetCharacterWinLossTableOffset ; 81/C9C7
 	sec
 	rtl
 
-.include "../TABLES/SYSTEM/WinLossOffsets.asm"
+.include "../tables/SYSTEM/WinLossOffsets.asm"
