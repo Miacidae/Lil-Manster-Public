@@ -2409,7 +2409,7 @@ rlGetMapCoordsByTileIndex ; 83/8E84
 	sta wR1
 	rtl
 
-.include "../TABLES/SYSTEM/DeploymentSlotTable.asm"
+.include "../tables/SYSTEM/DeploymentSlotTable.asm"
 
 rlCopyCharacterDataToBufferByDeploymentNumber ; 83/901C
 
@@ -9116,7 +9116,7 @@ rlTryGetBrokenItemID ; 83/B0B7
 	plp
 	rtl
 
-	.include "../TABLES/ITEMS/BrokenItemTable.asm"
+	.include "../tables/ITEMS/BrokenItemTable.asm"
 
 	_ReturnUnbroken
 	lda aItemDataBuffer.Durability,b

@@ -13,7 +13,7 @@
 .include "asm/macros/DisassemblyHelpers.inc"
 .include "asm/macros/DMA.inc"
 .include "asm/macros/EventFlags.inc"
-.include "asm/macros/Eventmacros.inc"
+.include "asm/macros/EventMacros.inc"
 .include "asm/macros/Events.inc"
 .include "asm/macros/HDMA.inc"
 .include "asm/macros/Items.inc"
