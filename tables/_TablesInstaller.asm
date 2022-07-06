@@ -21,6 +21,11 @@
 	.include "MAP/TilesetAnimations.asm"
 .here
 
+* = $029D6B
+.logical lorom($029D6B, 1)
+	.include "ITEMS/PreparationsShopItems.asm"
+.here
+
 * = $02EF13
 .logical lorom($02EF13, 1)
 	.include "ARENA/ArenaWeaponsTable.asm"
