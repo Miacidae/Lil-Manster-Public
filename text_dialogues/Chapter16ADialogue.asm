@@ -579,7 +579,7 @@ ch16Abridgekeyhouse
 .byte NewLine
 .text "Ever since this place got swallowed up by"
 .byte NewLine
-.text "King Blume, nothing's gone right around here."
+.text "King Bloom, nothing's gone right around here."
 .byte WaitForA
 .byte ScrollText
 .text "Oh, how I miss the days when Leonster"

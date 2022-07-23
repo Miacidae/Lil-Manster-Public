@@ -353,7 +353,7 @@ ch14xclosing
 .byte ScrollText
 .text "That's my thinking, yes, but I've not yet heard"
 .byte NewLine
-.text "August' opinion on the matter."
+.text "August's opinion on the matter."
 .byte WaitForA
 .byte ScrollText
 .text "At any rate, we'll have to cross this mountain"

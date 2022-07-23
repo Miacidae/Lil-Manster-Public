@@ -1211,7 +1211,7 @@ ch4wm3
 .text "he was made Baron of Munster."
 .byte WaitForA
 .byte ScrollText
-.text "While still subordinate to Lord Blume,"
+.text "While still subordinate to Lord Bloom,"
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2
 .word $017C ;blume

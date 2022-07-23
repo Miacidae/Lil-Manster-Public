@@ -571,7 +571,7 @@ ch17Bclosing1
 .byte ScrollText
 .text "The castle's commander is a man named"
 .byte NewLine
-.text "Gustav, a close associate of King Blume."
+.text "Gustav, a close associate of King Bloom."
 .byte NewLine
 .text "He is...a man of many vices."
 .byte WaitForA

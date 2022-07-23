@@ -77,7 +77,7 @@ ch20opening1
 .byte NewLine
 .text "yet Leonster still stands."
 .byte NewLine
-.text "King Blume is...displeased."
+.text "King Bloom is...displeased."
 .byte WaitForA
 .byte ScrollText
 .text "I don't mean to speak out of turn,"

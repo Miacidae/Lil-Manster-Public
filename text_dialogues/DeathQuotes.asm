@@ -449,7 +449,7 @@ deandeath
 .byte EndText
 
 paulusdeath
-.text "King Blume, I beg of you..."
+.text "King Bloom, I beg of you..."
 .byte NewLine
 .text "I've...seen what will happen..."
 .byte NewLine
@@ -755,7 +755,7 @@ gunterdeath
 mannheimdeath
 .text "Ugh...!"
 .byte NewLine
-.text "King Blume, I've failed you..."
+.text "King Bloom, I've failed you..."
 .byte NewLine
 .text "Please forgive me..."
 .byte WaitForA

@@ -594,7 +594,7 @@ ch21wm3
 .word $017C ;blume
 .word $0407 ;y then x
 .byte NewLine
-.text "King Blume, had escaped to Connaught."
+.text "King Bloom, had escaped to Connaught."
 .byte WaitForA
 .word ClearPortraitalt
 .long $82937A

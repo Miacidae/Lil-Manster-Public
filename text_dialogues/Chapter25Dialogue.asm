@@ -505,7 +505,7 @@ ch25ending2finn
 .byte ScrollText
 .text "My only regret is that I couldn't kill"
 .byte NewLine
-.text "King Blume with my own hands."
+.text "King Bloom with my own hands."
 .byte WaitForA
 
 .byte Right_slot

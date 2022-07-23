@@ -895,7 +895,7 @@ ch17Aclosing
 .byte ScrollText
 .text "The man inside, Marquess Gustav,"
 .byte NewLine
-.text "is King Blume's right-hand man—"
+.text "is King Bloom's right-hand man—"
 .byte NewLine
 .text "and he's been ruling Leonster with an iron fist."
 .byte WaitForA

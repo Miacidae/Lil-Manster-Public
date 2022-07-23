@@ -120,7 +120,7 @@ ch21xclosing
 .text "Hmm..."
 .byte WaitForA
 .byte NewLine
-.text "It's not enough that Blume is struggling to hold"
+.text "It's not enough that Bloom is struggling to hold"
 .byte NewLine
 .text "Connaught against the Isaachian rebels—"
 .byte NewLine

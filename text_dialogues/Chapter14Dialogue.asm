@@ -464,7 +464,7 @@ ch14npcarrive
 .byte ScrollText
 .text "Tahra is the most important card we can play"
 .byte NewLine
-.text "against Blume... See that you don't damage"
+.text "against Bloom... See that you don't damage"
 .byte NewLine
 .text "the city too much in all the fighting."
 .byte WaitForA

@@ -433,7 +433,7 @@ ch2xend1
 	.text "gemstones to the Empire's leading noblemen."
 	.byte WaitForA
 	.byte ScrollText
-	.text "It was...an admirable effort, but King Blume"
+	.text "It was...an admirable effort, but King Bloom"
 	.byte NewLine
 	.text "of Thracia did not forgive such a slight, and"
 	.byte NewLine

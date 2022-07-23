@@ -858,7 +858,7 @@ ch16Bwm1
 .long LoadPortraitalt_2
 .word $003B ;augustus
 .word $0B0F ;y then x
-.text "Heeding August' advice,"
+.text "Heeding August's advice,"
 .byte NewLine
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2
