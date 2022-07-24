@@ -168,7 +168,7 @@
 		VeninEdgeCost					= 0
 		VeninEdgeDescription			= <>item_descs._VeninEdgeDesc
 		VeninEdgeUseEffect				= None
-		VeninEdgeWeaponEffect			= $2
+		VeninEdgeWeaponEffect			= PoisonEffect
 		VeninEdgeSkills2				= None
 		VeninEdgeSkills3				= None
 		VeninEdgeTraits					= TraitWeapon
@@ -190,7 +190,7 @@
 		BerserkEdgeCost					= 3000
 		BerserkEdgeDescription			= <>item_descs._BerserkEdgeDesc
 		BerserkEdgeUseEffect			= None
-		BerserkEdgeWeaponEffect			= $C
+		BerserkEdgeWeaponEffect			= BerserkEffect
 		BerserkEdgeSkills2				= None
 		BerserkEdgeSkills3				= None
 		BerserkEdgeTraits				= TraitWeapon
@@ -212,7 +212,7 @@
 		SleepEdgeCost					= 2000
 		SleepEdgeDescription			= <>item_descs._SleepEdgeDesc
 		SleepEdgeUseEffect				= None
-		SleepEdgeWeaponEffect			= $E
+		SleepEdgeWeaponEffect			= SleepEffect
 		SleepEdgeSkills2				= None
 		SleepEdgeSkills3				= None
 		SleepEdgeTraits					= TraitWeapon
@@ -321,7 +321,7 @@
 		LightBrandStatBonus				= aLightBrandItemBonuses
 		LightBrandCost					= 0
 		LightBrandDescription			= <>item_descs._LightBrandDesc
-		LightBrandUseEffect				= $20
+		LightBrandUseEffect				= VulneraryUse
 		LightBrandWeaponEffect			= None
 		LightBrandSkills2				= None
 		LightBrandSkills3				= None
@@ -388,7 +388,7 @@
 		EarthSwordCost					= 0
 		EarthSwordDescription			= <>item_descs._EarthSwordDesc
 		EarthSwordUseEffect				= None
-		EarthSwordWeaponEffect			= $6
+		EarthSwordWeaponEffect			= DrainEffect
 		EarthSwordSkills2				= None
 		EarthSwordSkills3				= None
 		EarthSwordTraits				= TraitMagicRanged | TraitWeapon | TraitUnsellable
@@ -784,7 +784,7 @@
 		VeninLanceCost					= 0
 		VeninLanceDescription			= <>item_descs._VeninLanceDesc
 		VeninLanceUseEffect				= None
-		VeninLanceWeaponEffect			= $2
+		VeninLanceWeaponEffect			= PoisonEffect
 		VeninLanceSkills2				= None
 		VeninLanceSkills3				= None
 		VeninLanceTraits				= TraitWeapon
@@ -1114,7 +1114,7 @@
 		VeninAxeCost					= 0
 		VeninAxeDescription				= <>item_descs._VeninAxeDesc
 		VeninAxeUseEffect				= None
-		VeninAxeWeaponEffect			= $2
+		VeninAxeWeaponEffect			= PoisonEffect
 		VeninAxeSkills2					= None
 		VeninAxeSkills3					= None
 		VeninAxeTraits					= TraitWeapon
@@ -1290,7 +1290,7 @@
 		DevilAxeCost					= 1200
 		DevilAxeDescription				= <>item_descs._DevilAxeDesc
 		DevilAxeUseEffect				= None
-		DevilAxeWeaponEffect			= $4
+		DevilAxeWeaponEffect			= CurseEffect
 		DevilAxeSkills2					= None
 		DevilAxeSkills3					= None
 		DevilAxeTraits					= TraitWeapon
@@ -1466,7 +1466,7 @@
 		VeninBowCost					= 1000
 		VeninBowDescription				= <>item_descs._VeninBowDesc
 		VeninBowUseEffect				= None
-		VeninBowWeaponEffect			= $2
+		VeninBowWeaponEffect			= PoisonEffect
 		VeninBowSkills2					= None
 		VeninBowSkills3					= None
 		VeninBowTraits					= TraitWeapon
@@ -1686,7 +1686,7 @@
 		VeninBallistaCost				= 2200
 		VeninBallistaDescription		= <>item_descs._VeninBallistaDesc
 		VeninBallistaUseEffect			= None
-		VeninBallistaWeaponEffect		= $2
+		VeninBallistaWeaponEffect		= PoisonEffect
 		VeninBallistaSkills2			= None
 		VeninBallistaSkills3			= None
 		VeninBallistaTraits				= TraitBallista | TraitWeapon
@@ -2016,7 +2016,7 @@
 		NosferatuCost					= 6200
 		NosferatuDescription			= <>item_descs._NosferatuDesc
 		NosferatuUseEffect				= None
-		NosferatuWeaponEffect			= $6
+		NosferatuWeaponEffect			= DrainEffect
 		NosferatuSkills2				= None
 		NosferatuSkills3				= None
 		NosferatuTraits					= TraitWeapon | TraitTome
@@ -2060,7 +2060,7 @@
 		JormungandCost					= 2200
 		JormungandDescription			= <>item_descs._JormungandDesc
 		JormungandUseEffect				= None
-		JormungandWeaponEffect			= $2
+		JormungandWeaponEffect			= PoisonEffect
 		JormungandSkills2				= None
 		JormungandSkills3				= None
 		JormungandTraits				= TraitWeapon | TraitTome
@@ -2104,7 +2104,7 @@
 		HelCost							= 3200
 		HelDescription					= <>item_descs._HelDesc
 		HelUseEffect					= None
-		HelWeaponEffect					= $A
+		HelWeaponEffect					= HelEffect
 		HelSkills2						= None
 		HelSkills3						= None
 		HelTraits						= TraitWeapon | TraitTome | TraitUnsellable
@@ -2192,7 +2192,7 @@
 		BlizzardCost					= 2200
 		BlizzardDescription				= <>item_descs._BlizzardDesc
 		BlizzardUseEffect				= None
-		BlizzardWeaponEffect			= $E
+		BlizzardWeaponEffect			= SleepEffect
 		BlizzardSkills2					= None
 		BlizzardSkills3					= None
 		BlizzardTraits					= TraitWeapon | TraitTome
@@ -2214,7 +2214,7 @@
 		VeninCost						= 3200
 		VeninDescription				= <>item_descs._VeninDesc
 		VeninUseEffect					= None
-		VeninWeaponEffect				= $2
+		VeninWeaponEffect				= PoisonEffect
 		VeninSkills2					= None
 		VeninSkills3					= None
 		VeninTraits						= TraitWeapon | TraitTome
@@ -2236,7 +2236,7 @@
 		PetrifyCost						= 0
 		PetrifyDescription				= <>item_descs._PetrifyDesc
 		PetrifyUseEffect				= None
-		PetrifyWeaponEffect				= $8
+		PetrifyWeaponEffect				= StoneEffect
 		PetrifySkills2					= None
 		PetrifySkills3					= None
 		PetrifyTraits					= TraitWeapon | TraitTome
@@ -2301,7 +2301,7 @@
 		HealStatBonus					= aNoItemBonuses
 		HealCost						= 2200
 		HealDescription					= <>item_descs._HealDesc
-		HealUseEffect					= $3C
+		HealUseEffect					= HealUse
 		HealWeaponEffect				= None
 		HealSkills2						= None
 		HealSkills3						= None
@@ -2323,7 +2323,7 @@
 		MendStatBonus					= aNoItemBonuses
 		MendCost						= 2300
 		MendDescription					= <>item_descs._MendDesc
-		MendUseEffect					= $3E
+		MendUseEffect					= MendUse
 		MendWeaponEffect				= None
 		MendSkills2						= None
 		MendSkills3						= None
@@ -2345,7 +2345,7 @@
 		RecoverStatBonus				= aNoItemBonuses
 		RecoverCost						= 2200
 		RecoverDescription				= <>item_descs._RecoverDesc
-		RecoverUseEffect				= $40
+		RecoverUseEffect				= RecoverUse
 		RecoverWeaponEffect				= None
 		RecoverSkills2					= None
 		RecoverSkills3					= None
@@ -2367,7 +2367,7 @@
 		PhysicStatBonus					= aNoItemBonuses
 		PhysicCost						= 1700
 		PhysicDescription				= <>item_descs._PhysicDesc
-		PhysicUseEffect					= $42
+		PhysicUseEffect					= PhysicUse
 		PhysicWeaponEffect				= None
 		PhysicSkills2					= None
 		PhysicSkills3					= None
@@ -2389,7 +2389,7 @@
 		FortifyStatBonus				= aNoItemBonuses
 		FortifyCost						= 1700
 		FortifyDescription				= <>item_descs._FortifyDesc
-		FortifyUseEffect				= $44
+		FortifyUseEffect				= FortifyUse
 		FortifyWeaponEffect				= None
 		FortifySkills2					= None
 		FortifySkills3					= None
@@ -2411,7 +2411,7 @@
 		RescueStatBonus					= aNoItemBonuses
 		RescueCost						= 2000
 		RescueDescription				= <>item_descs._RescueDesc
-		RescueUseEffect					= $46
+		RescueUseEffect					= RescueUse
 		RescueWeaponEffect				= None
 		RescueSkills2					= None
 		RescueSkills3					= None
@@ -2433,7 +2433,7 @@
 		WarpStatBonus					= aNoItemBonuses
 		WarpCost						= 2000
 		WarpDescription					= <>item_descs._WarpDesc
-		WarpUseEffect					= $48
+		WarpUseEffect					= WarpUse
 		WarpWeaponEffect				= None
 		WarpSkills2						= None
 		WarpSkills3						= None
@@ -2455,7 +2455,7 @@
 		RestoreStatBonus				= aNoItemBonuses
 		RestoreCost						= 3200
 		RestoreDescription				= <>item_descs._RestoreDesc
-		RestoreUseEffect				= $4A
+		RestoreUseEffect				= RestoreUse
 		RestoreWeaponEffect				= None
 		RestoreSkills2					= None
 		RestoreSkills3					= None
@@ -2477,7 +2477,7 @@
 		SilenceStatBonus				= aNoItemBonuses
 		SilenceCost						= 1400
 		SilenceDescription				= <>item_descs._SilenceDesc
-		SilenceUseEffect				= $4C
+		SilenceUseEffect				= SilenceUse
 		SilenceWeaponEffect				= None
 		SilenceSkills2					= None
 		SilenceSkills3					= None
@@ -2499,7 +2499,7 @@
 		SleepStatBonus					= aNoItemBonuses
 		SleepCost						= 1700
 		SleepDescription				= <>item_descs._SleepDesc
-		SleepUseEffect					= $4E
+		SleepUseEffect					= SleepUse
 		SleepWeaponEffect				= None
 		SleepSkills2					= None
 		SleepSkills3					= None
@@ -2521,7 +2521,7 @@
 		TorchStaffStatBonus				= aNoItemBonuses
 		TorchStaffCost					= 2200
 		TorchStaffDescription			= <>item_descs._TorchStaffDesc
-		TorchStaffUseEffect				= $50
+		TorchStaffUseEffect				= TorchStaffUse
 		TorchStaffWeaponEffect			= None
 		TorchStaffSkills2				= None
 		TorchStaffSkills3				= None
@@ -2543,7 +2543,7 @@
 		ReturnStaffStatBonus			= aNoItemBonuses
 		ReturnStaffCost					= 2000
 		ReturnStaffDescription			= <>item_descs._ReturnDesc
-		ReturnStaffUseEffect			= $52
+		ReturnStaffUseEffect			= ReturnStaffUse
 		ReturnStaffWeaponEffect			= None
 		ReturnStaffSkills2				= None
 		ReturnStaffSkills3				= None
@@ -2565,7 +2565,7 @@
 		HammerneStatBonus				= aNoItemBonuses
 		HammerneCost					= 2200
 		HammerneDescription				= <>item_descs._HammerneDesc
-		HammerneUseEffect				= $54
+		HammerneUseEffect				= HammerneUse
 		HammerneWeaponEffect			= None
 		HammerneSkills2					= None
 		HammerneSkills3					= None
@@ -2587,7 +2587,7 @@
 		ThiefStaffStatBonus				= aNoItemBonuses
 		ThiefStaffCost					= 1800
 		ThiefStaffDescription			= <>item_descs._ThiefDesc
-		ThiefStaffUseEffect				= $56
+		ThiefStaffUseEffect				= ThiefStaffUse
 		ThiefStaffWeaponEffect			= None
 		ThiefStaffSkills2				= None
 		ThiefStaffSkills3				= None
@@ -2609,7 +2609,7 @@
 		WatchStatBonus					= aNoItemBonuses
 		WatchCost						= 1800
 		WatchDescription				= <>item_descs._WatchDesc
-		WatchUseEffect					= $58
+		WatchUseEffect					= WatchUse
 		WatchWeaponEffect				= None
 		WatchSkills2					= None
 		WatchSkills3					= None
@@ -2631,7 +2631,7 @@
 		BerserkStatBonus				= aNoItemBonuses
 		BerserkCost						= 2000
 		BerserkDescription				= <>item_descs._BerserkDesc
-		BerserkUseEffect				= $5A
+		BerserkUseEffect				= BerserkUse
 		BerserkWeaponEffect				= None
 		BerserkSkills2					= None
 		BerserkSkills3					= None
@@ -2653,7 +2653,7 @@
 		UnlockStatBonus					= aNoItemBonuses
 		UnlockCost						= 1400
 		UnlockDescription				= <>item_descs._UnlockDesc
-		UnlockUseEffect					= $5C
+		UnlockUseEffect					= UnlockUse
 		UnlockWeaponEffect				= None
 		UnlockSkills2					= None
 		UnlockSkills3					= None
@@ -2675,7 +2675,7 @@
 		EnsorcelStatBonus				= aNoItemBonuses
 		EnsorcelCost					= 2200
 		EnsorcelDescription				= <>item_descs._EnsorcelDesc
-		EnsorcelUseEffect				= $5E
+		EnsorcelUseEffect				= EnsorcelUse
 		EnsorcelWeaponEffect			= None
 		EnsorcelSkills2					= None
 		EnsorcelSkills3					= None
@@ -2697,7 +2697,7 @@
 		RewarpStatBonus					= aNoItemBonuses
 		RewarpCost						= 1200
 		RewarpDescription				= <>item_descs._RewarpDesc
-		RewarpUseEffect					= $60
+		RewarpUseEffect					= RewarpUse
 		RewarpWeaponEffect				= None
 		RewarpSkills2					= None
 		RewarpSkills3					= None
@@ -2719,7 +2719,7 @@
 		KiaStatBonus					= aNoItemBonuses
 		KiaCost							= 2200
 		KiaDescription					= <>item_descs._KiaDesc
-		KiaUseEffect					= $68
+		KiaUseEffect					= KiaUse
 		KiaWeaponEffect					= None
 		KiaSkills2						= None
 		KiaSkills3						= None
@@ -2763,7 +2763,7 @@
 		LuckRingStatBonus				= aNoItemBonuses
 		LuckRingCost					= 8200
 		LuckRingDescription				= <>item_descs._LuckRingDesc
-		LuckRingUseEffect				= $2
+		LuckRingUseEffect				= LuckRingUse
 		LuckRingWeaponEffect			= None
 		LuckRingSkills2					= None
 		LuckRingSkills3					= None
@@ -2785,7 +2785,7 @@
 		LifeRingStatBonus				= aNoItemBonuses
 		LifeRingCost					= 8200
 		LifeRingDescription				= <>item_descs._LifeRingDesc
-		LifeRingUseEffect				= $4
+		LifeRingUseEffect				= LifeRingUse
 		LifeRingWeaponEffect			= None
 		LifeRingSkills2					= None
 		LifeRingSkills3					= None
@@ -2807,7 +2807,7 @@
 		SpeedRingStatBonus				= aNoItemBonuses
 		SpeedRingCost					= 8200
 		SpeedRingDescription			= <>item_descs._SpeedRingDesc
-		SpeedRingUseEffect				= $6
+		SpeedRingUseEffect				= SpeedRingUse
 		SpeedRingWeaponEffect			= None
 		SpeedRingSkills2				= None
 		SpeedRingSkills3				= None
@@ -2829,7 +2829,7 @@
 		MagicRingStatBonus				= aNoItemBonuses
 		MagicRingCost					= 8200
 		MagicRingDescription			= <>item_descs._MagicRingDesc
-		MagicRingUseEffect				= $8
+		MagicRingUseEffect				= MagicRingUse
 		MagicRingWeaponEffect			= None
 		MagicRingSkills2				= None
 		MagicRingSkills3				= None
@@ -2851,7 +2851,7 @@
 		StrengthRingStatBonus			= aNoItemBonuses
 		StrengthRingCost				= 8200
 		StrengthRingDescription			= <>item_descs._StrengthRingDesc
-		StrengthRingUseEffect			= $A
+		StrengthRingUseEffect			= StrengthRingUse
 		StrengthRingWeaponEffect		= None
 		StrengthRingSkills2				= None
 		StrengthRingSkills3				= None
@@ -2873,7 +2873,7 @@
 		BodyRingStatBonus				= aNoItemBonuses
 		BodyRingCost					= 8200
 		BodyRingDescription				= <>item_descs._BodyRingDesc
-		BodyRingUseEffect				= $C
+		BodyRingUseEffect				= BodyRingUse
 		BodyRingWeaponEffect			= None
 		BodyRingSkills2					= None
 		BodyRingSkills3					= None
@@ -2895,7 +2895,7 @@
 		ShieldRingStatBonus				= aNoItemBonuses
 		ShieldRingCost					= 8200
 		ShieldRingDescription			= <>item_descs._ShieldRingDesc
-		ShieldRingUseEffect				= $E
+		ShieldRingUseEffect				= ShieldRingUse
 		ShieldRingWeaponEffect			= None
 		ShieldRingSkills2				= None
 		ShieldRingSkills3				= None
@@ -2917,7 +2917,7 @@
 		SkillRingStatBonus				= aNoItemBonuses
 		SkillRingCost					= 8200
 		SkillRingDescription			= <>item_descs._SkillRingDesc
-		SkillRingUseEffect				= $10
+		SkillRingUseEffect				= SkillRingUse
 		SkillRingWeaponEffect			= None
 		SkillRingSkills2				= None
 		SkillRingSkills3				= None
@@ -2939,7 +2939,7 @@
 		LegRingStatBonus				= aNoItemBonuses
 		LegRingCost						= 8200
 		LegRingDescription				= <>item_descs._LegRingDesc
-		LegRingUseEffect				= $12
+		LegRingUseEffect				= LegRingUse
 		LegRingWeaponEffect				= None
 		LegRingSkills2					= None
 		LegRingSkills3					= None
@@ -2961,7 +2961,7 @@
 		MasterSealStatBonus				= aNoItemBonuses
 		MasterSealCost					= 8200
 		MasterSealDescription			= <>item_descs._MasterSealDesc
-		MasterSealUseEffect				= $14
+		MasterSealUseEffect				= MasterSealUse
 		MasterSealWeaponEffect			= None
 		MasterSealSkills2				= None
 		MasterSealSkills3				= None
@@ -2983,7 +2983,7 @@
 		MasterCrownStatBonus			= aNoItemBonuses
 		MasterCrownCost					= 8200
 		MasterCrownDescription			= <>item_descs._MasterCrownDesc
-		MasterCrownUseEffect			= $16
+		MasterCrownUseEffect			= MasterCrownUse
 		MasterCrownWeaponEffect			= None
 		MasterCrownSkills2				= None
 		MasterCrownSkills3				= None
@@ -3005,7 +3005,7 @@
 		ChestKeyStatBonus				= aNoItemBonuses
 		ChestKeyCost					= 6200
 		ChestKeyDescription				= <>item_descs._ChestKeyDesc
-		ChestKeyUseEffect				= $18
+		ChestKeyUseEffect				= ChestKeyUse
 		ChestKeyWeaponEffect			= None
 		ChestKeySkills2					= None
 		ChestKeySkills3					= None
@@ -3027,7 +3027,7 @@
 		DoorKeyStatBonus				= aNoItemBonuses
 		DoorKeyCost						= 700
 		DoorKeyDescription				= <>item_descs._DoorKeyDesc
-		DoorKeyUseEffect				= $1A
+		DoorKeyUseEffect				= DoorKeyUse
 		DoorKeyWeaponEffect				= None
 		DoorKeySkills2					= None
 		DoorKeySkills3					= None
@@ -3049,7 +3049,7 @@
 		BridgeKeyStatBonus				= aNoItemBonuses
 		BridgeKeyCost					= 700
 		BridgeKeyDescription			= <>item_descs._BridgeKeyDesc
-		BridgeKeyUseEffect				= $1C
+		BridgeKeyUseEffect				= BridgeKeyUse
 		BridgeKeyWeaponEffect			= None
 		BridgeKeySkills2				= None
 		BridgeKeySkills3				= None
@@ -3071,7 +3071,7 @@
 		LockpickStatBonus				= aNoItemBonuses
 		LockpickCost					= 3200
 		LockpickDescription				= <>item_descs._LockpickDesc
-		LockpickUseEffect				= $1E
+		LockpickUseEffect				= LockpickUse
 		LockpickWeaponEffect			= None
 		LockpickSkills2					= None
 		LockpickSkills3					= None
@@ -3093,7 +3093,7 @@
 		StaminaDrinkStatBonus			= aNoItemBonuses
 		StaminaDrinkCost				= 5200
 		StaminaDrinkDescription			= <>item_descs._StaminaDrinkDesc
-		StaminaDrinkUseEffect			= $66
+		StaminaDrinkUseEffect			= StaminaDrinkUse
 		StaminaDrinkWeaponEffect		= None
 		StaminaDrinkSkills2				= None
 		StaminaDrinkSkills3				= None
@@ -3115,7 +3115,7 @@
 		VulneraryStatBonus				= aNoItemBonuses
 		VulneraryCost					= 800
 		VulneraryDescription			= <>item_descs._VulneraryDesc
-		VulneraryUseEffect				= $20
+		VulneraryUseEffect				= VulneraryUse
 		VulneraryWeaponEffect			= None
 		VulnerarySkills2				= None
 		VulnerarySkills3				= None
@@ -3137,7 +3137,7 @@
 		PureWaterStatBonus				= aNoItemBonuses
 		PureWaterCost					= 1200
 		PureWaterDescription			= <>item_descs._PureWaterDesc
-		PureWaterUseEffect				= $22
+		PureWaterUseEffect				= PureWaterUse
 		PureWaterWeaponEffect			= None
 		PureWaterSkills2				= None
 		PureWaterSkills3				= None
@@ -3159,7 +3159,7 @@
 		TorchStatBonus					= aNoItemBonuses
 		TorchCost						= 700
 		TorchDescription				= <>item_descs._TorchDesc
-		TorchUseEffect					= $24
+		TorchUseEffect					= TorchUse
 		TorchWeaponEffect				= None
 		TorchSkills2					= None
 		TorchSkills3					= None
@@ -3181,7 +3181,7 @@
 		AntitoxinStatBonus				= aNoItemBonuses
 		AntitoxinCost					= 1700
 		AntitoxinDescription			= <>item_descs._AntitoxinDesc
-		AntitoxinUseEffect				= $26
+		AntitoxinUseEffect				= AntitoxinUse
 		AntitoxinWeaponEffect			= None
 		AntitoxinSkills2				= None
 		AntitoxinSkills3				= None
@@ -3489,7 +3489,7 @@
 		ParagonManualStatBonus			= aNoItemBonuses
 		ParagonManualCost				= 8200
 		ParagonManualDescription		= <>item_descs._ParagonManualDesc
-		ParagonManualUseEffect			= $28
+		ParagonManualUseEffect			= ParagonManualUse
 		ParagonManualWeaponEffect		= None
 		ParagonManualSkills2			= None
 		ParagonManualSkills3			= None
@@ -3511,7 +3511,7 @@
 		AccostManualStatBonus			= aNoItemBonuses
 		AccostManualCost				= 8200
 		AccostManualDescription			= <>item_descs._AccostManualDesc
-		AccostManualUseEffect			= $2A
+		AccostManualUseEffect			= AccostManualUse
 		AccostManualWeaponEffect		= None
 		AccostManualSkills2				= None
 		AccostManualSkills3				= None
@@ -3533,7 +3533,7 @@
 		BargainManualStatBonus			= aNoItemBonuses
 		BargainManualCost				= 8200
 		BargainManualDescription		= <>item_descs._BargainManualDesc
-		BargainManualUseEffect			= $2C
+		BargainManualUseEffect			= BargainManualUse
 		BargainManualWeaponEffect		= None
 		BargainManualSkills2			= None
 		BargainManualSkills3			= None
@@ -3555,7 +3555,7 @@
 		VantageManualStatBonus			= aNoItemBonuses
 		VantageManualCost				= 8200
 		VantageManualDescription		= <>item_descs._VantageManualDesc
-		VantageManualUseEffect			= $2E
+		VantageManualUseEffect			= VantageManualUse
 		VantageManualWeaponEffect		= None
 		VantageManualSkills2			= None
 		VantageManualSkills3			= None
@@ -3577,7 +3577,7 @@
 		WrathManualStatBonus			= aNoItemBonuses
 		WrathManualCost					= 8200
 		WrathManualDescription			= <>item_descs._WrathManualDesc
-		WrathManualUseEffect			= $30
+		WrathManualUseEffect			= WrathManualUse
 		WrathManualWeaponEffect			= None
 		WrathManualSkills2				= None
 		WrathManualSkills3				= None
@@ -3599,7 +3599,7 @@
 		AdeptManualStatBonus			= aNoItemBonuses
 		AdeptManualCost					= 8200
 		AdeptManualDescription			= <>item_descs._AdeptManualDesc
-		AdeptManualUseEffect			= $32
+		AdeptManualUseEffect			= AdeptManualUse
 		AdeptManualWeaponEffect			= None
 		AdeptManualSkills2				= None
 		AdeptManualSkills3				= None
@@ -3621,7 +3621,7 @@
 		MiracleManualStatBonus			= aNoItemBonuses
 		MiracleManualCost				= 8200
 		MiracleManualDescription		= <>item_descs._MiracleManualDesc
-		MiracleManualUseEffect			= $34
+		MiracleManualUseEffect			= MiracleManualUse
 		MiracleManualWeaponEffect		= None
 		MiracleManualSkills2			= None
 		MiracleManualSkills3			= None
@@ -3643,7 +3643,7 @@
 		NihilManualStatBonus			= aNoItemBonuses
 		NihilManualCost					= 8200
 		NihilManualDescription			= <>item_descs._NihilManualDesc
-		NihilManualUseEffect			= $36
+		NihilManualUseEffect			= NihilManualUse
 		NihilManualWeaponEffect			= None
 		NihilManualSkills2				= None
 		NihilManualSkills3				= None
@@ -3665,7 +3665,7 @@
 		SolManualStatBonus				= aNoItemBonuses
 		SolManualCost					= 8200
 		SolManualDescription			= <>item_descs._SolManualDesc
-		SolManualUseEffect				= $38
+		SolManualUseEffect				= SolManualUse
 		SolManualWeaponEffect			= None
 		SolManualSkills2				= None
 		SolManualSkills3				= None
@@ -3687,7 +3687,7 @@
 		LunaManualStatBonus				= aNoItemBonuses
 		LunaManualCost					= 8200
 		LunaManualDescription			= <>item_descs._LunaManualDesc
-		LunaManualUseEffect				= $3A
+		LunaManualUseEffect				= LunaManualUse
 		LunaManualWeaponEffect			= None
 		LunaManualSkills2				= None
 		LunaManualSkills3				= None
