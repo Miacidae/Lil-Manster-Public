@@ -13,6 +13,9 @@ FLIPS allows you to generate a patch file to share your project.
 BPS format is the default.
 IPS format does not perform a ROM check. Only use this if you want your players to be able to patch onto an edited Thracia ROM.
 
+IpsAndSum allows you to fix your rom's checksum before publishing your patch.
+Because this program doesn't fix the checksum of expanded roms, you'll want to load your completed ROM into it, run it, then copy the "NEW CheckSum" part into tables/Header.asm (CartridgeChecksum), then build again with the new checksum.
+
 Lunar Address allows you to easily convert ROM addresses to memory addresses and vice-versa.
 Use the ExLoRom setting, and do not include a header.
 
