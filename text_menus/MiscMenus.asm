@@ -88,6 +88,16 @@ Funds_arena
 
 .here
 
+;	Arena "G"
+;	Character limit: 2
+
+* = $02EE6B
+.logical lorom($02EE6B, 1)
+
+.text "{G}"
+
+.here
+
 ;	Repointed Prf text - Code for it is in Code838000
 ;	Character limit: 6
 

@@ -79,14 +79,9 @@ InventoryTextTilemap2 .binary "InventoryTextTilemap2.bin.fe4"
 
 
 
-;	Shop
+; Shop
 
-* = $0F1B36
-.logical lorom($0F1B36, 1)
-
-.binary "ShopTilemap.bin.fe4"
-
-.here
+; This tilemap is located at asm/QoL/ShopBG3TilemapEdited.bin
 
 
 
