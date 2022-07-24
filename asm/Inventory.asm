@@ -1820,23 +1820,25 @@ rsInventoryDrawMovementStars ; 81/DB38
 	.xl
 	.autsiz
 	.databank `aBG1TilemapBuffer
-	
+
 	lda #$2980
 	sta wUnknown000DE7,b
 
-	lda #(`_YesText)<<8
-	sta lR18+1
-	lda #<>_YesText
-	sta lR18
-	
-	ldx #6 | (35 <<8)
+	lda aActionStructUnit1.MovementStars
+	and #$00FF
+	sta wR13
+
+	lda #5
+	sta wR14
+
+	jsl rlUnsignedDivide16By8
+
+	lda wR13
+	jsl rlGetStarString
+
+	ldx #6 | (35 << 8)
 	jsl $87E728
 	rts
-	
-_YesText
-  .word $2020
-  .text "(M(M(M"
-  .word $0000
 
 rlGetStarString ; 81/DB5D
 
