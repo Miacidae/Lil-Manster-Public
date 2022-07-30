@@ -9,18 +9,20 @@ Setup
 -----------------
 
 - A recent version of [**python 3**](https://www.python.org/) must be installed and in your path.
-  During setup, make sure to install pip and to add python to your environment variables.
+  You will need to install pip and to add python to your environment variables.
+  These last two requirements can be achieved at any time after the initial install by running the installer file and choosing "Modify".
 
-- Install the Pillow module by running `python -m pip install pillow` in cmd.
+- Install the Pillow module by running `python -m pip install pillow` in your command prompt.
 
 - Go through the `tools` folders and install said tools wherever you see an `.url` file.
   64tass, SuperFamiconv and Lunar Expand are required downloads, and the others are all strongly recommended.
+  64tass comes in a folder, so make sure to empty the contents of that folder you download into the `Assembler` folder.
  
 - A hex editor like [**HxD**](https://mh-nexus.de/en/hxd/) and a decent text editor like [**Sublime**](https://www.sublimetext.com/) or [**Notepad++**](https://notepad-plus-plus.org/) are also recommended.
 
 - Place a headerless copy Fire Emblem: Thracia 776 in the `base_rom` folder and name it `FE5.sfc`.
-  Then, it needs to be expanded to 48 Mbit ExLoROM (6 MB) 2.
-  Read the text file in `base_rom` for detailed instructions on how to expand the ROM with Lunar Expand.
+  Then, using Lunar Expand, it needs to be expanded using the second 48 MBit ExLoROM option (48 Mbit ExLoROM 6 MB 2).
+  Read the text file in `base_rom` for further instructions on how to expand the ROM with Lunar Expand.
 
 -----------------
 Operation

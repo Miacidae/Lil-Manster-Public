@@ -114,8 +114,6 @@
 * = $456BA0
 .logical lorom($456BA0, 1)
 
-stattable .binary "StatTable.bin"
-
 statlabels .binary "InventoryBrownBars.4bpp.fe4"
 
 InventoryBrownBars  .binary "InventoryBrownBarsTilemap1.bin.fe4"
@@ -460,7 +458,7 @@ nintendo_logo
 
 .here
 
-; Misc Graphics (Item/Skill icons)
+; Misc Graphics (Item, Weapon rank and Skill icons)
 
 * = $390000
 .logical lorom($390000, 1)

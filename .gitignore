@@ -1,5 +1,7 @@
 *.sfc
 *.pyc
+*.odt
+*.sym
 
 TO_DO.txt
 fe5trans.ups
@@ -21,6 +23,8 @@ tools/BSNES Max/styles/
 tools/BSNES Max/*.exe
 tools/BSNES Max/*.txt
 tools/BSNES Max/*.dll
+
+tools/IpsAndSum/*.exe
 
 tools/FE5 Map Editor/*.jar
 tools/FE5 Map Editor/*.txt
@@ -44,9 +48,9 @@ tools/Usenti/*.exe
 tools/Usenti/*.chm
 tools/Usenti/*.pal
 
+tools/YY-CHR/yychr.dat
 tools/YY-CHR/*.adf
 tools/YY-CHR/*.chr
-tools/YY-CHR/*.dat
 tools/YY-CHR/*.enu
 tools/YY-CHR/*.exe
 tools/YY-CHR/*.fra
