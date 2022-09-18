@@ -569,8 +569,7 @@ eventChapterFinalEvents ; B9/BA0E
 		JUMP_FALSE +
 
 	; This used to have conditional dialogue that spawned Nanna's portrait.
-	; This is unnecessary to Lil' Manster's dialogue scripting and has thus been replaced with filler.
-	.byte $47, $6F, $64, $64, $61, $6D, $6D, $69, $74, $20, $43, $69, $72, $6F, $21
+	; This is unnecessary to Lil' Manster's dialogue scripting.
 
 		STORE_LONG lEventEngineLongParameter, ch25ending7mareeta
 		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
