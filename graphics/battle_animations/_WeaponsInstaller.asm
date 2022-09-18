@@ -6,6 +6,14 @@
 	aBAgraphics_SlimSword						.binary "weapons/SlimSword.4bpp.fe4"
 	aBAgraphics_IronBlade						.binary "weapons/IronBlade.4bpp.fe4"
 	aBAgraphics_KillingEdge						.binary "weapons/KillingEdge.4bpp.fe4"
+
+	.fill $D0FFFF - *, $FF
+
+.here
+
+* = $288000
+.logical $D18000
+	
 	aBAgraphics_BerserkEdge						.binary "weapons/BerserkEdge.4bpp.fe4"
 	aBAgraphics_SleepEdge						.binary "weapons/SleepEdge.4bpp.fe4"
 	aBAgraphics_BeoBlade						.binary "weapons/BeoBlade.4bpp.fe4"
