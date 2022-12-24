@@ -236,7 +236,6 @@
 
 ; Hacky LM fixes
 .include "hacky/hostagec.asm"
-.include "hacky/ending_prolong.asm"
 .include "hacky/epiloguedeathfix.asm"
 .include "hacky/fixshop.asm"
 .include "hacky/loop_epilogue_song.asm"

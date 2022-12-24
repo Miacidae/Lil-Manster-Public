@@ -1,4 +1,4 @@
-;	Timers for each page:
+; This allows you to extend the timer on each page of the ending's "white screen" text.
 
 * = $0D1DE7
 .logical lorom($0D1DE7, 1)
