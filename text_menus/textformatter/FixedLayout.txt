@@ -20,6 +20,9 @@ string	"{blue-}"					0x5B91		[(120, 40), False, False, 2]	[(112, 104), False, Fa
 
 string	"{?}"						0x3F3F		[(120, 96), False, False, 0]	[(120, 104), False, False, 0]
 
+//	Shorter dash for menu text letters
+string	"{dash}"					0x5C81		[(120, 40), False, False, 0]	[(112, 112), False, False, 0]
+
 //?? Diagonal
 fixed	(120, 120)
 
@@ -162,18 +165,6 @@ string	"{SEL2}"					0x7A82		[(56, 224), False, False, 0]	[(56, 232), False, Fals
 
 //% symbol
 string	"{%}"						0x2582		[(0, 240), False, False, 0]		[(0, 248), False, False, 0]
-
-//Armor symbol
-string	"{ARM1}"					0x3141		[(80, 240), False, False, 0]	[(80, 248), False, False, 0]
-string	"{ARM2}"					0x3241		[(88, 240), False, False, 0]	[(88, 248), False, False, 0]
-
-//Cavalry symbol
-string	"{CAV1}"					0x3148		[(96, 240), False, False, 0]	[(96, 248), False, False, 0]
-string	"{CAV2}"					0x3248		[(104, 240), False, False, 0]	[(104, 248), False, False, 0]
-
-//Flier symbol
-string	"{FLY1}"					0x3146		[(96, 240), False, False, 0]	[(96, 248), False, False, 0]
-string	"{FLY2}"					0x3246		[(112, 240), False, False, 0]	[(112, 248), False, False, 0]
 
 string	"{note}"					0x8481		[(120, 240), False, False, 0]	[(120, 248), False, False, 0]
 

@@ -856,9 +856,10 @@ light [magic
 dark [magic
  dark [magic
 
-Effective against
-Eff against
- units
+Anti
+Ar[mor
+Cavalry
+Fliers
 
 Berserks a target
 Silences a target
@@ -998,8 +999,8 @@ Can attack at range
 
 Asbel
 High critical rate
-Effective against
- units
+Anti
+Fliers
 
 +Nanna
 Casts potent light
@@ -1012,9 +1013,10 @@ Gives +Nihil
 Ol]wen, Reinhardt
 
 Ol]wen, High crit
-Eff against
+Anti
+Cavalry
 , Gives (Miracle
-Increases (Mag
+Gives (Mag
 
 Dean, Altena
 , Gives Vantage
@@ -1027,7 +1029,8 @@ and )Wrath
 Ced, Gives 
 Skl & Spd, High crit
 Exalted ]wind [magic
-Eff against
+Anti
+Fliers
 
 Raydrik
 Halves ene[my's
@@ -1036,7 +1039,8 @@ Increases (Mag
 
 Heirs of rebels
 Pierces Fang's curse
-Eff against
+Anti
+Ar[mor
 Gives (Miracle
 
 Potent light [magic
@@ -1298,8 +1302,8 @@ Vantage and Paragon
 Killer Ballista
 Long range
 High critical rate
-Effective against
- units
+Anti
+Fliers
 
 Valfla[me
 Exalted fire [magic
