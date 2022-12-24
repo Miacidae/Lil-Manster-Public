@@ -8,6 +8,10 @@ fe5trans.ups
 labels.txt
 log.txt
 
+text_menus\textformatter\output\*.asm
+text_menus\textformatter\output\*.2bpp
+text_menus\textformatter\output\*.png
+text_menus\textformatter\output\*.bin
 
 tools/Assembler/syntax/
 tools/Assembler/*.exe

@@ -460,7 +460,7 @@ char_name_pointers		.block
 .here
 
 ;	Unit names
-;	Character limit: 14
+;	Character limit: 14 (10 for playable characters)
 
 * = $035CFB
 .logical lorom($035CFB, 1)
