@@ -3,6 +3,7 @@
 .include "textformatter/output/MenuText.asm"
 .include "Options.asm"
 .include "Classes.asm"
+.include "ClassNamesOrder.asm"
 .include "Factions.asm"
 .include "ItemDescriptions.asm"
 .include "ItemNames.asm"
