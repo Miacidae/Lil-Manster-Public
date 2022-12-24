@@ -296,7 +296,7 @@ ch8mastersealhouse
 .text "the thrashing he deserves?!"
 .byte WaitForA
 .byte ScrollText
-.text "By Ullur's Ulcers, that's fantastic news!"
+.text "By Ullr's Ulcers, that's fantastic news!"
 .byte NewLine
 .text "We poured our blood an' sweat"
 .byte NewLine

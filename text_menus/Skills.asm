@@ -299,7 +299,7 @@ _SolDesc
 .word $0000
 
 _RenewalDesc
-	.text "Recover {5}{~}{1}{0}{%}"
+	.text "Recover {5}{-}{1}{0}{%}"
 	.word $0000
 	.text "of [maxi[mu[m {H}{P}"
 	.word $0000
