@@ -250,9 +250,10 @@ graphics_bolganone_ground_tilemap	.binary "unused/BolganoneGroundTilemap.bin.fe4
 graphics_loptous_dragon	.binary "unused/LoptousDragon.4bpp.fe4"
 graphics_loptous_dragon_tilemap	.binary "unused/LoptousDragonTilemap.bin.fe4"
 
-graphics_mjolnir_static	.binary "unused/MjolnirStatic.4bpp.fe4"
+graphics_mjolnir_lines	.binary "unused/MjolnirLines.4bpp.fe4"
 graphics_mjolnir_bolts	.binary "unused/MjolnirBolts.2bpp.fe4"
-graphics_mjolnir_static_tilemap	.binary "unused/MjolnirStaticTilemap.bin.fe4"
+graphics_mjolnir_mystery	.binary "unused/MjolnirMystery.bin"
+graphics_mjolnir_lines_tilemap	.binary "unused/MjolnirLinesTilemap.bin.fe4"
 graphics_mjolnir_bolts_tilemap	.binary "unused/MjolnirBoltsTilemap.bin.fe4"
 
 .here
