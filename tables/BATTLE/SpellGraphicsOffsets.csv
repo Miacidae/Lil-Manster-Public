@@ -74,7 +74,7 @@ GraphicsBlizzardTilemap2,$d4947a,$7eb000,$3800,$800
 GraphicsBlizzardTilemap3,$d4960a,$7eb000,$3800,$800
 GraphicsBlizzardTilemap4,$d4979f,$7eb000,$7000,$800
 GraphicsSomeTilemap6,$d4987c,$7eb000,$7000,$800
-GraphicsMjolnirStatic,graphics_mjolnir_static,$7eb000,$2100,$1200
+GraphicsMjolnirStatic,graphics_mjolnir_static,$7eb000,$2000,$1200
 GraphicsMjolnirBolts2bpp,graphics_mjolnir_bolts,$7eb000,$7000,$D00
 GraphicsMjolnirStaticTilemap,graphics_mjolnir_static_tilemap,$7eb000,$3c00,$800
 GraphicsMjolnirBoltsTilemap,graphics_mjolnir_bolts_tilemap,$7eb000,$3000,$1800

@@ -451,7 +451,7 @@
 	GraphicsMjolnirStatic										= 75
 		GraphicsMjolnirStaticAddress							= graphics_mjolnir_static
 		GraphicsMjolnirStaticRAMbuffer							= $7eb000
-		GraphicsMjolnirStaticVRAMDestination					= $2100
+		GraphicsMjolnirStaticVRAMDestination					= $2000
 		GraphicsMjolnirStaticUncompressedSize					= $1200
 
 	GraphicsMjolnirBolts2bpp									= 76
