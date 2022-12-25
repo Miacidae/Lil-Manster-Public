@@ -448,11 +448,11 @@
 		GraphicsSomeTilemap6VRAMDestination						= $7000
 		GraphicsSomeTilemap6UncompressedSize					= $800
 
-	GraphicsMjolnirLines										= 75
-		GraphicsMjolnirLinesAddress								= graphics_mjolnir_lines
-		GraphicsMjolnirLinesRAMbuffer							= $7eb000
-		GraphicsMjolnirLinesVRAMDestination						= $2100
-		GraphicsMjolnirLinesUncompressedSize					= $1200
+	GraphicsMjolnirStatic										= 75
+		GraphicsMjolnirStaticAddress							= graphics_mjolnir_static
+		GraphicsMjolnirStaticRAMbuffer							= $7eb000
+		GraphicsMjolnirStaticVRAMDestination					= $2100
+		GraphicsMjolnirStaticUncompressedSize					= $1200
 
 	GraphicsMjolnirBolts2bpp									= 76
 		GraphicsMjolnirBolts2bppAddress							= graphics_mjolnir_bolts
@@ -460,11 +460,11 @@
 		GraphicsMjolnirBolts2bppVRAMDestination					= $7000
 		GraphicsMjolnirBolts2bppUncompressedSize				= $D00
 
-	GraphicsMjolnirLinesTilemap									= 77
-		GraphicsMjolnirLinesTilemapAddress						= graphics_mjolnir_lines_tilemap
-		GraphicsMjolnirLinesTilemapRAMbuffer					= $7eb000
-		GraphicsMjolnirLinesTilemapVRAMDestination				= $3c00
-		GraphicsMjolnirLinesTilemapUncompressedSize				= $800
+	GraphicsMjolnirStaticTilemap								= 77
+		GraphicsMjolnirStaticTilemapAddress						= graphics_mjolnir_static_tilemap
+		GraphicsMjolnirStaticTilemapRAMbuffer					= $7eb000
+		GraphicsMjolnirStaticTilemapVRAMDestination				= $3c00
+		GraphicsMjolnirStaticTilemapUncompressedSize			= $800
 
 	GraphicsMjolnirBoltsTilemap									= 78
 		GraphicsMjolnirBoltsTilemapAddress						= graphics_mjolnir_bolts_tilemap
@@ -907,9 +907,9 @@ GraphicsBlizzardTilemap2SpellGraphicsOffsetsEntry .dstruct structSpellGraphics, 
 GraphicsBlizzardTilemap3SpellGraphicsOffsetsEntry .dstruct structSpellGraphics, GraphicsBlizzardTilemap3Address, GraphicsBlizzardTilemap3RAMbuffer, GraphicsBlizzardTilemap3VRAMDestination, GraphicsBlizzardTilemap3UncompressedSize
 GraphicsBlizzardTilemap4SpellGraphicsOffsetsEntry .dstruct structSpellGraphics, GraphicsBlizzardTilemap4Address, GraphicsBlizzardTilemap4RAMbuffer, GraphicsBlizzardTilemap4VRAMDestination, GraphicsBlizzardTilemap4UncompressedSize
 GraphicsSomeTilemap6SpellGraphicsOffsetsEntry .dstruct structSpellGraphics, GraphicsSomeTilemap6Address, GraphicsSomeTilemap6RAMbuffer, GraphicsSomeTilemap6VRAMDestination, GraphicsSomeTilemap6UncompressedSize
-GraphicsMjolnirLinesSpellGraphicsOffsetsEntry .dstruct structSpellGraphics, GraphicsMjolnirLinesAddress, GraphicsMjolnirLinesRAMbuffer, GraphicsMjolnirLinesVRAMDestination, GraphicsMjolnirLinesUncompressedSize
+GraphicsMjolnirStaticSpellGraphicsOffsetsEntry .dstruct structSpellGraphics, GraphicsMjolnirStaticAddress, GraphicsMjolnirStaticRAMbuffer, GraphicsMjolnirStaticVRAMDestination, GraphicsMjolnirStaticUncompressedSize
 GraphicsMjolnirBolts2bppSpellGraphicsOffsetsEntry .dstruct structSpellGraphics, GraphicsMjolnirBolts2bppAddress, GraphicsMjolnirBolts2bppRAMbuffer, GraphicsMjolnirBolts2bppVRAMDestination, GraphicsMjolnirBolts2bppUncompressedSize
-GraphicsMjolnirLinesTilemapSpellGraphicsOffsetsEntry .dstruct structSpellGraphics, GraphicsMjolnirLinesTilemapAddress, GraphicsMjolnirLinesTilemapRAMbuffer, GraphicsMjolnirLinesTilemapVRAMDestination, GraphicsMjolnirLinesTilemapUncompressedSize
+GraphicsMjolnirStaticTilemapSpellGraphicsOffsetsEntry .dstruct structSpellGraphics, GraphicsMjolnirStaticTilemapAddress, GraphicsMjolnirStaticTilemapRAMbuffer, GraphicsMjolnirStaticTilemapVRAMDestination, GraphicsMjolnirStaticTilemapUncompressedSize
 GraphicsMjolnirBoltsTilemapSpellGraphicsOffsetsEntry .dstruct structSpellGraphics, GraphicsMjolnirBoltsTilemapAddress, GraphicsMjolnirBoltsTilemapRAMbuffer, GraphicsMjolnirBoltsTilemapVRAMDestination, GraphicsMjolnirBoltsTilemapUncompressedSize
 GraphicsThoronPulseSpellGraphicsOffsetsEntry .dstruct structSpellGraphics, GraphicsThoronPulseAddress, GraphicsThoronPulseRAMbuffer, GraphicsThoronPulseVRAMDestination, GraphicsThoronPulseUncompressedSize
 GraphicsThoronLine2bppSpellGraphicsOffsetsEntry .dstruct structSpellGraphics, GraphicsThoronLine2bppAddress, GraphicsThoronLine2bppRAMbuffer, GraphicsThoronLine2bppVRAMDestination, GraphicsThoronLine2bppUncompressedSize
