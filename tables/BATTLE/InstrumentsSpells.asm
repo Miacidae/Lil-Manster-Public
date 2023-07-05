@@ -197,7 +197,7 @@ InstrumentsSilence		    = $25
 .byte $00               		; DainnsScroll
 .byte $00               		; NjorunsScroll
 .byte $00               		; NalsScroll
-.byte $00               		; UllursScroll
+.byte $00               		; UllrsScroll
 .byte $00               		; ThrudsScroll
 .byte $00               		; FjalarsScroll
 .byte $00               		; CedsScroll
@@ -397,7 +397,7 @@ InstrumentsSilence		    = $25
 .byte $00               		; DainnsScroll
 .byte $00               		; NjorunsScroll
 .byte $00               		; NalsScroll
-.byte $00               		; UllursScroll
+.byte $00               		; UllrsScroll
 .byte $00               		; ThrudsScroll
 .byte $00               		; FjalarsScroll
 .byte $00               		; CedsScroll

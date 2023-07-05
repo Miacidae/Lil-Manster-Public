@@ -199,8 +199,8 @@ aActiveSpeakerAssociationTable ; 8C/C842
 	.word Leonster7Portrait		;<<
 	.word Eisenhau
 
-	.word RumaighPortrait		;<<
-	.word Rumaigh
+	.word LemayPortrait		;<<
+	.word Lemay
 
 	.word GomezPortrait
 	.word Gomez
@@ -298,5 +298,5 @@ aActiveSpeakerAssociationTable ; 8C/C842
 	.word BharatPortrait
 	.word Bharat
 
-.word $0000
-.word $0000
+.word 0
+.word 0

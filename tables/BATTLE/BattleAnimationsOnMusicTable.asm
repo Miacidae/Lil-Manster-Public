@@ -21,7 +21,7 @@ aBattleAnimationsOnMusicTable .block	; 96/846C
 .word	Weissmann
 .word	Bucks
 .word	Lobos
-.word	Rumaigh	;used to be Ishtar
+.word	Lemay	;used to be Ishtar
 .word	Eisenhau
 .word	Gomez
 .word	Merloch
