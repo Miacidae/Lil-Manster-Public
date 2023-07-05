@@ -29,21 +29,21 @@ rlProcMapSwitchMain ; 82/8633
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 
 	; Fade out
 
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	dec a
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	bne +
 
 	; Clear tilemap
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 	phx
 	lda #(`aBG3TilemapBuffer)<<8
@@ -51,7 +51,7 @@ rlProcMapSwitchMain ; 82/8633
 	lda #<>aBG3TilemapBuffer
 	sta lR18
 	lda #$0800
-	sta wR19
+	sta lR19
 	lda #$0000
 	jsl rlBlockFillWord
 

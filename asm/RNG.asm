@@ -12,17 +12,17 @@ rlUnknown80B0D1 ; 80/B0D1
 	.databank `*
 
 	sep #$20
-	inc bUnknown000469,b
+	inc bFrameCounterByOnes,b
 
-	lda bUnknown00046A,b
+	lda bFrameCounterByThrees,b
 	clc
 	adc #$03
-	sta bUnknown00046A,b
+	sta bFrameCounterByThrees,b
 	plp
 	plb
 	rtl
 
-rlUnknown80B0E6 ; 80/B0E6
+rlGetRandomNumber100 ; 80/B0E6
 
 	.al
 	.autsiz
@@ -61,7 +61,7 @@ rlUnknown80B0E6 ; 80/B0E6
 	jsl rlUnsignedMultiply16By16
 
 
-	lda dwR12
+	lda wR12
 	sta wR13
 
 	lda #100
@@ -100,20 +100,20 @@ rlGetRandomNumber ; 80/B116
 
 	lda #$0000
 	sep #$30
-	inc wNextRNIndex,b
-	lda wNextRNIndex,b
-	cmp #size(aRNTable)
+	inc wRNIndex,b
+	lda wRNIndex,b
+	cmp #size(aRNArray)
 	blt +
 
 	jsr rsShuffleRNTable
 	rep #$30
 	lda #$0000
 	sep #$30
-	sta wNextRNIndex,b
+	sta wRNIndex,b
 
 	+
 	tay
-	lda aRNTable,b,y
+	lda aRNArray,b,y
 	dec a
 	bpl +
 
@@ -147,43 +147,43 @@ rlResetRNTable ; 80/B146
 
 	.databank `*
 
-	stz wNextRNIndex,b
+	stz wRNIndex,b
 	sep #$30
-	lda bUnknown000469,b
+	lda bFrameCounterByOnes,b
 	and #$3F
-	sta bRNShuffleCounter,b
-	sta aRNTable + size(aRNTable) - 1,b
+	sta bRNShuffleVar1,b
+	sta aRNArray + size(aRNArray) - 1,b
 
 	lda #$01
-	sta bRNShuffleValue,b
+	sta bRNShuffleVar2,b
 
 	ldy #20
-	ldx #size(aRNTable) - 1
+	ldx #size(aRNArray) - 1
 
 	-
-	lda bRNShuffleValue,b
-	sta aRNTable,b,y
+	lda bRNShuffleVar2,b
+	sta aRNArray,b,y
 
-	lda bRNShuffleCounter,b
+	lda bRNShuffleVar1,b
 	sec
-	sbc bRNShuffleValue,b
+	sbc bRNShuffleVar2,b
 	bge +
 
 	clc
 	adc #100
 
 	+
-	sta bRNShuffleValue,b
+	sta bRNShuffleVar2,b
 
-	lda aRNTable,b,y
-	sta bRNShuffleCounter,b
+	lda aRNArray,b,y
+	sta bRNShuffleVar1,b
 	tya
 	clc
 	adc #21
-	cmp #size(aRNTable)
+	cmp #size(aRNArray)
 	blt +
 
-	sbc #size(aRNTable)
+	sbc #size(aRNArray)
 
 	+
 	tay
@@ -208,7 +208,7 @@ rsShuffleRNTable ; 80/B198
 
 	-
 	tya
-	sta bRNShuffleCounter,b
+	sta bRNShuffleVar1,b
 	cmp #24
 	bge +
 
@@ -220,20 +220,20 @@ rsShuffleRNTable ; 80/B198
 
 	+
 	tay
-	lda aRNTable,b,y
-	sta bRNShuffleValue,b
-	ldy bRNShuffleCounter,b
-	lda aRNTable,b,y
+	lda aRNArray,b,y
+	sta bRNShuffleVar2,b
+	ldy bRNShuffleVar1,b
+	lda aRNArray,b,y
 	sec
-	sbc bRNShuffleValue,b
+	sbc bRNShuffleVar2,b
 	bge +
 
 	adc #100
 
 	+
-	sta aRNTable,b,y
+	sta aRNArray,b,y
 	inc y
-	cpy #size(aRNTable)
+	cpy #size(aRNArray)
 	bne -
 
 	rts
@@ -247,7 +247,7 @@ rsUnknown80B1C6 ; 80/B1C6
 	lda #$0000
 	lsr a
 	lsr a
-	sta bRNShuffleCounter,b
+	sta bRNShuffleVar1,b
 
 	txa
 	asl a
@@ -255,7 +255,7 @@ rsUnknown80B1C6 ; 80/B1C6
 	asl a
 	asl a
 	clc
-	adc bRNShuffleCounter,b
+	adc bRNShuffleVar1,b
 	sec
 	sbc #80
 	blt +
@@ -270,23 +270,23 @@ rsUnknown80B1C6 ; 80/B1C6
 	lda #$0000
 
 	+
-	sta bRNShuffleCounter,b
+	sta bRNShuffleVar1,b
 
 	sep #$30
 	ldy #$00
 	tyx
 
 	-
-	lda aRNTable,b,y
-	cmp bRNShuffleCounter,b
+	lda aRNArray,b,y
+	cmp bRNShuffleVar1,b
 	bge +
 
 	txa
-	sta aRNTable,b,y
+	sta aRNArray,b,y
 
 	+
 	inc y
-	cpy #size(aRNTable)
+	cpy #size(aRNArray)
 	bne -
 
 	rep #$30

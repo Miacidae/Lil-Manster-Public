@@ -2,42 +2,42 @@
 
 * = $07E7FB
 .logical lorom($07E7FB, 1)
-.byte `SRTitle
+.byte `menutextSoundRoomTitle
 .here
 
 * = $07E7FF
 .logical lorom($07E7FF, 1)
-.word <>SRTitle
+.word <>menutextSoundRoomTitle
 .here
 
 * = $07E824
 .logical lorom($07E824, 1)
-.byte `SRAButton
+.byte `menutextSoundRoomAButton
 .here
 
 * = $07E828
 .logical lorom($07E828, 1)
-.word <>SRAButton
+.word <>menutextSoundRoomAButton
 .here
 
 * = $07E847
 .logical lorom($07E847, 1)
-.byte `SRBButton
+.byte `menutextSoundRoomBButton
 .here
 
 * = $07E84B
 .logical lorom($07E84B, 1)
-.word <>SRBButton
+.word <>menutextSoundRoomBButton
 .here
 
 * = $07E86A
 .logical lorom($07E86A, 1)
-.byte `SRStartButton
+.byte `menutextSoundRoomStartButton
 .here
 
 * = $07E86E
 .logical lorom($07E86E, 1)
-.word <>SRStartButton
+.word <>menutextSoundRoomStartButton
 .here
 
 ;	Controls text
@@ -45,517 +45,435 @@
 * = $475580
 .logical lorom($475580, 1)
 
-SRTitle
-.text "     Sound Roo{m}"	; Character limit: 18. Use spaces to center it.
-.word $0000
+menutextSoundRoomTitle
+.text "     Sound Roo{m}\n"		; Character limit: 18. Use spaces to center it.
 
-SRAButton
-.text "{A} to play"			; Character limit: 25
-.word $0000
+menutextSoundRoomAButton
+.text "{A} to play\n"			; Character limit: 25
 
-SRBButton
-.text "{B} to stop"			; Character limit: 25
-.word $0000
+menutextSoundRoomBButton
+.text "{B} to stop\n"			; Character limit: 25
 
-SRStartButton
-.text "Start to exit "		; Character limit: 25
-.word $0000
+menutextSoundRoomStartButton
+.text "Start to exit \n"		; Character limit: 25
 
 .here
 
 ;	Categories pointers
 
-* = $07F253
-.logical lorom($07F253, 1)
 
-sound_categories_pointers		.block
+	.section SoundRoomCategoryTextPointersSection
 
-.word	<>category_names._category00_data
-.word	<>category_names._category01_data
-.word	<>category_names._category02_data
-.word	<>category_names._category03_data
-.word	<>category_names._category04_data
-.word	<>category_names._category05_data
-.word	<>category_names._category06_data
-.word	<>category_names._category07_data
+		.word	<>menutextSoundRoomCategory00
+		.word	<>menutextSoundRoomCategory01
+		.word	<>menutextSoundRoomCategory02
+		.word	<>menutextSoundRoomCategory03
+		.word	<>menutextSoundRoomCategory04
+		.word	<>menutextSoundRoomCategory05
+		.word	<>menutextSoundRoomCategory06
+		.word	<>menutextSoundRoomCategory07
 
-.bend
-.here
+	.endsection SoundRoomCategoryTextPointersSection
 
 ;	Categories text
 ;	Character limit: 25. An ending space to complete the last tile doesn't count as a character.
 
-* = $07F263
-.logical lorom($07F263, 1)
 
-category_names		.block
-	
-_category00_data
-	.text "Thracia {7}{7}{6}"
-	.word $0000
+	.section SoundRoomCatrgoryTextSection
 
-_category01_data
-	.text "Leif's Search for Victory "
-	.word $0000
+		menutextSoundRoomCategory00
+			.text "Thracia {7}{7}{6}\n"
+		
+		menutextSoundRoomCategory01
+			.text "Leif's Search for Victory \n"
+		
+		menutextSoundRoomCategory02
+			.text "Pressing Threat \n"
+		
+		menutextSoundRoomCategory03
+			.text "Serving Justice \n"
+		
+		menutextSoundRoomCategory04
+			.text "A[midst the Battle\n"
+		
+		menutextSoundRoomCategory05
+			.text "Chapter End \n"
+		
+		menutextSoundRoomCategory06
+			.text "(Mid Chapter\n"
+		
+		menutextSoundRoomCategory07
+			.text "Finale\n"
 
-_category02_data
-	.text "Pressing Threat "
-	.word $0000
+	.endsection SoundRoomCatrgoryTextSection
 
-_category03_data
-	.text "Serving Justice "
-	.word $0000
 
-_category04_data
-	.text "A[midst the Battle"
-	.word $0000
 
-_category05_data
-	.text "Chapter End "
-	.word $0000
-
-_category06_data
-	.text "(Mid Chapter"
-	.word $0000
-
-_category07_data
-	.text "Finale"
-	.word $0000
-
-.bend
-.here
 
 ;	Track name pointers
 
-* = $07EB69
-.logical lorom($07EB69, 1)
+	.section SoundRoomDataTrackPointersSection
 
-sound_tracks_pointers		.block
+		.word	<>aSoundRoomDataTrack01
+		.word	<>aSoundRoomDataTrack02
+		.word	<>aSoundRoomDataTrack03
+		.word	<>aSoundRoomDataTrack04
+		.word	<>aSoundRoomDataTrack05
+		.word	<>aSoundRoomDataTrack06
+		.word	<>aSoundRoomDataTrack07
+		.word	<>aSoundRoomDataTrack08
+		.word	<>aSoundRoomDataTrack09
+		.word	<>aSoundRoomDataTrack10
+		.word	<>aSoundRoomDataTrack11
+		.word	<>aSoundRoomDataTrack12
+		.word	<>aSoundRoomDataTrack13
+		.word	<>aSoundRoomDataTrack14
+		.word	<>aSoundRoomDataTrack15
+		.word	<>aSoundRoomDataTrack16
+		.word	<>aSoundRoomDataTrack17
+		.word	<>aSoundRoomDataTrack18
+		.word	<>aSoundRoomDataTrack19
+		.word	<>aSoundRoomDataTrack20
+		.word	<>aSoundRoomDataTrack21
+		.word	<>aSoundRoomDataTrack22
+		.word	<>aSoundRoomDataTrack23
+		.word	<>aSoundRoomDataTrack24
+		.word	<>aSoundRoomDataTrack25
+		.word	<>aSoundRoomDataTrack26
+		.word	<>aSoundRoomDataTrack27
+		.word	<>aSoundRoomDataTrack28
+		.word	<>aSoundRoomDataTrack29
+		.word	<>aSoundRoomDataTrack30
+		.word	<>aSoundRoomDataTrack31
+		.word	<>aSoundRoomDataTrack32
+		.word	<>aSoundRoomDataTrack33
+		.word	<>aSoundRoomDataTrack34
+		.word	<>aSoundRoomDataTrack35
+		.word	<>aSoundRoomDataTrack36
+		.word	<>aSoundRoomDataTrack37
+		.word	<>aSoundRoomDataTrack38
+		.word	<>aSoundRoomDataTrack39
+		.word	<>aSoundRoomDataTrack40
+		.word	<>aSoundRoomDataTrack41
+		.word	<>aSoundRoomDataTrack42
+		.word	<>aSoundRoomDataTrack43
+		.word	<>aSoundRoomDataTrack44
+		.word	<>aSoundRoomDataTrack45
+		.word	<>aSoundRoomDataTrack46
+		.word	<>aSoundRoomDataTrack47
+		.word	<>aSoundRoomDataTrack48
+		.word	<>aSoundRoomDataTrack49
+		.word	<>aSoundRoomDataTrack50
+		.word	<>aSoundRoomDataTrack51
+		.word	<>aSoundRoomDataTrack52
+		.word	<>aSoundRoomDataTrack53
+		.word	<>aSoundRoomDataTrack54
+		.word	<>aSoundRoomDataTrack55
+		.word	<>aSoundRoomDataTrack56
+		.word	<>aSoundRoomDataTrack57
+		.word	<>aSoundRoomDataTrack58
+		.word	<>aSoundRoomDataTrack59
 
-.word	<>track_names._track01_data
-.word	<>track_names._track02_data
-.word	<>track_names._track03_data
-.word	<>track_names._track04_data
-.word	<>track_names._track05_data
-.word	<>track_names._track06_data
-.word	<>track_names._track07_data
-.word	<>track_names._track08_data
-.word	<>track_names._track09_data
-.word	<>track_names._track10_data
-.word	<>track_names._track11_data
-.word	<>track_names._track12_data
-.word	<>track_names._track13_data
-.word	<>track_names._track14_data
-.word	<>track_names._track15_data
-.word	<>track_names._track16_data
-.word	<>track_names._track17_data
-.word	<>track_names._track18_data
-.word	<>track_names._track19_data
-.word	<>track_names._track20_data
-.word	<>track_names._track21_data
-.word	<>track_names._track22_data
-.word	<>track_names._track23_data
-.word	<>track_names._track24_data
-.word	<>track_names._track25_data
-.word	<>track_names._track26_data
-.word	<>track_names._track27_data
-.word	<>track_names._track28_data
-.word	<>track_names._track29_data
-.word	<>track_names._track30_data
-.word	<>track_names._track31_data
-.word	<>track_names._track32_data
-.word	<>track_names._track33_data
-.word	<>track_names._track34_data
-.word	<>track_names._track35_data
-.word	<>track_names._track36_data
-.word	<>track_names._track37_data
-.word	<>track_names._track38_data
-.word	<>track_names._track39_data
-.word	<>track_names._track40_data
-.word	<>track_names._track41_data
-.word	<>track_names._track42_data
-.word	<>track_names._track43_data
-.word	<>track_names._track44_data
-.word	<>track_names._track45_data
-.word	<>track_names._track46_data
-.word	<>track_names._track47_data
-.word	<>track_names._track48_data
-.word	<>track_names._track49_data
-.word	<>track_names._track50_data
-.word	<>track_names._track51_data
-.word	<>track_names._track52_data
-.word	<>track_names._track53_data
-.word	<>track_names._track54_data
-.word	<>track_names._track55_data
-.word	<>track_names._track56_data
-.word	<>track_names._track57_data
-.word	<>track_names._track58_data
-.word	<>track_names._track59_data
-
-.bend
-.here
+	.endsection SoundRoomDataTrackPointersSection
 
 ;	Track names
 ;	Character limit: 25. An ending space to complete the last tile doesn't count as a character.
 
-* = $07EBDF
-.logical lorom($07EBDF, 1)
+	.section SoundRoomDataTracksSection
 
-track_names		.block
-
-_track01_data
-	.byte $00		; Category
-	.byte $21		; Music track number
-	.text "Begins"
-	.word $0000		
-
-_track02_data
-	.byte $00		; Category
-	.byte $23		; Music track number
-	.text "Fire E[mble[m The[me"
-	.word $0000
-
-_track03_data
-	.byte $00		; Category
-	.byte $29		; Music track number
-	.text "(Map  {A}"
-	.word $0000
-
-_track04_data
-	.byte $00		; Category
-	.byte $2B		; Music track number
-	.text "(Map  {B}"
-	.word $0000
-
-_track05_data
-	.byte $00		; Category
-	.byte $2C		; Music track number
-	.text "(Map  {C}"
-	.word $0000
-
-_track06_data
-	.byte $00		; Category
-	.byte $2D		; Music track number
-	.text "Sally Forth "
-	.word $0000
-
-_track07_data
-	.byte $01		; Category
-	.byte $01		; Music track number
-	.text "Base"
-	.word $0000
-
-_track08_data
-	.byte $01		; Category
-	.byte $02		; Music track number
-	.text "Assault {A}"
-	.word $0000
-
-_track09_data
-	.byte $01		; Category
-	.byte $03		; Music track number
-	.text "Assault {B}"
-	.word $0000
-
-_track10_data
-	.byte $01		; Category
-	.byte $04		; Music track number
-	.text "Adversity "
-	.word $0000
-
-_track11_data
-	.byte $01		; Category
-	.byte $05		; Music track number
-	.text "The Cusp of Victory "
-	.word $0000
-
-_track12_data
-	.byte $01		; Category
-	.byte $06		; Music track number
-	.text "The Edge of Defeat"
-	.word $0000
-
-_track13_data
-	.byte $01		; Category
-	.byte $07		; Music track number
-	.text "Reconnoissance"
-	.word $0000
-
-_track14_data
-	.byte $01		; Category
-	.byte $08		; Music track number
-	.text "Leif"
-	.word $0000
-
-_track15_data
-	.byte $02		; Category
-	.byte $09		; Music track number
-	.text "Base  {A}"
-	.word $0000
-
-_track16_data
-	.byte $02		; Category
-	.byte $0A		; Music track number
-	.text "Base  {B}"
-	.word $0000
-
-_track17_data
-	.byte $02		; Category
-	.byte $0B		; Music track number
-	.text "Assault "
-	.word $0000
-
-_track18_data
-	.byte $02		; Category
-	.byte $0C		; Music track number
-	.text "Dark Bishops"
-	.word $0000
-
-_track19_data
-	.byte $02		; Category
-	.byte $0D		; Music track number
-	.text "Reconnoissance"
-	.word $0000
-
-_track20_data
-	.byte $02		; Category
-	.byte $0E		; Music track number
-	.text "Endga[me"
-	.word $0000
-
-_track21_data
-	.byte $03		; Category
-	.byte $11		; Music track number
-	.text "Attack"
-	.word $0000
-
-_track22_data
-	.byte $03		; Category
-	.byte $12		; Music track number
-	.text "Defense "
-	.word $0000
-
-_track23_data
-	.byte $03		; Category
-	.byte $13		; Music track number
-	.text "Recovery  {A}"
-	.word $0000
-
-_track24_data
-	.byte $03		; Category
-	.byte $14		; Music track number
-	.text "Recovery  {B}"
-	.word $0000
-
-_track25_data
-	.byte $03		; Category
-	.byte $15		; Music track number
-	.text "Dance "
-	.word $0000
-
-_track26_data
-	.byte $03		; Category
-	.byte $16		; Music track number
-	.text "Class Change"
-	.word $0000
-
-_track27_data
-	.byte $03		; Category
-	.byte $1E		; Music track number
-	.text "Boss Battle "
-	.word $0000
-
-_track28_data
-	.byte $03		; Category
-	.byte $18		; Music track number
-	.text "Against Raydrik "
-	.word $0000
-
-_track29_data
-	.byte $03		; Category
-	.byte $19		; Music track number
-	.text "Against Veld"
-	.word $0000
-
-_track30_data
-	.byte $03		; Category
-	.byte $1A		; Music track number
-	.text "Arena Battle"
-	.word $0000
-
-_track31_data
-	.byte $03		; Category
-	.byte $1B		; Music track number
-	.text "Level Up  {A}"
-	.word $0000
-
-_track32_data
-	.byte $03		; Category
-	.byte $1C		; Music track number
-	.text "Level Up  {B}"
-	.word $0000
-
-_track33_data
-	.byte $04		; Category
-	.byte $31		; Music track number
-	.text "Crisis"
-	.word $0000
-
-_track34_data
-	.byte $04		; Category
-	.byte $32		; Music track number
-	.text "Assault "
-	.word $0000
-
-_track35_data
-	.byte $04		; Category
-	.byte $33		; Music track number
-	.text "Destiny "
-	.word $0000
-
-_track36_data
-	.byte $04		; Category
-	.byte $39		; Music track number
-	.text "Battalion {A}"
-	.word $0000
-
-_track37_data
-	.byte $04		; Category
-	.byte $3F		; Music track number
-	.text "Battalion {B}"
-	.word $0000
-
-_track38_data
-	.byte $04		; Category
-	.byte $3A		; Music track number
-	.text "Bandits "
-	.word $0000
-
-_track39_data
-	.byte $04		; Category
-	.byte $3D		; Music track number
-	.text "Thracia "
-	.word $0000
-
-_track40_data
-	.byte $04		; Category
-	.byte $3C		; Music track number
-	.text "Loptrians {A}"
-	.word $0000
-
-_track41_data
-	.byte $04		; Category
-	.byte $3E		; Music track number
-	.text "Loptrians {B}"
-	.word $0000
-
-_track42_data
-	.byte $04		; Category
-	.byte $3B		; Music track number
-	.text "Raydrik "
-	.word $0000
-
-_track43_data
-	.byte $05		; Category
-	.byte $41		; Music track number
-	.text "Victory "
-	.word $0000
-
-_track44_data
-	.byte $05		; Category
-	.byte $42		; Music track number
-	.text "(Minor Victory"
-	.word $0000
-
-_track45_data
-	.byte $05		; Category
-	.byte $43		; Music track number
-	.text "August Speaks {A}"
-	.word $0000
-
-_track46_data
-	.byte $05		; Category
-	.byte $44		; Music track number
-	.text "August Speaks {B}"
-	.word $0000
-
-_track47_data
-	.byte $05		; Category
-	.byte $45		; Music track number
-	.text "Go, Leif, Go! "
-	.word $0000
-
-_track48_data
-	.byte $05		; Category
-	.byte $46		; Music track number
-	.text "Conquest"
-	.word $0000
-
-_track49_data
-	.byte $06		; Category
-	.byte $4A		; Music track number
-	.text "Recruit[ment"
-	.word $0000
-
-_track50_data
-	.byte $06		; Category
-	.byte $4B		; Music track number
-	.text "(Meetings and Reunions"
-	.word $0000
-
-_track51_data
-	.byte $06		; Category
-	.byte $4C		; Music track number
-	.text "Co[mic Relief "
-	.word $0000
-
-_track52_data
-	.byte $06		; Category
-	.byte $4D		; Music track number
-	.text "Church"
-	.word $0000
-
-_track53_data
-	.byte $06		; Category
-	.byte $4E		; Music track number
-	.text "Sorro12 "
-	.word $0000
-
-_track54_data
-	.byte $06		; Category
-	.byte $4F		; Music track number
-	.text "Sara"
-	.word $0000
-
-_track55_data
-	.byte $06		; Category
-	.byte $50		; Music track number
-	.text "Eyvel "
-	.word $0000
-
-_track56_data
-	.byte $07		; Category
-	.byte $24		; Music track number
-	.text "Results "
-	.word $0000
-
-_track57_data
-	.byte $07		; Category
-	.byte $25		; Music track number
-	.text "Epilogue"
-	.word $0000
-
-_track58_data
-	.byte $07		; Category
-	.byte $26		; Music track number
-	.text "Ballad"
-	.word $0000
-
-_track59_data
-	.byte $07		; Category
-	.byte $27		; Music track number
-	.text "(Music Box"
-	.word $0000
-
-.bend
-.here
+		aSoundRoomDataTrack01
+			.byte $00		; Category
+			.byte $21		; Music track number
+			.text "Begins\n"
+		
+		aSoundRoomDataTrack02
+			.byte $00		; Category
+			.byte $23		; Music track number
+			.text "Fire E[mble[m The[me\n"
+		
+		aSoundRoomDataTrack03
+			.byte $00		; Category
+			.byte $29		; Music track number
+			.text "(Map  {A}\n"
+		
+		aSoundRoomDataTrack04
+			.byte $00		; Category
+			.byte $2B		; Music track number
+			.text "(Map  {B}\n"
+		
+		aSoundRoomDataTrack05
+			.byte $00		; Category
+			.byte $2C		; Music track number
+			.text "(Map  {C}\n"
+		
+		aSoundRoomDataTrack06
+			.byte $00		; Category
+			.byte $2D		; Music track number
+			.text "Sally Forth \n"
+		
+		aSoundRoomDataTrack07
+			.byte $01		; Category
+			.byte $01		; Music track number
+			.text "Base\n"
+		
+		aSoundRoomDataTrack08
+			.byte $01		; Category
+			.byte $02		; Music track number
+			.text "Assault {A}\n"
+		
+		aSoundRoomDataTrack09
+			.byte $01		; Category
+			.byte $03		; Music track number
+			.text "Assault {B}\n"
+		
+		aSoundRoomDataTrack10
+			.byte $01		; Category
+			.byte $04		; Music track number
+			.text "Adversity \n"
+		
+		aSoundRoomDataTrack11
+			.byte $01		; Category
+			.byte $05		; Music track number
+			.text "The Cusp of Victory \n"
+		
+		aSoundRoomDataTrack12
+			.byte $01		; Category
+			.byte $06		; Music track number
+			.text "The Edge of Defeat\n"
+		
+		aSoundRoomDataTrack13
+			.byte $01		; Category
+			.byte $07		; Music track number
+			.text "Reconnoissance\n"
+		
+		aSoundRoomDataTrack14
+			.byte $01		; Category
+			.byte $08		; Music track number
+			.text "Leif\n"
+		
+		aSoundRoomDataTrack15
+			.byte $02		; Category
+			.byte $09		; Music track number
+			.text "Base  {A}\n"
+		
+		aSoundRoomDataTrack16
+			.byte $02		; Category
+			.byte $0A		; Music track number
+			.text "Base  {B}\n"
+		
+		aSoundRoomDataTrack17
+			.byte $02		; Category
+			.byte $0B		; Music track number
+			.text "Assault \n"
+		
+		aSoundRoomDataTrack18
+			.byte $02		; Category
+			.byte $0C		; Music track number
+			.text "Dark Bishops\n"
+		
+		aSoundRoomDataTrack19
+			.byte $02		; Category
+			.byte $0D		; Music track number
+			.text "Reconnoissance\n"
+		
+		aSoundRoomDataTrack20
+			.byte $02		; Category
+			.byte $0E		; Music track number
+			.text "Endga[me\n"
+		
+		aSoundRoomDataTrack21
+			.byte $03		; Category
+			.byte $11		; Music track number
+			.text "Attack\n"
+		
+		aSoundRoomDataTrack22
+			.byte $03		; Category
+			.byte $12		; Music track number
+			.text "Defense \n"
+		
+		aSoundRoomDataTrack23
+			.byte $03		; Category
+			.byte $13		; Music track number
+			.text "Recovery  {A}\n"
+		
+		aSoundRoomDataTrack24
+			.byte $03		; Category
+			.byte $14		; Music track number
+			.text "Recovery  {B}\n"
+		
+		aSoundRoomDataTrack25
+			.byte $03		; Category
+			.byte $15		; Music track number
+			.text "Dance \n"
+		
+		aSoundRoomDataTrack26
+			.byte $03		; Category
+			.byte $16		; Music track number
+			.text "Class Change\n"
+		
+		aSoundRoomDataTrack27
+			.byte $03		; Category
+			.byte $1E		; Music track number
+			.text "Boss Battle \n"
+		
+		aSoundRoomDataTrack28
+			.byte $03		; Category
+			.byte $18		; Music track number
+			.text "Against Raydrik \n"
+		
+		aSoundRoomDataTrack29
+			.byte $03		; Category
+			.byte $19		; Music track number
+			.text "Against Veld\n"
+		
+		aSoundRoomDataTrack30
+			.byte $03		; Category
+			.byte $1A		; Music track number
+			.text "Arena Battle\n"
+		
+		aSoundRoomDataTrack31
+			.byte $03		; Category
+			.byte $1B		; Music track number
+			.text "Level Up  {A}\n"
+		
+		aSoundRoomDataTrack32
+			.byte $03		; Category
+			.byte $1C		; Music track number
+			.text "Level Up  {B}\n"
+		
+		aSoundRoomDataTrack33
+			.byte $04		; Category
+			.byte $31		; Music track number
+			.text "Crisis\n"
+		
+		aSoundRoomDataTrack34
+			.byte $04		; Category
+			.byte $32		; Music track number
+			.text "Assault \n"
+		
+		aSoundRoomDataTrack35
+			.byte $04		; Category
+			.byte $33		; Music track number
+			.text "Destiny \n"
+		
+		aSoundRoomDataTrack36
+			.byte $04		; Category
+			.byte $39		; Music track number
+			.text "Battalion {A}\n"
+		
+		aSoundRoomDataTrack37
+			.byte $04		; Category
+			.byte $3F		; Music track number
+			.text "Battalion {B}\n"
+		
+		aSoundRoomDataTrack38
+			.byte $04		; Category
+			.byte $3A		; Music track number
+			.text "Bandits \n"
+		
+		aSoundRoomDataTrack39
+			.byte $04		; Category
+			.byte $3D		; Music track number
+			.text "Thracia \n"
+		
+		aSoundRoomDataTrack40
+			.byte $04		; Category
+			.byte $3C		; Music track number
+			.text "Loptrians {A}\n"
+		
+		aSoundRoomDataTrack41
+			.byte $04		; Category
+			.byte $3E		; Music track number
+			.text "Loptrians {B}\n"
+		
+		aSoundRoomDataTrack42
+			.byte $04		; Category
+			.byte $3B		; Music track number
+			.text "Raydrik \n"
+		
+		aSoundRoomDataTrack43
+			.byte $05		; Category
+			.byte $41		; Music track number
+			.text "Victory \n"
+		
+		aSoundRoomDataTrack44
+			.byte $05		; Category
+			.byte $42		; Music track number
+			.text "(Minor Victory\n"
+		
+		aSoundRoomDataTrack45
+			.byte $05		; Category
+			.byte $43		; Music track number
+			.text "August Speaks {A}\n"
+		
+		aSoundRoomDataTrack46
+			.byte $05		; Category
+			.byte $44		; Music track number
+			.text "August Speaks {B}\n"
+		
+		aSoundRoomDataTrack47
+			.byte $05		; Category
+			.byte $45		; Music track number
+			.text "Go, Leif, Go! \n"
+		
+		aSoundRoomDataTrack48
+			.byte $05		; Category
+			.byte $46		; Music track number
+			.text "Conquest\n"
+		
+		aSoundRoomDataTrack49
+			.byte $06		; Category
+			.byte $4A		; Music track number
+			.text "Recruit[ment\n"
+		
+		aSoundRoomDataTrack50
+			.byte $06		; Category
+			.byte $4B		; Music track number
+			.text "(Meetings and Reunions\n"
+		
+		aSoundRoomDataTrack51
+			.byte $06		; Category
+			.byte $4C		; Music track number
+			.text "Co[mic Relief \n"
+		
+		aSoundRoomDataTrack52
+			.byte $06		; Category
+			.byte $4D		; Music track number
+			.text "Church\n"
+		
+		aSoundRoomDataTrack53
+			.byte $06		; Category
+			.byte $4E		; Music track number
+			.text "Sorro12 \n"
+		
+		aSoundRoomDataTrack54
+			.byte $06		; Category
+			.byte $4F		; Music track number
+			.text "Sara\n"
+		
+		aSoundRoomDataTrack55
+			.byte $06		; Category
+			.byte $50		; Music track number
+			.text "Eyvel \n"
+		
+		aSoundRoomDataTrack56
+			.byte $07		; Category
+			.byte $24		; Music track number
+			.text "Results \n"
+		
+		aSoundRoomDataTrack57
+			.byte $07		; Category
+			.byte $25		; Music track number
+			.text "Epilogue\n"
+		
+		aSoundRoomDataTrack58
+			.byte $07		; Category
+			.byte $26		; Music track number
+			.text "Ballad\n"
+		
+		aSoundRoomDataTrack59
+			.byte $07		; Category
+			.byte $27		; Music track number
+			.text "(Music Box\n"
+		
+	.endsection SoundRoomDataTracksSection

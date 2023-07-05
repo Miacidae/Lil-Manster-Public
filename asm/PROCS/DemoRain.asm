@@ -10,7 +10,7 @@ rlDemoRain ; 9A/E53D
 
 	sep #$20
 	lda #INIDISP_Setting(True)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 
 	sep #$20
@@ -74,58 +74,58 @@ rlDemoRain ; 9A/E53D
 	sta lR18+1
 	lda #<>DemoRainPalette
 	sta lR18
-	lda #(`aBGPal1)<<8
+	lda #(`aBGPaletteBuffer.aPalette1)<<8
 	sta lR19+1
-	lda #<>aBGPal1
+	lda #<>aBGPaletteBuffer.aPalette1
 	sta lR19
-	lda #size(aBGPal1)+size(aBGPal2)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette1)+size(aBGPaletteBuffer.aPalette2)
+	sta lR20
 	jsl rlBlockCopy
 
 	lda #(`aDemoRainLightningColorTable)<<8
-	sta wProcInput0+1,b
+	sta aProcSystem.wInput0+1,b
 	lda #<>aDemoRainLightningColorTable
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 
 	lda #(`$949F97)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$949F97
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 
 	lda #(`procDemoRain)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procDemoRain
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 
 	sep #$20
 
-	lda #TM_Setting(True, False, True, False, False)
-	sta bBuf_TM
+	lda #T_Setting(True, False, True, False, False)
+	sta bBufferTM
 
-	lda #TS_Setting(False, True, False, False, True)
-	sta bBuf_TS
+	lda #T_Setting(False, True, False, False, True)
+	sta bBufferTS
 
 	lda #CGWSEL_Setting(False, True, CGWSEL_MathAlways, CGWSEL_BlackNever)
-	sta bBuf_CGWSEL
+	sta bBufferCGWSEL
 
 	lda #CGADSUB_Setting(CGADSUB_Add, True, True, False, True, False, False, True)
-	sta bBuf_CGADSUB
+	sta bBufferCGADSUB
 
-	lda bBuf_BG1SC
-	and #~BG1SC.Size
-	sta bBuf_BG1SC
+	lda bBufferBG1SC
+	and #~BGSC_Size
+	sta bBufferBG1SC
 
-	lda bBuf_BG3SC
-	and #~BG3SC.Size
-	sta bBuf_BG3SC
+	lda bBufferBG3SC
+	and #~BGSC_Size
+	sta bBufferBG3SC
 
 	rep #$20
 
 	sep #$20
 	lda #INIDISP_Setting(False, 0)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 
 	sep #$20
@@ -143,7 +143,7 @@ DemoRainPalette ; 9A/E661
 aDemoRainLightningColorTable ; 9A/E6A1
 
 	; Starting position in palette buffer
-	.byte (aBGPal1 + 2 - aBGPaletteBuffer) / 2
+	.byte (aBGPaletteBuffer.aPalette1 + 2 - aBGPaletteBuffer) / 2
 
 	; Color count
 	.byte $01
@@ -197,33 +197,33 @@ rlProcDemoRainOnCycle ; 9A/E7CC
 	.autsiz
 	.databank ?
 
-	inc aProcBody0,b,x
+	inc aProcSystem.aBody0,b,x
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	clc
-	adc wMapScrollWidthPixels,b
-	sta wBuf_BG1HOFS
+	adc wMapScrollXPixels,b
+	sta wBufferBG1HOFS
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	eor #-1
 	inc a
 	clc
-	adc wMapScrollHeightPixels,b
-	sta wBuf_BG1VOFS
+	adc wMapScrollYPixels,b
+	sta wBufferBG1VOFS
 
-	inc aProcBody1,b,x
-	inc aProcBody1,b,x
+	inc aProcSystem.aBody1,b,x
+	inc aProcSystem.aBody1,b,x
 
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	clc
-	adc wMapScrollWidthPixels,b
-	sta wBuf_BG3HOFS
+	adc wMapScrollXPixels,b
+	sta wBufferBG3HOFS
 
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	eor #-1
 	inc a
 	clc
-	adc wMapScrollHeightPixels,b
-	sta wBuf_BG3VOFS
+	adc wMapScrollYPixels,b
+	sta wBufferBG3VOFS
 
 	rtl

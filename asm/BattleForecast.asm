@@ -75,12 +75,12 @@ rlBuildBattleForecastWindow ; 81/BF33
 	; Setup horizontal shading boundaries
 
 	lda wR17
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	phx
 	lda #(`procBattleForecastCenterShadingHBounds)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procBattleForecastCenterShadingHBounds
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	jsl rlEnableBG1Sync
@@ -96,7 +96,7 @@ rsBuildBattleForecastWindowTilemap ; 81/BF86
 	.autsiz
 	.databank `aBG1TilemapBuffer
 
-	stz wUnknown000DE7,b
+	stz aCurrentTilemapInfo.wBaseTile,b
 
 	; Copy segments of the window's tilemap
 	; Starting with the BG1 tiles
@@ -124,7 +124,7 @@ rsBuildBattleForecastWindowTilemap ; 81/BF86
 
 	ldx wR17
 	lda aBattleForecastWindowTilemapSegmentOffsets,x
-	sta wR19
+	sta lR19
 	jsl $84A3FF
 
 	; Middle tilemap segment
@@ -139,7 +139,7 @@ rsBuildBattleForecastWindowTilemap ; 81/BF86
 	sta wR1
 	ldx wR17
 	lda aBattleForecastWindowTilemapSegmentOffsets+4,x
-	sta wR19
+	sta lR19
 	jsl $84A3FF
 
 	; Lower tilemap segment
@@ -154,7 +154,7 @@ rsBuildBattleForecastWindowTilemap ; 81/BF86
 	sta wR1
 	ldx wR17
 	lda aBattleForecastWindowTilemapSegmentOffsets+8,x
-	sta wR19
+	sta lR19
 	jsl $84A3FF
 
 	; Now for the BG3 tiles
@@ -171,7 +171,7 @@ rsBuildBattleForecastWindowTilemap ; 81/BF86
 	sta wR1
 	ldx wR17
 	lda aBattleForecastWindowTilemapSegmentOffsets+12,x
-	sta wR19
+	sta lR19
 	jsl $84A3FF
 
 	; Lower segment
@@ -186,7 +186,7 @@ rsBuildBattleForecastWindowTilemap ; 81/BF86
 	sta wR1
 	ldx wR17
 	lda aBattleForecastWindowTilemapSegmentOffsets+16,x
-	sta wR19
+	sta lR19
 	jsl $84A3FF
 
 	rts
@@ -224,11 +224,11 @@ rsDrawBattleForecastUnitText ; 81/C03E
 	; Text info
 
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`$83C0F6
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	lda #$2180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	; Draw labels
 
@@ -290,7 +290,7 @@ rsDrawBattleForecastNumbers ; 81/C0BA
 	.databank `aBG1TilemapBuffer
 
 	lda #$2AA0
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	; Loop counter
 
@@ -355,7 +355,7 @@ rsDrawBattleForecastNumbers ; 81/C0BA
 
 	_StatDashed
 	lda #$2980
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	; Get coords and move left a tile
 	; to account for -- being two tiles
@@ -374,7 +374,7 @@ rsDrawBattleForecastNumbers ; 81/C0BA
 	sta lR18+1
 	jsl $87E728
 	lda #$2AA0
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	bra _Next
 
 aBattleForecastNumberInfo ; 81/C128
@@ -449,11 +449,11 @@ rsColorBattleForecastWindowCenter ; 81/C17E
 	lda $7E4E6B+1
 	sta lR18+1
 	lda #$2800
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	lda #<>aUnknown81C1AF
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`aUnknown81C1AF
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	jsl $87D6FC
 
 	; Get coordinates by side
@@ -489,11 +489,11 @@ rsBattleForecastCopyAllegiancePalette ; 81/C1E3
 
 	; Copy the right palette based on allegiances
 
-	ldy #<>aBGPal1 + (2 * 2)
+	ldy #<>aBGPaletteBuffer.aPalette1 + (2 * 2)
 	lda aActionStructUnit1.DeploymentNumber
 	jsr rsBattleForecastCopyAllegiancePalettePart
 
-	ldy #<>aBGPal1 + (9 * 2)
+	ldy #<>aBGPaletteBuffer.aPalette1 + (9 * 2)
 	lda aActionStructUnit2.DeploymentNumber
 	jsr rsBattleForecastCopyAllegiancePalettePart
 

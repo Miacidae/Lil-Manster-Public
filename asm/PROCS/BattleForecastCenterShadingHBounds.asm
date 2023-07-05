@@ -18,8 +18,8 @@ rlProcBattleForecastCenterShadingHBoundsInit ; 81/C1BE
 
 	; Side
 
-	lda wProcInput0,b
-	sta aProcBody0,b,x
+	lda aProcSystem.wInput0,b
+	sta aProcSystem.aBody0,b,x
 
 	rtl
 
@@ -36,7 +36,7 @@ rlProcBattleForecastCenterShadingHBoundsOnCycle ; 81/C1C5
 	; Wait a cycle
 
 	lda #<>rlProcBattleForecastCenterShadingHBoundsOnCycle2
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 	rtl
 
 rlProcBattleForecastCenterShadingHBoundsOnCycle2 ; 81/C1CC
@@ -50,7 +50,7 @@ rlProcBattleForecastCenterShadingHBoundsOnCycle2 ; 81/C1CC
 	; for center window shading
 
 	phx
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	tax
 	lda aBattleForecastWindowCenterShadingBounds,x
 	jsl $8594C9

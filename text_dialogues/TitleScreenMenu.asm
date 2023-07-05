@@ -1,11 +1,11 @@
 ; Pointers
 * = $A59E7
-.logical lorom($A59E7,1)
+.logical mapped($A59E7)
 .long NewGame
 .here
 
 * = $A2FE1
-.logical lorom($A2FE1,1)
+.logical mapped($A2FE1)
 .long ReloadChapter
 .long SaveChapter
 .long CopySave
@@ -14,44 +14,44 @@
 .here
 
 * = $A596B
-.logical lorom($A596B,1)
+.logical mapped($A596B)
 .long ConfirmCancel
 .here
 
 * = $A59D5
-.logical lorom($A59ED,1)
+.logical mapped($A59ED)
 .long ParagonMode
 .here
 
 * = $A59ED
-.logical lorom($A59ED,1)
+.logical mapped($A59ED)
 .long ReloadChapter
 .here
 
 * = $A59F3
-.logical lorom($A59F3,1)
+.logical mapped($A59F3)
 .long ResumeChapter
 .here
 
 * = $A59F9
-.logical lorom($A59F9,1)
+.logical mapped($A59F9)
 .long CopySave
 .here
 
 * = $A59FF
-.logical lorom($A59FF,1)
+.logical mapped($A59FF)
 .long DeleteSave
 .here
 
 * = $A596E
-.logical lorom($A596E,1)
+.logical mapped($A596E)
 .long ConfirmCancel
 .long ConfirmCancel
 .here
 
 ; Text
 * = $2D7EFB
-.logical lorom($2D7EFB,1)
+.logical mapped($2D7EFB)
 
 ; Spaces and §_ characters are for centering purposes.
 ; A regular space is 4-pixels-wide.
@@ -94,19 +94,19 @@ ResumeChapter
 .here
 
 * = $8008A
-.logical lorom($8008A,1)
+.logical mapped($8008A)
 .text " --NO DATA--"
 .byte EndText
 .here
 
 * = $800A0
-.logical lorom($800A0,1)
+.logical mapped($800A0)
 .text ""
 .byte EndText
 .here
 
 * = $A59CF
-.logical lorom($A59CF,1)
+.logical mapped($A59CF)
 .long SRButton
 .here
 

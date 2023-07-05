@@ -1,4 +1,4 @@
-ch23coulterspawn
+dialogueChapter23CoulterSpawn
 
 .byte Right_slot
 .word LoadPortrait
@@ -84,7 +84,7 @@ ch23coulterspawn
 .byte EndText
 
 
-ch23cedalphand
+dialogueChapter23CedAlphand
 
 .byte Right_slot
 .word LoadPortrait
@@ -119,7 +119,7 @@ ch23cedalphand
 .byte EndText
 
 
-ch23altenaleave
+dialogueChapter23AltenaLeave
 
 .byte Right_slot
 .word LoadPortrait
@@ -210,7 +210,7 @@ ch23altenaleave
 .byte EndText
 
 
-ch23noitemhouse1
+dialogueChapter23InfoHouse1
 
 .byte Right_slot
 .word LoadPortrait
@@ -237,7 +237,7 @@ ch23noitemhouse1
 .byte EndText
 
 
-ch23noitemhouse2
+dialogueChapter23InfoHouse2
 
 .byte Right_slot
 .word LoadPortrait
@@ -276,7 +276,7 @@ ch23noitemhouse2
 .byte EndText
 
 
-ch23vulneraryhouse
+dialogueChapter23VulneraryHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -294,7 +294,7 @@ ch23vulneraryhouse
 .byte EndText
 
 
-ch23purewaterhouse
+dialogueChapter23PureWaterHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -314,7 +314,7 @@ ch23purewaterhouse
 .byte EndText
 
 
-ch23physichouse
+dialogueChapter23PhysicHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -336,7 +336,7 @@ ch23physichouse
 .byte EndText
 
 
-ch23alphandvenin1
+dialogueChapter23AlphandVenin1
 
 .byte Left_slot
 .word LoadPortrait
@@ -409,7 +409,7 @@ ch23alphandvenin1
 .byte EndText
 
 
-ch23alphandvenin2
+dialogueChapter23AlphandVenin2
 
 .byte Left_slot
 .word LoadPortrait
@@ -442,7 +442,7 @@ ch23alphandvenin2
 .byte EndText
 
 
-ch23leifced
+dialogueChapter23LeifCed
 
 .byte Right_slot
 .word LoadPortrait
@@ -717,7 +717,7 @@ ch23leifced
 .byte EndText
 
 
-ch23leifsaias
+dialogueChapter23LeifSaias
 
 .byte Right_slot
 .word LoadPortrait
@@ -843,7 +843,7 @@ ch23leifsaias
 .byte EndText
 
 
-ch23opening1
+dialogueChapter23Opening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -1034,7 +1034,7 @@ ch23opening1
 .byte EndText
 
 
-ch23opening2
+dialogueChapter23Opening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -1120,7 +1120,7 @@ ch23opening2
 .byte EndText
 
 
-ch23opening3
+dialogueChapter23Opening3
 
 .byte Right_slot
 .word LoadPortrait
@@ -1172,7 +1172,7 @@ ch23opening3
 .byte EndText
 
 
-ch23closing1
+dialogueChapter23Closing1
 
 .byte Right_slot
 .word LoadPortrait
@@ -1226,7 +1226,7 @@ ch23closing1
 .byte EndText
 
 
-ch23noblade
+dialogueChapter23NoBlade
 
 .byte ScrollText
 .text "It would be most reckless to charge inside"
@@ -1256,7 +1256,7 @@ ch23noblade
 .byte EndText
 
 
-ch23hasblade
+dialogueChapter23HasBlade
 
 .byte Right_slot
 .byte ScrollText
@@ -1291,7 +1291,7 @@ ch23hasblade
 .byte EndText
 
 
-ch23saiasblade
+dialogueChapter23SaiasBlade
 
 .byte Right_slot
 .byte ScrollText
@@ -1370,7 +1370,7 @@ ch23saiasblade
 .byte EndText
 
 
-ch23saiasload
+dialogueCh23SaiasLoad
 
 .byte Right_slot
 .byte ScrollText
@@ -1383,7 +1383,7 @@ ch23saiasload
 .byte EndText
 
 
-ch23saiasbranch
+dialogueChapter23SaiasBranch
 
 .byte Right_slot
 .text "What will you do now, Father?"
@@ -1423,7 +1423,7 @@ ch23saiasbranch
 .byte EndText
 
 
-ch23saiasyes
+dialogueChapter23SaiasYes
 
 .byte Left_slot
 .byte ScrollText
@@ -1443,7 +1443,7 @@ ch23saiasyes
 .byte EndText
 
 
-ch23saiasno
+dialogueChapter23SaiasNo
 
 .byte Left_slot
 .byte ScrollText
@@ -1464,7 +1464,7 @@ ch23saiasno
 .byte EndText
 
 
-ch23wm1
+dialogueChapter23WorldMap1
 
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2
@@ -1495,7 +1495,7 @@ ch23wm1
 .byte EndText
 
 
-ch23wm2
+dialogueChapter23WorldMap2
 
 .text "There, emboldened by news of Leif's victory,"
 .byte NewLine
@@ -1532,7 +1532,7 @@ ch23wm2
 .byte EndText
 
 
-ch23fall
+dialogueChapter23Fall
 
 .byte Right_slot
 .word LoadPortrait

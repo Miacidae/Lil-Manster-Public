@@ -11,7 +11,7 @@ rlUnknown81C525 ; 81/C525
 
 	lda #<>aTemporaryActionStruct
 	sta wR1
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 
 	lda aTemporaryActionStruct.X,b
 	and #$00FF
@@ -39,10 +39,10 @@ rlUnknown81C525 ; 81/C525
 	jsl $83C108
 
 	lda wR2
-	sta wMapScrollWidthPixels,b
+	sta wMapScrollXPixels,b
 
 	lda wR3
-	sta wMapScrollHeightPixels,b
+	sta wMapScrollYPixels,b
 	rtl
 
 rlSaveToSRAMSlot ; 81/C568
@@ -85,10 +85,10 @@ rlSaveToSRAMSlot ; 81/C568
 	lda wMenuCounter,b
 	sta aSRAM+structSaveDataEntry.MenuPressCounter,x
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	sta aSRAM+structSaveDataEntry.HorizontalScroll,x
 
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	sta aSRAM+structSaveDataEntry.VerticalScroll,x
 
 	lda wCurrentTurn,b
@@ -252,10 +252,10 @@ rlLoadSaveSlot ; 81/C670
 	sta wMenuCounter
 
 	lda structSaveDataEntry.HorizontalScroll,b,x
-	sta wMapScrollWidthPixels
+	sta wMapScrollXPixels
 
 	lda structSaveDataEntry.VerticalScroll,b,x
-	sta wMapScrollHeightPixels
+	sta wMapScrollYPixels
 
 	lda structSaveDataEntry.CurrentTurn,b,x
 	sta wCurrentTurn
@@ -486,10 +486,10 @@ rsCopySaveTempInfo ; 81/C816
 	jsr rsGetSavedTileSettingColors
 
 	lda structSaveDataEntry.GameTime,b,x
-	sta dwR12
+	sta wR12
 
 	lda structSaveDataEntry.MenuPressCounter,b,x
-	sta dwR12+2
+	sta wR12+2
 
 	jsl rlUnknown81C847
 	rts
@@ -511,18 +511,18 @@ rlUnknown81C847 ; 81/C847
 	.databank `wSaveSlotTempCurrentChapter
 
 	lda #$003C
-	sta dwR14
-	stz dwR14+2
+	sta wR14
+	stz wR14+2
 	jsl rlUnsignedDivide32By32
-	lda dwR10
+	lda wR10
 	sta @l wSaveSlotTempUnknown4
 
 	jsl rlUnsignedDivide32By32
-	lda dwR10
+	lda wR10
 	sta @l wSaveSlotTempUnknown3
 
 	jsl rlUnsignedDivide32By32
-	lda dwR12
+	lda wR12
 	sta @l wSaveSlotTempUnknown2
 	plb
 	plp
@@ -546,17 +546,17 @@ rsGetSavedTileSettingColors ; 81/C879
 	adc @l wSaveSlotOffset
 	tay
 	lda structSaveDataEntry.Options.TileSetting1UpperRed,b,y
-	sta wSelectedTileSettingUpperRed
+	sta aCurrentWindowColors.wUpperRed
 	lda structSaveDataEntry.Options.TileSetting1UpperGreen,b,y
-	sta wSelectedTileSettingUpperGreen
+	sta aCurrentWindowColors.wUpperGreen
 	lda structSaveDataEntry.Options.TileSetting1UpperBlue,b,y
-	sta wSelectedTileSettingUpperBlue
+	sta aCurrentWindowColors.wUpperBlue
 	lda structSaveDataEntry.Options.TileSetting1LowerRed,b,y
-	sta wSelectedTileSettingLowerRed
+	sta aCurrentWindowColors.wLowerRed
 	lda structSaveDataEntry.Options.TileSetting1LowerGreen,b,y
-	sta wSelectedTileSettingLowerGreen
+	sta aCurrentWindowColors.wLowerGreen
 	lda structSaveDataEntry.Options.TileSetting1LowerBlue,b,y
-	sta wSelectedTileSettingLowerBlue
+	sta aCurrentWindowColors.wLowerBlue
 	rts
 
 rlGetSaveSlotOffset ; 81/C8B6

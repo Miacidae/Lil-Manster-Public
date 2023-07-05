@@ -8,9 +8,9 @@ rlProcUnknown9A8019Init ; 9A/8021
 	.autsiz
 	.databank ?
 
-	lda wProcInput1,b
+	lda aProcSystem.wInput1,b
 	sta lR18
-	lda wProcInput2,b
+	lda aProcSystem.wInput2,b
 	sta lR18+1
 	jsl $8ABB6B
 
@@ -18,9 +18,9 @@ rlProcUnknown9A8019Init ; 9A/8021
 	sta wR0
 
 	lda #(`procUnknown9A804A)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown9A804A
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 
 	rtl
@@ -51,16 +51,16 @@ rlUnknown9A8074 ; 9A/8074
 	.databank ?
 
 	lda lR18
-	sta aProcBody1,b,x
+	sta aProcSystem.aBody1,b,x
 	lda lR18+1
-	sta aProcBody2,b,x
+	sta aProcSystem.aBody2,b,x
 
 	lda wR0
-	sta aProcBody3,b,x
+	sta aProcSystem.aBody3,b,x
 
 	jsl $8ABB9D
 
-	sta aProcBody4,b,x
+	sta aProcSystem.aBody4,b,x
 
 	rtl
 
@@ -73,8 +73,8 @@ rlUnknown9A808B ; 9A/808B
 
 	sep #$20
 
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 
 	rep #$20
 
@@ -90,18 +90,18 @@ rlUnknown9A8098 ; 9A/8098
 
 	jsl $858033
 
-	lda aProcBody3,b,x
+	lda aProcSystem.aBody3,b,x
 	and #$00FF
 	dec a
 	sta wR0
 
-	lda aProcBody3,b,x
+	lda aProcSystem.aBody3,b,x
 	xba
 	and #$00FF
 	dec a
 	sta wR1
 
-	lda aProcBody4,b,x
+	lda aProcSystem.aBody4,b,x
 	inc a
 	inc a
 	sta wR2
@@ -118,8 +118,8 @@ rlUnknown9A8098 ; 9A/8098
 
 	sep #$20
 
-	lda #TM_Setting(False, True, False, False, True)
-	sta bBuf_TM
+	lda #T_Setting(False, True, False, False, True)
+	sta bBufferTM
 
 	rep #$20
 
@@ -144,12 +144,12 @@ rlUnknown9A80D7 ; 9A/80D7
 	lda #$0000
 	sta wR3
 
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	sta lR18
-	lda aProcBody2,b,x
+	lda aProcSystem.aBody2,b,x
 	sta lR18+1
 
-	lda aProcBody3,b,x
+	lda aProcSystem.aBody3,b,x
 	tax
 	jsl rlUnknownDialogueText
 
@@ -164,17 +164,17 @@ rlUnknown9A80FE ; 9A/80FE
 
 	sep #$20
 
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 
-	lda #TS_Setting(False, False, False, False, False)
-	sta bBuf_TS
+	lda #T_Setting(False, False, False, False, False)
+	sta bBufferTS
 
 	lda #CGWSEL_Setting(False, False, CGWSEL_MathAlways, CGWSEL_BlackNever)
-	sta bBuf_CGWSEL
+	sta bBufferCGWSEL
 
 	lda #CGADSUB_Setting(CGADSUB_Add, False, False, False, False, False, False, False)
-	sta bBuf_CGADSUB
+	sta bBufferCGADSUB
 
 	rep #$20
 

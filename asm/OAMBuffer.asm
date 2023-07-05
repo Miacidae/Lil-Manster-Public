@@ -17,7 +17,7 @@ aOAMSizeBitTable ; 80/8681
 
 		.for n=0, n<16, n+=2
 
-			.word <>aSpriteBufUpperAttributes + (i*2)
+			.word <>aSpriteExtBuffer + (i*2)
 			.word 3<<n
 
 		.next
@@ -58,7 +58,7 @@ rlPushToOAMBuffer ; 80/8881
 
 	_Loop
 	phx
-	ldx wNextFreeSpriteOffs,b
+	ldx wNextFreeSpriteOffset,b
 	clc
 
 	_SpriteLoop
@@ -68,7 +68,7 @@ rlPushToOAMBuffer ; 80/8881
 	; Else large sprite
 
 	adc wR0 ; add to x coord
-	sta aSpriteBuf,b,x ; store to OAM buf
+	sta aSpriteBuffer,b,x ; store to OAM buf
 	bit #$0100
 	bne _LargeSpriteXNegative
 
@@ -82,7 +82,7 @@ rlPushToOAMBuffer ; 80/8881
 
 	_SmallSprite
 	adc wR0 ; add to x coord
-	sta aSpriteBuf,b,x ; store to OAM buf
+	sta aSpriteBuffer,b,x ; store to OAM buf
 	bit #$0100
 	beq _SmallSpriteXPositive
 
@@ -109,15 +109,15 @@ rlPushToOAMBuffer ; 80/8881
 	+
 	clc
 	adc wR1 ; add to Y
-	sta aSpriteBuf+1,b,x
+	sta aSpriteBuffer+1,b,x
 	adc #16
 	cmp #256
 	bge _Offscreen
-	lda structSpriteEntry.Index,b,y ; index and attributes
+	lda structSpriteEntry.Attr,b,y ; index and attributes
 	clc
 	adc wR4 ; add to sprite base
 	ora wR5 ; combine with attribute base
-	sta aSpriteBuf+2,b,x
+	sta aSpriteBuffer+2,b,x
 
 	-
 	txa
@@ -130,13 +130,13 @@ rlPushToOAMBuffer ; 80/8881
 	tay
 	dec wR2 ; sprite count
 	bne _SpriteLoop
-	stx wNextFreeSpriteOffs,b
+	stx wNextFreeSpriteOffset,b
 	plx
 	rtl
 
 	_Offscreen
 	lda #240
-	sta aSpriteBuf+1,b,x
+	sta aSpriteBuffer+1,b,x
 	bra -
 
 	_LargeSpriteXNegative

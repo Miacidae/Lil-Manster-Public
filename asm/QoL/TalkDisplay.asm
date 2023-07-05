@@ -57,99 +57,101 @@ GUARD_ZQOL_TALK_DISPLAY :?= false
 
   ; Fixed location inclusions
 
-    * := $0186A4
-    .logical $8386A4
+; In Code838000.asm
 
-      rsDrawMovementRangeOrBMenu ; 83/86A4
-
-        .al
-        .autsiz
-        .databank `aPlayerVisibleUnitMap
-
-        jsl rlClearJoyNewInputs
-
-        lda #-1
-        sta wTerrainWindowTerrain
-
-        jsl rlUpdateBurstWindow._ClearWindow
-
-        ; If the player can't see
-        ; the unit at that tile, draw
-        ; B menu
-
-        ldx wCursorTileIndex,b
-        lda aPlayerVisibleUnitMap,x
-        and #$00FF
-        beq _BMenu
-
-          ; Otherwise get unit data
-          ; and check if unit is
-          ; selectable
-
-          sta wR0
-
-          lda #<>aSelectedCharacterBuffer
-          sta wR1
-
-          jsl rlCopyCharacterDataToBufferByDeploymentNumber
-
-          lda aSelectedCharacterBuffer.TurnStatus,b
-          and #TurnStatusGrayed
-          bne _BMenu
-
-            ; Lastly, check if unit is asleep.
-
-            lda aSelectedCharacterBuffer.Status,b
-            and #$00FF
-            cmp #StatusSleep
-            beq _BMenu
-
-              ; Draw unit's range
-
-              jsr rsUnknown838764
-
-              ; Originally recopied menu tiles,
-              ; replaced with talk display hook.
-
-              ; jsl rlUnknown83CD2B
-
-              jsl rlTalkDisplay
-
-              rts
-
-        _BMenu
-
-        ; Seems like some redundant actions
-        ; but it's possible that some other
-        ; routine enters here.
-
-        jsl rlClearJoyNewInputs
-
-        lda #-1
-        sta wTerrainWindowTerrain
-
-        jsl rlUpdateBurstWindow._ClearWindow
-
-        lda #0
-        sta wUnknown000E25,b
-
-        phx
-
-        lda #(`procBMenu)<<8
-        sta lR43+1
-        lda #<>procBMenu
-        sta lR43
-        jsl rlProcEngineCreateProc
-
-        plx
-
-        rts
-
-        .checkfit $848708
-
-        .databank 0
-
-    .endlogical
+;    * := $0186A4
+;    .logical $8386A4
+;
+;      rsDrawMovementRangeOrBMenu ; 83/86A4
+;
+;        .al
+;        .autsiz
+;        .databank `aPlayerVisibleUnitMap
+;
+;        jsl rlClearJoyNewInputs
+;
+;        lda #-1
+;        sta wTerrainWindowTerrain
+;
+;        jsl rlUpdateBurstWindow._ClearWindow
+;
+;        ; If the player can't see
+;        ; the unit at that tile, draw
+;        ; B menu
+;
+;        ldx wCursorTileIndex,b
+;        lda aPlayerVisibleUnitMap,x
+;        and #$00FF
+;        beq _BMenu
+;
+;          ; Otherwise get unit data
+;          ; and check if unit is
+;          ; selectable
+;
+;          sta wR0
+;
+;          lda #<>aSelectedCharacterBuffer
+;          sta wR1
+;
+;          jsl rlCopyCharacterDataToBufferByDeploymentNumber
+;
+;          lda aSelectedCharacterBuffer.UnitState,b
+;          and #UnitStateGrayed
+;          bne _BMenu
+;
+;            ; Lastly, check if unit is asleep.
+;
+;            lda aSelectedCharacterBuffer.Status,b
+;            and #$00FF
+;            cmp #StatusSleep
+;            beq _BMenu
+;
+;              ; Draw unit's range
+;
+;              jsr rsUnknown838764
+;
+;              ; Originally recopied menu tiles,
+;              ; replaced with talk display hook.
+;
+;              ; jsl rlUnknown83CD2B
+;
+;              jsl rlTalkDisplay
+;
+;              rts
+;
+;        _BMenu
+;
+;        ; Seems like some redundant actions
+;        ; but it's possible that some other
+;        ; routine enters here.
+;
+;        jsl rlClearJoyNewInputs
+;
+;        lda #-1
+;        sta wTerrainWindowTerrain
+;
+;        jsl rlUpdateBurstWindow._ClearWindow
+;
+;        lda #0
+;        sta wUnknown000E25,b
+;
+;        phx
+;
+;        lda #(`procBMenu)<<8
+;        sta lR44+1
+;        lda #<>procBMenu
+;        sta lR44
+;        jsl rlProcEngineCreateProc
+;
+;        plx
+;
+;        rts
+;
+;        .checkfit $848708
+;
+;        .databank 0
+;
+;    .endlogical
 
   ; Freespace inclusions
 
@@ -172,7 +174,7 @@ GUARD_ZQOL_TALK_DISPLAY :?= false
 
         jsl rlUnknown83CD2B
 
-        lda aOptions.wTerrainWindowOption
+        lda aOptions.wTerrainWindow
         and #$0F00
         cmp #$0200
         bcs +
@@ -247,8 +249,8 @@ GUARD_ZQOL_TALK_DISPLAY :?= false
 
               ; Check if unit is on the map and is visible.
 
-              lda aBurstWindowCharacterBuffer.TurnStatus,b
-              bit #(TurnStatusDead | TurnStatusUnknown1 | TurnStatusHidden | TurnStatusInvisible | TurnStatusCaptured)
+              lda aBurstWindowCharacterBuffer.UnitState,b
+              bit #(UnitStateDead | UnitStateUnknown1 | UnitStateHidden | UnitStateDisabled | UnitStateCaptured)
               bne _NextTarget
 
               phx
@@ -308,19 +310,19 @@ GUARD_ZQOL_TALK_DISPLAY :?= false
 
                 lda aBurstWindowCharacterBuffer.X,b
                 and #$00FF
-                sta wProcInput0,b
+                sta aProcSystem.wInput0,b
 
                 lda aBurstWindowCharacterBuffer.Y,b
                 and #$00FF
-                sta wProcInput1,b
+                sta aProcSystem.wInput1,b
 
                 phx
                 phy
 
                 lda #(`procTalkDisplay)<<8
-                sta lR43+size(byte)
+                sta lR44+size(byte)
                 lda #<>procTalkDisplay
-                sta lR43
+                sta lR44
 
                 jsl rlProcEngineCreateProc
 
@@ -623,11 +625,11 @@ GUARD_ZQOL_TALK_DISPLAY :?= false
 
         ; Copy coordinates into proc body.
 
-        lda wProcInput0,b
-        sta aProcBody0,b,x
+        lda aProcSystem.wInput0,b
+        sta aProcSystem.aBody0,b,x
 
-        lda wProcInput1,b
-        sta aProcBody1,b,x
+        lda aProcSystem.wInput1,b
+        sta aProcSystem.aBody1,b,x
 
         rtl
 
@@ -643,7 +645,7 @@ GUARD_ZQOL_TALK_DISPLAY :?= false
         ; Wait until we're free to DMA
 
         lda bDMAArrayFlag,b
-        ora bDecompListFlag,b
+        ora bDecompressionArrayFlag,b
         bne +
 
           jsl rlDMAByStruct
@@ -654,15 +656,15 @@ GUARD_ZQOL_TALK_DISPLAY :?= false
 
           _LowerTiles .dstruct structDMAToVRAM, g4bppExclamationBubble+$200, (size(Tile4bpp) * 2), VMAIN_Setting(true), $2A80
 
-          ldx wProcIndex,b
+          ldx aProcSystem.wOffset,b
 
           lda #<>rlProcTalkDisplayOnCycle2
-          sta aProcHeaderOnCycle,b,x
+          sta aProcSystem.aHeaderOnCycle,b,x
 
         +
 
         lda #1
-        sta aProcHeaderSleepTimer,b,x
+        sta aProcSystem.aHeaderSleepTimer,b,x
 
         rtl
 
@@ -680,7 +682,7 @@ GUARD_ZQOL_TALK_DISPLAY :?= false
         cmp #$0002
         beq +
 
-          stz aProcHeaderTypeOffset,b,x
+          stz aProcSystem.aHeaderTypeOffset,b,x
           rtl
 
         +
@@ -700,10 +702,10 @@ GUARD_ZQOL_TALK_DISPLAY :?= false
 
         .databank `_Sprite
 
-        lda aProcBody0,b,x
+        lda aProcSystem.aBody0,b,x
         sta wR0
 
-        lda aProcBody1,b,x
+        lda aProcSystem.aBody1,b,x
         sta wR1
 
         jsl rlGetPixelDistanceFromScreenEdge

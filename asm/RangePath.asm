@@ -7,11 +7,11 @@ rlUnknown80DE00 ; 80/DE00
 	php
 	sep #$20
 	phb
-	lda #`aRangeMap
+	lda #`aMovementMap
 	pha
 	plb
 
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	lda #$71
 	sta bMovementCostCap,b
@@ -26,11 +26,11 @@ rlUnknown80DE12 ; 80/DE12
 	php
 	sep #$20
 	phb
-	lda #`aRangeMap
+	lda #`aMovementMap
 	pha
 	plb
 
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	lda #$71
 	sta bMovementCostCap,b
@@ -45,7 +45,7 @@ rlFillMovementRangeArray ; 80/DE28
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	jsl rlSetupRangePathDirectionDistances
 
@@ -56,9 +56,9 @@ rlFillMovementRangeArray ; 80/DE28
 	; Fill range map with FFFF
 
 	sta wR1
-	lda #(`aRangeMap)<<8
+	lda #(`aMovementMap)<<8
 	sta lR18+1
-	lda #<>aRangeMap
+	lda #<>aMovementMap
 	sta lR18
 	lda #$FFFF
 	jsl rlFillMapByWord
@@ -80,7 +80,7 @@ rlFillMovementRangeArray ; 80/DE28
 
 	ldx wR1
 	lda #$FF00
-	sta aRangeMap,x
+	sta aMovementMap,x
 
 	; Store current tile to range path array
 
@@ -153,7 +153,7 @@ rlFillMovementRangeArray ; 80/DE28
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	sep #$20
 	ldx wR6
@@ -188,7 +188,7 @@ rlFillMovementRangeArray ; 80/DE28
 	; Add to path's running movement cost
 
 	clc
-	adc aRangeMap,y
+	adc aMovementMap,y
 
 	; Compare to the cost of moving up?
 
@@ -211,7 +211,7 @@ rlFillMovementRangeArray ; 80/DE28
 
 	tya
 	clc
-	adc wR21
+	adc lR21
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 
 	; Store direction?
@@ -255,7 +255,7 @@ rlFillMovementRangeArray ; 80/DE28
 	bmi +
 
 	clc
-	adc aRangeMap,y
+	adc aMovementMap,y
 	cmp (wR16),y
 	bcs +
 
@@ -269,7 +269,7 @@ rlFillMovementRangeArray ; 80/DE28
 	rep #$20
 	tya
 	clc
-	adc wR22
+	adc lR22
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 	sep #$20
 	lda #RangePathDown
@@ -307,7 +307,7 @@ rlFillMovementRangeArray ; 80/DE28
 	bmi +
 
 	clc
-	adc aRangeMap,y
+	adc aMovementMap,y
 	cmp (wR17),y
 	bcs +
 
@@ -320,7 +320,7 @@ rlFillMovementRangeArray ; 80/DE28
 	rep #$20
 	tya
 	clc
-	adc wR23
+	adc lR23
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 	sep #$20
 	lda #RangePathLeft
@@ -358,20 +358,20 @@ rlFillMovementRangeArray ; 80/DE28
 	bmi +
 
 	clc
-	adc aRangeMap,y
-	cmp (wR19),y
+	adc aMovementMap,y
+	cmp (lR19),y
 	bcs +
 
 	cmp wR2
 	bcs +
 
 	ldx wR5
-	sta (wR19),y
+	sta (lR19),y
 	sta aRangePathArray + structRangePathEntry.TargetCost,b,x
 	rep #$20
 	tya
 	clc
-	adc wR24
+	adc lR24
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 	sep #$20
 	lda #RangePathRight
@@ -390,7 +390,7 @@ rlFillMovementRangeArray ; 80/DE28
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	sep #$20
 	ldx wR6
@@ -425,7 +425,7 @@ rlFillMovementRangeArray ; 80/DE28
 	; Add to path's running movement cost
 
 	clc
-	adc aRangeMap,y
+	adc aMovementMap,y
 
 	; Compare to the cost of moving up?
 
@@ -448,7 +448,7 @@ rlFillMovementRangeArray ; 80/DE28
 
 	tya
 	clc
-	adc wR21
+	adc lR21
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 
 	; Store direction?
@@ -492,7 +492,7 @@ rlFillMovementRangeArray ; 80/DE28
 	bmi +
 
 	clc
-	adc aRangeMap,y
+	adc aMovementMap,y
 	cmp (wR17),y
 	bcs +
 
@@ -505,7 +505,7 @@ rlFillMovementRangeArray ; 80/DE28
 	rep #$20
 	tya
 	clc
-	adc wR23
+	adc lR23
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 	sep #$20
 	lda #RangePathLeft
@@ -543,20 +543,20 @@ rlFillMovementRangeArray ; 80/DE28
 	bmi +
 
 	clc
-	adc aRangeMap,y
-	cmp (wR19),y
+	adc aMovementMap,y
+	cmp (lR19),y
 	bcs +
 
 	cmp wR2
 	bcs +
 
 	ldx wR5
-	sta (wR19),y
+	sta (lR19),y
 	sta aRangePathArray + structRangePathEntry.TargetCost,b,x
 	rep #$20
 	tya
 	clc
-	adc wR24
+	adc lR24
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 	sep #$20
 	lda #RangePathRight
@@ -575,7 +575,7 @@ rlFillMovementRangeArray ; 80/DE28
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	sep #$20
 	ldx wR6
@@ -610,7 +610,7 @@ rlFillMovementRangeArray ; 80/DE28
 	; Add to path's running movement cost
 
 	clc
-	adc aRangeMap,y
+	adc aMovementMap,y
 
 	; Compare to the cost of moving up?
 
@@ -633,7 +633,7 @@ rlFillMovementRangeArray ; 80/DE28
 
 	tya
 	clc
-	adc wR21
+	adc lR21
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 
 	; Store direction?
@@ -677,7 +677,7 @@ rlFillMovementRangeArray ; 80/DE28
 	bmi +
 
 	clc
-	adc aRangeMap,y
+	adc aMovementMap,y
 	cmp (wR16),y
 	bcs +
 
@@ -691,7 +691,7 @@ rlFillMovementRangeArray ; 80/DE28
 	rep #$20
 	tya
 	clc
-	adc wR22
+	adc lR22
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 	sep #$20
 	lda #RangePathDown
@@ -729,20 +729,20 @@ rlFillMovementRangeArray ; 80/DE28
 	bmi +
 
 	clc
-	adc aRangeMap,y
-	cmp (wR19),y
+	adc aMovementMap,y
+	cmp (lR19),y
 	bcs +
 
 	cmp wR2
 	bcs +
 
 	ldx wR5
-	sta (wR19),y
+	sta (lR19),y
 	sta aRangePathArray + structRangePathEntry.TargetCost,b,x
 	rep #$20
 	tya
 	clc
-	adc wR24
+	adc lR24
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 	sep #$20
 	lda #RangePathRight
@@ -761,7 +761,7 @@ rlFillMovementRangeArray ; 80/DE28
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	sep #$20
 	ldx wR6
@@ -790,7 +790,7 @@ rlFillMovementRangeArray ; 80/DE28
 	bmi +
 
 	clc
-	adc aRangeMap,y
+	adc aMovementMap,y
 	cmp (wR16),y
 	bcs +
 
@@ -804,7 +804,7 @@ rlFillMovementRangeArray ; 80/DE28
 	rep #$20
 	tya
 	clc
-	adc wR22
+	adc lR22
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 	sep #$20
 	lda #RangePathDown
@@ -842,7 +842,7 @@ rlFillMovementRangeArray ; 80/DE28
 	bmi +
 
 	clc
-	adc aRangeMap,y
+	adc aMovementMap,y
 	cmp (wR17),y
 	bcs +
 
@@ -855,7 +855,7 @@ rlFillMovementRangeArray ; 80/DE28
 	rep #$20
 	tya
 	clc
-	adc wR23
+	adc lR23
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 	sep #$20
 	lda #RangePathLeft
@@ -894,20 +894,20 @@ rlFillMovementRangeArray ; 80/DE28
 	bmi +
 
 	clc
-	adc aRangeMap,y
-	cmp (wR19),y
+	adc aMovementMap,y
+	cmp (lR19),y
 	bcs +
 
 	cmp wR2
 	bcs +
 
 	ldx wR5
-	sta (wR19),y
+	sta (lR19),y
 	sta aRangePathArray + structRangePathEntry.TargetCost,b,x
 	rep #$20
 	tya
 	clc
-	adc wR24
+	adc lR24
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 	sep #$20
 	lda #RangePathRight
@@ -926,7 +926,7 @@ rlFillMovementRangeArray ; 80/DE28
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	sep #$20
 	ldx wR6
@@ -961,7 +961,7 @@ rlFillMovementRangeArray ; 80/DE28
 	; Add to path's running movement cost
 
 	clc
-	adc aRangeMap,y
+	adc aMovementMap,y
 
 	; Compare to the cost of moving up?
 
@@ -984,7 +984,7 @@ rlFillMovementRangeArray ; 80/DE28
 
 	tya
 	clc
-	adc wR21
+	adc lR21
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 
 	; Store direction?
@@ -1028,7 +1028,7 @@ rlFillMovementRangeArray ; 80/DE28
 	bmi +
 
 	clc
-	adc aRangeMap,y
+	adc aMovementMap,y
 	cmp (wR16),y
 	bcs +
 
@@ -1042,7 +1042,7 @@ rlFillMovementRangeArray ; 80/DE28
 	rep #$20
 	tya
 	clc
-	adc wR22
+	adc lR22
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 	sep #$20
 	lda #RangePathDown
@@ -1080,7 +1080,7 @@ rlFillMovementRangeArray ; 80/DE28
 	bmi +
 
 	clc
-	adc aRangeMap,y
+	adc aMovementMap,y
 	cmp (wR17),y
 	bcs +
 
@@ -1093,7 +1093,7 @@ rlFillMovementRangeArray ; 80/DE28
 	rep #$20
 	tya
 	clc
-	adc wR23
+	adc lR23
 	sta aRangePathArray + structRangePathEntry.TargetTile,b,x
 	sep #$20
 	lda #RangePathLeft
@@ -1111,7 +1111,7 @@ rlFillMovementRangeArray ; 80/DE28
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	rep #$20
 	ldx wR5
@@ -1151,35 +1151,35 @@ rlSetupRangePathDirectionDistances ; 80/E3CE
 	lda #<>aTerrainMap + 1
 	sta wR14
 
-	lda #<>aRangeMap
+	lda #<>aMovementMap
 	sec
 	sbc wMapRowSize,b
 	sta wR15
 
-	lda #<>aRangeMap
+	lda #<>aMovementMap
 	clc
 	adc wMapRowSize,b
 	sta wR16
 
-	lda #<>aRangeMap - 1
+	lda #<>aMovementMap - 1
 	sta wR17
 
-	lda #<>aRangeMap + 1
-	sta wR19
+	lda #<>aMovementMap + 1
+	sta lR19
 
 	lda #$0000
 	sec
 	sbc wMapRowSize,b
-	sta wR21
+	sta lR21
 
 	lda wMapRowSize,b
-	sta wR22
+	sta lR22
 
 	lda #$FFFF
-	sta wR23
+	sta lR23
 
 	lda #$0001
-	sta wR24
+	sta lR24
 
 	lda #<>aPlayerVisibleUnitMap
 	sec
@@ -1226,18 +1226,18 @@ rlUnknown80E451 ; 80/E451
 	jsl rlGetMapTileIndexByCoords
 	sta wR2
 	tax
-	stz wR24
+	stz lR24
 	sep #$20
 	phb
-	lda #`aRangeMap
+	lda #`aMovementMap
 	pha
 	plb
 
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	_Loop
 	ldx wR2
-	lda aRangeMap,x
+	lda aMovementMap,x
 	bne +
 
 	jmp _End
@@ -1255,17 +1255,17 @@ rlUnknown80E451 ; 80/E451
 	tax
 
 	sep #$20
-	lda aRangeMap,x
+	lda aMovementMap,x
 	sta wR3
 
-	lda aRangeMap,y
+	lda aMovementMap,y
 	sta wR4
 
 	ldx wR2
-	lda aRangeMap - 1,x
+	lda aMovementMap - 1,x
 	sta wR4+1
 
-	lda aRangeMap + 1,x
+	lda aMovementMap + 1,x
 	sta wR3+1
 
 	lda #$FE
@@ -1323,7 +1323,7 @@ rlUnknown80E451 ; 80/E451
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	jsl <>riBRK
 
@@ -1332,10 +1332,10 @@ rlUnknown80E451 ; 80/E451
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	lda #128
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 	and #$0001
 	bra _Unknown80E501
 
@@ -1344,10 +1344,10 @@ rlUnknown80E451 ; 80/E451
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	lda #48
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 	lsr a
 	lsr a
 	lsr a
@@ -1359,10 +1359,10 @@ rlUnknown80E451 ; 80/E451
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	lda #128
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 	and #$0003
 	bra _Unknown80E501
 
@@ -1371,7 +1371,7 @@ rlUnknown80E451 ; 80/E451
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	lda #0
 
@@ -1380,7 +1380,7 @@ rlUnknown80E451 ; 80/E451
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	ldy #$0004
 	tax
@@ -1395,9 +1395,9 @@ rlUnknown80E451 ; 80/E451
 	bpl -
 
 	tya
-	ldx wR24
+	ldx lR24
 	sta $7EA6AD,x
-	inc wR24
+	inc lR24
 	rep #$20
 	asl a
 	and #$000F
@@ -1423,9 +1423,9 @@ rsUnknown80E533 ; 80/E533
 	.as
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
-	ldx wR24
+	ldx lR24
 	dec x
 
 	-
@@ -1434,7 +1434,7 @@ rsUnknown80E533 ; 80/E533
 	dec x
 	bpl -
 
-	ldx wR24
+	ldx lR24
 	lda #$00
 	sta @l $7EA72D,x
 	dec x
@@ -1456,19 +1456,19 @@ rlUnknown80E551 ; 80/E551
 	php
 	phb
 	sep #$20
-	lda #`aRangeMap
+	lda #`aMovementMap
 	pha
 	plb
 
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	rep #$20
-	lda wMapHeight16,b
+	lda wMapHeightMetatiles,b
 	dec a
 	sta wR1
 
 	-
-	lda wMapWidth16,b
+	lda wMapWidthMetatiles,b
 	dec a
 	sta wR0
 
@@ -1481,7 +1481,7 @@ rlUnknown80E551 ; 80/E551
 	adc wR0
 	tay
 	sep #$20
-	lda aRangeMap,y
+	lda aMovementMap,y
 	bpl +
 
 	lda (wR15),y
@@ -1489,21 +1489,21 @@ rlUnknown80E551 ; 80/E551
 	bcs +
 
 	lda bMovementCostCap,b
-	sta aRangeMap,y
+	sta aMovementMap,y
 
 	+
-	lda aRangeMap,y
+	lda aMovementMap,y
 	bpl +
 
-	lda (wR19),y
+	lda (lR19),y
 	cmp bMovementCostCap,b
 	bcs +
 
 	lda bMovementCostCap,b
-	sta aRangeMap,y
+	sta aMovementMap,y
 
 	+
-	lda aRangeMap,y
+	lda aMovementMap,y
 	bpl +
 
 	lda (wR16),y
@@ -1511,10 +1511,10 @@ rlUnknown80E551 ; 80/E551
 	bcs +
 
 	lda bMovementCostCap,b
-	sta aRangeMap,y
+	sta aMovementMap,y
 
 	+
-	lda aRangeMap,y
+	lda aMovementMap,y
 	bpl +
 
 	lda (wR17),y
@@ -1522,7 +1522,7 @@ rlUnknown80E551 ; 80/E551
 	bcs +
 
 	lda bMovementCostCap,b
-	sta aRangeMap,y
+	sta aMovementMap,y
 
 	+
 	rep #$20
@@ -1645,23 +1645,23 @@ rlUnknown80E662 ; 80/E662
 	lda wR0
 	beq rlUnknown80E5FF._End
 
-	cmp wMapWidth16,b
+	cmp wMapWidthMetatiles,b
 	bcs rlUnknown80E5FF._End
 
 	lda wR1
 	beq rlUnknown80E5FF._End
 
-	cmp wMapHeight16,b
+	cmp wMapHeightMetatiles,b
 	bcs rlUnknown80E5FF._End
 
 	php
 	sep #$20
 	phb
-	lda #`aRangeMap
+	lda #`aMovementMap
 	pha
 	plb
 
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	rep #$30
 	jsl rlGetMapTileIndexByCoords
@@ -1675,10 +1675,10 @@ rlUnknown80E662 ; 80/E662
 	lda wR1
 	clc
 	adc wR2
-	cmp wMapHeight16,b
+	cmp wMapHeightMetatiles,b
 	bcc +
 
-	lda wMapHeight16,b
+	lda wMapHeightMetatiles,b
 	sec
 	sbc wR1
 	sta wR12
@@ -1769,21 +1769,21 @@ rsUnknown80E6FF ; 80/E6FF
 	clc
 	adc wR7
 	sta wR15
-	cmp wMapWidth16,b
+	cmp wMapWidthMetatiles,b
 	beq ++
 	blt ++
 
-	lda wMapWidth16,b
+	lda wMapWidthMetatiles,b
 	sta wR15
 
 	+
 	lda wR0
 	clc
 	adc wR7
-	cmp wMapWidth16,b
+	cmp wMapWidthMetatiles,b
 	blt +
 
-	lda wMapWidth16,b
+	lda wMapWidthMetatiles,b
 	sec
 	sbc wR0
 	sta wR15
@@ -1955,11 +1955,11 @@ rlDrawRangeTiles1RangeOnly ; 80/E9AF
 	.databank `aRangeMap
 
 	php
-	lda #<>aMovementMap
+	lda #<>aRangeMap
 	sec
 	sbc wMapRowSize,b
 	sta wR0
-	lda #<>aMovementMap
+	lda #<>aRangeMap
 	clc
 	adc wMapRowSize,b
 	sta wR1
@@ -1970,15 +1970,15 @@ rlDrawRangeTiles1RangeOnly ; 80/E9AF
 	sep #$20
 
 	-
-	lda aRangeMap,y
+	lda aMovementMap,y
 	bmi +
 
 	lda aPlayerVisibleUnitMap,y
 	bne +
 
 	lda #$01
-	sta aMovementMap - 1,y
-	sta aMovementMap + 1,y
+	sta aRangeMap - 1,y
+	sta aRangeMap + 1,y
 	sta (wR0),y
 	sta (wR1),y
 
@@ -1995,16 +1995,16 @@ rlDrawRangeTiles1To2Range ; 80/E9EA
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	php
-	lda #<>aMovementMap
+	lda #<>aRangeMap
 	sec
 	sbc wMapRowSize,b
 	sec
 	sbc wMapRowSize,b
 	sta wR0
-	lda #<>aMovementMap
+	lda #<>aRangeMap
 	sec
 	sbc wMapRowSize,b
 	sta wR2
@@ -2013,7 +2013,7 @@ rlDrawRangeTiles1To2Range ; 80/E9EA
 	inc a
 	inc a
 	sta wR3
-	lda #<>aMovementMap
+	lda #<>aRangeMap
 	clc
 	adc wMapRowSize,b
 	sta wR5
@@ -2022,7 +2022,7 @@ rlDrawRangeTiles1To2Range ; 80/E9EA
 	inc a
 	inc a
 	sta wR6
-	lda #<>aMovementMap
+	lda #<>aRangeMap
 	clc
 	adc wMapRowSize,b
 	clc
@@ -2036,17 +2036,17 @@ rlDrawRangeTiles1To2Range ; 80/E9EA
 	sep #$20
 
 	-
-	lda aRangeMap,y
+	lda aMovementMap,y
 	bmi +
 
 	lda aPlayerVisibleUnitMap,y
 	bne +
 
 	lda #$01
-	sta aMovementMap - 2,y
-	sta aMovementMap - 1,y
-	sta aMovementMap + 1,y
-	sta aMovementMap + 2,y
+	sta aRangeMap - 2,y
+	sta aRangeMap - 1,y
+	sta aRangeMap + 1,y
+	sta aRangeMap + 2,y
 	sta (wR0),y
 	sta (wR1),y
 	sta (wR2),y
@@ -2069,10 +2069,10 @@ rlDrawRangeTiles2RangeOnly ; 80/EA62
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	php
-	lda #<>aMovementMap
+	lda #<>aRangeMap
 	sec
 	sbc wMapRowSize,b
 	sec
@@ -2085,7 +2085,7 @@ rlDrawRangeTiles2RangeOnly ; 80/EA62
 	inc a
 	inc a
 	sta wR2
-	lda #<>aMovementMap
+	lda #<>aRangeMap
 	clc
 	adc wMapRowSize,b
 	dec a
@@ -2097,7 +2097,7 @@ rlDrawRangeTiles2RangeOnly ; 80/EA62
 	adc wMapRowSize,b
 	dec a
 	sta wR5
-	lda #<>aMovementMap
+	lda #<>aRangeMap
 	clc
 	adc wMapRowSize,b
 	clc
@@ -2111,15 +2111,15 @@ rlDrawRangeTiles2RangeOnly ; 80/EA62
 	sep #$20
 
 	-
-	lda aRangeMap,y
+	lda aMovementMap,y
 	bmi +
 
 	lda aPlayerVisibleUnitMap,y
 	bne +
 
 	lda #$01
-	sta aMovementMap - 2,y
-	sta aMovementMap + 2,y
+	sta aRangeMap - 2,y
+	sta aRangeMap + 2,y
 	sta (wR0),y
 	sta (wR1),y
 	sta (wR2),y
@@ -2140,20 +2140,20 @@ rsUnknown80EAD0 ; 80/EAD0
 	.al
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
-	sta wEventEngineUnknownXTarget
-	lda wMapWidth16,b
+	sta wActiveTileUnitParameter1
+	lda wMapWidthMetatiles,b
 	dec a
 	sta wR0
-	lda wMapHeight16,b
+	lda wMapHeightMetatiles,b
 	dec a
-	sta wEventEngineUnknownYTarget
+	sta wActiveTileUnitParameter2
 	ldy wMapRowSize,b
 	sep #$20
 
 	-
-	lda aRangeMap,y
+	lda aMovementMap,y
 	bmi +
 
 	lda aPlayerVisibleUnitMap,y
@@ -2163,20 +2163,20 @@ rsUnknown80EAD0 ; 80/EAD0
 	rep #$30
 	lda #$0001
 	sta wR1
-	lda #<>aMovementMap
+	lda #<>aRangeMap
 	sta wR3
-	lda wEventEngineUnknownXTarget
+	lda wActiveTileUnitParameter1
 	ldx wR0
 	phx
-	lda wEventEngineUnknownXTarget
+	lda wActiveTileUnitParameter1
 	jsl rlUnknown80E5CD
 	plx
 	stx wR0
-	lda wEventEngineUnknownYTarget
+	lda wActiveTileUnitParameter2
 	sta wR1
 	ldx wR0
 	phx
-	lda wEventEngineUnknownXTarget
+	lda wActiveTileUnitParameter1
 	jsl rlUnknown80E5CD
 	plx
 	stx wR0

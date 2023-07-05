@@ -1,7 +1,7 @@
 ; Fixes softlocks for Epilogue slides of dead/captured characters
 
 * = $0A726C
-.logical lorom($0A726D, 1)
+.logical mapped($0A726D)
 	.as
 	.xl
 	.mansiz
@@ -11,15 +11,15 @@
 .here
 
 * = $0A7273
-.logical lorom($0A7273, 1)
+.logical mapped($0A7273)
 
 	iny
 	lda		#$02
-	sta		[$32],y
-	lda		($2f),y
+	sta		[lR19],y
+	lda		(lR18),y
 	cmp		#$20
 	beq		is_space
-	inc		$32
+	inc		lR19
 	dey
 	
 is_space

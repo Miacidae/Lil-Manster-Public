@@ -22,28 +22,28 @@ rlHandlePossibleHDMA ; 80/AC95
 	.databank `*
 
 	sep #$20
-	lda bUnknown000341,b
+	lda bDMAPendingChannels,b
 	sta MDMAEN,b
-	stz bUnknown000341,b
+	stz bDMAPendingChannels,b
 
 	; Check for vblank
 
 	lda @l HVBJOY
-	bit #HVBJOY.VBLankFlag
+	bit #HVBJOY_VBlank
 	beq _End
 
 	; Handle HDMA?
 
-	lda bBuf_HDMAEN
+	lda bBufferHDMAEN
 	ora bHDMAPendingChannels,b
-	sta bBuf_HDMAEN
+	sta bBufferHDMAEN
 
 	jsl rlHDMAArrayEngineProcessHDMAArray
 
-	lda bBuf_HDMAEN
+	lda bBufferHDMAEN
 	sta HDMAEN,b
 
-	stz bBuf_HDMAEN
+	stz bBufferHDMAEN
 	stz bHDMAPendingChannels,b
 
 	_End
@@ -86,11 +86,11 @@ rlProcessDMAStructArray ; 80/ACC4
 	stz HDMAEN,b
 
 	rep #$30
-	stz wNextDMAArrayStructOffs,b
+	stz wDMAArrayPosition,b
 	ldy #$0000
 
 	_DMALoop
-	cpy #size(aDMAStructArray)
+	cpy #size(aDMAArray)
 	blt _BelowLimit
 
 	; I'd bet some bounds checking would be better
@@ -104,7 +104,7 @@ rlProcessDMAStructArray ; 80/ACC4
 
 	; Grab the transfer type
 
-	lda aDMAStructArray,b,y
+	lda aDMAArray,b,y
 	and #$00FF
 	asl a
 	tax
@@ -131,7 +131,7 @@ rlProcessDMAStructArray ; 80/ACC4
 	; Nothing to transfer
 
 	sep #$20
-	stz aDMAStructArray,b
+	stz aDMAArray,b
 	plp
 	plb
 	rtl
@@ -144,22 +144,22 @@ rlProcessDMAStructArray ; 80/ACC4
 	.databank `rlProcessDMAStructArray
 
 	sep #$20
-	lda aDMAStructArray+structDMAToCGRAMEntry.Source,b,y
-	sta A1T7,b
-	lda aDMAStructArray+structDMAToCGRAMEntry.Source+1,b,y
-	sta A1T7+1,b
-	lda aDMAStructArray+structDMAToCGRAMEntry.Source+2,b,y
-	sta A1T7+2,b
-	lda aDMAStructArray+structDMAToCGRAMEntry.Count,b,y
-	sta DAS7,b
-	lda aDMAStructArray+structDMAToCGRAMEntry.Count+1,b,y
-	sta DAS7+1,b
-	lda aDMAStructArray+structDMAToCGRAMEntry.Start,b,y
+	lda aDMAArray+structDMAToCGRAMEntry.Source,b,y
+	sta DMA_IO[7].A1,b
+	lda aDMAArray+structDMAToCGRAMEntry.Source+1,b,y
+	sta DMA_IO[7].A1+1,b
+	lda aDMAArray+structDMAToCGRAMEntry.Source+2,b,y
+	sta DMA_IO[7].A1+2,b
+	lda aDMAArray+structDMAToCGRAMEntry.Count,b,y
+	sta DMA_IO[7].DAS,b
+	lda aDMAArray+structDMAToCGRAMEntry.Count+1,b,y
+	sta DMA_IO[7].DAS+1,b
+	lda aDMAArray+structDMAToCGRAMEntry.Start,b,y
 	sta CGADD,b
-	stz DMAP7,b
+	stz DMA_IO[7].DMAP,b
 	lda #CGDATA - PPU_REG_BASE
-	sta BBAD7,b
-	lda #MDMAEN_Setting(False, False, False, False, False, False, False, True)
+	sta DMA_IO[7].BBAD,b
+	lda #$80
 	sta MDMAEN,b
 	rep #$20
 	tya
@@ -176,27 +176,27 @@ rlProcessDMAStructArray ; 80/ACC4
 	.databank `rlProcessDMAStructArray
 
 	sep #$20
-	lda aDMAStructArray+structDMAToVRAMEntry.Source,b,y
-	sta A1T7,b
-	lda aDMAStructArray+structDMAToVRAMEntry.Source+1,b,y
-	sta A1T7+1,b
-	lda aDMAStructArray+structDMAToVRAMEntry.Source+2,b,y
-	sta A1T7+2,b
-	lda aDMAStructArray+structDMAToVRAMEntry.Count,b,y
-	sta DAS7,b
-	lda aDMAStructArray+structDMAToVRAMEntry.Count+1,b,y
-	sta DAS7+1,b
-	lda aDMAStructArray+structDMAToVRAMEntry.Mode,b,y
+	lda aDMAArray+structDMAToVRAMEntry.Source,b,y
+	sta DMA_IO[7].A1,b
+	lda aDMAArray+structDMAToVRAMEntry.Source+1,b,y
+	sta DMA_IO[7].A1+1,b
+	lda aDMAArray+structDMAToVRAMEntry.Source+2,b,y
+	sta DMA_IO[7].A1+2,b
+	lda aDMAArray+structDMAToVRAMEntry.Count,b,y
+	sta DMA_IO[7].DAS,b
+	lda aDMAArray+structDMAToVRAMEntry.Count+1,b,y
+	sta DMA_IO[7].DAS+1,b
+	lda aDMAArray+structDMAToVRAMEntry.Mode,b,y
 	sta VMAIN,b
-	lda aDMAStructArray+structDMAToVRAMEntry.Dest,b,y
+	lda aDMAArray+structDMAToVRAMEntry.Dest,b,y
 	sta VMADD,b
-	lda aDMAStructArray+structDMAToVRAMEntry.Dest+1,b,y
+	lda aDMAArray+structDMAToVRAMEntry.Dest+1,b,y
 	sta VMADD+1,b
-	lda #DMAPx_Setting(DMAPx_TransferCPUToIO, DMAPx_Mode1, DMAPx_ABusIncrement, DMAPx_Direct)
-	sta DMAP7,b
+	lda #1
+	sta DMA_IO[7].DMAP,b
 	lda #VMDATA - PPU_REG_BASE
-	sta BBAD7,b
-	lda #MDMAEN_Setting(False, False, False, False, False, False, False, True)
+	sta DMA_IO[7].BBAD,b
+	lda #$80
 	sta MDMAEN,b
 	rep #$20
 	tya
@@ -213,29 +213,29 @@ rlProcessDMAStructArray ; 80/ACC4
 	.databank `rlProcessDMAStructArray
 
 	sep #$20
-	lda aDMAStructArray+structDMAFromVRAMEntry.Dest,b,y
-	sta A1T7,b
-	lda aDMAStructArray+structDMAFromVRAMEntry.Dest+1,b,y
-	sta A1T7+1,b
-	lda aDMAStructArray+structDMAFromVRAMEntry.Dest+2,b,y
-	sta A1T7+2,b
-	lda aDMAStructArray+structDMAFromVRAMEntry.Count,b,y
-	sta DAS7,b
-	lda aDMAStructArray+structDMAFromVRAMEntry.Count+1,b,y
-	sta DAS7+1,b
-	lda aDMAStructArray+structDMAFromVRAMEntry.Mode,b,y
+	lda aDMAArray+structDMAFromVRAMEntry.Dest,b,y
+	sta DMA_IO[7].A1,b
+	lda aDMAArray+structDMAFromVRAMEntry.Dest+1,b,y
+	sta DMA_IO[7].A1+1,b
+	lda aDMAArray+structDMAFromVRAMEntry.Dest+2,b,y
+	sta DMA_IO[7].A1+2,b
+	lda aDMAArray+structDMAFromVRAMEntry.Count,b,y
+	sta DMA_IO[7].DAS,b
+	lda aDMAArray+structDMAFromVRAMEntry.Count+1,b,y
+	sta DMA_IO[7].DAS+1,b
+	lda aDMAArray+structDMAFromVRAMEntry.Mode,b,y
 	sta VMAIN,b
-	lda aDMAStructArray+structDMAFromVRAMEntry.Source,b,y
+	lda aDMAArray+structDMAFromVRAMEntry.Source,b,y
 	sta VMADD,b
-	lda aDMAStructArray+structDMAFromVRAMEntry.Source+1,b,y
+	lda aDMAArray+structDMAFromVRAMEntry.Source+1,b,y
 	sta VMADD+1,b
 	lda #WMADD - PPU_REG_BASE
-	sta DMAP7,b
+	sta DMA_IO[7].DMAP,b
 	lda #RDVRAM - PPU_REG_BASE ; to RDVRAM
-	sta BBAD7,b
+	sta DMA_IO[7].BBAD,b
 	lda RDVRAM,b ; dummy read?
 	lda RDVRAM+1,b
-	lda #MDMAEN_Setting(False, False, False, False, False, False, False, True)
+	lda #$80
 	sta MDMAEN,b
 	rep #$20
 	tya
@@ -252,32 +252,32 @@ rlProcessDMAStructArray ; 80/ACC4
 	.databank `rlProcessDMAStructArray
 
 	sep #$20
-	lda aDMAStructArray+structDMAInputDestEntry.Source,b,y
-	sta A1T7,b
-	lda aDMAStructArray+structDMAInputDestEntry.Source+1,b,y
-	sta A1T7+1,b
-	lda aDMAStructArray+structDMAInputDestEntry.Source+2,b,y
-	sta A1T7+2,b
-	lda aDMAStructArray+structDMAInputDestEntry.Count,b,y
-	sta DAS7,b
-	lda aDMAStructArray+structDMAInputDestEntry.Count+1,b,y
-	sta DAS7+1,b
-	lda aDMAStructArray+structDMAInputDestEntry.Param,b,y
-	sta DMAP7,b
-	lda aDMAStructArray+structDMAInputDestEntry.Port,b,y
-	sta BBAD7,b
-	lda aDMAStructArray+structDMAInputDestEntry.Mode,b,y
+	lda aDMAArray+structDMAInputPort.Source,b,y
+	sta DMA_IO[7].A1,b
+	lda aDMAArray+structDMAInputPort.Source+1,b,y
+	sta DMA_IO[7].A1+1,b
+	lda aDMAArray+structDMAInputPort.Source+2,b,y
+	sta DMA_IO[7].A1+2,b
+	lda aDMAArray+structDMAInputPort.Count,b,y
+	sta DMA_IO[7].DAS,b
+	lda aDMAArray+structDMAInputPort.Count+1,b,y
+	sta DMA_IO[7].DAS+1,b
+	lda aDMAArray+structDMAInputPort.Parameter,b,y
+	sta DMA_IO[7].DMAP,b
+	lda aDMAArray+structDMAInputPort.Port,b,y
+	sta DMA_IO[7].BBAD,b
+	lda aDMAArray+structDMAInputPort.Mode,b,y
 	sta VMAIN,b
-	lda aDMAStructArray+structDMAInputDestEntry.Dest,b,y
+	lda aDMAArray+structDMAInputPort.Destination,b,y
 	sta VMADD,b
-	lda aDMAStructArray+structDMAInputDestEntry.Dest+1,b,y
+	lda aDMAArray+structDMAInputPort.Destination+1,b,y
 	sta VMADD+1,b
-	lda #MDMAEN_Setting(False, False, False, False, False, False, False, True)
+	lda #$80
 	sta MDMAEN,b
 	rep #$20
 	tya
 	clc
-	adc #size(structDMAInputDestEntry)
+	adc #size(structDMAInputPort)
 	tay
 	jmp _DMALoop
 
@@ -313,14 +313,14 @@ rlDMAByStruct ; 80/AE2E
 	rep #$30
 	lda lDMAByStructReturnLocation ; offset
 	tax
-	ldy wNextDMAArrayStructOffs,b
+	ldy wDMAArrayPosition,b
 	sep #$20
 
 	; Get transfer type
 
 	lda $0001,b,x
 	inc x
-	sta aDMAStructArray,b,y
+	sta aDMAArray,b,y
 
 	; Copy to array based on type
 
@@ -359,19 +359,19 @@ rlDMAByStruct ; 80/AE2E
 	; Cap new end of array
 
 	lda #$00
-	sta aDMAStructArray+size(structDMAToVRAM),b,y
+	sta aDMAArray+size(structDMAToVRAM),b,y
 
 	; Append the entry
 
 	rep #$20
 	lda $0001,b,x
-	sta aDMAStructArray+1,b,y
+	sta aDMAArray+1,b,y
 	lda $0003,b,x
-	sta aDMAStructArray+3,b,y
+	sta aDMAArray+3,b,y
 	lda $0005,b,x
-	sta aDMAStructArray+5,b,y
+	sta aDMAArray+5,b,y
 	lda $0007,b,x
-	sta aDMAStructArray+7,b,y
+	sta aDMAArray+7,b,y
 
 	; Adjust return location on stack
 
@@ -394,25 +394,25 @@ rlDMAByStruct ; 80/AE2E
 	; Same as above
 
 	lda #$00
-	sta aDMAStructArray+size(structDMAInputDest),b,y
+	sta aDMAArray+size(structDMAInputPort),b,y
 	rep #$20
 	lda $0001,b,x
-	sta aDMAStructArray+1,b,y
+	sta aDMAArray+1,b,y
 	lda $0003,b,x
-	sta aDMAStructArray+3,b,y
+	sta aDMAArray+3,b,y
 	lda $0005,b,x
-	sta aDMAStructArray+5,b,y
+	sta aDMAArray+5,b,y
 	lda $0007,b,x
-	sta aDMAStructArray+7,b,y
+	sta aDMAArray+7,b,y
 	lda $0009,b,x
-	sta aDMAStructArray+9,b,y
+	sta aDMAArray+9,b,y
 	txa
 	clc
-	adc #size(structDMAInputDest)-1
+	adc #size(structDMAInputPort)-1
 	sta lDMAByStructReturnLocation
 	tya
 	clc
-	adc #size(structDMAInputDest)
+	adc #size(structDMAInputPort)
 	bra _DoDMA
 
 	_CGRAM
@@ -423,14 +423,14 @@ rlDMAByStruct ; 80/AE2E
 	.databank ?
 
 	lda #$00
-	sta aDMAStructArray+size(structDMAToCGRAM),b,y
+	sta aDMAArray+size(structDMAToCGRAM),b,y
 	rep #$20
 	lda $0001,b,x
-	sta aDMAStructArray+1,b,y
+	sta aDMAArray+1,b,y
 	lda $0003,b,x
-	sta aDMAStructArray+3,b,y
+	sta aDMAArray+3,b,y
 	lda $0005,b,x
-	sta aDMAStructArray+5,b,y
+	sta aDMAArray+5,b,y
 	txa
 	clc
 	adc #size(structDMAToCGRAM)-1
@@ -446,7 +446,7 @@ rlDMAByStruct ; 80/AE2E
 
 	; Update array size
 
-	sta wNextDMAArrayStructOffs,b
+	sta wDMAArrayPosition,b
 
 	; Set flag and try DMA
 
@@ -454,7 +454,7 @@ rlDMAByStruct ; 80/AE2E
 	lda #$01
 	sta bDMAArrayFlag,b
 
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	bpl _End
 
 	jsl rlProcessDMAStructArray
@@ -489,40 +489,40 @@ rlDMAByPointer ; 80/AEF9
 
 	.databank `*
 
-	ldx wNextDMAArrayStructOffs,b
+	ldx wDMAArrayPosition,b
 
 	sep #$20
 	lda #$02 ; Type: To VRAM
-	sta aDMAStructArray+structDMAToVRAMEntry.Type,b,x
+	sta aDMAArray+structDMAToVRAMEntry.Type,b,x
 
 	rep #$20
 	lda lR18
-	sta aDMAStructArray+structDMAToVRAMEntry.Source,b,x
+	sta aDMAArray+structDMAToVRAMEntry.Source,b,x
 	lda lR18+1
-	sta aDMAStructArray+structDMAToVRAMEntry.Source+1,b,x
+	sta aDMAArray+structDMAToVRAMEntry.Source+1,b,x
 
 	lda wR0
-	sta aDMAStructArray+structDMAToVRAMEntry.Count,b,x
+	sta aDMAArray+structDMAToVRAMEntry.Count,b,x
 
 	sep #$20
 	lda #VMAIN_Setting(True, VMAIN_TranslationNone, VMAIN_Step1)
-	sta aDMAStructArray+structDMAToVRAMEntry.Mode,b,x
+	sta aDMAArray+structDMAToVRAMEntry.Mode,b,x
 
 	rep #$20
 	lda wR1
-	sta aDMAStructArray+structDMAToVRAMEntry.Dest,b,x
+	sta aDMAArray+structDMAToVRAMEntry.Dest,b,x
 
 	; Cap end of array
 
 	lda #$0000
-	sta aDMAStructArray+size(structDMAToVRAMEntry),b,x
+	sta aDMAArray+size(structDMAToVRAMEntry),b,x
 
 	; Advance an entry
 
 	txa
 	clc
 	adc #size(structDMAToVRAMEntry)
-	sta wNextDMAArrayStructOffs,b
+	sta wDMAArrayPosition,b
 
 	; Set flag and try DMA
 
@@ -530,7 +530,7 @@ rlDMAByPointer ; 80/AEF9
 	lda #$01
 	sta bDMAArrayFlag,b
 
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	bpl _End
 
 	jsl rlProcessDMAStructArray
@@ -565,36 +565,36 @@ rlDMAByPointerStep32 ; 80/AF46
 
 	.databank `*
 
-	ldx wNextDMAArrayStructOffs,b
+	ldx wDMAArrayPosition,b
 
 	sep #$20
 	lda #$02
-	sta aDMAStructArray+structDMAToVRAMEntry.Type,b,x
+	sta aDMAArray+structDMAToVRAMEntry.Type,b,x
 
 	rep #$20
 	lda lR18
-	sta aDMAStructArray+structDMAToVRAMEntry.Source,b,x
+	sta aDMAArray+structDMAToVRAMEntry.Source,b,x
 	lda lR18+1
-	sta aDMAStructArray+structDMAToVRAMEntry.Source+1,b,x
+	sta aDMAArray+structDMAToVRAMEntry.Source+1,b,x
 	lda wR0
-	sta aDMAStructArray+structDMAToVRAMEntry.Count,b,x
+	sta aDMAArray+structDMAToVRAMEntry.Count,b,x
 	sep #$20
 	lda #VMAIN_Setting(True, VMAIN_TranslationNone, VMAIN_Step32)
-	sta aDMAStructArray+structDMAToVRAMEntry.Mode,b,x
+	sta aDMAArray+structDMAToVRAMEntry.Mode,b,x
 	rep #$20
 	lda wR1
-	sta aDMAStructArray+structDMAToVRAMEntry.Dest,b,x
+	sta aDMAArray+structDMAToVRAMEntry.Dest,b,x
 	lda #$0000
-	sta aDMAStructArray+size(structDMAToVRAMEntry),b,x
+	sta aDMAArray+size(structDMAToVRAMEntry),b,x
 	txa
 	clc
 	adc #size(structDMAToVRAMEntry)
-	sta wNextDMAArrayStructOffs,b
+	sta wDMAArrayPosition,b
 
 	sep #$20
 	lda #$01
 	sta bDMAArrayFlag,b
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	bpl _End
 
 	jsl rlProcessDMAStructArray

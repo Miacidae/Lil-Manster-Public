@@ -1,4 +1,3 @@
-.include "../asm/QoL/NewOptionFixes.asm"
 
 ;	Remodeled Options setup
 
@@ -7,9 +6,9 @@
 
 .al
 
-lda #<>MovedOptions
+lda #<>aOptionsMenuPointers
 sta lR25
-lda #>`MovedOptions
+lda #>`aOptionsMenuPointers
 sta lR25+1
 
 .here
@@ -17,14 +16,14 @@ sta lR25+1
 * = $02D53D
 .logical lorom($02D53D, 1)
 
-mvn #`MovedOptions,$7E
+mvn #`aOptionsMenuPointers,$7E
 
 .here
 
 * = $02DC93
 .logical lorom($02DC93, 1)
 
-lda #>`MovedOptions
+lda #>`aOptionsMenuPointers
 
 .here
 
@@ -56,12 +55,12 @@ rts
 
 OptionPointerNameBankSwap
 
-	lda #>`MovedOptions
+	lda #>`aOptionsMenuPointers
 	sta lR18+1
 	lda $A939
 	sta lR18
 	lda #$2180
-	sta wUnknown000DE7
+	sta aCurrentTilemapInfo.wBaseTile
 	ldx wR17
 	lda $85D5C3,X
 	tax
@@ -75,17 +74,19 @@ OptionGetAndSaveBankSwap
 	.xl
 	.autsiz
 
+	.databank `aOptionsWindowMenuLinePointers
+
 	sta wR16
 	stz wR17 
 	
 	-
 	ldx wR17 
-	lda $A95F,X
+	lda aOptionsWindowMenuLinePointers,X
 	sta lR18
 	jsr rsCopyOptionsPointerData
 
 	ldx wR16
-	lda  @w $0000,X
+	lda $0000,b,X
 	sta wR0				; short pointer
 	ldx wR17 
 	pea <>(+)-1	
@@ -95,7 +96,7 @@ OptionGetAndSaveBankSwap
 	inc wR17
 	inc wR17 
 	lda wR17
-	cmp $A95D
+	cmp $A95D,b
 	bne -
 	rtl
 
@@ -104,9 +105,9 @@ rsCopyOptionsPointerData
 
 	phb
 	ldx lR18 
-	ldy #$A937
+	ldy #<>aOptionsWindowTempMenuLine
 	lda #$0025
-	mvn #`MovedOptions, $7E
+	mvn #`aOptionsMenuPointers, $7E
 	plb
 	rts 
 
@@ -114,226 +115,225 @@ rsCopyOptionsPointerData
 
 ;	Moved Options pointers
 
-* = $48CED2 		
-.logical lorom($48CED2 , 1)
+	.section OptionsMenuPointers
+		
+		.word <>aOptionsMenuAnimationOption 			; CEEC
+		.word <>aOptionsMenuTerrainOption				; CF08
+		.word <>aOptionsMenuUnitOption 					; CF24
+		.word <>aOptionsMenuAutocursorOption 			; CF40
+		.word <>aOptionsMenuTextSpeedOption 			; CF58
+		.word <>aOptionsMenuUnitSpeedOption 			; CF74
+		.word <>aOptionsMenuHiddenInfoOption 			; CF8C
+		.word <>aOptionsMenuPrepsOption 				; CFAC
+		.word <>aOptionsMenuAudioSettingOption 			; CFC8
+		.word <>aOptionsMenuBGMOption 					; CFE0
+		.word <>aOptionsMenuVolumeOption 				; CFF8
+		.word <>aOptionsMenuTileSettingOption 			; D018
+		.word 0
 
-MovedOptions
-
-options_pointers			.block
-
-.word <>options_positions._AnimationOption 		; CEEC
-.word <>options_positions._TerrainOption		; CF08
-.word <>options_positions._UnitOption 			; CF24
-.word <>options_positions._AutocursorOption 	; CF40
-.word <>options_positions._TextSpeedOption 		; CF58
-.word <>options_positions._UnitSpeedOption 		; CF74
-.word <>options_positions._HiddenInfoOption 	; CF8C
-.word <>options_positions._PrepsOption 			; CFAC
-.word <>options_positions._AudioSettingOption 	; CFC8
-.word <>options_positions._BGMOption 			; CFE0
-.word <>options_positions._VolumeOption 		; CFF8
-.word <>options_positions._TileSettingOption 	; D018
-.word $0000
-
-.bend
+	.endsection OptionsMenuPointers
 
 ;	Positions of the options next to each setting
 
-options_positions			.block
+	.section OptionMenuDataSection
 
-_AnimationOption
-.word $0000
-.word <>options_text._AnimationName
-.word <>options_text._AnimationChoices
-.word <>options_text._AnimationSubtext
-.word <>options_text._AnimationTerrainUnitAutocursorGetter 	; Get set option  		   	  - Short pointer lorom($02E14C, 1)
-.word <>options_text._AnimationTerrainUnitAutocursorSaver 	; Store newly selected option - Short pointer lorom($02E192, 1)
-.word $38A0	;  Option icon 
-.word $0003	;  Number of options
-.word $0000	;  Position 1
-.word $0001	;  Tiles to highlight
-.word $0003	;  Position 2
-.word $0002	;  Tiles to highlight
-.word $0007	;  Position 3
-.word $0004	;  Tiles to highlight
+		aOptionsMenuAnimationOption
+		.word $0000
+		.word <>aOptionMenuAnimationName
+		.word <>aOptionMenuAnimationChoices
+		.word <>aOptionMenuAnimationSubtext
+		.word <>aOptionMenuAnimationTerrainUnitAutocursorGetter 	; Get option
+		.word <>aOptionMenuAnimationTerrainUnitAutocursorSaver 		; Store newly selected option
+		.word $38A0	;  Option icon 
+		.word $0003	;  Number of options
+		.word $0000	;  Position 1
+		.word $0001	;  Tiles to highlight
+		.word $0003	;  Position 2
+		.word $0002	;  Tiles to highlight
+		.word $0007	;  Position 3
+		.word $0004	;  Tiles to highlight
+		
 
-_TerrainOption
-.word $0000
-.word <>options_text._TerrainName
-.word <>options_text._TerrainChoices
-.word <>options_text._TerrainSubtext
-.word <>options_text._AnimationTerrainUnitAutocursorGetter
-.word <>options_text._AnimationTerrainUnitAutocursorSaver
-.word $38A2	;  Option icon 
-.word $0003	;  Number of options
-.word $0000	;  Position 1
-.word $0003	;  Tiles to highlight
-.word $0005	;  Position 2
-.word $0004	;  Tiles to highlight
-.word $000B	;  Position 3 
-.word $0002	;  Tiles to highlight
+		aOptionsMenuTerrainOption
+		.word $0000
+		.word <>aOptionMenuTerrainName
+		.word <>aOptionMenuTerrainChoices
+		.word <>aOptionMenuTerrainSubtext
+		.word <>aOptionMenuAnimationTerrainUnitAutocursorGetter
+		.word <>aOptionMenuAnimationTerrainUnitAutocursorSaver
+		.word $38A2	;  Option icon 
+		.word $0003	;  Number of options
+		.word $0000	;  Position 1
+		.word $0003	;  Tiles to highlight
+		.word $0005	;  Position 2
+		.word $0004	;  Tiles to highlight
+		.word $000B	;  Position 3 
+		.word $0002	;  Tiles to highlight
+		
+		aOptionsMenuUnitOption
+		.word $0000
+		.word <>aOptionMenuUnitName
+		.word <>aOptionMenuUnitChoices
+		.word <>aOptionMenuUnitSubtext
+		.word <>aOptionMenuAnimationTerrainUnitAutocursorGetter
+		.word <>aOptionMenuAnimationTerrainUnitAutocursorSaver
+		.word $38A4	;  Option icon 
+		.word $0003	;  Number of options
+		.word $0000	;  Position 1
+		.word $0003	;  Tiles to highlight
+		.word $0005	;  Position 2
+		.word $0004	;  Tiles to highlight
+		.word $000B	;  Position 3 
+		.word $0002	;  Tiles to highlight
+		
+		aOptionsMenuAutocursorOption
+		.word $0000
+		.word <>aOptionMenuAutocursorName
+		.word <>aOptionMenuAutocursorChoices
+		.word <>aOptionMenuAutocursorSubtext
+		.word <>aOptionMenuAnimationTerrainUnitAutocursorGetter
+		.word <>aOptionMenuAnimationTerrainUnitAutocursorSaver
+		.word $38A6	;  Option icon 
+		.word $0002	;  Number of options
+		.word $0000	;  Position 1
+		.word $0001	;  Tiles to highlight
+		.word $0003	;  Position 2
+		.word $0002	;  Tiles to highlight
+		
+		aOptionsMenuTextSpeedOption
+		.word $0000
+		.word <>aOptionMenuTextSpeedName
+		.word <>aOptionMenuTextSpeedChoices
+		.word <>aOptionMenuTextSpeedSubtext
+		.word <>aOptionMenuTextSpeedUnitSpeedHiddenInfoPrepsGetter
+		.word <>aOptionMenuTextSpeedUnitSpeedHiddenInfoPrepsSaver
+		.word $38A8	;  Option icon 
+		.word $0003	;  Number of options
+		.word $0000	;  Position 1
+		.word $0003	;  Tiles to highlight
+		.word $0005	;  Position 2
+		.word $0004	;  Tiles to highlight
+		.word $000B	;  Position 3
+		.word $0002	;  Tiles to highlight
+		
+		aOptionsMenuUnitSpeedOption
+		.word $0000
+		.word <>aOptionMenuUnitSpeedName
+		.word <>aOptionMenuUnitSpeedChoices
+		.word <>aOptionMenuUnitSpeedSubtext
+		.word <>aOptionMenuTextSpeedUnitSpeedHiddenInfoPrepsGetter
+		.word <>aOptionMenuTextSpeedUnitSpeedHiddenInfoPrepsSaver
+		.word $38AA	;  Option icon 
+		.word $0002	;  Number of options
+		.word $0000	;  Position 1
+		.word $0004	;  Tiles to highlight
+		.word $0006	;  Position 2
+		.word $0002	;  Tiles to highlight
+		
+		aOptionsMenuHiddenInfoOption
+		.word $0000
+		.word <>aOptionMenuHiddenInfoName
+		.word <>aOptionMenuHiddenInfoChoices
+		.word <>aOptionMenuHiddenInfoSubtext
+		.word <>aOptionMenuTextSpeedUnitSpeedHiddenInfoPrepsGetter
+		.word <>aOptionMenuTextSpeedUnitSpeedHiddenInfoPrepsSaver
+		.word $38E0	;  Option icon 
+		.word $0004	;  Number of options
+		.word $0000	;  Position 1
+		.word $0001	;  Tiles to highlight
+		.word $0003	;  Position 2
+		.word $0001	;  Tiles to highlight
+		.word $0006	;  Position 3
+		.word $0001	;  Tiles to highlight
+		.word $0009 ;  Position 4
+		.word $0001	;  Tiles to highlight
+		
+		aOptionsMenuPrepsOption
+		.word $0000
+		.word <>aOptionMenuPrepsName
+		.word <>aOptionMenuPrepsChoices
+		.word <>aOptionMenuPrepsSubtext
+		.word <>aOptionMenuTextSpeedUnitSpeedHiddenInfoPrepsGetter
+		.word <>aOptionMenuTextSpeedUnitSpeedHiddenInfoPrepsSaver
+		.word $38E2	;  Option icon 
+		.word $0003	;  Number of options
+		.word $0000	;  Position 1
+		.word $0001	;  Tiles to highlight
+		.word $0003	;  Position 2
+		.word $0001	;  Tiles to highlight
+		.word $0006	;  Position 3
+		.word $0001	;  Tiles to highlight
+		
+		aOptionsMenuAudioSettingOption
+		.word $0000
+		.word <>aOptionMenuAudioSettingName
+		.word <>aOptionMenuAudioSettingChoices
+		.word <>aOptionMenuAudioSettingSubtext
+		.word <>aOptionMenuAudioBGMVolumeGetter
+		.word <>aOptionMenuAudioBGMVolumeSaver
+		.word $38AC	;  Option icon 
+		.word $0002	;  Number of options
+		.word $0000	;  Position 1
+		.word $0003	;  Tiles to highlight
+		.word $0005	;  Position 2
+		.word $0003	;  Tiles to highlight
+		
+		aOptionsMenuBGMOption
+		.word $0000
+		.word <>aOptionMenuBGMName
+		.word <>aOptionMenuBGMChoices
+		.word <>aOptionMenuBGMSubtext
+		.word <>aOptionMenuAudioBGMVolumeGetter
+		.word <>aOptionMenuAudioBGMVolumeSaver
+		.word $38AE	;  Option icon 
+		.word $0002	;  Number of options
+		.word $0000	;  Position 1
+		.word $0001	;  Tiles to highlight
+		.word $0003	;  Position 2
+		.word $0002	;  Tiles to highlight
+		
+		aOptionsMenuVolumeOption
+		.word $0000
+		.word <>aOptionMenuVolumeName
+		.word <>aOptionMenuVolumeChoices
+		.word <>aOptionMenuVolumeSubtext
+		.word <>aOptionMenuAudioBGMVolumeGetter
+		.word <>aOptionMenuAudioBGMVolumeSaver
+		.word $38C0	;  Option icon 
+		.word $0004	;  Number of options
+		.word $0000	;  Position 1
+		.word $0003	;  Tiles to highlight
+		.word $0005	;  Position 2
+		.word $0002	;  Tiles to highlight
+		.word $0009	;  Position 3
+		.word $0001	;  Tiles to highlight
+		.word $000C	;  Position 4
+		.word $0002	;  Tiles to highlight
+		
+		aOptionsMenuTileSettingOption
+		.word $0000
+		.word <>aOptionMenuTileSettingName
+		.word <>aOptionMenuTileSettingChoices
+		.word <>aOptionMenuTileSettingSubtext
+		.word <>aOptionMenuTileSettingGetter
+		.word <>aOptionMenuTileSettingSaver
+		.word $38C2	;  Option icon 
+		.word $0005	;  Number of options
+		.word $0000	;  Position 1
+		.word $0001	;  Tiles to highlight
+		.word $0003	;  Position 2
+		.word $0001	;  Tiles to highlight
+		.word $0006	;  Position 3 
+		.word $0001	;  Tiles to highlight
+		.word $0009	;  Position 4
+		.word $0001	;  Tiles to highlight
+		.word $000C	;  Position 5
+		.word $0001	;  Tiles to highlight
+		
+	.endsection OptionMenuDataSection
 
-_UnitOption
-.word $0000
-.word <>options_text._UnitName
-.word <>options_text._UnitChoices
-.word <>options_text._UnitSubtext
-.word <>options_text._AnimationTerrainUnitAutocursorGetter
-.word <>options_text._AnimationTerrainUnitAutocursorSaver
-.word $38A4	;  Option icon 
-.word $0003	;  Number of options
-.word $0000	;  Position 1
-.word $0003	;  Tiles to highlight
-.word $0005	;  Position 2
-.word $0004	;  Tiles to highlight
-.word $000B	;  Position 3 
-.word $0002	;  Tiles to highlight
 
-_AutocursorOption
-.word $0000
-.word <>options_text._AutocursorName
-.word <>options_text._AutocursorChoices
-.word <>options_text._AutocursorSubtext
-.word <>options_text._AnimationTerrainUnitAutocursorGetter
-.word <>options_text._AnimationTerrainUnitAutocursorSaver
-.word $38A6	;  Option icon 
-.word $0002	;  Number of options
-.word $0000	;  Position 1
-.word $0001	;  Tiles to highlight
-.word $0003	;  Position 2
-.word $0002	;  Tiles to highlight
 
-_TextSpeedOption
-.word $0000
-.word <>options_text._TextSpeedName
-.word <>options_text._TextSpeedChoices
-.word <>options_text._TextSpeedSubtext
-.word <>options_text._TextSpeedUnitSpeedHiddenInfoPrepsGetter ; D338
-.word <>options_text._TextSpeedUnitSpeedHiddenInfoPrepsSaver
-.word $38A8	;  Option icon 
-.word $0003	;  Number of options
-.word $0000	;  Position 1
-.word $0003	;  Tiles to highlight
-.word $0005	;  Position 2
-.word $0004	;  Tiles to highlight
-.word $000B	;  Position 3
-.word $0002	;  Tiles to highlight
-
-_UnitSpeedOption
-.word $0000
-.word <>options_text._UnitSpeedName
-.word <>options_text._UnitSpeedChoices
-.word <>options_text._UnitSpeedSubtext
-.word <>options_text._TextSpeedUnitSpeedHiddenInfoPrepsGetter
-.word <>options_text._TextSpeedUnitSpeedHiddenInfoPrepsSaver
-.word $38AA	;  Option icon 
-.word $0002	;  Number of options
-.word $0000	;  Position 1
-.word $0004	;  Tiles to highlight
-.word $0006	;  Position 2
-.word $0002	;  Tiles to highlight
-
-_HiddenInfoOption
-.word $0000
-.word <>options_text._HiddenInfoName
-.word <>options_text._HiddenInfoChoices
-.word <>options_text._HiddenInfoSubtext
-.word <>options_text._TextSpeedUnitSpeedHiddenInfoPrepsGetter
-.word <>options_text._TextSpeedUnitSpeedHiddenInfoPrepsSaver
-.word $38E0	;  Option icon 
-.word $0004	;  Number of options
-.word $0000	;  Position 1
-.word $0001	;  Tiles to highlight
-.word $0003	;  Position 2
-.word $0001	;  Tiles to highlight
-.word $0006	;  Position 3
-.word $0001	;  Tiles to highlight
-.word $0009 ;  Position 4
-.word $0001	;  Tiles to highlight
-
-_PrepsOption
-.word $0000
-.word <>options_text._PrepsName
-.word <>options_text._PrepsChoices
-.word <>options_text._PrepsSubtext
-.word <>options_text._TextSpeedUnitSpeedHiddenInfoPrepsGetter
-.word <>options_text._TextSpeedUnitSpeedHiddenInfoPrepsSaver
-.word $38E2	;  Option icon 
-.word $0003	;  Number of options
-.word $0000	;  Position 1
-.word $0001	;  Tiles to highlight
-.word $0003	;  Position 2
-.word $0001	;  Tiles to highlight
-.word $0006	;  Position 3
-.word $0001	;  Tiles to highlight
-
-_AudioSettingOption
-.word $0000
-.word <>options_text._AudioSettingName
-.word <>options_text._AudioSettingChoices
-.word <>options_text._AudioSettingSubtext
-.word <>options_text._AudioBGMVolumeGetter
-.word <>options_text._AudioBGMVolumeSaver
-.word $38AC	;  Option icon 
-.word $0002	;  Number of options
-.word $0000	;  Position 1
-.word $0003	;  Tiles to highlight
-.word $0005	;  Position 2
-.word $0003	;  Tiles to highlight
-
-_BGMOption
-.word $0000
-.word <>options_text._BGMName
-.word <>options_text._BGMChoices
-.word <>options_text._BGMSubtext
-.word <>options_text._AudioBGMVolumeGetter
-.word <>options_text._AudioBGMVolumeSaver
-.word $38AE	;  Option icon 
-.word $0002	;  Number of options
-.word $0000	;  Position 1
-.word $0001	;  Tiles to highlight
-.word $0003	;  Position 2
-.word $0002	;  Tiles to highlight
-
-_VolumeOption
-.word $0000
-.word <>options_text._VolumeName
-.word <>options_text._VolumeChoices
-.word <>options_text._VolumeSubtext
-.word <>options_text._AudioBGMVolumeGetter
-.word <>options_text._AudioBGMVolumeSaver
-.word $38C0	;  Option icon 
-.word $0004	;  Number of options
-.word $0000	;  Position 1
-.word $0003	;  Tiles to highlight
-.word $0005	;  Position 2
-.word $0002	;  Tiles to highlight
-.word $0009	;  Position 3
-.word $0001	;  Tiles to highlight
-.word $000C	;  Position 4
-.word $0002	;  Tiles to highlight
-
-_TileSettingOption
-.word $0000
-.word <>options_text._TileSettingName
-.word <>options_text._TileSettingChoices
-.word <>options_text._TileSettingSubtext
-.word <>options_text._TileSettingGetter
-.word <>options_text._TileSettingSaver
-.word $38C2	;  Option icon 
-.word $0005	;  Number of options
-.word $0000	;  Position 1
-.word $0001	;  Tiles to highlight
-.word $0003	;  Position 2
-.word $0001	;  Tiles to highlight
-.word $0006	;  Position 3 
-.word $0001	;  Tiles to highlight
-.word $0009	;  Position 4
-.word $0001	;  Tiles to highlight
-.word $000C	;  Position 5
-.word $0001	;  Tiles to highlight
-
-.bend
 
 ;	Options & Settings names and descriptions
 ;	("Animation" is an option. "On", "Off" and "By Unit" are settings.)
@@ -346,344 +346,309 @@ _TileSettingOption
 
 ;	Description character limit: 57
 
-options_text			.block
+	.section OptionMenuTextSection
 
-_AnimationName
-.text "An{im}ations"
-.word $0000
+		aOptionMenuAnimationName
+		.text "An{im}ations\n"
+		
+		aOptionMenuAnimationSubtext
+		.text "Turn attack an{im}ations on or off\n"
+		
+		aOptionMenuAnimationChoices
+		.text "On"
+		.word $2020
+		.word $2020
+		.text "Off "
+		.word $2020
+		.word $2020
+		.text "By Unit \n"
+		
+		
+		aOptionMenuTerrainName
+		.text "(Map Data \n"
+		
+		aOptionMenuTerrainSubtext
+		.text "Turn terrain ]windo]w and {H}{P} bars on or off \n"
+		
+		aOptionMenuTerrainChoices
+		aOptionMenuUnitChoices
+		.text "Detail"
+		.word $2020
+		.word $2020
+		.text "Si[mple "
+		.word $2020
+		.word $2020
+		.text "Off \n"
+		
+		aOptionMenuUnitName
+		.text "Units )Windo12\n"
+		
+		aOptionMenuUnitSubtext
+		.text "Set the unit ]windo]w's level of detail \n"
+		
+		aOptionMenuAutocursorName
+		.text "Autocursor\n"
+		
+		aOptionMenuAutocursorSubtext
+		.text "Set cursor to start on Leif \n"
+		
+		aOptionMenuAutocursorChoices
+		aOptionMenuBGMChoices
+		.text "On"
+		.word $2020
+		.word $2020
+		.text "Off \n"
+		
+		
+		aOptionMenuTextSpeedName
+		.text "(Message Speed\n"
+		
+		aOptionMenuTextSpeedSubtext
+		.text "Adjust ho]w fast text [messages display \n"
+		
+		aOptionMenuTextSpeedChoices
+		.text "Slo12 "
+		.word $2020
+		.word $2020
+		aOptionMenuUnitSpeedChoices
+		.text "+Nor[mal"
+		.word $2020
+		.word $2020
+		.text "Fast\n"
+		
+		aOptionMenuUnitSpeedName
+		.text "Ga[me Speed \n"
+		
+		aOptionMenuUnitSpeedSubtext
+		.text "Adjust ho]w fast the ga[me progresses \n"
+		
+		aOptionMenuHiddenInfoName
+		.text "Hidden Data \n"
+		
+		aOptionMenuHiddenInfoSubtext
+		.text "{0}: +None {1}: Inventory {2}: Chapter {3}: Hidden Skills \n"
+		
+		aOptionMenuHiddenInfoChoices
+		.text "{0}"
+		.word $2020
+		.word $2020
+		.text "{1}"
+		.word $2020
+		.word $2020
+		.text "{2}"
+		.word $2020
+		.word $2020
+		.text "{3}\n"
+		
+		aOptionMenuPrepsName
+		.text "Deploy[ment \n"
+		
+		aOptionMenuPrepsSubtext
+		.text "{0}: Default {1}: Display units {2}: Rearrange units \n"
+		
+		aOptionMenuPrepsChoices
+		.text "{0}"
+		.word $2020
+		.word $2020
+		.text "{1}"
+		.word $2020
+		.word $2020
+		.text "{2}\n"
+		
+		aOptionMenuAudioSettingName
+		.text "Audio \n"
+		
+		aOptionMenuAudioSettingSubtext
+		.text "Adjust audio settings \n"
+		
+		aOptionMenuAudioSettingChoices
+		.text "Stereo"
+		.word $2020
+		.word $2020
+		.text "(Mono \n"
+		
+		aOptionMenuBGMName
+		.text "(Music\n"
+		
+		aOptionMenuBGMSubtext
+		.text "Turn [music on or off \n"
+		
+		aOptionMenuVolumeName
+		.text "Sound Effects \n"
+		
+		aOptionMenuVolumeSubtext
+		.text "Adjust volu[me of sound effects \n"
+		
+		aOptionMenuVolumeChoices
+		.text "{note}{note}{note}"
+		.word $2020
+		.word $2020
+		.text "{note}{note}"
+		.word $2020
+		.word $2020
+		.text "{note}"
+		.word $2020
+		.word $2020
+		.text "Off \n"
+		
+		aOptionMenuTileSettingName
+		.text ")Windo]w Pattern\n"
+		
+		aOptionMenuTileSettingSubtext
+		.text "Change the [menu ]windo12 \n"
+		
+		aOptionMenuTileSettingChoices
+		.text "{1}"
+		.word $2020
+		.word $2020
+		.text "{2}"
+		.word $2020
+		.word $2020
+		.text "{3}"
+		.word $2020
+		.word $2020
+		.text "{4}"
+		.word $2020
+		.word $2020
+		.text "{5}"
+		.word $2020
+		.word $2020
+		.text "\n"
 
-_AnimationSubtext
-.text "Turn attack an{im}ations on or off"
-.word $0000
+	.endsection OptionMenuTextSection
 
-_AnimationChoices
-.text "On"
-.word $2020
-.word $2020
-.text "Off "
-.word $2020
-.word $2020
-.text "By Unit "
-.word $0000
+	.section OptionMenuGettersSaversSection
 
+		.databank ?
 
-_TerrainName
-.text "(Map Data "
-.word $0000
+		aOptionMenuAnimationTerrainUnitAutocursorGetter
+		
+			txa
+			lsr
+			lsr
+			lsr
+			tax 
+			lda aOptions.wAnimation 
+			sta $A97F,b,X
+			rts 
+		
+		aOptionMenuTextSpeedUnitSpeedHiddenInfoPrepsGetter
+		
+			txa
+			lsr
+			lsr
+			lsr
+			tax 
+			lda aOptions.wTerrainWindow 
+			sta $A97F+1,b,X
+			rts 
+		
+		aOptionMenuAudioBGMVolumeGetter
+		
+			txa
+			lsr
+			lsr
+			lsr
+			tax 
+			lda aOptions.wBurstWindow
+			sta $A97F+2,b,X
+			rts 
+		
+		aOptionMenuTileSettingGetter
+			lda aOptions.wBackground
+			sta $A991,b
+			rts
+		
+		aOptionMenuAnimationTerrainUnitAutocursorSaver
+		
+			txa
+			lsr
+			lsr
+			lsr
+			tax 
+			lda $A97F,b,X
+			sta aOptions.wAnimation
+			rts 
+		
+		aOptionMenuTextSpeedUnitSpeedHiddenInfoPrepsSaver
+		
+			txa
+			lsr
+			lsr
+			lsr
+			tax 
+			lda $A97F+1,b,X
+			sta aOptions.wTerrainWindow
+			rts 
+		
+		aOptionMenuAudioBGMVolumeSaver
+		
+			txa
+			lsr
+			lsr
+			lsr
+			tax 
+			lda $A97F+2,b,X
+			sta aOptions.wBurstWindow
+			rts 
+		
+		aOptionMenuTileSettingSaver
+			rts
 
-_TerrainSubtext
-.text "Turn terrain ]windo]w and {H}{P} bars on or off "
-.word $0000
+	.endsection OptionMenuGettersSaversSection
 
-_TerrainChoices
-_UnitChoices
-.text "Detail"
-.word $2020
-.word $2020
-.text "Si[mple "
-.word $2020
-.word $2020
-.text "Off "
-.word $0000
+	.section OptionMenuHighlightSection
 
+		aHighAndUnHighlightTilesCoordTable
+		; +$C0 to the next entry 
 
-_UnitName
-.text "Units )Windo12"
-.word $0000
+		.word $0160 ; animation
+		.word $0220 ; terrain 
+		.word $02E0 ; unit
+		.word $03A0 ; autocursor
+		.word $0460 ; text speed
+		.word $0520 ; unit speed
+		.word $05E0 ; hidden info
+		.word $06A0 ; preps
+		.word $0760 ; audio
+		.word $0820 ; BGM
+		.word $08E0 ; volume
+		.word $09A0 ; tile settings
 
-_UnitSubtext
-.text "Set the unit ]windo]w's level of detail "
-.word $0000
+	.endsection OptionMenuHighlightSection
 
-
-_AutocursorName
-.text "Autocursor"
-.word $0000
-
-_AutocursorSubtext
-.text "Set cursor to start on Leif "
-.word $0000
-
-_AutocursorChoices
-_BGMChoices
-.text "On"
-.word $2020
-.word $2020
-.text "Off "
-.word $0000
-
-
-_TextSpeedName
-.text "(Message Speed"
-.word $0000
-
-_TextSpeedSubtext
-.text "Adjust ho]w fast text [messages display "
-.word $0000
-
-_TextSpeedChoices
-.text "Slo12 "
-.word $2020
-.word $2020
-_UnitSpeedChoices
-.text "+Nor[mal"
-.word $2020
-.word $2020
-.text "Fast"
-.word $0000
-
-
-_UnitSpeedName
-.text "Ga[me Speed "
-.word $0000
-
-_UnitSpeedSubtext
-.text "Adjust ho]w fast the ga[me progresses "
-.word $0000
-
-
-_HiddenInfoName
-.text "Hidden Data "
-.word $0000
-
-_HiddenInfoSubtext
-.text "{0}: +None {1}: Inventory {2}: Chapter {3}: Hidden Skills "
-.word $0000
-
-_HiddenInfoChoices
-.text "{0}"
-.word $2020
-.word $2020
-.text "{1}"
-.word $2020
-.word $2020
-.text "{2}"
-.word $2020
-.word $2020
-.text "{3}"
-.word $0000
-
-
-_PrepsName
-.text "Deploy[ment "
-.word $0000
-
-_PrepsSubtext
-.text "{0}: Default {1}: Display units {2}: Rearrange units "
-.word $0000
-
-_PrepsChoices
-.text "{0}"
-.word $2020
-.word $2020
-.text "{1}"
-.word $2020
-.word $2020
-.text "{2}"
-.word $0000
-
-
-_AudioSettingName
-.text "Audio "
-.word $0000
-
-_AudioSettingSubtext
-.text "Adjust audio settings "
-.word $0000
-
-_AudioSettingChoices
-.text "Stereo"
-.word $2020
-.word $2020
-.text "(Mono "
-.word $0000
-
-
-_BGMName
-.text "(Music"
-.word $0000
-
-_BGMSubtext
-.text "Turn [music on or off "
-.word $0000
-
-
-_VolumeName
-.text "Sound Effects "
-.word $0000
-
-_VolumeSubtext
-.text "Adjust volu[me of sound effects "
-.word $0000
-
-_VolumeChoices
-.text "{note}{note}{note}"
-.word $2020
-.word $2020
-.text "{note}{note}"
-.word $2020
-.word $2020
-.text "{note}"
-.word $2020
-.word $2020
-.text "Off "
-.word $0000
-
-
-_TileSettingName
-.text ")Windo]w Pattern"
-.word $0000
-
-_TileSettingSubtext
-.text "Change the [menu ]windo12 "
-.word $0000
-
-_TileSettingChoices
-.word $5082
-.word $2020
-.word $2020
-.word $5182
-.word $2020
-.word $2020
-.word $5282
-.word $2020
-.word $2020
-.word $5382
-.word $2020
-.word $2020
-.word $5482
-.word $2020
-.word $2020
-.word $0000
-
-
-_AnimationTerrainUnitAutocursorGetter
-
-	txa
-	lsr
-	lsr
-	lsr
-	tax 
-	lda aOptions.wAnimationOption 
-	sta $A97F,X
-	rts 
-
-_TextSpeedUnitSpeedHiddenInfoPrepsGetter
-
-	txa
-	lsr
-	lsr
-	lsr
-	tax 
-	lda aOptions.wTerrainWindowOption 
-	sta $A97F+1,X
-	rts 
-
-_AudioBGMVolumeGetter
-
-	txa
-	lsr
-	lsr
-	lsr
-	tax 
-	lda aOptions.wBurstWindowOption
-	sta $A97F+2,X
-	rts 
-
-_TileSettingGetter
-	lda aOptions.wWindowOption
-	sta $A991
-	rts
-
-_AnimationTerrainUnitAutocursorSaver
-
-	txa
-	lsr
-	lsr
-	lsr
-	tax 
-	lda $A97F,X
-	sta aOptions.wAnimationOption
-	rts 
-
-_TextSpeedUnitSpeedHiddenInfoPrepsSaver
-
-	txa
-	lsr
-	lsr
-	lsr
-	tax 
-	lda $A97F+1,X
-	sta aOptions.wTerrainWindowOption
-	rts 
-
-_AudioBGMVolumeSaver
-
-	txa
-	lsr
-	lsr
-	lsr
-	tax 
-	lda $A97F+2,X
-	sta aOptions.wBurstWindowOption
-	rts 
-
-_TileSettingSaver
-	rts
-
-.bend
-
-aHighAndUnHighlightTilesCoordTable ; 85D717 vanilla
-; +$C0 to the next entry 
-
-.word $0160 ; animation
-.word $0220 ; terrain 
-.word $02E0 ; unit
-.word $03A0 ; autocursor
-.word $0460 ; text speed
-.word $0520 ; unit speed
-.word $05E0 ; hidden info
-.word $06A0 ; preps
-.word $0760 ; audio
-.word $0820 ; BGM
-.word $08E0 ; volume
-.word $09A0 ; tile settings
 
 ; Window color descriptions
 
-options_tint_text			.block
+	.section OptionMenuTintTextSection
 
-_UpperTintName
-.text "Set color for the upper layer "
-.word $0000
-_LowerTintName
-.text "Set color for the lo]wer layer"
-.word $0000
-_RestoreName
-.text "Restore color to default"
-.word $0000
+		aOptionMenuTintUpperTintName
+		.text "Set color for the upper layer \n"
 
-.bend
+		aOptionMenuTintLowerTintName
+		.text "Set color for the lo]wer layer\n"
 
-.here
+		aOptionMenuTintRestoreName
+		.text "Restore color to default\n"
+
+	.endsection OptionMenuTintTextSection
+
 
 ; Window color descriptions pointers
 
-* = $02D280
-.logical lorom($02D280, 1)
+	.section OptionsMenuTintPointersSection
 
-options_tint_pointers		.block
+		.word <>aOptionMenuTintUpperTintName
+		.word <>aOptionMenuTintUpperTintName
+		.word <>aOptionMenuTintUpperTintName
+		.word <>aOptionMenuTintLowerTintName
+		.word <>aOptionMenuTintLowerTintName
+		.word <>aOptionMenuTintLowerTintName
+		.word <>aOptionMenuTintRestoreName
 
-.word <>options_tint_text._UpperTintName
-.word <>options_tint_text._UpperTintName
-.word <>options_tint_text._UpperTintName
-.word <>options_tint_text._LowerTintName
-.word <>options_tint_text._LowerTintName
-.word <>options_tint_text._LowerTintName
-.word <>options_tint_text._RestoreName
+	.endsection OptionsMenuTintPointersSection
 
-.bend
-.here
+
 
 ; Window color labels pointers
 
@@ -721,20 +686,16 @@ options_tint_pointers		.block
 .logical lorom($02D749, 1)
 
 WindowColorName
-.text ")Windo]w Color"
-.word $0000
+.text ")Windo]w Color\n"
 
 UpperSettingName
-.text "Upper "
-.word $0000
+.text "Upper \n"
 
 LowerSettingName
-.text "Lo]wer"
-.word $0000
+.text "Lo]wer\n"
 
 DefaultSettingName
-.text "Default "
-.word $0000
+.text "Default \n"
 
 .here
 

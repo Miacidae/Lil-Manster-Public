@@ -1,79 +1,79 @@
-; This allows you to extend the timer on each page of the ending's "white screen" text.
+;	Timers for each page:
 
 * = $0D1DE7
-.logical lorom($0D1DE7, 1)
+.logical mapped($0D1DE7)
 
-.byte	$FF
+.byte	$F0
 
 .here
 
 * = $0D1E24
-.logical lorom($0D1E24, 1)
+.logical mapped($0D1E24)
 
 .byte	$C0
 
 .here
 
 * = $0D1E61
-.logical lorom($0D1E61, 1)
+.logical mapped($0D1E61)
 
 .byte	$A0
 
 .here
 
 * = $0D1E9E
-.logical lorom($0D1E9E, 1)
+.logical mapped($0D1E9E)
 
-.byte	$FF
+.byte	$F0
 
 .here
 
 * = $0D1EDB
-.logical lorom($0D1EDB, 1)
+.logical mapped($0D1EDB)
 
-.byte	$FF
+.byte	$F0
 
 .here
 
 ;	Proper fade-out for last page
 
 * = $1CBFA7
-.logical lorom($1CBFA7, 1)
+.logical mapped($1CBFA7)
 
 .byte	$03
 
 .here
 
 * = $0D1F2B
-.logical lorom($0D1F2B, 1)
+.logical mapped($0D1F2B)
 
 .word	<>page1_line1
 
 .here
 
 * = $0D1F3A
-.logical lorom($0D1F3A, 1)
+.logical mapped($0D1F3A)
 
 .word	<>page2_line1
 
 .here
 
 * = $0D1F49
-.logical lorom($0D1F49, 1)
+.logical mapped($0D1F49)
 
 .word	<>page3_line1
 
 .here
 
 * = $0D1F58
-.logical lorom($0D1F58, 1)
+.logical mapped($0D1F58)
 
 .word	<>page4_line1
 
 .here
 
 * = $0D1F67
-.logical lorom($0D1F67, 1)
+.logical mapped($0D1F67)
 
 .word	<>page5_line1
 
@@ -81,11 +81,11 @@
 
 
 * = $0D1F70
-.logical lorom($0D1F70, 1)
+.logical mapped($0D1F70)
 
 page1_line1
 
-.long	page1_line1_text
+.long	dialogueEndingPage1Line1
 .byte	$FF
 .byte	$0A
 .word	$0400
@@ -94,7 +94,7 @@ page1_line1
 
 page1_line2
 
-.long	page1_line2_text
+.long	dialogueEndingPage1Line2
 .byte	$FF
 .byte	$0C
 .word	$0600
@@ -103,7 +103,7 @@ page1_line2
 
 page1_line3
 
-.long	page1_line3_text
+.long	dialogueEndingPage1Line3
 .byte	$FF
 .byte	$0E
 .word	$0800
@@ -112,7 +112,7 @@ page1_line3
 
 page1_line4
 
-.long	page1_line4_text
+.long	dialogueEndingPage1Line4
 .byte	$FF
 .byte	$10
 .word	$0A00
@@ -122,7 +122,7 @@ page1_line4
 
 page2_line1
 
-.long	page2_line1_text
+.long	dialogueEndingPage2Line1
 .byte	$FF
 .byte	$0A
 .word	$0400
@@ -131,7 +131,7 @@ page2_line1
 
 page2_line2
 
-.long	page2_line2_text
+.long	dialogueEndingPage2Line2
 .byte	$FF
 .byte	$0C
 .word	$0600
@@ -141,7 +141,7 @@ page2_line2
 
 page3_line1
 
-.long	page3_line1_text
+.long	dialogueEndingPage3Line1
 .byte	$FF
 .byte	$0A
 .word	$0400
@@ -150,7 +150,7 @@ page3_line1
 
 page3_line2
 
-.long	page3_line2_text
+.long	dialogueEndingPage3Line2
 .byte	$FF
 .byte	$0C
 .word	$0600
@@ -160,7 +160,7 @@ page3_line2
 
 page4_line1
 
-.long	page4_line1_text
+.long	dialogueEndingPage4Line1
 .byte	$FF
 .byte	$0A
 .word	$0400
@@ -169,7 +169,7 @@ page4_line1
 
 page4_line2
 
-.long	page4_line2_text
+.long	dialogueEndingPage4Line2
 .byte	$FF
 .byte	$0C
 .word	$0600
@@ -178,7 +178,7 @@ page4_line2
 
 page4_line3
 
-.long	page4_line3_text
+.long	dialogueEndingPage4Line3
 .byte	$FF
 .byte	$0E
 .word	$0800
@@ -188,7 +188,7 @@ page4_line3
 
 page5_line1
 
-.long	page5_line1_text
+.long	dialogueEndingPage5Line1
 .byte	$FF
 .byte	$0A
 .word	$0400
@@ -197,7 +197,7 @@ page5_line1
 
 page5_line2
 
-.long	page5_line2_text
+.long	dialogueEndingPage5Line2
 .byte	$FF
 .byte	$0C
 .word	$0600

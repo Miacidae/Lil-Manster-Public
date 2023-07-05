@@ -23,12 +23,12 @@ rlUnknown828D09 ; 82/8D09
 	lda #$0001
 	sta wUnknown001800,b
 
-	lda wUnknown0017E9,b
+	lda wDialogueEngineStatus,b
 	bit #$0001
 	beq +
 
 	lda #<>rlProcMEOnCycle
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	+
 	rtl
@@ -40,7 +40,7 @@ rlProcMEOnCycle ; 82/8D1E
 	.autsiz
 	.databank ?
 
-	lda wUnknown0017E9,b
+	lda wDialogueEngineStatus,b
 	bit #$0001
 	bne +
 

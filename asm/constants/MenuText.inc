@@ -1,5 +1,5 @@
 
-.enc "MenuText"
+.enc "SJIS"
 	.edef "\n",	[$00, $00]
 	.edef "　",	[$81, $40]
 	.edef "、",	[$81, $41]

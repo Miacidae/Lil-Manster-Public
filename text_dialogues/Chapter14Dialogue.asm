@@ -1,4 +1,4 @@
-ch14homerwomen
+dialogueChapter14HomerWomen
 .byte Right_slot
 .word LoadPortrait
 .word homer_portrait
@@ -13,7 +13,7 @@ ch14homerwomen
 .byte WaitForA
 .byte EndText
 
-ch14homerkids
+dialogueChapter14HomerKids
 .byte Right_slot
 .word LoadPortrait
 .word homer_portrait
@@ -25,7 +25,7 @@ ch14homerkids
 .byte WaitForA
 .byte EndText
 
-ch14homernanna
+dialogueCh14HomerNanna
 .byte Right_slot
 .word LoadPortrait
 .word nanna_portrait
@@ -104,7 +104,7 @@ ch14homernanna
 .byte EndText
 
 
-ch14villager1
+dialogueChapter14Villager1
 
 .byte Right_slot ; HOUSE NORTH EAST
 .word LoadPortrait
@@ -119,7 +119,7 @@ ch14villager1
 .byte EndText
 
 
-ch14villager2
+dialogueChapter14Villager2
 
 .byte Right_slot ; HOUSE CENTER EAST
 .word LoadPortrait
@@ -134,7 +134,7 @@ ch14villager2
 .byte EndText
 
 
-ch14villager3
+dialogueChapter14Villager3
 
 .byte Right_slot ; HOUSE SOUTH EAST
 .word LoadPortrait
@@ -152,7 +152,7 @@ ch14villager3
 .byte EndText
 
 
-ch14villager4
+dialogueChapter14Villager4
 
 .byte Right_slot ; HOUSE SOUTH WEST
 .word LoadPortrait
@@ -167,7 +167,7 @@ ch14villager4
 .byte EndText
 
 
-ch14villager5
+dialogueChapter14Villager5
 
 .byte Right_slot ; HOUSE NORTH WEST
 .word LoadPortrait
@@ -182,7 +182,7 @@ ch14villager5
 .byte EndText
 
 
-ch14villager6
+dialogueChapter14Villager6
 
 .byte Right_slot ; HOUSE CENTER WEST
 .word LoadPortrait
@@ -200,7 +200,7 @@ ch14villager6
 .byte EndText
 
 
-ch14homermen
+dialogueChapter14HomerMen
 
 .byte Right_slot
 .word LoadPortrait
@@ -215,7 +215,7 @@ ch14homermen
 .byte EndText
 
 
-ch14nosferatuhouse
+dialogueCh14NosferatuHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -237,7 +237,7 @@ ch14nosferatuhouse
 .byte EndText
 
 
-ch14dragonpikehousedean
+dialogueChapter14DragonpikeHouseDean
 
 .byte Right_slot
 .word LoadPortrait
@@ -408,7 +408,7 @@ ch14dragonpikehousedean
 .byte EndText
 
 
-ch14dragonpikehouseother
+dialogueChapter14DragonpikeHouseOther
 
 .byte Right_slot
 .word LoadPortrait
@@ -421,7 +421,7 @@ ch14dragonpikehouseother
 .byte EndText
 
 
-ch14npcarrive
+dialogueChapter14NpcArrive
 
 .byte Right_slot
 .word LoadPortrait
@@ -479,7 +479,7 @@ ch14npcarrive
 .byte EndText
 
 
-ch14shannamleave
+dialogueChapter14ShannamLeave
 
 .byte Right_slot
 .word LoadPortrait
@@ -606,7 +606,7 @@ ch14shannamleave
 .byte EndText
 
 
-ch14opening1
+dialogueChapter14Opening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -714,7 +714,7 @@ ch14opening1
 .byte EndText
 
 
-ch14opening2
+dialogueChapter14Opening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -917,7 +917,7 @@ ch14opening2
 .byte EndText
 
 
-ch14ending1
+dialogueChapter14Ending1
 
 .byte Right_slot
 .word LoadPortrait
@@ -1081,7 +1081,7 @@ ch14ending1
 .byte EndText
 
 
-ch14ending2
+dialogueChapter14Ending2
 
 .byte Right_slot
 .word LoadPortrait

@@ -19,25 +19,25 @@ rlDrawItemInfo ; 81/F590
 	; X
 
 	lda wR0
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 
 	; Y
 
 	lda wR1
-	sta wProcInput1,b
+	sta aProcSystem.wInput1,b
 
 	; Flag
 
 	lda wR2
-	sta wProcInput2,b
+	sta aProcSystem.wInput2,b
 
 	; Kill existing item info proc if any
 
 	phx
 	lda #(`procItemInfo)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procItemInfo
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 
@@ -52,15 +52,15 @@ rlUnknown81F5B4 ; 81/F5B4
 	.databank ?
 
 	lda wR0
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 
 	lda wR1
-	sta wProcInput1,b
+	sta aProcSystem.wInput1,b
 
 	lda #(`procItemInfo)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procItemInfo
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	jsl rlProcItemInfoInit._F5EC
 	rtl
@@ -74,54 +74,60 @@ rlProcItemInfoInit ; 81/F5D9
 	.autsiz
 	.databank ?
 
-	; aProcBody5: flag
+	; aProcSystem.aBody5: flag
 
-	lda wProcInput2,b
-	sta aProcBody5,b,x
+	lda aProcSystem.wInput2,b
+	sta aProcSystem.aBody5,b,x
 
 	; Clear the current item
 
 	lda #$FFFF
-	sta aProcBody0,b,x
+	sta aProcSystem.aBody0,b,x
 
 	lda #$0000
 	sta wInfoWindowTarget
 
 	_F5EC
 
-	; aProcBody1: X | (Y << 8)
+	; aProcSystem.aBody1: X | (Y << 8)
 
-	lda wProcInput1,b
+	lda aProcSystem.wInput1,b
 	xba
-	ora wProcInput0,b
-	sta aProcBody1,b,x
+	ora aProcSystem.wInput0,b
+	sta aProcSystem.aBody1,b,x
 
-	; aProcBody3: X+4, where labels go
+	; aProcSystem.aBody3: X+4, where labels go
 
-	lda wProcInput0,b
+	lda aProcSystem.wInput0,b
 	clc
 	adc #4
-	sta aProcBody3,b,x
+	sta aProcSystem.aBody3,b,x
 
-	; aProcBody4: Y
+	; aProcSystem.aBody4: Y
 
-	lda wProcInput1,b
-	sta aProcBody4,b,x
+	lda aProcSystem.wInput1,b
+	sta aProcSystem.aBody4,b,x
 
-	; aProcBody2: tilemap position
+	; aProcSystem.aBody2: tilemap position
 
-	lda wProcInput1,b
+	lda aProcSystem.wInput1,b
 	asl a
 	asl a
 	asl a
 	asl a
 	asl a
-	clc
-	adc wProcInput0,b
+	
+
+
+	;clc
+	;adc aProcSystem.wInput0,b
+
+	jsl fixshop
+
 	asl a
 	clc
 	adc #<>aBG3TilemapBuffer
-	sta aProcBody2,b,x
+	sta aProcSystem.aBody2,b,x
 	rtl
 
 rlProcItemInfoOnCycle ; 81/F61B
@@ -133,7 +139,7 @@ rlProcItemInfoOnCycle ; 81/F61B
 
 	; If same item, nothing to do
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	cmp wInfoWindowTarget
 	bne +
 
@@ -151,15 +157,15 @@ rlProcItemInfoOnCycle ; 81/F61B
 	.databank `wInfoWindowTarget
 
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`$83C0F6
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 
 	jsr rsProcItemInfoClearInfo
 	jsr rsProcItemInfoClearIcons
 
 	lda wInfoWindowTarget
-	sta aProcBody0,b,x
+	sta aProcSystem.aBody0,b,x
 	beq _End
 
 	; Fetch item type and draw info
@@ -189,7 +195,7 @@ rlProcItemInfoDrawStaffInfo ; 81/F662
 	.databank `wInfoWindowTarget
 
 	phx
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	sta wR16
 
 	jsr rsProcItemInfoDrawRankIcon
@@ -202,16 +208,16 @@ rlProcItemInfoDrawStaffInfo ; 81/F662
 	tax
 
 	lda #$2180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	; Draw staff labels to X+1, Y
 
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	inc a
 	tax
-	lda #<>staffstatlabels
+	lda #<>menutextInventoryStaffStatLabels
 	sta lR18
-	lda #>`staffstatlabels
+	lda #>`menutextInventoryStaffStatLabels
 	sta lR18+1
 
 	jsl $8588E4
@@ -219,7 +225,7 @@ rlProcItemInfoDrawStaffInfo ; 81/F662
 
 	; Draw staff description to X, Y+4
 
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	clc
 	adc #(0 | (4 << 8)) -1
 	tax
@@ -253,9 +259,9 @@ rlProcItemInfoDrawItemInfo ; 81/F6B8
 
 
 ;	lda #$2180
-;	sta wUnknown000DE7,b
+;	sta aCurrentTilemapInfo.wBaseTile,b
 ;
-;	lda aProcBody1,b,x
+;	lda aProcSystem.aBody1,b,x
 ;	sta wR16
 ;	tax
 ;	lda #>`$B08000
@@ -277,7 +283,7 @@ rlProcItemInfoDrawWeaponInfo ; 81/F6D8
 	.databank `wInfoWindowTarget
 
 	phx
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	sta wR16
 
 	jsr rsProcItemInfoDrawRankIcon
@@ -290,7 +296,7 @@ rlProcItemInfoDrawWeaponInfo ; 81/F6D8
 	; Check to see if we need to display description
 	; Shops don't draw the description
 
-	lda aProcBody5,b,x
+	lda aProcSystem.aBody5,b,x
 	beq +
 
 	jsr rsProcItemInfoDrawWeaponDescription
@@ -307,15 +313,15 @@ rsProcItemInfoDrawWeaponLabels ; 81/F6FD
 	.databank `wInfoWindowTarget
 
 	lda #$2180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	; Draw labels to X+1, Y
 
-	lda #<>itemstatlabels
+	lda #<>menutextInventoryItemStatLabels
 	sta lR18
-	lda #>`itemstatlabels
+	lda #>`menutextInventoryItemStatLabels
 	sta lR18+1
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	tax
 	inc x
 	jsl $8588E4
@@ -351,7 +357,7 @@ rsProcItemInfoDrawWeaponStatNumbers ; 81/F73D
 	.databank `wInfoWindowTarget
 
 	lda #$2AA0
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	stz wR17
 
@@ -403,7 +409,7 @@ rsProcItemInfoDrawWeaponStatNumbers ; 81/F73D
 	sta lR18+1
 
 	lda #$2980
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda _StatTable+2,x
 	clc
@@ -413,7 +419,7 @@ rsProcItemInfoDrawWeaponStatNumbers ; 81/F73D
 	jsl $87E728
 
 	lda #$2AA0
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	bra _Next
 
@@ -454,7 +460,7 @@ rsProcItemInfoDrawWeaponRange ; 81/F7AB
 	tax
 
 	lda #$2980
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	jsl $87E728
 	rts
@@ -469,7 +475,7 @@ rsProcItemInfoDrawStaffWeight ; 81/F7C1
 	; Draw staff weight to X+6, Y+2
 
 	lda #$2AA0
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda aItemDataBuffer.Weight,b
 	sta lR18
@@ -492,7 +498,7 @@ rsProcItemInfoDrawRank ; 81/F7DA
 	; Draw rank number to X+6, Y
 
 	lda #$2980
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda aItemDataBuffer.WeaponRank,b
 	jsl $839385
@@ -515,10 +521,10 @@ rsProcItemInfoClearInfo ; 81/F7F3
 	; we need to clear a larger area
 
 	phx
-	lda aProcBody5,b,x
+	lda aProcSystem.aBody5,b,x
 	beq +
 
-	lda aProcBody2,b,x
+	lda aProcSystem.aBody2,b,x
 	sec
 	sbc #2
 	sta wR0
@@ -532,13 +538,13 @@ rsProcItemInfoClearInfo ; 81/F7F3
 	bra ++
 
 	+
-	lda aProcBody2,b,x
+	lda aProcSystem.aBody2,b,x
 	sta wR0
 
-	lda #8
+	lda #10
 	sta wR1
 
-	lda #12
+	lda #15
 	sta wR2
 
 	+
@@ -555,10 +561,10 @@ rsProcItemInfoClearIcons ; 81/F826
 	.databank ?
 
 	phx
-	lda aProcBody3,b,x
+	lda aProcSystem.aBody3,b,x
 	sta wR0
 
-	lda aProcBody4,b,x
+	lda aProcSystem.aBody4,b,x
 	sta wR1
 
 	jsl $8A81D8
@@ -581,10 +587,10 @@ rsProcItemInfoDrawRankIcon ; 81/F837
 	lda #6 << 9
 	sta wR3
 
-	lda aProcBody3,b,x
+	lda aProcSystem.aBody3,b,x
 	sta wR0
 
-	lda aProcBody4,b,x
+	lda aProcSystem.aBody4,b,x
 	sta wR1
 
 	jsl $8A8085
@@ -600,7 +606,7 @@ rsProcItemInfoDrawWeaponDescription ; 81/F857
 	; Draw description to X-1, Y+11
 
 	lda #$2180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda #>`$B08000
 	sta lR18+1
@@ -632,9 +638,9 @@ rlCloseItemInfo ; 81/F873
 	.databank `wInfoWindowTarget
 
 	lda #(`procItemInfo)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procItemInfo
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	stz wInfoWindowTarget
 	jsr rsProcItemInfoClearIcons

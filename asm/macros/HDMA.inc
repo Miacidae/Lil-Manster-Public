@@ -1,21 +1,4 @@
 
-structHDMAArrayEntryInfo .struct Init, OnCycle, Code, HDMATable, BBADxSetting, DMAPxSetting
-	Init						.word <>\Init
-	OnCycle						.word <>\OnCycle
-	Code						.word <>\Code
-	.union
-		.struct
-			TableOffset			.word ?
-			TableBankAndBBADx	.word ?
-		.ends
-		.struct
-			Table				.long \HDMATable
-			BBADx				.byte \BBADxSetting
-		.ends
-	.endu
-	DMAPx						.byte \DMAPxSetting
-	.ends
-
 structHDMAArrayCodeSleep .struct Count
 	.word <>rsHDMAArrayCodeSleep
 	.word \Count

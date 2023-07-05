@@ -8,8 +8,8 @@ rlProcUnknown81BAC5Init ; 81/BACD
 	.autsiz
 	.databank ?
 
-	lda wProcInput0,b
-	sta aProcBody0,b,x
+	lda aProcSystem.wInput0,b
+	sta aProcSystem.aBody0,b,x
 	rtl
 
 rlProcUnknown81BAC5OnCycle ; 81/BAD4
@@ -20,7 +20,7 @@ rlProcUnknown81BAC5OnCycle ; 81/BAD4
 	.databank ?
 
 	lda #<>rlProcUnknown81BAC5OnCycle2
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 	rtl
 
 rlProcUnknown81BAC5OnCycle2 ; 81/BADB
@@ -41,7 +41,7 @@ rlProcUnknown81BAC5OnCycle2 ; 81/BADB
 	.databank `$7E4F96
 
 	phx
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	tay
 	lda structCharacterDataRAM.X,b,y
 	and #$00FF

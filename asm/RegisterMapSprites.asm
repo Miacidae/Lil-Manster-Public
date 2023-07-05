@@ -88,11 +88,11 @@ rsRegisterMapSpriteAndStatus ; 88/8616
 
 	; We don't want to register dead/missing sprites
 
-	lda structExpandedCharacterDataRAM.TurnStatus,b,x
-	bit #TurnStatusRescued
+	lda structExpandedCharacterDataRAM.UnitState,b,x
+	bit #UnitStateRescued
 	bne +
 
-	bit #TurnStatusDead | TurnStatusUnknown1 | TurnStatusUnselectable | TurnStatusHidden | TurnStatusInvisible | TurnStatusCaptured
+	bit #UnitStateDead | UnitStateUnknown1 | UnitStateUnselectable | UnitStateHidden | UnitStateDisabled | UnitStateCaptured
 	bne _Next
 
 	+
@@ -116,20 +116,20 @@ rsRegisterMapSpriteAndStatus ; 88/8616
 	sta wR8
 
 	lda wR9
-	sta wR20
+	sta lR20
 
 	; Grayed units get the gray palette
 
-	lda structExpandedCharacterDataRAM.TurnStatus,b,x
-	bit #TurnStatusGrayed
+	lda structExpandedCharacterDataRAM.UnitState,b,x
+	bit #UnitStateGrayed
 	beq +
 
 	lda #OAMTileAndAttr($000, 3, 2, False, False)
-	sta wR20
+	sta lR20
 
 	+
-	lda structExpandedCharacterDataRAM.TurnStatus,b,x
-	bit #TurnStatusRescued
+	lda structExpandedCharacterDataRAM.UnitState,b,x
+	bit #UnitStateRescued
 	bne _Rescued
 
 	lda structExpandedCharacterDataRAM.Status,b,x
@@ -173,7 +173,7 @@ rsRegisterMapSpriteAndStatus ; 88/8616
 	sta aLowerMapSpriteBuffer+structMapSpriteAndStatusEntry.Y,y
 
 	lda structExpandedCharacterDataRAM.SpriteInfo2,b,x
-	ora wR20
+	ora lR20
 	sta aLowerMapSpriteBuffer+structMapSpriteAndStatusEntry.TileAndAttr,y
 
 	tya
@@ -194,9 +194,9 @@ rsRegisterMapSpriteAndStatus ; 88/8616
 	tax
 	lda aDeploymentSlotTable,x
 	tax
-	lda structExpandedCharacterDataRAM.TurnStatus,b,x
+	lda structExpandedCharacterDataRAM.UnitState,b,x
 	plx
-	bit #TurnStatusUnselectable | TurnStatusHidden
+	bit #UnitStateUnselectable | UnitStateHidden
 	beq +
 
 	jmp _Next
@@ -284,7 +284,7 @@ rsRegisterMapSpriteAndStatus ; 88/8616
 	lda structExpandedCharacterDataRAM.SpriteInfo2,b,x
 	inc a
 	inc a
-	ora wR20
+	ora lR20
 	sta aUpperMapSpriteAndStatusBuffer+structMapSpriteAndStatusEntry.TileAndAttr,y
 
 	tya
@@ -312,13 +312,13 @@ rsRenderMapSpritesAndStatus ; 88/8755
 
 	.databank `aUpperMapSpriteAndStatusBuffer
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	sec
 	sbc #16
 	sta lR18+structMapSpriteAndStatusEntry.X ; always shown
 	sta lR18+structMapSpriteAndStatusEntry.Y+2 ; fades in/out
 
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	sec
 	sbc #16
 	sta lR18+structMapSpriteAndStatusEntry.Y
@@ -344,7 +344,7 @@ rsRenderMapSpritesAndStatus ; 88/8755
 	.autsiz
 	.databank `aUpperMapSpriteAndStatusBuffer
 
-	stx wNextFreeSpriteOffs,b
+	stx wNextFreeSpriteOffset,b
 	rts
 
 rsRenderTallMapSpriteAndStatusLoop ; 88/878C
@@ -360,7 +360,7 @@ rsRenderTallMapSpriteAndStatusLoop ; 88/878C
 	; Outputs:
 	; None
 
-	ldx wNextFreeSpriteOffs,b
+	ldx wNextFreeSpriteOffset,b
 	ldy #$0000
 
 	_Loop
@@ -386,7 +386,7 @@ rsRenderTallMapSpriteAndStatusLoop ; 88/878C
 
 	sec
 	sbc #16
-	sta aSpriteBuf+structPPUOAMEntry.X,b,x
+	sta aSpriteBuffer+structPPUOAMEntry.X,b,x
 	bpl _YAndAttr
 
 	lda aOAMSizeBitTable,x
@@ -399,10 +399,10 @@ rsRenderTallMapSpriteAndStatusLoop ; 88/878C
 	lda wR5
 	sec
 	sbc #16
-	sta aSpriteBuf+structPPUOAMEntry.Y,b,x
+	sta aSpriteBuffer+structPPUOAMEntry.Y,b,x
 
 	lda aUpperMapSpriteAndStatusBuffer+structMapSpriteAndStatusEntry.TileAndAttr,y
-	sta aSpriteBuf+structPPUOAMEntry.Index,b,x
+	sta aSpriteBuffer+structPPUOAMEntry.Index,b,x
 	inc x
 	inc x
 	inc x
@@ -425,7 +425,7 @@ rsRenderTallMapSpriteAndStatusLoop ; 88/878C
 	bge _Next
 	sec
 	sbc #16
-	sta aSpriteBuf+structPPUOAMEntry.X,b,x
+	sta aSpriteBuffer+structPPUOAMEntry.X,b,x
 	bpl +
 
 	lda aOAMSizeBitTable,x
@@ -450,7 +450,7 @@ rsRenderTallMapSpriteAndStatusLoop ; 88/878C
 	.autsiz
 	.databank `aUpperMapSpriteAndStatusBuffer
 
-	stx wNextFreeSpriteOffs,b
+	stx wNextFreeSpriteOffset,b
 	rts
 
 rsRenderMapSpriteLoop ; 88/881C
@@ -460,7 +460,7 @@ rsRenderMapSpriteLoop ; 88/881C
 	.autsiz
 	.databank `aUpperMapSpriteAndStatusBuffer
 
-	ldx wNextFreeSpriteOffs,b
+	ldx wNextFreeSpriteOffset,b
 	ldy #$0000
 
 	_Loop
@@ -485,7 +485,7 @@ rsRenderMapSpriteLoop ; 88/881C
 	sec
 	sbc #16
 
-	sta aSpriteBuf+structPPUOAMEntry.X,b,x
+	sta aSpriteBuffer+structPPUOAMEntry.X,b,x
 	bpl +
 
 	lda aOAMSizeBitTable,x
@@ -506,10 +506,10 @@ rsRenderMapSpriteLoop ; 88/881C
 	lda wR5
 	sec
 	sbc #16
-	sta aSpriteBuf+structPPUOAMEntry.Y,b,x
+	sta aSpriteBuffer+structPPUOAMEntry.Y,b,x
 
 	lda aLowerMapSpriteBuffer+structMapSpriteAndStatusEntry.TileAndAttr,y
-	sta aSpriteBuf+structPPUOAMEntry.Index,b,x
+	sta aSpriteBuffer+structPPUOAMEntry.Index,b,x
 
 	inc x
 	inc x

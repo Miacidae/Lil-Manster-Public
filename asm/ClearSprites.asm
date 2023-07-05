@@ -12,7 +12,7 @@ rlHideAllSprites ; 80/8325
 	; Outputs:
 	; None
 
-	stz wNextFreeSpriteOffs,b
+	stz wNextFreeSpriteOffset,b
 
 rlHideSprites ; 80/8328
 
@@ -29,13 +29,13 @@ rlHideSprites ; 80/8328
 
 	phd
 	sep #$30
-	lda wNextFreeSpriteOffs + 1,b
+	lda wNextFreeSpriteOffset + 1,b
 	and #$03
 	asl a
 	tax
 	jsr (_Table,x)
 	rep #$30
-	stz wNextFreeSpriteOffs,b
+	stz wNextFreeSpriteOffset,b
 	pld
 	rtl
 
@@ -56,19 +56,19 @@ rlHideSprites ; 80/8328
 
 	; Clear all of upper part of buffer
 
-	lda #<>aSpriteBuf + (4 * 64)
+	lda #<>aSpriteBuffer + (4 * 64)
 	tcd
 	jsr _Clearer
 	pld
 
 	; Actually count for lower
 
-	lda wNextFreeSpriteOffs,b
+	lda wNextFreeSpriteOffset,b
 	lsr a
 	clc
 	adc #<>_Clearer
 	sta wR0
-	lda #<>aSpriteBuf
+	lda #<>aSpriteBuffer
 	tcd
 	jmp (wR0)
 
@@ -82,7 +82,7 @@ rlHideSprites ; 80/8328
 
 	; Calculate once
 
-	lda wNextFreeSpriteOffs,b
+	lda wNextFreeSpriteOffset,b
 	and #$00FF
 	lsr a
 	clc
@@ -91,7 +91,7 @@ rlHideSprites ; 80/8328
 
 	; Only clear upper part of buffer
 
-	lda #<>aSpriteBuf + (4 * 64)
+	lda #<>aSpriteBuffer + (4 * 64)
 	tcd
 	jmp (wR0)
 
@@ -128,7 +128,7 @@ rlClearSpriteAttributeBuffer ; 80/83FB
 
 	.for i=0, i<$20, i+=2
 
-	stz aSpriteBufUpperAttributes + i,b
+	stz aSpriteExtBuffer + i,b
 
 	.next
 

@@ -93,7 +93,7 @@ rlUnknown838053 ; 83/8053
 	.autsiz
 	.databank ?
 
-	stz aBGPal0,b
+	stz aBGPaletteBuffer.aPalette0,b
 
 	jsl $8E96DB
 
@@ -157,7 +157,7 @@ rsUnknown838093 ; 83/8093
 	.databank `aPhaseControllerInfo
 
 	-
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	and #$00FF
 	cmp #INIDISP_Setting(False, 15)
 	beq +
@@ -165,7 +165,7 @@ rsUnknown838093 ; 83/8093
 	jmp _End
 
 	+
-	lda aUnknown0004BA,b
+	lda aSoundSystem.aUnknown0004BA,b
 	beq +
 
 	jmp _End
@@ -264,7 +264,7 @@ rsUnknown83813C ; 83/813C
 	.autsiz
 	.databank ?
 
-	lda $7FAA14
+	lda wMapBattleFlag
 	bne +
 
 	jsl $839808
@@ -291,7 +291,7 @@ rsUnknown838158 ; 83/8158
 	.autsiz
 	.databank `lUnknown7EA4EC
 
-	lda $7FAA14
+	lda wMapBattleFlag
 	bne +
 
 	jsl $839808
@@ -324,7 +324,7 @@ rsUnknown838189 ; 83/8189
 	.autsiz
 	.databank ?
 
-	lda wUnknown000E6D,b
+	lda wForcedMapScrollFlag,b
 	bne +
 
 	jsl $839808
@@ -356,7 +356,7 @@ rsUnknown8381C2 ; 83/81C2
 
 	.al
 	.autsiz
-	.databank `aOptions.wUnitSpeedOption
+	.databank `aOptions.wUnitSpeed
 
 	lda wCurrentPhase,b
 	jsl $859999
@@ -370,9 +370,9 @@ rsUnknown8381C2 ; 83/81C2
 
 	phx
 	lda #(`$87C4EF)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$87C4EF
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 
@@ -391,7 +391,7 @@ rsUnknown8381F6 ; 83/81F6
 	.autsiz
 	.databank ?
 
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	and #$00FF
 	cmp #INIDISP_Setting(False, 15)
 	bne +
@@ -409,12 +409,12 @@ rsUnknown83820C ; 83/820C
 	.autsiz
 	.databank ?
 
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	and #$00FF
 	cmp #INIDISP_Setting(False, 15)
 	bne +
 
-	lda aUnknown0004BA,b
+	lda aSoundSystem.aUnknown0004BA,b
 	bne +
 
 	jmp rsUnknown83807C
@@ -549,13 +549,13 @@ rlUnknown8382F1 ; 83/82F1
 	sta wR1
 	jsl rlGetMapTileIndexByCoords
 	sta wR17
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	bit #TurnStatusHidden
+	lda aTargetingCharacterBuffer.UnitState,b
+	bit #UnitStateHidden
 	bne +
 
 	lda aTargetingCharacterBuffer.Status,b
 	and #$00FF
-	cmp #StatusStone
+	cmp #StatusPetrify
 	beq +
 
 	stz wR16
@@ -585,7 +585,7 @@ rsGetRenewalHealAmount ; 83/8335
 
 	+
 	lda #11
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 	clc
 	adc #10
 	sta wR14
@@ -628,10 +628,10 @@ rsGetTerrainHealAmount ; 83/836E
 	cmp #TerrainThrone
 	beq +
 
-	cmp #TerrainChurchOpen
+	cmp #TerrainChurch
 	beq +
 
-	cmp #TerrainChurchClosed
+	cmp #TerrainClosedChurch
 	beq +
 
 	rts
@@ -675,7 +675,7 @@ rsGetPoisonDamageAmount ; 83/83AD
 	bne +
 
 	lda #3
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 	sep #$20
 	inc a
 	eor #$FF
@@ -734,7 +734,7 @@ rlUnknown8383F6 ; 83/83F6
 	lda aActionStructUnit1.CurrentHP
 	sta aBurstWindowCharacterBuffer.CurrentHP,b
 	lda aActionStructUnit1.DeploymentNumber
-	sta bUnknownTargetingDeploymentNumber
+	sta bDefeatedUnitDeploymentNumber
 	lda #$C0
 	sta aActionStructUnit2.DeploymentNumber
 	lda #$14
@@ -759,21 +759,21 @@ rlUnknown838438 ; 83/8438
 	phb
 
 	sep #$20
-	lda #`bUnknownTargetingDeploymentNumber
+	lda #`bDefeatedUnitDeploymentNumber
 	pha
 	rep #$20
 	plb
 
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
-	lda bUnknownTargetingDeploymentNumber
+	lda bDefeatedUnitDeploymentNumber
 	beq +
 
 	jsl rlUpdateVisibilityMap
 	jsl $83A246
 
 	+
-	stz bUnknownTargetingDeploymentNumber
+	stz bDefeatedUnitDeploymentNumber
 	jsl rlUpdateUnitMapsAndFog
 	plb
 	plp
@@ -787,9 +787,9 @@ rsUnknown838459 ; 83/8459
 
 	phx
 	lda #(`procPrepScreenMapScroll)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procPrepScreenMapScroll
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	stz $7E4F98
@@ -947,7 +947,7 @@ rsUnknown83853C ; 83/853C
 	.autsiz
 	.databank `$7E4F8F
 
-	lda aUnknown0004BA,b
+	lda aSoundSystem.aUnknown0004BA,b
 	bne _End
 	stz $7E4F8F
 	jsl $8593AD
@@ -977,7 +977,7 @@ rsUnknown83853C ; 83/853C
 
 rsUnknown838576 ; modified
 
-	lda wUnknown000E6D,b
+	lda wForcedMapScrollFlag,b
 	bne _Out
 
 	jsl $849E80
@@ -990,13 +990,13 @@ rsUnknown838576 ; modified
 	jsl $83C6A9
 
 	bit wJoy1Input 	; sets v = second highest bit of the data
-	bvc + 			; branch if JoypadY isnt pressed
+	bvc + 			; branch if JOY_Y isnt pressed
 
 	jmp rsMapEnableFastCursor	; pressed Y > fast cursor
 
 	+
 	lda wJoy1New
-	bit #JoypadR
+	bit #JOY_R
 	beq +
 
 	jsl rlCenterOnNextUnmovedUnit 	; pressed R > go to the next unmoved player unit
@@ -1004,23 +1004,23 @@ rsUnknown838576 ; modified
 
 	+
 	bit wJoy2Input+1 		; sets n = highest bit
-	bpl + 					; branch if JoypadA isnt pressed
+	bpl + 					; branch if JOY_A isnt pressed
 
 	jmp rsMapDrawUnitsAttackRange 	; select a unit
 
 	+
-	bvc + 					; branch if JoypadX isnt pressed
+	bvc + 					; branch if JOY_X isnt pressed
 	jmp rsMapOpenUnitInventory
 
 	+
 	asl a 
 	asl a 
-	bpl + 					; branch if JoypadSelect isnt pressed
+	bpl + 					; branch if JOY_Select isnt pressed
 	jmp $8386E3 			; open menucommands on any tile
 
 	+
 ;	asl a 
-;	bpl _Out 				; branch if JoypadStart isnt pressed
+;	bpl _Out 				; branch if JOY_Start isnt pressed
 ;	stz wUnknown000E2B,b
 ;	jsl rlDisplayMinimap	; show minimap
 
@@ -1043,7 +1043,7 @@ rsPreps8385CC ; on prep map draws units move/attack range when selected
 	.autsiz
 	.databank ?
 
-	lda wUnknown000E6D,b
+	lda wForcedMapScrollFlag,b
 	bne _Out
 
 	jsl rlClearJoypadDirectionalInputsWhileCursorScrolling
@@ -1055,21 +1055,21 @@ rsPreps8385CC ; on prep map draws units move/attack range when selected
 	bit wJoy2Input+1  	; n = highest bit
 	bpl + 				; branch if n unset
 
-	; JoypadA pressed
+	; JOY_A pressed
 	jmp rsUnknown838853
 
 	+
 	bit wJoy1New
 	bpl _8621
 
-	; JoypadB pressed
+	; JOY_B pressed
 
 	jsl $81FCE0
 	lda wPrepScreenFlag,b
 	bne +
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	bit #TurnStatusMoved
+	lda aSelectedCharacterBuffer.UnitState,b
+	bit #UnitStateMoved
 	bne _861E
 
 	+
@@ -1087,7 +1087,7 @@ rsPreps8385CC ; on prep map draws units move/attack range when selected
 
 	_8621
 	lda wJoy1New
-	bit #JoypadR
+	bit #JOY_R
 	beq +
 
 	jsr rsUnknown838669
@@ -1121,7 +1121,7 @@ rsUnknown83865E ; 83/865E
 	.databank ?
 
 	lda wJoy1New
-	and #JoypadA
+	and #JOY_A
 	beq +
 
 	jmp rsUnknown838529
@@ -1164,7 +1164,7 @@ rsUnknown838686 ; 83/8686
 	jsl $83C6A9
 
 	lda wJoy1Input
-	and #JoypadY
+	and #JOY_Y
 	bne +
 
 	jsl rlUnknown839808
@@ -1179,48 +1179,138 @@ rsMapDrawUnitsAttackRange ; 83/86A4
 	.autsiz
 	.databank `wTerrainWindowTerrain
 
-	jsl $839B7F
-	lda #$FFFF
-	sta wTerrainWindowTerrain
-	jsl rlUpdateBurstWindow._ClearWindow
-	ldx wCursorTileIndex,b
-	lda aPlayerVisibleUnitMap,x
-	and #$00FF
-	beq +
+  rsDrawMovementRangeOrBMenu ; 83/86A4
 
-	sta wR0
-	lda #<>aSelectedCharacterBuffer
-	sta wR1
-	jsl rlCopyCharacterDataToBufferByDeploymentNumber
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	and #TurnStatusGrayed
-	bne +
+    .al
+    .autsiz
+    .databank `aPlayerVisibleUnitMap
 
-	lda aSelectedCharacterBuffer.Status,b
-	and #$00FF
-	cmp #StatusSleep
-	beq +
+    jsl rlClearJoyNewInputs
 
-	; unit is selectable 
-	jsr rsUnknown838764 ; draw range 
-	jsl $83CD2B ; dma window boreders into vram
-	rts
+    lda #-1
+    sta wTerrainWindowTerrain
 
-	+
-	jsl $839B7F
-	lda #$FFFF
-	sta wTerrainWindowTerrain
-	jsl rlUpdateBurstWindow._ClearWindow
-	lda #$0000
-	sta wUnknown000E25,b
-	phx
-	lda #(`$8A82D7)<<8
-	sta lR43+1
-	lda #<>$8A82D7 ; procBMenu
-	sta lR43
-	jsl rlProcEngineCreateProc
-	plx
-	rts
+    jsl rlUpdateBurstWindow._ClearWindow
+
+    ; If the player can't see
+    ; the unit at that tile, draw
+    ; B menu
+
+    ldx wCursorTileIndex,b
+    lda aPlayerVisibleUnitMap,x
+    and #$00FF
+    beq _BMenu
+
+      ; Otherwise get unit data
+      ; and check if unit is
+      ; selectable
+
+      sta wR0
+
+      lda #<>aSelectedCharacterBuffer
+      sta wR1
+
+      jsl rlCopyCharacterDataToBufferByDeploymentNumber
+
+      lda aSelectedCharacterBuffer.UnitState,b
+      and #UnitStateGrayed
+      bne _BMenu
+
+        ; Lastly, check if unit is asleep.
+
+        lda aSelectedCharacterBuffer.Status,b
+        and #$00FF
+        cmp #StatusSleep
+        beq _BMenu
+
+          ; Draw unit's range
+
+          jsr rsUnknown838764
+
+          ; Originally recopied menu tiles,
+          ; replaced with talk display hook.
+
+          ; jsl rlUnknown83CD2B
+
+          jsl rlTalkDisplay
+
+          rts
+
+    _BMenu
+
+    ; Seems like some redundant actions
+    ; but it's possible that some other
+    ; routine enters here.
+
+    jsl rlClearJoyNewInputs
+
+    lda #-1
+    sta wTerrainWindowTerrain
+
+    jsl rlUpdateBurstWindow._ClearWindow
+
+    lda #0
+    sta wUnknown000E25,b
+
+    phx
+
+    lda #(`procBMenu)<<8
+    sta lR44+1
+    lda #<>procBMenu
+    sta lR44
+    jsl rlProcEngineCreateProc
+
+    plx
+
+    rts
+
+
+
+
+;	jsl $839B7F
+;	lda #$FFFF
+;	sta wTerrainWindowTerrain
+;	jsl rlUpdateBurstWindow._ClearWindow
+;	ldx wCursorTileIndex,b
+;	lda aPlayerVisibleUnitMap,x
+;	and #$00FF
+;	beq +
+;
+;	sta wR0
+;	lda #<>aSelectedCharacterBuffer
+;	sta wR1
+;	jsl rlCopyCharacterDataToBufferByDeploymentNumber
+;	lda aSelectedCharacterBuffer.UnitState,b
+;	and #UnitStateGrayed
+;	bne +
+;
+;	lda aSelectedCharacterBuffer.Status,b
+;	and #$00FF
+;	cmp #StatusSleep
+;	beq +
+;
+;	; unit is selectable 
+;	jsr rsUnknown838764 ; draw range 
+;	jsl $83CD2B ; dma window boreders into vram
+;	rts
+;
+;	+
+;	jsl $839B7F
+;	lda #$FFFF
+;	sta wTerrainWindowTerrain
+;	jsl rlUpdateBurstWindow._ClearWindow
+;	lda #$0000
+;	sta wUnknown000E25,b
+;	phx
+;	lda #(`$8A82D7)<<8
+;	sta lR44+1
+;	lda #<>$8A82D7 ; procBMenu
+;	sta lR44
+;	jsl rlProcEngineCreateProc
+;	plx
+;	rts
+
+	.fill $838708 - *, ?
 
 rsMapEnableFastCursor ; 83/8708
 
@@ -1289,15 +1379,15 @@ rsUnknown838764 ; 83/8764
 	lda #<>aSelectedCharacterBuffer
 	sta wR1
 	jsl rlCopyCharacterDataToBufferByDeploymentNumber
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	and #~TurnStatusMoved
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	and #~UnitStateMoved
+	sta aSelectedCharacterBuffer.UnitState,b
 	stz $7E4F96
 	stz $7E4F98
 	jsl $839A3D
 	lda #<>aSelectedCharacterBuffer
 	sta wR14
-	jsl rlUnknown8387D5
+	jsl rlGetEffectiveMove
 	sta wR2
 	sta $7E4F9C
 	lda aSelectedCharacterBuffer.X,b
@@ -1323,87 +1413,95 @@ rsUnknown838764 ; 83/8764
 	sta wUnknown000E25,b
 	rts
 
-rlUnknown8387D5 ; 83/87D5
+rlGetEffectiveMove ; 83/87D5
 
 	.al
 	.autsiz
 	.databank ?
 
-	php
-	phb
-
-	sep #$20
-	lda #$7E
-	pha
-	rep #$20
-	plb
-
-	.databank $7E
-
-	phx
-	phy
-	lda wR14
-	sta wR0
-	lda #<>aTemporaryActionStruct
-	sta wR1
-	jsl rlCopyExpandedCharacterDataBufferToBuffer
-	jsl rlCombineCharacterDataAndClassBases
-	lda aTemporaryActionStruct.Movement,b
-	and #$00FF
-	sta wR2
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	bit #TurnStatusRescuing
-	beq _End
-
-	lda lR18
-	pha
-	lda lR18+1
-	pha
-	lda wR0
-	pha
-	lda wR1
-	pha
-	lda wR3
-	pha
-	lda aTemporaryActionStruct.Rescue,b
-	sta wR0
-	lda #<>aTemporaryActionStruct
-	sta wR1
-	jsl rlCopyCharacterDataToBufferByDeploymentNumber
-	jsl rlCombineCharacterDataAndClassBases
-	lda aTemporaryActionStruct.Constitution,b
-	and #$00FF
-	asl a
-	sta wR3
-	lda wR14
-	sta wR1
-	jsl $83A855
-	cmp wR3
-	bcs +
-
-	lda wR2
-	lsr a
-	sta wR2
-
-	+
-	pla
-	sta wR3
-	pla
-	sta wR1
-	pla
-	sta wR0
-	pla
-	sta lR18+1
-	pla
-	sta lR18
-
-	_End
-	lda wR2
-	ply
-	plx
-	plb
-	plp
+	jsl rlGetEffectiveMoveReplacement
 	rtl
+
+	.databank 0
+
+
+; 	php
+; 	phb
+; 
+; 	sep #$20
+; 	lda #$7E
+; 	pha
+; 	rep #$20
+; 	plb
+; 
+; 	.databank $7E
+; 
+; 	phx
+; 	phy
+; 	lda wR14
+; 	sta wR0
+; 	lda #<>aTemporaryActionStruct
+; 	sta wR1
+; 	jsl rlCopyExpandedCharacterDataBufferToBuffer
+; 	jsl rlCombineCharacterDataAndClassBases
+; 	lda aTemporaryActionStruct.Movement,b
+; 	and #$00FF
+; 	sta wR2
+; 	lda aSelectedCharacterBuffer.UnitState,b
+; 	bit #UnitStateRescuing
+; 	beq _End
+; 
+; 	lda lR18
+; 	pha
+; 	lda lR18+1
+; 	pha
+; 	lda wR0
+; 	pha
+; 	lda wR1
+; 	pha
+; 	lda wR3
+; 	pha
+; 	lda aTemporaryActionStruct.Rescue,b
+; 	sta wR0
+; 	lda #<>aTemporaryActionStruct
+; 	sta wR1
+; 	jsl rlCopyCharacterDataToBufferByDeploymentNumber
+; 	jsl rlCombineCharacterDataAndClassBases
+; 	lda aTemporaryActionStruct.Constitution,b
+; 	and #$00FF
+; 	asl a
+; 	sta wR3
+; 	lda wR14
+; 	sta wR1
+; 	jsl $83A855
+; 	cmp wR3
+; 	bcs +
+; 
+; 	lda wR2
+; 	lsr a
+; 	sta wR2
+; 
+; 	+
+; 	pla
+; 	sta wR3
+; 	pla
+; 	sta wR1
+; 	pla
+; 	sta wR0
+; 	pla
+; 	sta lR18+1
+; 	pla
+; 	sta lR18
+; 
+; 	_End
+; 	lda wR2
+; 	ply
+; 	plx
+; 	plb
+; 	plp
+; 	rtl
+
+	.fill $838853 - *, ?
 
 rsUnknown838853 ; 83/8853
 
@@ -1478,9 +1576,9 @@ rsUnknown838853 ; 83/8853
 	sta wUnknown000E25,b
 	lda #$FFFF
 	sta $7E4F96
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	ora #TurnStatusMovementStar | TurnStatusMoved
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	ora #UnitStateMovementStar | UnitStateMoved
+	sta aSelectedCharacterBuffer.UnitState,b
 
 	+
 	plp
@@ -1501,10 +1599,10 @@ rsUnknown838913 ; 83/8913
 
 	.al
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	ldx wCursorTileIndex,b
-	lda aRangeMap,x
+	lda aMovementMap,x
 	and #$00FF
 	cmp #$006F
 	bge _False
@@ -1519,8 +1617,8 @@ rsUnknown838913 ; 83/8913
 	bne _False
 
 	sta wR0
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	bit #TurnStatusRescuing
+	lda aSelectedCharacterBuffer.UnitState,b
+	bit #UnitStateRescuing
 	bne _False
 
 	lda #<>aBurstWindowCharacterBuffer
@@ -1546,8 +1644,8 @@ rsUnknown83894C ; 83/894C
 	rep #$30
 	lda #$0000
 	sta wDisplayRangeFlag,b
-	stz wBuf_BG1HOFS
-	stz wBuf_BG1VOFS
+	stz wBufferBG1HOFS
+	stz wBufferBG1VOFS
 	jsl rlUpdateUnitMaps
 	plp
 	rts
@@ -1556,14 +1654,14 @@ rsUnknown83895F ; 83/895F
 
 	.al
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	bit #TurnStatusMoved
+	lda aSelectedCharacterBuffer.UnitState,b
+	bit #UnitStateMoved
 	bne +
 
 	ldx wCursorTileIndex,b
-	lda aRangeMap,x
+	lda aMovementMap,x
 	and #$00FF
 	sta wR0
 	lda $7E4F9C
@@ -1584,9 +1682,9 @@ rsUnknown83897C ; 83/897C
 	jsl $858466
 	phx
 	lda #(`$878350)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$878350
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	jmp rsUnknown838529
@@ -1597,7 +1695,7 @@ rsUnknown838997 ; 83/8997
 	.autsiz
 	.databank `$7E4F96
 
-	lda aUnknown0004BA,b
+	lda aSoundSystem.aUnknown0004BA,b
 	ora wUnknown0004F4,b
 	and #$00FF
 	bne ++
@@ -1612,9 +1710,9 @@ rsUnknown838997 ; 83/8997
 	jsl $858466
 	phx
 	lda #(`$878350)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$878350
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	jmp rsUnknown838529
@@ -1631,8 +1729,8 @@ rsUnknown8389C6 ; 83/89C6
 	lda $7E4F96
 	bne ++
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	bit #TurnStatusMoved
+	lda aSelectedCharacterBuffer.UnitState,b
+	bit #UnitStateMoved
 	beq +
 
 	jmp rsUnknown838CE2
@@ -1691,12 +1789,12 @@ rsUnknown838A39 ; 83/8A39
 	.autsiz
 	.databank ?
 
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	and #$00FF
 	cmp #INIDISP_Setting(False, 15)
 	bne +
 
-	lda aUnknown0004BA,b
+	lda aSoundSystem.aUnknown0004BA,b
 	bne +
 
 	jsl rlUnknown838A50
@@ -1752,16 +1850,16 @@ rlDisplayMinimap ; 83/8A72
 
 	phx
 	lda #(`$849DF4)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$849DF4
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	plx
 	bcs +
 
 	sep #$20
-	lda #TM_Setting(False, True, False, False, True)
-	sta bBuf_TM
+	lda #T_Setting(False, True, False, False, True)
+	sta bBufferTM
 	rep #$20
 	lda #$000F
 	sta wUnknown000E25,b
@@ -1774,9 +1872,9 @@ rlDisplayMinimap ; 83/8A72
 	stz $7EBADD
 	phx
 	lda #(`$849CDB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$849CDB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 
@@ -1835,9 +1933,9 @@ rsUnknown838B01 ; 83/8B01
 
 	.al
 	.autsiz
-	.databank `wEventEngineUnknownXTarget
+	.databank `wActiveTileUnitParameter1
 
-	stz wEventEngineUnknownXTarget
+	stz wActiveTileUnitParameter1
 	jsl $849A04
 	jsl $849B64
 
@@ -1846,8 +1944,8 @@ rsUnknown838B01 ; 83/8B01
 	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $800, VMAIN_Setting(True), $E000
 
 	sep #$20
-	lda #TM_Setting(True, True, False, False, True)
-	sta bBuf_TM
+	lda #T_Setting(True, True, False, False, True)
+	sta bBufferTM
 	rep #$20
 
 	jmp rsUnknown838529
@@ -1862,7 +1960,7 @@ rsUnknown838B24 ; 83/8B24
 	beq +
 
 	lda wJoy1New
-	bit #JoypadA
+	bit #JOY_A
 	beq +
 
 	lda $7EBADD
@@ -1876,7 +1974,7 @@ rsUnknown838B24 ; 83/8B24
 	jsl $849E68
 	jsl $839BA5
 	lda wJoy1New
-	bit #JoypadStart | JoypadB
+	bit #JOY_Start | JOY_B
 	beq ++
 
 	lda $7EBADD
@@ -1896,7 +1994,7 @@ rsUnknown838B5C ; 83/8B5C
 	.autsiz
 	.databank ?
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	lsr a
 	lsr a
 	lsr a
@@ -1905,7 +2003,7 @@ rsUnknown838B5C ; 83/8B5C
 	adc #7
 	sta wR0
 
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	lsr a
 	lsr a
 	lsr a
@@ -1915,16 +2013,16 @@ rsUnknown838B5C ; 83/8B5C
 	sta wR1
 
 	jsl $83C181
-	stz wBuf_BG1VOFS
+	stz wBufferBG1VOFS
 	jsl rlDMAByStruct
 
 	.dstruct structDMAToVRAM, $F3CC80, $C00, VMAIN_Setting(True), $B800
 
 	phx
 	lda #(`$849DF4)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$849DF4
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 
@@ -1963,7 +2061,7 @@ rsUnknown838BB0 ; 83/8BB0
 
 	sep #$20
 	lda #BG12NBA_Setting($4000, $4000)
-	sta bBuf_BG12NBA
+	sta bBufferBG12NBA
 	rep #$20
 	jmp rsUnknown838529
 
@@ -1975,9 +2073,9 @@ rsUnknown838BDB ; 83/8BDB
 
 	phx
 	lda #(`$849DF4)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$849DF4
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	plx
 	bcc +
@@ -2019,9 +2117,9 @@ rsUnknown838BDB ; 83/8BDB
 	_8C2D
 	phx
 	lda #(`$87C674)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$87C674
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	rts
@@ -2035,10 +2133,10 @@ rsUnknown838C3E ; 83/8C3E
 	lda #<>aSelectedCharacterBuffer
 	sta wR1
 	jsl $839A94
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	and #~TurnStatusGrayed
-	ora #TurnStatusMoved
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	and #~UnitStateGrayed
+	ora #UnitStateMoved
+	sta aSelectedCharacterBuffer.UnitState,b
 	stz $7E4F96
 	stz $7E4F98
 	lda #<>aSelectedCharacterBuffer
@@ -2076,9 +2174,9 @@ rsUnknown838C6F ; 83/8C6F
 	beq +
 
 	jsl rlUnknown81B9F4
-	lda #<>aMovementMap
+	lda #<>aRangeMap
 	sta lR18
-	lda #>`aMovementMap
+	lda #>`aRangeMap
 	sta lR18+1
 	lda #$0000
 	jsl rlFillMapByWord
@@ -2097,7 +2195,7 @@ rsUnknown838C6F ; 83/8C6F
 	tax
 	sep #$20
 	lda #$00
-	sta aRangeMap,x
+	sta aMovementMap,x
 	rep #$20
 	jsr rsUnknown838853
 	rts
@@ -2114,9 +2212,9 @@ rsUnknown838CE2 ; 83/8CE2
 	lda #<>aSelectedCharacterBuffer
 	sta wR1
 	jsl rlCopyCharacterDataToBufferByDeploymentNumber
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	and #~TurnStatusHidden
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	and #~UnitStateHidden
+	sta aSelectedCharacterBuffer.UnitState,b
 	lda #$000C
 	sta wUnknown000E25,b
 	jsr rsUnknown838669
@@ -2134,9 +2232,9 @@ rsUnknown838D09 ; 83/8D09
 	jsl $858466
 	phx
 	lda #(`$878AE0)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$878AE0
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	rts
@@ -2166,12 +2264,12 @@ rlUnknown838D28 ; 83/8D28
 
 	sep #$20
 	lda #$08
-	sta aTerrainMovementCostBuffer.ImpassableIndoors
-	sta aTerrainMovementCostBuffer.ImpassableOutdoors
+	sta aTerrainMovementCostBuffer.IndoorImpassable
+	sta aTerrainMovementCostBuffer.OutdoorImpassable
 	rep #$30
 
 	+
-	jmp rlFillMovementRangeArray
+	jml rlFillMovementRangeArray
 
 
 
@@ -2180,7 +2278,7 @@ rsUnknown838D52 ; 83/8D52 ; new
 	.autsiz
 	.databank $7E
 
-	lda wUnknown000E6D,b
+	lda wForcedMapScrollFlag,b
 	bne _Out
 
 	jsr rsPreps83BB1D
@@ -2235,7 +2333,7 @@ rsUnknown838D52 ; 83/8D52 ; new
 	lda wJoy1New
 
 	+
-	bit #JoypadStart
+	bit #JOY_Start
 	beq _Out
 	jsl rlDisplayMinimap
 
@@ -2252,9 +2350,9 @@ rsUnknown838DD9 ; 83/8DD9
 
 	phx
 	lda #(`$8A8580)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$8A8580
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	jmp rsUnknown838529
@@ -2303,19 +2401,19 @@ rsUnknown838E1E ; 83/8E1E
 
 	jsl $83C6A9
 	lda wJoy1New
-	bit #JoypadX | JoypadA | JoypadRight | JoypadLeft | JoypadDown | JoypadUp | JoypadB
+	bit #JOY_X | JOY_A | JOY_Right | JOY_Left | JOY_Down | JOY_Up | JOY_B
 	beq +
 
 	lda wJoy1New
-	and #JoypadA | JoypadB
+	and #JOY_A | JOY_B
 	sta wJoy1New
 
-	lda wJoy1Alt
-	and #JoypadA | JoypadB
-	sta wJoy1Alt
+	lda wJoy1Repeated
+	and #JOY_A | JOY_B
+	sta wJoy1Repeated
 
 	lda wJoy1Input
-	and #JoypadA | JoypadB
+	and #JOY_A | JOY_B
 	sta wJoy1Input
 
 	lda #<>aSelectedCharacterBuffer
@@ -2773,8 +2871,8 @@ rlCombineCharacterDataAndClassBases ; 83/90BE
 	sta structExpandedCharacterDataRAM.Movement,b,y
 
 	ldx wR1
-	lda structExpandedCharacterDataRAM.TurnStatus,b,x
-	bit #TurnStatusRescuing
+	lda structExpandedCharacterDataRAM.UnitState,b,x
+	bit #UnitStateRescuing
 	beq +
 
 	jsl $83E448
@@ -2784,7 +2882,7 @@ rlCombineCharacterDataAndClassBases ; 83/90BE
 	cmp #StatusSleep
 	beq +
 
-	cmp #StatusStone
+	cmp #StatusPetrify
 	bne ++
 
 	+
@@ -3206,14 +3304,14 @@ rlGetItemNamePointer ; 83/931A
 	rep #$30
 	phx
 
-	lda #>`item_names
+	lda #>`aItemNames
 	sta lR18+1
 
 	lda aItemDataBuffer.BaseWeapon,b
 	and #$00FF
 	asl a
 	tax
-	lda $B08FC3,x; ItemNames.aItemNamePointerTable,x
+	lda aItemNamePointers,x
 	sta lR18
 
 	plx
@@ -3240,9 +3338,9 @@ rlGetCharacterNamePointer ; 83/9334
 	phy
 	pha
 
-	lda #<>char_names
+	lda #<>aUnitNameText
 	sta lR18
-	lda #>`char_names
+	lda #>`aUnitNameText
 	
 	; Complement to the ch19 Chris hacky fix.
 	; If you don't need this, uncomment the following three lines and remove the following two lines. 
@@ -3278,15 +3376,15 @@ rlGetClassNamePointer ; 83/9351
 	php
 	rep #$30
 	pha
-	lda #<>class_names
+	lda #<>aClassNames
 	sta lR18
-	lda #>`class_names
+	lda #>`aClassNames
 	sta lR18+1
 	pla
 	and #$00FF
 	asl a
 	tax
-	lda $898000,x
+	lda aClassNamePointers,x
 	sta lR18
 	plp
 	rtl
@@ -3610,7 +3708,7 @@ rlWriteUNITGroupData ; 83/9457
 	jsl $83A970
 
 	+
-	jsr rsUNITGroupSetTurnStatusIfUnderRoof
+	jsr rsUNITGroupSetUnitStateIfUnderRoof
 	jsr rsUnknown83964B
 	lda lUnitGroupLoadingPointer
 	clc
@@ -3807,17 +3905,17 @@ rsUNITGroupCopyUnitIdentity ; 83/95DD
 
 	sep #$20
 
-	lda aUNITEntryBuffer.AI1
-	sta aSelectedCharacterBuffer.AI1,b
+	lda aUNITEntryBuffer.ActionAI
+	sta aSelectedCharacterBuffer.ActionAI,b
 
-	lda aUNITEntryBuffer.AI2
-	sta aSelectedCharacterBuffer.AI2,b
+	lda aUNITEntryBuffer.MovementAI
+	sta aSelectedCharacterBuffer.MovementAI,b
 
-	lda aUNITEntryBuffer.AI3
-	sta aSelectedCharacterBuffer.AI3,b
+	lda aUNITEntryBuffer.ActionMisc
+	sta aSelectedCharacterBuffer.ActionMisc,b
 
-	lda aUNITEntryBuffer.AI4
-	sta aSelectedCharacterBuffer.Unknown3F,b
+	lda aUNITEntryBuffer.LowerAIProperties
+	sta aSelectedCharacterBuffer.AIProperties,b
 
 	lda aUNITEntryBuffer.BossFlag
 	bpl +
@@ -3834,7 +3932,7 @@ rsUNITGroupCopyUnitIdentity ; 83/95DD
 	rep #$30
 	rts
 
-rsUNITGroupSetTurnStatusIfUnderRoof ; 83/9620
+rsUNITGroupSetUnitStateIfUnderRoof ; 83/9620
 
 	.autsiz
 	.databank `lUnitGroupLoadingPointer
@@ -3851,15 +3949,15 @@ rsUNITGroupSetTurnStatusIfUnderRoof ; 83/9620
 	tax
 	lda aTerrainMap,x
 	and #$00FF
-	cmp #TerrainImpassableHidden
+	cmp #TerrainRoof
 	beq +
 
 	rts
 
 	+
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	ora #TurnStatusHidden | TurnStatusUnknown2
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	ora #UnitStateHidden | UnitStateUnknown2
+	sta aSelectedCharacterBuffer.UnitState,b
 	rts
 
 rsUnknown83964B ; 83/964B
@@ -4524,14 +4622,14 @@ rlRunRoutineForAllTilesInRange ; 83/98C7
 
 	.xl
 	.autsiz
-	.databank `aRangeMap
+	.databank `aMovementMap
 
 	; Given a long pointer to a routine in
 	; lR25, run that routine for all tiles
 	; reachable by a unit's filled range map
 
 	; Inputs:
-	; aRangeMap: filled by a unit
+	; aMovementMap: filled by a unit
 	; lR25: long pointer to routine
 
 	php
@@ -4540,7 +4638,7 @@ rlRunRoutineForAllTilesInRange ; 83/98C7
 	dec x
 
 	_Loop
-	lda aRangeMap,x
+	lda aMovementMap,x
 	bmi _Next
 
 	phx
@@ -4609,7 +4707,7 @@ rlRunRoutineForAllVisibleUnitsInRange ; 83/98FD
 	; by unit that filled aMovementMap
 
 	; Inputs:
-	; aMovementMap: filled by unit
+	; aRangeMap: filled by unit
 	; lR25: long pointer to routine
 	; lR24: long pointer to visibility map
 
@@ -4619,7 +4717,7 @@ rlRunRoutineForAllVisibleUnitsInRange ; 83/98FD
 	dec y
 
 	_Loop
-	lda aMovementMap,y
+	lda aRangeMap,y
 	beq _Next
 
 	lda (lR24),y
@@ -4651,7 +4749,7 @@ rlRunRoutineForAllPlayerVisibleUnitsInRange ; 83/991B
 	; by unit that filled aMovementMap
 
 	; Inputs:
-	; aMovementMap: filled by unit
+	; aRangeMap: filled by unit
 	; aPlayerVisibleUnitMap: filled by player units
 	; lR25: long pointer to routine
 
@@ -4660,7 +4758,7 @@ rlRunRoutineForAllPlayerVisibleUnitsInRange ; 83/991B
 	ldy #$0000
 
 	_Loop
-	lda aMovementMap,y
+	lda aRangeMap,y
 	beq _Next
 
 	lda aPlayerVisibleUnitMap,y
@@ -4833,7 +4931,7 @@ rsRunRoutineForAllTilesInShapeAroundTile ; 83/99D5
 	; Outputs:
 	; None
 
-	stx wR23
+	stx lR23
 
 	_Loop
 
@@ -4882,10 +4980,10 @@ rsRunRoutineForAllTilesInShapeAroundTile ; 83/99D5
 	clc
 	adc wR12
 	clc
-	adc wR23
+	adc lR23
 	tax
 	phx
-	lda wR23
+	lda lR23
 
 	; Save everything before running the routine
 
@@ -4912,7 +5010,7 @@ rsRunRoutineForAllTilesInShapeAroundTile ; 83/99D5
 	pla
 	sta lR24
 	pla
-	sta wR23
+	sta lR23
 
 	plx
 	inc lR24
@@ -4931,28 +5029,28 @@ rlUnknown839A3D ; 83/9A3D
 	phb
 
 	sep #$20
-	lda #`bUnknownTargetingDeploymentNumber
+	lda #`bDefeatedUnitDeploymentNumber
 	pha
 	rep #$20
 	plb
 
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
 	ldy wR1
 
-	lda structExpandedCharacterDataRAM.TurnStatus,b,y
-	ora #TurnStatusHidden
-	sta structExpandedCharacterDataRAM.TurnStatus,b,y
+	lda structExpandedCharacterDataRAM.UnitState,b,y
+	ora #UnitStateHidden
+	sta structExpandedCharacterDataRAM.UnitState,b,y
 
 	jsl rlCopyCharacterDataFromBuffer
 
 	stz $7EA67F
-	stz bUnknownTargetingDeploymentNumber
+	stz bDefeatedUnitDeploymentNumber
 	stz $7E524E
 
-	lda structExpandedCharacterDataRAM.TurnStatus,b,y
-	and #~TurnStatusHidden
-	sta structExpandedCharacterDataRAM.TurnStatus,b,y
+	lda structExpandedCharacterDataRAM.UnitState,b,y
+	and #~UnitStateHidden
+	sta structExpandedCharacterDataRAM.UnitState,b,y
 
 	lda structExpandedCharacterDataRAM.X,b,y
 	and #$00FF
@@ -4986,17 +5084,17 @@ rlUnknown839A94 ; 83/9A94
 	phb
 
 	sep #$20
-	lda #`bUnknownTargetingDeploymentNumber
+	lda #`bDefeatedUnitDeploymentNumber
 	pha
 	rep #$20
 	plb
 
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
 	ldy wR1
-	lda structExpandedCharacterDataRAM.TurnStatus,b,y
-	ora #TurnStatusGrayed
-	sta structExpandedCharacterDataRAM.TurnStatus,b,y
+	lda structExpandedCharacterDataRAM.UnitState,b,y
+	ora #UnitStateGrayed
+	sta structExpandedCharacterDataRAM.UnitState,b,y
 	jsr $839B08
 	lda #<>aSelectedCharacterBuffer
 	sta wR1
@@ -5005,13 +5103,13 @@ rlUnknown839A94 ; 83/9A94
 	jsl $8A9013
 	lda #<>aSelectedCharacterBuffer
 	sta wR14
-	jsl rlUnknown8387D5
+	jsl rlGetEffectiveMove
 	pha
 	jsl $839C70
 	jsl $83A5A4
 	lda #<>aSelectedCharacterBuffer
 	sta wR14
-	jsl rlUnknown8387D5
+	jsl rlGetEffectiveMove
 	sta wR1
 	pla
 	sta wR0
@@ -5025,7 +5123,7 @@ rlUnknown839A94 ; 83/9A94
 	jsl rlCopyCharacterDataToBufferByDeploymentNumber
 	jsl $839B37
 	jsl $8885D1
-	stz bUnknownTargetingDeploymentNumber
+	stz bDefeatedUnitDeploymentNumber
 	stz wCapturingFlag
 	plb
 	plp
@@ -5036,8 +5134,8 @@ rsSetUnitAsVisible ; 83/9B08
 	.autsiz
 	.databank `aVisibilityMap
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	bit #TurnStatusUnselectable
+	lda aSelectedCharacterBuffer.UnitState,b
+	bit #UnitStateUnselectable
 	beq _End
 
 	lda aSelectedCharacterBuffer.X,b
@@ -5054,9 +5152,9 @@ rsSetUnitAsVisible ; 83/9B08
 	and #$00FF
 	beq _End
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	and #~TurnStatusUnselectable
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	and #~UnitStateUnselectable
+	sta aSelectedCharacterBuffer.UnitState,b
 
 	_End
 	rts
@@ -5138,7 +5236,7 @@ rlClearJoy1Unknown839B7F ; 83/9B7F
 	.databank ?
 
 	stz wJoy1New
-	stz wJoy1Alt
+	stz wJoy1Repeated
 	rtl
 
 rlClearJoypadDirectionalInputsWhileCursorScrolling ; 83/9B84
@@ -5153,15 +5251,15 @@ rlClearJoypadDirectionalInputsWhileCursorScrolling ; 83/9B84
 	beq _End
 
 	lda wJoy1New
-	and #JoypadRight | JoypadLeft | JoypadDown | JoypadUp
+	and #JOY_Right | JOY_Left | JOY_Down | JOY_Up
 	sta wJoy1New
 
-	lda wJoy1Alt
-	and #JoypadRight | JoypadLeft | JoypadDown | JoypadUp
-	sta wJoy1Alt
+	lda wJoy1Repeated
+	and #JOY_Right | JOY_Left | JOY_Down | JOY_Up
+	sta wJoy1Repeated
 
 	lda wJoy1Input
-	and #JoypadRight | JoypadLeft | JoypadDown | JoypadUp
+	and #JOY_Right | JOY_Left | JOY_Down | JOY_Up
 	sta wJoy1Input
 
 	_End
@@ -5173,13 +5271,13 @@ rlClearJoypadDirectionalInputsWhileMapScrolling ; 83/9BA5
 	.autsiz
 	.databank ?
 
-	lda wMapScrollWidthPixels,b
-	ora wMapScrollHeightPixels,b
+	lda wMapScrollXPixels,b
+	ora wMapScrollYPixels,b
 	and #$000F
 	beq +
 
 	lda wJoy1New
-	and #JoypadRight | JoypadLeft | JoypadDown | JoypadUp
+	and #JOY_Right | JOY_Left | JOY_Down | JOY_Up
 	sta wJoy1New
 
 	+
@@ -5326,12 +5424,12 @@ rlPhaseChangeRefreshUnitEffect ; 83/9C52
 
 	lda aTargetingCharacterBuffer.Status,b
 	and #$00FF
-	cmp #StatusStone
+	cmp #StatusPetrify
 	beq +
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	and #~(TurnStatusGrayed | TurnStatusMovementStar)
-	sta aTargetingCharacterBuffer.TurnStatus,b
+	lda aTargetingCharacterBuffer.UnitState,b
+	and #~(UnitStateGrayed | UnitStateMovementStar)
+	sta aTargetingCharacterBuffer.UnitState,b
 
 	lda #<>aTargetingCharacterBuffer
 	sta wR1
@@ -5409,7 +5507,7 @@ rsUnknown839CA6 ; 83/9CA6
 	jsr $839F73
 	jsr rsDropRescuee
 	jsr rsUnknown839D68
-	jsr rsSetMovementStarTurnStatus
+	jsr rsSetMovementStarUnitState
 
 	lda aSelectedCharacterBuffer.DeploymentNumber,b
 	sta wR0
@@ -5482,10 +5580,10 @@ rsUnknown839CDF ; 83/9CDF
 	.databank ?
 
 	jsr $83A1C6
-	jsr rsSetMovementStarTurnStatus
+	jsr rsSetMovementStarUnitState
 	bra rsUnknown839CA6
 
-rsSetMovementStarTurnStatus ; 83/9CE7
+rsSetMovementStarUnitState ; 83/9CE7
 
 	.al
 	.autsiz
@@ -5495,9 +5593,9 @@ rsSetMovementStarTurnStatus ; 83/9CE7
 	and #Player | Enemy | NPC
 	beq +
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	ora #TurnStatusMovementStar
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	ora #UnitStateMovementStar
+	sta aSelectedCharacterBuffer.UnitState,b
 
 	lda #<>aSelectedCharacterBuffer
 	sta wR1
@@ -5509,19 +5607,19 @@ rsSetMovementStarTurnStatus ; 83/9CE7
 rsUnknown839D02 ; 83/9D02
 
 	.autsiz
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
 	php
 	rep #$30
-	lda bUnknownTargetingDeploymentNumber
+	lda bDefeatedUnitDeploymentNumber
 	sta wR0
 	lda #<>aBurstWindowCharacterBuffer
 	sta wR1
 	jsl rlCopyCharacterDataToBufferByDeploymentNumber
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
+	lda aBurstWindowCharacterBuffer.UnitState,b
 	ora #$0041
-	sta aBurstWindowCharacterBuffer.TurnStatus,b
+	sta aBurstWindowCharacterBuffer.UnitState,b
 
 	lda aBurstWindowCharacterBuffer.DeploymentNumber,b
 	and #Enemy | NPC
@@ -5564,17 +5662,17 @@ rsUnknown839D02 ; 83/9D02
 rsUnknown839D68 ; 83/9D68
 
 	.autsiz
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
-	lda bUnknownTargetingDeploymentNumber
+	lda bDefeatedUnitDeploymentNumber
 	sta wR0
 	lda #<>aBurstWindowCharacterBuffer
 	sta wR1
 	jsl rlCopyCharacterDataToBufferByDeploymentNumber
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	ora #TurnStatusRescuing
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	ora #UnitStateRescuing
+	sta aSelectedCharacterBuffer.UnitState,b
 
 	lda #<>aSelectedCharacterBuffer
 	sta wR1
@@ -5585,9 +5683,9 @@ rsUnknown839D68 ; 83/9D68
 	jsl $83A899
 	jsl $8A8D9C
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	ora #TurnStatusHidden
-	sta aBurstWindowCharacterBuffer.TurnStatus,b
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	ora #UnitStateHidden
+	sta aBurstWindowCharacterBuffer.UnitState,b
 
 	sep #$20
 	lda aSelectedCharacterBuffer.DeploymentNumber,b
@@ -5630,9 +5728,9 @@ rsUnknown839D68 ; 83/9D68
 	sta lR18+1
 	jsl $8A8FBC
 
-	lda #<>rlSetRescuedTargetTurnStatus
+	lda #<>rlSetRescuedTargetUnitState
 	sta lUnknown7EA4EC
-	lda #>`rlSetRescuedTargetTurnStatus
+	lda #>`rlSetRescuedTargetUnitState
 	sta lUnknown7EA4EC+1
 	jsl rlUnknown83814A
 
@@ -5649,15 +5747,15 @@ rsUnknown839D68 ; 83/9D68
 	rep #$30
 	rts
 
-rlSetRescuedTargetTurnStatus ; 83/9E22
+rlSetRescuedTargetUnitState ; 83/9E22
 
 	.al
 	.autsiz
 	.databank ?
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	ora #TurnStatusRescued
-	sta aBurstWindowCharacterBuffer.TurnStatus,b
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	ora #UnitStateRescued
+	sta aBurstWindowCharacterBuffer.UnitState,b
 
 	lda #<>aBurstWindowCharacterBuffer
 	sta wR1
@@ -5670,9 +5768,9 @@ rsUnknown839E39 ; 83/9E39
 
 	.al
 	.autsiz
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
-	lda bUnknownTargetingDeploymentNumber
+	lda bDefeatedUnitDeploymentNumber
 	sta wR0
 	lda #<>aTemporaryActionStruct
 	sta wR1
@@ -5711,9 +5809,9 @@ rsUnknown839E39 ; 83/9E39
 	sta aTargetableUnitMap,x
 
 	rep #$20
-	lda aTemporaryActionStruct.TurnStatus,b
-	ora #TurnStatusMovementStar | TurnStatusMoved
-	sta aTemporaryActionStruct.TurnStatus,b
+	lda aTemporaryActionStruct.UnitState,b
+	ora #UnitStateMovementStar | UnitStateMoved
+	sta aTemporaryActionStruct.UnitState,b
 
 	lda #<>aTemporaryActionStruct
 	sta wR1
@@ -5730,18 +5828,18 @@ rsDropRescuee ; 83/9EA3
 
 	.al
 	.autsiz
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
 	; Grab target and check if they were carrying someone
 
-	lda bUnknownTargetingDeploymentNumber
+	lda bDefeatedUnitDeploymentNumber
 	sta wR0
 	lda #<>aTemporaryActionStruct
 	sta wR1
 	jsl rlCopyCharacterDataToBufferByDeploymentNumber
 
-	lda aTemporaryActionStruct.TurnStatus,b
-	bit #TurnStatusRescuing
+	lda aTemporaryActionStruct.UnitState,b
+	bit #UnitStateRescuing
 	bne +
 
 	jmp _End
@@ -5751,7 +5849,7 @@ rsDropRescuee ; 83/9EA3
 	; If they're actually on the map, get them off
 	; of that tile, because the dropped unit is going there
 
-	bit #TurnStatusHidden
+	bit #UnitStateHidden
 	beq +
 
 	lda aTemporaryActionStruct.X,b
@@ -5781,18 +5879,18 @@ rsDropRescuee ; 83/9EA3
 
 	lda aTemporaryActionStruct.X,b
 	and #$00FF
-	sta wEventEngineUnknownXTarget
+	sta wActiveTileUnitParameter1
 
 	lda aTemporaryActionStruct.Y,b
 	and #$00FF
-	sta wEventEngineUnknownYTarget
+	sta wActiveTileUnitParameter2
 
 	lda aItemSkillCharacterBuffer.Class,b
 	and #$00FF
 	sta wR3
 	jsl $83F131
 
-	lda wUnknown7E4008
+	lda wAITemp7E4008
 	and #$00FF
 	cmp #$00FF
 	bne +
@@ -5802,7 +5900,7 @@ rsDropRescuee ; 83/9EA3
 	sta wR3
 	jsl $83F191
 
-	lda wUnknown7E4008
+	lda wAITemp7E4008
 	and #$00FF
 	cmp #$00FF
 	bne +
@@ -5811,7 +5909,7 @@ rsDropRescuee ; 83/9EA3
 	bra -
 
 	+
-	lda wUnknown7E400A
+	lda wAITemp7E400A
 	jsl rlGetMapCoordsByTileIndex
 
 	sep #$20
@@ -5827,13 +5925,13 @@ rsDropRescuee ; 83/9EA3
 	stz aItemSkillCharacterBuffer.Rescue,b
 	rep #$30
 
-	lda aTemporaryActionStruct.TurnStatus,b
-	and #~TurnStatusRescuing
-	sta aTemporaryActionStruct.TurnStatus,b
+	lda aTemporaryActionStruct.UnitState,b
+	and #~UnitStateRescuing
+	sta aTemporaryActionStruct.UnitState,b
 
-	lda aItemSkillCharacterBuffer.TurnStatus,b
-	and #~(TurnStatusRescued | TurnStatusHidden)
-	sta aItemSkillCharacterBuffer.TurnStatus,b
+	lda aItemSkillCharacterBuffer.UnitState,b
+	and #~(UnitStateRescued | UnitStateHidden)
+	sta aItemSkillCharacterBuffer.UnitState,b
 
 	; Copy their updated data back
 
@@ -5852,9 +5950,9 @@ rsUnknown839F73 ; 83/9F73
 
 	.al
 	.autsiz
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
-	lda bUnknownTargetingDeploymentNumber
+	lda bDefeatedUnitDeploymentNumber
 	sta wR0
 	lda #<>aBurstWindowCharacterBuffer
 	sta wR1
@@ -5881,9 +5979,9 @@ rsUnknown839FA6 ; 83/9FA6
 
 	.al
 	.autsiz
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
-	lda bUnknownTargetingDeploymentNumber
+	lda bDefeatedUnitDeploymentNumber
 	sta wR0
 	lda #<>aBurstWindowCharacterBuffer
 	sta wR1
@@ -5905,22 +6003,22 @@ rsUnknown839FA6 ; 83/9FA6
 	jmp _Targetable
 
 	+
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	and #~TurnStatusRescued
-	sta aBurstWindowCharacterBuffer.TurnStatus,b
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	and #~UnitStateRescued
+	sta aBurstWindowCharacterBuffer.UnitState,b
 
 	lda aBurstWindowCharacterBuffer.DeploymentNumber,b
 	and #Enemy | NPC
 	bne +
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	ora #TurnStatusGrayed
-	sta aBurstWindowCharacterBuffer.TurnStatus,b
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	ora #UnitStateGrayed
+	sta aBurstWindowCharacterBuffer.UnitState,b
 
 	+
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	and #~TurnStatusRescuing
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	and #~UnitStateRescuing
+	sta aSelectedCharacterBuffer.UnitState,b
 
 	sep #$20
 	stz aSelectedCharacterBuffer.Rescue,b
@@ -5972,7 +6070,7 @@ rsUnknown839FA6 ; 83/9FA6
 	sta lUnknown7EA4EC
 	lda #>`$83A0C3
 	sta lUnknown7EA4EC+1
-	stz bUnknownTargetingDeploymentNumber
+	stz bDefeatedUnitDeploymentNumber
 	jsl rlUnknown83814A
 	rts
 
@@ -6016,9 +6114,9 @@ rlUnknown83A0C3 ; 83/A0C3
 	.autsiz
 	.databank `aPlayerVisibleUnitMap
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	and #~TurnStatusHidden
-	sta aBurstWindowCharacterBuffer.TurnStatus,b
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	and #~UnitStateHidden
+	sta aBurstWindowCharacterBuffer.UnitState,b
 
 	lda #<>aBurstWindowCharacterBuffer
 	sta wR1
@@ -6047,17 +6145,17 @@ rsUnknown83A100 ; 83/A100
 
 	.al
 	.autsiz
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
-	lda bUnknownTargetingDeploymentNumber
+	lda bDefeatedUnitDeploymentNumber
 	sta wR0
 	lda #<>aBurstWindowCharacterBuffer
 	sta wR1
 	jsl rlCopyCharacterDataToBufferByDeploymentNumber
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	ora TurnStatusUnknown1 ; typo, should be #TurnStatusUnknown1 ?
-	sta aBurstWindowCharacterBuffer.TurnStatus,b
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	ora UnitStateUnknown1 ; typo, should be #UnitStateUnknown1 ?
+	sta aBurstWindowCharacterBuffer.UnitState,b
 
 	lda #<>aBurstWindowCharacterBuffer
 	sta wR1
@@ -6078,7 +6176,7 @@ rsUnknown83A131 ; 83/A131
 
 	.al
 	.autsiz
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
 	sta wR0
 	lda #<>aItemSkillCharacterBuffer
@@ -6090,17 +6188,17 @@ rsUnknown83A131 ; 83/A131
 	sta aItemSkillCharacterBuffer.Rescue,b
 	rep #$20
 
-	lda aItemSkillCharacterBuffer.TurnStatus,b
-	and #~(TurnStatusRescued | TurnStatusRescuing)
-	ora #TurnStatusMovementStar | TurnStatusMoved
-	sta aItemSkillCharacterBuffer.TurnStatus,b
+	lda aItemSkillCharacterBuffer.UnitState,b
+	and #~(UnitStateRescued | UnitStateRescuing)
+	ora #UnitStateMovementStar | UnitStateMoved
+	sta aItemSkillCharacterBuffer.UnitState,b
 	lda aItemSkillCharacterBuffer.DeploymentNumber,b
 	bit #Enemy | NPC
 	bne +
 
-	lda aItemSkillCharacterBuffer.TurnStatus,b
-	ora #TurnStatusHidden | TurnStatusCaptured
-	sta aItemSkillCharacterBuffer.TurnStatus,b
+	lda aItemSkillCharacterBuffer.UnitState,b
+	ora #UnitStateHidden | UnitStateCaptured
+	sta aItemSkillCharacterBuffer.UnitState,b
 
 	lda #<>aItemSkillCharacterBuffer
 	sta wR1
@@ -6122,9 +6220,9 @@ rsUnknown83A182 ; 83/A182
 
 	.al
 	.autsiz
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
-	lda bUnknownTargetingDeploymentNumber
+	lda bDefeatedUnitDeploymentNumber
 	and #$00FF
 	sta wR0
 	lda #<>aItemSkillCharacterBuffer
@@ -6147,16 +6245,16 @@ rsUnknown83A1A8 ; 83/A1A8
 
 	.al
 	.autsiz
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
 	sta wR0
 	lda #<>aBurstWindowCharacterBuffer
 	sta wR1
 	jsl rlCopyCharacterDataToBufferByDeploymentNumber
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	ora #TurnStatusUnknown1 | TurnStatusHidden
-	sta aBurstWindowCharacterBuffer.TurnStatus,b
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	ora #UnitStateUnknown1 | UnitStateHidden
+	sta aBurstWindowCharacterBuffer.UnitState,b
 
 	lda #<>aBurstWindowCharacterBuffer
 	sta wR1
@@ -6172,7 +6270,7 @@ rsUnknown83A1C6 ; 83/A1C6
 	lda aSelectedCharacterBuffer.Character,b
 	sta aActionStructUnit1.Character
 
-	lda bUnknownTargetingDeploymentNumber
+	lda bDefeatedUnitDeploymentNumber
 	sta wR0
 	lda #<>aActionStructUnit2
 	sta wR1
@@ -6192,9 +6290,9 @@ rlCheckIfHeldGameOver ; 83/A1F3
 
 	.al
 	.autsiz
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
-	lda bUnknownTargetingDeploymentNumber
+	lda bDefeatedUnitDeploymentNumber
 	sta wR0
 	lda #<>aBurstWindowCharacterBuffer
 	sta wR1
@@ -6237,9 +6335,9 @@ rlCheckIfGameOverDeath ; 83/A238
 
 	.al
 	.autsiz
-	.databank `bUnknownTargetingDeploymentNumber
+	.databank `bDefeatedUnitDeploymentNumber
 
-	lda bUnknownTargetingDeploymentNumber
+	lda bDefeatedUnitDeploymentNumber
 	sta wR0
 	lda #<>aBurstWindowCharacterBuffer
 	sta wR1
@@ -6383,13 +6481,13 @@ rlUnknown83A2BC ; 83/A2BC
 	jsl rlSearchForUnitAndWriteTargetToBuffer
 
 	sep #$20
-	stz aTemporaryActionStruct.AI1,b
-	stz aTemporaryActionStruct.AI2,b
-	stz aTemporaryActionStruct.AI3,b
-	stz aTemporaryActionStruct.AI4,b
-	stz aTemporaryActionStruct.Unknown3E,b
+	stz aTemporaryActionStruct.ActionAI,b
+	stz aTemporaryActionStruct.MovementAI,b
+	stz aTemporaryActionStruct.ActionMisc,b
+	stz aTemporaryActionStruct.ActionAIOffset,b
+	stz aTemporaryActionStruct.MovementAIOffset,b
 	rep #$30
-	stz aTemporaryActionStruct.Unknown3F,b
+	stz aTemporaryActionStruct.AIProperties,b
 
 	ldx aTemporaryActionStruct.DeploymentSlot,b
 	lda #$0000
@@ -6500,13 +6598,13 @@ rlUnknown83A369 ; 83/A369
 	ldx #<>aTemporaryActionStruct
 	jsr $83AF5F
 
-	stz aTemporaryActionStruct.AI1,b
-	stz aTemporaryActionStruct.AI2,b
-	stz aTemporaryActionStruct.AI3,b
-	stz aTemporaryActionStruct.AI4,b
-	stz aTemporaryActionStruct.Unknown3E,b
+	stz aTemporaryActionStruct.ActionAI,b
+	stz aTemporaryActionStruct.MovementAI,b
+	stz aTemporaryActionStruct.ActionMisc,b
+	stz aTemporaryActionStruct.ActionAIOffset,b
+	stz aTemporaryActionStruct.MovementAIOffset,b
 	rep #$30
-	stz aTemporaryActionStruct.Unknown3F,b
+	stz aTemporaryActionStruct.AIProperties,b
 
 	ldx aTemporaryActionStruct.DeploymentSlot,b
 	lda #$0000
@@ -6565,9 +6663,9 @@ rlUnknown83A3BF ; 83/A3BF
 	lda aSelectedCharacterBuffer.DeploymentSlot,b
 	pha
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	and #~(TurnStatusHidden | TurnStatusGrayed)
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	and #~(UnitStateHidden | UnitStateGrayed)
+	sta aSelectedCharacterBuffer.UnitState,b
 
 	lda aBurstWindowCharacterBuffer.DeploymentSlot,b
 	sta aSelectedCharacterBuffer.DeploymentSlot,b
@@ -6579,20 +6677,20 @@ rlUnknown83A3BF ; 83/A3BF
 	ldx #<>aSelectedCharacterBuffer
 	jsr $83AF5F
 
-	stz aSelectedCharacterBuffer.AI1,b
-	stz aSelectedCharacterBuffer.AI2,b
-	stz aSelectedCharacterBuffer.AI3,b
-	stz aSelectedCharacterBuffer.AI4,b
-	stz aSelectedCharacterBuffer.Unknown3E,b
+	stz aSelectedCharacterBuffer.ActionAI,b
+	stz aSelectedCharacterBuffer.MovementAI,b
+	stz aSelectedCharacterBuffer.ActionMisc,b
+	stz aSelectedCharacterBuffer.ActionAIOffset,b
+	stz aSelectedCharacterBuffer.MovementAIOffset,b
 	rep #$30
-	stz aSelectedCharacterBuffer.Unknown3F,b
+	stz aSelectedCharacterBuffer.AIProperties,b
 	lda #<>aSelectedCharacterBuffer
 	sta wR1
 	jsl rlCopyCharacterDataFromBuffer
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	ora #TurnStatusMovementStar | TurnStatusMoved
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	ora #UnitStateMovementStar | UnitStateMoved
+	sta aSelectedCharacterBuffer.UnitState,b
 
 	pla
 	sta aSelectedCharacterBuffer.DeploymentSlot,b
@@ -7110,7 +7208,7 @@ rlTrySetAlliedDeathMusic ; 83/A5FE
 	beq +
 
 	stx wCurrentMapMusic,b
-	stx aUnknown0004BA,b
+	stx aSoundSystem.aUnknown0004BA,b
 
 	+
 	plb
@@ -7163,8 +7261,8 @@ rlSetTargetableUnitTile ; 83/A657
 	.autsiz
 	.databank `aTargetableUnitMap
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	and #TurnStatusDead | TurnStatusRescued | TurnStatusHidden
+	lda aTargetingCharacterBuffer.UnitState,b
+	and #UnitStateDead | UnitStateRescued | UnitStateHidden
 	bne +
 
 	lda aTargetingCharacterBuffer.X,b
@@ -7218,8 +7316,8 @@ rlUnknown83A6A4 ; 83/A6A4
 	.autsiz
 	.databank $7E
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	bit #TurnStatusHidden
+	lda aTargetingCharacterBuffer.UnitState,b
+	bit #UnitStateHidden
 	bne +
 
 	lda #aTargetingCharacterBuffer
@@ -7367,8 +7465,8 @@ rlUnknown83A776 ; 83/A776
 	.autsiz
 	.databank ?
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	bit #TurnStatusDead | TurnStatusUnknown1 | TurnStatusInvisible | TurnStatusCaptured
+	lda aTargetingCharacterBuffer.UnitState,b
+	bit #UnitStateDead | UnitStateUnknown1 | UnitStateDisabled | UnitStateCaptured
 	bne +
 
 	lda #<>aTargetingCharacterBuffer
@@ -7446,8 +7544,8 @@ rlCheckIfActiveUnitCanCanto ; 83/A7BA
 
 	.databank `$7E4F98
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	bit #TurnStatusMoved
+	lda aSelectedCharacterBuffer.UnitState,b
+	bit #UnitStateMoved
 	bne _False
 
 	lda $7E4F98
@@ -7478,30 +7576,30 @@ rlUnknownGetMapTileCoords ; 83/A7EC
 
 	.al
 	.autsiz
-	.databank `wEventEngineUnknownXTarget
+	.databank `wActiveTileUnitParameter1
 
 	txa
 	jsl rlGetMapCoordsByTileIndex
 
 	lda wR0
-	sta wEventEngineUnknownXTarget
+	sta wActiveTileUnitParameter1
 
 	lda wR1
-	sta wEventEngineUnknownYTarget
+	sta wActiveTileUnitParameter2
 	rtl
 
 rlUnknownGetMapTileCoordsBySelectedUnit ; 83/A7FC
 
 	.al
 	.autsiz
-	.databank `wEventEngineUnknownXTarget
+	.databank `wActiveTileUnitParameter1
 
 	lda aSelectedCharacterBuffer.X,b
 	and #$00FF
-	sta wEventEngineUnknownXTarget
+	sta wActiveTileUnitParameter1
 	lda aSelectedCharacterBuffer.Y,b
 	and #$00FF
-	sta wEventEngineUnknownYTarget
+	sta wActiveTileUnitParameter2
 	rtl
 
 rlCheckIfClassCanDismount ; 83/A80F
@@ -7670,18 +7768,18 @@ rlSelectedUnitMovementStar ; 83/A8D2
 	and #$00FF
 	beq _False
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	bit #TurnStatusMovementStar
+	lda aSelectedCharacterBuffer.UnitState,b
+	bit #UnitStateMovementStar
 	bne _False
 
 	lda aSelectedCharacterBuffer.MovementStars,b
 	jsl rlRollRandomNumber0To100
 	bcc _False
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	ora #TurnStatusMovementStar
-	and #~(TurnStatusGrayed | TurnStatusMoved)
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	ora #UnitStateMovementStar
+	and #~(UnitStateGrayed | UnitStateMoved)
+	sta aSelectedCharacterBuffer.UnitState,b
 
 	lda #<>aSelectedCharacterBuffer
 	sta wR1
@@ -7722,9 +7820,9 @@ rlInvisibleMovementStar ; 83/A921
 	cmp #$0004
 	bne _End
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	and #~TurnStatusUnselectable
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	and #~UnitStateUnselectable
+	sta aSelectedCharacterBuffer.UnitState,b
 
 	lda aSelectedCharacterBuffer.X,b
 	and #$00FF
@@ -7738,9 +7836,9 @@ rlInvisibleMovementStar ; 83/A921
 	and #$00FF
 	beq _End
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	ora #TurnStatusUnselectable
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	ora #UnitStateUnselectable
+	sta aSelectedCharacterBuffer.UnitState,b
 
 	_End
 	pla
@@ -7913,56 +8011,56 @@ rlRollRandomBases ; 83/AA35
 	.databank `aClassDataBuffer
 
 	lda #4
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 
 	sep #$20
 	sta aSelectedCharacterBuffer.Strength,b
 	rep #$30
 
 	lda #4
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 
 	sep #$20
 	sta aSelectedCharacterBuffer.Magic,b
 	rep #$30
 
 	lda #4
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 
 	sep #$20
 	sta aSelectedCharacterBuffer.Skill,b
 	rep #$30
 
 	lda #4
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 
 	sep #$20
 	sta aSelectedCharacterBuffer.Speed,b
 	rep #$30
 
 	lda #4
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 
 	sep #$20
 	sta aSelectedCharacterBuffer.Defense,b
 	rep #$30
 
 	lda #4
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 
 	sep #$20
 	sta aSelectedCharacterBuffer.Constitution,b
 	rep #$30
 
 	lda #4
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 
 	sep #$20
 	sta aSelectedCharacterBuffer.Luck,b
 	rep #$30
 
 	lda #4
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 
 	sep #$20
 	clc
@@ -7987,7 +8085,7 @@ rlRollRandomHPBase ; 83/AAB6
 
 	php
 	lda #2
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 	sep #$20
 	clc
 	adc aClassDataBuffer.HP
@@ -8020,7 +8118,7 @@ rlGetAutolevelScheme ; 83/AAE0
 
 	.al
 	.autsiz
-	.databank `wAutolevelHPGrowth
+	.databank `aUnitAdjustedGrowths.wHP
 
 	jsl $83E033
 	lda #>`aAutolevelSchemePointers
@@ -8037,47 +8135,47 @@ rlGetAutolevelScheme ; 83/AAE0
 	ldy #structAutolevelScheme.HP
 	lda [lR18],y
 	and #$00FF
-	sta wAutolevelHPGrowth
+	sta aUnitAdjustedGrowths.wHP
 
 	ldy #structAutolevelScheme.STR
 	lda [lR18],y
 	and #$00FF
-	sta wAutolevelSTRGrowth
+	sta aUnitAdjustedGrowths.wSTR
 
 	ldy #structAutolevelScheme.MAG
 	lda [lR18],y
 	and #$00FF
-	sta wAutolevelMAGGrowth
+	sta aUnitAdjustedGrowths.wMAG
 
 	ldy #structAutolevelScheme.SKL
 	lda [lR18],y
 	and #$00FF
-	sta wAutolevelSKLGrowth
+	sta aUnitAdjustedGrowths.wSKL
 
 	ldy #structAutolevelScheme.SPD
 	lda [lR18],y
 	and #$00FF
-	sta wAutolevelSPDGrowth
+	sta aUnitAdjustedGrowths.wSPD
 
 	ldy #structAutolevelScheme.DEF
 	lda [lR18],y
 	and #$00FF
-	sta wAutolevelDEFGrowth
+	sta aUnitAdjustedGrowths.wDEF
 
 	ldy #structAutolevelScheme.CON
 	lda [lR18],y
 	and #$00FF
-	sta wAutolevelCONGrowth
+	sta aUnitAdjustedGrowths.wCON
 
 	ldy #structAutolevelScheme.LUK
 	lda [lR18],y
 	and #$00FF
-	sta wAutolevelLUKGrowth
+	sta aUnitAdjustedGrowths.wLUK
 
 	ldy #structAutolevelScheme.MOV
 	lda [lR18],y
 	and #$00FF
-	sta wAutolevelMOVGrowth
+	sta aUnitAdjustedGrowths.wMOV
 
 	rtl
 
@@ -8316,14 +8414,14 @@ rlUnknown83ACA8 ; 83/ACA8
 	sta wR1
 	jsl rlCopyCharacterDataToBufferByDeploymentNumber
 
-	lda aItemSkillCharacterBuffer.TurnStatus,b
-	and #~(TurnStatusRescued | TurnStatusRescuing)
-	sta aItemSkillCharacterBuffer.TurnStatus,b
+	lda aItemSkillCharacterBuffer.UnitState,b
+	and #~(UnitStateRescued | UnitStateRescuing)
+	sta aItemSkillCharacterBuffer.UnitState,b
 	ply
 
-	lda structExpandedCharacterDataRAM.TurnStatus,b,y
-	and #~(TurnStatusRescued | TurnStatusRescuing)
-	sta structExpandedCharacterDataRAM.TurnStatus,b,y
+	lda structExpandedCharacterDataRAM.UnitState,b,y
+	and #~(UnitStateRescued | UnitStateRescuing)
+	sta structExpandedCharacterDataRAM.UnitState,b,y
 
 	sep #$20
 	lda #$00
@@ -8782,13 +8880,13 @@ rlUnknownClearAI ; 83/AF44
 	php
 	ldx wR1
 	sep #$20
-	stz structExpandedCharacterDataRAM.AI1,b,x
-	stz structExpandedCharacterDataRAM.AI2,b,x
-	stz structExpandedCharacterDataRAM.AI3,b,x
-	stz structExpandedCharacterDataRAM.AI4,b,x
-	stz structExpandedCharacterDataRAM.Unknown3E,b,x
+	stz structExpandedCharacterDataRAM.ActionAI,b,x
+	stz structExpandedCharacterDataRAM.MovementAI,b,x
+	stz structExpandedCharacterDataRAM.ActionMisc,b,x
+	stz structExpandedCharacterDataRAM.ActionAIOffset,b,x
+	stz structExpandedCharacterDataRAM.MovementAIOffset,b,x
 	rep #$30
-	stz structExpandedCharacterDataRAM.Unknown3F,b,x
+	stz structExpandedCharacterDataRAM.AIProperties,b,x
 	plp
 	rtl
 
@@ -9299,8 +9397,8 @@ rlGetTransformedItem ; 83/B1A9
 	plb
 
 	stz lR25
-	stx wR21
-	stx wR22
+	stx lR21
+	stx lR22
 
 	txa
 	jsl rlCopyItemDataToBuffer
@@ -9309,32 +9407,32 @@ rlGetTransformedItem ; 83/B1A9
 	bit #TraitBroken
 	beq +
 
-	lda wR22
+	lda lR22
 	xba
-	sta wR22
+	sta lR22
 
 	inc lR25
 
 	+
-	lda wR22
+	lda lR22
 	jsr rsCheckIfItemTransformsOnPickup
 	bcc _DoesNotTransform
 
 	sep #$20
 	lda aTransformedItemTable,x
-	sta wR22
+	sta lR22
 	rep #$30
 
 	lda lR25
 	bne _BrokenTransformed
 
-	lda wR22
+	lda lR22
 	and #$00FF
 	ora #(-2 & $FF) << 8
 	jsl rlCopyItemDataToBuffer
 
 	sep #$20
-	lda wR22+1
+	lda lR22+1
 	cmp aItemDataBuffer.Durability,b
 	blt +
 
@@ -9342,7 +9440,7 @@ rlGetTransformedItem ; 83/B1A9
 
 	+
 	rep #$30
-	lda wR22
+	lda lR22
 	plb
 	plp
 	ply
@@ -9351,7 +9449,7 @@ rlGetTransformedItem ; 83/B1A9
 	rtl
 
 	_DoesNotTransform
-	lda wR21
+	lda lR21
 	plb
 	plp
 	ply
@@ -9360,7 +9458,7 @@ rlGetTransformedItem ; 83/B1A9
 	rtl
 
 	_BrokenTransformed
-	lda wR22
+	lda lR22
 	xba
 	plb
 	plp
@@ -9815,14 +9913,14 @@ rsUnknown83B40A ; 83/B40A
 	sta wR0
 
 	lda #31
-	sta wMapWidth16
+	sta wMapWidthMetatiles
 
 	ldy #$0002
 	lda (lR18),y
 	sta wR1
 
 	lda #29
-	sta wMapHeight16
+	sta wMapHeightMetatiles
 
 	lda lR18
 	clc
@@ -9954,11 +10052,11 @@ rsUnknownMenuDrawLabels ; 83/B4C5
 	.databank ?
 
 	lda #(`$83C0F6)<<8
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #$2580
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda #(`$83B60A)<<8
 	sta lR18+1
@@ -10163,7 +10261,7 @@ rsUnknownMenuGetCharacterNameAndClass ; 83/B6A0
 	.databank ?
 
 	lda #$2180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda aSelectedCharacterBuffer.Character,b
 	jsl rlGetCharacterNamePointer
@@ -10182,7 +10280,7 @@ rsUnknownMenuGetCharacterNameAndClass ; 83/B6A0
 .comment
 
 	83/B6C8:	A9702A  	lda #$2A70
-	83/B6CB:	8DE70D  	sta wUnknown000DE7,b
+	83/B6CB:	8DE70D  	sta aCurrentTilemapInfo.wBaseTile,b
 
 	83/B6CE:	A21A02  	ldx #26 | (2 << 8)
 	83/B6D1:	AD760E  	lda aSelectedCharacterBuffer.Level,b

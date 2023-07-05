@@ -79,12 +79,12 @@ rlButtonCombinationResetCheck ; 80/B096
 
 	php
 	lda wJoy1Input
-	and #~JoypadStart
-	eor #JoypadR | JoypadL | JoypadSelect
+	and #~JOY_Start
+	eor #JOY_R | JOY_L | JOY_Select
 	bne _End
 
-	lda wJoy1Alt
-	bit #JoypadStart
+	lda wJoy1Repeated
+	bit #JOY_Start
 	beq _End
 
 	lda wUnknown0004FA,b
@@ -95,13 +95,13 @@ rlButtonCombinationResetCheck ; 80/B096
 	sta INIDISP,b
 	lda #NMITIMEN_Setting(True, False, False, False)
 	sta NMITIMEN,b
-	sta bBuf_NMITIMEN
-	stz bUnknown000341,b
+	sta bBufferNMITIMEN
+	stz bDMAPendingChannels,b
 	stz bHDMAPendingChannels,b
-	stz bBuf_HDMAEN
+	stz bBufferHDMAEN
 	stz bDMAArrayFlag,b
 	rep #$20
-	stz wNextDMAArrayStructOffs,b
+	stz wDMAArrayPosition,b
 	jml rsResetAlreadyInitialized
 
 	_End

@@ -97,13 +97,13 @@ eventLeifDeathEvents ; 99/80A7
 	PAUSE_SKIPPABLE 32
 	YIELD
 
-	HALT_UNTIL_WORD_SKIPPABLE $7FAA14, $0000
+	HALT_UNTIL_WORD_SKIPPABLE wMapBattleFlag, $0000
 
 	STORE_WORD wEventEngineCharacterTarget, Finn
 	CALL_ASM_LOOP rlASMCCheckUnitAvailableForDialogue, $0000
 	JUMP_FALSE +
 
-	DIALOGUE leifdeathfinn
+	DIALOGUE dialogueLeifDeathFinnReaction
 	YIELD
 
 	JUMP _End
@@ -113,7 +113,7 @@ eventLeifDeathEvents ; 99/80A7
 	CALL_ASM_LOOP rlASMCCheckUnitAvailableForDialogue, $0000
 	JUMP_FALSE +
 
-	DIALOGUE leifdeathnanna
+	DIALOGUE dialogueLeifDeathNannaReaction
 	YIELD
 
 	JUMP _End
@@ -123,49 +123,49 @@ eventLeifDeathEvents ; 99/80A7
 	CALL_ASM_LOOP rlASMCCheckUnitAvailableForDialogue, $0000
 	JUMP_FALSE +
 
-	DIALOGUE leifdeatheyvel
+	DIALOGUE dialogueLeifDeathEyvelReaction
 	YIELD
 
 	JUMP _End
 
 	+
-	EVENT_CMP_BYTE_AT_LT wCurrentChapter, Chapter10
+	EVENT_CMP_BYTE_LT wCurrentChapter, Chapter10
 	JUMP_FALSE +
 
-	EVENT_CMP_BYTE_AT_LT wCurrentChapter, Chapter18
+	EVENT_CMP_BYTE_LT wCurrentChapter, Chapter18
 	JUMP_TRUE +
 
-	DIALOGUE leifdeathdorias
+	DIALOGUE dialogueLeifDeathDoriasReaction
 	YIELD
 	JUMP _End
 
 	+
-	EVENT_CMP_BYTE_AT_EQ wCurrentChapter, Chapter2x
+	EVENT_CMP_BYTE_EQ wCurrentChapter, Chapter02x
 	JUMP_TRUE +
 
-	EVENT_CMP_BYTE_AT_LT wCurrentChapter, Chapter6
+	EVENT_CMP_BYTE_LT wCurrentChapter, Chapter06
 	JUMP_FALSE _End
 
 	+
-	DIALOGUE leifdeathaugustus
+	DIALOGUE dialogueLeifDeathAugustReaction
 	YIELD
 
 	_End
 	CALL_ASM_SKIPPABLE rlUnknown80C29D, $0000
-	STORE_WORD wUnknown001791, $FFFF
+	STORE_WORD wEventEngineUnknown001791, $FFFF
 
 	eventMapDeathQuoteDummyEvent
 END1
 
 eventCedDeathEvents ; 99/8130
-	DIALOGUE ch23fall
+	DIALOGUE dialogueChapter23Fall
 	YIELD
 
 	CALL_ASM_SKIPPABLE rlUnknown80C29D, $0000
-	STORE_WORD wUnknown001791, $FFFF
+	STORE_WORD wEventEngineUnknown001791, $FFFF
 END1
 
 eventUnknownGameOver ; 99/8142
 	CALL_ASM_SKIPPABLE rlUnknown80C29D, $0000
-	STORE_WORD wUnknown001791, $FFFF
+	STORE_WORD wEventEngineUnknown001791, $FFFF
 END1

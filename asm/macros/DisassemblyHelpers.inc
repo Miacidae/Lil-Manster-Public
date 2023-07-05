@@ -22,53 +22,25 @@ Modify .function Entry, Value, List
 	List := List[:Entry] .. [Value] .. List[Entry+1:]
 	.endf List
 
-byte .struct Value
-  .byte \Value
-.ends
+lorom    .function address, shadow=0
 
-char .struct Value
-  .char \Value
-.ends
+set := (((address >> 16) * $20000) + (address & $FFFF)) + $8000
 
-word .struct Value
-  .word \Value
-.ends
+.if shadow = 1
 
-sint .struct Value
-  .sint \Value
-.ends
+    set += $800000
+    set &= $FFFFFF
 
-addr .struct Value
-  .addr \Value
-.ends
+.else
 
-rta .struct Value
-  .rta \Value
-.ends
+.endif
 
-long .struct Value
-  .long \Value
-.ends
+.if (set & $FFFF) < $8000
 
-lint .struct Value
-  .lint \Value
-.ends
+     set += $8000
 
-dword .struct Value
-  .dword \Value
-.ends
+.else
 
-dint .struct Value
-  .dint \Value
-.ends
+.endif
 
-checkfit .macro Offset
-  .cerror (* > \Offset), format("$%06X", *)
-.endm
-
-pack .function Iterable, Width=2
-  Iterable := list(Iterable)
-  .if ((len(Iterable) & 1) == 1)
-    Iterable ..= [0]
-  .endif
-.endf (Iterable[0::2] | (Iterable[1::2] << (4 * Width)))
+.endf set

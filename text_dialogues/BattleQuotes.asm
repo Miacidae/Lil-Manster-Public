@@ -1,4 +1,4 @@
-ch10fredboss
+dialogueCh10FredBattleQuote
 .text "You think you can just stomp"
 .byte NewLine
 .text "around House Friege's backyard"
@@ -7,14 +7,14 @@ ch10fredboss
 .byte WaitForA
 .byte EndText
 
-ch10olwenboss
+dialogueCh10OlwenBattleQuote
 .text "Invaders, hear me: you must leave"
 .byte NewLine
 .text "Imperial territory at once!"
 .byte WaitForA
 .byte EndText
 
-ch11kemphboss
+dialogueCh11KempfBattleQuote
 .text "Tch..."
 .byte NewLine
 .text "So much for the ''impregnable''"
@@ -23,40 +23,40 @@ ch11kemphboss
 .byte WaitForA
 .byte EndText
 
-ch13baldackboss		; Unused, but it's the same as his ch14 one
+dialogueCh13BaldachBattleQuote		; Unused, but it's the same as his ch14 one
 .text "Funny. You little rats think"
 .byte NewLine
 .text "you can actually beat me!"
 .byte WaitForA
 .byte EndText
 
-ch16Aconomorboss
+dialogueCh16AConomorBattleQuote
 .text "I pray you don't hold a grudge,"
 .byte NewLine
 .text "but this is fate. Forgive me!"
 .byte WaitForA
 .byte EndText
 
-ch16Akempfboss
+dialogueCh16AKempfBattleQuote
 .text "You! YOU!"
 .byte NewLine
 .text "If you hadn't come this far...!"
 .byte WaitForA
 .byte EndText
 
-ch17Bamaldaboss
+dialogueCh17BAmaldaBattleQuote
 .text "I..."
 .byte NewLine
 .text "What in blazes am I doing...?"
 .byte WaitForA
 .byte EndText
 
-ch19wolfeboss
+dialogueCh19WolfeBattleQuote
 .text "You're just a stain on my blade!"
 .byte WaitForA
 .byte EndText
 
-weismannboss
+dialogueWeissmannBattleQuote
 .text "Do you fools realize"
 .byte NewLine
 .text "what you're doing?!"
@@ -65,7 +65,7 @@ weismannboss
 .byte WaitForA
 .byte EndText
 
-bucksboss
+dialogueBucksBattleQuote
 .text "You have any idea who "
 .byte NewLine
 .text "yer dealin' with? I'm THE Bucks,"
@@ -74,12 +74,12 @@ bucksboss
 .byte WaitForA
 .byte EndText
 
-shivaboss
+dialogueShivaBattleQuote
 .text "Not too bright, are you...?"
 .byte WaitForA
 .byte EndText
 
-lithisboss
+dialogueLifisBattleQuote
 .text "H-Hey, wait a minute!"
 .byte NewLine
 .text "I ain't that bad, really!"
@@ -91,7 +91,7 @@ lithisboss
 .byte WaitForA
 .byte EndText
 
-lobosboss
+dialogueLobosBattleQuote
 .text "Wh-who do you think you are?!"
 .byte NewLine
 .text "You honestly believe"
@@ -100,14 +100,14 @@ lobosboss
 .byte WaitForA
 .byte EndText
 
-dalsinboss
+dialogueDalsinBattleQuote
 .text "I take no pleasure in this..."
 .byte NewLine
 .text "You lot shoulda stayed in yer cells!"
 .byte WaitForA
 .byte EndText
 
-galzusboss
+dialogueGalzusBattleQuote
 .text "Fate must really have it out"
 .byte NewLine
 .text "for you, makin' your path"
@@ -116,14 +116,14 @@ galzusboss
 .byte WaitForA
 .byte EndText
 
-eisenauboss
+dialogueEisenhauBattleQuote
 .text "You stubborn idiots"
 .byte NewLine
 .text "think you can defeat me?"
 .byte WaitForA
 .byte EndText
 
-raydrikboss
+dialogueRaydrikBattleQuote
 .text "I watched your grandfather die!"
 .byte NewLine
 .text "I saw your father's castle burn!"
@@ -133,7 +133,7 @@ raydrikboss
 .byte WaitForA
 .byte EndText
 
-rumaighboss
+dialogueLemayBattleQuotes
 .text "Sorry for your luck, but I need"
 .byte NewLine
 .text "the coin. I got no illusions—"
@@ -142,14 +142,14 @@ rumaighboss
 .byte WaitForA
 .byte EndText
 
-martyboss
+dialogueMartyBattleQuote
 .text "Somehow, these things"
 .byte NewLine
 .text "just keep happenin' to me..."
 .byte WaitForA
 .byte EndText
 
-gomezboss
+dialogueGomezBattleQuote
 .text "Dammit, don't you dare"
 .byte NewLine
 .text "underestimate the Great Gomez!"
@@ -158,14 +158,14 @@ gomezboss
 .byte WaitForA
 .byte EndText
 
-merlochboss
+dialogueMerlochBattleQuote
 .text "Y-You're no common bandit!"
 .byte NewLine
 .text "What's going on here?!"
 .byte WaitForA
 .byte EndText
 
-largoboss
+dialogueLargoBattleQuote
 .text "What's the meaning of this?!"
 .byte NewLine
 .text "Why do you trespass"
@@ -174,14 +174,14 @@ largoboss
 .byte WaitForA
 .byte EndText
 
-fredboss
+dialogueFredBattleQuote
 .text "You'd turn your blade on me"
 .byte NewLine
 .text "in this situation?! What idiocy!"
 .byte WaitForA
 .byte EndText
 
-oltophboss
+dialogueOltophBattleQuote
 .text "You'll go no further!"
 .byte NewLine
 .text "I... I'll be the one to make it"
@@ -190,19 +190,19 @@ oltophboss
 .byte WaitForA
 .byte EndText
 
-salemboss
+dialogueSalemBattleQuote
 .text "Begone from our forest, invaders!"
 .byte WaitForA
 .byte EndText
 
-colhoboss
+dialogueColhoBattleQuote
 .text "Aw, hell! We blundered"
 .byte NewLine
 .text "into a bunch of soldiers!"
 .byte WaitForA
 .byte EndText
 
-perneboss
+dialoguePerneBattleQuote
 .text "You idiots got any idea"
 .byte NewLine
 .text "who you're dealin' with?"
@@ -216,12 +216,12 @@ perneboss
 .byte WaitForA
 .byte EndText
 
-trudeboss
+dialogueTrudeBattleQuote
 .text "That's it, you're dead!"
 .byte WaitForA
 .byte EndText
 
-tinaboss
+dialogueTinaBattleQuote
 .text "Oh, Big Sis... If you're out there,"
 .byte NewLine
 .text "I could use your help"
@@ -230,31 +230,31 @@ tinaboss
 .byte WaitForA
 .byte EndText
 
-lisztboss
+dialogueLisztBattleQuote
 .text "D-Damn! I can't believe this!"
 .byte WaitForA
 .byte EndText
 
-paulusboss
+dialoguePaulusBattleQuote
 .text "So... This is how I'm to die..."
 .byte WaitForA
 .byte EndText
 
-baldachboss
+dialogueBaldachBattleQuote
 .text "Funny. You little rats think"
 .byte NewLine
 .text "you can actually beat me!"
 .byte WaitForA
 .byte EndText
 
-codhaboss
+dialogueCodhaBattleQuote
 .text "Heh, heh, heh..."
 .byte NewLine
 .text "You imbeciles!"
 .byte WaitForA
 .byte EndText
 
-seilboss
+dialogueSeilBattleQuote
 .text "Heheheh..."
 .byte NewLine
 .text "You wanna square off with me,"
@@ -263,7 +263,7 @@ seilboss
 .byte WaitForA
 .byte EndText
 
-brookboss
+dialogueBrookBattleQuote
 .text "Rebel scum!"
 .byte NewLine
 .text "My blade shall be the one"
@@ -272,7 +272,7 @@ brookboss
 .byte WaitForA
 .byte EndText
 
-iliosboss
+dialogueIliosBattleQuote
 .text "What, you're really going"
 .byte NewLine
 .text "to fight me?"
@@ -284,52 +284,52 @@ iliosboss
 .byte WaitForA
 .byte EndText
 
-nicolovboss
+dialogueNicolovBattleQuote
 .text "As if you could defeat me!"
 .byte NewLine
 .text "Tch... Have at you!"
 .byte WaitForA
 .byte EndText
 
-mooreboss
+dialogueMooreBattleQuote
 .text "......"
 .byte WaitForA
 .byte EndText
 
-mullerboss
+dialogueMullerBattleQuote
 .text "Now you'll see why the Gelbenritter"
 .byte NewLine
 .text "are so feared!"
 .byte WaitForA
 .byte EndText
 
-saiasboss
+dialogueSaiasBattleQuote
 .text "Lay down your weapons."
 .byte NewLine
 .text "You'll only get hurt."
 .byte WaitForA
 .byte EndText
 
-mishaboss
+dialogueMishaBattleQuote
 .text "Get out of my way!"
 .byte WaitForA
 .byte EndText
 
-shannamboss
+dialogueShannamBattleQuote
 .text "H-Hey, wait!"
 .byte NewLine
 .text "Let's talk about this..."
 .byte WaitForA
 .byte EndText
 
-sarahboss
+dialogueSaraBattleQuote
 .text "...What are you doing?"
 .byte NewLine
 .text "Do you...not like me?"
 .byte WaitForA
 .byte EndText
 
-reinkochboss
+dialogueReinkochBattleQuote
 .text "You trespass upon land"
 .byte NewLine
 .text "belonging to Loptous himself!"
@@ -338,7 +338,7 @@ reinkochboss
 .byte WaitForA
 .byte EndText
 
-palmanboss
+dialoguePalmanBattleQuote
 .text "You'll never reclaim"
 .byte NewLine
 .text "your damn castle!"
@@ -347,12 +347,12 @@ palmanboss
 .byte WaitForA
 .byte EndText
 
-xavierboss
+dialogueXavierBattleQuote
 .text "...Let's get this over with, shall we?"
 .byte WaitForA
 .byte EndText
 
-gustavboss
+dialogueGustavBattleQuote
 .text "Aaargh! You think I'll just"
 .byte NewLine
 .text "roll over for you?!"
@@ -361,61 +361,61 @@ gustavboss
 .byte WaitForA
 .byte EndText
 
-conomorboss
+dialogueConomorBattleQuote
 .text "Forgive me..."
 .byte NewLine
 .text "This is for Ulster!"
 .byte WaitForA
 .byte EndText
 
-amaldaboss
+dialogueAmaldaBattleQuote
 .text "Withdraw your troops!"
 .byte NewLine
 .text "Don't die for nothing!"
 .byte WaitForA
 .byte EndText
 
-bharatboss
+dialogueBharatBattleQuote
 .text "You nuisances will cost me"
 .byte NewLine
 .text "my rank!"
 .byte WaitForA
 .byte EndText
 
-seimetzboss
+dialogueSeimetzBattleQuote
 .text "Soldiers of Leonster!"
 .byte NewLine
 .text "Prepare yourselves!"
 .byte WaitForA
 .byte EndText
 
-frausboss
+dialogueFrausBattleQuote
 .text "On my honor as a soldier,"
 .byte NewLine
 .text "I'll defend this fort to the end!"
 .byte WaitForA
 .byte EndText
 
-zaunboss
+dialogueZaunBattleQuote
 .text "You can still walk away!"
 .byte NewLine
 .text "Just go home!"
 .byte WaitForA
 .byte EndText
 
-cohenboss
+dialogueCohenBattleQuote
 .text "You shall go no further!"
 .byte WaitForA
 .byte EndText
 
-reinhardtboss
+dialogueReinhardtBattleQuote
 .text "This must be fate..."
 .byte NewLine
 .text "Forgive me..."
 .byte WaitForA
 .byte EndText
 
-coulterboss
+dialogueCoulterBattleQuote
 .text "Heh, heh, heh..."
 .byte NewLine
 .text "You've only got yourself to blame!"
@@ -424,14 +424,14 @@ coulterboss
 .byte WaitForA
 .byte EndText
 
-alphandboss
+dialogueAlphandBattleQuote
 .text "You!"
 .byte NewLine
 .text "How did you make it this far?!"
 .byte WaitForA
 .byte EndText
 
-fadenboss
+dialogueFadenBattleQuote
 .text "Witness the fury"
 .byte NewLine
 .text "of the Knights of Munster,"
@@ -440,7 +440,7 @@ fadenboss
 .byte WaitForA
 .byte EndText
 
-veldboss
+dialogueVeldBattleQuote
 .text "Heh, heh, heh..."
 .byte NewLine
 .text "You dare to cross me?"
@@ -456,12 +456,12 @@ veldboss
 
 ; Unused
 
-ishtarboss
+dialogueIshtarBattleQuote
 .text "Behold the power of House Friege!"
 .byte WaitForA
 .byte EndText
 
-mannheimboss
+dialogueMannheimBattleQuote
 .text "No! We can't get stranded here!"
 .byte WaitForA
 .byte EndText

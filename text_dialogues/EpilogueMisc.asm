@@ -1,5 +1,5 @@
 * = $D60DA
-.logical lorom($D60DA, 1)
+.logical mapped($D60DA)
 .byte $00, $26
 .byte EndText
 .byte $09
@@ -8,7 +8,7 @@
 .here
 
 * = $D3B8C
-.logical lorom($D3B8C, 1)
+.logical mapped($D3B8C)
 .byte $00, $26
 .byte $03
 .byte $09
@@ -21,7 +21,7 @@
 .here
 
 * = $D3B97
-.logical lorom($D3B97, 1)
+.logical mapped($D3B97)
 .byte $00, $26
 .byte EndText
 .byte $09
@@ -29,17 +29,10 @@
 .byte $01
 .here
 
-* = $0A6D3F
-.logical lorom($0A6D3F, 1)
-
-.word <>killeddeathtext
-
-.here
-
 * = $475600
 .logical lorom($475600,1)
 
-captureddeathtext
+dialogueEpilogueCaptured
 .byte $09
 .word $1200
 .byte $04
@@ -57,7 +50,7 @@ captureddeathtext
 * = $475680
 .logical lorom($475680,1)
 
-killeddeathtext
+dialogueEpilogueKilled
 .byte $09
 .word $1200
 .byte $04

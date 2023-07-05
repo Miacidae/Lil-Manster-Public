@@ -1,193 +1,193 @@
-objectivech1
+dialogueChapterObjectiveChapter01
 	.text "Seize the manor's gate."
 .byte EndTextNoPortraitFade
 
 
-objectivech2
+dialogueChapterObjektiveChapter02
 	.text "Seize the manor's gate."
 .byte EndTextNoPortraitFade
 
 
-objectivech2x
+dialogueChapterObjektiveChapter02x
 	.text "Seize the pirate hideout's gate."
 .byte EndTextNoPortraitFade
 
 
-objectivech3
+dialogueChapterObjektiveChapter03
 	.text "Seize Kerberos' throne."
 .byte EndTextNoPortraitFade
 
 
-objectivech4
+dialogueChapterObjektivecChapter04
 	.text "Escape the dungeon."
 .byte EndTextNoPortraitFade
 
 
-objectivech4x
+dialogueChapterObjektiveChapter04x
 	.text "Escape the dungeon."
 .byte EndTextNoPortraitFade
 
 
-objectivech5
+dialogueChapterObjektiveChapter05
 	.text "Escape the castle."
 .byte EndTextNoPortraitFade
 
 
-objectivech6
+dialogueChapterObjektiveChapter06
 	.text "Escape the city."
 .byte EndTextNoPortraitFade
 
 
-objectivech7
+dialogueChapterObjektiveChapter07
 	.text "Escape into Castle Meath."
 .byte EndTextNoPortraitFade
 
 
-objectivech8
+dialogueChapterObjektiveChapter08
 	.text "Seize the manor's gate."
 .byte EndTextNoPortraitFade
 
 
-objectivech8x
+dialogueChapterObjektiveChapter08x
 	.text "Seize the manor's throne."
 .byte EndTextNoPortraitFade
 
 
-objectivech9
+dialogueChapterObjektiveChapter09
 	.text "Escape into the villa AND"
 .byte EndTextNoPortraitFade
 
-objectivech9_2
+dialogueChapterObjektiveChapter09Line2
 	.text "prevent foes from reaching it."
 .byte EndTextNoPortraitFade
 
 
-objectivech10
+dialogueChapterObjektiveChapter10
 	.text "Seize Fort Nowell's gate."
 .byte EndTextNoPortraitFade
 
 
-objectivech11
+dialogueChapterObjektiveChapter11
 	.text "Seize Fort Dundrum's throne."
 .byte EndTextNoPortraitFade
 
 
-objectivech11x
+dialogueChapterObjektiveChapter11x
 	.text "Seize Fort Dundrum's throne."
 .byte EndTextNoPortraitFade
 
 
-objectivech12
+dialogueChapterObjektiveChapter12
 	.text "Seize the manor's gate."
 .byte EndTextNoPortraitFade
 
 
-objectivech12x
+dialogueChapterObjektiveChapter12x
 	.text "Seize the manor's throne."
 .byte EndTextNoPortraitFade
 
 
-objectivech13
+dialogueChapterObjektiveChapter13
 	.text "Escape into Tahra AND"
 .byte EndTextNoPortraitFade
 
-objectivech13_2
+dialogueChapterObjektiveChapter13Line2
 	.text "prevent foes from reaching the city."
 .byte EndTextNoPortraitFade
 
 
-objectivech14
+dialogueChapterObjektiveChapter14
 	.text "Defend Castle Tahra's gate for 10 turns."
 .byte EndTextNoPortraitFade
 
 
-objectivech14x
+dialogueChapterObjektiveChapter14x
 	.text "Escape the valley."
 .byte EndTextNoPortraitFade
 
 
-objectivech15
+dialogueChapterObjektiveChapter15
 	.text "Leif arrives at either exit point OR"
 .byte EndTextNoPortraitFade
 
-objectivech15_2
+dialogueChapterObjektiveChapter15Line2
 	.text "Leif arrives at the church."
 .byte EndTextNoPortraitFade
 
 
-objectivech16A
+dialogueChapterObjektiveChapter16A
 	.text "Seize Fort Nordrhein's gate."
 .byte EndTextNoPortraitFade
 
 
-objectivech17A
+dialogueChapterObjektiveChapter17A
 	.text "Seize Castle Leonster's gate."
 .byte EndTextNoPortraitFade
 
 
-objectivech16B
+dialogueChapterObjektiveChapter16B
 	.text "Escape the forest."
 .byte EndTextNoPortraitFade
 
 
-objectivech17B
+dialogueChapterObjektiveChapter17B
 	.text "Seize Castle Leonster's gate."
 .byte EndTextNoPortraitFade
 
 
-objectivech18
+dialogueChapterObjektiveChapter18
 	.text "Seize Castle Leonster's throne."
 .byte EndTextNoPortraitFade
 
 
-objectivech19
+dialogueChapterObjektiveChapter19
 	.text "Escape into Castle Leonster."
 .byte EndTextNoPortraitFade
 
 
-objectivech20
+dialogueChapterObjektiveChapter20
 	.text "Defend Leonster's throne for 15 turns"
 .byte EndTextNoPortraitFade
 
-objectivech20_2
+dialogueChapterObjektiveChapter20Line2
 	.text "AND defeat Bharat."
 .byte EndTextNoPortraitFade
 
 
-objectivech21
+dialogueChapterObjektiveChapter21
 	.text "Seize Fort Danzig's gate."
 .byte EndTextNoPortraitFade
 
 
-objectivech21x
+dialogueChapterObjektiveChapter21x
 	.text "Escape the prison camp."
 .byte EndTextNoPortraitFade
 
 
-objectivech22
+dialogueChapterObjektiveChapter22
 	.text "Seize the fortress' gate."
 .byte EndTextNoPortraitFade
 
 
-objectivech23
+dialogueChapterObjektiveChapter23
 	.text "Seize Castle Munster's gate AND"
 .byte EndTextNoPortraitFade
 
-objectivech23_2
+dialogueChapterObjektiveChapter23Line2
 	.text "prevent the Magi from being wiped out."
 .byte EndTextNoPortraitFade
 
 
-objectivech24
+dialogueChapterObjektiveChapter24
 	.text "Seize Castle Munster's throne."
 .byte EndTextNoPortraitFade
 
 
-objectivech24x
+dialogueChapterObjektiveChapter24x
 	.text "Escape through the magic seal."
 .byte EndTextNoPortraitFade
 
 
-objectivech25
+dialogueChapterObjektiveChapterFinal
 	.text "Seize the temple's throne."
 .byte EndTextNoPortraitFade

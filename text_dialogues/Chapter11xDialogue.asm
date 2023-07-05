@@ -1,4 +1,4 @@
-ch11xoltophflees
+dialogueChapter11xOltophFlees
 
 .byte Right_slot
 .word LoadPortrait
@@ -44,7 +44,7 @@ ch11xoltophflees
 .byte EndText
 
 
-ch11xfredarrives
+dialogueChapter11xFredArrives
 
 .byte Right_slot
 .word LoadPortrait
@@ -79,7 +79,7 @@ ch11xfredarrives
 .byte EndText
 
 
-ch11xleifolwen
+dialogueChapter11xLeifOlwen
 
 .byte Right_slot
 .word LoadPortrait
@@ -173,7 +173,7 @@ ch11xleifolwen
 .byte EndText
 
 
-ch11xolwenfred
+dialogueChapter11xOlwenFred
 
 .byte Right_slot
 .word LoadPortrait
@@ -310,7 +310,7 @@ ch11xolwenfred
 .byte EndText
 
 
-ch11xopening1
+dialogueChapter11xOpening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -452,7 +452,7 @@ ch11xopening1
 .byte EndText
 
 
-ch11xopening2
+dialogueChapter11xOpening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -582,7 +582,7 @@ ch11xopening2
 .byte EndText
 
 
-ch11xclosing1
+dialogueChapter11xClosing1
 
 .byte Left_slot
 .word LoadPortrait
@@ -719,7 +719,7 @@ ch11xclosing1
 .byte EndText
 
 
-ch11xclosing2
+dialogueChapter11xClosing2
 
 .byte Right_slot
 .byte ScrollText

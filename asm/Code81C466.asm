@@ -45,9 +45,9 @@ rlUnknown81C466 ; 81/C466
 	jsl $83C108
 
 	lda wR2
-	sta wMapScrollWidthPixels,b
+	sta wMapScrollXPixels,b
 	lda wR3
-	sta wMapScrollHeightPixels,b
+	sta wMapScrollYPixels,b
 	plb
 	plp
 	rtl

@@ -5,10 +5,19 @@ rlRenderObjectiveMarkers ; 81/C318
 	.autsiz
 	.databank ?
 
-	php
-	phb
-	sep #$20
-	lda #`wObjectiveMarkerColorValue
+	; Zanes QoL
+
+  jsl rlNewRenderObjectiveMarkersReplacement
+  rtl
+
+  .byte `wObjectiveMarkerColorValue
+
+
+
+;	php
+;	phb
+;	sep #$20
+;	lda #`wObjectiveMarkerColorValue
 	pha
 	rep #$20
 	plb
@@ -45,12 +54,12 @@ rlRenderObjectiveMarkers ; 81/C318
 	bmi _End
 
 	sec
-	sbc wMapScrollWidthPixels,b
+	sbc wMapScrollXPixels,b
 	sta wR0
 
 	lda aObjectiveMarkers+structObjectiveMarkerEntryRAM.Y,x
 	sec
-	sbc wMapScrollHeightPixels,b
+	sbc wMapScrollYPixels,b
 	sta wR1
 
 	lda aObjectiveMarkers+structObjectiveMarkerEntryRAM.Sprite,x
@@ -73,7 +82,7 @@ rlRenderObjectiveMarkers ; 81/C318
 	plp
 	rtl
 
-	_Sprite .dstruct structSpriteArray, [[[0, 0], $42, True, $000, 2, 0, False, False]] ; 81/C37B
+	_Sprite .dstruct structSpriteArray, [[[0, 0], $61, True, $000, 2, 0, False, False]] ; 81/C37B
 
 	_FrameTable ; 81/C382
 	.for n in range(2, 8, 2)
@@ -188,11 +197,18 @@ rsAppendObjectiveMarkerArray ; 81/C40D
 	.autsiz
 	.databank `wObjectiveMarkerColorIndex
 
-	ldx wR17 ; Loop counter
+	; Zanes QoL
+  jsl rlAppendObjectiveMarkerArrayReplacement
+  rts
 
-	; Fetch tile from coordinates
+  .byte $83
 
-	jsl rlGetMapTileIndexByCoords
+
+;	ldx wR17 ; Loop counter
+;
+;	; Fetch tile from coordinates
+;
+;	jsl rlGetMapTileIndexByCoords
 
 	sta aObjectiveMarkers+structObjectiveMarkerEntryRAM.Tile,x
 

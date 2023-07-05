@@ -1,10 +1,10 @@
 
 ; Temporary Flags
 
-	FlagAlwaysZero	= $00
-	FlagAlliedDeath	= $01 ; Sets sad music
-	FlagBossDeath	= $02
-	FlagPlayerDeath	= $03
+;	FlagAlwaysZero	= $00
+;	FlagAlliedDeath	= $01 ; Sets sad music
+;	FlagBossDeath	= $02
+;	FlagPlayerDeath	= $03
 ;					= $04 ; Unused in vanilla
 ;					= $05 ; General-purpose flags
 ;					= $06 ; $05 - $13 used in vanilla
@@ -98,6 +98,8 @@
 ;					= $5E
 ;					= $5F
 ;					= $60
+
+
 
 ; Permanent Flags
 

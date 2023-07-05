@@ -61,7 +61,7 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
         .autsiz
         .databank `aOptions
 
-        lda aOptions.wAnimationOption ; wBurstWindow
+        lda aOptions.wAnimation ; wBurstWindow
         bit #$0200
         bne _Disabled
 
@@ -88,11 +88,11 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
         ; after holding on this unit
         ; for 10 frames.
 
-        cmp wBurstWindowTargetDeploymentNumber
+        cmp wBurstWindowTarget
         bne _DoNotDraw
 
-          inc wBurstWindowDelayCounter
-          lda wBurstWindowDelayCounter
+          inc wBurstWindowCounter
+          lda wBurstWindowCounter
           cmp #10
           beq _DrawWindow
 
@@ -102,16 +102,16 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
 
         ; Reset counter, target, coordinates.
 
-        stz wBurstWindowDelayCounter
+        stz wBurstWindowCounter
 
         lda wR17
-        sta wBurstWindowTargetDeploymentNumber
+        sta wBurstWindowTarget
 
         lda wCursorXCoord,b
-        sta wBurstWindowTargetXCoordinate
+        sta wBurstWindowXCoordinate
 
         lda wCursorYCoord,b
-        sta wBurstWindowTargetYCoordinate
+        sta wBurstWindowYCoordinate
 
         rtl
 
@@ -121,11 +121,11 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
         ; window needs to be cleared.
 
         lda wCursorXCoord,b
-        cmp wBurstWindowTargetXCoordinate
+        cmp wBurstWindowXCoordinate
         bne _ClearWindow
 
         lda wCursorYCoord,b
-        cmp wBurstWindowTargetYCoordinate
+        cmp wBurstWindowYCoordinate
         bne _ClearWindow
 
           ; While cursor is held on a
@@ -138,7 +138,7 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
           and #$003F
           bne +
 
-            lda wBurstWindowTargetDeploymentNumber
+            lda wBurstWindowTarget
             sta wR0
 
             lda #<>aBurstWindowCharacterBuffer
@@ -173,7 +173,7 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
         sep #$20
 
         lda #T_Setting(true, true, true, false, true)
-        sta bBuf_TM
+        sta bBufferTM
 
         rep #$20
 
@@ -182,7 +182,7 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
 
           jsr rsClearBurstWindowTilemap
 
-          stz wBurstWindowTargetDeploymentNumber
+          stz wBurstWindowTarget
           stz wBurstWindowDrawn
 
           ; Overwriting this jsl with a hook
@@ -198,7 +198,7 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
         _DrawWindow
         dec wBurstWindowDrawn
 
-        lda wBurstWindowTargetDeploymentNumber
+        lda wBurstWindowTarget
         sta wR0
 
         lda #<>aBurstWindowCharacterBuffer
@@ -221,10 +221,10 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
         jsl rlEnableBG3Sync
 
         lda wCursorXCoord,b
-        sta wBurstWindowTargetXCoordinate
+        sta wBurstWindowXCoordinate
 
         lda wCursorYCoord,b
-        sta wBurstWindowTargetYCoordinate
+        sta wBurstWindowYCoordinate
 
         rtl
 
@@ -260,7 +260,7 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
       rsGetBurstWindowStyle ; 84/A18B
 
         .autsiz
-        .databank `aOptions.wAnimationOption
+        .databank `aOptions.wAnimation
 
         ; There are 6 styles of burst window:
         ; Above the unit
@@ -412,7 +412,7 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
         sta wR1
 
         lda #TilemapEntry($000, 1, 1, false, false)
-        sta wUnknown000DE7,b
+        sta aCurrentTilemapInfo.wBaseTile,b
 
         jsl rlDrawTilemapPackedRect
         rts
@@ -479,9 +479,9 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
         ; and kill it if found.
 
         lda #(`procEquippedItemPreview)<<8
-        sta lR43+1
+        sta lR44+1
         lda #<>procEquippedItemPreview
-        sta lR43
+        sta lR44
 
         phx
 
@@ -510,7 +510,7 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
 
         jsl rlEnableBG1Sync
 
-        lda aOptions.wAnimationOption ; wBurstWindow
+        lda aOptions.wAnimation ; wBurstWindow
         and #$0F00 ; check if we are standing on detailed, draw items
         beq + 
 
@@ -614,12 +614,12 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
 
         ; Item icon index in A.
 
-        sta wProcInput0,b
+        sta aProcSystem.wInput0,b
 
         lda #(`procEquippedItemPreview)<<8
-        sta lR43+1
+        sta lR44+1
         lda #<>procEquippedItemPreview
-        sta lR43
+        sta lR44
 
         jsl rlProcEngineCreateProc
 
@@ -641,8 +641,8 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
 
         ; Icon index
 
-        lda wProcInput0,b
-        sta aProcBody0,b,x
+        lda aProcSystem.wInput0,b
+        sta aProcSystem.aBody0,b,x
 
         ; Turn tile coordinates into
         ; pixel coordinates.
@@ -653,13 +653,13 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
         asl a
         asl a
         asl a
-        sta aProcBody1,b,x
+        sta aProcSystem.aBody1,b,x
 
         lda wBurstWindowNameYTile
         asl a
         asl a
         asl a
-        sta aProcBody2,b,x
+        sta aProcSystem.aBody2,b,x
 
         rtl
 
@@ -675,12 +675,12 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
         ; are done.
 
         lda bDMAArrayFlag,b
-        ora bDecompListFlag,b
+        ora bDecompressionArrayFlag,b
         bne +
 
           ; DMA icon
 
-          lda aProcBody0,b,x
+          lda aProcSystem.aBody0,b,x
           sta wR0
 
           lda #($2800 >> 1)
@@ -688,15 +688,15 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
 
           jsl rlDMAEquippedItemIcon
 
-          ldx wProcIndex,b
+          ldx aProcSystem.wOffset,b
 
           lda #<>rlProcEquippedItemPreviewOnCycle2
-          sta aProcHeaderOnCycle,b,x
+          sta aProcSystem.aHeaderOnCycle,b,x
 
         +
 
         lda #1
-        sta aProcHeaderSleepTimer,b,x
+        sta aProcSystem.aHeaderSleepTimer,b,x
 
         rtl
 
@@ -737,10 +737,10 @@ GUARD_ZQOL_EQUIPPED_ITEM_PREVIEW :?= false
 
         .databank `_Sprite
 
-        lda aProcBody1,b,x
+        lda aProcSystem.aBody1,b,x
         sta wR0
 
-        lda aProcBody2,b,x
+        lda aProcSystem.aBody2,b,x
         sta wR1
 
         stz wR4

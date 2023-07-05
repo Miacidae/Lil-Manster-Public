@@ -1,78 +1,102 @@
 
-eventDemo2Events ; 9A/EAD2
+.weak
+  WARNINGS :?= "None"
+.endweak
 
-	FADE_OUT $02
-	YIELD
+GUARD_FE5_CHAPTERDEMO2 :?= false
+.if (!GUARD_FE5_CHAPTERDEMO2)
+  GUARD_FE5_CHAPTERDEMO2 := true
 
-	CALL_ASM_SKIPPABLE rlUnknown8C9E22, $0000
-	CALL_ASM_SKIPPABLE $83FBDC, $0000
-	CALL_ASM_SKIPPABLE $9A9D79, $0000
+  ; Definitions
 
-	STORE_WORD wCurrentChapter, Chapter1
+    .weak
 
-	CALL_ASM_SKIPPABLE $849485, $0000
-	CALL_ASM_SKIPPABLE $9A98CF, $0000
+    .endweak
 
-	HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $01
+  ; Freespace inclusions
 
-	STORE_WORD bBuf_INIDISP, $0000
-	STORE_WORD INIDISP, $0000
+    .section ChapterDemo2EventsSection
 
-	CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
+			eventDemo2Events ; 9A/EAD2
+			
+				FADE_OUT 2
+				YIELD
+			
+				CALL_ASM_SKIPPABLE rlUnknown8C9E22
+				CALL_ASM_SKIPPABLE $83FBDC
+				CALL_ASM_SKIPPABLE $9A9D79
+			
+				STORE_WORD wCurrentChapter, Chapter01
+			
+				CALL_ASM_SKIPPABLE rlASMCSwapChapterMaps
+				CALL_ASM_SKIPPABLE $9A98CF
+			
+				HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $01
+			
+				STORE_WORD bBufferINIDISP, $0000
+				STORE_WORD INIDISP, $0000
+			
+				CALL_ASM_SKIPPABLE rlEventEngineCancelFading
 
-	STORE_LONG lEventEngineUnitGroupPointer, eventDemo2Data._Chapter1Group
-	CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
+				macroASMCLoadUnitGroup eventDemo2Data._Chapter01Group
+				YIELD
+			
+				SCROLL_CAMERA_COORDS [12, 8], 4
+				YIELD
+			
+				CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog
+			
+				PAUSE_SKIPPABLE 5
+				YIELD
+			
+				CALL_ASM_SKIPPABLE rlUnknown8C9E22
+			
+				FADE_IN 4
 
-	YIELD_UNK
-	YIELD
+				MOVE_CHAR Raydrik, [12, 3], 1
 
-	SCROLL_CAMERA_SPEED [12, 8], 4
-	YIELD
+				MOVE_CHAR Weissmann, [13, 2], 1
+			
+				WAIT_MOVE
+				YIELD
+			
+				DIALOGUE dialogueDemoRaydrik
+				YIELD
+			
+				PAUSE_SKIPPABLE 40
+				YIELD
+			
+				FADE_OUT 4
+				YIELD
+			
+				JUMP eventDemo1Events._End
 
-	CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
+    .endsection ChapterDemo2EventsSection
 
-	PAUSE_SKIPPABLE 5
-	YIELD
+    .section ChapterDemo2DataSection
 
-	CALL_ASM_SKIPPABLE rlUnknown8C9E22, $0000
+			eventDemo2Data ; 9A/EB5F
+			
+				_UnusedCoordinates1 ; 9A/EB5F
+					.byte 20, 17
+			
+				_Chapter01Group ; 9A/EB61
+					UNIT SoldierEnemy, Enemy, [6, 1], [6, 1], Leif, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT SoldierEnemy, Enemy, [7, 1], [7, 1], Leif, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT SoldierEnemy, Enemy, [8, 1], [8, 1], Leif, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT SoldierEnemy, Enemy, [9, 1], [9, 1], Leif, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT SoldierEnemy, Enemy, [10, 1], [10, 1], Leif, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT SoldierEnemy, Enemy, [14, 1], [14, 1], Leif, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT SoldierEnemy, Enemy, [15, 1], [15, 1], Leif, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT SoldierEnemy, Enemy, [16, 1], [16, 1], Leif, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT SoldierEnemy, Enemy, [17, 1], [17, 1], Leif, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT SoldierEnemy, Enemy, [11, 1], [11, 1], Leif, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT SoldierEnemy, Enemy, [12, 1], [12, 1], Leif, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT SoldierEnemy, Enemy, [13, 1], [13, 1], Leif, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT Raydrik, Enemy, [12, 0], [12, 0], Leif, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT Weissmann, Enemy, [13, 0], [13, 0], Leif, [IronLance], 5, False, [$00, $00, $00, $00]
+				UNIT
 
-	FADE_IN $04
+    .endsection ChapterDemo2DataSection
 
-	MOVE_UNIT Raydrik, [0, 0], [12, 3], 1, None
-	YIELD_UNK
-
-	MOVE_UNIT Weissmann, [0, 0], [13, 2], 1, None
-	YIELD_UNK
-
-	WAIT_MOVE
-	YIELD
-
-	DIALOGUE cinraydrik
-	YIELD
-
-	PAUSE_SKIPPABLE 40
-	YIELD
-
-	FADE_OUT $04
-	YIELD
-
-	JUMP eventDemo1Events._End
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.endif ; GUARD_FE5_CHAPTERDEMO2

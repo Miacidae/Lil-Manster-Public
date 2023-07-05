@@ -1,6 +1,5 @@
 
 ; Chapter IDs
 
-; See "ChapterEventPointers.asm"
-
-	ChapterWorldMap = ChapterUnknown+1
+  ChapterWorldMap = $24
+  DummyPrepGroups :?= address($8CD999)

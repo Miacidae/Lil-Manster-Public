@@ -18,14 +18,14 @@ rsInitPPURegs ; 80/8930
 	sep #$20
 	lda #NMITIMEN_Setting(True, False, False, False)
 	sta NMITIMEN,b
-	sta bBuf_NMITIMEN
+	sta bBufferNMITIMEN
 
 	stz WRIO,b
 	stz WRMPYA,b
 	stz WRMPYB,b
-	stz WRDIV,b
-	stz WRDIV+1,b
-	stz WRDIV+2,b
+	stz WRDIVA,b
+	stz WRDIVA+1,b
+	stz WRDIVA+2,b
 	stz HTIME,b
 	stz HTIME+1,b
 	stz VTIME,b
@@ -39,25 +39,25 @@ rsInitPPURegs ; 80/8930
 
 	lda #MEMSEL_Setting(True)
 	sta MEMSEL,b
-	sta bBuf_MEMSEL
+	sta bBufferMEMSEL
 
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 
 	stz OBSEL,b
-	stz OAMADDL,b
-	stz wBuf_OAMADD
+	stz OAMADD,b
+	stz wBufferOAMADD
 
-	lda #OAMADDH_Setting(True)
-	sta OAMADDH,b
-	sta wBuf_OAMADD+1
+	lda #$80										; OAMADDH_Setting(True)
+	sta OAMADD+1,b
+	sta wBufferOAMADD+1
 
 	stz OAMDATA,b
 	stz OAMDATA,b
 	stz BGMODE,b
 	stz MOSAIC,b
-	stz bBuf_MOSAIC
+	stz bBufferMOSAIC
 	stz BG1SC,b
 	stz BG2SC,b
 	stz BG3SC,b
@@ -106,13 +106,13 @@ rsInitPPURegs ; 80/8930
 
 	lda #COLDATA_Setting(0, False, False, True)
 	sta COLDATA,b
-	sta bBuf_COLDATA_1
+	sta bBufferCOLDATA_1
 	lda #COLDATA_Setting(0, False, True, False)
 	sta COLDATA,b
-	sta bBuf_COLDATA_2
+	sta bBufferCOLDATA_2
 	lda #COLDATA_Setting(0, True, False, False)
 	sta COLDATA,b
-	sta bBuf_COLDATA_3
+	sta bBufferCOLDATA_3
 
 	stz SETINI,b
 	plp
@@ -161,7 +161,7 @@ riResetE ; 80/8A36
 	rep #$30
 	tsx
 	txy
-	ldx #<>StackFirstFree
+	ldx #<>aStackSpace.bFirstFree
 	txs
 
 	; Set access times, force blank
@@ -303,8 +303,8 @@ riResetE ; 80/8A36
 	lda #$0000
 	tcd
 	jsl $8AB000 ; irregularity check
-	sta aEngineNameUnknown,b
-	sta aEngineNameUnknown+2,b
+	sta aEngineUnknown,b
+	sta aEngineUnknown+2,b
 	lda #"EL"
 	sta aEngineName,b
 	lda #"M0"
@@ -314,7 +314,7 @@ riResetE ; 80/8A36
 	pea #$7E00
 	plb
 	plb
-	ldx #<>StackFirstFree-1
+	ldx #<>aStackSpace.bFirstFree-1
 
 	_ClearRAMStartLoop
 	stz $0000,b,x
@@ -358,27 +358,27 @@ riResetE ; 80/8A36
 	.databank `*
 
 	rep #$30
-	lda #((VMDATA - PPU_REG_BASE) << 8) | DMAPx_Setting(DMAPx_TransferCPUToIO, DMAPx_Mode1, DMAPx_ABusFixed1, DMAPx_Direct)
-	sta DMAP0,b
+	lda #((VMDATA - PPU_REG_BASE) << 8) | DMAP_DMA_Setting(DMAP_CPUToIO, DMAP_Mode1, DMAP_Fixed1)
+	sta DMA_IO[0].DMAP,b
 	lda #(`_808B72+1)<<8
-	sta A1T0+1,b
+	sta DMA_IO[0].A1+1,b
 	lda #<>_808B72+1
-	sta A1T0,b
+	sta DMA_IO[0].A1,b
 
 	_808B72
 	lda #$0000
-	sta DAS0,b
+	sta DMA_IO[0].DAS,b
 	stz VMADD,b
 	sep #$20
-	lda #MDMAEN_Setting(True, False, False, False, False, False, False, False)
+	lda #1        ; MDMAEN_Setting(True, False, False, False, False, False, False, False)
 	sta MDMAEN,b
 	rep #$20
 	jsr rsInitPPURegs
 	jsl rlSoundSystemSetup
 	lda #40
-	sta wJoyLongTime
+	sta wJoyRepeatDelay
 	lda #10
-	sta wJoyShortTime
+	sta wJoyRepeatInterval
 	lda #<>rsUnknown80A605
 	sta wVBlankPointer
 	lda #<>rsUnknown8082D9
@@ -393,7 +393,7 @@ rsResetAlreadyInitialized ; 80/8BA7
 	.databank ?
 
 	rep #$30
-	ldx #<>StackFirstFree
+	ldx #<>aStackSpace.bFirstFree
 	txs
 	sep #$20
 

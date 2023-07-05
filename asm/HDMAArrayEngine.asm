@@ -28,10 +28,10 @@ rlClearHDMAArray ; 82/A39C
 
 	.databank `*
 
-	ldx #size(aHDMAArrayTypeOffset)-2
+	ldx #size(aHDMASystem.aTypeOffset)-2
 
 	-
-	stz aHDMAArrayTypeOffset,b,x
+	stz aHDMASystem.aTypeOffset,b,x
 	dec x
 	dec x
 	bpl -
@@ -55,11 +55,11 @@ rlResetHDMAArrayEngine ; 82/A3AD
 
 	.databank `*
 
-	ldx #size(aHDMAArraySpace)
+	ldx #size(aHDMASystem)-2
 	lda #$0000
 
 	-
-	sta aHDMAArraySpace,b,x
+	sta aHDMASystem,b,x
 	dec x
 	dec x
 	bpl -
@@ -74,14 +74,14 @@ rlResetHDMAArrayEngine ; 82/A3AD
 
 	-
 	lda #$00
-	sta DMAP0,b,x
-	sta DAS0+2,b,x
-	sta A1T0,b,x
-	sta A1T0+1,b,x
-	sta A1T0+2,b,x
+	sta DMA_IO[0].DMAP,b,x
+	sta DMA_IO[0].DAS+2,b,x
+	sta DMA_IO[0].A1,b,x
+	sta DMA_IO[0].A1+1,b,x
+	sta DMA_IO[0].A1+2,b,x
 
 	lda #BG4HOFS - PPU_REG_BASE
-	sta BBAD0,b,x
+	sta DMA_IO[0].BBAD,b,x
 
 	txa
 	sec
@@ -106,7 +106,7 @@ rlHDMAArrayEngineCreateEntry ; 82/A3ED
 	php
 	phb
 	sep #$20
-	lda lR43+2
+	lda lR44+2
 	pha
 	rep #$20
 	plb
@@ -117,22 +117,22 @@ rlHDMAArrayEngineCreateEntry ; 82/A3ED
 	phy
 
 	lda #$0000
-	sta wR40
+	sta wR41
 
-	ldy lR43
+	ldy lR44
 	ldx #$0000
 
 	-
-	lda aHDMAArrayTypeOffset,b,x
+	lda aHDMASystem.aTypeOffset,b,x
 	beq _AddEntry
 
-	lda wR40
+	lda wR41
 	clc
 	adc #$0010
-	sta wR40
+	sta wR41
 	inc x
 	inc x
-	cpx #size(aHDMAArrayTypeOffset)
+	cpx #size(aHDMASystem.aTypeOffset)
 	blt -
 
 	ply
@@ -144,39 +144,39 @@ rlHDMAArrayEngineCreateEntry ; 82/A3ED
 
 	_AddEntry
 	tya
-	sta aHDMAArrayTypeOffset,b,x
-	lda lR43+1
+	sta aHDMASystem.aTypeOffset,b,x
+	lda lR44+1
 	and #$FF00
-	sta lHDMAArrayCodePointer+1,b
+	sta aHDMASystem.lPointer+1,b
 	xba
-	sta aHDMAArrayTypeBank,b,x
+	sta aHDMASystem.aTypeBank,b,x
 
 	lda #$0001
-	sta aHDMAArraySleepTimer,b,x
+	sta aHDMASystem.aSleepTimer,b,x
 
 	lda #$0000
-	sta aHDMAArrayBitfield,b,x
-	sta aHDMAArrayUnknownTimer,b,x
+	sta aHDMASystem.aBitfield,b,x
+	sta aHDMASystem.aTimer,b,x
 
-	lda structHDMAArrayEntryInfo.Init,b,y
-	sta lHDMAArrayCodePointer,b
+	lda structHDMADirectEntryInfo.Init,b,y
+	sta aHDMASystem.lPointer,b
 
-	lda structHDMAArrayEntryInfo.OnCycle,b,y
-	sta aHDMAArrayOnCycle,b,x
+	lda structHDMADirectEntryInfo.OnCycle,b,y
+	sta aHDMASystem.aOnCycle,b,x
 
-	lda structHDMAArrayEntryInfo.Code,b,y
-	sta aHDMAArrayCodeOffset,b,x
+	lda structHDMADirectEntryInfo.Code,b,y
+	sta aHDMASystem.aCodeOffset,b,x
 
-	lda structHDMAArrayEntryInfo.TableOffset,b,y
-	sta aHDMAArrayTableOffset,b,x
+	lda structHDMADirectEntryInfo.TableOffset,b,y
+	sta aHDMASystem.aOffset,b,x
 
-	lda structHDMAArrayEntryInfo.TableBankAndBBADx,b,y
-	sta aHDMAArrayTableBankAndBBADx,b,x
+	lda structHDMADirectEntryInfo.TableBankAndBBADx,b,y
+	sta aHDMASystem.aBankAndBBADx[0],b,x
 
-	lda structHDMAArrayEntryInfo.DMAPx,b,y
-	sta aHDMAArrayDMAPxAndHDMABank,b,x
+	lda structHDMADirectEntryInfo.DMAPx,b,y
+	sta aHDMASystem.aDMAPxAndIndirectBank[0],b,x
 
-	stx wHDMAArrayIndex,b
+	stx aHDMASystem.wOffset,b
 	jsl +
 
 	ply
@@ -187,7 +187,7 @@ rlHDMAArrayEngineCreateEntry ; 82/A3ED
 	rtl
 
 	+
-	jmp [lHDMAArrayCodePointer]
+	jmp [aHDMASystem.lPointer]
 
 rlHDMAArrayEngineCreateEntryByIndex ; 82/A470
 
@@ -200,7 +200,7 @@ rlHDMAArrayEngineCreateEntryByIndex ; 82/A470
 	phb
 
 	sep #$20
-	lda lR43+2
+	lda lR44+2
 	pha
 	rep #$20
 	plb
@@ -209,15 +209,15 @@ rlHDMAArrayEngineCreateEntryByIndex ; 82/A470
 
 	phx
 	phy
-	ldy lR43
-	lda wR39
+	ldy lR44
+	lda wR40
 	asl a
 	tax
 	asl a
 	asl a
 	asl a
-	sta wR40
-	lda aHDMAArrayTypeOffset,b,x
+	sta wR41
+	lda aHDMASystem.aTypeOffset,b,x
 	bne +
 
 	jmp rlHDMAArrayEngineCreateEntry._AddEntry
@@ -260,28 +260,28 @@ rlHDMAArrayEngineMainLoop ; 82/A49E
 	.databank `*
 
 	sep #$20
-	stz bHDMAArrayPendingChannels,b
+	stz aHDMASystem.bPendingChannels,b
 	rep #$20
 	ldx #$0000
 
 	-
-	stx wHDMAArrayIndex,b
-	lda aHDMAArrayTypeOffset,b,x
+	stx aHDMASystem.wOffset,b
+	lda aHDMASystem.aTypeOffset,b,x
 	beq +
 
 	jsr rsHDMAArrayEngineRunOnCycleAndCode
 
 	+
-	ldx wHDMAArrayIndex,b
+	ldx aHDMASystem.wOffset,b
 	inc x
 	inc x
-	cpx #size(aHDMAArrayTypeOffset)
+	cpx #size(aHDMASystem.aTypeOffset)
 	blt -
 
 	sep #$20
-	lda bHDMAArrayPendingChannels,b
+	lda aHDMASystem.bPendingChannels,b
 	sta bHDMAPendingChannels,b
-	stz bHDMAArrayPendingChannels,b
+	stz aHDMASystem.bPendingChannels,b
 	rep #$20
 	plb
 	plp
@@ -295,14 +295,14 @@ rsHDMAArrayEngineRunOnCycleAndCode ; 82/A4D1
 	.databank ?
 
 	lda aHDMAChannelTable,x
-	ora bHDMAArrayPendingChannels,b
-	sta bHDMAArrayPendingChannels,b
-	lda aHDMAArrayBitfield,b,x
+	ora aHDMASystem.bPendingChannels,b
+	sta aHDMASystem.bPendingChannels,b
+	lda aHDMASystem.aBitfield,b,x
 	bit #$1000
 	bne _End
 
 	sep #$20
-	lda aHDMAArrayTypeBank,b,x
+	lda aHDMASystem.aTypeBank,b,x
 	pha
 	rep #$20
 	plb
@@ -310,30 +310,30 @@ rsHDMAArrayEngineRunOnCycleAndCode ; 82/A4D1
 	.databank ?
 
 	jsl rlHDMAArrayEngineRunOnCycle
-	ldx wHDMAArrayIndex,b
-	dec aHDMAArraySleepTimer,b,x
+	ldx aHDMASystem.wOffset,b
+	dec aHDMASystem.aSleepTimer,b,x
 	bne _End
 
-	ldy aHDMAArrayCodeOffset,b,x
+	ldy aHDMASystem.aCodeOffset,b,x
 
 	_Loop
 	lda $0000,b,y
 	bpl +
 
-	sta lHDMAArrayCodePointer,b
+	sta aHDMASystem.lPointer,b
 	inc y
 	inc y
 	pea <>_Loop-1
-	jmp (lHDMAArrayCodePointer)
+	jmp (aHDMASystem.lPointer)
 
 	+
-	sta aHDMAArraySleepTimer,b,x
+	sta aHDMASystem.aSleepTimer,b,x
 	lda $0002,b,y
-	sta aHDMAArrayTableOffset,b,x
+	sta aHDMASystem.aOffset,b,x
 	tya
 	clc
 	adc #$0004
-	sta aHDMAArrayCodeOffset,b,x
+	sta aHDMASystem.aCodeOffset,b,x
 
 	_End
 	rts
@@ -345,12 +345,12 @@ rlHDMAArrayEngineRunOnCycle ; 82/A51D
 	.autsiz
 	.databank ?
 
-	lda aHDMAArrayTypeBank,b,x
+	lda aHDMASystem.aTypeBank,b,x
 	xba
-	sta lHDMAArrayCodePointer+1,b
-	lda aHDMAArrayOnCycle,b,x
-	sta lHDMAArrayCodePointer,b
-	jmp [lHDMAArrayCodePointer]
+	sta aHDMASystem.lPointer+1,b
+	lda aHDMASystem.aOnCycle,b,x
+	sta aHDMASystem.lPointer,b
+	jmp [aHDMASystem.lPointer]
 
 aHDMAChannelTable ; 82/A52D
 
@@ -380,27 +380,27 @@ rlHDMAArrayEngineProcessHDMAArray ; 82/A53E
 	lda wR0
 	pha
 	sep #$30
-	lda bBuf_HDMAEN
+	lda bBufferHDMAEN
 	sta wR0
-	ldx #size(aHDMAArrayTypeOffset)-2
+	ldx #size(aHDMASystem.aTypeOffset)-2
 	ldy #7 * $10
 
 	-
 	asl wR0
 	bcc +
 
-	lda aHDMAArrayTableOffset,b,x
-	sta A1T0,b,y
-	lda aHDMAArrayTableOffset+1,b,x
-	sta A1T0+1,b,y
-	lda aHDMAArrayTableBank,b,x
-	sta A1T0+2,b,y
-	lda aHDMAArrayBBADxSetting,b,x
-	sta BBAD0,b,y
-	lda aHDMAArrayDMAPxSetting,b,x
-	sta DMAP0,b,y
-	lda aHDMAArrayHDMABank,b,x
-	sta DAS0+2,b,y
+	lda aHDMASystem.aOffset,b,x
+	sta DMA_IO[0].A1,b,y
+	lda aHDMASystem.aOffset+1,b,x
+	sta DMA_IO[0].A1+1,b,y
+	lda aHDMASystem.aBankAndBBADx[0].bBank,b,x
+	sta DMA_IO[0].A1+2,b,y
+	lda aHDMASystem.aBankAndBBADx[0].bBBADx,b,x
+	sta DMA_IO[0].BBAD,b,y
+	lda aHDMASystem.aDMAPxAndIndirectBank[0].bDMAPx,b,x
+	sta DMA_IO[0].DMAP,b,y
+	lda aHDMASystem.aDMAPxAndIndirectBank[0].bIndirectBank,b,x
+	sta DMA_IO[0].DAS+2,b,y
 
 	+
 	tya
@@ -423,7 +423,7 @@ rlHDMAArrayEngineFreeEntryByOffset ; 82/A582
 	.autsiz
 	.databank ?
 
-	stz aHDMAArrayTypeOffset,b,x
+	stz aHDMASystem.aTypeOffset,b,x
 	rtl
 
 rlHDMAArrayEngineFindEntry ; 82/A586
@@ -434,18 +434,18 @@ rlHDMAArrayEngineFindEntry ; 82/A586
 	.databank ?
 
 	php
-	ldx #size(aHDMAArrayTypeOffset)-2
+	ldx #size(aHDMASystem.aTypeOffset)-2
 
 	-
 	rep #$20
 
-	lda aHDMAArrayTypeOffset,b,x
-	cmp lR43
+	lda aHDMASystem.aTypeOffset,b,x
+	cmp lR44
 	bne +
 
 	sep #$20
-	lda aHDMAArrayTypeBank,b,x
-	cmp lR43+2
+	lda aHDMASystem.aTypeBank,b,x
+	cmp lR44+2
 	rep #$20
 	beq ++
 

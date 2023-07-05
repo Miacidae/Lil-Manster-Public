@@ -8,7 +8,7 @@ rlProcFadeInClearJoypadInit ; 81/C4C5
 	.autsiz
 	.databank ?
 
-	stz aProcBody0,b,x
+	stz aProcSystem.aBody0,b,x
 	rtl
 
 rlProcFadeInClearJoypadOnCycle ; 81/C4C9
@@ -19,22 +19,22 @@ rlProcFadeInClearJoypadOnCycle ; 81/C4C9
 	.databank ?
 
 	phx
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	tax
 	sep #$20
 	lda _FadeInTable,x
 	bmi +
 
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$30
 	stz wJoy1New
-	stz wJoy1Alt
+	stz wJoy1Repeated
 	stz wJoy1Input
 	plx
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	inc a
-	sta aProcBody0,b,x
+	sta aProcSystem.aBody0,b,x
 	rtl
 
 	+
@@ -60,7 +60,7 @@ rlProcFadeInAfterSoundOnCycle ; 81/C50C
 	.autsiz
 	.databank ?
 
-	lda aUnknown0004BA,b
+	lda aSoundSystem.aUnknown0004BA,b
 	ora wUnknown0004F4,b
 	and #$00FF
 	beq +
@@ -69,7 +69,7 @@ rlProcFadeInAfterSoundOnCycle ; 81/C50C
 
 	+
 	lda #$0003
-	sta aProcBody0,b,x
+	sta aProcSystem.aBody0,b,x
 	lda #<>rlProcFadeInClearJoypadOnCycle
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 	rtl

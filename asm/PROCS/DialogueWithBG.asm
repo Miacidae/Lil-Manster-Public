@@ -13,9 +13,9 @@ rlProcDialogueWithBGInit ; 82/8D37
 
 	jsl rlUnknown8CCA8C
 
-	lda wProcInput0,b
+	lda aProcSystem.wInput0,b
 	sta lR18
-	lda wProcInput1,b
+	lda aProcSystem.wInput1,b
 	sta lR18+1
 
 	jsl rlUnknown8289AE
@@ -30,7 +30,7 @@ rlProcDialogueWithBGInit ; 82/8D37
 	sta $7E45D8
 
 	lda #$1800
-	tsb wUnknown0017E9,b
+	tsb wDialogueEngineStatus,b
 
 	lda #$0002
 	sta wUnknown001836,b
@@ -44,15 +44,15 @@ rlProcDialogueWithBGOnCycle ; 82/8D6B
 	.databank ?
 
 	lda #<>rlProcDialogueWithBGOnCycle2
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	lda #(`aDialogueBoxHDMAInfo)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>aDialogueBoxHDMAInfo
-	sta lR43
+	sta lR44
 
 	lda #$0006
-	sta wR39
+	sta wR40
 
 	jsl rlHDMAArrayEngineCreateEntryByIndex
 	rtl
@@ -68,20 +68,20 @@ rlProcDialogueWithBGOnCycle2 ; 82/8D85
 	and #$0003
 	bne ++
 
-	lda bBuf_INIDISP
-	and #INIDISP.Brightness
+	lda bBufferINIDISP
+	and #INIDISP_Brightness
 	cmp #INIDISP_Setting(False, 15)
 	beq +
 
 	inc a
 	sep #$20
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	bra ++
 
 	+
 	lda #<>rlProcDialogueWithBGOnCycle3
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	+
 	rtl
@@ -95,16 +95,16 @@ rlProcDialogueWithBGOnCycle3 ; 82/8DA6
 
 	phx
 	lda #$0004
-	sta wBuf_BG3HOFS
+	sta wBufferBG3HOFS
 	jsl rlUnknown828965
 	plx
 
-	lda wUnknown0017E9,b
+	lda wDialogueEngineStatus,b
 	bit #$0001
 	bne +
 
 	lda #<>rlProcDialogueWithBGOnCycle4
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	+
 	rtl
@@ -116,15 +116,15 @@ rlProcDialogueWithBGOnCycle4 ; 82/8DC0
 	.autsiz
 	.databank ?
 
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	and #$00FF
 	beq +
 
 	sep #$20
-	dec bBuf_INIDISP
+	dec bBufferINIDISP
 	rep #$20
 
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	and #$00FF
 	bne ++
 
@@ -151,7 +151,7 @@ rlProcDialogueWithBGOnCycle4 ; 82/8DC0
 
 	+
 	lda #<>rlProcDialogueWithBGOnCycle5
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	+
 	rtl
@@ -164,15 +164,15 @@ rlProcDialogueWithBGOnCycle5 ; 82/8E0B
 	.databank ?
 
 	lda #(`rsUnknown809E95)<<8
-	sta wProcInput0+1,b
+	sta aProcSystem.wInput0+1,b
 	lda #<>rsUnknown809E95
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	phx
 
 	lda #(`procUnknown82A272)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A272
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 

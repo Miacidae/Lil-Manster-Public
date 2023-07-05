@@ -7,14 +7,14 @@ rlProclmInit ; 94/CCE7
 	.autsiz
 	.databank ?
 
-	lda wProcInput1,b
-	sta aProcBody0,b,x
+	lda aProcSystem.wInput1,b
+	sta aProcSystem.aBody0,b,x
 	cmp #$0000
 	beq +
 
-	lda wUnknown0017E9,b
+	lda wDialogueEngineStatus,b
 	ora #$0200
-	sta wUnknown0017E9,b
+	sta wDialogueEngineStatus,b
 
 	lda #-1
 	sta wUnknown0017ED,b
@@ -22,17 +22,17 @@ rlProclmInit ; 94/CCE7
 	lda #-1
 	sta wUnknown0017EF,b
 
-	lda wProcInput0,b
+	lda aProcSystem.wInput0,b
 	sta wUnknown0017F7,b
 
 	rtl
 
 	+
-	lda wUnknown0017E9,b
-	eor wProcInput2,b
-	sta wUnknown0017E9,b
+	lda wDialogueEngineStatus,b
+	eor aProcSystem.wInput2,b
+	sta wDialogueEngineStatus,b
 
-	lda wProcInput0,b
+	lda aProcSystem.wInput0,b
 	beq +
 
 	sta wUnknown0017ED,b
@@ -42,9 +42,9 @@ rlProclmInit ; 94/CCE7
 	phy
 
 	lda #(`$94EA21)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$94EA21
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 
 	ply
@@ -63,7 +63,7 @@ rlProclmOnCycle ; 94/CD3E
 	.autsiz
 	.databank ?
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	asl a
 	tax
 	jsr (_aUnknown94CD47,x)
@@ -86,8 +86,8 @@ rsUnknown94CD4D ; 94/CD4D
 	jsl $9583FD
 	bcs _End
 
-	ldx wProcIndex,b
-	stz aProcHeaderSleepTimer,b,x
+	ldx aProcSystem.wOffset,b
+	stz aProcSystem.aHeaderSleepTimer,b,x
 
 	jsl rlProcEngineFreeProc
 	jsl rlEnableBG3Sync
@@ -111,8 +111,8 @@ rsUnknown94CD78 ; 94/CD78
 	jsl $9583FD
 	bcs _End
 
-	ldx wProcIndex,b
-	stz aProcHeaderSleepTimer,b,x
+	ldx aProcSystem.wOffset,b
+	stz aProcSystem.aHeaderSleepTimer,b,x
 
 	jsl rlProcEngineFreeProc
 
@@ -130,11 +130,11 @@ rsUnknown94CD92 ; 94/CD92
 
 	jsl $958233
 
-	lda wUnknown0017E9,b
+	lda wDialogueEngineStatus,b
 	bne _End
 
-	ldx wProcIndex,b
-	stz aProcHeaderSleepTimer,b,x
+	ldx aProcSystem.wOffset,b
+	stz aProcSystem.aHeaderSleepTimer,b,x
 
 	jsl rlProcEngineFreeProc
 

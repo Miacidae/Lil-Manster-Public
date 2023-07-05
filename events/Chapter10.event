@@ -1,317 +1,500 @@
 
-eventChapter10Events ; 99/C559
-
-	_OpeningEventDefinitions ; 99/C559
-		EVENT FlagAlwaysZero, _OpeningEvent
-			CMP_WORD wCurrentTurn, 0
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_TurnEventDefinitions ; 99/C566
-		EVENT FlagBossDeath, eventMapDeathQuoteDummyEvent
-			CHECK_DEAD Largo
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT FlagAlliedDeath, eventMapDeathQuoteDummyEvent
-			TEST_FLAG_SET FlagPlayerDeath
-		END_DEFINITION
-		EVENT $06, _OlwenFredArrive
-			CMP_WORD wCurrentTurn, 4
-			CMP_WORD wCurrentPhase, Enemy
-			TEST_FLAG_UNSET FlagBossDeath
-		END_DEFINITION
-		EVENT FlagAlwaysZero, _OlwenFredLeave
-			CMP_WORD wCurrentTurn, 6
-			CMP_WORD wCurrentPhase, Enemy
-			TEST_FLAG_SET $06
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_TalkEventDefinitions ; 99/C5A3
-	END_DEFINITION_ARRAY
-
-	_LocationEventDefinitions ; 99/C5A5
-		macroDrawbridgeDefinition $23, [8, 13], eventChapter10Events._Drawbridge1
-		macroDrawbridgeDefinition $23, [8, 14], eventChapter10Events._Drawbridge1
-		macroDrawbridgeDefinition $24, [18, 19], eventChapter10Events._Drawbridge2
-		EVENT $26, _RescueHouseDestroy
-			macroEventConditionCheckCoords [20, 4]
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $25, _EnsorcelHouseDestroy
-			macroEventConditionCheckCoords [17, 17]
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $21, _RescueHouseVisit
-			macroEventConditionCheckCoords [20, 4]
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $22, _EnsorcelHouseVisit
-			macroEventConditionCheckCoords [17, 17]
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT FlagAlwaysZero, _EndingEvent
-			macroEventConditionCheckCoords [4, 12]
-			CMP_WORD wCurrentPhase, Player
-			CMP_WORD aSelectedCharacterBuffer.Character, Leif
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_BeforeActionEventDefinitions ; 99/C643
-	END_DEFINITION_ARRAY
-
-	_AfterActionEventDefinitions ; 99/C645
-		EVENT $06, _OlwenFredArrive
-			macroEventConditionCheckCoordRanges [1, 1], [18, 20]
-			TEST_FLAG_UNSET FlagBossDeath
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_BattleEventDefinitions ; 99/C65A
-		macroBossQuoteDefinition $05, Largo
-		macroBossQuoteDefinition $08, Olwen
-		macroBossQuoteDefinition $09, Fred
-	END_DEFINITION_ARRAY
-
-	_ShopEventDefinitions ; 99/C674
-		macroShopDefinition eventChapter10Data._Armory
-		macroShopDefinition eventChapter10Data._Vendor
-	END_DEFINITION_ARRAY
-
-	_Drawbridge1 ; 99/C69C
-		macroOpenDrawbridgeByTileChangeID 0
-	END1
-
-	_Drawbridge2 ; 99/C6C7
-		macroOpenDrawbridgeByTileChangeID 1
-	END1
-
-	_UnusedReinforcements ; 99/C6F2
-		LOAD2 eventChapter10Data._UnusedUnitGroup1
-		WAIT_MOVE
-		YIELD
-
-		LOAD2 eventChapter10Data._UnusedUnitGroup2
-		WAIT_MOVE
-		YIELD
-
-		LOAD2 eventChapter10Data._UnusedUnitGroup3
-		WAIT_MOVE
-		YIELD
-	END2
-
-	_OlwenFredArrive ; 99/C705
-		macroCountAllUncapturedAliveUnits Largo
-		JUMP_FALSE +
-
-		SCROLL_CAMERA_CHAR Largo
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		macroSetCharacterTurnStatus Largo, TurnStatusHidden
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $39
-		YIELD
-
-		macroDialogueWithBackground ch10olwenfredarrive, 1
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
-		YIELD
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
-
-		LOAD1 eventChapter10Data._FredOlwenGroup
-		WAIT_MOVE
-		YIELD
-
-		macroUnsetCharacterTurnStatus Largo, TurnStatusHidden
-
-		macroSetCharacterBitsWord Olwen, structCharacterDataRAM.Unknown3F, $80
-		macroSetCharacterBitsWord Fred, structCharacterDataRAM.Unknown3F, $80
-
-		+
-		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
-	END2
-
-	_OlwenFredLeave ; 99/C7AC
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $0A
-		YIELD
-
-		PLAY_SOUND_WORD $00F7
-
-		macroCountAllUncapturedAliveUnits Olwen
-		JUMP_FALSE +
-
-		SCROLL_CAMERA_CHAR Olwen
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		DIALOGUE ch10olwenfredleave
-		YIELD
-
-		macroUnsetCharacterBitsWord Olwen, structCharacterDataRAM.Unknown3F, $80
-		macroUnsetCharacterBitsWord Fred, structCharacterDataRAM.Unknown3F, $80
-
-		macroSetCharacterByte Olwen, structCharacterDataRAM.AI1, $02
-		macroSetCharacterByte Olwen, structCharacterDataRAM.AI4, $00
-		macroSetCharacterByte Olwen, structCharacterDataRAM.AI2, $0B
-		macroSetCharacterByte Olwen, structCharacterDataRAM.Unknown3E, $00
-		macroSetCharacterBitsWord Olwen, structCharacterDataRAM.Unknown3F, $1000
-
-		macroSetCharacterByte Fred, structCharacterDataRAM.AI1, $02
-		macroSetCharacterByte Fred, structCharacterDataRAM.AI4, $00
-		macroSetCharacterByte Fred, structCharacterDataRAM.AI2, $0B
-		macroSetCharacterByte Fred, structCharacterDataRAM.Unknown3E, $00
-		macroSetCharacterBitsWord Fred, structCharacterDataRAM.Unknown3F, $1000
-
-		+
-	END2
-
-	_RescueHouseVisit ; 99/C8F3
-		macroItemHouse ch10rescuehouse, Rescue, [20, 4], $0021
-	END2
-
-	_RescueHouseDestroy ; 99/C956
-		macroDestroyHouseByTileChangeID 2
-	END1
-
-	_EnsorcelHouseVisit ; 99/C985
-		macroItemHouse ch10ensorcelhouse, Ensorcel, [17, 17], $0021
-	END2
-
-	_EnsorcelHouseDestroy ; 99/C9E8
-		macroDestroyHouseByTileChangeID 3
-	END1
-
-	_PrepGroups ; 99/CA17
-		.long eventChapter10Data._PrepGroup1
-		.long eventChapter10Data._PrepGroup2
-	.word $0000
-
-	_OpeningEvent ; 99/CA1F
-		SET_CAMERA [8, 12]
-
-		STORE_WORD wEventEngineXCoordinate, 8
-		STORE_WORD wEventEngineYCoordinate, 12
-		SET_ACTIVE_COORDS
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $39
-		YIELD
-
-		macroChapterTitlePopup ch10titlename
-
-		SCROLL_CAMERA_SPEED [9, 12], 4
-		YIELD
-
-		MOVE_TEMPORARY Olwen, [1, 13], 2, 1, _OlwenFredMovestring
-
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		MOVE_TEMPORARY Fred, [1, 13], 2, 1, _OlwenFredMovestring
-
-		WAIT_MOVE
-		YIELD
-
-		macroDialogueWithBackground ch10opening1,1
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
-		YIELD
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, INIDISP_Setting(False, 15)
-
-		SCROLL_CAMERA_ADDRESS eventChapter10Data._LargoCameraCoordinates
-		YIELD
-
-		LOAD1 eventChapter10Data._LargoGroup
-		WAIT_MOVE
-		YIELD
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $32
-		YIELD
-
-		SCROLL_CAMERA_CHAR Leif
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		DIALOGUE ch10opening2
-		YIELD
-	END2
-
-	_OlwenFredMovestring ; 99/CAC0
-		MS_MOVE_RIGHT
-		MS_MOVE_RIGHT
-		MS_MOVE_RIGHT
-		MS_MOVE_UP
-	MS_END
-
-	_UnknownMovestring ; 99/CAC5
-		MS_MOVE_DOWN
-		MS_MOVE_LEFT
-		MS_MOVE_LEFT
-		MS_MOVE_LEFT
-		MS_MOVE_LEFT
-	MS_END
-
-	_EndingEvent ; 99/CACB
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 16
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd, $0000
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $41
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveChapterAndTurncount, $0000
-
-		EVENT_TEST_FLAG_SET $07
-		JUMP_TRUE +
-
-		DIALOGUE ch10endlargoalive
-		YIELD
-
-		JUMP ++
-
-		+
-		DIALOGUE ch10endlargodead
-		YIELD
-
-		+
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCChapterEnd, $0000
-	END1
-
-
-
-
-
-
-
-
-
+.weak
+  WARNINGS :?= "None"
+.endweak
+
+GUARD_FE5_CHAPTER10 :?= false
+.if (!GUARD_FE5_CHAPTER10)
+  GUARD_FE5_CHAPTER10 := true
+
+  ; Definitions
+
+    .weak
+
+    .endweak
+
+  ; Freespace inclusions
+
+    .section Chapter10EventsSection
+
+			eventChapter10Events ; 99/C559
+
+					_FlagLargoBattleQuote   		= enum.enum($05)
+          _FlagOlwenFredSpawn   			= enum.enum()
+          _FlagLargoDead		  				= enum.enum()
+          _FlagOlwenBattleQuote				= enum.enum()
+          _FlagFredBattleQuote				= enum.enum()
+
+          _FlagRescueHouseVisit   		= enum.enum($21)
+          _FlagEnsorcelHouseVisit 		= enum.enum()
+          _FlagDrawbridge1       			= enum.enum()
+          _FlagDrawbridge2       			= enum.enum()
+          _FlagEnsorcelHouseDestroy   = enum.enum()
+          _FlagRescueHouseDestroy     = enum.enum()
+
+				_OpeningEventDefinitions ; 99/C559
+					EVENT FlagAlwaysZero, _OpeningEvent
+						CMP_WORD wCurrentTurn, 0
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_TurnEventDefinitions ; 99/C566
+					EVENT FlagBossDeath, eventMapDeathQuoteDummyEvent
+						CHECK_IF_BOSS_DEAD Largo
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT FlagAlliedDeath, eventMapDeathQuoteDummyEvent
+						TEST_FLAG_SET FlagPlayerDeath
+					END_DEFINITION
+					EVENT _FlagOlwenFredSpawn, _OlwenFredArrive
+						CMP_WORD wCurrentTurn, 4
+						CMP_WORD wCurrentPhase, Enemy
+						TEST_FLAG_UNSET FlagBossDeath
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _OlwenFredLeave
+						CMP_WORD wCurrentTurn, 6
+						CMP_WORD wCurrentPhase, Enemy
+						TEST_FLAG_SET _FlagOlwenFredSpawn
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_TalkEventDefinitions ; 99/C5A3
+				END_DEFINITION_ARRAY
+			
+				_LocationEventDefinitions ; 99/C5A5
+					macroECDrawbridge _FlagDrawbridge1, [8, 13], _Drawbridge1
+					macroECDrawbridge _FlagDrawbridge1, [8, 14], _Drawbridge1
+					macroECDrawbridge _FlagDrawbridge2, [18, 19], _Drawbridge2
+					EVENT _FlagRescueHouseDestroy, _RescueHouseDestroy
+						macroECCheckCoordinates [20, 4]
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagEnsorcelHouseDestroy, _EnsorcelHouseDestroy
+						macroECCheckCoordinates [17, 17]
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagRescueHouseVisit, _RescueHouseVisit
+						macroECCheckCoordinates [20, 4]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagEnsorcelHouseVisit, _EnsorcelHouseVisit
+						macroECCheckCoordinates [17, 17]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _EndingEvent
+						macroECCheckCoordinates [4, 12]
+						CMP_WORD wCurrentPhase, Player
+						CMP_WORD aSelectedCharacterBuffer.Character, Leif
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_BeforeActionEventDefinitions ; 99/C643
+				END_DEFINITION_ARRAY
+			
+				_AfterActionEventDefinitions ; 99/C645
+					EVENT _FlagOlwenFredSpawn, _OlwenFredArrive
+						macroECCheckCoordinateRanges [1, 1], [18, 20]
+						TEST_FLAG_UNSET FlagBossDeath
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_BattleEventDefinitions ; 99/C65A
+					macroECBossQuote _FlagLargoBattleQuote, Largo
+					macroECBossQuote _FlagOlwenBattleQuote, Olwen
+					macroECBossQuote _FlagFredBattleQuote, Fred
+				END_DEFINITION_ARRAY
+			
+				_ShopEventDefinitions ; 99/C674
+					macroECShop eventChapter10Data._Armory
+					macroECShop eventChapter10Data._Vendor
+				END_DEFINITION_ARRAY
+			
+				_Drawbridge1 ; 99/C69C
+					macroOpenDrawbridgeByTileChangeID 0
+				END1
+			
+				_Drawbridge2 ; 99/C6C7
+					macroOpenDrawbridgeByTileChangeID 1
+				END1
+			
+				_UnusedReinforcements ; 99/C6F2
+					LOAD_GROUP_BLOCKABLE eventChapter10Data._UnusedUnitGroup1
+					WAIT_MOVE
+					YIELD
+			
+					LOAD_GROUP_BLOCKABLE eventChapter10Data._UnusedUnitGroup2
+					WAIT_MOVE
+					YIELD
+			
+					LOAD_GROUP_BLOCKABLE eventChapter10Data._UnusedUnitGroup3
+					WAIT_MOVE
+					YIELD
+				END2
+			
+				_OlwenFredArrive ; 99/C705
+					macroASMCCountAllUnitsUncapturedAlive Largo
+					JUMP_FALSE +
+			
+						GET_CHARACTER_COORDS Largo
+						SCROLL_CAMERA 4
+						YIELD
+			
+						macroASMCSetUnitState Largo, UnitStateHidden
+			
+						PLAY_SOUND_WORD $00E0
+						PAUSE_SKIPPABLE 32
+						YIELD
+			
+						SET_MUSIC $39
+						YIELD
+			
+						macroDialogueWithBG dialogueChapter10OlwenFredArrive, 1
+			
+						CALL_ASM_LOOP rlASMCDialogueWithBGEnd
+						YIELD
+			
+						HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(False, 15)
+			
+						LOAD_GROUP eventChapter10Data._FredOlwenGroup
+						WAIT_MOVE
+						YIELD
+			
+						macroASMCUnsetUnitState Largo, UnitStateHidden
+			
+						macroASMCSetBitsCharacterDataWord Olwen, AIProperties, $80
+						macroASMCSetBitsCharacterDataWord Fred, AIProperties, $80
+			
+					+
+					CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog
+				END2
+			
+				_OlwenFredLeave ; 99/C7AC
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $0A
+					YIELD
+			
+					PLAY_SOUND_WORD $00F7
+			
+					macroASMCCountAllUnitsUncapturedAlive Olwen
+					JUMP_FALSE +
+			
+						GET_CHARACTER_COORDS Olwen
+						SCROLL_CAMERA 4
+						YIELD
+			
+						DIALOGUE dialogueChapter10OlwenFredLeave
+						YIELD
+			
+						macroASMCUnsetBitsCharacterDataWord Olwen, AIProperties, $80
+						macroASMCUnsetBitsCharacterDataWord Fred, AIProperties, $80
+
+						macroSetCharacterAI Olwen, [$02, $00, $0B, $00]
+						macroASMCSetBitsCharacterDataWord Olwen, AIProperties, $1000
+
+						macroSetCharacterAI Fred, [$02, $00, $0B, $00]
+						macroASMCSetBitsCharacterDataWord Fred, AIProperties, $1000
+
+					+
+				END2
+			
+				_RescueHouseVisit ; 99/C8F3
+					macroItemHouse dialogueChapter10RescueHouse, Rescue, [20, 4], $0021
+				END2
+			
+				_RescueHouseDestroy ; 99/C956
+					macroDestroyHouseByTileChangeID 2
+				END1
+			
+				_EnsorcelHouseVisit ; 99/C985
+					macroItemHouse dialogueChapter10EnsorcelHouse, Ensorcel, [17, 17], $0021
+				END2
+			
+				_EnsorcelHouseDestroy ; 99/C9E8
+					macroDestroyHouseByTileChangeID 3
+				END1
+
+				_PrepGroups ; 99/CA17
+					.long eventChapter10Data._PrepGroup1
+					.long eventChapter10Data._PrepGroup2
+				.word 0
+			
+				_OpeningEvent ; 99/CA1F
+					SET_CAMERA_POSITION [8, 12]
+			
+					STORE_WORD wEventEngineXCoordinate, 8
+					STORE_WORD wEventEngineYCoordinate, 12
+					SET_CURSOR_POSITION
+			
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(False, 15)
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $39
+					YIELD
+			
+					macroChapterTitlePopup dialogueChapter10Title
+			
+					SCROLL_CAMERA_COORDS [9, 12], 4
+					YIELD
+
+					MOVE_TEMPORARY Olwen, [1, 13], 2, $40, _OlwenFredMovestring
+
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					MOVE_TEMPORARY Fred, [1, 13], 2, $40, _OlwenFredMovestring
+			
+					WAIT_MOVE
+					YIELD
+			
+					macroDialogueWithBG dialogueChapter10Opening1,1
+			
+					CALL_ASM_LOOP rlASMCDialogueWithBGEnd
+					YIELD
+			
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(False, 15)
+			
+					SCROLL_CAMERA_ADDRESS eventChapter10Data._LargoCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP eventChapter10Data._LargoGroup
+					WAIT_MOVE
+					YIELD
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $32
+					YIELD
+			
+					GET_CHARACTER_COORDS Leif
+					SCROLL_CAMERA 4
+					YIELD
+			
+					DIALOGUE dialogueChapter10Opening2
+					YIELD
+				END2
+			
+				_OlwenFredMovestring ; 99/CAC0
+					MS_MOVE_RIGHT
+					MS_MOVE_RIGHT
+					MS_MOVE_RIGHT
+					MS_MOVE_UP
+				MS_END
+			
+				_UnknownMovestring ; 99/CAC5
+					MS_MOVE_DOWN
+					MS_MOVE_LEFT
+					MS_MOVE_LEFT
+					MS_MOVE_LEFT
+					MS_MOVE_LEFT
+				MS_END
+			
+				_EndingEvent ; 99/CACB
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 16
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $41
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCSaveChapterAndTurncount
+			
+					EVENT_TEST_FLAG_SET _FlagLargoDead
+					JUMP_TRUE +
+			
+						DIALOGUE dialogueChapter10EndLargoAlive
+						YIELD
+			
+						JUMP ++
+
+						+
+						DIALOGUE dialogueChapter10EndLargoDead
+						YIELD
+
+					+
+					FADE_OUT $01
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCChapterEnd
+				END1
+
+    .endsection Chapter10EventsSection
+
+    .section Chapter10DataSection
+
+			eventChapter10Data ; B1/D1EF
+			
+				_LargoCameraCoordinates ; B1/D1EF
+					.byte 8, 12
+			
+				_LargoGroup ; B1/D1F1
+					UNIT Largo, Enemy, [4, 12], [4, 12], Largo, [Greatlance, Greatbow, Ridersbane, MasterSeal], 8, True, [$01, $03, $00, $80]
+				UNIT
+			
+				_PrepGroup1 ; B1/D207
+					.byte 9, 12
+			
+					UNIT FriegeBallista1, Enemy, [13, 6], [13, 6], Largo, [Ballista], 3, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [9, 15], [9, 15], Largo, [Ballista], 3, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [12, 18], [12, 18], Largo, [Ballista], 3, False, [$01, $03, $00, $00]
+					UNIT Dvorak, Enemy, [3, 3], [3, 3], Dvorak, [SilverLance], 8, False, [$00, $0C, $00, $30]
+					UNIT FriegeBallista1, Enemy, [27, 3], [27, 3], Largo, [Ballista], 3, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [11, 11], [11, 11], Largo, [Ballista], 3, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [17, 10], [17, 10], Largo, [Ballista], 3, False, [$01, $03, $00, $00]
+				UNIT
+			
+				_PrepGroup2 ; B1/D297
+					.byte 8, 15
+			
+					UNIT FriegeCavalier1, Enemy, [7, 12], [7, 12], Largo, [LongLance], 12, False, [$02, $15, $02, $00]
+					UNIT FriegeCavalier1, Enemy, [6, 12], [6, 12], Largo, [Ridersbane], 15, False, [$02, $15, $02, $00]
+					UNIT FriegeCavalier1, Enemy, [6, 11], [6, 11], Largo, [Armorslayer], 14, False, [$02, $15, $02, $00]
+					UNIT FriegeSoldier2, Enemy, [9, 18], [9, 18], Largo, [Javelin], 12, False, [$02, $15, $00, $00]
+					UNIT FriegeMage1, Enemy, [8, 19], [8, 19], Largo, [Thunder], 10, False, [$02, $15, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [9, 19], [9, 19], Largo, [Javelin], 12, False, [$02, $15, $00, $00]
+					UNIT FriegeCavalier1, Enemy, [7, 11], [7, 11], Largo, [LongLance], 10, False, [$02, $15, $02, $00]
+					UNIT FriegeSoldier2, Enemy, [9, 20], [9, 20], Largo, [Javelin], 12, False, [$02, $15, $00, $00]
+					UNIT FriegeArmoredSword2, Enemy, [15, 12], [15, 12], Largo, [Longsword], 8, False, [$01, $03, $02, $00]
+					UNIT FriegeArmoredSword2, Enemy, [14, 12], [14, 12], Largo, [Longsword], 8, False, [$01, $03, $02, $00]
+					UNIT FriegeArmoredSword2, Enemy, [14, 11], [14, 11], Largo, [Longsword], 8, False, [$01, $03, $02, $00]
+					UNIT FriegeArmoredSword2, Enemy, [15, 11], [15, 11], Largo, [Longsword], 8, False, [$01, $03, $02, $00]
+					UNIT FriegeArmoredSword2, Enemy, [9, 10], [9, 10], Largo, [Longsword], 8, False, [$01, $03, $02, $00]
+					UNIT FriegeArmoredBow1, Enemy, [13, 11], [13, 11], Largo, [Longbow], 6, False, [$01, $03, $02, $00]
+					UNIT FriegeArmoredBow1, Enemy, [13, 12], [13, 12], Largo, [Longbow], 8, False, [$01, $03, $02, $00]
+					UNIT FriegeSoldier2, Enemy, [28, 5], [28, 5], Largo, [Javelin], 10, False, [$01, $03, $00, $00]
+					UNIT ThiefEnemy1, Enemy, [2, 16], [2, 16], Seil, [Lockpick, IronSword, StaminaDrink], 10, False, [$02, $05, $00, $02]
+					UNIT FriegeArmoredSword2, Enemy, [24, 11], [24, 11], Largo, [FlameSword, BridgeKey, Vulnerary], 14, False, [$01, $03, $03, $00]
+					UNIT FriegeSoldier2, Enemy, [15, 19], [15, 19], Largo, [ShortLance], 6, False, [$00, $03, $00, $00]
+					UNIT ThiefEnemy1, Enemy, [18, 11], [18, 11], Seil, [Rapier, StaminaDrink], 9, False, [$02, $05, $00, $02]
+					UNIT FriegeSoldier2, Enemy, [27, 6], [27, 6], Largo, [Javelin], 10, False, [$01, $03, $00, $00]
+					UNIT FriegeBishop2, Enemy, [10, 4], [10, 4], Largo, [Bolting, Physic, Heal], 5, False, [$01, $03, $00, $00]
+				UNIT
+			
+				_UnusedCoordinates1 ; B1/D453
+					.byte 9, 12
+			
+				_UnusedUnitGroup1 ; B1/D455
+					UNIT FriegeSoldier2, Enemy, [1, 11], [1, 11], Largo, [ShortLance], 5, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_UnusedCoordinates2 ; B1/D46B
+					.byte 9, 12
+			
+				_UnusedUnitGroup2 ; B1/D46D
+					UNIT FriegeCavalier1, Enemy, [1, 12], [1, 12], Largo, [ShortLance], 5, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_UnusedCoordinates3 ; B1/D483
+					.byte 9, 12
+			
+				_UnusedUnitGroup3 ; B1/D485
+					UNIT FriegeSoldier2, Enemy, [1, 13], [1, 13], Largo, [ShortLance], 5, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_UnusedCoordinates4 ; B1/D49B
+					.byte 8, 7
+			
+				_FredOlwenGroup ; B1/D49D
+					UNIT Fred, Enemy, [4, 13], [4, 13], Largo, [LightningSword, Vulnerary], 1, False, [$00, $01, $02, $00]
+					UNIT Olwen, Enemy, [3, 13], [3, 13], Largo, [DireThunder, Vulnerary], 2, False, [$00, $01, $02, $00]
+				UNIT
+			
+				_StartingPositions ; B1/D4C7
+					.byte 29, 13
+					.byte 28, 14
+					.byte 27, 15
+					.byte 27, 16
+					.byte 28, 17
+					.byte 29, 18
+					.byte 30, 15
+					.byte 30, 16
+					.byte 29, 14
+					.byte 29, 17
+					.byte 28, 15
+					.byte 28, 16
+					.byte 29, 15
+					.byte 29, 16
+				.byte $FF
+			
+				_Armory ; B1/D4E4
+					SHOP [27, 5], [IronSword, SteelSword, SlimSword, IronBlade]
+			
+				_Vendor ; B1/D4F6
+					SHOP [28, 4], [Vulnerary, Heal, Torch, Thunder]
+
+    .endsection Chapter10DataSection
+
+    .section Chapter10WorldMapEventsSection
+
+			eventChapter10WorldMapEvents ; E7/E844
+			
+				SCROLL_CAMERA_COORDS [13, 16], 4
+				SET_CURSOR_POSITION
+				YIELD
+			
+				PLAY_SOUND_WORD $00E0
+				PAUSE_SKIPPABLE 32
+				YIELD
+			
+				SET_MUSIC $29
+				YIELD
+			
+				FADE_IN $01
+				YIELD
+			
+				macroWMSetCyclePalette 0, aBGPaletteBuffer.aPalette6
+			
+				macroWMDrawSpecialMarker [152, 88], WMMarkerTable.Circle, 0
+
+				macroASMCWMDialogue dialogueChapter10WorldMap1
+			
+				HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+			
+				macroWMClearCyclePalette aBGPaletteBuffer.aPalette6
+				macroWMClearSpecialMarker 0
+			
+				PAUSE_SKIPPABLE 1
+				YIELD
+			
+				SCROLL_CAMERA_COORDS [12, 16], 1
+				SET_CURSOR_POSITION
+				YIELD
+			
+				macroWMSetCyclePalette 0, aBGPaletteBuffer.aPalette6
+			
+				macroWMDrawSpecialMarker [152, 88], WMMarkerTable.Circle, 0
+			
+				macroASMCWMDialogue dialogueChapter10WorldMap2
+			
+				HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+			
+				macroWMClearCyclePalette aBGPaletteBuffer.aPalette6
+				macroWMClearSpecialMarker 0
+			
+				PAUSE_SKIPPABLE 1
+				YIELD
+			
+				FADE_OUT $02
+				YIELD
+			
+				CALL_ASM_LOOP rlASMCEndWMEvents
+				YIELD
+			END1
+
+    .endsection Chapter10WorldMapEventsSection
+
+.endif ; GUARD_FE5_CHAPTER10
 

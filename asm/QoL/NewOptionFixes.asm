@@ -7,30 +7,30 @@
 	.xl
 
 	pea <>(++++)-1
-	lda wJoy1Alt
-	bit #JoypadUp
+	lda wJoy1Repeated
+	bit #JOY_Up
 	bne $85DA79
 
-	bit #JoypadDown
+	bit #JOY_Down
 	bne $85DA98
 
-	bit #JoypadLeft
+	bit #JOY_Left
 	bne OptionsLeftInput
 
-	bit #JoypadRight
+	bit #JOY_Right
 	beq +
 
 	jmp OptionsRightInput
 
 	+
 	lda wJoy1New
-	bit #JoypadB
+	bit #JOY_B
 	beq +
 
 	jmp $85DB00 		; close menu
 
 	+
-	bit #JoypadY
+	bit #JOY_Y
 	beq +
 
 	jmp $85E2B5 		; restore to default
@@ -129,13 +129,13 @@ OptionMenuCursorFixHook
 	OptionMenuInitialization
 
 	lda #$C0F6
-	sta lUnknown000DDE
+	sta aCurrentTilemapInfo.lInfoPointer
 	lda #$83C0
-	sta lUnknown000DDE+1
+	sta aCurrentTilemapInfo.lInfoPointer+1
 	stz wR17 
 
 	-
-	lda #<>MovedOptions
+	lda #<>aOptionsMenuPointers
 	sta lR18+1
 	ldx wR17 
 	lda $A95F,X 		; main option pointer 
@@ -594,6 +594,10 @@ AnimationByUnitMenuCommandFix
 	rtl
 
 
+
+
+
+; Can be removed
 AnimationGeneralFix
 
 	lda $4E56
@@ -604,7 +608,7 @@ AnimationGeneralFix
 	cmp #$0000
 	beq _AlwaysOFF 	; always on
 
-	jml AnimationByUnit
+	jml $83CD6D
 
 _AlwaysOn
 	jml $83CDA7
@@ -612,12 +616,20 @@ _AlwaysOn
 _AlwaysOFF
 	jml $83CD8F
 
+
+
+
+
+
+
+
+
 AutoCursorFix
 	
 	lda wCurrentPhase
 	bne + ; branch if not player phase
 
-	lda aOptions.wAnimationOption
+	lda aOptions.wAnimation
 	bit #$1000
 	bne +
 
@@ -628,7 +640,7 @@ AutoCursorFix
 
 UnitSpeedFix
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$00F0 ; set z if 0 
 	bne +
 
@@ -639,7 +651,7 @@ UnitSpeedFix
 
 AudioFix
 
-	lda aOptions.wBurstWindowOption
+	lda aOptions.wBurstWindow
 	and #$000F ; set z if 0 
 	beq + 
 
@@ -651,7 +663,7 @@ AudioFix
 
 BGMFix
 
-	lda aOptions.wBurstWindowOption
+	lda aOptions.wBurstWindow
 	and #$00F0 ; set z if 0 
 	bne +
 
@@ -663,7 +675,7 @@ BGMFix
 
 VolumeFix
 
-	lda aOptions.wBurstWindowOption
+	lda aOptions.wBurstWindow
 	and #$0F00
 	xba
 	cmp #$0003
@@ -676,16 +688,16 @@ VolumeFix
 rlNewDefaultSaveFileOptions
 
 	lda #$0010 	; set terrain window to simple
-	sta <>aOptions.wAnimationOption,b
+	sta <>aOptions.wAnimation,b
 	lda #$1101 ; set preps to 1, hidden info to 1 and message speed to normal
-	sta <>aOptions.wTerrainWindowOption,b
-	stz <>aOptions.wBurstWindowOption,b
-	stz <>aOptions.wTextSpeedOption,b
-	stz <>aOptions.wUnitSpeedOption,b
-	stz <>aOptions.wSoundOption,b
-	stz <>aOptions.wBGMOption,b
-	stz <>aOptions.wAutocursorOption,b
-	stz <>aOptions.wVolumeOption,b
+	sta <>aOptions.wTerrainWindow,b
+	stz <>aOptions.wBurstWindow,b
+	stz <>aOptions.wTextSpeed,b
+	stz <>aOptions.wUnitSpeed,b
+	stz <>aOptions.wSound,b
+	stz <>aOptions.wBGM,b
+	stz <>aOptions.wAutocursor,b
+	stz <>aOptions.wVolume,b
 	rtl
 
 rlInventoryWEXPBars
@@ -694,7 +706,7 @@ rlInventoryWEXPBars
 	.autsiz
 	.databank ?
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	bne +
 
@@ -817,14 +829,14 @@ rsDrawWEXPNumber ; input: WEXP in A
 	pha
 
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`$83C0F6
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 
 	lda aInventoryNewWEXPBarCoordinateTable,X
 	tax
 	lda #$268F 	
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	pla
 	cmp #10
@@ -963,7 +975,7 @@ rlNewInventoryDrawStatNumbers
 	.autsiz
 	.databank `aBG1TilemapBuffer
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	bne +
 
@@ -983,7 +995,7 @@ rlNewInventoryDrawStatNumbers
 	lda _Table1,x
 	beq _End
 
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	inc x
 	inc x
@@ -1029,10 +1041,10 @@ rlNewInventoryDrawStatNumbers
 
 	; Update text info
 
-	lda wUnknown000DE7,b
+	lda aCurrentTilemapInfo.wBaseTile,b
 	and #$1C00
 	ora #$2180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda #<>menutextDoubleDash
 	sta lR18
@@ -1221,7 +1233,7 @@ rlRedFatigue
 	lda #$3EA0
 
 	_DrawStat
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	lda _Coordinates
 	tax
 	lda #<>aActionStructUnit1.Fatigue
@@ -1237,16 +1249,16 @@ rlRedFatigue
 	_Dash
 	clc
 	lda #$2AA0
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	lda _Coordinates
 
 	tax
 	dec x
 
-	lda wUnknown000DE7,b
+	lda aCurrentTilemapInfo.wBaseTile,b
 	and #$1C00
 	ora #$2180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda #<>$81D27F
 	sta lR18
@@ -1288,7 +1300,7 @@ rlNewInventoryDrawEquippedWeaponType
 	lda #$0C00
 	sta wR3
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	bne +
 
@@ -1322,7 +1334,7 @@ rlNewInventoryDrawRangeText
 	; Tile base
 
 	lda #$2980
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	; If unit has a usable weapon, draw range
 	; else draw --
@@ -1334,7 +1346,7 @@ rlNewInventoryDrawRangeText
 	jsl rlCopyItemDataToBuffer
 	jsl $8599D5
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	bne +
 
@@ -1355,7 +1367,7 @@ rlNewInventoryDrawRangeText
 	lda #>`menutextDoubleDash
 	sta lR18+1
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	bne +
 
@@ -1373,7 +1385,7 @@ rlNewInventoryDrawRangeText
 
 rlPickInventoryTilemaps
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	bne +
 
@@ -1399,7 +1411,7 @@ rlPickInventoryTilemaps
 
 
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	bne +
 
@@ -1430,7 +1442,7 @@ rlCritInBattle
 
 	.databank `aActionStructUnit1
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	beq _Vanilla
 
@@ -1492,7 +1504,7 @@ rlCritInBattleActualStats
 	lda #2
 	sta wR0
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	bne _Modified
 
@@ -1551,7 +1563,7 @@ rlCritInBattleActualStats
 	; because the equipped item preview and terrain window break when modifying the original battle stats graphic dma
 	; for some reason, im just going to dma the LVL graphic over CRT here
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	bne _Vanilla	
 
@@ -1651,7 +1663,7 @@ rlCritInBattleBossQuoteFix
 	jml $9CB959
 
 	_BattleStatsGraphics
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	beq _LevelDisplay
 
@@ -1688,15 +1700,15 @@ rlNewProcItemInfoDrawItemInfo
 	.databank `wInfoWindowTarget
 
 	lda #$2180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	sta wR16
 	tax
 	lda #>`$B08000
 	sta lR18+1
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	bne _NormalDescription ; if hidden info enabled -> branch and display scroll growths
 
@@ -1709,7 +1721,7 @@ rlNewProcItemInfoDrawItemInfo
 	cmp #HeimsScroll+1
 	bcs _NormalDescription ; and for IDs more than scrolls
 
-	lda #<>item_descs._BasicScrollDesc
+	lda #<>menutextBasicScrollDescription
 	bra +
 
 	_NormalDescription
@@ -1739,7 +1751,7 @@ rlNewInventoryDrawSkillIcons
 
 	stz wR16
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	cmp #$0300
 	beq +
@@ -1800,7 +1812,7 @@ rlNewInventoryDrawSkillIcons
 	sta wR0
 
 	lda aInventorySkillIconTileIndexTable,x
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda aInventorySkillIconCoordinateTable,x
 	tax
@@ -2096,25 +2108,12 @@ jsl rlNewDefaultSaveFileOptions
 .here 
 
 
-; reminder to also change menucommands for new animation ram location
-* = $01CD60
-.logical $83CD60
-
-jml AnimationGeneralFix
-
-.fill $83CD6D -*, $EA
-
-AnimationByUnit
-
-.here 
-
-
 ; fix terrain window
 
 * = $021E80
 .logical $849E80
 
-lda <>aOptions.wAnimationOption
+lda <>aOptions.wAnimation
 bit #$0020
 bne $849E97
 
@@ -2134,7 +2133,7 @@ bne $849E97
 * = $0A92E6
 .logical $9592E6
 
-lda aOptions.wTerrainWindowOption
+lda aOptions.wTerrainWindow
 and #$0003
 
 .here
@@ -2185,11 +2184,11 @@ nop
 	.al
 	.databank $7E
 
-	lda wUnknown0004EA,b
+	lda aSoundSystem.wStatus,b
 	ora #$0005
-	sta wUnknown0004EA,b
+	sta aSoundSystem.wStatus,b
 	lda #$0300
-	sta @l aOptions.wBurstWindowOption
+	sta @l aOptions.wBurstWindow
 	rtl
 
 	.databank 0

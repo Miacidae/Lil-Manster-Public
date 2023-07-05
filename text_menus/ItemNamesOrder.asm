@@ -1,7 +1,7 @@
 ; Alphabetical table of sorted items
 
 * = $18192F
-.logical lorom($18192F, 1)
+.logical mapped($18192F)
 
 ; Bytes are in order of item data
 ; Each item gets a byte denoting 
@@ -158,7 +158,7 @@
 .byte	33		; Dáinn's Scroll
 .byte	104		; Njörun's Scroll
 .byte	102		; Nál's Scroll
-.byte	151		; Ullur's Scroll
+.byte	151		; Ullr's Scroll
 .byte	146		; Thrud's Scroll
 .byte	42		; Fjalar's Scroll
 .byte	31		; Ced's Scroll

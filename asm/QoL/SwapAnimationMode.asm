@@ -30,7 +30,7 @@ GUARD_ZQOL_SWAP_ANIMATION_MODE :?= false
 
         .al
         .autsiz
-        .databank `aOptions.wAnimationOption
+        .databank `aOptions.wAnimation
 
         ; Unknown, seems to deal with
         ; invisible units?
@@ -122,9 +122,9 @@ GUARD_ZQOL_SWAP_ANIMATION_MODE :?= false
         .al
         .xl
         .autsiz
-        .databank `aOptions.wAnimationOption
+        .databank `aOptions.wAnimation
 
-        lda aOptions.wAnimationOption
+        lda aOptions.wAnimation
         and #$000F ; from options rework
         cmp #1
         beq _Map
@@ -151,8 +151,8 @@ GUARD_ZQOL_SWAP_ANIMATION_MODE :?= false
 
         _CheckIndividual
 
-        lda structActionStructEntry.TurnStatus,b,x
-        bit #TurnStatusMapAnim
+        lda structActionStructEntry.UnitState,b,x
+        bit #UnitStateMapAnim
         bne _Map
 
         _Normal
@@ -172,7 +172,7 @@ GUARD_ZQOL_SWAP_ANIMATION_MODE :?= false
         php
 
         lda wJoy1Input
-        bit #JoypadL
+        bit #JOY_L
         beq +
 
           sep #$20

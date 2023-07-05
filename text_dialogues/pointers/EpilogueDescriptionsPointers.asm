@@ -1,5 +1,5 @@
 * = $07E28C
-.logical lorom($07E28C, 1)
+.logical mapped($07E28C)
 
 aEpilogueEndingTable ; 8F/E28C
 	.long leifepi ; Leif
@@ -92,7 +92,7 @@ aEpilogueEndingTable ; 8F/E28C
 	.long $000000 ; BanditBrigand1
 	.long $000000 ; BanditHunter
 	.long $000000 ; BanditWarrior
-	.long $000000 ; Rumaigh
+	.long $000000 ; Lemay
 	.long $000000 ; Gomer
 	.long $000000 ; Merloch
 	.long $000000 ; ThracianWyvernKnight1
@@ -246,33 +246,39 @@ aEpilogueEndingTable ; 8F/E28C
 .here
 
 * = $0a6c81
-.logical lorom($0a6c81, 1)
+.logical mapped($0a6c81)
 .byte `LeifGoodEnding
 .here
 
 * = $0a6c85
-.logical lorom($0a6c85, 1)
+.logical mapped($0a6c85)
 .word <>LeifGoodEnding
 .here
 
 * = $0A6D76
-.logical lorom($0A6D76, 1)
+.logical mapped($0A6D76)
 
-.byte `captureddeathtext
+.byte `dialogueEpilogueCaptured
 
 .here
 
 * = $0A6D7A
-.logical lorom($0A6D7A, 1)
+.logical mapped($0A6D7A)
 
-.word <>captureddeathtext
+.word <>dialogueEpilogueCaptured
 
 .here
 
 * = $0A6D3B
-.logical lorom($0A6D3B, 1)
+.logical mapped($0A6D3B)
 
-.byte `killeddeathtext
+.byte `dialogueEpilogueKilled
 
 .here
 
+* = $0A6D3F
+.logical mapped($0A6D3F)
+
+.word <>dialogueEpilogueKilled
+
+.here

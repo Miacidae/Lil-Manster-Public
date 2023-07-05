@@ -9,30 +9,30 @@ rlSetupChapterTitleWindow ; 9A/8154
 	.databank ?
 
 	; Inputs:
-	; wProcInput1: lower part of text pointer
-	; wProcInput2: upper part of text pointer
+	; aProcSystem.wInput1: lower part of text pointer
+	; aProcSystem.wInput2: upper part of text pointer
 
 	; Outputs:
 	; None
 
-	lda wProcInput1,b
-	sta aProcBody1,b,x
-	lda wProcInput2,b
-	sta aProcBody2,b,x
+	lda aProcSystem.wInput1,b
+	sta aProcSystem.aBody1,b,x
+	lda aProcSystem.wInput2,b
+	sta aProcSystem.aBody2,b,x
 
 	sep #$20
 
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 
-	lda #TS_Setting(False, False, False, False, False)
-	sta bBuf_TS
+	lda #T_Setting(False, False, False, False, False)
+	sta bBufferTS
 
 	lda #CGWSEL_Setting(False, False, CGWSEL_MathAlways, CGWSEL_BlackNever)
-	sta bBuf_CGWSEL
+	sta bBufferCGWSEL
 
 	lda #CGADSUB_Setting(CGADSUB_Add, False, False, False, False, False, False, False)
-	sta bBuf_CGADSUB
+	sta bBufferCGADSUB
 
 	rep #$20
 
@@ -46,13 +46,13 @@ rlSetupChapterTitleWindow ; 9A/8154
 	lda #<>$A0E040
 	sta lR18
 
-	lda #(`aBGPal1)<<8
+	lda #(`aBGPaletteBuffer.aPalette1)<<8
 	sta lR19+1
-	lda #<>aBGPal1
+	lda #<>aBGPaletteBuffer.aPalette1
 	sta lR19
 
-	lda #size(aBGPal1)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette1)
+	sta lR20
 
 	jsl rlBlockCopy
 	rtl
@@ -99,7 +99,7 @@ aProcChapterTitleCode ; 9A/8198
 
 	.word <>rsProcCodeUnknown82A088
 
-	PROC_HALT_UNTIL_BUTTON_NEW_TIME 150, (JoypadA | JoypadStart | JoypadB)
+	PROC_HALT_UNTIL_BUTTON_NEW_TIME 150, (JOY_A | JOY_Start | JOY_B)
 	PROC_CALL $8EB1E2
 
 	PROC_CALL_ARGS $8EEC3A, size(_Args2)

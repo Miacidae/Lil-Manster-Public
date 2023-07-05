@@ -21,7 +21,7 @@ rlGetJoypadInput ; 80/8002
 
 	-
 	lda HVBJOY,b
-	and #HVBJOY.AutoJoypadFlag
+	and #HVBJOY_JoypadBusy
 	bne -
 
 	rep #$20
@@ -32,7 +32,7 @@ rlGetJoypadInput ; 80/8002
 
 	lda JOY1,b
 	sta wJoy1Input
-	and #JoypadID
+	and #JOY_ID
 	beq +
 
 	lda wJoy1Old
@@ -46,7 +46,7 @@ rlGetJoypadInput ; 80/8002
 	eor wJoy1Old
 	and wJoy1Input
 	sta wJoy1New
-	sta wJoy1Alt
+	sta wJoy1Repeated
 
 	; Check if a button is held
 	; and if it is the same combination
@@ -61,24 +61,24 @@ rlGetJoypadInput ; 80/8002
 	; While the combination is the same
 	; have a timer run out
 
-	dec wJoy1PressTime
+	dec wJoy1RepeatTimer
 	bne ++
 
 	; Once this timer runs out, set it
 	; to a shorter timer
 
 	lda wJoy1Input
-	sta wJoy1Alt
-	lda wJoyShortTime
-	sta wJoy1PressTime
+	sta wJoy1Repeated
+	lda wJoyRepeatInterval
+	sta wJoy1RepeatTimer
 	bra ++
 
 	+
 
 	; Reset press time to long
 
-	lda wJoyLongTime
-	sta wJoy1PressTime
+	lda wJoyRepeatDelay
+	sta wJoy1RepeatTimer
 
 	+
 
@@ -94,7 +94,7 @@ rlGetJoypadInput ; 80/8002
 
 	lda JOY2,b
 	sta wJoy2Input
-	and #JoypadID
+	and #JOY_ID
 	beq +
 
 	lda wJoy2Old
@@ -105,7 +105,7 @@ rlGetJoypadInput ; 80/8002
 	eor wJoy2Old
 	and wJoy2Input
 	sta wJoy2New
-	sta wJoy2Alt
+	sta wJoy2Repeated
 
 	lda wJoy2Input
 	beq +
@@ -113,18 +113,18 @@ rlGetJoypadInput ; 80/8002
 	cmp wJoy2Old
 	bne +
 
-	dec wJoy2PressTime
+	dec wJoy2RepeatTimer
 	bne ++
 
 	lda wJoy2Input
-	sta wJoy2Alt
-	lda wJoyShortTime
-	sta wJoy2PressTime
+	sta wJoy2Repeated
+	lda wJoyRepeatInterval
+	sta wJoy2RepeatTimer
 	bra ++
 
 	+
-	lda wJoyLongTime
-	sta wJoy2PressTime
+	lda wJoyRepeatDelay
+	sta wJoy2RepeatTimer
 
 	+
 	lda wJoy2Input

@@ -1,1028 +1,923 @@
 
-eventChapter14Events ; FD/9790
-
-	_OpeningEventDefinitions ; FD/9790
-		EVENT $00, _OpeningEvent
-			CMP_WORD wCurrentTurn, 0
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_TurnEventDefinitions ; FD/979D
-		EVENT $02, eventMapDeathQuoteDummyEvent
-			CHECK_DEAD Paulus
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $01, eventMapDeathQuoteDummyEvent
-			TEST_FLAG_SET $03
-		END_DEFINITION
-		EVENT $00, _ShannamLeave
-			CMP_WORD wCurrentTurn, 2
-			CMP_WORD wCurrentPhase, Player
-			TEST_FLAG_UNSET $2B
-		END_DEFINITION
-		EVENT $00, _CounterIncrease
-			CMP_WORD_RANGE wCurrentTurn, 6, 15
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $00, _LeftReinforcements
-			CMP_BYTE $7E4976, 0
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $00, _RightReinforcements
-			CMP_BYTE $7E4976, 0
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $00, _WyvernReinforcements
-			CMP_BYTE $7E4976, 3
-			CMP_WORD wCurrentPhase, NPC
-		END_DEFINITION
-		EVENT $00, _SorcererReinforcements
-			CMP_BYTE $7E4976, 4
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $00, _EndingEvent
-			CMP_BYTE $7E4976, 5
-			CMP_WORD wCurrentPhase, NPC
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_TalkEventDefinitions ; FD/982A
-	END_DEFINITION_ARRAY
-
-	_LocationEventDefinitions ; FD/982C
-		EVENT $25, _House1Visit
-			CMP_BYTE wCursorXCoord, 25
-			CMP_BYTE wCursorYCoord, 2
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $26, _House2Visit
-			CMP_BYTE wCursorXCoord, 21
-			CMP_BYTE wCursorYCoord, 5
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $27, _House3Visit
-			CMP_BYTE wCursorXCoord, 18
-			CMP_BYTE wCursorYCoord, 10
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $28, _House4Visit
-			CMP_BYTE wCursorXCoord, 10
-			CMP_BYTE wCursorYCoord, 10
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $29, _House5Visit
-			CMP_BYTE wCursorXCoord, 9
-			CMP_BYTE wCursorYCoord, 2
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $2A, _House6Visit
-			CMP_BYTE wCursorXCoord, 13
-			CMP_BYTE wCursorYCoord, 5
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $2B, _HomerHouseVisit
-			CMP_BYTE wCursorXCoord, 23
-			CMP_BYTE wCursorYCoord, 2
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $2C, _NosferatuHouseVisit
-			CMP_BYTE wCursorXCoord, 30
-			CMP_BYTE wCursorYCoord, 20
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $2D, _DragonpikeHouseDean
-			CMP_BYTE wCursorXCoord, 3
-			CMP_BYTE wCursorYCoord, 19
-			CMP_WORD aSelectedCharacterBuffer.Character, Dean
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $00, _DragonpikeHouseOther
-			TEST_FLAG_UNSET $2D
-			CMP_BYTE wCursorXCoord, 3
-			CMP_BYTE wCursorYCoord, 19
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $2E, _House1Destroy
-			CMP_BYTE wCursorXCoord, 25
-			CMP_BYTE wCursorYCoord, 2
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $2F, _House2Destroy
-			CMP_BYTE wCursorXCoord, 21
-			CMP_BYTE wCursorYCoord, 5
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $30, _House3Destroy
-			CMP_BYTE wCursorXCoord, 18
-			CMP_BYTE wCursorYCoord, 10
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $31, _House4Destroy
-			CMP_BYTE wCursorXCoord, 10
-			CMP_BYTE wCursorYCoord, 10
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $32, _House5Destroy
-			CMP_BYTE wCursorXCoord, 9
-			CMP_BYTE wCursorYCoord, 2
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $33, _House6Destroy
-			CMP_BYTE wCursorXCoord, 13
-			CMP_BYTE wCursorYCoord, 5
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $34, _HomerHouseDestroy
-			CMP_BYTE wCursorXCoord, 23
-			CMP_BYTE wCursorYCoord, 2
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $35, _NosferatuHouseDestroy
-			CMP_BYTE wCursorXCoord, 30
-			CMP_BYTE wCursorYCoord, 20
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $36, _DragonpikeHouseDestroy
-			CMP_BYTE wCursorXCoord, 3
-			CMP_BYTE wCursorYCoord, 19
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $21, _GateLeft
-			CMP_BYTE wCursorXCoord, 8
-			CMP_BYTE wCursorYCoord, 8
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $22, _GateRight
-			CMP_BYTE wCursorXCoord, 24
-			CMP_BYTE wCursorYCoord, 8
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $23, _WallLeft
-			CMP_BYTE wCursorXCoord, 12
-			CMP_BYTE wCursorYCoord, 12
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $24, _WallRight
-			CMP_BYTE wCursorXCoord, 20
-			CMP_BYTE wCursorYCoord, 12
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_BeforeActionEventDefinitions ; FD/9A19
-		EVENT $00, $99EC7F
-			CMP_BYTE wCursorXCoord, 16
-			CMP_BYTE wCursorYCoord, 1
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_AfterActionEventDefinitions ; FD/9A30
-		EVENT $37, _SpawnHomer
-			TEST_FLAG_SET $2B
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_BattleEventDefinitions ; FD/9A39
-		EVENT $08, eventBattleQuoteDummyEvent
-			CHECK_SINGLE Paulus
-		END_DEFINITION
-		EVENT $09, eventBattleQuoteDummyEvent
-			CHECK_SINGLE Baldach
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_ShopEventDefinitions ; FD/9A4B
-		EVENT $00, eventChapter14Data._Armory
-			CMP_BYTE_AT wCursorXCoord, eventChapter14Data._Armory
-			CMP_BYTE_AT wCursorYCoord, eventChapter14Data._Armory+1
-		END_DEFINITION
-		EVENT $00, eventChapter14Data._Vendor
-			CMP_BYTE_AT wCursorXCoord, eventChapter14Data._Vendor
-			CMP_BYTE_AT wCursorYCoord, eventChapter14Data._Vendor+1
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_House1Visit ; FD/9A73
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch14villager1
-		YIELD
-
-		SET_FLAG $9B
-
-		STORE_WORD wEventEngineXCoordinate, 25
-		STORE_WORD wEventEngineYCoordinate, 2
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_House2Visit ; FD/9A97
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch14villager2
-		YIELD
-
-		SET_FLAG $9C
-
-		STORE_WORD wEventEngineXCoordinate, 21
-		STORE_WORD wEventEngineYCoordinate, 5
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_House3Visit ; FD/9ABB
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch14villager3
-		YIELD
-
-		SET_FLAG $9D
-
-		STORE_WORD wEventEngineXCoordinate, 18
-		STORE_WORD wEventEngineYCoordinate, 10
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_House4Visit ; FD/9ADF
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch14villager4
-		YIELD
-
-		SET_FLAG $9E
-
-		STORE_WORD wEventEngineXCoordinate, 10
-		STORE_WORD wEventEngineYCoordinate, 10
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_House5Visit ; FD/9B03
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch14villager5
-		YIELD
-
-		SET_FLAG $9F
-
-		STORE_WORD wEventEngineXCoordinate, 9
-		STORE_WORD wEventEngineYCoordinate, 2
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_House6Visit ; FD/9B27
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch14villager6
-		YIELD
-
-		SET_FLAG $A0
-
-		STORE_WORD wEventEngineXCoordinate, 13
-		STORE_WORD wEventEngineYCoordinate, 5
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_HomerHouseVisit ; FD/9B4B
-		EVENT_CMP_BYTE_AT_EQ wUnknown001730, $00
-		JUMP_FALSE _Close
-
-		PLAY_SOUND_WORD $00F7
-		EVENT_CMP_WORD_AT_EQ aSelectedCharacterBuffer.Character, Nanna
-		JUMP_FALSE _SkipRecruitmentMusic
-
-		PLAY_SOUND_WORD $00E8
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $4A
-		YIELD
-
-		_SkipRecruitmentMusic
-		STORE_WORD wEventEngineCharacterTarget, $0000
-		STORE_WORD_FROM wEventEngineCharacterTarget, aSelectedCharacterBuffer.Character
-		DIALOGUE_ARRAY _HomerVisitorTable
-		JUMP_FALSE _DefaultDialogue
-
-		YIELD
-
-		EVENT_CMP_WORD_AT_EQ aSelectedCharacterBuffer.Character, Nanna
-		JUMP_FALSE +
-
-		_Close
-		STORE_WORD wEventEngineXCoordinate, 23
-		STORE_WORD wEventEngineYCoordinate, 2
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-		_DefaultDialogue
-		DIALOGUE ch14homermen
-		YIELD
-
-		+
-		UNSET_FLAG $2B
-	END2
-
-	_SpawnHomer ; FD/9BAC
-		LOAD1 eventChapter14Data._HomerGroup
-		WAIT_MOVE
-		YIELD
-	END2
-
-	_HomerVisitorTable ; FD/9BB3
-		.word Safy, $00FF
-		.long ch14homerwomen
-
-		.word Lara, $00FF
-		.long ch14homerkids
-
-		.word Eda, $00FF
-		.long ch14homerwomen
-
-		.word Macha, $00FF
-		.long ch14homerwomen
-
-		.word Nanna, $00FF
-		.long ch14homernanna
-
-		.word Selphina, $00FF
-		.long ch14homerwomen
-
-		.word Olwen, $00FF
-		.long ch14homerwomen
-
-		.word Karin, $00FF
-		.long ch14homerwomen
-
-		.word Tanya, $00FF
-		.long ch14homerwomen
-
-		.word Mareeta, $00FF
-		.long ch14homerkids
-
-		.word Tina, $00FF
-		.long ch14homerkids
-
-	.word $0000
-
-	_NosferatuHouseVisit ; FD/9C02
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch14nosferatuhouse
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitSetTurnStatus, $0000
-
-		STORE_WORD wEventEngineParameter1, Nosferatu
-		PAUSE_SKIPPABLE 10
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSetPopupGivenItemWithMaxDurability, $0000
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCSetupGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCSetupGiveToConvoyIfInventoryFull, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveToConvoyIfInventoryFull, $0000
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitUnsetTurnStatus, $0000
-
-		STORE_WORD wEventEngineXCoordinate, 30
-		STORE_WORD wEventEngineYCoordinate, 20
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_DragonpikeHouseDean ; $FD/9C65
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $3D
-		YIELD
-
-		DIALOGUE ch14dragonpikehousedean
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitSetTurnStatus, $0000
-
-		STORE_WORD wEventEngineParameter1, Dragonpike
-		PAUSE_SKIPPABLE 10
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSetPopupGivenItemWithMaxDurability, $0000
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCSetupGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCSetupGiveToConvoyIfInventoryFull, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveToConvoyIfInventoryFull, $0000
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitUnsetTurnStatus, $0000
-
-		STORE_WORD wEventEngineXCoordinate, 3
-		STORE_WORD wEventEngineYCoordinate, 19
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_DragonpikeHouseOther ; FD/9CCF
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch14dragonpikehouseother
-		YIELD
-	END2
-
-	_GateLeft ; FD/9CD8
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 0
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_GateRight ; FD/9D06
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 1
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_WallLeft ; FD/9D36
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 2
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_WallRight ; FD/9D65
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 3
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_House1Destroy ; FD/9D94
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 6
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_House2Destroy ; FD/9DC2
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 7
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_House3Destroy ; FD/9DF2
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 8
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_House4Destroy ; FD/9E21
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 9
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_House5Destroy ; FD/9E50
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 10
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_House6Destroy ; FD/9E7F
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 11
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_HomerHouseDestroy ; FD/9EAE
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 12
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_NosferatuHouseDestroy ; FD/9EDC
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 13
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_DragonpikeHouseDestroy ; FD/9F0C
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 14
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_WyvernReinforcements ; FD/9F3B
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $3D
-		YIELD
-
-		LOAD1 eventChapter14Data._TravantGroup
-		WAIT_MOVE
-		YIELD
-
-		SCROLL_CAMERA_CHAR Travant
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		LOAD1 eventChapter14Data._NPCGroup
-		WAIT_MOVE
-		YIELD
-
-		DIALOGUE ch14npcarrive
-		YIELD
-
-		MOVE_UNIT Travant, [0, 0], [21, 25], 2, _TravantMovestring
-		YIELD_UNK
-
-		WAIT_MOVE
-		YIELD
-
-		STORE_WORD wEventEngineCharacterTarget, Travant
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-	END2
-
-	_TravantMovestring ; FD/9F76
-		MS_MOVE_DOWN
-		MS_MOVE_DOWN
-	MS_END
-
-	_LeftReinforcements ; FD/9F79
-		SCROLL_CAMERA_ADDRESS eventChapter14Data._LeftReinforcementCameraCoordinates
-		YIELD
-
-		LOAD2 eventChapter14Data._LeftGroup
-		WAIT_MOVE
-		YIELD
-
-		YIELD_UNK
-	END2
-
-	_RightReinforcements ; FD/9F86
-		SCROLL_CAMERA_ADDRESS eventChapter14Data._RightReinforcementCameraCoordinates
-		YIELD
-
-		LOAD2 eventChapter14Data._RightGroup
-		WAIT_MOVE
-		YIELD
-
-		YIELD_UNK
-	END2
-
-	_SorcererReinforcements ; FD/9F93
-		SCROLL_CAMERA_ADDRESS eventChapter14Data._SorcererReinforcementCameraCoordinates
-		YIELD
-
-		LOAD2 eventChapter14Data._SorcererGroup
-		WAIT_MOVE
-		YIELD
-
-		YIELD_UNK
-	END2
-
-	_CounterIncrease ; FD/9FA0
-		ADD_BYTE $7E4976, 1
-		YIELD_UNK
-		YIELD_UNK
-	END1
-
-	_rlUnknownFD9FA8 ; FD/9FA8
-
-		.al
-		.xl
-		.autsiz
-		.databank ?
-
-		lda #structCharacterDataRAM.CapturedChapter
-		sta wEventEngineParameter1,b
-		lda #Chapter14
-		sta wEventEngineParameter2,b
-		jsl rlASMCCountPlayerUnitsWithCharacterDataByte
-		lda wEventEngineTruthFlag,b
-		beq _False
-
-		sec
-		bra _End
-
-		_False
-		clc
-
-		_End
-		rtl
-
-	_ShannamLeave ; FD/9FC2
-		EVENT_TEST_FLAG_SET $2B
-		JUMP_TRUE +
-
-		EVENT_TEST_FLAG_SET $34
-		JUMP_TRUE +
-
-		SCROLL_CAMERA_SPEED [23, 2], 4
-		YIELD
-
-		RESET_PHASE_MUSIC
-		YIELD
-
-		PLAY_SOUND_WORD $00F7
-		STORE_WORD wEventEngineParameter1, 3
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, ch14shannamleave
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
-		YIELD
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-		PLAY_SOUND_WORD $00E8
-
-		+
-	END2
-
-	_PrepGroups ; FD/A002
-		.long eventChapter14Data._PrepEnemies
-	.word $0000
-
-	_OpeningEvent ; FD/A007
-		STORE_WORD wEventEngineCharacterTarget, Dean
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Eda
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $39
-		YIELD
-
-		STORE_LONG wProcInput1+1, ch14titlename
-		STORE_WORD wProcInput1, <>ch14titlename
-		STORE_LONG lR43, $9A814C
-		CALL_ASM_SKIPPABLE rlEventEngineCreateProcAndSetActive, $0000
-		YIELD
-
-		SCROLL_CAMERA_ADDRESS eventChapter14Data._Opening1CameraCoordinates
-		YIELD
-
-		LOAD1 eventChapter14Data._DeanGroup
-		WAIT_MOVE
-		YIELD
-
-		SCROLL_CAMERA_CHAR Paulus
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		DIALOGUE ch14opening1
-		YIELD
-
-		MOVE_UNIT Baldach, [0, 0], [16, 17], 1, None
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 16
-		YIELD
-
-		WAIT_MOVE
-		YIELD
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $33
-		YIELD
-
-		SCROLL_CAMERA_CHAR Leif
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, 1
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, ch14opening2
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
-		YIELD
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-
-		LOAD1 eventChapter14Data._EdaGroup
-		WAIT_MOVE
-		YIELD
-	END2
-
-	_Unknown ; FD/A0AE
-	.word $0001
-
-	_EndingEvent ; FD/A0B0
-		STORE_WORD wEventEngineCharacterTarget, Leif
-		CALL_ASM_LOOP rlASMCCheckUnitExists, $0000
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 16
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd, $0000
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $44
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveChapterAndTurncount, $0000
-
-		LOAD1 eventChapter14Data._ArionGroup
-		WAIT_MOVE
-		YIELD
-
-		LOAD1 eventChapter14Data._TravantGroup
-		WAIT_MOVE
-		YIELD
-
-		SCROLL_CAMERA_CHAR Arion
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		DIALOGUE ch14ending1
-		YIELD
-
-		SCROLL_CAMERA_SPEED [16, 1], 4
-
-		MOVE_UNIT Arion, [0, 0], [16, 1], 2, None
-		YIELD_UNK
-
-		MOVE_UNIT Travant, [0, 0], [30, 24], 2, None
-		YIELD_UNK
-
-		WAIT_MOVE
-		YIELD
-
-		STORE_WORD wEventEngineCharacterTarget, Arion
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Travant
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		STORE_BYTE wEventEngineParameter1, $0000
-
-		EVENT_TEST_FLAG_SET $25
-		JUMP_FALSE +
-
-		ADD_BYTE wEventEngineParameter1, 1
-		YIELD_UNK
-		YIELD_UNK
-
-		+
-		EVENT_TEST_FLAG_SET $26
-		JUMP_FALSE +
-
-		ADD_BYTE wEventEngineParameter1, 1
-		YIELD_UNK
-		YIELD_UNK
-
-		+
-		EVENT_TEST_FLAG_SET $27
-		JUMP_FALSE +
-
-		ADD_BYTE wEventEngineParameter1, 1
-		YIELD_UNK
-		YIELD_UNK
-
-		+
-		EVENT_TEST_FLAG_SET $28
-		JUMP_FALSE +
-
-		ADD_BYTE wEventEngineParameter1, 1
-		YIELD_UNK
-		YIELD_UNK
-
-		+
-		EVENT_TEST_FLAG_SET $29
-		JUMP_FALSE +
-
-		ADD_BYTE wEventEngineParameter1, 1
-		YIELD_UNK
-		YIELD_UNK
-
-		+
-		EVENT_TEST_FLAG_SET $2A
-		JUMP_FALSE +
-
-		ADD_BYTE wEventEngineParameter1, 1
-		YIELD_UNK
-		YIELD_UNK
-
-		+
-		EVENT_CMP_BYTE_AT_LT wEventEngineParameter1, 3
-		JUMP_TRUE +
-
-		ADD_WORD wCurrentChapter, Chapter15 - Chapter14 - 1
-		YIELD_UNK
-
-		+
-		STORE_WORD wEventEngineParameter1, 1
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, ch14ending2
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-		YIELD
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut, $0000
-
-		STORE_BYTE bBuf_INIDISP, $00
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCChapterEnd, $0000
-	END1
-
-
+.weak
+  WARNINGS :?= "None"
+.endweak
+
+GUARD_FE5_CHAPTER14 :?= false
+.if (!GUARD_FE5_CHAPTER14)
+  GUARD_FE5_CHAPTER14 := true
+
+  ; Definitions
+
+    .weak
+
+    .endweak
+
+  ; Freespace inclusions
+
+    .section Chapter14EventsSection
+
+			eventChapter14Events ; FD/9790
+
+					_FlagPaulusBattleQuote 			= enum.enum($08)
+					_FlagBaldachBattleQuote 		= enum.enum()
+
+					_FlagGateLeft 							= enum.enum($21)
+					_FlagGateRight							= enum.enum()
+					_FlagWallLeft 							= enum.enum()
+					_FlagWallRight							= enum.enum()
+					_FlagHouse1Visit						= enum.enum()
+					_FlagHouse2Visit						= enum.enum()
+					_FlagHouse3Visit						= enum.enum()
+					_FlagHouse4Visit						= enum.enum()
+					_FlagHouse5Visit						= enum.enum()
+					_FlagHouse6Visit						= enum.enum()
+					_FlagHomerHouseNanna				= enum.enum()
+					_FlagNosferatuHouseVisit		= enum.enum()
+					_FlagDragonpikeHouseVisit		= enum.enum()
+					_FlagHouse1Destroy					= enum.enum()
+					_FlagHouse2Destroy					= enum.enum()
+					_FlagHouse3Destroy					= enum.enum()
+					_FlagHouse4Destroy					= enum.enum()
+					_FlagHouse5Destroy					= enum.enum()
+					_FlagHouse6Destroy					= enum.enum()
+					_FlagHomerHouseDestroy			= enum.enum()
+					_FlagNosferatuHouseDestroy	= enum.enum()
+					_FlagDragonpikeHouseDestroy	= enum.enum()
+					_FlagHomerSpawn							= enum.enum()
+
+				_OpeningEventDefinitions ; FD/9790
+					EVENT FlagAlwaysZero, _OpeningEvent
+						CMP_WORD wCurrentTurn, 0
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_TurnEventDefinitions ; FD/979D
+					EVENT FlagBossDeath, eventMapDeathQuoteDummyEvent
+						CHECK_IF_BOSS_DEAD Paulus
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT FlagAlliedDeath, eventMapDeathQuoteDummyEvent
+						TEST_FLAG_SET FlagPlayerDeath
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _ShannamLeave
+						CMP_WORD wCurrentTurn, 2
+						CMP_WORD wCurrentPhase, Player
+						TEST_FLAG_UNSET _FlagHomerHouseNanna
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _CounterIncrease
+						CMP_WORD_RANGE wCurrentTurn, 6, 15
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _LeftReinforcements
+						CMP_BYTE $7E4976, 0
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _RightReinforcements
+						CMP_BYTE $7E4976, 0
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _WyvernReinforcements
+						CMP_BYTE $7E4976, 3
+						CMP_WORD wCurrentPhase, NPC
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _SorcererReinforcements
+						CMP_BYTE $7E4976, 4
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _EndingEvent
+						CMP_BYTE $7E4976, 5
+						CMP_WORD wCurrentPhase, NPC
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_TalkEventDefinitions ; FD/982A
+				END_DEFINITION_ARRAY
+			
+				_LocationEventDefinitions ; FD/982C
+					EVENT _FlagHouse1Visit, _House1Visit
+						CMP_BYTE wCursorXCoord, 25
+						CMP_BYTE wCursorYCoord, 2
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagHouse2Visit, _House2Visit
+						CMP_BYTE wCursorXCoord, 21
+						CMP_BYTE wCursorYCoord, 5
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagHouse3Visit, _House3Visit
+						CMP_BYTE wCursorXCoord, 18
+						CMP_BYTE wCursorYCoord, 10
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagHouse4Visit, _House4Visit
+						CMP_BYTE wCursorXCoord, 10
+						CMP_BYTE wCursorYCoord, 10
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagHouse5Visit, _House5Visit
+						CMP_BYTE wCursorXCoord, 9
+						CMP_BYTE wCursorYCoord, 2
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagHouse6Visit, _House6Visit
+						CMP_BYTE wCursorXCoord, 13
+						CMP_BYTE wCursorYCoord, 5
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagHomerHouseNanna, _HomerHouseVisit
+						CMP_BYTE wCursorXCoord, 23
+						CMP_BYTE wCursorYCoord, 2
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagNosferatuHouseVisit, _NosferatuHouseVisit
+						CMP_BYTE wCursorXCoord, 30
+						CMP_BYTE wCursorYCoord, 20
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagDragonpikeHouseVisit, _DragonpikeHouseDean
+						CMP_BYTE wCursorXCoord, 3
+						CMP_BYTE wCursorYCoord, 19
+						CMP_WORD aSelectedCharacterBuffer.Character, Dean
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _DragonpikeHouseOther
+						TEST_FLAG_UNSET _FlagDragonpikeHouseVisit
+						CMP_BYTE wCursorXCoord, 3
+						CMP_BYTE wCursorYCoord, 19
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagHouse1Destroy, _House1Destroy
+						CMP_BYTE wCursorXCoord, 25
+						CMP_BYTE wCursorYCoord, 2
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagHouse2Destroy, _House2Destroy
+						CMP_BYTE wCursorXCoord, 21
+						CMP_BYTE wCursorYCoord, 5
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagHouse3Destroy, _House3Destroy
+						CMP_BYTE wCursorXCoord, 18
+						CMP_BYTE wCursorYCoord, 10
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagHouse4Destroy, _House4Destroy
+						CMP_BYTE wCursorXCoord, 10
+						CMP_BYTE wCursorYCoord, 10
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagHouse5Destroy, _House5Destroy
+						CMP_BYTE wCursorXCoord, 9
+						CMP_BYTE wCursorYCoord, 2
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagHouse6Destroy, _House6Destroy
+						CMP_BYTE wCursorXCoord, 13
+						CMP_BYTE wCursorYCoord, 5
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagHomerHouseDestroy, _HomerHouseDestroy
+						CMP_BYTE wCursorXCoord, 23
+						CMP_BYTE wCursorYCoord, 2
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagNosferatuHouseDestroy, _NosferatuHouseDestroy
+						CMP_BYTE wCursorXCoord, 30
+						CMP_BYTE wCursorYCoord, 20
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagDragonpikeHouseDestroy, _DragonpikeHouseDestroy
+						CMP_BYTE wCursorXCoord, 3
+						CMP_BYTE wCursorYCoord, 19
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagGateLeft, _GateLeft
+						CMP_BYTE wCursorXCoord, 8
+						CMP_BYTE wCursorYCoord, 8
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagGateRight, _GateRight
+						CMP_BYTE wCursorXCoord, 24
+						CMP_BYTE wCursorYCoord, 8
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagWallLeft, _WallLeft
+						CMP_BYTE wCursorXCoord, 12
+						CMP_BYTE wCursorYCoord, 12
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagWallRight, _WallRight
+						CMP_BYTE wCursorXCoord, 20
+						CMP_BYTE wCursorYCoord, 12
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_BeforeActionEventDefinitions ; FD/9A19
+					EVENT FlagAlwaysZero, eventChapter13Events._PlayerLoss
+						CMP_BYTE wCursorXCoord, 16
+						CMP_BYTE wCursorYCoord, 1
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_AfterActionEventDefinitions ; FD/9A30
+					EVENT _FlagHomerSpawn, _SpawnHomer
+						TEST_FLAG_SET _FlagHomerHouseNanna
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_BattleEventDefinitions ; FD/9A39
+					macroECBossQuote _FlagPaulusBattleQuote, Paulus
+					macroECBossQuote _FlagBaldachBattleQuote, Baldach
+				END_DEFINITION_ARRAY
+			
+				_ShopEventDefinitions ; FD/9A4B
+					macroECShop eventChapter14Data._Armory
+					macroECShop eventChapter14Data._Vendor
+				END_DEFINITION_ARRAY
+			
+				_House1Visit ; FD/9A73
+					macroDialogue dialogueChapter14Villager1
+			
+					SET_FLAG FlagChp14House1
+			
+					macroASMCSingleTileChangeByCoords [25, 2], $0021
+				END2
+			
+				_House2Visit ; FD/9A97
+					macroDialogue dialogueChapter14Villager2
+			
+					SET_FLAG FlagChp14House2
+			
+					macroASMCSingleTileChangeByCoords [21, 5], $0021
+				END2
+			
+				_House3Visit ; FD/9ABB
+					macroDialogue dialogueChapter14Villager3
+			
+					SET_FLAG FlagChp14House3
+
+					macroASMCSingleTileChangeByCoords [18, 10], $0021
+				END2
+			
+				_House4Visit ; FD/9ADF
+					macroDialogue dialogueChapter14Villager4
+			
+					SET_FLAG FlagChp14House4
+			
+					macroASMCSingleTileChangeByCoords [10, 10], $0021
+				END2
+			
+				_House5Visit ; FD/9B03
+					macroDialogue dialogueChapter14Villager5
+			
+					SET_FLAG FlagChp14House5
+
+					macroASMCSingleTileChangeByCoords [9, 2], $0021
+				END2
+			
+				_House6Visit ; FD/9B27
+					macroDialogue dialogueChapter14Villager6
+			
+					SET_FLAG FlagChp14House6
+
+					macroASMCSingleTileChangeByCoords [13, 5], $0021
+				END2
+			
+				_HomerHouseVisit ; FD/9B4B
+					EVENT_CMP_BYTE_EQ wEventEngineMapChangeFlag, $00
+					JUMP_FALSE _Close
+			
+						PLAY_SOUND_WORD $00F7
+						EVENT_CMP_WORD_EQ aSelectedCharacterBuffer.Character, Nanna
+						JUMP_FALSE _SkipRecruitmentMusic
+			
+							PLAY_SOUND_WORD $00E8
+							PLAY_SOUND_WORD $00E0
+							PAUSE_SKIPPABLE 32
+							YIELD
+			
+							SET_MUSIC $4A
+							YIELD
+			
+						_SkipRecruitmentMusic
+						STORE_WORD wEventEngineCharacterTarget, $0000
+						STORE_WORD_FROM wEventEngineCharacterTarget, aSelectedCharacterBuffer.Character
+						DIALOGUE_ARRAY _HomerVisitorTable
+						JUMP_FALSE _DefaultDialogue
+			
+						YIELD
+			
+						EVENT_CMP_WORD_EQ aSelectedCharacterBuffer.Character, Nanna
+						JUMP_FALSE +
+			
+					_Close
+					macroASMCSingleTileChangeByCoords [23, 2], $0021
+				END2
+			
+					_DefaultDialogue
+					DIALOGUE dialogueChapter14HomerMen
+					YIELD
+			
+					+
+					UNSET_FLAG _FlagHomerHouseNanna
+				END2
+			
+				_SpawnHomer ; FD/9BAC
+					LOAD_GROUP eventChapter14Data._HomerGroup
+					WAIT_MOVE
+					YIELD
+				END2
+			
+				_HomerVisitorTable ; FD/9BB3
+					.word Safy, $00FF
+					.long dialogueChapter14HomerWomen
+			
+					.word Lara, $00FF
+					.long dialogueChapter14HomerKids
+			
+					.word Eda, $00FF
+					.long dialogueChapter14HomerWomen
+			
+					.word Macha, $00FF
+					.long dialogueChapter14HomerWomen
+			
+					.word Nanna, $00FF
+					.long dialogueCh14HomerNanna
+			
+					.word Selphina, $00FF
+					.long dialogueChapter14HomerWomen
+			
+					.word Olwen, $00FF
+					.long dialogueChapter14HomerWomen
+			
+					.word Karin, $00FF
+					.long dialogueChapter14HomerWomen
+			
+					.word Tanya, $00FF
+					.long dialogueChapter14HomerWomen
+			
+					.word Mareeta, $00FF
+					.long dialogueChapter14HomerKids
+			
+					.word Tina, $00FF
+					.long dialogueChapter14HomerKids
+			
+				.word 0
+			
+				_NosferatuHouseVisit ; FD/9C02
+					macroItemHouse dialogueCh14NosferatuHouse, Nosferatu, [30, 20], $0021
+				END2
+			
+				_DragonpikeHouseDean ; $FD/9C65
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $3D
+					YIELD
+			
+					DIALOGUE dialogueChapter14DragonpikeHouseDean
+					YIELD
+			
+					macroASMCActiveUnitSetUnitState UnitStateHidden
+
+					macroGiveActiveUnitItem Dragonpike
+
+					macroASMCActiveUnitUnsetUnitState UnitStateHidden
+
+					macroASMCSingleTileChangeByCoords [3, 19], $0021
+				END2
+			
+				_DragonpikeHouseOther ; FD/9CCF
+					macroDialogue dialogueChapter14DragonpikeHouseOther
+				END2
+			
+				_GateLeft ; FD/9CD8
+					macroDestroyHouseByTileChangeID 0
+				END1
+			
+				_GateRight ; FD/9D06
+					macroDestroyHouseByTileChangeID 1
+				END1
+			
+				_WallLeft ; FD/9D36
+					macroDestroyHouseByTileChangeID 2
+				END1
+			
+				_WallRight ; FD/9D65
+					macroDestroyHouseByTileChangeID 3
+				END1
+			
+				_House1Destroy ; FD/9D94
+					macroDestroyHouseByTileChangeID 6
+				END1
+			
+				_House2Destroy ; FD/9DC2
+					macroDestroyHouseByTileChangeID 7
+				END1
+			
+				_House3Destroy ; FD/9DF2
+					macroDestroyHouseByTileChangeID 8
+				END1
+			
+				_House4Destroy ; FD/9E21
+					macroDestroyHouseByTileChangeID 9
+				END1
+			
+				_House5Destroy ; FD/9E50
+					macroDestroyHouseByTileChangeID 10
+				END1
+			
+				_House6Destroy ; FD/9E7F
+					macroDestroyHouseByTileChangeID 11
+				END1
+			
+				_HomerHouseDestroy ; FD/9EAE
+					macroDestroyHouseByTileChangeID 12
+				END1
+			
+				_NosferatuHouseDestroy ; FD/9EDC
+					macroDestroyHouseByTileChangeID 13
+				END1
+			
+				_DragonpikeHouseDestroy ; FD/9F0C
+					macroDestroyHouseByTileChangeID 14
+				END1
+			
+				_WyvernReinforcements ; FD/9F3B
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $3D
+					YIELD
+			
+					LOAD_GROUP eventChapter14Data._TravantGroup
+					WAIT_MOVE
+					YIELD
+			
+					GET_CHARACTER_COORDS Travant
+					SCROLL_CAMERA 4
+					YIELD
+			
+					LOAD_GROUP eventChapter14Data._NPCGroup
+					WAIT_MOVE
+					YIELD
+			
+					DIALOGUE dialogueChapter14NpcArrive
+					YIELD
+					
+					MOVE_CHAR Travant, [21, 25], 2, _TravantMovestring
+			
+					WAIT_MOVE
+					YIELD
+			
+					macroASMCRemoveUnit Travant
+				END2
+			
+				_TravantMovestring ; FD/9F76
+					MS_MOVE_DOWN
+					MS_MOVE_DOWN
+				MS_END
+			
+				_LeftReinforcements ; FD/9F79
+					SCROLL_CAMERA_ADDRESS eventChapter14Data._LeftReinforcementCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP_BLOCKABLE eventChapter14Data._LeftGroup
+					WAIT_MOVE
+					YIELD
+			
+					YIELD_UNK
+				END2
+			
+				_RightReinforcements ; FD/9F86
+					SCROLL_CAMERA_ADDRESS eventChapter14Data._RightReinforcementCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP_BLOCKABLE eventChapter14Data._RightGroup
+					WAIT_MOVE
+					YIELD
+			
+					YIELD_UNK
+				END2
+			
+				_SorcererReinforcements ; FD/9F93
+					SCROLL_CAMERA_ADDRESS eventChapter14Data._SorcererReinforcementCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP_BLOCKABLE eventChapter14Data._SorcererGroup
+					WAIT_MOVE
+					YIELD
+			
+					YIELD_UNK
+				END2
+			
+				_CounterIncrease ; FD/9FA0
+					ADD_BYTE $7E4976, 1
+					YIELD_UNK
+					YIELD_UNK
+				END1
+			
+				_rlUnknownFD9FA8 ; FD/9FA8
+			
+					.al
+					.xl
+					.autsiz
+					.databank ?
+			
+					lda #structCharacterDataRAM.CapturedChapter
+					sta wEventEngineParameter1,b
+					lda #Chapter14
+					sta wEventEngineParameter2,b
+					jsl rlASMCCountPlayerUnitsWithCharacterDataByte
+					lda wEventEngineTruthFlag,b
+					beq _False
+			
+					sec
+					bra _End
+			
+					_False
+					clc
+			
+					_End
+					rtl
+			
+				_ShannamLeave ; FD/9FC2
+					EVENT_TEST_FLAG_SET _FlagHomerHouseNanna
+					JUMP_TRUE +
+			
+						EVENT_TEST_FLAG_SET _FlagHomerHouseDestroy
+						JUMP_TRUE +
+			
+							SCROLL_CAMERA_COORDS [23, 2], 4
+							YIELD
+			
+							RESET_PHASE_MUSIC
+							YIELD
+			
+							PLAY_SOUND_WORD $00F7
+
+							macroDialogueWithBG dialogueChapter14ShannamLeave, 3
+
+							CALL_ASM_LOOP rlASMCDialogueWithBGEnd
+							YIELD
+			
+							HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
+							PLAY_SOUND_WORD $00E8
+
+					+
+				END2
+			
+				_PrepGroups ; FD/A002
+					.long eventChapter14Data._PrepEnemies
+				.word 0
+			
+				_OpeningEvent ; FD/A007
+					macroASMCRemoveUnit Dean
+			
+					macroASMCRemoveUnit Eda
+			
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $39
+					YIELD
+			
+					macroChapterTitlePopup dialogueChapter14Title
+			
+					SCROLL_CAMERA_ADDRESS eventChapter14Data._Opening1CameraCoordinates
+					YIELD
+			
+					LOAD_GROUP eventChapter14Data._DeanGroup
+					WAIT_MOVE
+					YIELD
+			
+					GET_CHARACTER_COORDS Paulus
+					SCROLL_CAMERA 4
+					YIELD
+			
+					DIALOGUE dialogueChapter14Opening1
+					YIELD
+			
+					MOVE_CHAR Baldach, [16, 17], 1, None
+			
+					PAUSE_SKIPPABLE 16
+					YIELD
+			
+					WAIT_MOVE
+					YIELD
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $33
+					YIELD
+			
+					GET_CHARACTER_COORDS Leif
+					SCROLL_CAMERA 4
+					YIELD
+			
+					macroDialogueWithBG dialogueChapter14Opening2, 1
+
+					CALL_ASM_LOOP rlASMCDialogueWithBGEnd
+					YIELD
+			
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
+			
+					LOAD_GROUP eventChapter14Data._EdaGroup
+					WAIT_MOVE
+					YIELD
+				END2
+			
+				_Unknown ; FD/A0AE
+				.word $0001
+			
+				_EndingEvent ; FD/A0B0
+					macroASMCCheckUnitExists Leif
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 16
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $44
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCSaveChapterAndTurncount
+			
+					LOAD_GROUP eventChapter14Data._ArionGroup
+					WAIT_MOVE
+					YIELD
+			
+					LOAD_GROUP eventChapter14Data._TravantGroup
+					WAIT_MOVE
+					YIELD
+			
+					GET_CHARACTER_COORDS Arion
+					SCROLL_CAMERA 4
+					YIELD
+			
+					DIALOGUE dialogueChapter14Ending1
+					YIELD
+			
+					SCROLL_CAMERA_COORDS [16, 1], 4
+			
+					MOVE_CHAR Arion, [16, 1], 2, None
+
+					MOVE_CHAR Travant, [30, 24], 2, None
+			
+					WAIT_MOVE
+					YIELD
+			
+					macroASMCRemoveUnit Arion
+			
+					macroASMCRemoveUnit Travant
+			
+					STORE_BYTE wEventEngineParameter1, $0000
+			
+					EVENT_TEST_FLAG_SET _FlagHouse1Visit
+					JUMP_FALSE +
+			
+						ADD_BYTE wEventEngineParameter1, 1
+						YIELD_UNK
+						YIELD_UNK
+			
+					+
+					EVENT_TEST_FLAG_SET _FlagHouse2Visit
+					JUMP_FALSE +
+			
+						ADD_BYTE wEventEngineParameter1, 1
+						YIELD_UNK
+						YIELD_UNK
+			
+					+
+					EVENT_TEST_FLAG_SET _FlagHouse3Visit
+					JUMP_FALSE +
+			
+						ADD_BYTE wEventEngineParameter1, 1
+						YIELD_UNK
+						YIELD_UNK
+			
+					+
+					EVENT_TEST_FLAG_SET _FlagHouse4Visit
+					JUMP_FALSE +
+			
+						ADD_BYTE wEventEngineParameter1, 1
+						YIELD_UNK
+						YIELD_UNK
+			
+					+
+					EVENT_TEST_FLAG_SET _FlagHouse5Visit
+					JUMP_FALSE +
+			
+						ADD_BYTE wEventEngineParameter1, 1
+						YIELD_UNK
+						YIELD_UNK
+			
+					+
+					EVENT_TEST_FLAG_SET _FlagHouse6Visit
+					JUMP_FALSE +
+			
+						ADD_BYTE wEventEngineParameter1, 1
+						YIELD_UNK
+						YIELD_UNK
+			
+					+
+					EVENT_CMP_BYTE_LT wEventEngineParameter1, 3
+					JUMP_TRUE +
+			
+						ADD_WORD wCurrentChapter, Chapter15 - Chapter14 - 1
+						YIELD_UNK
+			
+					+
+
+					macroDialogueWithBG dialogueChapter14Ending2, 1
+					YIELD
+			
+					HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+					FADE_OUT 1
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut
+			
+					STORE_BYTE bBufferINIDISP, $00
+					FADE_OUT 1
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCChapterEnd
+				END1
+
+    .endsection Chapter14EventsSection
+
+    .section Chapter14DataSection
+
+			eventChapter14Data ; B1/B9FF
+
+				_PrepEnemies ; B1/B9FF
+					.byte 8, 7
+			
+					UNIT FriegeArmoredAxe1, Enemy, [10, 16], [10, 16], Baldach, [BattleAxe], 14, False, [$00, $0F, $01, $00]
+					UNIT FriegeBallista1, Enemy, [29, 4], [29, 4], Paulus, [Ballista], 5, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [26, 7], [26, 7], Paulus, [Ballista], 5, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [6, 7], [6, 7], Paulus, [Ballista], 5, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [3, 4], [3, 4], Paulus, [Ballista], 5, False, [$01, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [12, 16], [12, 16], Baldach, [BattleAxe], 14, False, [$00, $17, $01, $00]
+					UNIT FriegeBallista5, Enemy, [3, 21], [3, 21], Paulus, [IronBallista], 5, False, [$01, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [14, 16], [14, 16], Baldach, [BattleAxe], 14, False, [$00, $0F, $01, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [16, 16], [16, 16], Baldach, [BattleAxe], 14, False, [$00, $0F, $01, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [18, 16], [18, 16], Baldach, [BattleAxe], 14, False, [$00, $0F, $01, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [20, 16], [20, 16], Baldach, [BattleAxe], 14, False, [$00, $17, $01, $00]
+					UNIT FriegeArmoredLance1, Enemy, [11, 16], [11, 16], Baldach, [Javelin], 12, False, [$00, $0F, $01, $00]
+					UNIT FriegeArmoredLance1, Enemy, [13, 16], [13, 16], Baldach, [Javelin], 12, False, [$00, $0F, $01, $00]
+					UNIT FriegeArmoredLance1, Enemy, [15, 16], [15, 16], Baldach, [Javelin], 12, False, [$00, $0F, $01, $00]
+					UNIT FriegeArmoredLance1, Enemy, [17, 16], [17, 16], Baldach, [Javelin], 12, False, [$00, $0F, $01, $00]
+					UNIT FriegeArmoredLance1, Enemy, [19, 16], [19, 16], Baldach, [Javelin], 12, False, [$00, $0F, $01, $00]
+					UNIT FriegeArmoredLance1, Enemy, [21, 16], [21, 16], Baldach, [Javelin], 12, False, [$00, $0F, $01, $00]
+					UNIT FriegeArmoredLance2, Enemy, [2, 9], [2, 9], Paulus, [Greatlance], 15, False, [$00, $0F, $00, $00]
+					UNIT FriegeArmoredAxe2, Enemy, [2, 8], [2, 8], Paulus, [Hammer], 10, False, [$00, $17, $00, $00]
+					UNIT FriegeArmoredAxe2, Enemy, [2, 10], [2, 10], Paulus, [Hammer], 10, False, [$00, $17, $00, $00]
+					UNIT Baldach, Enemy, [4, 20], [4, 20], Baldach, [MasterLance, KillerBow, Ridersbane, Vulnerary], 14, False, [$00, $0F, $02, $02]
+					UNIT FriegePriest1, Enemy, [15, 17], [15, 17], Baldach, [Heal], 3, False, [$03, $07, $00, $00]
+					UNIT FriegePriest1, Enemy, [17, 17], [17, 17], Baldach, [Heal], 3, False, [$03, $07, $00, $00]
+					UNIT FriegePriest1, Enemy, [2, 22], [2, 22], Paulus, [Physic], 5, False, [$03, $07, $00, $00]
+					UNIT FriegePriest1, Enemy, [3, 22], [3, 22], Paulus, [Physic], 5, False, [$03, $07, $00, $00]
+					UNIT FriegeArmoredLance2, Enemy, [6, 18], [6, 18], Paulus, [KillerLance, Vulnerary], 16, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredLance2, Enemy, [6, 19], [6, 19], Paulus, [KillerLance, Vulnerary], 16, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredLance2, Enemy, [4, 17], [4, 17], Paulus, [KillerLance, Vulnerary], 16, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredLance2, Enemy, [4, 21], [4, 21], Paulus, [KillerLance, Vulnerary], 16, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredBow2, Enemy, [2, 7], [2, 7], Paulus, [Longbow], 10, False, [$00, $0F, $00, $00]
+					UNIT FriegeMage2, Enemy, [2, 11], [2, 11], Paulus, [Thunder], 8, False, [$00, $0F, $00, $00]
+					UNIT FriegeArmoredBow2, Enemy, [29, 7], [29, 7], Paulus, [Longbow], 10, False, [$00, $0F, $00, $00]
+					UNIT FriegeArmoredAxe2, Enemy, [29, 8], [29, 8], Paulus, [Hammer], 10, False, [$00, $17, $00, $00]
+					UNIT FriegeArmoredLance2, Enemy, [29, 9], [29, 9], Paulus, [Greatlance], 15, False, [$00, $0F, $00, $00]
+					UNIT FriegeArmoredAxe2, Enemy, [29, 10], [29, 10], Paulus, [Hammer], 10, False, [$00, $17, $00, $00]
+					UNIT FriegeMage2, Enemy, [29, 11], [29, 11], Paulus, [Thunder], 8, False, [$00, $0F, $00, $00]
+					UNIT Paulus, Enemy, [3, 20], [3, 20], Paulus, [MasterAxe, Tornado, Vulnerary], 14, True, [$0B, $03, $00, $80]
+					UNIT FriegeBishop2, Enemy, [4, 19], [4, 19], Paulus, [Thunder, Physic, Bolting, Heal], 8, False, [$01, $03, $00, $00]
+				UNIT
+			
+				_LeftReinforcementCameraCoordinates ; B1/BCFB
+					.byte 8, 10
+			
+				_LeftGroup ; B1/BCFD
+					UNIT FriegeArmoredBow2, Enemy, [0, 7], [1, 7], Paulus, [Longbow], 10, False, [$00, $0F, $00, $00]
+					UNIT FriegeArmoredAxe2, Enemy, [0, 8], [1, 8], Paulus, [Hammer], 10, False, [$00, $17, $00, $00]
+					UNIT FriegeArmoredLance2, Enemy, [0, 9], [1, 9], Paulus, [Greatlance], 15, False, [$00, $0F, $00, $00]
+					UNIT FriegeArmoredAxe2, Enemy, [0, 10], [1, 10], Paulus, [Hammer], 10, False, [$00, $17, $00, $00]
+					UNIT FriegeMage2, Enemy, [0, 11], [1, 11], Paulus, [Thunder], 8, False, [$00, $0F, $00, $00]
+				UNIT
+			
+				_RightReinforcementCameraCoordinates ; B1/BD63
+					.byte 22, 10
+			
+				_RightGroup ; B1/BD65
+					UNIT FriegeArmoredBow2, Enemy, [31, 7], [30, 7], Paulus, [Longbow], 10, False, [$00, $0F, $00, $00]
+					UNIT FriegeArmoredAxe2, Enemy, [31, 8], [30, 8], Paulus, [Hammer], 10, False, [$00, $17, $00, $00]
+					UNIT FriegeArmoredLance2, Enemy, [31, 9], [30, 9], Paulus, [Greatlance], 15, False, [$00, $0F, $00, $00]
+					UNIT FriegeArmoredAxe2, Enemy, [31, 10], [30, 10], Paulus, [Hammer], 10, False, [$00, $17, $00, $00]
+					UNIT FriegeMage2, Enemy, [31, 11], [30, 11], Paulus, [Thunder], 8, False, [$00, $0F, $00, $00]
+				UNIT
+			
+				_UnusedCoordinates1 ; B1/BDCB
+					.byte 16, 18
+			
+				_NPCGroup ; B1/BDCD
+					UNIT McCloy, NPC, [16, 25], [16, 24], McCloy, [SilverLance, Javelin, Vulnerary], 15, False, [$00, $0F, $02, $02]
+					UNIT ThraciaDracoknight1, NPC, [15, 25], [15, 24], McCloy, [Ridersbane, Vulnerary], 12, False, [$00, $0F, $02, $02]
+					UNIT ThraciaDracoknight1, NPC, [14, 25], [14, 24], McCloy, [Javelin, Vulnerary], 12, False, [$00, $0F, $02, $02]
+					UNIT ThraciaDracoknight1, NPC, [13, 25], [13, 24], McCloy, [Ridersbane, Vulnerary], 12, False, [$00, $0F, $02, $02]
+					UNIT ThraciaDracoknight1, NPC, [17, 25], [17, 24], McCloy, [Javelin, Vulnerary], 12, False, [$00, $0F, $02, $02]
+					UNIT ThraciaDracoknight1, NPC, [18, 25], [18, 24], McCloy, [Ridersbane, Vulnerary], 12, False, [$00, $0F, $02, $02]
+					UNIT ThraciaDracoknight1, NPC, [19, 25], [19, 24], McCloy, [Javelin, Vulnerary], 12, False, [$00, $0F, $02, $02]
+				UNIT
+			
+				_SorcererReinforcementCameraCoordinates ; B1/BE5B
+					.byte 23, 8
+			
+				_SorcererGroup ; B1/BE5D
+					UNIT LoptrianSorcerer1, Enemy, [30, 3], [30, 3], Codha, [Jormungand], 18, False, [$00, $00, $01, $00]
+					UNIT LoptrianSorcerer1, Enemy, [30, 4], [30, 4], Codha, [Jormungand], 18, False, [$00, $00, $01, $00]
+					UNIT LoptrianSorcerer1, Enemy, [30, 5], [30, 5], Codha, [Jormungand], 18, False, [$00, $00, $01, $00]
+					UNIT LoptrianSorcerer1, Enemy, [30, 6], [30, 6], Codha, [Jormungand], 18, False, [$00, $00, $01, $00]
+					UNIT LoptrianSorcerer1, Enemy, [30, 7], [30, 7], Codha, [Jormungand], 18, False, [$00, $00, $01, $00]
+					UNIT LoptrianSorcerer1, Enemy, [30, 8], [30, 8], Codha, [Jormungand], 18, False, [$00, $00, $01, $00]
+					UNIT LoptrianSorcerer1, Enemy, [30, 9], [30, 9], Codha, [Jormungand], 18, False, [$00, $00, $01, $00]
+					UNIT LoptrianSorcerer1, Enemy, [30, 10], [30, 10], Codha, [Jormungand], 18, False, [$00, $00, $01, $00]
+					UNIT LoptrianSorcerer1, Enemy, [30, 11], [30, 11], Codha, [Jormungand], 18, False, [$00, $00, $01, $00]
+				UNIT
+			
+				_UnusedCoordinates2 ; B1/BF13
+					.byte 21, 18
+			
+				_ArionGroup ; B1/BF15
+					UNIT Arion, NPC, [22, 23], [22, 23], Arion, [SilverLance], 20, False, [$02, $04, $00, $00]
+				UNIT
+			
+				_UnusedCoordinates3 ; B1/BF2B
+					.byte 21, 18
+			
+				_TravantGroup ; B1/BF2D
+					UNIT Travant, NPC, [21, 23], [21, 23], Travant, [SilverLance], 20, False, [$02, $03, $00, $00]
+				UNIT
+			
+				_UnusedCoordinates4 ; B1/BF43
+					.byte 23, 8
+			
+				_HomerGroup ; B1/BF45
+					UNIT Homer, Player, [23, 1], [23, 1], Leif, [Light, StaminaDrink], 5, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_Opening1CameraCoordinates ; B1/BF5B
+					.byte 16, 11
+			
+				_DeanGroup ; B1/BF5D
+					UNIT Dean, Player, [16, 11], [16, 11], Dean, [SilverLance, IronBlade, DainnsScroll], 3, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_UnusedCoordinates5 ; B1/BF73
+					.byte 15, 8
+			
+				_EdaGroup ; B1/BF75
+					UNIT Eda, Player, [15, 2], [15, 2], Dean, [KillerLance, SlimSword], 5, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_StartingPositions ; B1/BF8B
+					.byte 16, 2
+					.byte 16, 3
+					.byte 15, 3
+					.byte 17, 3
+					.byte 14, 3
+					.byte 18, 3
+					.byte 16, 4
+					.byte 15, 4
+					.byte 17, 4
+					.byte 16, 5
+					.byte 15, 5
+					.byte 17, 5
+					.byte 16, 6
+					.byte 15, 6
+					.byte 17, 6
+				.byte $FF
+			
+				_Armory ; B1/BFAA
+					SHOP [8, 2], [SlimSword, IronBlade, SilverSword, SteelBow]
+			
+				_Vendor ; B1/BFBC
+					SHOP [10, 2], [Thunder, Heal, Vulnerary, Antitoxin, StaminaDrink]
+			
+    .endsection Chapter14DataSection
+
+.endif ; GUARD_FE5_CHAPTER14

@@ -11,7 +11,7 @@ rlProcEventPauseInit ; 82/8E4F
 	.autsiz
 	.databank ?
 
-	ldy wEventExecutionOffset,b
+	ldy wEventEngineOffset,b
 	lda [lR22],y
 	cmp #2
 	bge +
@@ -19,7 +19,7 @@ rlProcEventPauseInit ; 82/8E4F
 	lda #2
 
 	+
-	sta aProcBody0,b,x
+	sta aProcSystem.aBody0,b,x
 	rtl
 
 rlProcEventPauseOnCycle ; 82/8E60
@@ -29,7 +29,7 @@ rlProcEventPauseOnCycle ; 82/8E60
 	.autsiz
 	.databank ?
 
-	dec aProcBody0,b,x
+	dec aProcSystem.aBody0,b,x
 	bne +
 
 	jsl rlEventEngineDeleteProcAndClearActive
@@ -63,7 +63,7 @@ rlProcEventPauseUntilButtonOnCycle ; 82/8E77
 	.databank ?
 
 	lda wJoy1New
-	bit #JoypadX | JoypadA | JoypadY | JoypadB
+	bit #JOY_X | JOY_A | JOY_Y | JOY_B
 	beq +
 
 	jsl rlEventEngineDeleteProcAndClearActive
@@ -87,9 +87,9 @@ rlProcEventPauseUntilTimeOrButtonInit ; 82/8E8F
 	.autsiz
 	.databank ?
 
-	ldy wEventExecutionOffset,b
+	ldy wEventEngineOffset,b
 	lda [lR22],y
-	sta aProcBody0,b,x
+	sta aProcSystem.aBody0,b,x
 	rtl
 
 rlProcEventPauseUntilTimeOrButtonOnCycle ; 82/8E98
@@ -99,11 +99,11 @@ rlProcEventPauseUntilTimeOrButtonOnCycle ; 82/8E98
 	.autsiz
 	.databank ?
 
-	dec aProcBody0,b,x
+	dec aProcSystem.aBody0,b,x
 	beq +
 
 	lda wJoy1New
-	bit #JoypadX | JoypadA | JoypadY | JoypadB
+	bit #JOY_X | JOY_A | JOY_Y | JOY_B
 	bne +
 
 	rtl

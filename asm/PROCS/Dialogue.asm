@@ -13,7 +13,7 @@ rlProcDialogueInit ; 82/867C
 	.databank ?
 
 	lda #8
-	sta aProcBody0,b,x
+	sta aProcSystem.aBody0,b,x
 
 	jsl $8593EB
 	jsl rlUnknown8CCA8C
@@ -31,15 +31,15 @@ rlProcDialogueInit ; 82/867C
 	; Text uses BG3, so we reset it
 
 	lda #0
-	sta wBuf_BG3VOFS
+	sta wBufferBG3VOFS
 
 	lda #0
-	sta wBuf_BG3HOFS
+	sta wBufferBG3HOFS
 
 	sep #$20
-	lda bBuf_BG3SC
-	and #~BGSC_Setting(BGSize64x32)
-	sta bBuf_BG3SC
+	lda bBufferBG3SC
+	and #~BGSC_Setting(0, BGSC_64x32)
+	sta bBufferBG3SC
 	rep #$20
 
 	; Copy a blank tile
@@ -126,30 +126,30 @@ rlProcDialogueGetPalettes ; 82/8738
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 
 	; Wait to be able to decompress
 
-	lda bDecompListFlag,b
+	lda bDecompressionArrayFlag,b
 	and #$00FF
 	bne _End
 
 	phx
 	lda #$00E0
-	sta aProcBody1,b,x
+	sta aProcSystem.aBody1,b,x
 
 	; Copy original BG palettes
 
-	lda #(`aBGPal3)<<8
+	lda #(`aBGPaletteBuffer.aPalette3)<<8
 	sta lR18+1
-	lda #<>aBGPal3
+	lda #<>aBGPaletteBuffer.aPalette3
 	sta lR18
 	lda #(`$7E4CF8)<<8
 	sta lR19+1
 	lda #<>$7E4CF8
 	sta lR19
-	lda #aOAMPal0 - aBGPal3
-	sta wR20
+	lda #aOAMPaletteBuffer.aPalette0 - aBGPaletteBuffer.aPalette3
+	sta lR20
 	jsl rlBlockCopy
 
 	; Grab our target fade palette
@@ -163,20 +163,20 @@ rlProcDialogueGetPalettes ; 82/8738
 	jsl rlAppendDecompList
 
 	lda #(`aDialogueBoxHDMAInfo)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>aDialogueBoxHDMAInfo
-	sta lR43
+	sta lR44
 	lda #$0006
-	sta wR39
+	sta wR40
 	jsl rlHDMAArrayEngineCreateEntryByIndex
 
 	; Sleep
 
 	plx
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	_End
@@ -189,11 +189,11 @@ rlProcDialogueFadeToPalette ; 82/8799
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 
 	; Wait to be able to decompress
 
-	lda bDecompListFlag,b
+	lda bDecompressionArrayFlag,b
 	and #$00FF
 	bne _End
 
@@ -213,9 +213,9 @@ rlProcDialogueFadeToPalette ; 82/8799
 	bcc _End
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	_End
@@ -228,11 +228,11 @@ rlProcDialogueMain ; 82/87C5
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 
 	; Wait for max brightness
 
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	and #$00FF
 	cmp #INIDISP_Setting(False, 15)
 	beq +
@@ -246,7 +246,7 @@ rlProcDialogueMain ; 82/87C5
 	; Offset text layer by half a tile
 
 	lda #4
-	sta wBuf_BG3HOFS
+	sta wBufferBG3HOFS
 
 	; Main handler
 
@@ -255,7 +255,7 @@ rlProcDialogueMain ; 82/87C5
 
 	; Wait until dialogue is finished
 
-	lda wUnknown0017E9,b
+	lda wDialogueEngineStatus,b
 	bit #$0001
 	beq +
 
@@ -279,7 +279,7 @@ rlProcDialogueMain ; 82/87C5
 	lda #<>aBG1TilemapBuffer
 	sta lR18
 	lda #$0800
-	sta wR19
+	sta lR19
 	lda #$02FF
 	jsl rlBlockFillWord
 
@@ -288,7 +288,7 @@ rlProcDialogueMain ; 82/87C5
 	lda #<>aBG3TilemapBuffer
 	sta lR18
 	lda #$0800
-	sta wR19
+	sta lR19
 	lda #$01DF
 	jsl rlBlockFillWord
 
@@ -304,20 +304,20 @@ rlProcDialogueMain ; 82/87C5
 
 	; Reset BG3 size
 
-	stz wBuf_BG3HOFS
+	stz wBufferBG3HOFS
 	sep #$20
-	lda bBuf_BG3SC
-	ora #BGSC_Setting(BGSize64x32)
-	sta bBuf_BG3SC
+	lda bBufferBG3SC
+	ora #BGSC_Setting(0, BGSC_64x32)
+	sta bBufferBG3SC
 	rep #$20
 	plx
 	phx
 
 	; Sleep
 
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	; Reset our palettes
@@ -331,7 +331,7 @@ rlProcDialogueMain ; 82/87C5
 	lda #<>$7E4BF8
 	sta lR19
 	lda #$20 * 5
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 
 	_End
@@ -346,7 +346,7 @@ rlUnknown828880 ; 82/8880
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	phx
 	lda #$0010
 	sta wUnknown0017D7,b
@@ -360,9 +360,9 @@ rlUnknown828880 ; 82/8880
 	bcc +
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 	lda #$0006
 	jsl rlHDMAArrayEngineFreeEntryByIndex
@@ -377,7 +377,7 @@ rlUnknown8288AB ; 82/88AB
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	lda bDMAArrayFlag,b
 	and #$00FF
 	bne +
@@ -389,9 +389,9 @@ rlUnknown8288AB ; 82/88AB
 
 	plx
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	+
@@ -404,7 +404,7 @@ rlUnknown8288D1 ; 82/88D1
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	lda bDMAArrayFlag,b
 	and #$00FF
 	bne +
@@ -416,9 +416,9 @@ rlUnknown8288D1 ; 82/88D1
 
 	plx
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	+
@@ -431,7 +431,7 @@ rlUnknown8288F7 ; 82/88F7
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	lda bDMAArrayFlag,b
 	and #$00FF
 	bne +
@@ -443,9 +443,9 @@ rlUnknown8288F7 ; 82/88F7
 
 	plx
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	+
@@ -458,7 +458,7 @@ rlUnknown82891D ; 82/891D
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	lda bDMAArrayFlag,b
 	and #$00FF
 	bne +
@@ -470,9 +470,9 @@ rlUnknown82891D ; 82/891D
 
 	plx
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	+
@@ -485,7 +485,7 @@ rlUnknown828943 ; 82/8943
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	lda bDMAArrayFlag,b
 	and #$00FF
 	bne +
@@ -494,13 +494,13 @@ rlUnknown828943 ; 82/8943
 	jsl $85968D
 
 	lda #$0000
-	sta wBuf_BG3HOFS
+	sta wBufferBG3HOFS
 
 	plx
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	+
@@ -569,31 +569,31 @@ rlUnknown8289AE ; 82/89AE
 	jsl $958157
 
 	lda #$0020
-	tsb wUnknown0017E9,b
+	tsb wDialogueEngineStatus,b
 
 	lda #$0001
 	sta wUnknown001800,b
 
 	lda #$0004
-	sta wBuf_BG3HOFS
+	sta wBufferBG3HOFS
 
 	lda wEventEngineStatus,b
 	bit #$8000
 	beq +
 
 	lda #$0040
-	tsb wUnknown0017E9,b
+	tsb wDialogueEngineStatus,b
 
 	+
 	sep #$20
-	lda #TM_Setting(True, False, True, False, False)
-	tsb bBuf_TM
+	lda #T_Setting(True, False, True, False, False)
+	tsb bBufferTM
 	lda #CGWSEL_Setting(False, False, CGWSEL_MathAlways, CGWSEL_BlackNever)
-	sta bBuf_CGWSEL
+	sta bBufferCGWSEL
 	lda #CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	sta bBuf_CGADSUB
-	lda #COLDATA_Setting(0)
-	sta bBuf_COLDATA_0
+	sta bBufferCGADSUB
+	lda #COLDATA_Setting(0, False, False, False)
+	sta bBufferCOLDATA_0
 	jsl rlUnknown8289ED
 	plp
 	rtl
@@ -607,17 +607,17 @@ rlUnknown8289ED ; 82/89ED
 
 	php
 	sep #$20
-	lda bBuf_COLDATA_0
-	ora #COLDATA.ApplyRed
-	sta bBuf_COLDATA_1
+	lda bBufferCOLDATA_0
+	ora #COLDATA_ApplyRed
+	sta bBufferCOLDATA_1
 	sta COLDATA,b
-	lda bBuf_COLDATA_0
-	ora #COLDATA.ApplyGreen
-	sta bBuf_COLDATA_2
+	lda bBufferCOLDATA_0
+	ora #COLDATA_ApplyGreen
+	sta bBufferCOLDATA_2
 	sta COLDATA,b
-	lda bBuf_COLDATA_0
-	ora #COLDATA.ApplyBlue
-	sta bBuf_COLDATA_3
+	lda bBufferCOLDATA_0
+	ora #COLDATA_ApplyBlue
+	sta bBufferCOLDATA_3
 	sta COLDATA,b
 	plp
 	rtl
@@ -640,11 +640,11 @@ rlUnknown828A0D ; 82/8A0D
 	lda #$0000
 	rol a
 	eor #$0001
-	sta aProcBody2,b,x
+	sta aProcSystem.aBody2,b,x
 	beq +
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	sta aProcBody3,b,x
+	lda aSelectedCharacterBuffer.UnitState,b
+	sta aProcSystem.aBody3,b,x
 
 	lda aSelectedCharacterBuffer.Character,b
 	sta @l wUnknown001834
@@ -676,16 +676,16 @@ rlProcDialogueUnknown828A38Init ; 82/8A42
 	.autsiz
 	.databank ?
 
-	ldy wEventExecutionOffset,b
-	lda lEventStartPointer+1,b
+	ldy wEventEngineOffset,b
+	lda lEventEngineStartPointer+1,b
 	sta lR22+1,b
-	lda lEventStartPointer,b
+	lda lEventEngineStartPointer,b
 	sta lR22,b
 	lda [lR22],y
-	sta aProcBody4,b,x
+	sta aProcSystem.aBody4,b,x
 	inc y
 	lda [lR22],y
-	sta aProcBody5,b,x
+	sta aProcSystem.aBody5,b,x
 
 	inc y
 	inc y
@@ -697,43 +697,43 @@ rlProcDialogueUnknown828A38Init ; 82/8A42
 	lda #$FFFF
 
 	+
-	sta aProcBody2,b,x
+	sta aProcSystem.aBody2,b,x
 	inc y
 	lda [lR22],y
 	and #$00FF
-	sta aProcBody3,b,x
+	sta aProcSystem.aBody3,b,x
 
 	lda #$040A
 	sta $7E45C3
 
 	lda #$070B
-	sta aProcBody0,b,x
+	sta aProcSystem.aBody0,b,x
 	jsl rlUnknown828C66
 
 	lda #$0140
-	tsb wUnknown0017E9,b
+	tsb wDialogueEngineStatus,b
 
 	lda #$0000
 	sta @l wUnknown001836
 
-	lda #(`aBGPal0)<<8
+	lda #(`aBGPaletteBuffer.aPalette0)<<8
 	sta lR18+1
-	lda #<>aBGPal0
+	lda #<>aBGPaletteBuffer.aPalette0
 	sta lR18
 	lda #(`$7E4BF8)<<8
 	sta lR19+1
 	lda #<>$7E4BF8
 	sta lR19
-	lda #size(aBGPal0)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette0)
+	sta lR20
 	jsl rlBlockCopy
 
-	lda #(`aBGPal0)<<8
+	lda #(`aBGPaletteBuffer.aPalette0)<<8
 	sta lR18+1
-	lda #<>aBGPal0
+	lda #<>aBGPaletteBuffer.aPalette0
 	sta lR18
-	lda #size(aBGPal0)
-	sta wR19
+	lda #size(aBGPaletteBuffer.aPalette0)
+	sta lR19
 	lda $00 ; should be #$0000?
 	jsl rlBlockFillWord
 	rtl
@@ -819,17 +819,17 @@ rlUnknown828B3F ; 82/8B3F
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 
 	phx
 	jsl $958233
 	plx
 
-	lda wUnknown0017E9,b
+	lda wDialogueEngineStatus,b
 	bit #$0001
 	bne +
 
-	lda wUnknown0017FE,b
+	lda wDialogueEngineTotalPixelWidth,b
 	lsr a
 	lsr a
 	lsr a
@@ -837,10 +837,10 @@ rlUnknown828B3F ; 82/8B3F
 	adc #$0004
 	sta wR0
 
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	and #$FF00
 	ora wR0
-	sta aProcBody1,b,x
+	sta aProcSystem.aBody1,b,x
 
 	lda wR0
 	lsr a
@@ -851,26 +851,26 @@ rlUnknown828B3F ; 82/8B3F
 	sbc wR0
 	sta wR0
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	and #$FF00
 	ora wR0
 	sec
 	sbc #$0001
-	sta aProcBody0,b,x
+	sta aProcSystem.aBody0,b,x
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	jsl rlUnknown828C66
 
 	lda #$2000
-	sta wUnknown001804,b
+	sta wDialogueEngineTileBase,b
 
 	lda #$0140
-	tsb wUnknown0017E9,b
+	tsb wDialogueEngineStatus,b
 
 	lda #$01DF
 	jsl rlFillBG3Tilemap
@@ -885,22 +885,22 @@ rlUnknown828BA6 ; 82/8BA6
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 
 	phx
 	jsl $958233
 	plx
 
-	lda wUnknown0017E9,b
+	lda wDialogueEngineStatus,b
 	bit #$0001
 	bne +
 
 	phx
 	lda #$0000
-	sta wBuf_BG3VOFS
+	sta wBufferBG3VOFS
 
 	lda #$0000
-	sta wBuf_BG3HOFS
+	sta wBufferBG3HOFS
 
 	jsl rlDMAByStruct
 
@@ -908,9 +908,9 @@ rlUnknown828BA6 ; 82/8BA6
 
 	plx
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	+
@@ -923,14 +923,14 @@ rlUnknown828BDC ; 82/8BDC
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	jsr rsUnknown828CCE
 	bcc +
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	+
@@ -943,16 +943,16 @@ rlUnknown828BF0 ; 82/8BF0
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
-	lda aProcBody3,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
+	lda aProcSystem.aBody3,b,x
 	dec a
-	sta aProcBody3,b,x
+	sta aProcSystem.aBody3,b,x
 	bne +
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	+
@@ -965,14 +965,14 @@ rlUnknown828C08 ; 82/8C08
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	jsr rsUnknown828CE2
 	bcc +
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	+
@@ -985,7 +985,7 @@ rlUnknown828C1C ; 82/8C1C
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 
 	lda bDMAArrayFlag,b
 	and #$00FF
@@ -1002,19 +1002,19 @@ rlUnknown828C1C ; 82/8C1C
 	sta lR18+1
 	lda #<>$7E4BF8
 	sta lR18
-	lda #(`aBGPal0)<<8
+	lda #(`aBGPaletteBuffer.aPalette0)<<8
 	sta lR19+1
-	lda #<>aBGPal0
+	lda #<>aBGPaletteBuffer.aPalette0
 	sta lR19
-	lda #size(aBGPal0)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette0)
+	sta lR20
 	jsl rlBlockCopy
 	plx
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	+
@@ -1032,9 +1032,9 @@ rlUnknown828C66 ; 82/8C66
 	plx
 
 	phx
-	lda aProcBody4,b,x
+	lda aProcSystem.aBody4,b,x
 	sta lR18
-	lda aProcBody5,b,x
+	lda aProcSystem.aBody5,b,x
 	sta lR18+1
 	lda #$0000
 	jsl $958157
@@ -1042,9 +1042,9 @@ rlUnknown828C66 ; 82/8C66
 	plx
 
 	phx
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	sta $7E45C3
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	clc
 	adc #$0101
 	jsl $95812F

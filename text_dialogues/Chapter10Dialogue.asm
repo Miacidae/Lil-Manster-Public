@@ -1,4 +1,4 @@
-ch10wm1
+dialogueChapter10WorldMap1
 
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2
@@ -49,7 +49,7 @@ ch10wm1
 .byte EndText
 
 
-ch10wm2
+dialogueChapter10WorldMap2
 
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2
@@ -75,7 +75,7 @@ ch10wm2
 .byte EndText
 
 
-ch10olwenfredarrive
+dialogueChapter10OlwenFredArrive
 
 .byte Right_slot
 .word LoadPortrait
@@ -146,7 +146,7 @@ ch10olwenfredarrive
 .byte EndText
 
 
-ch10olwenfredleave
+dialogueChapter10OlwenFredLeave
 
 .byte Right_slot
 .word LoadPortrait
@@ -168,7 +168,7 @@ ch10olwenfredleave
 .byte EndText
 
 
-ch10rescuehouse
+dialogueChapter10RescueHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -195,7 +195,7 @@ ch10rescuehouse
 .byte EndText
 
 
-ch10ensorcelhouse
+dialogueChapter10EnsorcelHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -249,7 +249,7 @@ ch10ensorcelhouse
 .byte EndText
 
 
-ch10opening1
+dialogueChapter10Opening1
 
 .byte Left_slot
 .word LoadPortrait
@@ -406,7 +406,7 @@ ch10opening1
 .byte EndText
 
 
-ch10opening2
+dialogueChapter10Opening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -503,7 +503,7 @@ ch10opening2
 .byte EndText
 
 
-ch10endlargoalive
+dialogueChapter10EndLargoAlive
 
 .byte Right_slot
 .word LoadPortrait
@@ -597,7 +597,7 @@ ch10endlargoalive
 .byte EndText
 
 
-ch10endlargodead
+dialogueChapter10EndLargoDead
 
 .byte Right_slot
 .word LoadPortrait

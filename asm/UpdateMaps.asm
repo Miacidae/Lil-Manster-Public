@@ -93,8 +93,8 @@ rlUpdateUnitMapStatus ; 81/AC73
 	.autsiz
 	.databank `aUnitMap
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	bit #TurnStatusRescued | TurnStatusHidden
+	lda aTargetingCharacterBuffer.UnitState,b
+	bit #UnitStateRescued | UnitStateHidden
 	bne _End
 
 	lda aTargetingCharacterBuffer.X,b
@@ -117,9 +117,9 @@ rlUpdateUnitMapStatus ; 81/AC73
 	lda aTargetingCharacterBuffer.DeploymentNumber,b
 	sta aPlayerVisibleUnitMap,x
 	rep #$30
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	and #~TurnStatusUnselectable
-	sta aTargetingCharacterBuffer.TurnStatus,b
+	lda aTargetingCharacterBuffer.UnitState,b
+	and #~UnitStateUnselectable
+	sta aTargetingCharacterBuffer.UnitState,b
 	lda #aTargetingCharacterBuffer
 	sta wR1
 	jsl $839041
@@ -129,9 +129,9 @@ rlUpdateUnitMapStatus ; 81/AC73
 
 	+
 	rep #$30
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	ora #TurnStatusUnselectable
-	sta aTargetingCharacterBuffer.TurnStatus,b
+	lda aTargetingCharacterBuffer.UnitState,b
+	ora #UnitStateUnselectable
+	sta aTargetingCharacterBuffer.UnitState,b
 	lda #aTargetingCharacterBuffer
 	sta wR1
 	jsl $839041
@@ -155,20 +155,20 @@ rlUpdateFogTiles ; 81/ACCD
 
 	; Get map position of screen
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	lsr a
 	lsr a
 	lsr a
 	lsr a
-	sta wMapScrollWidth16,b
+	sta wMapScrollXMetatiles,b
 	sta wR0
 
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	lsr a
 	lsr a
 	lsr a
 	lsr a
-	sta wMapScrollHeight16,b
+	sta wMapScrollYMetatiles,b
 	sta wR1
 
 	jsl rlGetMapTileIndexByCoords
@@ -278,17 +278,17 @@ rlHandleMapScrollStep ; 81/AD82
 
 	; Check if we need to scroll horizontally
 
-	lda wMapScrollWidthPixels,b
-	cmp wMapOffsetWidthPixels,b
+	lda wMapScrollXPixels,b
+	cmp wMapOffsetXPixels,b
 	beq _CheckVertical
 	blt _Left
 
 	; Scrolling right
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	dec a
-	dec wMapOffsetWidthPixels,b
-	eor wMapOffsetWidthPixels,b
+	dec wMapOffsetXPixels,b
+	eor wMapOffsetXPixels,b
 	and #$0010
 	beq _CheckVertical
 
@@ -299,8 +299,8 @@ rlHandleMapScrollStep ; 81/AD82
 	bra _DoHorizontalScroll
 
 	_Left
-	lda wMapScrollWidthPixels,b
-	eor wMapOffsetWidthPixels,b
+	lda wMapScrollXPixels,b
+	eor wMapOffsetXPixels,b
 	and #$0010
 	beq _CheckVertical
 
@@ -315,8 +315,8 @@ rlHandleMapScrollStep ; 81/AD82
 
 	; Do the same for vertical scrolling
 
-	lda wMapScrollHeightPixels,b
-	cmp wMapOffsetHeightPixels,b
+	lda wMapScrollYPixels,b
+	cmp wMapOffsetYPixels,b
 	bne +
 
 	jmp _End
@@ -326,10 +326,10 @@ rlHandleMapScrollStep ; 81/AD82
 
 	; Scrolling down
 
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	dec a
-	dec wMapOffsetHeightPixels,b
-	eor wMapOffsetHeightPixels,b
+	dec wMapOffsetYPixels,b
+	eor wMapOffsetYPixels,b
 	and #$0010
 	beq _End
 
@@ -338,8 +338,8 @@ rlHandleMapScrollStep ; 81/AD82
 	bra _DoVerticalScroll
 
 	_Up
-	lda wMapScrollHeightPixels,b
-	eor wMapOffsetHeightPixels,b
+	lda wMapScrollYPixels,b
+	eor wMapOffsetYPixels,b
 	and #$0010
 	beq _End
 
@@ -349,10 +349,10 @@ rlHandleMapScrollStep ; 81/AD82
 	jsr rsGetScrolledMapTilemapColumn
 
 	_End
-	lda wMapScrollWidthPixels,b
-	sta wMapOffsetWidthPixels,b
-	lda wMapScrollHeightPixels,b
-	sta wMapOffsetHeightPixels,b
+	lda wMapScrollXPixels,b
+	sta wMapOffsetXPixels,b
+	lda wMapScrollYPixels,b
+	sta wMapOffsetYPixels,b
 	plb
 	rtl
 
@@ -363,13 +363,13 @@ rsGetScrolledMapTilemapRow ; 81/ADFC
 	.autsiz
 	.databank ?
 
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	lsr a
 	lsr a
 	lsr a
 	lsr a
 	sec
-	sbc wMapScrollHeight16,b
+	sbc wMapScrollYMetatiles,b
 	and #$000F
 	sta wR2
 
@@ -380,13 +380,13 @@ rsGetScrolledMapTilemapRow ; 81/ADFC
 	asl a
 	sta wR1
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	lsr a
 	lsr a
 	lsr a
 	lsr a
 	sec
-	sbc wMapScrollWidth16,b
+	sbc wMapScrollXMetatiles,b
 	clc
 	adc wR9
 	and #$001F
@@ -395,7 +395,7 @@ rsGetScrolledMapTilemapRow ; 81/ADFC
 	asl a
 	sta wR7
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	lsr a
 	lsr a
 	lsr a
@@ -404,7 +404,7 @@ rsGetScrolledMapTilemapRow ; 81/ADFC
 	adc wR9
 	sta wR0
 
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	lsr a
 	lsr a
 	lsr a
@@ -425,7 +425,7 @@ rsGetScrolledMapTilemapColumn ; 81/AE4D
 	.autsiz
 	.databank ?
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	lsr a
 	lsr a
 	lsr a
@@ -433,17 +433,17 @@ rsGetScrolledMapTilemapColumn ; 81/AE4D
 	sta wR0
 
 	sec
-	sbc wMapScrollWidth16,b
+	sbc wMapScrollXMetatiles,b
 	and #$001F
 	sta wR2
 
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	lsr a
 	lsr a
 	lsr a
 	lsr a
 	sec
-	sbc wMapScrollHeight16,b
+	sbc wMapScrollYMetatiles,b
 	clc
 	adc wR11
 	and #$000F
@@ -457,7 +457,7 @@ rsGetScrolledMapTilemapColumn ; 81/AE4D
 	asl a
 	sta wR7
 
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	lsr a
 	lsr a
 	lsr a
@@ -486,7 +486,7 @@ rsUpdateScrolledMapTilemapRow ; 81/AE95
 	lda #$0040
 	sta wR0
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	lsr a
 	lsr a
 	lsr a
@@ -494,7 +494,7 @@ rsUpdateScrolledMapTilemapRow ; 81/AE95
 	clc
 	adc wR9
 	sec
-	sbc wMapScrollWidth16,b
+	sbc wMapScrollXMetatiles,b
 	asl a
 	and #$003F
 	tax
@@ -886,7 +886,7 @@ rsCopyVerticalScrolledRangeTileToTilemap ; 81/B137
 	lda wR6
 	lsr a
 	tax
-	lda aRangeMap-1,x
+	lda aMovementMap-1,x
 	bmi _EdgeOfRange
 
 	; Max movement range
@@ -911,7 +911,7 @@ rsCopyVerticalScrolledRangeTileToTilemap ; 81/B137
 	; Check if this was the edge of
 	; Moveable range
 
-	lda aMovementMap,x
+	lda aRangeMap,x
 	and #$00FF
 	beq _NoTile
 
@@ -951,7 +951,7 @@ rsCopyHorizontalScrolledRangeTileToTilemap ; 81/B19C
 	lda wR6
 	lsr a
 	tax
-	lda aRangeMap-1,x
+	lda aMovementMap-1,x
 	bmi _EdgeOfRange
 
 	cmp #$7100
@@ -968,7 +968,7 @@ rsCopyHorizontalScrolledRangeTileToTilemap ; 81/B19C
 	rts
 
 	_EdgeOfRange
-	lda aMovementMap,x
+	lda aRangeMap,x
 	and #$00FF
 	beq _NoTile
 
@@ -1093,27 +1093,27 @@ rlUpdateBGTilemapsByMapScrollAmount ; 81/B291
 	.databank ?
 
 	rep #$30
-	lda wMapScrollWidth16,b
+	lda wMapScrollXMetatiles,b
 	asl a
 	asl a
 	asl a
 	asl a
 	sta wR0
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	sec
 	sbc wR0
 	and #$01FF
 	sta wR0
 
-	lda wMapScrollHeight16,b
+	lda wMapScrollYMetatiles,b
 	asl a
 	asl a
 	asl a
 	asl a
 	sta wR1
 
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	sec
 	sbc wR1
 	and #$00FF
@@ -1125,9 +1125,9 @@ rlUpdateBGTilemapsByMapScrollAmount ; 81/B291
 	beq +
 
 	lda wR0
-	sta wBuf_BG1HOFS
+	sta wBufferBG1HOFS
 	lda wR1
-	sta wBuf_BG1VOFS
+	sta wBufferBG1VOFS
 
 	+
 	lda wBGUpdateFlags
@@ -1136,9 +1136,9 @@ rlUpdateBGTilemapsByMapScrollAmount ; 81/B291
 	beq +
 
 	lda wR0
-	sta wBuf_BG2HOFS
+	sta wBufferBG2HOFS
 	lda wR1
-	sta wBuf_BG2VOFS
+	sta wBufferBG2VOFS
 
 	+
 	rtl
@@ -1152,7 +1152,7 @@ rlGetMapScrollReturnStep ; 81/B2DE
 
 	; End if no scrolling to be done
 
-	lda wUnknown000E6D,b
+	lda wForcedMapScrollFlag,b
 	bne +
 
 	rtl
@@ -1174,7 +1174,7 @@ rlGetMapScrollReturnStep ; 81/B2DE
 	ldx wMapScrollReturnStepIndex
 	bne +
 
-	stz wUnknown000E6D,b
+	stz wForcedMapScrollFlag,b
 
 	+
 
@@ -1203,7 +1203,7 @@ rlGetMapScrollReturnStep ; 81/B2DE
 	cmp #$0001
 	beq _VerticalDominant
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	ldx wMapScrollHorizontalReturnDirectionFlag
 	beq _Right
 
@@ -1216,11 +1216,11 @@ rlGetMapScrollReturnStep ; 81/B2DE
 	adc wR0
 
 	+
-	sta wMapScrollWidthPixels,b
+	sta wMapScrollXPixels,b
 	bra ++
 
 	_VerticalDominant
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	ldx wMapScrollVerticalReturnDirectionFlag
 	beq _Down
 
@@ -1233,18 +1233,18 @@ rlGetMapScrollReturnStep ; 81/B2DE
 	adc wR0
 
 	+
-	sta wMapScrollHeightPixels,b
+	sta wMapScrollYPixels,b
 
 	+
-	stz dwR12
+	stz wR12
 
 	lda wMapScrollReturnXDistance
-	sta dwR14
+	sta wR14
 	sec
 	sbc wMapScrollReturnRemainingPixelDistance
-	sta dwR12+2
+	sta wR12+2
 
-	stz dwR14+2
+	stz wR14+2
 
 	; ((xdist - remaining) * $1000) / xdist
 
@@ -1253,9 +1253,9 @@ rlGetMapScrollReturnStep ; 81/B2DE
 	; result * ydist
 
 	lda wMapScrollReturnYDistance
-	sta dwR10
+	sta wR10
 
-	stz dwR10+2
+	stz wR10+2
 
 	jsl rlUnsignedMultiply32By32
 
@@ -1268,15 +1268,15 @@ rlGetMapScrollReturnStep ; 81/B2DE
 	beq _Down2
 
 	sec
-	sbc dwR14+2
+	sbc wR14+2
 	bra +
 
 	_Down2
 	clc
-	adc dwR14+2
+	adc wR14+2
 
 	+
-	sta wMapScrollHeightPixels,b
+	sta wMapScrollYPixels,b
 	bra _End
 
 	_VerticalDominant2
@@ -1285,15 +1285,15 @@ rlGetMapScrollReturnStep ; 81/B2DE
 	beq _Right2
 
 	sec
-	sbc dwR14+2
+	sbc wR14+2
 	bra +
 
 	_Right2
 	clc
-	adc dwR14+2
+	adc wR14+2
 
 	+
-	sta wMapScrollWidthPixels,b
+	sta wMapScrollXPixels,b
 
 	_End
 	plb
@@ -1327,7 +1327,7 @@ rlUnknown81B38C ; 81/B38C
 	sta wR8
 
 	+
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	sec
 	sbc wR0
 	bpl +
@@ -1338,7 +1338,7 @@ rlUnknown81B38C ; 81/B38C
 
 	+
 	sta wR5
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	sec
 	sbc wR1
 	bpl +
@@ -1428,13 +1428,13 @@ rlUnknown81B38C ; 81/B38C
 	rts
 
 	_B443
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	sta dwMapScrollReturnXStart
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	sta dwMapScrollReturnYStart
 	stz dwMapScrollReturnXStart+2
 	stz dwMapScrollReturnYStart+2
-	inc wUnknown000E6D,b
+	inc wForcedMapScrollFlag,b
 	dec wMapScrollReturnStepIndex
 	plb
 	plp
@@ -1527,7 +1527,7 @@ rlUnknown81B4B5 ; 81/B4B5
 	.autsiz
 	.databank ?
 
-	lda aOptions.wUnitSpeedOption
+	lda aOptions.wUnitSpeed
 	beq +
 
 	ldx #16
@@ -1556,8 +1556,8 @@ rlUnknown81B4D2 ; 81/B4D2
 	lda #$0400
 	sta wR0
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	bit #TurnStatusGrayed
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	bit #UnitStateGrayed
 	beq +
 
 	lda #$0800
@@ -1577,7 +1577,7 @@ rlUnknown81B4ED ; 81/B4ED
 	.autsiz
 	.databank ?
 
-	lda wUnknown000E6D,b
+	lda wForcedMapScrollFlag,b
 	bne _End
 
 	lda wR0
@@ -1605,21 +1605,21 @@ rlUnknown81B4ED ; 81/B4ED
 	pla
 	sta wR0
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	cmp wR2
 	bne +
 
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	cmp wR3
 	bne +
 
 	lda wR0
 	sec
-	sbc wMapScrollWidthPixels,b
+	sbc wMapScrollXPixels,b
 	sta wR0
 	lda wR1
 	sec
-	sbc wMapScrollHeightPixels,b
+	sbc wMapScrollYPixels,b
 	sta wR1
 	rtl
 
@@ -1647,7 +1647,7 @@ rlUnknown81B544 ; 81/B544
 	asl a
 	asl a
 	sec
-	sbc @l wMapScrollWidthPixels
+	sbc @l wMapScrollXPixels
 	sta wR0
 
 	lda wR1
@@ -1656,7 +1656,7 @@ rlUnknown81B544 ; 81/B544
 	asl a
 	asl a
 	sec
-	sbc @l wMapScrollHeightPixels
+	sbc @l wMapScrollYPixels
 	sta wR1
 	plp
 	rtl

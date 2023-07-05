@@ -1,4 +1,4 @@
-ch14xvillager1
+dialogueChapter14xVillager1
 
 .byte Right_slot
 .word LoadPortrait
@@ -18,7 +18,7 @@ ch14xvillager1
 .byte EndText
 
 
-ch14xvillager2
+dialogueChapter14xVillager2
 
 .byte Right_slot
 .word LoadPortrait
@@ -43,7 +43,7 @@ ch14xvillager2
 .byte EndText
 
 
-ch14xvillager3
+dialogueChapter14xVillager3
 
 .byte Right_slot
 .word LoadPortrait
@@ -61,7 +61,7 @@ ch14xvillager3
 .byte EndText
 
 
-ch14xvillager4
+dialogueChapter14xVillager4
 
 .byte Right_slot
 .word LoadPortrait
@@ -81,7 +81,7 @@ ch14xvillager4
 .byte EndText
 
 
-ch14xvillager5
+dialogueChapter14xVillager5
 
 .byte Right_slot
 .word LoadPortrait
@@ -96,7 +96,7 @@ ch14xvillager5
 .byte EndText
 
 
-ch14xvillager6
+dialogueChapter14xVillager6
 
 .byte Right_slot
 .word LoadPortrait
@@ -132,7 +132,7 @@ ch14xvillager6
 .byte EndText
 
 
-ch14xopening1
+dialogueChapter14xOpening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -233,7 +233,7 @@ ch14xopening1
 .byte EndText
 
 
-ch14xopening2
+dialogueChapter14xOpening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -313,7 +313,7 @@ ch14xopening2
 .byte EndText
 
 
-ch14xclosing
+dialogueChapter14xClosing
 
 .byte Right_slot
 .word LoadPortrait
@@ -464,7 +464,7 @@ ch14xclosing
 .byte EndText
 
 
-linoandeathdean
+dialogueLinoanDeathDean
 
 .byte Right_slot
 .word LoadPortrait

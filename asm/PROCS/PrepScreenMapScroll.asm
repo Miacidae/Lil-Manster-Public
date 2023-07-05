@@ -9,23 +9,23 @@ rlProcPrepScreenMapScrollInit ; 81/C21B
 	.databank ?
 
 	lda #$FFFF
-	sta $7FAA14
+	sta wMapBattleFlag
 
-	stz wMapScrollWidthPixels,b
-	stz wMapScrollHeightPixels,b
+	stz wMapScrollXPixels,b
+	stz wMapScrollYPixels,b
 
 	phx
 	jsl rlUpdateUnitMapsAndFog
 	plx
 	lda #30
-	sta aProcBody0,b,x
+	sta aProcSystem.aBody0,b,x
 	lda #$0000
-	sta aProcBody1,b,x
+	sta aProcSystem.aBody1,b,x
 	lda @l wDefaultVisibilityFill
 	bne +
 
 	lda #<>rlProcPrepScreenMapScrollOnCycle5._End
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	+
 	rtl
@@ -37,11 +37,11 @@ rlProcPrepScreenMapScrollOnCycle ; 81/C247
 	.autsiz
 	.databank ?
 
-	dec aProcBody0,b,x
+	dec aProcSystem.aBody0,b,x
 	bne +
 
 	lda #<>rlProcPrepScreenMapScrollOnCycle2
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	+
 	rtl
@@ -55,19 +55,19 @@ rlProcPrepScreenMapScrollOnCycle2 ; 81/C253
 
 	; Scroll right
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	cmp wMapWidthPixels,b
 	beq +
 
 	inc a
 	inc a
-	sta wMapScrollWidthPixels,b
+	sta wMapScrollXPixels,b
 	jsr rsPrepScreenMapScrollCheckJoypad
 	rtl
 
 	+
 	lda #<>rlProcPrepScreenMapScrollOnCycle3
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 	rtl
 
 rlProcPrepScreenMapScrollOnCycle3 ; 81/C26B
@@ -79,19 +79,19 @@ rlProcPrepScreenMapScrollOnCycle3 ; 81/C26B
 
 	; Scroll down
 
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	cmp wMapHeightPixels,b
 	beq +
 
 	inc a
 	inc a
-	sta wMapScrollHeightPixels,b
+	sta wMapScrollYPixels,b
 	jsr rsPrepScreenMapScrollCheckJoypad
 	rtl
 
 	+
 	lda #<>rlProcPrepScreenMapScrollOnCycle4
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 	rtl
 
 rlProcPrepScreenMapScrollOnCycle4 ; 81/C283
@@ -103,18 +103,18 @@ rlProcPrepScreenMapScrollOnCycle4 ; 81/C283
 
 	; Scroll left
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	beq +
 
 	dec a
 	dec a
-	sta wMapScrollWidthPixels,b
+	sta wMapScrollXPixels,b
 	jsr rsPrepScreenMapScrollCheckJoypad
 	rtl
 
 	+
 	lda #<>rlProcPrepScreenMapScrollOnCycle5
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 	rtl
 
 rlProcPrepScreenMapScrollOnCycle5 ; 81/C298
@@ -126,12 +126,12 @@ rlProcPrepScreenMapScrollOnCycle5 ; 81/C298
 
 	; Scroll up
 
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	beq _End
 
 	dec a
 	dec a
-	sta wMapScrollHeightPixels,b
+	sta wMapScrollYPixels,b
 	jsr rsPrepScreenMapScrollCheckJoypad
 	rtl
 
@@ -140,11 +140,11 @@ rlProcPrepScreenMapScrollOnCycle5 ; 81/C298
 	; Wrap up
 
 	lda #$0000
-	sta $7FAA14
+	sta wMapBattleFlag
 
 	jsl rlProcEngineFreeProc
 
-	lda wMapScrollWidthPixels,b
+	lda wMapScrollXPixels,b
 	lsr A
 	lsr A
 	lsr A
@@ -152,7 +152,7 @@ rlProcPrepScreenMapScrollOnCycle5 ; 81/C298
 	clc 
 	adc #$0007
 	sta wR0
-	lda wMapScrollHeightPixels,b
+	lda wMapScrollYPixels,b
 	lsr A
 	lsr A
 	lsr A
@@ -171,23 +171,23 @@ rsPrepScreenMapScrollCheckJoypad ; 81/C2D0
 	.databank ?
 
 	lda wJoy1New
-	bit #~(JoypadID | JoypadRight | JoypadLeft | JoypadDown | JoypadUp)
+	bit #~(JOY_ID | JOY_Right | JOY_Left | JOY_Down | JOY_Up)
 	beq +
 
 	lda #$0001
-	sta aProcBody1,b,x
+	sta aProcSystem.aBody1,b,x
 
 	+
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	beq +
 
-	lda wMapScrollWidthPixels,b
-	ora wMapScrollHeightPixels,b
+	lda wMapScrollXPixels,b
+	ora wMapScrollYPixels,b
 	and #$000F
 	bne +
 
 	lda #<>rlProcPrepScreenMapScrollOnCycle5._End
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	+
 	rts

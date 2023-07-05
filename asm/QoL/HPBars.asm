@@ -37,38 +37,38 @@ GUARD_ZQOL_HP_BARS :?= false
 
   ; Fixed location inclusions
 
-    * := $00C318
-    .logical $81C318
+;    * := $00C318
+;    .logical $81C318
+;
+;      rlNewRenderObjectiveMarkers ; 81/C318
+;
+;        .xl
+;        .autsiz
+;        .databank ?
+;
+;        jsl rlNewRenderObjectiveMarkersReplacement
+;        rtl
+;
+;        .databank 0
+;
+;    .endlogical
 
-      rlNewRenderObjectiveMarkers ; 81/C318
-
-        .xl
-        .autsiz
-        .databank ?
-
-        jsl rlNewRenderObjectiveMarkersReplacement
-        rtl
-
-        .databank 0
-
-    .endlogical
-
-    * := $00C40D
-    .logical $81C40D
-
-      rsNewAppendObjectiveMarkerArray ; 81/C40D
-
-        .al
-        .xl
-        .autsiz
-        .databank `wObjectiveMarkerColorIndex
-
-        jsl rlAppendObjectiveMarkerArrayReplacement
-        rts
-
-        .databank 0
-
-    .endlogical
+;    * := $00C40D
+;    .logical $81C40D
+;
+;      rsNewAppendObjectiveMarkerArray ; 81/C40D
+;
+;        .al
+;        .xl
+;        .autsiz
+;        .databank `wObjectiveMarkerColorIndex
+;
+;        jsl rlAppendObjectiveMarkerArrayReplacement
+;        rts
+;
+;        .databank 0
+;
+;    .endlogical
 
     * := $02698B
     .logical $84E98B
@@ -81,19 +81,19 @@ GUARD_ZQOL_HP_BARS :?= false
 
         ; Something to do with miss sprite rendering, see MissSpriteFrameSection
 
-        stz aProcHeaderSleepTimer,b,x
+        stz aProcSystem.aHeaderSleepTimer,b,x
 
         lda #(`aMissActionSpriteInfo)<<8
-        sta lR43+size(byte)
+        sta lR44+size(byte)
         lda #<>aMissActionSpriteInfo
-        sta lR43
+        sta lR44
 
         jsl rlActiveSpriteEngineFindEntry
         bcs +
 
-          ldx wProcIndex,b
+          ldx aProcSystem.wOffset,b
           lda #$0001
-          sta aProcHeaderSleepTimer,b,x
+          sta aProcSystem.aHeaderSleepTimer,b,x
 
         +
         rtl
@@ -125,7 +125,7 @@ GUARD_ZQOL_HP_BARS :?= false
         asl a
 
         sec
-        sbc wMapScrollHeightPixels,b
+        sbc wMapScrollYPixels,b
 
         clc
         adc #8
@@ -139,7 +139,7 @@ GUARD_ZQOL_HP_BARS :?= false
         asl a
 
         sec
-        sbc wMapScrollWidthPixels,b
+        sbc wMapScrollXPixels,b
 
         clc
         adc #8
@@ -147,22 +147,22 @@ GUARD_ZQOL_HP_BARS :?= false
         tax
 
         lda #(`aMissActionSpriteInfo)<<8
-        sta lR43+size(byte)
+        sta lR44+size(byte)
         lda #<>aMissActionSpriteInfo
-        sta lR43
+        sta lR44
 
-        lda wActiveSpriteIndex,b
+        lda aActiveSpriteSystem.wOffset,b
         pha
 
         jsl rlUnknown81822E
 
-        ldx wActiveSpriteIndex,b
+        ldx aActiveSpriteSystem.wOffset,b
         pla
 
-        sta wActiveSpriteIndex,b
+        sta aActiveSpriteSystem.wOffset,b
 
         lda #$0100
-        sta aActiveSpriteSpriteBase,b,x
+        sta aActiveSpriteSystem.aSpriteBase,b,x
 
         ply
         plx
@@ -279,11 +279,11 @@ GUARD_ZQOL_HP_BARS :?= false
 
         ; We don't want to register dead/missing sprites
 
-        lda structExpandedCharacterDataRAM.TurnStatus,b,x
-        bit #TurnStatusRescued
+        lda structExpandedCharacterDataRAM.UnitState,b,x
+        bit #UnitStateRescued
         bne +
 
-          bit #TurnStatusDead | TurnStatusUnknown1 | TurnStatusUnselectable | TurnStatusHidden | TurnStatusInvisible | TurnStatusCaptured
+          bit #UnitStateDead | UnitStateUnknown1 | UnitStateUnselectable | UnitStateHidden | UnitStateDisabled | UnitStateCaptured
           bne _Next
 
         +
@@ -313,8 +313,8 @@ GUARD_ZQOL_HP_BARS :?= false
 
         ; Grayed units get the gray palette
 
-        lda structExpandedCharacterDataRAM.TurnStatus,b,x
-        bit #TurnStatusGrayed
+        lda structExpandedCharacterDataRAM.UnitState,b,x
+        bit #UnitStateGrayed
         beq +
 
           lda #NewOAMTileAndAttr($000, 3, 2, False, False)
@@ -325,8 +325,8 @@ GUARD_ZQOL_HP_BARS :?= false
         ; If the unit is rescued, draw the
         ; rescue icon instead of a map sprite.
 
-        lda structExpandedCharacterDataRAM.TurnStatus,b,x
-        bit #TurnStatusRescued
+        lda structExpandedCharacterDataRAM.UnitState,b,x
+        bit #UnitStateRescued
         bne _Rescued
 
         ; If unit has a status, register
@@ -392,9 +392,9 @@ GUARD_ZQOL_HP_BARS :?= false
           lda aDeploymentSlotTable,x
           tax
 
-          lda structExpandedCharacterDataRAM.TurnStatus,b,x
+          lda structExpandedCharacterDataRAM.UnitState,b,x
           plx
-          bit #TurnStatusUnselectable | TurnStatusHidden
+          bit #UnitStateUnselectable | UnitStateHidden
           beq +
 
             jmp _Next
@@ -523,13 +523,13 @@ GUARD_ZQOL_HP_BARS :?= false
 
         .databank `aUpperMapSpriteAndStatusBuffer
 
-        lda wMapScrollWidthPixels,b
+        lda wMapScrollXPixels,b
         sec
         sbc #16
         sta lR18+structMapSpriteAndStatusEntry.X
         sta lR18+structMapSpriteAndStatusEntry.HiddenStatusFlag
 
-        lda wMapScrollHeightPixels,b
+        lda wMapScrollYPixels,b
         sec
         sbc #16
         sta lR18+structMapSpriteAndStatusEntry.Y
@@ -567,7 +567,7 @@ GUARD_ZQOL_HP_BARS :?= false
         .autsiz
         .databank `aUpperMapSpriteAndStatusBuffer
 
-        stx wNextFreeSpriteOffs,b
+        stx wNextFreeSpriteOffset,b
         rts
 
         .databank 0
@@ -596,7 +596,7 @@ GUARD_ZQOL_HP_BARS :?= false
         .autsiz
         .databank `aUpperMapSpriteAndStatusBuffer
 
-        stx wNextFreeSpriteOffs,b
+        stx wNextFreeSpriteOffset,b
         rts
 
       rsRenderMapSpriteLoop ; 88/881C
@@ -606,7 +606,7 @@ GUARD_ZQOL_HP_BARS :?= false
         .autsiz
         .databank `aUpperMapSpriteAndStatusBuffer
 
-        ldx wNextFreeSpriteOffs,b
+        ldx wNextFreeSpriteOffset,b
         ldy #$0000
 
         _Loop
@@ -631,7 +631,7 @@ GUARD_ZQOL_HP_BARS :?= false
           sec
           sbc #16
 
-          sta aSpriteBuf+structPPUOAMEntry.X,b,x
+          sta aSpriteBuffer+structPPUOAMEntry.X,b,x
           bpl +
 
             lda aOAMSizeBitTable,x
@@ -652,10 +652,10 @@ GUARD_ZQOL_HP_BARS :?= false
           lda wR5
           sec
           sbc #16
-          sta aSpriteBuf+structPPUOAMEntry.Y,b,x
+          sta aSpriteBuffer+structPPUOAMEntry.Y,b,x
 
           lda aLowerMapSpriteBuffer+structMapSpriteAndStatusEntry.TileAndAttr,y
-          sta aSpriteBuf+structPPUOAMEntry.Index,b,x
+          sta aSpriteBuffer+structPPUOAMEntry.Index,b,x
 
           inc x
           inc x
@@ -706,7 +706,7 @@ GUARD_ZQOL_HP_BARS :?= false
         ; Outputs:
         ; None
 
-        lda aOptions.wAnimationOption
+        lda aOptions.wAnimation
         and #$00F0 ; if we are standing on detailed, draw HP bars
         beq +
 
@@ -732,8 +732,8 @@ GUARD_ZQOL_HP_BARS :?= false
 
         +
 
-        lda structExpandedCharacterDataRAM.TurnStatus,b,x
-        bit #(TurnStatusUnknown1 | TurnStatusRescued | TurnStatusRescuing | TurnStatusHidden | TurnStatusInvisible)
+        lda structExpandedCharacterDataRAM.UnitState,b,x
+        bit #(UnitStateUnknown1 | UnitStateRescued | UnitStateRescuing | UnitStateHidden | UnitStateDisabled)
         beq +
 
           rtl
@@ -891,7 +891,7 @@ GUARD_ZQOL_HP_BARS :?= false
         .autsiz
         .databank `aUpperMapSpriteAndStatusBuffer
 
-        stx wNextFreeSpriteOffs,b
+        stx wNextFreeSpriteOffset,b
         rtl
 
       rlRenderTallMapSpriteAndStatusLoopReplacement
@@ -907,7 +907,7 @@ GUARD_ZQOL_HP_BARS :?= false
         ; Outputs:
         ; None
 
-        ldx wNextFreeSpriteOffs,b
+        ldx wNextFreeSpriteOffset,b
         ldy #$0000
 
         _Loop
@@ -944,7 +944,7 @@ GUARD_ZQOL_HP_BARS :?= false
 
         sec
         sbc #16
-        sta aSpriteBuf+structPPUOAMEntry.X,b,x
+        sta aSpriteBuffer+structPPUOAMEntry.X,b,x
         bpl _YAndAttr
 
           lda aOAMSizeBitTable,x
@@ -957,10 +957,10 @@ GUARD_ZQOL_HP_BARS :?= false
           lda wR5
           sec
           sbc #16
-          sta aSpriteBuf+structPPUOAMEntry.Y,b,x
+          sta aSpriteBuffer+structPPUOAMEntry.Y,b,x
 
           lda aUpperMapSpriteAndStatusBuffer+structMapSpriteAndStatusEntry.TileAndAttr,y
-          sta aSpriteBuf+structPPUOAMEntry.Index,b,x
+          sta aSpriteBuffer+structPPUOAMEntry.Index,b,x
           inc x
           inc x
           inc x
@@ -983,7 +983,7 @@ GUARD_ZQOL_HP_BARS :?= false
           bge _Next
           sec
           sbc #16
-          sta aSpriteBuf+structPPUOAMEntry.X,b,x
+          sta aSpriteBuffer+structPPUOAMEntry.X,b,x
           bpl +
 
             lda aOAMSizeBitTable,x
@@ -1104,12 +1104,12 @@ GUARD_ZQOL_HP_BARS :?= false
         bmi _End
 
         sec
-        sbc wMapScrollWidthPixels,b
+        sbc wMapScrollXPixels,b
         sta wR0
 
         lda aObjectiveMarkers+structObjectiveMarkerEntryRAM.Y,x
         sec
-        sbc wMapScrollHeightPixels,b
+        sbc wMapScrollYPixels,b
         sta wR1
 
         lda aObjectiveMarkers+structObjectiveMarkerEntryRAM.Sprite,x

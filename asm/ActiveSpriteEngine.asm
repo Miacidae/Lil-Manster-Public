@@ -54,158 +54,158 @@ rlActiveSpriteEngineSwap ; 81/8008
 	pla
 	sta aUnknown00161B,b,y
 
-	lda aActiveSpriteTypeOffset,b,x
+	lda aActiveSpriteSystem.aTypeOffset,b,x
 	pha
-	lda aActiveSpriteBanks,b,x
+	lda aActiveSpriteSystem.aBanks,b,x
 	pha
-	lda aActiveSpriteRenderer,b,x
+	lda aActiveSpriteSystem.aRenderer,b,x
 	pha
-	lda aActiveSpriteUpdater,b,x
+	lda aActiveSpriteSystem.aUpdater,b,x
 	pha
-	lda aActiveSpriteOnCycle,b,x
+	lda aActiveSpriteSystem.aOnCycle,b,x
 	pha
-	lda aActiveSpriteFrameTimer,b,x
+	lda aActiveSpriteSystem.aFrameTimer,b,x
 	pha
-	lda aActiveSpriteCodeOffset,b,x
+	lda aActiveSpriteSystem.aCodeOffset,b,x
 	pha
-	lda aActiveSpriteFrameOffset,b,x
+	lda aActiveSpriteSystem.aFrameOffset,b,x
 	pha
-	lda aUnknown000864,b,x
+	lda aActiveSpriteSystem.aUnknown000864,b,x
 	pha
-	lda aActiveSpritexCoordinate,b,x
+	lda aActiveSpriteSystem.aXCoordinate,b,x
 	pha
-	lda aUnknown0008A4,b,x
+	lda aActiveSpriteSystem.aUnknown0008A4,b,x
 	pha
-	lda aActiveSpriteyCoordinate,b,x
+	lda aActiveSpriteSystem.aYCoordinate,b,x
 	pha
-	lda aActiveSpriteSpriteBase,b,x
+	lda aActiveSpriteSystem.aSpriteBase,b,x
 	pha
-	lda aUnknown000904,b,x
+	lda aActiveSpriteSystem.aUnknown000904,b,x
 	pha
-	lda aActiveSpritePalette,b,x
+	lda aActiveSpriteSystem.aPalette,b,x
 	pha
-	lda aUnknown000944,b,x
+	lda aActiveSpriteSystem.aUnknown000944,b,x
 	pha
-	lda aUnknown000964,b,x
+	lda aActiveSpriteSystem.aUnknown000964,b,x
 	pha
-	lda aUnknown000984,b,x
+	lda aActiveSpriteSystem.aUnknown000984,b,x
 	pha
-	lda aUnknown0009A4,b,x
+	lda aActiveSpriteSystem.aUnknown0009A4,b,x
 	pha
-	lda aUnknown0009C4,b,x
+	lda aActiveSpriteSystem.aUnknown0009C4,b,x
 	pha
-	lda aUnknown0009E4,b,x
+	lda aActiveSpriteSystem.aUnknown0009E4,b,x
 	pha
-	lda aUnknown000A04,b,x
+	lda aActiveSpriteSystem.aUnknown000A04,b,x
 	pha
-	lda aUnknown000A24,b,x
+	lda aActiveSpriteSystem.aUnknown000A24,b,x
 	pha
-	lda aUnknown000A44,b,x
+	lda aActiveSpriteSystem.aUnknown000A44,b,x
 	pha
-	lda aUnknown000A64,b,x
+	lda aActiveSpriteSystem.aUnknown000A64,b,x
 	pha
 
-	lda aActiveSpriteTypeOffset,b,y
-	sta aActiveSpriteTypeOffset,b,x
-	lda aActiveSpriteBanks,b,y
-	sta aActiveSpriteBanks,b,x
-	lda aActiveSpriteRenderer,b,y
-	sta aActiveSpriteRenderer,b,x
-	lda aActiveSpriteUpdater,b,y
-	sta aActiveSpriteUpdater,b,x
-	lda aActiveSpriteOnCycle,b,y
-	sta aActiveSpriteOnCycle,b,x
-	lda aActiveSpriteFrameTimer,b,y
-	sta aActiveSpriteFrameTimer,b,x
-	lda aActiveSpriteCodeOffset,b,y
-	sta aActiveSpriteCodeOffset,b,x
-	lda aActiveSpriteFrameOffset,b,y
-	sta aActiveSpriteFrameOffset,b,x
-	lda aUnknown000864,b,y
-	sta aUnknown000864,b,x
-	lda aActiveSpritexCoordinate,b,y
-	sta aActiveSpritexCoordinate,b,x
-	lda aUnknown0008A4,b,y
-	sta aUnknown0008A4,b,x
-	lda aActiveSpriteyCoordinate,b,y
-	sta aActiveSpriteyCoordinate,b,x
-	lda aActiveSpriteSpriteBase,b,y
-	sta aActiveSpriteSpriteBase,b,x
-	lda aUnknown000904,b,y
-	sta aUnknown000904,b,x
-	lda aActiveSpritePalette,b,y
-	sta aActiveSpritePalette,b,x
-	lda aUnknown000944,b,y
-	sta aUnknown000944,b,x
-	lda aUnknown000964,b,y
-	sta aUnknown000964,b,x
-	lda aUnknown000984,b,y
-	sta aUnknown000984,b,x
-	lda aUnknown0009A4,b,y
-	sta aUnknown0009A4,b,x
-	lda aUnknown0009C4,b,y
-	sta aUnknown0009C4,b,x
-	lda aUnknown0009E4,b,y
-	sta aUnknown0009E4,b,x
-	lda aUnknown000A04,b,y
-	sta aUnknown000A04,b,x
-	lda aUnknown000A24,b,y
-	sta aUnknown000A24,b,x
-	lda aUnknown000A44,b,y
-	sta aUnknown000A44,b,x
-	lda aUnknown000A64,b,y
-	sta aUnknown000A64,b,x
+	lda aActiveSpriteSystem.aTypeOffset,b,y
+	sta aActiveSpriteSystem.aTypeOffset,b,x
+	lda aActiveSpriteSystem.aBanks,b,y
+	sta aActiveSpriteSystem.aBanks,b,x
+	lda aActiveSpriteSystem.aRenderer,b,y
+	sta aActiveSpriteSystem.aRenderer,b,x
+	lda aActiveSpriteSystem.aUpdater,b,y
+	sta aActiveSpriteSystem.aUpdater,b,x
+	lda aActiveSpriteSystem.aOnCycle,b,y
+	sta aActiveSpriteSystem.aOnCycle,b,x
+	lda aActiveSpriteSystem.aFrameTimer,b,y
+	sta aActiveSpriteSystem.aFrameTimer,b,x
+	lda aActiveSpriteSystem.aCodeOffset,b,y
+	sta aActiveSpriteSystem.aCodeOffset,b,x
+	lda aActiveSpriteSystem.aFrameOffset,b,y
+	sta aActiveSpriteSystem.aFrameOffset,b,x
+	lda aActiveSpriteSystem.aUnknown000864,b,y
+	sta aActiveSpriteSystem.aUnknown000864,b,x
+	lda aActiveSpriteSystem.aXCoordinate,b,y
+	sta aActiveSpriteSystem.aXCoordinate,b,x
+	lda aActiveSpriteSystem.aUnknown0008A4,b,y
+	sta aActiveSpriteSystem.aUnknown0008A4,b,x
+	lda aActiveSpriteSystem.aYCoordinate,b,y
+	sta aActiveSpriteSystem.aYCoordinate,b,x
+	lda aActiveSpriteSystem.aSpriteBase,b,y
+	sta aActiveSpriteSystem.aSpriteBase,b,x
+	lda aActiveSpriteSystem.aUnknown000904,b,y
+	sta aActiveSpriteSystem.aUnknown000904,b,x
+	lda aActiveSpriteSystem.aPalette,b,y
+	sta aActiveSpriteSystem.aPalette,b,x
+	lda aActiveSpriteSystem.aUnknown000944,b,y
+	sta aActiveSpriteSystem.aUnknown000944,b,x
+	lda aActiveSpriteSystem.aUnknown000964,b,y
+	sta aActiveSpriteSystem.aUnknown000964,b,x
+	lda aActiveSpriteSystem.aUnknown000984,b,y
+	sta aActiveSpriteSystem.aUnknown000984,b,x
+	lda aActiveSpriteSystem.aUnknown0009A4,b,y
+	sta aActiveSpriteSystem.aUnknown0009A4,b,x
+	lda aActiveSpriteSystem.aUnknown0009C4,b,y
+	sta aActiveSpriteSystem.aUnknown0009C4,b,x
+	lda aActiveSpriteSystem.aUnknown0009E4,b,y
+	sta aActiveSpriteSystem.aUnknown0009E4,b,x
+	lda aActiveSpriteSystem.aUnknown000A04,b,y
+	sta aActiveSpriteSystem.aUnknown000A04,b,x
+	lda aActiveSpriteSystem.aUnknown000A24,b,y
+	sta aActiveSpriteSystem.aUnknown000A24,b,x
+	lda aActiveSpriteSystem.aUnknown000A44,b,y
+	sta aActiveSpriteSystem.aUnknown000A44,b,x
+	lda aActiveSpriteSystem.aUnknown000A64,b,y
+	sta aActiveSpriteSystem.aUnknown000A64,b,x
 
 	pla
-	sta aUnknown000A64,b,y
+	sta aActiveSpriteSystem.aUnknown000A64,b,y
 	pla
-	sta aUnknown000A44,b,y
+	sta aActiveSpriteSystem.aUnknown000A44,b,y
 	pla
-	sta aUnknown000A24,b,y
+	sta aActiveSpriteSystem.aUnknown000A24,b,y
 	pla
-	sta aUnknown000A04,b,y
+	sta aActiveSpriteSystem.aUnknown000A04,b,y
 	pla
-	sta aUnknown0009E4,b,y
+	sta aActiveSpriteSystem.aUnknown0009E4,b,y
 	pla
-	sta aUnknown0009C4,b,y
+	sta aActiveSpriteSystem.aUnknown0009C4,b,y
 	pla
-	sta aUnknown0009A4,b,y
+	sta aActiveSpriteSystem.aUnknown0009A4,b,y
 	pla
-	sta aUnknown000984,b,y
+	sta aActiveSpriteSystem.aUnknown000984,b,y
 	pla
-	sta aUnknown000964,b,y
+	sta aActiveSpriteSystem.aUnknown000964,b,y
 	pla
-	sta aUnknown000944,b,y
+	sta aActiveSpriteSystem.aUnknown000944,b,y
 	pla
-	sta aActiveSpritePalette,b,y
+	sta aActiveSpriteSystem.aPalette,b,y
 	pla
-	sta aUnknown000904,b,y
+	sta aActiveSpriteSystem.aUnknown000904,b,y
 	pla
-	sta aActiveSpriteSpriteBase,b,y
+	sta aActiveSpriteSystem.aSpriteBase,b,y
 	pla
-	sta aActiveSpriteyCoordinate,b,y
+	sta aActiveSpriteSystem.aYCoordinate,b,y
 	pla
-	sta aUnknown0008A4,b,y
+	sta aActiveSpriteSystem.aUnknown0008A4,b,y
 	pla
-	sta aActiveSpritexCoordinate,b,y
+	sta aActiveSpriteSystem.aXCoordinate,b,y
 	pla
-	sta aUnknown000864,b,y
+	sta aActiveSpriteSystem.aUnknown000864,b,y
 	pla
-	sta aActiveSpriteFrameOffset,b,y
+	sta aActiveSpriteSystem.aFrameOffset,b,y
 	pla
-	sta aActiveSpriteCodeOffset,b,y
+	sta aActiveSpriteSystem.aCodeOffset,b,y
 	pla
-	sta aActiveSpriteFrameTimer,b,y
+	sta aActiveSpriteSystem.aFrameTimer,b,y
 	pla
-	sta aActiveSpriteOnCycle,b,y
+	sta aActiveSpriteSystem.aOnCycle,b,y
 	pla
-	sta aActiveSpriteUpdater,b,y
+	sta aActiveSpriteSystem.aUpdater,b,y
 	pla
-	sta aActiveSpriteRenderer,b,y
+	sta aActiveSpriteSystem.aRenderer,b,y
 	pla
-	sta aActiveSpriteBanks,b,y
+	sta aActiveSpriteSystem.aBanks,b,y
 	pla
-	sta aActiveSpriteTypeOffset,b,y
+	sta aActiveSpriteSystem.aTypeOffset,b,y
 
 	plp
 	rtl
@@ -226,17 +226,17 @@ rlActiveSpriteEngineFindEntry ; 81/8187
 	; Index of found entry in X if found
 
 	php
-	ldx #size(aActiveSpriteTypeOffset) - 2
+	ldx #size(aActiveSpriteSystem.aTypeOffset) - 2
 
 	-
 	rep #$20
-	lda aActiveSpriteTypeOffset,b,x
-	cmp lR43
+	lda aActiveSpriteSystem.aTypeOffset,b,x
+	cmp lR44
 	bne +
 
 	sep #$20
-	lda aActiveSpriteBanks,b,x
-	cmp lR43+2
+	lda aActiveSpriteSystem.aBanks,b,x
+	cmp lR44+2
 	rep #$20
 	beq ++
 
@@ -269,19 +269,19 @@ rlActiveSpriteEngineReset ; 81/81A9
 	; None
 
 	rep #$20
-	ldx #size(aActiveSpriteTypeOffset) - 2
+	ldx #size(aActiveSpriteSystem.aTypeOffset) - 2
 	lda #$0000
 
 	-
-	sta aActiveSpriteTypeOffset,b,x
-	sta aActiveSpriteSpriteBase,b,x
-	sta aUnknown000904,b,x
-	sta aActiveSpritePalette,b,x
+	sta aActiveSpriteSystem.aTypeOffset,b,x
+	sta aActiveSpriteSystem.aSpriteBase,b,x
+	sta aActiveSpriteSystem.aUnknown000904,b,x
+	sta aActiveSpriteSystem.aPalette,b,x
 	dec x
 	dec x
 	bpl -
 
-	sta wActiveSpriteFlag,b
+	sta aActiveSpriteSystem.wFlag,b
 	sta wUnknownSpriteArraySize,b
 	sta wUnknownSpriteArrayCount,b
 	lda #(`rlPushToOAMBuffer)<<8
@@ -298,7 +298,7 @@ rlEnableActiveSpriteEngine ; 81/81D7
 	php
 	rep #$20
 	lda #ActiveSpriteEngineEnabled
-	tsb wActiveSpriteFlag,b
+	tsb aActiveSpriteSystem.wFlag,b
 	plp
 	rtl
 
@@ -310,7 +310,7 @@ rlDisableActiveSpriteEngine ; 81/81E2
 	php
 	rep #$20
 	lda #ActiveSpriteEngineEnabled
-	trb wActiveSpriteFlag,b
+	trb aActiveSpriteSystem.wFlag,b
 	plp
 	rtl
 
@@ -322,7 +322,7 @@ rlActiveSpriteEngineRenderOnScreenOnly ; 81/81ED
 	php
 	rep #$20
 	lda #ActiveSpriteEngineRenderOnScreenOnly
-	tsb wActiveSpriteFlag,b
+	tsb aActiveSpriteSystem.wFlag,b
 	plp
 	rtl
 
@@ -334,7 +334,7 @@ rlActiveSpriteEngineRenderAll ; 81/81F8
 	php
 	rep #$20
 	lda #ActiveSpriteEngineRenderOnScreenOnly
-	trb wActiveSpriteFlag,b
+	trb aActiveSpriteSystem.wFlag,b
 	plp
 	rtl
 
@@ -346,7 +346,7 @@ rlUnknown818203 ; 81/8203
 	php
 	rep #$20
 	lda #$2000
-	tsb wActiveSpriteFlag,b
+	tsb aActiveSpriteSystem.wFlag,b
 	plp
 	rtl
 
@@ -358,7 +358,7 @@ rlUnknown81820E ; 81/820E
 	php
 	rep #$20
 	lda #$2000
-	trb wActiveSpriteFlag,b
+	trb aActiveSpriteSystem.wFlag,b
 	plp
 	rtl
 
@@ -377,10 +377,10 @@ rlActiveSpriteEngineClearAllSprites ; 81/8219
 	; None
 
 	phx
-	ldx #size(aActiveSpriteTypeOffset) - 2
+	ldx #size(aActiveSpriteSystem.aTypeOffset) - 2
 
 	-
-	stz aActiveSpriteTypeOffset,b,x
+	stz aActiveSpriteSystem.aTypeOffset,b,x
 	dec x
 	dec x
 	bpl -
@@ -403,7 +403,7 @@ rlActiveSpriteEngineClearSpriteByIndex ; 81/8226
 	; None
 
 	lda #$0000
-	sta @l aActiveSpriteTypeOffset,x
+	sta @l aActiveSpriteSystem.aTypeOffset,x
 	rtl
 
 rlUnknown81822E ; 81/822E
@@ -416,17 +416,17 @@ rlUnknown81822E ; 81/822E
 	phb
 	phy
 	phx
-	lda lR43+1
+	lda lR44+1
 	pha
 	plb
 	plb
 
 	.databank ?
 
-	ldx #size(aActiveSpriteTypeOffset) - 2
+	ldx #size(aActiveSpriteSystem.aTypeOffset) - 2
 
 	-
-	lda @l aActiveSpriteTypeOffset,x
+	lda @l aActiveSpriteSystem.aTypeOffset,x
 	bne +
 
 	jmp rlUnknown8182C7
@@ -452,7 +452,7 @@ rlUnknown81824B ; 81/824B
 	phb
 	phy
 	phx
-	lda lR43+1
+	lda lR44+1
 	pha
 	plb
 	plb
@@ -462,12 +462,12 @@ rlUnknown81824B ; 81/824B
 	ldx #$0002
 
 	-
-	lda @l aActiveSpriteTypeOffset,x
+	lda @l aActiveSpriteSystem.aTypeOffset,x
 	beq rlUnknown8182C7
 
 	inc x
 	inc x
-	cpx #size(aActiveSpriteTypeOffset)
+	cpx #size(aActiveSpriteSystem.aTypeOffset)
 	bmi -
 
 	plx
@@ -487,14 +487,14 @@ rlUnknown818268 ; 81/8268
 	phy
 	phx
 	tax
-	lda lR43+1
+	lda lR44+1
 	pha
 	plb
 	plb
 
 	.databank ?
 
-	lda @l aActiveSpriteTypeOffset,x
+	lda @l aActiveSpriteSystem.aTypeOffset,x
 	beq rlUnknown8182C7
 
 	plx
@@ -513,17 +513,17 @@ rlUnknown81827C ; 81/827C
 	phb
 	phy
 	phx
-	lda lR43+1
+	lda lR44+1
 	pha
 	plb
 	plb
 
 	.databank ?
 
-	ldx #size(aActiveSpriteTypeOffset) - 2
+	ldx #size(aActiveSpriteSystem.aTypeOffset) - 2
 
 	-
-	lda @l aActiveSpriteTypeOffset,x
+	lda @l aActiveSpriteSystem.aTypeOffset,x
 	beq rlUnknown8182CD
 	dec x
 	dec x
@@ -545,7 +545,7 @@ rlUnknown818296 ; 81/8296
 	phb
 	phy
 	phx
-	lda lR43+1
+	lda lR44+1
 	pha
 	plb
 	plb
@@ -555,11 +555,11 @@ rlUnknown818296 ; 81/8296
 	ldx #$0000
 
 	-
-	lda @l aActiveSpriteTypeOffset,x
+	lda @l aActiveSpriteSystem.aTypeOffset,x
 	beq rlUnknown8182CD
 	inx
 	inx
-	cpx #size(aActiveSpriteTypeOffset)
+	cpx #size(aActiveSpriteSystem.aTypeOffset)
 	bmi -
 
 	plx
@@ -579,14 +579,14 @@ rlUnknown8182B3 ; 81/82B3
 	phy
 	phx
 	tax
-	lda lR43+1
+	lda lR44+1
 	pha
 	plb
 	plb
 
 	.databank ?
 
-	lda @l aActiveSpriteTypeOffset,x
+	lda @l aActiveSpriteSystem.aTypeOffset,x
 	beq rlUnknown8182CD
 
 	plx
@@ -602,8 +602,8 @@ rlUnknown8182C7 ; 81/82C7
 	.autsiz
 	.databank ?
 
-	lda lR43
-	stz lR43
+	lda lR44
+	stz lR44
 	bra rlCreateActiveSpriteMain
 
 rlUnknown8182CD ; 81/82CD
@@ -613,7 +613,7 @@ rlUnknown8182CD ; 81/82CD
 	.autsiz
 	.databank ?
 
-	lda lR43
+	lda lR44
 
 rlCreateActiveSpriteMain ; 81/82CF
 
@@ -626,71 +626,71 @@ rlCreateActiveSpriteMain ; 81/82CF
 
 	; Inputs:
 	; A: Offset of data
-	; lR43: Uppermost byte should be data's bank
+	; lR44: Uppermost byte should be data's bank
 
 	; Outputs:
 	; None
 
 	; Store pointer to sprite info
 
-	sta @l aActiveSpriteTypeOffset,x
+	sta @l aActiveSpriteSystem.aTypeOffset,x
 	tay
 
 	; Store index
 
 	txa
-	sta @l wActiveSpriteIndex
+	sta @l aActiveSpriteSystem.wOffset
 
 	; Store bank of type and renderer
 
-	lda @l lR43+1
+	lda @l lR44+1
 	and #$FF00
-	sta @l lActiveSpriteCodePointer+1
+	sta @l aActiveSpriteSystem.lPointer+1
 	xba
 	ora #(`rlPushToOAMBuffer)<<8
-	sta @l aActiveSpriteBanks,x
+	sta @l aActiveSpriteSystem.aBanks,x
 
 	; Store rest of default renderer
 
 	lda #<>rlPushToOAMBuffer
-	sta @l aActiveSpriteRenderer,x
+	sta @l aActiveSpriteSystem.aRenderer,x
 
 	; Store sprite coordinates
 
 	pla
-	sta @l aActiveSpritexCoordinate,x
+	sta @l aActiveSpriteSystem.aXCoordinate,x
 	pla
-	sta @l aActiveSpriteyCoordinate,x
+	sta @l aActiveSpriteSystem.aYCoordinate,x
 
 	lda $0002,b,y
 	clc
-	adc lR43
-	sta @l aActiveSpriteOnCycle,x
+	adc lR44
+	sta @l aActiveSpriteSystem.aOnCycle,x
 	lda #$0001
-	sta @l aActiveSpriteFrameTimer,x
+	sta @l aActiveSpriteSystem.aFrameTimer,x
 	lda $0004,b,y
 	clc
-	adc lR43
-	sta @l aActiveSpriteCodeOffset,x
+	adc lR44
+	sta @l aActiveSpriteSystem.aCodeOffset,x
 	lda #$0000
-	sta @l aActiveSpriteFrameOffset,x
+	sta @l aActiveSpriteSystem.aFrameOffset,x
 	lda #$0000
-	sta @l aUnknown000864,x
-	sta @l aUnknown0008A4,x
-	sta @l aActiveSpriteUpdater,x
-	sta @l aActiveSpriteSpriteBase,x
-	sta @l aUnknown000904,x
-	sta @l aActiveSpritePalette,x
-	sta @l aUnknown000944,x
-	sta @l aUnknown000964,x
-	sta @l aUnknown000984,x
-	sta @l aUnknown0009A4,x
-	sta @l aUnknown0009C4,x
-	sta @l aUnknown0009E4,x
-	sta @l aUnknown000A04,x
-	sta @l aUnknown000A24,x
-	sta @l aUnknown000A44,x
-	sta @l aUnknown000A64,x
+	sta @l aActiveSpriteSystem.aUnknown000864,x
+	sta @l aActiveSpriteSystem.aUnknown0008A4,x
+	sta @l aActiveSpriteSystem.aUpdater,x
+	sta @l aActiveSpriteSystem.aSpriteBase,x
+	sta @l aActiveSpriteSystem.aUnknown000904,x
+	sta @l aActiveSpriteSystem.aPalette,x
+	sta @l aActiveSpriteSystem.aUnknown000944,x
+	sta @l aActiveSpriteSystem.aUnknown000964,x
+	sta @l aActiveSpriteSystem.aUnknown000984,x
+	sta @l aActiveSpriteSystem.aUnknown0009A4,x
+	sta @l aActiveSpriteSystem.aUnknown0009C4,x
+	sta @l aActiveSpriteSystem.aUnknown0009E4,x
+	sta @l aActiveSpriteSystem.aUnknown000A04,x
+	sta @l aActiveSpriteSystem.aUnknown000A24,x
+	sta @l aActiveSpriteSystem.aUnknown000A44,x
+	sta @l aActiveSpriteSystem.aUnknown000A64,x
 	sta @l aUnknown00153A,x
 	sta @l aUnknown00155A,x
 
@@ -698,13 +698,13 @@ rlCreateActiveSpriteMain ; 81/82CF
 
 	lda $0000,b,y
 	clc
-	adc lR43
-	sta @l lActiveSpriteCodePointer
+	adc lR44
+	sta @l aActiveSpriteSystem.lPointer
 	bpl +
 
 	phk
 	pea <>(+)-1
-	jmp [lActiveSpriteCodePointer]
+	jmp [aActiveSpriteSystem.lPointer]
 
 	+
 	plb
@@ -733,7 +733,7 @@ rlActiveSpriteSetRenderer ; 81/8380
 
 	; Save type's bank
 
-	lda @l aActiveSpriteBanks,x
+	lda @l aActiveSpriteSystem.aBanks,x
 	and #$00FF
 	sta wR0
 
@@ -745,10 +745,10 @@ rlActiveSpriteSetRenderer ; 81/8380
 
 	; Store
 
-	sta @l aActiveSpriteBanks,x
+	sta @l aActiveSpriteSystem.aBanks,x
 
 	lda lR18
-	sta @l aActiveSpriteRenderer,x
+	sta @l aActiveSpriteSystem.aRenderer,x
 
 	pla
 	sta wR0
@@ -768,27 +768,27 @@ rlActiveSpriteEngineMainLoop ; 81/83A3
 	.databank `*
 
 	rep #$30
-	bit wActiveSpriteFlag,b
+	bit aActiveSpriteSystem.wFlag,b
 	bpl _Disabled
 
 	; Check to see if we're actively updating sprites
 
-	lda wActiveSpriteFlag,b
+	lda aActiveSpriteSystem.wFlag,b
 	bit #ActiveSpriteEngineInactive
 	bne ++
 
 	; Loop through all active sprites and update them
 
-	ldx #size(aActiveSpriteTypeOffset) - 2
+	ldx #size(aActiveSpriteSystem.aTypeOffset) - 2
 
 	-
-	stx wActiveSpriteIndex,b
-	lda aActiveSpriteTypeOffset,b,x
+	stx aActiveSpriteSystem.wOffset,b
+	lda aActiveSpriteSystem.aTypeOffset,b,x
 	beq +
 
 	jsr rlRunActiveSpriteOnCycleAndCode
 
-	ldx wActiveSpriteIndex,b
+	ldx aActiveSpriteSystem.wOffset,b
 
 	+
 	dec x
@@ -799,13 +799,13 @@ rlActiveSpriteEngineMainLoop ; 81/83A3
 
 	; Next check if we're only rendering sprites onscreen
 
-	lda wActiveSpriteFlag,b
+	lda aActiveSpriteSystem.wFlag,b
 	bit #ActiveSpriteEngineRenderOnScreenOnly
 	beq _OnScreen
 
 	jsr rsActiveSpriteEngineRenderSprites
 
-	lda wActiveSpriteFlag,b
+	lda aActiveSpriteSystem.wFlag,b
 	bit #$2000
 	beq _ProcessUnknown
 
@@ -829,7 +829,7 @@ rlActiveSpriteEngineMainLoop ; 81/83A3
 
 	jsr rsActiveSpriteEngineRenderSpritesOnScreen
 
-	lda wActiveSpriteFlag,b
+	lda aActiveSpriteSystem.wFlag,b
 	bit #$2000
 	beq _ProcessUnknown
 
@@ -875,7 +875,7 @@ rlRunActiveSpriteOnCycleAndCode ; 81/8413
 	.autsiz
 	.databank ?
 
-	lda aActiveSpriteBanks-1,b,x
+	lda aActiveSpriteSystem.aBanks-1,b,x
 	pha
 	plb
 	plb
@@ -886,17 +886,17 @@ rlRunActiveSpriteOnCycleAndCode ; 81/8413
 
 	jsl rlRunActiveSpriteOnCycle
 
-	ldx wActiveSpriteIndex,b
+	ldx aActiveSpriteSystem.wOffset,b
 
 	; We run the code if the timer has ticked down
 	; to 0
 
-	dec aActiveSpriteFrameTimer,b,x
+	dec aActiveSpriteSystem.aFrameTimer,b,x
 	bne +
 
 	; Next fetch the next code instruction
 
-	ldy aActiveSpriteCodeOffset,b,x
+	ldy aActiveSpriteSystem.aCodeOffset,b,x
 	bpl +
 
 	-
@@ -906,12 +906,12 @@ rlRunActiveSpriteOnCycleAndCode ; 81/8413
 	phx
 	tax
 	lda aUnknown818455,x
-	sta lActiveSpriteCodePointer,b
+	sta aActiveSpriteSystem.lPointer,b
 	plx
 	inc y
 	pea <>(-)-1
 
-	jmp (<>lActiveSpriteCodePointer)
+	jmp (<>aActiveSpriteSystem.lPointer)
 
 	+
 	rts
@@ -923,14 +923,14 @@ rlRunActiveSpriteOnCycle ; 81/8443
 	.autsiz
 	.databank ?
 
-	lda aActiveSpriteBanks-1,b,x
-	sta lActiveSpriteCodePointer+1,b
+	lda aActiveSpriteSystem.aBanks-1,b,x
+	sta aActiveSpriteSystem.lPointer+1,b
 
-	lda aActiveSpriteOnCycle,b,x
-	sta lActiveSpriteCodePointer,b
+	lda aActiveSpriteSystem.aOnCycle,b,x
+	sta aActiveSpriteSystem.lPointer,b
 	bpl +
 
-	jmp [<>lActiveSpriteCodePointer]
+	jmp [<>aActiveSpriteSystem.lPointer]
 
 	+
 	rtl
@@ -990,36 +990,36 @@ rsActiveSpriteEngineRenderSpritesOnScreen ; 81/84AD
 
 	php
 	phb
-	ldx #size(aActiveSpriteTypeOffset) - 2
+	ldx #size(aActiveSpriteSystem.aTypeOffset) - 2
 
 	-
-	lda aActiveSpriteTypeOffset,b,x
+	lda aActiveSpriteSystem.aTypeOffset,b,x
 	beq ++
 
-	ldy aActiveSpriteFrameOffset,b,x
+	ldy aActiveSpriteSystem.aFrameOffset,b,x
 	cpy #$0000
 	beq ++
 
-	lda aActiveSpritexCoordinate,b,x
+	lda aActiveSpriteSystem.aXCoordinate,b,x
 	and #$00FF
 	sta wR0
 
-	lda aActiveSpriteYCoordinate,b,x
+	lda aActiveSpriteSystem.aYCoordinate,b,x
 	and #$00FF
 	sta wR1
 
-	lda aActiveSpriteSpriteBase,b,x
+	lda aActiveSpriteSystem.aSpriteBase,b,x
 	sta wR4
 
-	lda aUnknown000904,b,x
+	lda aActiveSpriteSystem.aUnknown000904,b,x
 	sta wR6
 
-	lda aActiveSpritePalette,b,x
+	lda aActiveSpriteSystem.aPalette,b,x
 	xba
 	asl a
 	sta wR5
 
-	lda aActiveSpriteBanks,b,x
+	lda aActiveSpriteSystem.aBanks,b,x
 	sep #$20
 	phb
 	pha
@@ -1032,10 +1032,10 @@ rsActiveSpriteEngineRenderSpritesOnScreen ; 81/84AD
 	phk
 	pea <>(+) - 1
 
-	lda aActiveSpriteBanks,b,x
+	lda aActiveSpriteSystem.aBanks,b,x
 	sta lSpriteRendererPointer+1,b
 
-	lda aActiveSpriteRenderer,b,x
+	lda aActiveSpriteSystem.aRenderer,b,x
 	sta lSpriteRendererPointer,b
 
 	jmp [<>lSpriteRendererPointer]
@@ -1061,34 +1061,34 @@ rsActiveSpriteEngineRenderSprites ; 81/8505
 
 	php
 	phb
-	ldx #size(aActiveSpriteTypeOffset) - 2
+	ldx #size(aActiveSpriteSystem.aTypeOffset) - 2
 
 	-
-	lda aActiveSpriteTypeOffset,b,x
+	lda aActiveSpriteSystem.aTypeOffset,b,x
 	beq ++
 
-	ldy aActiveSpriteFrameOffset,b,x
+	ldy aActiveSpriteSystem.aFrameOffset,b,x
 	cpy #$0000
 	beq ++
 
-	lda aActiveSpriteXCoordinate,b,x
+	lda aActiveSpriteSystem.aXCoordinate,b,x
 	sta wR0
 
-	lda aActiveSpriteYCoordinate,b,x
+	lda aActiveSpriteSystem.aYCoordinate,b,x
 	sta wR1
 
-	lda aActiveSpriteSpriteBase,b,x
+	lda aActiveSpriteSystem.aSpriteBase,b,x
 	sta wR4
 
-	lda aUnknown000904,b,x
+	lda aActiveSpriteSystem.aUnknown000904,b,x
 	sta wR6
 
-	lda aActiveSpritePalette,b,x
+	lda aActiveSpriteSystem.aPalette,b,x
 	xba
 	asl a
 	sta wR5
 
-	lda aActiveSpriteBanks,b,x
+	lda aActiveSpriteSystem.aBanks,b,x
 	sep #$20
 	phb
 	pha
@@ -1100,10 +1100,10 @@ rsActiveSpriteEngineRenderSprites ; 81/8505
 	phk
 	pea <>(+) - 1
 
-	lda aActiveSpriteBanks,b,x
+	lda aActiveSpriteSystem.aBanks,b,x
 	sta lSpriteRendererPointer+1,b
 
-	lda aActiveSpriteRenderer,b,x
+	lda aActiveSpriteSystem.aRenderer,b,x
 	sta lSpriteRendererPointer,b
 
 	jmp [<>lSpriteRendererPointer]
@@ -1328,14 +1328,14 @@ rlUnknownPushToOAMBuffer ; 81/865C
 	sta wR2
 	inc y
 	inc y
-	ldx wNextFreeSpriteOffs,b
+	ldx wNextFreeSpriteOffset,b
 	clc
 
 	-
 	lda structSpriteEntry.X,b,y ; X, unk, size
 	clc
 	adc wR0
-	sta aSpriteBuf,b,x
+	sta aSpriteBuffer,b,x
 	bit #$0100
 	beq +
 
@@ -1364,7 +1364,7 @@ rlUnknownPushToOAMBuffer ; 81/865C
 	+
 	clc
 	adc wR1
-	sta aSpriteBuf+1,b,x
+	sta aSpriteBuffer+1,b,x
 	clc
 	adc #16
 	cmp #256
@@ -1373,7 +1373,7 @@ rlUnknownPushToOAMBuffer ; 81/865C
 	; Move down if offscreen
 
 	lda #240
-	sta aSpriteBuf+1,b,x
+	sta aSpriteBuffer+1,b,x
 
 	+
 	clc
@@ -1389,7 +1389,7 @@ rlUnknownPushToOAMBuffer ; 81/865C
 	sta (wR3)
 
 	+
-	lda structSpriteEntry.Index,b,y
+	lda structSpriteEntry.Attr,b,y
 
 	; AND doesn't set the carry flag
 	; so this doesn't do anything?
@@ -1417,7 +1417,7 @@ rlUnknownPushToOAMBuffer ; 81/865C
 	; Back to doing things
 
 	ora wR5
-	sta aSpriteBuf+2,b,x
+	sta aSpriteBuffer+2,b,x
 	txa
 	adc #size(structPPUOAMEntry)
 	and #$01FF
@@ -1431,7 +1431,7 @@ rlUnknownPushToOAMBuffer ; 81/865C
 	jmp -
 
 	+
-	stx wNextFreeSpriteOffs,b
+	stx wNextFreeSpriteOffset,b
 	plx
 	ply
 	rtl
@@ -1446,7 +1446,7 @@ rsUnknown8186FE ; 81/86FE
 	phx
 	lda $0000,b,y
 	sta wR0
-	lda aActiveSpriteXCoordinate,b,x
+	lda aActiveSpriteSystem.aXCoordinate,b,x
 	sta wR1
 	jsl $8E8601
 	inc y
@@ -1516,7 +1516,7 @@ rsUnknown818727 ; 81/8727
 
 	_818744
 	dec y
-	inc aActiveSpriteFrameTimer,b,x
+	inc aActiveSpriteSystem.aFrameTimer,b,x
 	pla
 	rts
 
@@ -1539,11 +1539,11 @@ rsUnknown81875B ; 81/875B
 	.databank ?
 
 	phy
-	lda aUnknown000944,b,x
+	lda aActiveSpriteSystem.aUnknown000944,b,x
 	tax
 	lda #$0000
 	jsl $84E254
-	ldx wActiveSpriteIndex,b
+	ldx aActiveSpriteSystem.wOffset,b
 	ply
 	pla
 	rts
@@ -1615,16 +1615,16 @@ rsUnknown81879D ; 81/879D
 
 	lda #$0001
 	sta wUnknown001617,b
-	lda wActiveSpriteIndex,b
+	lda aActiveSpriteSystem.wOffset,b
 	pha
-	ldx wActiveSpriteIndex,b
+	ldx aActiveSpriteSystem.wOffset,b
 	phy
 	phx
 	jsl $948000
 	plx
 	ply
 	pla
-	sta wActiveSpriteIndex,b
+	sta aActiveSpriteSystem.wOffset,b
 	rts
 
 rsUnknown8187B7 ; 81/87B7
@@ -1650,14 +1650,14 @@ rsUnknown8187BC ; 81/87BC
 	bne +
 
 	tya
-	sta aActiveSpriteCodeOffset,b,x
+	sta aActiveSpriteSystem.aCodeOffset,b,x
 	lda #$0001
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	rts
 
 	+
 	dec y
-	inc aActiveSpriteFrameTimer,b,x
+	inc aActiveSpriteSystem.aFrameTimer,b,x
 	rts
 
 rsUnknown8187D4 ; 81/87D4
@@ -1668,9 +1668,9 @@ rsUnknown8187D4 ; 81/87D4
 	.databank ?
 
 	lda #$0001
-	sta aUnknown000A24,b,x
+	sta aActiveSpriteSystem.aUnknown000A24,b,x
 	dec y
-	inc aActiveSpriteFrameTimer,b,x
+	inc aActiveSpriteSystem.aFrameTimer,b,x
 	pla
 	rts
 
@@ -1681,16 +1681,16 @@ rsUnknown8187E0 ; 81/87E0
 	.autsiz
 	.databank ?
 
-	lda aUnknown000A44,b,x
+	lda aActiveSpriteSystem.aUnknown000A44,b,x
 	bne +
 
 	dec y
-	inc aActiveSpriteFrameTimer,b,x
+	inc aActiveSpriteSystem.aFrameTimer,b,x
 	pla
 	rts
 
 	+
-	dec aUnknown000A44,b,x
+	dec aActiveSpriteSystem.aUnknown000A44,b,x
 	rts
 
 rsUnknown8187EF ; 81/87EF
@@ -1702,13 +1702,13 @@ rsUnknown8187EF ; 81/87EF
 
 	lda $0000,b,y
 	and #$00FF
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	lda $0001,b,y
-	sta aActiveSpriteFrameOffset,b,x
+	sta aActiveSpriteSystem.aFrameOffset,b,x
 	tya
 	clc
 	adc #$0003
-	sta aActiveSpriteCodeOffset,b,x
+	sta aActiveSpriteSystem.aCodeOffset,b,x
 	pla
 	rts
 
@@ -1721,15 +1721,15 @@ rsUnknown818808 ; 81/8808
 
 	lda $0000,b,y
 	and #$00FF
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	lda $0001,b,y
 	clc
-	adc aActiveSpriteTypeOffset,b,x
-	sta aActiveSpriteFrameOffset,b,x
+	adc aActiveSpriteSystem.aTypeOffset,b,x
+	sta aActiveSpriteSystem.aFrameOffset,b,x
 	tya
 	clc
 	adc #$0003
-	sta aActiveSpriteCodeOffset,b,x
+	sta aActiveSpriteSystem.aCodeOffset,b,x
 	pla
 	rts
 
@@ -1740,7 +1740,7 @@ rsUnknown818825 ; 81/8825
 	.autsiz
 	.databank ?
 
-	stz aActiveSpriteTypeOffset,b,x
+	stz aActiveSpriteSystem.aTypeOffset,b,x
 	pla
 	rts
 
@@ -1753,7 +1753,7 @@ rsUnknown81882A ; 81/882A
 
 	lda $0000,b,y
 	and #$00FF
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	inc y
 	pla
 	rts
@@ -1768,7 +1768,7 @@ rsUnknown818836 ; 81/8836
 	dec y
 	dec y
 	tya
-	sta aActiveSpriteCodeOffset,b,x
+	sta aActiveSpriteSystem.aCodeOffset,b,x
 	pla
 	rts
 
@@ -1780,10 +1780,10 @@ rsUnknown81883E ; 81/883E
 	.databank ?
 
 	lda $0000,b,y
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	inc y
 	tya
-	sta aActiveSpriteCodeOffset,b,x
+	sta aActiveSpriteSystem.aCodeOffset,b,x
 	pla
 	rts
 
@@ -1795,7 +1795,7 @@ rsUnknown81884B ; 81/884B
 	.databank ?
 
 	lda $0000,b,y
-	sta aActiveSpriteOnCycle,b,x
+	sta aActiveSpriteSystem.aOnCycle,b,x
 	inc y
 	inc y
 	rts
@@ -1808,7 +1808,7 @@ rsUnknown818854 ; 81/8854
 	.databank ?
 
 	lda #<>rsUnknown818006
-	sta aActiveSpriteOnCycle,b,x
+	sta aActiveSpriteSystem.aOnCycle,b,x
 	rts
 
 rsUnknown81885B ; 81/885B
@@ -1818,16 +1818,16 @@ rsUnknown81885B ; 81/885B
 	.autsiz
 	.databank ?
 
-	lda aActiveSpriteBanks-1,b,x
-	sta lActiveSpriteCodePointer+1,b
+	lda aActiveSpriteSystem.aBanks-1,b,x
+	sta aActiveSpriteSystem.lPointer+1,b
 	lda $0000,b,y
-	sta lActiveSpriteCodePointer,b
+	sta aActiveSpriteSystem.lPointer,b
 	inc y
 	inc y
 	phx
 	phk
 	pea <>(+)-1
-	jmp [<>lActiveSpriteCodePointer]
+	jmp [<>aActiveSpriteSystem.lPointer]
 
 	+
 	plx
@@ -1841,16 +1841,16 @@ rsUnknown818873 ; 81/8873
 	.databank ?
 
 	lda $0000,b,y
-	sta lActiveSpriteCodePointer,b
+	sta aActiveSpriteSystem.lPointer,b
 	lda $0001,b,y
-	sta lActiveSpriteCodePointer+1,b
+	sta aActiveSpriteSystem.lPointer+1,b
 	inc y
 	inc y
 	inc y
 	phx
 	phk
 	pea <>(+)-1
-	jmp [<>lActiveSpriteCodePointer]
+	jmp [<>aActiveSpriteSystem.lPointer]
 
 	+
 	plx
@@ -1899,7 +1899,7 @@ rsUnknown8188A7 ; 81/88A7
 	.databank ?
 
 	lda $0000,b,y
-	sta aActiveSpriteUpdater,b,x
+	sta aActiveSpriteSystem.aUpdater,b,x
 	inc y
 	inc y
 	rts
@@ -1911,7 +1911,7 @@ rsUnknown8188B0 ; 81/88B0
 	.autsiz
 	.databank ?
 
-	dec aActiveSpriteUpdater,b,x
+	dec aActiveSpriteSystem.aUpdater,b,x
 	bne rsUnknown81888C
 
 	inc y
@@ -1925,7 +1925,7 @@ rsUnknown8188B8 ; 81/88B8
 	.autsiz
 	.databank ?
 
-	dec aActiveSpriteUpdater,b,x
+	dec aActiveSpriteSystem.aUpdater,b,x
 	bne rsUnknown818891
 
 	inc y
@@ -1963,7 +1963,7 @@ rsUnknown8188BF ; 81/88BF
 	tay
 	plx
 	lda #$0001
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	pla
 	rts
 
@@ -2007,7 +2007,7 @@ rsUnknown8188ED ; 81/88ED
 	tay
 	plx
 	lda #$0001
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	pla
 	rts
 
@@ -2055,7 +2055,7 @@ rsUnknown818936 ; 81/8936
 
 	phb
 	phx
-	lda aUnknown0009A4,b,x
+	lda aActiveSpriteSystem.aUnknown0009A4,b,x
 	beq +
 
 	inc y
@@ -2089,7 +2089,7 @@ rsUnknown818954 ; 81/8954
 	phb
 	phx
 	tay
-	lda aUnknown0009A4,b,x
+	lda aActiveSpriteSystem.aUnknown0009A4,b,x
 	beq +
 
 	tay
@@ -2109,7 +2109,7 @@ rsUnknown818960 ; 81/8960
 	phb
 	phx
 	tay
-	lda aUnknown0009A4,b,x
+	lda aActiveSpriteSystem.aUnknown0009A4,b,x
 	beq +
 
 	tay
@@ -2128,9 +2128,9 @@ rsUnknown81896C ; 81/896C
 
 	dec y
 	tya
-	sta aActiveSpriteCodeOffset,b,x
+	sta aActiveSpriteSystem.aCodeOffset,b,x
 	lda #$0001
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	pla
 	rts
 
@@ -2151,8 +2151,8 @@ rsUnknown818979 ; 81/8979
 	+
 	xba
 	clc
-	adc aActiveSpriteXCoordinate,b,x
-	sta aActiveSpriteXCoordinate,b,x
+	adc aActiveSpriteSystem.aXCoordinate,b,x
+	sta aActiveSpriteSystem.aXCoordinate,b,x
 	lda $0000,b,y
 	and #$FF00
 	bpl +
@@ -2162,8 +2162,8 @@ rsUnknown818979 ; 81/8979
 	+
 	xba
 	clc
-	adc aActiveSpriteYCoordinate,b,x
-	sta aActiveSpriteYCoordinate,b,x
+	adc aActiveSpriteSystem.aYCoordinate,b,x
+	sta aActiveSpriteSystem.aYCoordinate,b,x
 	inc y
 	inc y
 	rts
@@ -2176,7 +2176,7 @@ rsUnknown8189A3 ; 81/89A3
 	.databank ?
 
 	phx
-	lda aActiveSpriteXCoordinate,b,x
+	lda aActiveSpriteSystem.aXCoordinate,b,x
 	tax
 	sta wR0
 	lda $0000,b,y
@@ -2207,10 +2207,10 @@ rsUnknown8189BD ; 81/89BD
 
 	phy
 	phx
-	lda aUnknown000964,b,x
+	lda aActiveSpriteSystem.aUnknown000964,b,x
 	asl a
 	clc
-	adc aUnknown000964,b,x
+	adc aActiveSpriteSystem.aUnknown000964,b,x
 	tax
 	sta lR18
 	sta lR18+1
@@ -2220,8 +2220,8 @@ rsUnknown8189BD ; 81/89BD
 	tay
 	lda [lR18],y
 	sta wR2
-	ldx wActiveSpriteIndex,b
-	lda aUnknown000944,b,x
+	ldx aActiveSpriteSystem.wOffset,b
+	lda aActiveSpriteSystem.aUnknown000944,b,x
 	asl a
 	tax
 	sta wR3
@@ -2233,15 +2233,15 @@ rsUnknown8189BD ; 81/89BD
 	adc wR2
 	adc wR3
 	sta lR18
-	ldx wActiveSpriteIndex,b
-	lda aUnknown000964,b,x
+	ldx aActiveSpriteSystem.wOffset,b
+	lda aActiveSpriteSystem.aUnknown000964,b,x
 	sta wR0
-	ldx wActiveSpriteIndex,b
-	lda aUnknown000944,b,x
+	ldx aActiveSpriteSystem.wOffset,b
+	lda aActiveSpriteSystem.aUnknown000944,b,x
 	asl a
 	tax
 	sta wR2
-	lda bBuf_OBSEL
+	lda bBufferOBSEL
 	and #($C000 >> 14)
 	asl a
 	asl a
@@ -2278,7 +2278,7 @@ rsUnknown818A1E ; 81/8A1E
 
 	dec y
 	lda #$0001
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	pla
 	bra ++
 
@@ -2310,7 +2310,7 @@ rsUnknown818A2E ; 81/8A2E
 	+
 	dec y
 	lda #$0001
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	pla
 
 	+
@@ -2327,7 +2327,7 @@ rsUnknown818A48 ; 81/8A48
 
 	dec y
 	lda #$0001
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	pla
 
 	+
@@ -2344,7 +2344,7 @@ rsUnknown818A53 ; 81/8A53
 
 	dec y
 	lda #$0001
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	pla
 
 	+
@@ -2359,7 +2359,7 @@ rsUnknown818A5E ; 81/8A5E
 
 	sta lR18
 	sta lR18+1
-	lda aUnknown0009A4,b,x
+	lda aActiveSpriteSystem.aUnknown0009A4,b,x
 	beq +
 
 	sta lR18
@@ -2381,7 +2381,7 @@ rsUnknown818A72 ; 81/8A72
 
 	sta lR18
 	sta lR18+1
-	lda aUnknown0009A4,b,x
+	lda aActiveSpriteSystem.aUnknown0009A4,b,x
 	beq +
 
 	sta lR18
@@ -2420,7 +2420,7 @@ rsUnknown818A8B ; 81/8A8B
 	sta lR18
 	sta lR18+1
 	sta lR19+1
-	lda aUnknown0009A4,b,x
+	lda aActiveSpriteSystem.aUnknown0009A4,b,x
 	beq +
 
 	sta lR18
@@ -2440,15 +2440,15 @@ rsUnknown818A8B ; 81/8A8B
 	lda [lR19],y
 	clc
 	adc lR18
-	sta aActiveSpriteFrameOffset,b,x
+	sta aActiveSpriteSystem.aFrameOffset,b,x
 	ldy wR0
 	lda $0000,b,y
 	and #$00FF
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	pla
 	clc
 	adc #$0002
-	sta aActiveSpriteCodeOffset,b,x
+	sta aActiveSpriteSystem.aCodeOffset,b,x
 	plx
 	pla
 	rts
@@ -2480,7 +2480,7 @@ rsUnknown818AD6 ; 81/8AD6
 	+
 	dec y
 	lda #$0001
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	pla
 
 	+
@@ -2501,7 +2501,7 @@ rsUnknown818AE9 ; 81/8AE9
 	+
 	dec y
 	lda #$0001
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	pla
 
 	+
@@ -2534,7 +2534,7 @@ rsUnknown818B00 ; 81/8B00
 	+
 	dec y
 	lda #$0001
-	sta aActiveSpriteFrameTimer,b,x
+	sta aActiveSpriteSystem.aFrameTimer,b,x
 	pla
 
 	+

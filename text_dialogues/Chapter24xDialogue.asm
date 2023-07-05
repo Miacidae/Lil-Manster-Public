@@ -1,4 +1,4 @@
-ch24xkaiaeyvelleif
+dialogueChapter24xKaiaEyvelLeif
 
 .byte Right_slot
 .word LoadPortrait
@@ -122,7 +122,7 @@ ch24xkaiaeyvelleif
 .byte EndText
 
 
-ch24xkaiaeyvelmareeta
+dialogueChapter24xKaiaEyvelMareeta
 
 .byte Right_slot
 .word LoadPortrait
@@ -275,7 +275,7 @@ ch24xkaiaeyvelmareeta
 .byte EndText
 
 
-ch24xopening
+dialogueChapter24xOpening
 
 .byte Right_slot
 .word LoadPortrait
@@ -374,7 +374,7 @@ ch24xopening
 .byte EndText
 
 
-ch24xeyvelleif
+dialogueChapter24xEyvelLeif
 
 .byte Right_slot
 .word LoadPortrait
@@ -563,7 +563,7 @@ ch24xeyvelleif
 .byte EndText
 
 
-ch24xeyvelnanna
+dialogueChapter24xEyvelNanna
 
 .byte Right_slot
 .byte ScrollText
@@ -622,7 +622,7 @@ ch24xeyvelnanna
 .byte EndText
 
 
-ch24xeyveldagdar
+dialogueChapter24xEyvelDagdar
 
 .byte Right_slot
 .byte ScrollText
@@ -659,7 +659,7 @@ ch24xeyveldagdar
 .byte EndText
 
 
-ch24xeyveltanya
+dialogueChapter24xEyvelTanya
 
 .byte Right_slot
 .byte ScrollText
@@ -676,7 +676,7 @@ ch24xeyveltanya
 .byte EndText
 
 
-ch24xeyvelhalvan
+dialogueChapter24xEyvelHalvan
 
 .byte Right_slot
 .byte ScrollText
@@ -718,7 +718,7 @@ ch24xeyvelhalvan
 .byte EndText
 
 
-ch24xeyvelosian
+dialogueChapter24xEyvelOsian
 
 .byte Right_slot
 .byte ScrollText
@@ -757,7 +757,7 @@ ch24xeyvelosian
 .byte EndText
 
 
-ch24xeyvelmareeta
+dialogueChapter24xEyvelMareeta
 
 .byte Right_slot
 .byte ScrollText
@@ -805,7 +805,7 @@ ch24xeyvelmareeta
 .byte EndText
 
 
-ch24xeyvelgalzus
+dialogueChapter24xEyvelGalzus
 
 .byte Right_slot
 .byte ScrollText
@@ -962,7 +962,7 @@ ch24xeyvelgalzus
 .byte EndText
 
 
-ch24xeyvelfinn
+dialogueChapter24xEyvelFinn
 
 .byte Right_slot
 .byte ScrollText

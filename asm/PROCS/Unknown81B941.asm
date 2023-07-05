@@ -22,7 +22,7 @@ rlProcUnknown81B941Init ; 81/B949
 		+
 	lda #aBurstWindowCharacterBuffer
 	sta wR1
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	lda aBurstWindowCharacterBuffer.X,b
 	and #$00FF
 	sta wR0
@@ -39,7 +39,7 @@ rlProcUnknown81B941OnCycle ; 81/B978
 	.autsiz
 	.databank ?
 
-	lda wUnknown000E6D,b
+	lda wForcedMapScrollFlag,b
 	bne +
 
 	jsl rlProcEngineFreeProc

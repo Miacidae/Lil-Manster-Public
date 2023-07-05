@@ -3,9 +3,9 @@ rlDrawBurstWindow ; 84/A09B
 
 	.al
 	.autsiz
-	.databank `aOptions.wBurstWindowOption
+	.databank `aOptions.wBurstWindow
 
-	lda aOptions.wBurstWindowOption
+	lda aOptions.wBurstWindow
 	cmp #$0001
 	beq _BurstDisabled
 
@@ -31,25 +31,25 @@ rlDrawBurstWindow ; 84/A09B
 	; being held on this unit at these coords
 	; for ten frames before drawing the window
 
-	cmp wBurstWindowTargetDeploymentNumber
+	cmp wBurstWindowTarget
 	bne _DoNotDraw
 
-	inc wBurstWindowDelayCounter
-	lda wBurstWindowDelayCounter
+	inc wBurstWindowCounter
+	lda wBurstWindowCounter
 	cmp #10
 	beq _DrawWindow
 	rtl
 
 	_DoNotDraw
-	stz wBurstWindowDelayCounter
+	stz wBurstWindowCounter
 
 	lda wR17
-	sta wBurstWindowTargetDeploymentNumber
+	sta wBurstWindowTarget
 
 	lda wCursorXCoord,b
-	sta wBurstWindowTargetXCoordinate
+	sta wBurstWindowXCoordinate
 	lda wCursorYCoord,b
-	sta wBurstWindowTargetYCoordinate
+	sta wBurstWindowYCoordinate
 	rtl
 
 	_Drawn
@@ -58,11 +58,11 @@ rlDrawBurstWindow ; 84/A09B
 	; check if it needs to be cleared
 
 	lda wCursorXCoord,b
-	cmp wBurstWindowTargetXCoordinate
+	cmp wBurstWindowXCoordinate
 	bne _ClearWindow
 
 	lda wCursorYCoord,b
-	cmp wBurstWindowTargetYCoordinate
+	cmp wBurstWindowYCoordinate
 	bne _ClearWindow
 
 	; While the cursor is held on
@@ -74,7 +74,7 @@ rlDrawBurstWindow ; 84/A09B
 	and #$003F
 	bne +
 
-	lda wBurstWindowTargetDeploymentNumber
+	lda wBurstWindowTarget
 	sta wR0
 	lda #<>aBurstWindowCharacterBuffer
 	sta wR1
@@ -104,8 +104,8 @@ rlDrawBurstWindow ; 84/A09B
 
 	_ClearWindow
 	sep #$20
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 	rep #$20
 
 	lda wBurstWindowDrawn
@@ -113,7 +113,7 @@ rlDrawBurstWindow ; 84/A09B
 
 	jsr rsClearBurstWindowTilemap
 
-	stz wBurstWindowTargetDeploymentNumber
+	stz wBurstWindowTarget
 	stz wBurstWindowDrawn
 
 	jsl rlEnableBG1Sync
@@ -125,7 +125,7 @@ rlDrawBurstWindow ; 84/A09B
 	_DrawWindow
 	dec wBurstWindowDrawn
 
-	lda wBurstWindowTargetDeploymentNumber
+	lda wBurstWindowTarget
 	sta wR0
 	lda #<>aBurstWindowCharacterBuffer
 	sta wR1
@@ -141,9 +141,9 @@ rlDrawBurstWindow ; 84/A09B
 	jsl rlEnableBG3Sync
 
 	lda wCursorXCoord,b
-	sta wBurstWindowTargetXCoordinate
+	sta wBurstWindowXCoordinate
 	lda wCursorYCoord,b
-	sta wBurstWindowTargetYCoordinate
+	sta wBurstWindowYCoordinate
 	rtl
 
 rlDMABurstWindowTiles ; 84/A17D
@@ -160,7 +160,7 @@ rlDMABurstWindowTiles ; 84/A17D
 rsGetBurstWindowStyle ; 84/A18B
 
 	.autsiz
-	.databank `aOptions.wBurstWindowOption
+	.databank `aOptions.wBurstWindow
 
 	; There are 6 styles of burst window:
 	; Above the unit
@@ -253,7 +253,7 @@ rsGetBurstWindowPosition ; 84/A1DA
 
 	.al
 	.autsiz
-	.databank `aOptions.wBurstWindowOption
+	.databank `aOptions.wBurstWindow
 
 	; Use style*sizeof(sint) to get
 	; burst window tilemap position relative
@@ -288,7 +288,7 @@ rsGetBurstWindowCharacterName ; 84/A20F
 
 	.al
 	.autsiz
-	.databank `aOptions.wBurstWindowOption
+	.databank `aOptions.wBurstWindow
 
 	; Name gets drawn one tile down from
 	; the top of the window
@@ -297,11 +297,11 @@ rsGetBurstWindowCharacterName ; 84/A20F
 	jsl rlGetCharacterNamePointer
 
 	lda #$3180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`$83C0F6
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 
 	lda wBurstWindowPositionYTile
 	inc a
@@ -319,7 +319,7 @@ rsDrawBurstWindowStatus ; 84/A23A
 	.al
 	.xl
 	.autsiz
-	.databank `aOptions.wBurstWindowOption
+	.databank `aOptions.wBurstWindow
 
 	; Use X as an index in a table of
 	; graphics tilemap offsets for the various
@@ -336,7 +336,7 @@ rsDrawBurstWindowStatus ; 84/A23A
 
 	inc x
 
-	cmp #StatusStone
+	cmp #StatusPetrify
 	beq +
 
 	inc x
@@ -414,7 +414,7 @@ rsDrawBurstWindowStatus ; 84/A23A
 	lda #1
 	sta wR1
 	lda #$1000
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	jsl $84A3FF
 	rts
 
@@ -429,7 +429,7 @@ rsDrawBurstWindowHPIfNotStatus ; 84/A2C2
 
 	.al
 	.autsiz
-	.databank `aOptions.wBurstWindowOption
+	.databank `aOptions.wBurstWindow
 
 	lda aBurstWindowCharacterBuffer.Status,b
 	and #$00FF
@@ -441,7 +441,7 @@ rsDrawBurstWindowHP ; 84/A2CD
 
 	.al
 	.autsiz
-	.databank `aOptions.wBurstWindowOption
+	.databank `aOptions.wBurstWindow
 
 	; Get the tilemap for the HP
 	; text
@@ -473,7 +473,7 @@ rsDrawBurstWindowHP ; 84/A2CD
 	pha
 
 	lda #$2000
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	jsl $84A3FF
 
 	; Draw current and max HP
@@ -500,7 +500,7 @@ rsDrawBurstWindowNumber ; 84/A316
 
 	.al
 	.autsiz
-	.databank `aOptions.wBurstWindowOption
+	.databank `aOptions.wBurstWindow
 
 	and #$00FF
 	asl a
@@ -535,7 +535,7 @@ rsDrawBurstWindowTilemap ; 84/A346
 
 	.al
 	.autsiz
-	.databank `aOptions.wBurstWindowOption
+	.databank `aOptions.wBurstWindow
 
 	lda #>`$F3FC80
 	sta lR18+1
@@ -563,7 +563,7 @@ rsDrawBurstWindowTilemap ; 84/A346
 	lda #5
 	sta wR1
 	lda #$2400
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	jsl $84A3FF
 	rts
 
@@ -593,8 +593,8 @@ rlGetBurstWindowPalette ; 84/A38A
 	tax
 	lda aBurstWindowPaletteTable,x
 	tax
-	ldy #aBGPal1
-	lda #size(aBGPal1)-1
+	ldy #aBGPaletteBuffer.aPalette1
+	lda #size(aBGPaletteBuffer.aPalette1)-1
 	mvn #`$9E8600,#$7E
 	plb
 	rtl
@@ -608,7 +608,7 @@ rsClearBurstWindowTilemap ; 84/A3AD
 
 	.al
 	.autsiz
-	.databank `aOptions.wBurstWindowOption
+	.databank `aOptions.wBurstWindow
 
 	lda wBurstWindowPositionYTile
 	asl a

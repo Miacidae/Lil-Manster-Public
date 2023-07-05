@@ -1,4 +1,4 @@
-ch13mastersealhouse
+dialogueChapter13MasterSealHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -25,7 +25,7 @@ ch13mastersealhouse
 .byte EndText
 
 
-ch13armorslayerhouse
+dialogueChapter13ArmorslayerHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -47,7 +47,7 @@ ch13armorslayerhouse
 .byte EndText
 
 
-ch13hammerhouse
+dialogueChapter13HammerHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -72,7 +72,7 @@ ch13hammerhouse
 .byte EndText
 
 
-ch13gladefinn
+dialogueChapter13GladeFinn
 
 .byte Right_slot
 .word LoadPortrait
@@ -190,7 +190,7 @@ ch13gladefinn
 .byte EndText
 
 
-ch13gladeselphinaA
+dialogueChapter13GladeSelphinaA
 
 .byte Right_slot
 .word LoadPortrait
@@ -296,7 +296,7 @@ ch13gladeselphinaA
 .byte EndText
 
 
-ch13gladeselphinaB
+dialogueChapter13GladeSelphinaB
 
 .byte Right_slot
 .word LoadPortrait
@@ -525,7 +525,7 @@ ch13gladeselphinaB
 .byte EndText
 
 
-ch13gladeleif
+dialogueChapter13GladeLeif
 
 .byte Right_slot
 .word LoadPortrait
@@ -635,7 +635,7 @@ ch13gladeleif
 .byte EndText
 
 
-ch13opening1
+dialogueChapter13Opening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -675,7 +675,7 @@ ch13opening1
 .byte EndText
 
 
-ch13opening2
+dialogueChapter13Opening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -695,7 +695,7 @@ ch13opening2
 .byte EndText
 
 
-ch13opening3
+dialogueChapter13Opening3
 
 .byte Right_slot
 .word LoadPortrait
@@ -838,7 +838,7 @@ ch13opening3
 .byte EndText
 
 
-ch13opening4
+dialogueChapter13Opening4
 
 .byte Right_slot
 .word LoadPortrait
@@ -926,7 +926,7 @@ ch13opening4
 .byte EndText
 
 
-ch13closing
+dialogueChapter13Closing
 
 .byte Left_slot
 .word LoadPortrait
@@ -1028,7 +1028,7 @@ ch13closing
 .byte EndText
 
 
-ch13wm1
+dialogueChapter13WorldMap1
 
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2
@@ -1050,7 +1050,7 @@ ch13wm1
 .byte EndText
 
 
-ch13wm2
+dialogueChapter13WorldMap2
 
 .text "the walled city of Tahra, its shape tall and"
 .byte NewLine
@@ -1128,7 +1128,7 @@ ch13wm2
 .byte EndText
 
 
-ch13fall
+dialogueChapter13Fall
 
 .byte Right_slot
 .word LoadPortrait

@@ -28,7 +28,7 @@ rsPrepareBlockCopyRAM ; 80/B208
 
 	-
 	lda <>rsBlockCopyMVNRoutine,b,x
-	sta aBlockCopyMVNRoutineSpace,b,x
+	sta rsBlockCopyMVNRAM,b,x
 	dec x
 	bpl -
 
@@ -36,7 +36,7 @@ rsPrepareBlockCopyRAM ; 80/B208
 
 	-
 	lda <>rsBlockCopyMVPRoutine,b,x
-	sta aBlockCopyMVPRoutineSpace,b,x
+	sta rsBlockCopyMVPRAM,b,x
 	dec x
 	bpl -
 

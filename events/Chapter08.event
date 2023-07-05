@@ -1,0 +1,583 @@
+
+.weak
+  WARNINGS :?= "None"
+.endweak
+
+GUARD_FE5_CHAPTER08 :?= false
+.if (!GUARD_FE5_CHAPTER08)
+  GUARD_FE5_CHAPTER08 := true
+
+  ; Definitions
+
+    .weak
+
+    .endweak
+
+  ; Freespace inclusions
+
+    .section Chapter08EventsSection
+
+      eventChapter08Events ; 99/BE7D
+
+          _FlagLemayBattleQuote       = enum.enum($06)
+
+          _FlagMartyRecruited         = enum.enum($08)
+
+          _FlagMartyBattleQuote       = enum.enum($0A)
+
+          _FlagMasterSealHouseVisit   = enum.enum($21)
+
+          _FlagLuckRingHouseVisit     = enum.enum($24)
+          _FlagMasterSealHouseDestroy = enum.enum()
+
+          _FlagLuckRingHouseDestroy   = enum.enum($28)
+
+
+        _OpeningEventDefinitions ; 99/BE7D
+          EVENT FlagAlwaysZero, _OpeningEvent
+            CMP_WORD wCurrentTurn, 0
+          END_DEFINITION
+        END_DEFINITION_ARRAY
+
+        _TurnEventDefinitions ; 99/BE8A
+          EVENT FlagBossDeath, eventMapDeathQuoteDummyEvent
+            CHECK_IF_BOSS_DEAD Lemay
+            CMP_WORD wCurrentPhase, Enemy
+          END_DEFINITION
+          EVENT FlagAlwaysZero, _GomezAppear
+            CMP_WORD wCurrentTurn, 1
+            CMP_WORD wCurrentPhase, Enemy
+          END_DEFINITION
+          EVENT FlagAlwaysZero, _RightReinforcements
+            CMP_WORD_RANGE wCurrentTurn, 7, 24
+            CMP_WORD wCurrentPhase, Enemy
+            ROLL_RNG 30
+            TEST_FLAG_UNSET FlagBossDeath
+          END_DEFINITION
+          EVENT FlagAlwaysZero, _LeftReinforcements
+            CMP_WORD_RANGE wCurrentTurn, 5, 30
+            CMP_WORD wCurrentPhase, Enemy
+            ROLL_RNG 80
+            TEST_FLAG_UNSET FlagBossDeath
+          END_DEFINITION
+          EVENT FlagAlwaysZero, _LemayAIChange
+            CMP_WORD wCurrentTurn, 16
+            CHECK_NUM_UNITS_GTE Lemay, 1
+            CMP_UNITSTATE_UNSET Lemay, UnitStateRescued
+            CMP_WORD wCurrentPhase, Enemy
+          END_DEFINITION
+          EVENT FlagAlliedDeath, eventMapDeathQuoteDummyEvent
+            CMP_WORD wCurrentTurn, 16
+            CHECK_NUM_UNITS_GTE Lemay, 1
+            CMP_UNITSTATE_UNSET Lemay, UnitStateRescued
+            CMP_WORD wCurrentPhase, Enemy
+          END_DEFINITION
+        END_DEFINITION_ARRAY
+
+        _TalkEventDefinitions ; 99/BF0D
+          EVENT _FlagMartyRecruited, _OsianMartyTalk
+            CHECK_CHARS2 Osian, Marty
+          END_DEFINITION
+          EVENT _FlagMartyRecruited, _HalvanMartyTalk
+            CHECK_CHARS2 Halvan, Marty
+          END_DEFINITION
+        END_DEFINITION_ARRAY
+
+        _LocationEventDefinitions ; 99/BF23
+          EVENT _FlagMasterSealHouseDestroy, _MasterSealHouseDestroy
+            macroECCheckCoordinates [12, 9]
+            CMP_WORD wCurrentPhase, Enemy
+          END_DEFINITION
+          EVENT _FlagMasterSealHouseVisit, _MasterSealHouseVisit
+            CMP_WORD wCurrentPhase, Player
+            macroECCheckCoordinates [12, 9]
+          END_DEFINITION
+          EVENT _FlagLuckRingHouseDestroy, _LuckRingHouseDestroy
+            macroECCheckCoordinates [18, 16]
+            CMP_WORD wCurrentPhase, Enemy
+          END_DEFINITION
+          EVENT _FlagLuckRingHouseVisit, _LuckRingHouseVisit
+            CMP_WORD wCurrentPhase, Player
+            macroECCheckCoordinates [18, 16]
+          END_DEFINITION
+          EVENT FlagAlwaysZero, _EndingEvent
+            macroECCheckCoordinates [2, 9]
+            CMP_WORD wCurrentPhase, Player
+            CMP_WORD aSelectedCharacterBuffer.Character, Leif
+          END_DEFINITION
+        END_DEFINITION_ARRAY
+
+        _BeforeActionEventDefinitions ; 99/BF94
+        END_DEFINITION_ARRAY
+
+        _AfterActionEventDefinitions ; 99/BF96
+          EVENT _FlagMartyRecruited, _MartyCaptured
+            CHECK_ACTIVE_CARRYING Marty
+          END_DEFINITION
+        END_DEFINITION_ARRAY
+
+        _BattleEventDefinitions ; 99/BFA0
+          macroECBossQuote _FlagLemayBattleQuote, Lemay
+          macroECBossQuote _FlagMartyBattleQuote, Marty
+        END_DEFINITION_ARRAY
+
+        _ShopEventDefinitions ; 99/BFB2
+          macroECShop eventChapter08Data._Armory
+          macroECShop eventChapter08Data._Vendor
+        END_DEFINITION_ARRAY
+
+        _RightReinforcements ; 99/BFDA
+          SCROLL_CAMERA_ADDRESS eventChapter08Data._RightReinforcementsCameraCoordinates1
+          YIELD
+
+          LOAD_GROUP_BLOCKABLE eventChapter08Data._RightReinforcementsGroup1
+          WAIT_MOVE
+          YIELD
+
+          YIELD_UNK
+
+          SCROLL_CAMERA_ADDRESS eventChapter08Data._RightReinforcementsCameraCoordinates2
+          YIELD
+
+          LOAD_GROUP_BLOCKABLE eventChapter08Data._RightReinforcementsGroup2
+          WAIT_MOVE
+          YIELD
+
+          YIELD_UNK
+        END2
+
+        _LeftReinforcements ; 99/BFF3
+          SCROLL_CAMERA_ADDRESS eventChapter08Data._LeftReinforcementsCameraCoordinates
+          YIELD
+
+          LOAD_GROUP_BLOCKABLE eventChapter08Data._LeftReinforcementsGroup
+          WAIT_MOVE
+          YIELD
+
+          YIELD_UNK
+        END2
+
+        _LemayAIChange ; 99/C000
+
+          PLAY_SOUND_WORD $00E0
+          PAUSE_SKIPPABLE 32
+          YIELD
+
+          SET_MUSIC $0A
+          YIELD
+
+          PLAY_SOUND_WORD $00F7
+
+          SCROLL_CAMERA_CHAR Lemay, 4
+
+          DIALOGUE dialogueChapter08LemayMount
+          YIELD
+
+          macroASMCMount Lemay
+
+          macroSetCharacterAI Lemay, [$00, $00, $03, $00]
+        END2
+
+        _OsianMartyTalk ; 99/C084
+          PLAY_SOUND_WORD $00E0
+          PAUSE_SKIPPABLE 32
+          YIELD
+
+          SET_MUSIC $4C
+          YIELD
+
+          DIALOGUE dialogueChapter08OsianMartyTalk
+          YIELD
+
+          macroASMCChangeAllegianceToPlayer Marty
+          macroASMCSetCharacterDataWord Marty, Leader, Leif
+
+          SET_FLAG _FlagMartyBattleQuote
+        END2
+
+        _HalvanMartyTalk ; 99/C0BA
+          PLAY_SOUND_WORD $00E0
+          PAUSE_SKIPPABLE 32
+          YIELD
+
+          SET_MUSIC $4C
+          YIELD
+
+          DIALOGUE dialogueChapter08HalvanMartyTalk
+          YIELD
+
+          macroASMCChangeAllegianceToPlayer Marty
+          macroASMCSetCharacterDataWord Marty, Leader, Leif
+
+          SET_FLAG _FlagMartyBattleQuote
+        END2
+
+        _MartyCaptured ; 99/C0F0
+          PLAY_SOUND_WORD $00F7
+
+          DIALOGUE dialogueChapter08MartyCaptured
+          YIELD
+
+          macroASMCChangeAllegianceToPlayerIfHeld Marty
+
+          SET_FLAG _FlagMartyBattleQuote
+        END2
+
+        _GomezAppear ; 99/C107
+          PLAY_SOUND_WORD $00E0
+          PAUSE_SKIPPABLE 32
+          YIELD
+
+          SET_MUSIC $3A
+          YIELD
+
+          macroASMCCountAllUnitsUncapturedAlive Lemay
+          JUMP_FALSE +
+
+          macroASMCCheckUnitStateSet Lemay, (UnitStateDead | UnitStateUnknown1 | UnitStateDisabled | UnitStateCaptured)
+          JUMP_TRUE +
+
+            SCROLL_CAMERA_CHAR Lemay, 4
+
+            MOVE_CHAR Lemay, [2, 10], 1
+            WAIT_MOVE
+            YIELD
+
+            LOAD_GROUP eventChapter08Data._GomezGroup
+            WAIT_MOVE
+            YIELD
+
+            DIALOGUE dialogueChapter08GomezAppear
+            YIELD
+
+            macroASMCRemoveUnit Gomez
+
+            WAIT_MOVE
+            YIELD
+
+            MOVE_CHAR Lemay, [2, 9], 1
+            WAIT_MOVE
+            YIELD
+
+          +
+        END2
+
+        _MasterSealHouseVisit ; 99/C170
+          macroItemHouse dialogueChapter08MasterSealHouse, MasterSeal, [12, 9], $03F0
+        END2
+
+        _LuckRingHouseVisit ; 99/C1D3
+          macroItemHouse dialogueChapter08LuckRingHouse, LuckRing, [18, 16], $03F0
+        END2
+
+        _MasterSealHouseDestroy ; 99/C236
+          macroDestroyHouseByTileChangeID 0
+        END1
+
+        _LuckRingHouseDestroy ; 99/C265
+          macroDestroyHouseByTileChangeID 3
+        END1
+
+        _PrepGroups ; 99/C294
+          .long eventChapter08Data._PrepGroup1
+          .long eventChapter08Data._PrepGroup2
+        .word 0
+
+        _OpeningEvent ; 99/C29C
+          SET_CAMERA_POSITION [22, 12]
+
+          HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(false, 15)
+
+          PLAY_SOUND_WORD $00E0
+          PAUSE_SKIPPABLE 32
+          YIELD
+
+          SET_MUSIC $31
+          YIELD
+
+          macroChapterTitlePopup dialogueChapter08Title
+
+          macroASMCCheckUnitStateSet Marty, UnitStateDisabled
+          JUMP_FALSE +
+
+            macroASMCUnsetUnitState Marty, (UnitStateUnknown1 | UnitStateDisabled)
+            macroASMCSetUnitPosition Marty, [13, 11]
+            macroASMCSetCharacterDataByte Marty, Fatigue, 0
+
+          +
+          macroASMCChangeAllegianceToEnemy Marty
+          macroSetCharacterAI Marty, [$00, $00, $03, $00]
+          macroASMCSetCharacterDataWord Marty, Leader, Gomez
+
+          macroSetCursorPosition [22, 12]
+
+          macroASMCLoadUnitGroup eventChapter08Data._LemayGroup
+
+          macroASMCDismount Lemay
+
+          MOVE_CHAR Lemay, [2, 9], 1
+
+          WAIT_MOVE
+          YIELD
+
+          GET_CHARACTER_COORDS Leif
+          SCROLL_CAMERA 4
+
+          LOAD_GROUP eventChapter08Data._CallionGroup
+          WAIT_MOVE
+          YIELD
+
+          DIALOGUE dialogueChapter08Opening
+          YIELD
+
+          MOVE_CHAR Callion, [22, 9], 2
+
+          WAIT_MOVE
+          YIELD
+        END2
+
+        _EndingEvent ; 99/C3F7
+        STORE_WORD wCurrentMapMusic, $00
+
+        PAUSE_SKIPPABLE 16
+        YIELD
+
+        CALL_ASM_LOOP rlASMCSaveActiveUnitClearHDMA
+        CALL_ASM_LOOP rlASMCSaveChapterTurncount
+
+        macroASMCCountAllUnitsAlive Dagdar
+        JUMP_FALSE _EndingEvent_DagdarDead
+
+        macroASMCCountAllUnitsAlive Tanya
+        JUMP_FALSE _EndingEvent_TanyaDead
+
+        macroASMCIsUnitHeld Lemay
+        JUMP_FALSE _EndingEvent_Failed
+
+          PLAY_SOUND_WORD $00E0
+          PAUSE_SKIPPABLE 32
+          YIELD
+
+          SET_MUSIC $41
+          YIELD
+
+          macroDialogueWithBG dialogueChapter08Ending1A, 1
+          CALL_ASM_LOOP rlASMCDialogueWithBGEnd
+          YIELD
+
+          HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(false, 15)
+          JUMP _EndingEvent_End
+
+
+        _EndingEvent_TanyaDead
+          PLAY_SOUND_WORD $00E0
+          PAUSE_SKIPPABLE 32
+          YIELD
+
+          SET_MUSIC $42
+          YIELD
+
+          macroASMCUnsetUnitState Dagdar, UnitStateDisabled
+
+          macroDialogueWithBG dialogueChapter08Chapter08xLeifDagdar, 1
+          CALL_ASM_LOOP rlASMCDialogueWithBGEnd
+          YIELD
+
+          HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(false, 15)
+          JUMP _EndingEvent_Continue
+
+        _EndingEvent_DagdarDead
+          macroASMCCheckUnitStateSet Tanya, (UnitStateDead | UnitStateCaptured)
+          JUMP_TRUE _EndingEvent_Failed
+
+            PLAY_SOUND_WORD $00E0
+            PAUSE_SKIPPABLE 32
+            YIELD
+
+            SET_MUSIC $42
+            YIELD
+
+            macroASMCUnsetUnitState Tanya, UnitStateDisabled
+
+            macroDialogueWithBG dialogueChapter08Ending1C, 1
+            CALL_ASM_LOOP rlASMCDialogueWithBGEnd
+            YIELD
+
+            HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(false, 15)
+            JUMP _EndingEvent_Continue
+
+        _EndingEvent_Failed
+          PLAY_SOUND_WORD $00E0
+          PAUSE_SKIPPABLE 32
+          YIELD
+
+          SET_MUSIC $41
+          YIELD
+
+          macroDialogueWithBG dialogueChapter08Ending1D, 1
+          CALL_ASM_LOOP rlASMCDialogueWithBGEnd
+          YIELD
+
+          HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(false, 15)
+          YIELD
+
+        _EndingEvent_Continue
+        ADD_WORD wCurrentChapter, Chapter09 - Chapter08 - 1
+        YIELD_UNK
+
+        _EndingEvent_End
+        PLAY_SOUND_WORD $00E7
+
+        FADE_OUT 1
+        YIELD
+
+        CALL_ASM_LOOP rlASMCChapterEnd
+      END1
+
+    .endsection Chapter08EventsSection
+
+    .section Chapter08DataSection
+
+      eventChapter08Data ; B1/DD06
+
+        _PrepGroup1 ; B1/DD06
+          .byte [8, 7]
+
+          UNIT BanditWarrior, Enemy, [6, 11], [6, 11], Gomez, [VeninAxe, VeninBow, Vulnerary], 8, false, [$00, $03, $00, $00]
+        UNIT
+
+        _RightReinforcementsCameraCoordinates1 ; B1/DD1E
+          .byte [14, 8]
+
+        _RightReinforcementsGroup1 ; B1/DD20
+          UNIT BanditBrigand1, Enemy, [13, 0], [13, 1], Gomez, [VeninAxe], 8, false, [$00, $00, $00, $00]
+        UNIT
+
+        _RightReinforcementsCameraCoordinates2 ; B1/DD36
+          .byte [14, 8]
+
+        _RightReinforcementsGroup2 ; B1/DD38
+          UNIT BanditHunter, Enemy, [14, 0], [14, 1], Gomez, [VeninBow], 3, false, [$00, $00, $00, $00]
+        UNIT
+
+        _LeftReinforcementsCameraCoordinates ; B1/DD4E
+          .byte [9, 8]
+
+        _LeftReinforcementsGroup ; B1/DD50
+          UNIT BanditBrigand1, Enemy, [4, 0], [4, 1], Gomez, [IronAxe], 7, false, [$00, $01, $00, $00]
+        UNIT
+
+        _PrepGroup2 ; B1/DD66
+          .byte [8, 7]
+
+          UNIT BanditBrigand1, Enemy, [14, 10], [14, 10], Gomez, [VeninAxe], 5, false, [$00, $03, $00, $00]
+          UNIT BanditBrigand1, Enemy, [17, 12], [17, 12], Gomez, [VeninAxe], 8, false, [$00, $03, $00, $00]
+          UNIT BanditBrigand1, Enemy, [18, 13], [18, 13], Gomez, [VeninAxe, Vulnerary], 7, false, [$00, $03, $00, $00]
+          UNIT BanditHunter, Enemy, [15, 13], [15, 13], Gomez, [VeninBow], 3, false, [$00, $03, $00, $00]
+          UNIT BanditHunter, Enemy, [16, 14], [16, 14], Gomez, [VeninBow], 3, false, [$00, $03, $00, $00]
+          UNIT BanditBrigand1, Enemy, [12, 9], [12, 9], Gomez, [VeninAxe], 5, false, [$01, $03, $00, $00]
+          UNIT BanditBrigand1, Enemy, [18, 16], [18, 16], Gomez, [VeninAxe], 7, false, [$01, $03, $00, $00]
+          UNIT BanditBrigand1, Enemy, [13, 14], [13, 14], Gomez, [VeninAxe], 10, false, [$01, $03, $00, $00]
+          UNIT BanditBrigand1, Enemy, [16, 8], [16, 8], Gomez, [VeninAxe], 10, false, [$01, $03, $00, $00]
+        UNIT
+
+        _UnusedCoordinates1 ; B1/DE1E
+          .byte [8, 7]
+
+        _LemayGroup ; B1/DE20
+          UNIT Lemay, Enemy, [2, 10], [2, 10], Lemay, [Ridersbane, SteelLance, IronSword, Vulnerary, MasterSeal], 5, true, [$01, $03, $02, $80]
+        UNIT
+
+        _UnusedCoordinates2 ; B1/DE36
+          .byte [22, 10]
+
+        _CallionGroup ; B1/DE38
+          UNIT Callion, Player, [30, 15], [28, 9], Leif, [SteelLance], 1, false, [$00, $00, $00, $00]
+        UNIT
+
+        _UnusedCoordinates3 ; B1/DE4E
+          .byte [8, 7]
+
+        _GomezGroup ; B1/DE50
+          UNIT Gomez, Enemy, [2, 9], [2, 9], Gomez, [], 3, false, [$00, $00, $00, $00]
+        UNIT
+
+        _StartingPositions ; B1/DE66
+          .byte [29, 9]
+          .byte [26, 9]
+          .byte [24, 10]
+          .byte [28, 8]
+          .byte [24, 8]
+          .byte [27, 8]
+          .byte [25, 7]
+          .byte [29, 7]
+        .char -1
+
+        _Armory ; B1/DE77
+          SHOP [16, 8], [IronAxe, SteelAxe, HandAxe, Hammer]
+
+        _Vendor ; B1/DE89
+          SHOP [13, 14], [Vulnerary, Antitoxin, Torch, DoorKey]
+
+    .endsection Chapter08DataSection
+
+    .section Chapter08WorldMapEventsSection
+
+      eventChapter08WorldMapEvents ; E7/E66E
+
+        SCROLL_CAMERA_COORDS [18, 14], 4
+        SET_CURSOR_POSITION
+        YIELD
+
+        PLAY_SOUND_WORD $00E0
+        PAUSE_SKIPPABLE 32
+        YIELD
+
+        SET_MUSIC $29
+        YIELD
+
+        FADE_IN 1
+        YIELD
+
+        SCROLL_CAMERA_COORDS [18, 16], 1
+        SET_CURSOR_POSITION
+        YIELD
+
+        macroWMSetCyclePalette 0, aBGPaletteBuffer.aPalette6
+
+        macroWMDrawSpecialMarker [96, 97], WMMarkerTable.Crown, 0
+
+        macroASMCWMDialogue dialogueChapter08WorldMap1
+
+        HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+
+        macroWMClearCyclePalette aBGPaletteBuffer.aPalette6
+        macroWMClearSpecialMarker 0
+
+        PAUSE_SKIPPABLE 1
+        YIELD
+
+        macroWMSetCyclePalette 0, aBGPaletteBuffer.aPalette6
+
+        macroWMDrawSpecialMarker [88, 80], WMMarkerTable.Circle, 0
+
+        macroASMCWMDialogue dialogueChapter08WorldMap2
+
+        HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+
+        macroWMClearCyclePalette aBGPaletteBuffer.aPalette6
+        macroWMClearSpecialMarker 0
+
+        PAUSE_SKIPPABLE 1
+        YIELD
+
+        FADE_OUT 2
+        YIELD
+
+        CALL_ASM_LOOP rlASMCEndWMEvents
+        YIELD
+      END1
+
+    .endsection Chapter08WorldMapEventsSection
+
+.endif ; GUARD_FE5_CHAPTER08

@@ -1,4 +1,4 @@
-ch12magicringhouseolwen
+dialogueChapter12MagicRingHouseOlwen
 
 .byte Left_slot
 .word LoadPortrait
@@ -32,7 +32,7 @@ ch12magicringhouseolwen
 .byte EndText
 
 
-ch12magicringhousenotolwen
+dialogueChapter12MagicRingHouseNotOlwen
 
 .byte Right_slot
 .word LoadPortrait
@@ -63,7 +63,7 @@ ch12magicringhousenotolwen
 .byte EndText
 
 
-ch12heimscrollhousefailed
+dialogueChapter12HeimScrollHouseFailed
 
 .byte Right_slot
 .word LoadPortrait
@@ -78,7 +78,7 @@ ch12heimscrollhousefailed
 .byte EndText
 
 
-ch12heimscrollhousesaved
+dialogueChapter12HeimScrollHouseSaved
 
 .byte Right_slot
 .word LoadPortrait
@@ -115,7 +115,7 @@ ch12heimscrollhousesaved
 .byte EndText
 
 
-ch12silencehousefailed
+dialogueChapter12SilenceHouseFailed
 
 .byte Right_slot
 .word LoadPortrait
@@ -128,7 +128,7 @@ ch12silencehousefailed
 .byte EndText
 
 
-ch12silencehousesaved
+dialogueChapter12SilenceHouseSaved
 
 .byte Right_slot
 .word LoadPortrait
@@ -156,7 +156,7 @@ ch12silencehousesaved
 .byte EndText
 
 
-ch12dawngaidenfail
+dialogueChapter12DawnGaidenFail
 
 .byte Right_slot
 .word LoadPortrait
@@ -169,7 +169,7 @@ ch12dawngaidenfail
 .byte EndText
 
 
-ch12salemtina
+dialogueChapter12SalemTina
 
 .byte Right_slot
 .word LoadPortrait
@@ -259,7 +259,7 @@ ch12salemtina
 .byte EndText
 
 
-ch12colho
+dialogueChapter12Colho
 
 .byte Right_slot
 .word LoadPortrait
@@ -298,7 +298,7 @@ ch12colho
 .byte EndText
 
 
-ch12mareetadialogue
+dialogueChapter12MareetaDialogue
 
 .byte Right_slot
 .word LoadPortrait
@@ -380,7 +380,7 @@ ch12mareetadialogue
 .byte EndText
 
 
-ch12opening1
+dialogueChapter12Opening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -582,7 +582,7 @@ ch12opening1
 .byte EndText
 
 
-ch12opening2
+dialogueChapter12Opening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -766,7 +766,7 @@ ch12opening2
 .byte EndText
 
 
-ch12closingfailedgaiden
+dialogueChapter12ClosingFailedGaiden
 
 .byte Right_slot
 .word LoadPortrait
@@ -812,7 +812,7 @@ ch12closingfailedgaiden
 .byte EndText
 
 
-ch12closingtogaiden
+dialogueChapter12ClosingToGaiden
 
 .byte Right_slot
 .word LoadPortrait
@@ -867,7 +867,7 @@ ch12closingtogaiden
 .byte EndText
 
 
-ch12ending2mareetaleif
+dialogueChapter12Ending2MareetaLeif
 
 .byte Right_slot
 .word LoadPortrait
@@ -979,7 +979,7 @@ ch12ending2mareetaleif
 .byte EndText
 
 
-ch12wm1
+dialogueChapter12WorldMap1
 
 .text "Having seized the infamous Fort Dundrum,"
 .byte NewLine
@@ -1002,7 +1002,7 @@ ch12wm1
 .byte EndText
 
 
-ch12wm2
+dialogueChapter12WorldMap2
 
 .text "Scarcely taking a moment to catch their breath,"
 .byte NewLine
@@ -1018,7 +1018,7 @@ ch12wm2
 .byte EndText
 
 
-ch12wm3
+dialogueChapter12WorldMap3
 
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2

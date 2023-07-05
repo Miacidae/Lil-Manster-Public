@@ -27,12 +27,12 @@ rlBuildInventoryWindow ; 81/CE71
 	sta lR18+1
 	lda #<>$9E8666
 	sta lR18
-	lda #(`aBGPal3)<<8
+	lda #(`aBGPaletteBuffer.aPalette3)<<8
 	sta lR19+1
-	lda #<>aBGPal3
+	lda #<>aBGPaletteBuffer.aPalette3
 	sta lR19
-	lda #size(aBGPal3)+size(aBGPal4)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette3)+size(aBGPaletteBuffer.aPalette4)
+	sta lR20
 	jsl rlBlockCopy
 
 	; Item and weapon rank palettes
@@ -41,12 +41,12 @@ rlBuildInventoryWindow ; 81/CE71
 	sta lR18+1
 	lda #<>$9E8220
 	sta lR18
-	lda #(`aBGPal5)<<8
+	lda #(`aBGPaletteBuffer.aPalette5)<<8
 	sta lR19+1
-	lda #<>aBGPal5
+	lda #<>aBGPaletteBuffer.aPalette5
 	sta lR19
-	lda #size(aBGPal5)+size(aBGPal6)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette5)+size(aBGPaletteBuffer.aPalette6)
+	sta lR20
 	jsl rlBlockCopy
 
 	; Item and skill info box palette
@@ -55,12 +55,12 @@ rlBuildInventoryWindow ; 81/CE71
 	sta lR18+1
 	lda #<>$F4FF60
 	sta lR18
-	lda #(`aBGPal7)<<8
+	lda #(`aBGPaletteBuffer.aPalette7)<<8
 	sta lR19+1
-	lda #<>aBGPal7
+	lda #<>aBGPaletteBuffer.aPalette7
 	sta lR19
-	lda #size(aBGPal7)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette7)
+	sta lR20
 	jsl rlBlockCopy
 
 	; Alternate menutext palettes
@@ -69,19 +69,19 @@ rlBuildInventoryWindow ; 81/CE71
 	sta lR18+1
 	lda #<>$9E82A0
 	sta lR18
-	lda #(`aBGPal1)<<8
+	lda #(`aBGPaletteBuffer.aPalette1)<<8
 	sta lR19+1
-	lda #<>aBGPal1
+	lda #<>aBGPaletteBuffer.aPalette1
 	sta lR19
-	lda #size(aBGPal1)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette1)
+	sta lR20
 	jsl rlBlockCopy
 
 	; Bar and label tiles
 
-	lda #(`$9EDF1C)<<8
+	lda #(`statlabels)<<8
 	sta lR18+1
-	lda #<>$9EDF1C
+	lda #<>statlabels
 	sta lR18
 	lda #(`$7FB0F5)<<8
 	sta lR19+1
@@ -146,9 +146,9 @@ rlBuildInventoryWindow ; 81/CE71
 
 	phx
 	lda #(`procInventoryScrollingArrows)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procInventoryScrollingArrows
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 
@@ -296,25 +296,25 @@ rsInventorySetScrollPositions ; 81/D092
 
 	; Set all tilemaps to 32x62
 
-	lda bBuf_BG1SC
-	and #~BG1SC.Size
-	ora #BGSize32x64
-	sta bBuf_BG1SC
+	lda bBufferBG1SC
+	and #~BGSC_Size
+	ora #BGSC_32x64
+	sta bBufferBG1SC
 
-	lda bBuf_BG2SC
-	and #~BG2SC.Size
-	ora #BGSize32x64
-	sta bBuf_BG2SC
+	lda bBufferBG2SC
+	and #~BGSC_Size
+	ora #BGSC_32x64
+	sta bBufferBG2SC
 
-	lda bBuf_BG3SC
-	and #~BG3SC.Size
-	ora #BGSize32x64
-	sta bBuf_BG3SC
+	lda bBufferBG3SC
+	and #~BGSC_Size
+	ora #BGSC_32x64
+	sta bBufferBG3SC
 
 	; Use all layers but BG4
 
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 
 	rep #$30
 
@@ -326,9 +326,9 @@ rsInventorySetScrollPositions ; 81/D092
 
 	; Clear scroll offsets
 
-	stz wBuf_BG1HOFS
-	stz wBuf_BG2HOFS
-	stz wBuf_BG3HOFS
+	stz wBufferBG1HOFS
+	stz wBufferBG2HOFS
+	stz wBufferBG3HOFS
 
 	; Set scroll offsets based on if the screen
 	; was scrolled last time the inventory was viewed
@@ -336,18 +336,18 @@ rsInventorySetScrollPositions ; 81/D092
 	lda wInventoryScrolledFlag
 	bne +
 
-	stz wBuf_BG1VOFS
-	stz wBuf_BG2VOFS
-	stz wBuf_BG3VOFS
+	stz wBufferBG1VOFS
+	stz wBufferBG2VOFS
+	stz wBufferBG3VOFS
 	stz wUnknown7E51F6
 	stz wUnknown7E51F9
 	rts
 
 	+
 	lda #143
-	sta wBuf_BG1VOFS
-	sta wBuf_BG2VOFS
-	sta wBuf_BG3VOFS
+	sta wBufferBG1VOFS
+	sta wBufferBG2VOFS
+	sta wBufferBG3VOFS
 	sta wUnknown7E51F6
 	sta wUnknown7E51F9
 	rts
@@ -362,18 +362,18 @@ rsInventorySelectMapSpritePalette ; 81/D0E6
 	; If unit's been rescued, skip checking
 	; if gray
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	bit #TurnStatusRescued
+	lda aSelectedCharacterBuffer.UnitState,b
+	bit #UnitStateRescued
 	bne +
 
 	; Gray palette
 
-	ldx #<>aOAMPal3
+	ldx #<>aOAMPaletteBuffer.aPalette3
 
 	; Check if unit is grayed
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	bit #TurnStatusGrayed
+	lda aSelectedCharacterBuffer.UnitState,b
+	bit #UnitStateGrayed
 	bne _CopyPalette
 
 	+
@@ -394,17 +394,17 @@ rsInventorySelectMapSpritePalette ; 81/D0E6
 	tax
 
 	_CopyPalette
-	ldy #<>aOAMPal0
-	lda #size(aOAMPal0)-1
+	ldy #<>aOAMPaletteBuffer.aPalette0
+	lda #size(aOAMPaletteBuffer.aPalette0)-1
 	mvn #$7E,#$7E
 
 	_End
 	rts
 
 	_PaletteSlotTable ; 81/D116
-		.word <>aOAMPal0
-		.word <>aOAMPal1
-		.word <>aOAMPal2
+		.word <>aOAMPaletteBuffer.aPalette0
+		.word <>aOAMPaletteBuffer.aPalette1
+		.word <>aOAMPaletteBuffer.aPalette2
 
 rsInventoryDrawNameAndClass ; 81/D11C
 
@@ -416,12 +416,12 @@ rsInventoryDrawNameAndClass ; 81/D11C
 	; Text info
 
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`$83C0F6
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 
 	lda #$2180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	; Name
 
@@ -456,11 +456,11 @@ rsInventoryDrawDebuffArrows ; 81/D14B
 	cmp #StatusSleep
 	beq _DrawArrows
 
-	cmp #StatusStone
+	cmp #StatusPetrify
 	beq _DrawArrows
 
-	lda aActionStructUnit1.TurnStatus
-	bit #TurnStatusRescuing
+	lda aActionStructUnit1.UnitState
+	bit #UnitStateRescuing
 	bne _DrawArrows
 
 	; No debuff arrows
@@ -472,7 +472,7 @@ rsInventoryDrawDebuffArrows ; 81/D14B
 	; Text info
 
 	lda #$3580
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda #<>menutextStatDebuffArrows
 	sta lR18
@@ -639,7 +639,7 @@ rsInventoryDrawItemNamesAndDurability ; 81/D2C7
 	+
 	ldx wR15
 	lda aInventoryTextBaseTable,x
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	; Item name
 
@@ -653,7 +653,7 @@ rsInventoryDrawItemNamesAndDurability ; 81/D2C7
 	; Durability
 
 	lda wR15
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	ldx wR17
 	lda aInventoryItemCurrentDurabilityCoordinateTable,x
@@ -661,7 +661,7 @@ rsInventoryDrawItemNamesAndDurability ; 81/D2C7
 	jsl $858921
 
 	lda wR15
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	ldx wR17
 	lda aInventoryItemMaxDurabilityCoordinateTable,x
@@ -672,7 +672,7 @@ rsInventoryDrawItemNamesAndDurability ; 81/D2C7
 
 	ldx wR15
 	lda aInventoryTextBaseTable,x
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda #<>menutextSlash
 	sta lR18
@@ -768,9 +768,9 @@ rsInventoryDrawStatBonusNumbers ; 81/D3D7
 	; Text info
 
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`$83C0F6
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 
 	stz wR17 ; Loop counter
 
@@ -797,7 +797,7 @@ rsInventoryDrawStatBonusNumbers ; 81/D3D7
 	lda aInventoryStatBonusCoordinateTable,x
 	tax
 	lda #$368F
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	pla
 
@@ -898,8 +898,8 @@ rlInventoryDrawMapSpriteCheckGrayed ; 81/D489
 	.autsiz
 	.databank `aBG1TilemapBuffer
 
-	lda structActionStructEntry.TurnStatus,b,y
-	bit #TurnStatusGrayed
+	lda structActionStructEntry.UnitState,b,y
+	bit #UnitStateGrayed
 	beq rlInventoryDrawMapSprite
 
 	lda #$0600 ; Gray palette
@@ -947,8 +947,8 @@ rlInventoryDrawMapSprite ; 81/D4A0
 	; Determine if we're drawing a
 	; map sprite or a rescued sprite
 
-	lda structActionStructEntry.TurnStatus,b,y
-	bit #TurnStatusRescued
+	lda structActionStructEntry.UnitState,b,y
+	bit #UnitStateRescued
 	bne _DrawRescuedSprite
 
 	lda structActionStructEntry.SpriteInfo2,b,y
@@ -989,9 +989,9 @@ rlInventoryDrawMapSprite ; 81/D4A0
 		.word $0000
 		.addr _TallSprite
 
-	_ShortSprite .dstruct structSpriteArray, [[[0, 2], $42, True, 0, 2, $000, False, False]]
+	_ShortSprite .dstruct structSpriteArray, [[[0, 2], $61, True, 0, 2, $000, False, False]]
 
-	_TallSprite .dstruct structSpriteArray, [[[0, 2], $42, True, 0, 2, $000, False, False], [[0, -14], $42, True, $002, 2, 0, False, False]]
+	_TallSprite .dstruct structSpriteArray, [[[0, 2], $61, True, 0, 2, $000, False, False], [[0, -14], $61, True, $002, 2, 0, False, False]]
 
 	_DrawRescuedSprite
 
@@ -1072,7 +1072,7 @@ rsInventoryDrawStatBars ; 81/D559
 	; Base tile
 
 	lda #$2000
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	stz wR17 ; Loop counter
 
@@ -1247,7 +1247,7 @@ rsInventoryDrawItemIcons ; 81/D654
 
 	ldx wR17
 	lda aInventoryItemIconTileIndexTable,x
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda aInventoryItemIconCoordinateTable,x
 	tax
@@ -1290,7 +1290,7 @@ rsInventoryDrawWeaponRankIcons ; 81/D698
 
 	ldx wR17
 	lda aInventoryWeaponRankIconTileIndexTable,x
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda aInventoryWeaponRankIconCoordinateTable,x
 	tax
@@ -1379,12 +1379,12 @@ rsInventoryDrawAlternateWeaponRanks ; 81/D6F9
 	; Text info
 
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`$83C0F6
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 
 	lda #$2D80
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	; We offset the text by 1
 
@@ -1405,12 +1405,12 @@ rsInventoryDrawWeaponRanks ; 81/D74C
 	; Text info
 
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`$83C0F6
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 
 	lda #$2980
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	stz wR16 ; Offsetting value
 
@@ -1436,7 +1436,7 @@ rsInventoryDrawWeaponRanks ; 81/D74C
 
 	phy
 	tay 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	bne + ; branch greater than 0
 
@@ -1474,7 +1474,7 @@ rsInventoryDrawWeaponRanks ; 81/D74C
 ; 	; Unused routine
 ; 
 ; 	lda #$36A0
-; 	sta wUnknown000DE7,b
+; 	sta aCurrentTilemapInfo.wBaseTile,b
 ; 
 ; 	stz wR17
 ; 
@@ -1541,22 +1541,22 @@ rlInventorySetSubwindows ; 81/D7BF
 	stz wUnknown7E51F3
 
 	lda #<>aInventoryHDMAInfo1
-	sta lR43
+	sta lR44
 	lda #>`aInventoryHDMAInfo1
-	sta lR43+1
+	sta lR44+1
 
 	lda #3
-	sta wR39
+	sta wR40
 
 	jsl rlHDMAArrayEngineCreateEntryByIndex
 
 	lda #<>aInventoryHDMAInfo3
-	sta lR43
+	sta lR44
 	lda #>`aInventoryHDMAInfo3
-	sta lR43+1
+	sta lR44+1
 
 	lda #5
-	sta wR39
+	sta wR40
 
 	jsl rlHDMAArrayEngineCreateEntryByIndex
 
@@ -1565,23 +1565,23 @@ rlInventorySetSubwindows ; 81/D7BF
 	beq _End
 
 	lda #<>aInventoryHDMAInfo2
-	sta lR43
+	sta lR44
 	lda #>`aInventoryHDMAInfo2
-	sta lR43+1
+	sta lR44+1
 
 	lda #4
-	sta wR39
+	sta wR40
 
 	jsl rlHDMAArrayEngineCreateEntryByIndex
 
 	_End
 	rtl
 
-aInventoryHDMAInfo1 .dstruct structHDMAArrayEntryInfo, rlInventoryHDMADummy, rlInventoryHDMADummy, aInventoryHDMACode, bUnknown7E51F2, BG1VOFS - PPU_REG_BASE, DMAPx_Setting(DMAPx_TransferCPUToIO, DMAPx_Mode2, DMAPx_ABusFixed1, DMAPx_Direct) ; 81/D818
+aInventoryHDMAInfo1 .dstruct structHDMADirectEntryInfo, rlInventoryHDMADummy, rlInventoryHDMADummy, aInventoryHDMACode, bUnknown7E51F2, BG1VOFS, DMAP_DMA_Setting(DMAP_CPUToIO, DMAP_Fixed1, DMAP_Mode2) ; 81/D818
 
-aInventoryHDMAInfo2 .dstruct structHDMAArrayEntryInfo, rlInventoryHDMADummy, rlInventoryHDMADummy, aInventoryHDMACode, bUnknown7E51F2, BG2VOFS - PPU_REG_BASE, DMAPx_Setting(DMAPx_TransferCPUToIO, DMAPx_Mode2, DMAPx_ABusFixed1, DMAPx_Direct) ; 81/D823
+aInventoryHDMAInfo2 .dstruct structHDMADirectEntryInfo, rlInventoryHDMADummy, rlInventoryHDMADummy, aInventoryHDMACode, bUnknown7E51F2, BG2VOFS, DMAP_DMA_Setting(DMAP_CPUToIO, DMAP_Fixed1, DMAP_Mode2) ; 81/D823
 
-aInventoryHDMAInfo3 .dstruct structHDMAArrayEntryInfo, rlInventoryHDMADummy, rlInventoryHDMADummy, aInventoryHDMACode, bUnknown7E51F2, BG3VOFS - PPU_REG_BASE, DMAPx_Setting(DMAPx_TransferCPUToIO, DMAPx_Mode2, DMAPx_ABusFixed1, DMAPx_Direct) ; 81/D82E
+aInventoryHDMAInfo3 .dstruct structHDMADirectEntryInfo, rlInventoryHDMADummy, rlInventoryHDMADummy, aInventoryHDMACode, bUnknown7E51F2, BG3VOFS, DMAP_DMA_Setting(DMAP_CPUToIO, DMAP_Fixed1, DMAP_Mode2) ; 81/D82E
 
 rlInventoryHDMADummy ; 81/D839
 
@@ -1614,12 +1614,12 @@ rsInventoryDrawLeaderText ; 81/D9CD
 	; Text info
 
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`$83C0F6
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 
 	lda #$2980
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda aActionStructUnit1.Leader
 	jsl rlGetLeaderString
@@ -1637,12 +1637,12 @@ rsInventoryDrawStatusText ; 81/D9EE
 	; Text info
 
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`$83C0F6
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 
 	lda #$2980
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda aActionStructUnit1.Status
 	jsl rlGetStatusString
@@ -1665,7 +1665,7 @@ rlGetStatusString ; 81/DA0F
 	and #$000F
 	beq _GetString
 
-	.for status in [StatusSleep, StatusPoison, StatusSilence, StatusBerserk, StatusStone]
+	.for status in [StatusSleep, StatusPoison, StatusSilence, StatusBerserk, StatusPetrify]
 
 		inc x
 
@@ -1681,14 +1681,14 @@ rlGetStatusString ; 81/DA0F
 
 	_GetString
 
-	lda #>`status_text_pointers
+	lda #>`aStatusTextPointers
 	sta lR18+1
 
 	txa
 	asl a
 	tax
 
-	lda status_text_pointers,x
+	lda aStatusTextPointers,x
 	sta lR18
 	rtl
 
@@ -1735,8 +1735,8 @@ rsInventoryDrawRescueText ; 81/DA98
 
 	; Check if rescuer or rescuee
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	bit #TurnStatusRescued
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	bit #UnitStateRescued
 	bne _Rescuee
 
 	jsl $87E728
@@ -1752,12 +1752,12 @@ rsInventoryDrawRescueText ; 81/DA98
 	lda aBurstWindowCharacterBuffer.DeploymentNumber,b
 	and #$00FF
 
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	phx
 	lda #(`procInventoryRescueIcon)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procInventoryRescueIcon
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	rts
@@ -1803,7 +1803,7 @@ rsInventoryDrawLeadershipStars ; 81/DB20
 	.databank `aBG1TilemapBuffer
 
 	lda #$2980
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda aActionStructUnit1.LeadershipStars
 	and #$00FF
@@ -1822,7 +1822,7 @@ rsInventoryDrawMovementStars ; 81/DB38
 	.databank `aBG1TilemapBuffer
 
 	lda #$2980
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda aActionStructUnit1.MovementStars
 	and #$00FF
@@ -1956,7 +1956,7 @@ rlRunActionAndShowMapSprite ; 81/DBDD
 
 	; Update scroll position
 
-	lda wBuf_BG3VOFS
+	lda wBufferBG3VOFS
 	sta wUnknown7E51F6
 	sta wUnknown7E51F9
 
@@ -2026,31 +2026,31 @@ rsInventoryHandleInput ; 81/DC27
 
 	lda wJoy1New
 
-	bit #JoypadB
+	bit #JOY_B
 	bne _B_Press
 
-	bit #JoypadUp
+	bit #JOY_Up
 	bne _Up_Press
 
-	bit #JoypadDown
+	bit #JOY_Down
 	bne _Down_Press
 
-	bit #JoypadX | JoypadSelect
+	bit #JOY_X | JOY_Select
 	bne _XorSelect_Press
 
-	bit #JoypadL
+	bit #JOY_L
 	beq +
 
 	jmp _L_Press
 
 	+
-	bit #JoypadR
+	bit #JOY_R
 	beq +
 
 	jmp _R_Press
 
 	+
-	bit #JoypadA | JoypadStart
+	bit #JOY_A | JOY_Start
 	beq +
 
 	jmp _AOrStart_Press
@@ -2197,33 +2197,33 @@ rsInventoryHandleInput ; 81/DC27
 	; Kill running procs
 
 	lda #(`procInventoryScrollingArrows)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procInventoryScrollingArrows
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
-	stz aProcHeaderTypeOffset,b,x
+	stz aProcSystem.aHeaderTypeOffset,b,x
 
 	+
 	lda #(`$83CB4B)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$83CB4B
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
-	stz aProcHeaderTypeOffset,b,x
+	stz aProcSystem.aHeaderTypeOffset,b,x
 
 	+
 	lda #(`$83CB78)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$83CB78
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
-	stz aProcHeaderTypeOffset,b,x
+	stz aProcSystem.aHeaderTypeOffset,b,x
 
 	+
 	lda wR17
@@ -2259,7 +2259,7 @@ rsInventoryGetScrollAmount ; 81/DD4F
 	+
 	sta wR0
 
-	lda wBuf_BG3VOFS
+	lda wBufferBG3VOFS
 	ldy wInventoryScrolledFlag
 	bne _Lower
 
@@ -2272,9 +2272,9 @@ rsInventoryGetScrollAmount ; 81/DD4F
 	adc wR0
 
 	+
-	sta wBuf_BG1VOFS
-	sta wBuf_BG2VOFS
-	sta wBuf_BG3VOFS
+	sta wBufferBG1VOFS
+	sta wBufferBG2VOFS
+	sta wBufferBG3VOFS
 
 	inc wInventoryScrollingStep
 	inc wInventoryScrollingStep
@@ -2313,38 +2313,38 @@ rlInventoryActionCloseMenu ; 81/DDA1
 	; Kill running procs
 
 	lda #(`procInventoryScrollingArrows)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procInventoryScrollingArrows
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
-	stz aProcHeaderTypeOffset,b,x
+	stz aProcSystem.aHeaderTypeOffset,b,x
 
 	+
 	lda #(`$83CB4B)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$83CB4B
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
-	stz aProcHeaderTypeOffset,b,x
+	stz aProcSystem.aHeaderTypeOffset,b,x
 
 	+
 	lda #(`$83CB78)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$83CB78
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
-	stz aProcHeaderTypeOffset,b,x
+	stz aProcSystem.aHeaderTypeOffset,b,x
 
 	+
 	sep #$20
 	lda #INIDISP_Setting(False, 0)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 
 	lda $7E4E12
@@ -2373,12 +2373,12 @@ rlInventoryActionCloseMenu ; 81/DDA1
 	stz $7E4F91
 
 	lda #$9EF0
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	pla
 	rtl
@@ -2437,15 +2437,15 @@ rsInventoryHandleItemInfoInput ; 81/DE64
 	.autsiz
 	.databank `wInventoryItemInfoWindowOffset
 
-	lda wJoy1Alt
-	bit #JoypadUp
+	lda wJoy1Repeated
+	bit #JOY_Up
 	bne _Up
 
-	bit #JoypadDown
+	bit #JOY_Down
 	bne _Down
 
 	lda wJoy1New
-	bit #JoypadX | JoypadB
+	bit #JOY_X | JOY_B
 	beq +
 
 	jmp _BOrX
@@ -2535,7 +2535,7 @@ rsInventoryUnknownDrawItemDescription ; 81/DEE1
 	.databank ?
 
 	lda #$2180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	ldx #3 | (22 << 8)
 
@@ -2605,15 +2605,15 @@ rsInventoryHandleSkillInfoInput ; 81/DF41
 	.autsiz
 	.databank `wInventorySkillInfoWindowIndex
 
-	lda wJoy1Alt
-	bit #JoypadLeft
+	lda wJoy1Repeated
+	bit #JOY_Left
 	bne _Left
 
-	bit #JoypadRight
+	bit #JOY_Right
 	bne _Right
 
 	lda wJoy1New
-	bit #JoypadX | JoypadB
+	bit #JOY_X | JOY_B
 	beq +
 
 	jmp _BOrX
@@ -2716,7 +2716,7 @@ rlInventoryGetNextUnitInventory ; 81/DFB8
 	ldx #0
 	stx wR11
 
-	ldx #TurnStatusDead | TurnStatusUnknown1 | TurnStatusInvisible | TurnStatusCaptured | TurnStatusUnknown2
+	ldx #UnitStateDead | UnitStateUnknown1 | UnitStateDisabled | UnitStateCaptured | UnitStateUnknown2
 	stx wR12
 
 	ldx #2
@@ -2737,7 +2737,7 @@ rlInventoryGetPreviousUnitInventory ; 81/DFCE
 	ldx #-1
 	stx wR11
 
-	ldx #TurnStatusDead | TurnStatusUnknown1 | TurnStatusInvisible | TurnStatusCaptured | TurnStatusUnknown2
+	ldx #UnitStateDead | UnitStateUnknown1 | UnitStateDisabled | UnitStateCaptured | UnitStateUnknown2
 	stx wR12
 
 	ldx #-2
@@ -2797,7 +2797,7 @@ rlInventoryGetUnit ; 81/DFE2
 	lda #<>aActionStructUnit2
 	sta wR1
 	jsl $83901C
-	lda aActionStructUnit2.TurnStatus
+	lda aActionStructUnit2.UnitState
 	bit wR12
 	beq _Found
 

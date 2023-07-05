@@ -16,32 +16,32 @@ rlSetupInventoryFullConvoyMenu ; 86/E41A
 	.databank `aFullInventoryConvoyBuffer
 
 	lda aSelectedCharacterBuffer.Item1ID,b
-	sta wFullInventoryConvoyBufferItem1
+	sta aFullInventoryConvoyBuffer.wItem1
 	lda aSelectedCharacterBuffer.Item2ID,b
-	sta wFullInventoryConvoyBufferItem2
+	sta aFullInventoryConvoyBuffer.wItem2
 	lda aSelectedCharacterBuffer.Item3ID,b
-	sta wFullInventoryConvoyBufferItem3
+	sta aFullInventoryConvoyBuffer.wItem3
 	lda aSelectedCharacterBuffer.Item4ID,b
-	sta wFullInventoryConvoyBufferItem4
+	sta aFullInventoryConvoyBuffer.wItem4
 	lda aSelectedCharacterBuffer.Item5ID,b
-	sta wFullInventoryConvoyBufferItem5
+	sta aFullInventoryConvoyBuffer.wItem5
 	lda aSelectedCharacterBuffer.Item6ID,b
-	sta wFullInventoryConvoyBufferItem6
+	sta aFullInventoryConvoyBuffer.wItem6
 	lda aSelectedCharacterBuffer.Item7ID,b
-	sta wFullInventoryConvoyBufferItem7
+	sta aFullInventoryConvoyBuffer.wItem7
 
 	sep #$20
 	lda aItemDataBuffer.DisplayedWeapon,b
-	sta wFullInventoryConvoyBufferItemNew
+	sta aFullInventoryConvoyBuffer.wItemNew
 	lda aItemDataBuffer.Durability,b
-	sta wFullInventoryConvoyBufferItemNew+1
+	sta aFullInventoryConvoyBuffer.wItemNew+1
 	rep #$30
 
 	phx
 	lda #(`procInventoryFullConvoyMenu)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procInventoryFullConvoyMenu
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	jsl $8593AD
@@ -69,7 +69,7 @@ aProcInventoryFullConvoyMenuInventoryOption ; 86/E48F
 	.long rlProcInventoryFullConvoyMenuSelectOption
 	.long None
 	.long None
-	.enc "MenuText"
+	.enc "SJIS"
 	.text "　\n"
 
 aProcInventoryFullConvoyMenuNewItemOption ; 86/E4A5
@@ -79,7 +79,7 @@ aProcInventoryFullConvoyMenuNewItemOption ; 86/E4A5
 	.long rlProcInventoryFullConvoyMenuSelectOption
 	.long None
 	.long None
-	.enc "MenuText"
+	.enc "SJIS"
 	.text "　\n"
 
 menutextProcInventoryFullConvoyMenuPromptTable ; 86/E4BB
@@ -99,7 +99,9 @@ menutextProcInventoryFullConvoyMenuPromptLine1 ; 86/E4C3
 	.text "\n"
 	.text "\n"
 	.text "\n"
-	.text "持ち物がいっぱいです\n"
+	.text "Too [many ite[ms. \n"
+
+	.fill $86E4EB - *, ?
 
 menutextProcInventoryFullConvoyMenuPromptLine2 ; 86/E4EB
 	.enc "MenuText"
@@ -112,7 +114,9 @@ menutextProcInventoryFullConvoyMenuPromptLine2 ; 86/E4EB
 	.text "\n"
 	.text "\n"
 	.text "\n"
-	.text "預かり所へおくるアイテムを\n"
+	.text "Pick an ite[m to\n"
+
+	.fill $86E519 - *, ?
 
 menutextProcInventoryFullConvoyMenuPromptLine3 ; 86/E519
 	.enc "MenuText"
@@ -125,7 +129,9 @@ menutextProcInventoryFullConvoyMenuPromptLine3 ; 86/E519
 	.text "\n"
 	.text "\n"
 	.text "\n"
-	.text "えらんでください\n"
+	.text "send to Supply\n"
+
+	.fill $86E53D - *, ?
 
 rlProcInventoryFullConvoyMenuInit ; 86/E53D
 
@@ -143,7 +149,7 @@ rlProcInventoryFullConvoyMenuInit ; 86/E53D
 
 	.databank `wCapturingFlag
 
-	stz aProcBody7,b,x
+	stz aProcSystem.aBody7,b,x
 	stz wCapturingFlag
 	jsl $8594C1
 	lda #$FF58
@@ -164,7 +170,7 @@ rlProcInventoryFullConvoyMenuInit ; 86/E53D
 	lda #$000F
 	sta wR2
 	jsl $85898D
-	sta aProcBody5,b,x
+	sta aProcSystem.aBody5,b,x
 	jsl $85827A
 	phx
 	lda aSelectedCharacterBuffer.Character,b
@@ -184,7 +190,7 @@ rlProcInventoryFullConvoyMenuInit ; 86/E53D
 	lda #>`aProcInventoryFullConvoyMenuActions
 	sta lR18+1
 	jsl $85898D
-	sta aProcHeaderUnknownTimer,b,x
+	sta aProcSystem.aHeaderUnknownTimer,b,x
 	jsl $85827A
 	lda $7E4F0A
 	and #$00FF
@@ -193,14 +199,14 @@ rlProcInventoryFullConvoyMenuInit ; 86/E53D
 	sta $7E4F55
 	phx
 	lda #(`$87A4D0)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$87A4D0
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	lda #TM_Setting(False, True, False, False, True)
-	sta bBuf_TM
+	lda #T_Setting(False, True, False, False, True)
+	sta bBufferTM
 	rep #$20
 	plb
 	plp
@@ -214,9 +220,9 @@ rlProcInventoryFullConvoyMenuOnCycle ; 86/E5E6
 
 	phx
 	lda #(`procItemSelectPortrait)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procItemSelectPortrait
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	plx
 	bcc +
@@ -225,9 +231,9 @@ rlProcInventoryFullConvoyMenuOnCycle ; 86/E5E6
 
 	+
 	lda #$0000
-	sta aProcBody6,b,x
+	sta aProcSystem.aBody6,b,x
 	lda #<>rlProcInventoryFullConvoyMenuOnCycle2
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 rlProcInventoryFullConvoyMenuOnCycle2 ; 86/E605
 
@@ -246,12 +252,12 @@ rlProcInventoryFullConvoyMenuOnCycle2 ; 86/E605
 	.databank `aFullInventoryConvoyBuffer
 
 	lda #<>rlProcInventoryFullConvoyMenuOnCycle3
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 	jsl $858310
 	jsl $87A84B
 	sep #$20
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 	rep #$20
 	plb
 	plp
@@ -273,11 +279,11 @@ rlProcInventoryFullConvoyMenuOnCycle3 ; 86/E628
 
 	.databank `aFullInventoryConvoyBuffer
 
-	lda aProcHeaderUnknownTimer,b,x
+	lda aProcSystem.aHeaderUnknownTimer,b,x
 	jsl $858434
 	bcc +
 
-	lda aProcHeaderUnknownTimer,b,x
+	lda aProcSystem.aHeaderUnknownTimer,b,x
 	jsl $8581B5
 	jsl $858B43
 	jsl $8A8126
@@ -322,12 +328,12 @@ rlProcInventoryFullConvoyMenuMoveCursor ; 86/E671
 
 	ldx $7E4F48
 	lda aFullInventoryConvoyBuffer,x
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	phx
 	lda #(`$87A4F2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$87A4F2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	rtl

@@ -44,13 +44,13 @@ rlUnknownDMAByPushedPointer ; 80/842C
 	lsr wR34 ; check if nothing to be done for channel
 	bcc +
 	lda $0001,b,x
-	sta DMAP0,b,y
+	sta DMA_IO[0].DMAP,b,y
 	lda $0003,b,x
-	sta A1T0,b,y
+	sta DMA_IO[0].A1,b,y
 	lda $0005,b,x
-	sta A1T0+2,b,y
+	sta DMA_IO[0].A1+2,b,y
 	lda $0006,b,x
-	sta DAS0,b,y
+	sta DMA_IO[0].DAS,b,y
 	txa
 	clc
 	adc #$0007 ; next entry in info struct

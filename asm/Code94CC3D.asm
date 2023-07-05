@@ -26,15 +26,15 @@ rlUnknownDialogueText ; 94/CC3D
 	lda #10
 
 	+
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 
 	lda wR1
-	sta wProcInput1,b
+	sta aProcSystem.wInput1,b
 
 	lda wR3
-	sta wProcInput2,b
+	sta aProcSystem.wInput2,b
 
-	lda bBuf_BG34NBA
+	lda bBufferBG34NBA
 	and #BG34NBA.BG3Base
 	xba
 	asl a
@@ -66,9 +66,9 @@ rlUnknownDialogueText ; 94/CC3D
 	jsl $94DD59
 
 	lda #(`proclm)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>proclm
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 

@@ -1,4 +1,4 @@
-ch25throneopened
+dialogueChapterFinalThroneOpened
 
 .byte Right_slot
 .word LoadPortrait
@@ -27,7 +27,7 @@ ch25throneopened
 .byte EndText
 
 
-ch25opening1
+dialogueChapterFinalOpening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -239,7 +239,7 @@ ch25opening1
 .byte EndText
 
 
-ch25opening2
+dialogueChapterFinalOpening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -313,7 +313,7 @@ ch25opening2
 .byte EndText
 
 
-ch25ending1augustus
+dialogueChapterFinalEnding1August
 
 .byte Right_slot
 .word LoadPortrait
@@ -460,7 +460,7 @@ ch25ending1augustus
 .byte EndText
 
 
-ch25ending2finn
+dialogueChapterFinalEnding2Finn
 
 .byte Right_slot
 .word LoadPortrait
@@ -645,7 +645,7 @@ ch25ending2finn
 .byte EndText
 
 
-ch25ending3eyvel
+dialogueChapterFinalEnding3Eyvel
 
 .byte Right_slot
 .word LoadPortrait
@@ -741,7 +741,7 @@ ch25ending3eyvel
 .byte EndText
 
 
-ch25ending4miranda
+dialogueChapterFinalEnding4Miranda
 
 .byte Right_slot
 .word LoadPortrait
@@ -865,7 +865,7 @@ ch25ending4miranda
 .byte EndText
 
 
-ch25ending5linoan
+dialogueChapterFinalEnding5Linoan
 
 .byte Right_slot
 .word LoadPortrait
@@ -905,7 +905,7 @@ ch25ending5linoan
 .byte EndText
 
 
-ch25ending6dean
+dialogueChapterFinalEnding6Dean
 
 .word LoadPortrait
 .word dean_portrait
@@ -985,7 +985,7 @@ ch25ending6dean
 .byte EndText
 
 
-ch25ending7mareeta
+dialogueChapterFinalEnding7Mareeta
 						; LN > NM > LM > NM > LN
 .byte Right_slot
 .word LoadPortrait
@@ -1065,7 +1065,7 @@ ch25ending7mareeta
 
 .byte EndText
 
-ch25ending8nanna
+dialogueChapterFinalEnding8Nanna
 
 .byte Right_slot
 .word LoadPortrait
@@ -1152,7 +1152,7 @@ ch25ending8nanna
 .byte EndText
 
 
-ch25finale
+dialogueChapterFinalEnd
 
 .byte Right_slot
 .word LoadPortrait

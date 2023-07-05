@@ -30,14 +30,14 @@ rlProcEngineResetProcEngine ; 82/9BDB
 
 	.databank `*
 
-	ldx #size(aProcRAM)-1
+	ldx #size(aProcSystem)-1
 
 	sep #$20
 
 	lda #$00
 
 	-
-	sta aProcRAM,b,x
+	sta aProcSystem,b,x
 	dec x
 	bpl -
 
@@ -56,7 +56,7 @@ rlProcEngineCreateProc ; 82/9BF1
 	; Creates a new proc
 
 	; Inputs:
-	; lR43: Long pointer to proc info
+	; lR44: Long pointer to proc info
 
 	; Outputs:
 	; Carry set if unsuccessful
@@ -69,28 +69,28 @@ rlProcEngineCreateProc ; 82/9BF1
 
 	sep #$20
 
-	lda lR43+2
+	lda lR44+2
 	pha
 	rep #$20
 	plb
 
 	.databank ?
 
-	ldy lR43
+	ldy lR44
 
 	; Find first free proc slot
 
 	ldx #(16 - 1) * 2
 
 	_FreeProcLoop
-	lda wProcFlag,b
+	lda aProcSystem.wFlag,b
 	bpl +
 
-	cpx wProcIndex,b
+	cpx aProcSystem.wOffset,b
 	beq ++
 
 	+
-	lda aProcHeaderTypeOffset,b,x
+	lda aProcSystem.aHeaderTypeOffset,b,x
 	beq _InitProc
 
 	+
@@ -113,53 +113,53 @@ rlProcEngineCreateProc ; 82/9BF1
 	; Start by storing a pointer to the proc info
 
 	tya
-	sta aProcHeaderTypeOffset,b,x
+	sta aProcSystem.aHeaderTypeOffset,b,x
 
-	lda lR43+1
+	lda lR44+1
 	and #$FF00
-	sta lProcCodePointer + 1,b
+	sta aProcSystem.lPointer + 1,b
 
 	xba
-	sta aProcHeaderTypeBank,b,x
+	sta aProcSystem.aHeaderTypeBank,b,x
 
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 
 	; Clear the proc body
 
 	lda #$0000
-	sta aProcHeaderBitfield,b,x
-	sta aProcHeaderUnknownTimer,b,x
-	sta aProcBody0,b,x
-	sta aProcBody1,b,x
-	sta aProcBody2,b,x
-	sta aProcBody3,b,x
-	sta aProcBody4,b,x
-	sta aProcBody5,b,x
-	sta aProcBody6,b,x
-	sta aProcBody7,b,x
+	sta aProcSystem.aHeaderBitfield,b,x
+	sta aProcSystem.aHeaderUnknownTimer,b,x
+	sta aProcSystem.aBody0,b,x
+	sta aProcSystem.aBody1,b,x
+	sta aProcSystem.aBody2,b,x
+	sta aProcSystem.aBody3,b,x
+	sta aProcSystem.aBody4,b,x
+	sta aProcSystem.aBody5,b,x
+	sta aProcSystem.aBody6,b,x
+	sta aProcSystem.aBody7,b,x
 
 	; Store parts from the proc info
 
 	lda structProcInfo.Name,b,y
-	sta aProcHeaderName,b,x
+	sta aProcSystem.aHeaderName,b,x
 
 	lda structProcInfo.Init,b,y
-	sta lProcCodePointer,b
+	sta aProcSystem.lPointer,b
 
 	lda structProcInfo.OnCycle,b,y
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	lda structProcInfo.Code,b,y
-	sta aProcHeaderCodeOffset,b,x
+	sta aProcSystem.aHeaderCodeOffset,b,x
 
 	; Store new proc Index
 
 	phx
-	lda wProcIndex,b
+	lda aProcSystem.wOffset,b
 	pha
 
-	stx wProcIndex,b
+	stx aProcSystem.wOffset,b
 
 	; Run init code
 
@@ -167,17 +167,17 @@ rlProcEngineCreateProc ; 82/9BF1
 
 	; on cycle and code, too
 
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	jsr rsProcEngineRunProcOnCycleAndCode
 
 	; Update that the proc has run this cycle
 
-	lda aProcHeaderBitfield,b,x
+	lda aProcSystem.aHeaderBitfield,b,x
 	ora #$4000
-	sta aProcHeaderBitfield,b,x
+	sta aProcSystem.aHeaderBitfield,b,x
 
 	pla
-	sta wProcIndex,b
+	sta aProcSystem.wOffset,b
 
 	pla
 	ply
@@ -194,12 +194,12 @@ rlProcEngineRunProcInit ; 82/9C90
 	.autsiz
 	.databank ?
 
-	lda lProcCodePointer,b
+	lda aProcSystem.lPointer,b
 	bmi +
 	rtl
 
 	+
-	jmp [lProcCodePointer]
+	jmp [aProcSystem.lPointer]
 
 rlProcEngineCreateProcByIndex ; 82/9C99
 
@@ -213,7 +213,7 @@ rlProcEngineCreateProcByIndex ; 82/9C99
 
 	; Inputs:
 	; A: Index in proc array
-	; lR43: long pointer to proc info
+	; lR44: long pointer to proc info
 
 	; Outputs:
 	; Carry set if unsuccessful
@@ -225,18 +225,18 @@ rlProcEngineCreateProcByIndex ; 82/9C99
 
 	asl a
 	tax
-	lda lR43
+	lda lR44
 	tay
 
 	sep #$20
-	lda lR43+2
+	lda lR44+2
 	pha
 	rep #$20
 	plb
 
 	.databank ?
 
-	lda aProcHeaderTypeOffset,b,x
+	lda aProcSystem.aHeaderTypeOffset,b,x
 	beq +
 
 	ply
@@ -276,7 +276,7 @@ rlProcEngineDeleteProcByIndex ; 82/9CB8
 	phx
 	asl a
 	tax
-	lda aProcHeaderTypeOffset,b,x
+	lda aProcSystem.aHeaderTypeOffset,b,x
 	bne +
 
 	plx
@@ -313,7 +313,7 @@ rlProcEngineCheckUnkBitfieldByIndex ; 82/9CD3
 
 	phx
 	tax
-	lda aProcUnknownBitfield,b,x
+	lda aProcSystem.aUnknownBitfield,b,x
 	bit #$2000
 	beq +
 
@@ -343,7 +343,7 @@ rlProcEngineFindProc ; 82/9CEC
 	; offset in the proc array of the proc
 
 	; Inputs:
-	; lR43: long pointer to proc code
+	; lR44: long pointer to proc code
 
 	; Outputs:
 	; X: Offset of proc in array
@@ -361,13 +361,13 @@ rlProcEngineFindProc ; 82/9CEC
 
 	-
 	rep #$20
-	lda aProcHeaderTypeOffset,b,x
-	cmp lR43
+	lda aProcSystem.aHeaderTypeOffset,b,x
+	cmp lR44
 	bne +
 
 	sep #$20
-	lda aProcHeaderTypeBank,b,x
-	cmp lR43+2
+	lda aProcSystem.aHeaderTypeBank,b,x
+	cmp lR44+2
 	beq ++
 
 	+
@@ -393,10 +393,10 @@ rlProcEngineFreeProc ; 82/9D11
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderTypeOffset,b,x
-	lda aProcHeaderBitfield,b,x
+	stz aProcSystem.aHeaderTypeOffset,b,x
+	lda aProcSystem.aHeaderBitfield,b,x
 	ora #$2000
-	sta aProcHeaderBitfield,b,x
+	sta aProcSystem.aHeaderBitfield,b,x
 	rtl
 
 rlProcEngineMainProcLoop ; 82/9D1E
@@ -415,19 +415,19 @@ rlProcEngineMainProcLoop ; 82/9D1E
 	.databank `*
 
 	lda #$8000
-	tsb wProcFlag,b
+	tsb aProcSystem.wFlag,b
 
 	ldx #(16 - 1) * 2
 
 	-
-	stx wProcIndex,b
-	lda aProcHeaderTypeOffset,b,x
+	stx aProcSystem.wOffset,b
+	lda aProcSystem.aHeaderTypeOffset,b,x
 	beq +
 
 	jsr rsProcEngineRunProcOnCycleAndCode
 
 	+
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	dec x
 	dec x
 	bpl -
@@ -435,7 +435,7 @@ rlProcEngineMainProcLoop ; 82/9D1E
 	jsr rsProcEngineUnblockAllProcs
 
 	lda #$8000
-	trb wProcFlag,b
+	trb aProcSystem.wFlag,b
 	plb
 	plp
 	rtl
@@ -448,14 +448,14 @@ rsProcEngineRunProcOnCycleAndCode ; 82/9D49
 	.databank ?
 
 	sep #$20
-	lda aProcHeaderTypeBank,b,x
+	lda aProcSystem.aHeaderTypeBank,b,x
 	pha
 	rep #$20
 	plb
 
 	.databank ?
 
-	lda aProcHeaderBitfield,b,x
+	lda aProcSystem.aHeaderBitfield,b,x
 	bit #$1000
 	bne +
 
@@ -470,30 +470,30 @@ rsProcEngineRunProcOnCycleAndCode ; 82/9D49
 	jsl rlProcEngineRunProcOnCycle
 	plb
 
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 
-	dec aProcHeaderSleepTimer,b,x
+	dec aProcSystem.aHeaderSleepTimer,b,x
 	bne ++
 
-	ldy aProcHeaderCodeOffset,b,x
+	ldy aProcSystem.aHeaderCodeOffset,b,x
 	bpl ++
 
 	_Loop
 	lda $0000,b,y
 	bpl +
 
-	sta lProcCodePointer,b
+	sta aProcSystem.lPointer,b
 	iny
 	iny
 	pea <>_Loop - 1
-	jmp (lProcCodePointer)
+	jmp (aProcSystem.lPointer)
 
 	+
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	tya
 	clc
 	adc #$0002
-	sta aProcHeaderCodeOffset,b,x
+	sta aProcSystem.aHeaderCodeOffset,b,x
 
 	+
 	rts
@@ -506,17 +506,17 @@ rlProcEngineRunProcOnCycle ; 82/9D8F
 	.autsiz
 	.databank ?
 
-	lda aProcHeaderTypeBank,b,x
+	lda aProcSystem.aHeaderTypeBank,b,x
 	xba
-	sta lProcCodePointer + 1,b
-	lda aProcHeaderOnCycle,b,x
+	sta aProcSystem.lPointer + 1,b
+	lda aProcSystem.aHeaderOnCycle,b,x
 	bmi +
 
 	rtl
 
 	+
-	sta lProcCodePointer,b
-	jmp [lProcCodePointer]
+	sta aProcSystem.lPointer,b
+	jmp [aProcSystem.lPointer]
 
 
 rsProcEngineUnblockAllProcs ; 82/9DA2
@@ -529,10 +529,10 @@ rsProcEngineUnblockAllProcs ; 82/9DA2
 	ldx #(16 - 1) * 2
 
 	_Loop
-	lda aProcHeaderBitfield,b,x
+	lda aProcSystem.aHeaderBitfield,b,x
 	and #~$4000
-	sta aProcHeaderBitfield,b,x
-	sta aProcUnknownBitfield,b,x
+	sta aProcSystem.aHeaderBitfield,b,x
+	sta aProcSystem.aUnknownBitfield,b,x
 	dec x
 	dec x
 	bpl _Loop

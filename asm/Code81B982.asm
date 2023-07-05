@@ -26,7 +26,7 @@ rlSetTurnStartCursorPosition ; 81/B982
 	jml AutoCursorFix 
 	.fill $81B9A7 - *, $EA
 
-	;lda aOptions.wAutocursorOption
+	;lda aOptions.wAutocursor
 	;ora wCurrentPhase,b 			
 	;cmp #$0001 					
 	;beq _AutocursorDisabled 	
@@ -165,8 +165,8 @@ rlCenterOnNextUnmovedUnit ; 81/BA36
 	lda structCharacterDataRAM.Character,b,y
 	beq _BA77
 
-	lda structCharacterDataRAM.TurnStatus,b,y
-	bit #TurnStatusHidden | TurnStatusGrayed
+	lda structCharacterDataRAM.UnitState,b,y
+	bit #UnitStateHidden | UnitStateGrayed
 	bne _BA77
 
 	lda structCharacterDataRAM.Status,b,y
@@ -174,7 +174,7 @@ rlCenterOnNextUnmovedUnit ; 81/BA36
 	cmp #StatusSleep
 	beq _BA77
 
-	cmp #StatusStone
+	cmp #StatusPetrify
 	beq _BA77
 
 	bra _BA88
@@ -194,12 +194,12 @@ rlCenterOnNextUnmovedUnit ; 81/BA36
 
 	_BA88
 	stx $7E4FC8
-	sty wProcInput0,b
+	sty aProcSystem.wInput0,b
 	phx
 	lda #(`procUnknown81BAC5)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown81BAC5
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	jsl $84A125
@@ -214,9 +214,9 @@ rlCenterOnNextUnmovedUnit ; 81/BA36
 	sta wUnknown000E25,b
 	phx
 	lda #(`$8A82DF)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$8A82DF
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	plb

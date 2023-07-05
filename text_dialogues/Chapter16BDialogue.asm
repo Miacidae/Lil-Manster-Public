@@ -1,4 +1,4 @@
-ch16Bmiranda
+dialogueChapter16BMiranda
 
 .byte Right_slot
 .word LoadPortrait
@@ -267,7 +267,7 @@ ch16Bmiranda
 .byte EndText
 
 
-ch16Bhomershannam
+dialogueChapter16BHomerShannam
 
 .byte Right_slot
 .word LoadPortrait
@@ -350,7 +350,7 @@ ch16Bhomershannam
 .byte EndText
 
 
-ch16Bsarahsalem
+dialogueChapter16BSaraSalem
 
 .byte Right_slot
 .word LoadPortrait
@@ -432,7 +432,7 @@ ch16Bsarahsalem
 .byte EndText
 
 
-ch16Bsarahleif
+dialogueChapter16BSaraLeif
 
 .byte Right_slot
 .word LoadPortrait
@@ -544,7 +544,7 @@ ch16Bsarahleif
 .byte EndText
 
 
-ch16Bvillager
+dialogueChapter16BVillager
 
 .byte Right_slot
 .word LoadPortrait
@@ -601,7 +601,7 @@ ch16Bvillager
 .byte EndText
 
 
-ch16Bsaraharrive
+dialogueChapter16BSaraArrive
 
 .byte Left_slot
 .word LoadPortrait
@@ -638,7 +638,7 @@ ch16Bsaraharrive
 .byte EndText
 
 
-ch16Bopening1
+dialogueChapter16BOpening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -693,7 +693,7 @@ ch16Bopening1
 .byte EndText
 
 
-ch16Bopening2
+dialogueChapter16BOpening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -817,7 +817,7 @@ ch16Bopening2
 .byte EndText
 
 
-ch16Bclosing
+dialogueChapter16BClosing
 
 .byte Right_slot
 .word LoadPortrait
@@ -852,7 +852,7 @@ ch16Bclosing
 .byte EndText
 
 
-ch16Bwm1
+dialogueChapter16BWorldMap1
 
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2
@@ -878,7 +878,7 @@ ch16Bwm1
 .byte EndText
 
 
-ch16Bwm2
+dialogueChapter16BWorldMap2
 
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2

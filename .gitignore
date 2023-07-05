@@ -1,4 +1,5 @@
 *.sfc
+*.casm
 *.pyc
 *.odt
 *.sym
@@ -8,10 +9,16 @@ fe5trans.ups
 labels.txt
 log.txt
 
-text_menus\textformatter\output\*.asm
-text_menus\textformatter\output\*.2bpp
-text_menus\textformatter\output\*.png
-text_menus\textformatter\output\*.bin
+VoltEdge.h
+
+VOLTEDGE/*.h
+VOLTEDGE/EVENTS/*.h
+VOLTEDGE/FUNCTIONS/*.h
+VOLTEDGE/HDMA/*.h
+VOLTEDGE/PROCS/*.h
+VOLTEDGE/VANILLA/*.h
+
+text_menus/textformatter/output/
 
 tools/Assembler/syntax/
 tools/Assembler/*.exe

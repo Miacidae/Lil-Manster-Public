@@ -1,4 +1,4 @@
-ch21xwelkenrosen
+dialogueChapter21xWelkenrosen
 
 .byte Right_slot
 .word LoadPortrait
@@ -13,7 +13,7 @@ ch21xwelkenrosen
 .byte EndText
 
 
-ch21xopening1
+dialogueChapter21xOpening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -57,7 +57,7 @@ ch21xopening1
 .byte EndText
 
 
-ch21xopening2
+dialogueChapter21xOpening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -108,7 +108,7 @@ ch21xopening2
 .byte EndText
 
 
-ch21xclosing
+dialogueChapter21xClosing
 
 .byte Right_slot
 .word LoadPortrait

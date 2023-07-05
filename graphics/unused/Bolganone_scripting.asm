@@ -1,5 +1,5 @@
 * = $0B0DAC
-.logical lorom($0B0DAC, 1)
+.logical mapped($0B0DAC)
 
 ; B0DAC - B0E19
 

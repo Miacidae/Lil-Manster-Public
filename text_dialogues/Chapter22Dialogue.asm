@@ -1,4 +1,4 @@
-ch22saiasleavecohenalive
+dialogueChapter22SaiasLeaveCohenAlive
 
 .byte Right_slot
 .word LoadPortrait
@@ -35,7 +35,7 @@ ch22saiasleavecohenalive
 .byte EndText
 
 
-ch22saiasleavecohendead
+dialogueChapter22SaiasLeaveCohenDead
 
 .byte Right_slot
 .word LoadPortrait
@@ -48,7 +48,7 @@ ch22saiasleavecohendead
 .byte EndText
 
 
-ch22villagerpurewater
+dialogueChapter22VillagerPureWater
 
 .byte Right_slot
 .word LoadPortrait
@@ -68,7 +68,7 @@ ch22villagerpurewater
 .byte EndText
 
 
-ch22villagerwarpstaff
+dialogueChapter22VillagerWarpStaff
 
 .byte Right_slot
 .word LoadPortrait
@@ -115,7 +115,7 @@ ch22villagerwarpstaff
 .byte EndText
 
 
-ch22villagerrescuestaff
+dialogueChapter22VillagerRescueStaff
 
 .byte Right_slot
 .word LoadPortrait
@@ -147,7 +147,7 @@ ch22villagerrescuestaff
 .byte EndText
 
 
-ch22saiasbridge
+dialogueChapter22SaiasBridge
 
 .byte Right_slot
 .word LoadPortrait
@@ -162,7 +162,7 @@ ch22saiasbridge
 .byte EndText
 
 
-ch22nosaiasbridge
+dialogueChapter22NoSaiasBridge
 
 .byte Right_slot
 .word LoadPortrait
@@ -175,7 +175,7 @@ ch22nosaiasbridge
 .byte EndText
 
 
-ch22reinhardtbridge
+dialogueChapter22ReinhardtBridge
 
 .byte Right_slot
 .word LoadPortrait
@@ -190,7 +190,7 @@ ch22reinhardtbridge
 .byte EndText
 
 
-ch22reinhardtolwen
+dialogueChapter22ReinhardtOlwen
 
 .byte Right_slot
 .word LoadPortrait
@@ -336,7 +336,7 @@ ch22reinhardtolwen
 .byte EndText
 
 
-ch22reinhardtolwen2
+dialogueChapter22ReinhardtOlwen2
 
 .byte Right_slot
 .byte ScrollText
@@ -397,7 +397,7 @@ ch22reinhardtolwen2
 .byte EndText
 
 
-ch22saiascohen
+dialogueChapter22SaiasCohen
 
 .byte Right_slot
 .word LoadPortrait
@@ -513,7 +513,7 @@ ch22saiascohen
 .byte EndText
 
 
-ch22saiasrein
+dialogueChapter22SaiasReinhardt
 
 .byte Right_slot
 .word LoadPortrait
@@ -572,7 +572,7 @@ ch22saiasrein
 .byte EndText
 
 
-ch22saiasrein2
+dialogueChapter22SaiasReinhardt2
 
 .byte Right_slot
 .byte ScrollText
@@ -640,7 +640,7 @@ ch22saiasrein2
 .byte EndText
 
 
-ch22leifintro
+dialogueChapter22LeifIntro
 
 .byte Right_slot
 .word LoadPortrait
@@ -731,7 +731,7 @@ ch22leifintro
 .byte EndText
 
 
-ch22leifclosing
+dialogueChapter22LeifClosing
 
 .byte Right_slot
 .word LoadPortrait
@@ -770,7 +770,7 @@ ch22leifclosing
 .byte EndText
 
 
-ch22wm1
+dialogueChapter22WorldMap1
 
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2
@@ -788,7 +788,7 @@ ch22wm1
 .byte EndText
 
 
-ch22wm2
+dialogueChapter22WorldMap2
 
 .text "Before them stood the vast River Thracia,"
 .word LoadPortraitalt_1

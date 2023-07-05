@@ -1,4 +1,4 @@
-ch24door1
+dialogueChapter24Door1
 
 .byte Right_slot
 .word LoadPortrait
@@ -11,7 +11,7 @@ ch24door1
 .byte EndText
 
 
-ch24door2
+dialogueChapter24Door2
 
 .byte Right_slot
 .byte ScrollText
@@ -26,7 +26,7 @@ ch24door2
 .byte EndText
 
 
-ch24mareetagalzus
+dialogueChapter24MareetaGalzus
 
 .byte Right_slot
 .word LoadPortrait
@@ -173,7 +173,7 @@ ch24mareetagalzus
 .byte EndText
 
 
-ch24opening
+dialogueChapter24Opening
 
 .byte Right_slot
 .word LoadPortrait
@@ -248,7 +248,7 @@ ch24opening
 .byte EndText
 
 
-ch24ced
+dialogueChapter24Ced
 
 .byte Right_slot
 .word LoadPortrait
@@ -384,7 +384,7 @@ ch24ced
 .byte EndText
 
 
-ch24saias
+dialogueChapter24Saias
 
 .byte Right_slot
 .word LoadPortrait
@@ -522,7 +522,7 @@ ch24saias
 .byte EndText
 
 
-ch24augustus
+dialogueChapter24August
 
 .byte Right_slot
 .word LoadPortrait
@@ -642,7 +642,7 @@ ch24augustus
 .byte EndText
 
 
-ch24nogalzus
+dialogueChapter24NoGalzus
 
 .byte Right_slot
 .word LoadPortrait
@@ -738,7 +738,7 @@ ch24nogalzus
 .byte EndText
 
 
-ch24closing
+dialogueChapter24Closing
 
 .byte Right_slot
 .word LoadPortrait
@@ -845,7 +845,7 @@ ch24closing
 .byte EndText
 
 
-ch24closingkaia
+dialogueChapter24ClosingKaia
 
 .byte Right_slot
 .byte ScrollText
@@ -939,7 +939,7 @@ ch24closingkaia
 .byte EndText
 
 
-ch24closingnokaia
+dialogueChapter24ClosingNoKaia
 
 .byte Right_slot
 .byte ScrollText
@@ -982,7 +982,7 @@ ch24closingnokaia
 .byte EndText
 
 
-ch24wm1
+dialogueChapter24WorldMap
 
 .text "Having overcome countless obstacles,"
 .word LoadPortraitalt_1

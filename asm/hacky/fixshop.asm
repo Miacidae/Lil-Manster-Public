@@ -1,50 +1,44 @@
 ; Expands the text refresh range in the shop screen.
 
-* = $00F60E
-.logical lorom($00F60E, 1)
 
-	.al
-	.xl
-	.mansiz
-	
-	jsl		fixshop
-	
-.here
 
 * = $00F814
-.logical lorom($00F814, 1)
+.logical mapped($00F814)
+
+.al
+.xl
 
 	.byte	$0a
 	
 .here
 
 * = $00F819
-.logical lorom($00F819, 1)
+.logical mapped($00F819)
 
 	.byte	$0d
 	
 .here
 
-* = $475A10
-.logical lorom($475A10, 1)
 
-.databank $0E
+	.section FixShopSection
+		
+		fixshop
 
-fixshop
+			pha
+			lda		aProcSystem.wInput0,b
+			cmp		#$0001
+			bne		+
 
-	pha
-	lda		$052d,b
-	cmp		#$0001
-	bne		return
-	stz		$052d,b
-	
-return
+			stz		aProcSystem.wInput0,b
 
-	pla
-	clc
-	adc		$052d,b
-	rtl
+			+
+			pla
+			clc
+			adc		aProcSystem.wInput0,b
+			rtl
+		
+		
+		.databank 0
 
+	.endsection FixShopSection
 
-.databank 0
-.here

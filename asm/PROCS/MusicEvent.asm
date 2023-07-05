@@ -20,7 +20,7 @@ rlProcMusicEventOnCycle ; 82/8E39
 	.autsiz
 	.databank ?
 
-	lda aUnknown0004BA,b
+	lda aSoundSystem.aUnknown0004BA,b
 	bne +
 
 	jsl rlEventEngineDeleteProcAndClearActive

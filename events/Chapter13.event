@@ -1,736 +1,594 @@
 
-eventChapter13Events ; 99/E392
-
-	_OpeningEventDefinitions ; 99/E392
-		EVENT $00, _OpeningEvent
-			CMP_WORD wCurrentTurn, 0
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_TurnEventDefinitions ; 99/E39F
-		EVENT $01, eventMapDeathQuoteDummyEvent
-			TEST_FLAG_SET $03
-		END_DEFINITION
-		EVENT $00, _LisztCheck
-			CMP_WORD wCurrentPhase, Enemy
-			TEST_FLAG_UNSET $02
-		END_DEFINITION
-		EVENT $00, _BowKnightReinforcements
-			CMP_WORD_RANGE wCurrentTurn, 1, 13
-			CMP_WORD wCurrentPhase, Enemy
-			TEST_FLAG_UNSET $02
-		END_DEFINITION
-		EVENT $00, _ArmorReinforcements
-			CMP_WORD_RANGE wCurrentTurn, 12, 32
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $00, _MageReinforcements
-			CMP_WORD_RANGE wCurrentTurn, 12, 32
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $00, _ArmorReinforcements
-			CMP_WORD_RANGE wCurrentTurn, 1, 11
-			TEST_FLAG_SET $02
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $00, _MageReinforcements
-			CMP_WORD_RANGE wCurrentTurn, 1, 11
-			TEST_FLAG_SET $02
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $00, _LisztAIChange
-			CMP_WORD wCurrentTurn, 5
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_TalkEventDefinitions ; 99/E42B
-		EVENT $05, _FinnGladeTalk
-			CHECK_CHARS2 Finn, Glade
-		END_DEFINITION
-		EVENT $06, _SelphinaGladeTalk
-			CHECK_CHARS2 Selphina, Glade
-		END_DEFINITION
-		EVENT $07, _LeifGladeTalk
-			CHECK_CHARS2 Leif, Glade
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_LocationEventDefinitions ; 99/E44B
-		EVENT $22, _MasterSealHouse
-			CMP_BYTE wCursorXCoord, 2
-			CMP_BYTE wCursorYCoord, 21
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $23, _ArmorslayerHouse
-			CMP_BYTE wCursorXCoord, 14
-			CMP_BYTE wCursorYCoord, 21
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $24, _HammerHouse
-			CMP_BYTE wCursorXCoord, 19
-			CMP_BYTE wCursorYCoord, 1
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $21, _Drawbridge1
-			CMP_BYTE wEventEngineUnknownXTarget, 33
-			CMP_BYTE wEventEngineUnknownYTarget, 15
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_BeforeActionEventDefinitions ; 99/E49B
-		EVENT $0A, _PlayerRetreat
-			CMP_BITS $7E4F98, $0008
-			RUN_ASM rlEventDefinitionCheckRetreatCoordinates
-			CMP_WORD aSelectedCharacterBuffer.Character, Leif
-		END_DEFINITION
-		EVENT $0A, _PlayerRetreat
-			CMP_BITS $7E4F98, $0008
-			RUN_ASM rlEventDefinitionCheckRetreatCoordinates
-			CHECK_CARRYING Leif
-		END_DEFINITION
-		EVENT $00, _PlayerRetreat
-			CMP_BITS $7E4F98, $0008
-			TEST_FLAG_UNSET $0A
-			RUN_ASM rlEventDefinitionCheckRetreatCoordinates
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $00, _PlayerLoss
-			CMP_BYTE wCursorXCoord, 9
-			CMP_BYTE wCursorYCoord, 6
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_AfterActionEventDefinitions ; 99/E4F0
-		EVENT $00, _EndingEvent
-			TEST_FLAG_SET $0A
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_BattleEventDefinitions ; 99/E4F9
-		EVENT $08, eventBattleQuoteDummyEvent
-			CHECK_SINGLE Liszt
-		END_DEFINITION
-		EVENT $09, eventBattleQuoteDummyEvent
-			CHECK_SINGLE Baldach
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_ShopEventDefinitions ; 99/E50B
-	END_DEFINITION_ARRAY
-
-	_LisztCheck ; 99/E50D
-		STORE_WORD wEventEngineCharacterTarget, Liszt
-		CALL_ASM_LOOP rlASMCCountAllUnitUncapturedAlive, $0000
-		JUMP_TRUE +
-
-		SET_FLAG $02
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeBallista1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeBallista1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeBallista1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0B
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeBallista1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeSoldier2
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeSoldier2
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeSoldier2
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0B
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeSoldier2
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeArcher
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeArcher
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeArcher
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0B
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeArcher
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeBowKnight2
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeBowKnight2
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeBowKnight2
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0B
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeBowKnight2
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeArmoredLance1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeArmoredLance1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeArmoredLance1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0B
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeArmoredLance1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeArmoredAxe1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeArmoredAxe1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeArmoredAxe1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0B
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeArmoredAxe1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegePriest1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegePriest1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegePriest1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0B
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegePriest1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeMage1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeMage1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeMage1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0B
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeMage1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		+
-	END2
-
-	_BowKnightReinforcements ; 99/E81F
-		SCROLL_CAMERA_ADDRESS eventChapter13Data._BowKnightReinforcementsCameraCoordinates
-		YIELD
-
-		LOAD2 eventChapter13Data._BowKnightReinforcementsGroup
-		WAIT_MOVE
-		YIELD
-
-		YIELD_UNK
-	END2
-
-	_ArmorReinforcements ; 99/E82C
-		SCROLL_CAMERA_ADDRESS eventChapter13Data._ArmorReinforcementsCameraCoordinates
-		YIELD
-
-		LOAD2 eventChapter13Data._ArmorReinforcementsGroup
-		WAIT_MOVE
-		YIELD
-
-		YIELD_UNK
-	END2
-
-	_MageReinforcements ; 99/E839
-		SCROLL_CAMERA_ADDRESS eventChapter13Data._MageReinforcementsCameraCoordinates
-		YIELD
-
-		LOAD2 eventChapter13Data._MageReinforcementsGroup
-		WAIT_MOVE
-		YIELD
-
-		YIELD_UNK
-	END2
-
-	_LisztAIChange ; 99/E846
-		STORE_WORD wEventEngineCharacterTarget, FriegeMage1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeMage1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeMage1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0F
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, FriegeMage1
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Liszt
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Liszt
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Liszt
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0F
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Liszt
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-	END2
-
-	_Drawbridge1 ; 99/E907
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 0
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-	END1
-
-	_MasterSealHouse ; 99/E930
-		PLAY_SOUND_WORD $00F7
-
-		DIALOGUE ch13mastersealhouse
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitSetTurnStatus, $0000
-
-		STORE_WORD wEventEngineParameter1, MasterSeal
-		PAUSE_SKIPPABLE 10
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSetPopupGivenItemWithMaxDurability, $0000
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCSetupGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCSetupGiveToConvoyIfInventoryFull, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveToConvoyIfInventoryFull, $0000
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitUnsetTurnStatus, $0000
-
-		STORE_WORD wEventEngineXCoordinate, 2
-		STORE_WORD wEventEngineYCoordinate, 21
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_ArmorslayerHouse ; 99/E993
-		PLAY_SOUND_WORD $00F7
-
-		DIALOGUE ch13armorslayerhouse
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitSetTurnStatus, $0000
-
-		STORE_WORD wEventEngineParameter1, Armorslayer
-		PAUSE_SKIPPABLE 10
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSetPopupGivenItemWithMaxDurability, $0000
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCSetupGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCSetupGiveToConvoyIfInventoryFull, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveToConvoyIfInventoryFull, $0000
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitUnsetTurnStatus, $0000
-
-		STORE_WORD wEventEngineXCoordinate, 14
-		STORE_WORD wEventEngineYCoordinate, 21
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_HammerHouse ; 99/E9F6
-		PLAY_SOUND_WORD $00F7
-
-		DIALOGUE ch13hammerhouse
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitSetTurnStatus, $0000
-
-		STORE_WORD wEventEngineParameter1, Hammer
-		PAUSE_SKIPPABLE 10
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSetPopupGivenItemWithMaxDurability, $0000
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCSetupGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCSetupGiveToConvoyIfInventoryFull, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveToConvoyIfInventoryFull, $0000
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitUnsetTurnStatus, $0000
-
-		STORE_WORD wEventEngineXCoordinate, 19
-		STORE_WORD wEventEngineYCoordinate, 1
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_FinnGladeTalk ; 99/EA59
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $4B
-		YIELD
-
-		DIALOGUE ch13gladefinn
-		YIELD
-	END2
-
-	_SelphinaGladeTalk ; 99/EA69
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $4B
-		YIELD
-
-		EVENT_TEST_FLAG_SET $07
-		JUMP_TRUE +
-
-		DIALOGUE ch13gladeselphinaA
-		JUMP ++
-
-		+
-		DIALOGUE ch13gladeselphinaB
-
-		+
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitSetTurnStatus, $0000
-
-		STORE_WORD wEventEngineParameter1, BraveBow
-		PAUSE_SKIPPABLE 10
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSetPopupGivenItemWithMaxDurability, $0000
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCSetupGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCSetupGiveToConvoyIfInventoryFull, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveToConvoyIfInventoryFull, $0000
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitUnsetTurnStatus, $0000
-	END2
-
-	_LeifGladeTalk ; 99/EAC6
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $45
-		YIELD
-
-		DIALOGUE ch13gladeleif
-		YIELD
-	END2
-
-	_PlayerRetreat ; 99/EAD6
-		PAUSE_SKIPPABLE 15
-		YIELD
-
-		STORE_WORD wEventEngineCharacterTarget, $0000
-		STORE_WORD_FROM wEventEngineCharacterTarget, aSelectedCharacterBuffer.Character
-		DIALOGUE_ARRAY aRetreatQuoteTable
-		YIELD
-
-		CALL_ASM_LOOP rlASMCUpdateRetreatingUnitTurnStatus, $0000
-		CALL_ASM_LOOP rlASMCCopyRetreatingUnitDataToEventBuffer, $0000
-
-		MOVE_UNIT $FFFF, [0, 0], [0, 0], 1, _RetreatMovestring
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCUnknown8CA097, $0000
-		WAIT_MOVE
-		YIELD
-
-		CALL_ASM_LOOP rlASMCCopyRetreatingUnitDataFromEventBuffer, $0000
-	END2
-
-	_RetreatMovestring ; 99/EB13
-	MS_END
-
-	_PrepGroups ; 99/EB14
-		.long eventChapter13Data._PrepGroup
-	.word $0000
-
-	_OpeningEvent ; 99/EB19
-		STORE_WORD wEventEngineCharacterTarget, FriegeBishop2
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.LeadershipStars
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $39
-		YIELD
-
-		STORE_LONG wProcInput1+1, ch13titlename
-		STORE_WORD wProcInput1, <>ch13titlename
-		STORE_LONG lR43, $9A814C
-		CALL_ASM_SKIPPABLE rlEventEngineCreateProcAndSetActive, $0000
-		YIELD
-
-		SCROLL_CAMERA_CHAR Liszt
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		LOAD1 eventChapter13Data._PaulusGroup
-		WAIT_MOVE
-		YIELD
-
-		DIALOGUE ch13opening1
-		YIELD
-
-		MOVE_UNIT Paulus, [0, 0], [9, 22], 1, _PaulusMovestring
-		YIELD_UNK
-
-		WAIT_MOVE
-		YIELD
-
-		STORE_WORD wEventEngineCharacterTarget, Paulus
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		DIALOGUE ch13opening2
-		YIELD
-
-		SCROLL_CAMERA_CHAR Dean
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, 1
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, ch13opening3
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
-		YIELD
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-		YIELD
-
-		SCROLL_CAMERA_ADDRESS eventChapter13Data._GladeCameraCoordinates
-		YIELD
-
-		LOAD1 eventChapter13Data._GladeGroup
-		WAIT_MOVE
-		YIELD
-
-		LOAD1 eventChapter13Data._LeonsterKnightGroup
-		WAIT_MOVE
-		YIELD
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $33
-		YIELD
-
-		SCROLL_CAMERA_CHAR Leif
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		DIALOGUE ch13opening4
-		YIELD
-	END2
-
-	_PaulusMovestring ; 99/EBDE
-		MS_MOVE_DOWN
-		MS_MOVE_DOWN
-		MS_MOVE_DOWN
-	MS_END
-
-	_EndingEvent ; 99/EBE2
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 16
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd, $0000
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $45
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveChapterAndTurncount, $0000
-
-		STORE_WORD wEventEngineParameter1, 1
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, ch13closing
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-		YIELD
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000
-
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut, $0000
-
-		STORE_BYTE bBuf_INIDISP, $00
-
-		STORE_WORD wEventEngineCharacterTarget, LeonsterBowKnight
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, LeonsterBowKnight
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, LeonsterLanceKnight
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, LeonsterLanceKnight
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, LeonsterLanceKnight
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		CALL_ASM_LOOP rlASMCSetUnitsLeftBehindAsCaptured, $0000
-
-		PLAY_SOUND_WORD $00E7
-
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCChapterEnd, $0000
-	END1
-
-	_PlayerLoss ; 99/EC7F
-		PLAY_SOUND_WORD $00E0
-
-		STORE_WORD wCurrentMapMusic, $00
-
-		DIALOGUE ch13fall
-		YIELD
-
-		CALL_ASM_SKIPPABLE rlUnknown80C29D, $0000
-
-		STORE_WORD wUnknown001791, $FFFF
-	END1
-
+.weak
+  WARNINGS :?= "None"
+.endweak
+
+GUARD_FE5_CHAPTER13 :?= false
+.if (!GUARD_FE5_CHAPTER13)
+  GUARD_FE5_CHAPTER13 := true
+
+  ; Definitions
+
+    .weak
+
+    .endweak
+
+  ; Freespace inclusions
+
+    .section Chapter13EventsSection
+
+			eventChapter13Events ; 99/E392
+
+					_FlagFinnGladeTalk     			= enum.enum($05)
+					_FlagSelphinaGladeTalk     	= enum.enum()
+					_FlagLeifGladeTalk     			= enum.enum()
+					_FlagLisztBattleQuote 			= enum.enum()
+					_FlagBaldachBattleQuote 		= enum.enum()
+					_FlagEndingBattleQuote 			= enum.enum()
+
+					_FlagDrawbridge 						= enum.enum($21)
+					_FlagMasterSealHouse			 	= enum.enum()
+					_FlagArmorslayerHouse			 	= enum.enum()
+					_FlagHammerHouse					 	= enum.enum()
+
+				_OpeningEventDefinitions ; 99/E392
+					EVENT FlagAlwaysZero, _OpeningEvent
+						CMP_WORD wCurrentTurn, 0
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_TurnEventDefinitions ; 99/E39F
+					EVENT FlagAlliedDeath, eventMapDeathQuoteDummyEvent
+						TEST_FLAG_SET FlagPlayerDeath
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _LisztCheck
+						CMP_WORD wCurrentPhase, Enemy
+						TEST_FLAG_UNSET FlagBossDeath
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _BowKnightReinforcements
+						CMP_WORD_RANGE wCurrentTurn, 1, 13
+						CMP_WORD wCurrentPhase, Enemy
+						TEST_FLAG_UNSET FlagBossDeath
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _ArmorReinforcements
+						CMP_WORD_RANGE wCurrentTurn, 12, 32
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _MageReinforcements
+						CMP_WORD_RANGE wCurrentTurn, 12, 32
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _ArmorReinforcements
+						CMP_WORD_RANGE wCurrentTurn, 1, 11
+						TEST_FLAG_SET FlagBossDeath
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _MageReinforcements
+						CMP_WORD_RANGE wCurrentTurn, 1, 11
+						TEST_FLAG_SET FlagBossDeath
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _LisztAIChange
+						CMP_WORD wCurrentTurn, 5
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_TalkEventDefinitions ; 99/E42B
+					EVENT _FlagFinnGladeTalk, _FinnGladeTalk
+						CHECK_CHARS2 Finn, Glade
+					END_DEFINITION
+					EVENT _FlagSelphinaGladeTalk, _SelphinaGladeTalk
+						CHECK_CHARS2 Selphina, Glade
+					END_DEFINITION
+					EVENT _FlagLeifGladeTalk, _LeifGladeTalk
+						CHECK_CHARS2 Leif, Glade
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_LocationEventDefinitions ; 99/E44B
+					EVENT _FlagMasterSealHouse, _MasterSealHouse
+						CMP_BYTE wCursorXCoord, 2
+						CMP_BYTE wCursorYCoord, 21
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagArmorSlayerHouse, _ArmorslayerHouse
+						CMP_BYTE wCursorXCoord, 14
+						CMP_BYTE wCursorYCoord, 21
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagHammerHouse, _HammerHouse
+						CMP_BYTE wCursorXCoord, 19
+						CMP_BYTE wCursorYCoord, 1
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagDrawbridge, _Drawbridge
+						CMP_BYTE wActiveTileUnitParameter1, 33
+						CMP_BYTE wActiveTileUnitParameter2, 15
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_BeforeActionEventDefinitions ; 99/E49B
+					EVENT _FlagEndingBattleQuote, _PlayerRetreat
+						CMP_BITS $7E4F98, $0008
+						RUN_ASM rlEventDefinitionCheckRetreatCoordinates
+						CMP_WORD aSelectedCharacterBuffer.Character, Leif
+					END_DEFINITION
+					EVENT _FlagEndingBattleQuote, _PlayerRetreat
+						CMP_BITS $7E4F98, $0008
+						RUN_ASM rlEventDefinitionCheckRetreatCoordinates
+						CHECK_ACTIVE_CARRYING Leif
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _PlayerRetreat
+						CMP_BITS $7E4F98, $0008
+						TEST_FLAG_UNSET _FlagEndingBattleQuote
+						RUN_ASM rlEventDefinitionCheckRetreatCoordinates
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _PlayerLoss
+						CMP_BYTE wCursorXCoord, 9
+						CMP_BYTE wCursorYCoord, 6
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_AfterActionEventDefinitions ; 99/E4F0
+					EVENT FlagAlwaysZero, _EndingEvent
+						TEST_FLAG_SET _FlagEndingBattleQuote
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_BattleEventDefinitions ; 99/E4F9
+					macroECBossQuote _FlagLisztBattleQuote, Liszt
+					macroECBossQuote _FlagBaldachBattleQuote, Baldach
+				END_DEFINITION_ARRAY
+			
+				_ShopEventDefinitions ; 99/E50B
+				END_DEFINITION_ARRAY
+			
+				_LisztCheck ; 99/E50D
+					macroASMCCountAllUnitsUncapturedAlive Liszt
+					JUMP_TRUE +
+
+						SET_FLAG FlagBossDeath
+
+						_EnemyList  := [FriegeBallista1]
+						_EnemyList ..= [FriegeSoldier2]
+						_EnemyList ..= [FriegeArcher]
+						_EnemyList ..= [FriegeBowKnight2]
+						_EnemyList ..= [FriegeArmoredLance1]
+						_EnemyList ..= [FriegeArmoredAxe1]
+						_EnemyList ..= [FriegePriest1]
+						_EnemyList ..= [FriegeMage1]
+
+						.for _Enemy in _EnemyList
+
+							macroSetCharacterAI _Enemy, [$02, $00, $0B, $00]
+
+						.endfor
+
+					+
+				END2
+			
+				_BowKnightReinforcements ; 99/E81F
+					SCROLL_CAMERA_ADDRESS eventChapter13Data._BowKnightReinforcementsCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP_BLOCKABLE eventChapter13Data._BowKnightReinforcementsGroup
+					WAIT_MOVE
+					YIELD
+			
+					YIELD_UNK
+				END2
+			
+				_ArmorReinforcements ; 99/E82C
+					SCROLL_CAMERA_ADDRESS eventChapter13Data._ArmorReinforcementsCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP_BLOCKABLE eventChapter13Data._ArmorReinforcementsGroup
+					WAIT_MOVE
+					YIELD
+			
+					YIELD_UNK
+				END2
+			
+				_MageReinforcements ; 99/E839
+					SCROLL_CAMERA_ADDRESS eventChapter13Data._MageReinforcementsCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP_BLOCKABLE eventChapter13Data._MageReinforcementsGroup
+					WAIT_MOVE
+					YIELD
+			
+					YIELD_UNK
+				END2
+			
+				_LisztAIChange ; 99/E846
+					macroSetCharacterAI FriegeMage1, [$00, $00, $0F, $00]
+					macroSetCharacterAI Liszt, [$00, $00, $0F, $00]
+				END2
+			
+				_Drawbridge ; 99/E907
+					macroTileChangeByID 0
+				END1
+			
+				_MasterSealHouse ; 99/E930
+					macroItemHouse dialogueChapter13MasterSealHouse, MasterSeal, [2, 21], $0021
+				END2
+			
+				_ArmorslayerHouse ; 99/E993
+					macroItemHouse dialogueChapter13ArmorslayerHouse, Armorslayer, [14, 21], $0021
+				END2
+			
+				_HammerHouse ; 99/E9F6
+					macroItemHouse dialogueChapter13HammerHouse, Hammer, [19, 1], $0021
+				END2
+			
+				_FinnGladeTalk ; 99/EA59
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $4B
+					YIELD
+			
+					DIALOGUE dialogueChapter13GladeFinn
+					YIELD
+				END2
+			
+				_SelphinaGladeTalk ; 99/EA69
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $4B
+					YIELD
+			
+					EVENT_TEST_FLAG_SET _FlagLeifGladeTalk
+					JUMP_TRUE +
+			
+						DIALOGUE dialogueChapter13GladeSelphinaA
+						JUMP ++
+			
+					+
+					DIALOGUE dialogueChapter13GladeSelphinaB
+			
+					+
+					YIELD
+			
+					macroASMCActiveUnitSetUnitState UnitStateHidden
+			
+					macroGiveActiveUnitItem BraveBow
+			
+					macroASMCActiveUnitUnsetUnitState UnitStateHidden
+				END2
+			
+				_LeifGladeTalk ; 99/EAC6
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $45
+					YIELD
+			
+					DIALOGUE dialogueChapter13GladeLeif
+					YIELD
+				END2
+			
+				_PlayerRetreat ; 99/EAD6
+					macroHaveActiveUnitRetreat _RetreatMovestring
+				END2
+			
+				_RetreatMovestring ; 99/EB13
+				MS_END
+			
+				_PrepGroups ; 99/EB14
+					.long eventChapter13Data._PrepGroup
+				.word 0
+			
+				_OpeningEvent ; 99/EB19	
+					macroASMCSetCharacterDataByte FriegeBishop2, LeadershipStars, 2
+			
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $39
+					YIELD
+
+					macroChapterTitlePopup dialogueChapter13Title
+			
+					GET_CHARACTER_COORDS Liszt
+					SCROLL_CAMERA 4
+					YIELD
+			
+					LOAD_GROUP eventChapter13Data._PaulusGroup
+					WAIT_MOVE
+					YIELD
+			
+					DIALOGUE dialogueChapter13Opening1
+					YIELD
+			
+					MOVE_UNIT Paulus, [0, 0], [9, 22], 1, _PaulusMovestring
+					YIELD_UNK
+			
+					WAIT_MOVE
+					YIELD
+			
+					macroASMCRemoveUnit Paulus
+			
+					DIALOGUE dialogueChapter13Opening2
+					YIELD
+			
+					GET_CHARACTER_COORDS Dean
+					SCROLL_CAMERA 4
+					YIELD
+			
+					macroDialogueWithBG dialogueChapter13Opening3, 1
+			
+					CALL_ASM_LOOP rlASMCDialogueWithBGEnd
+					YIELD
+			
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
+					YIELD
+			
+					SCROLL_CAMERA_ADDRESS eventChapter13Data._GladeCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP eventChapter13Data._GladeGroup
+					WAIT_MOVE
+					YIELD
+			
+					LOAD_GROUP eventChapter13Data._LeonsterKnightGroup
+					WAIT_MOVE
+					YIELD
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $33
+					YIELD
+			
+					GET_CHARACTER_COORDS Leif
+					SCROLL_CAMERA 4
+					YIELD
+			
+					DIALOGUE dialogueChapter13Opening4
+					YIELD
+				END2
+			
+				_PaulusMovestring ; 99/EBDE
+					MS_MOVE_DOWN
+					MS_MOVE_DOWN
+					MS_MOVE_DOWN
+				MS_END
+			
+				_EndingEvent ; 99/EBE2
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 16
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $45
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCSaveChapterAndTurncount
+			
+					macroDialogueWithBG dialogueChapter13Closing, 1
+					YIELD
+			
+					HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+			
+					FADE_OUT 1
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut
+			
+					STORE_BYTE bBufferINIDISP, $00
+			
+					macroASMCRemoveUnit LeonsterBowKnight
+					macroASMCRemoveUnit LeonsterBowKnight
+					macroASMCRemoveUnit LeonsterLanceKnight
+					macroASMCRemoveUnit LeonsterLanceKnight
+					macroASMCRemoveUnit LeonsterLanceKnight
+			
+					CALL_ASM_LOOP rlASMCSetUnitsLeftBehindAsCaptured
+			
+					PLAY_SOUND_WORD $00E7
+			
+					FADE_OUT 1
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCChapterEnd
+				END1
+			
+				_PlayerLoss ; 99/EC7F
+					PLAY_SOUND_WORD $00E0
+			
+					STORE_WORD wCurrentMapMusic, $00
+			
+					DIALOGUE dialogueChapter13Fall
+					YIELD
+					
+					macroASMCGameOver
+				END1
+
+    .endsection Chapter13EventsSection
+
+    .section Chapter13DataSection
+
+			eventChapter13Data ; B1/BFCE
+			
+				_PrepGroup ; B1/BFCE
+					.byte 8, 7
+			
+					UNIT FriegeBallista1, Enemy, [1, 1], [1, 1], Liszt, [Ballista], 3, False, [$01, $03, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [10, 18], [10, 18], Liszt, [Javelin], 13, False, [$00, $0F, $01, $00]
+					UNIT FriegeSoldier2, Enemy, [9, 18], [9, 18], Liszt, [Javelin], 13, False, [$00, $0F, $01, $00]
+					UNIT FriegeSoldier2, Enemy, [8, 18], [8, 18], Liszt, [Javelin], 13, False, [$00, $0F, $01, $00]
+					UNIT FriegeSoldier2, Enemy, [7, 18], [7, 18], Liszt, [Javelin], 13, False, [$00, $0F, $01, $00]
+					UNIT FriegeSoldier2, Enemy, [11, 18], [11, 18], Liszt, [Javelin], 13, False, [$00, $0F, $01, $00]
+					UNIT FriegeArcher, Enemy, [7, 19], [7, 19], Liszt, [Shortbow], 12, False, [$00, $0F, $01, $00]
+					UNIT FriegeArcher, Enemy, [8, 19], [8, 19], Liszt, [Shortbow], 12, False, [$00, $0F, $01, $00]
+					UNIT FriegeArcher, Enemy, [9, 19], [9, 19], Liszt, [Shortbow], 12, False, [$00, $0F, $01, $00]
+					UNIT FriegeArcher, Enemy, [10, 19], [10, 19], Liszt, [Shortbow], 12, False, [$00, $0F, $01, $00]
+					UNIT FriegeArcher, Enemy, [11, 19], [11, 19], Liszt, [Shortbow], 12, False, [$00, $0F, $01, $00]
+					UNIT FriegeBowKnight2, Enemy, [35, 6], [35, 6], Liszt, [Longbow], 6, False, [$00, $0F, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [2, 1], [2, 1], Liszt, [Javelin], 8, False, [$01, $03, $02, $00]
+					UNIT FriegeArmoredLance1, Enemy, [1, 2], [1, 2], Liszt, [Javelin], 8, False, [$01, $03, $02, $00]
+					UNIT FriegeArmoredLance1, Enemy, [1, 11], [1, 11], Liszt, [Javelin], 8, False, [$01, $03, $02, $00]
+					UNIT FriegeArmoredLance1, Enemy, [2, 12], [2, 12], Liszt, [Javelin], 8, False, [$01, $03, $02, $00]
+					UNIT FriegeArmoredLance1, Enemy, [16, 12], [16, 12], Liszt, [Javelin], 8, False, [$01, $03, $02, $00]
+					UNIT FriegeArmoredLance1, Enemy, [17, 11], [17, 11], Liszt, [Javelin], 8, False, [$01, $03, $02, $00]
+					UNIT FriegeArmoredLance1, Enemy, [20, 11], [20, 11], Liszt, [Javelin], 8, False, [$01, $03, $02, $00]
+					UNIT Liszt, Enemy, [9, 20], [9, 20], Liszt, [KillerLance, VeninBow, Vulnerary, Vulnerary], 12, True, [$00, $03, $00, $80]
+					UNIT FriegeArmoredLance1, Enemy, [21, 4], [21, 4], Liszt, [Javelin], 8, False, [$01, $03, $02, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [7, 17], [7, 17], Liszt, [BattleAxe], 10, False, [$00, $0F, $01, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [8, 17], [8, 17], Liszt, [BattleAxe], 10, False, [$00, $0F, $01, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [9, 17], [9, 17], Liszt, [BattleAxe], 10, False, [$00, $0F, $01, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [10, 17], [10, 17], Liszt, [BattleAxe], 10, False, [$00, $0F, $01, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [11, 17], [11, 17], Liszt, [BattleAxe], 10, False, [$00, $0F, $01, $00]
+					UNIT FriegePriest1, Enemy, [8, 20], [8, 20], Liszt, [Heal], 5, False, [$03, $07, $00, $00]
+					UNIT FriegeMage1, Enemy, [7, 20], [7, 20], Liszt, [Thunder], 7, False, [$00, $03, $00, $00]
+					UNIT FriegeMage1, Enemy, [11, 20], [11, 20], Liszt, [Thunder], 7, False, [$00, $03, $00, $00]
+					UNIT FriegePriest1, Enemy, [10, 20], [10, 20], Liszt, [Heal], 5, False, [$03, $07, $00, $00]
+					UNIT FriegeBishop1, Enemy, [2, 21], [2, 21], Baldach, [Bolting, Elfire, Physic, Vulnerary], 12, False, [$01, $03, $00, $00]
+					UNIT FriegeBowKnight2, Enemy, [36, 6], [36, 6], Liszt, [Longbow], 6, False, [$00, $0F, $00, $00]
+					UNIT FriegeBowKnight2, Enemy, [37, 6], [37, 6], Liszt, [Longbow], 6, False, [$00, $0F, $00, $00]
+					UNIT FriegeBallista1, Enemy, [1, 12], [1, 12], Liszt, [Ballista], 3, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [17, 12], [17, 12], Liszt, [Ballista], 3, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [30, 1], [30, 1], Liszt, [Ballista], 3, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [31, 8], [31, 8], Liszt, [Ballista], 3, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [18, 17], [18, 17], Liszt, [Ballista], 3, False, [$01, $03, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [19, 7], [19, 7], Liszt, [Javelin], 8, False, [$01, $03, $02, $00]
+				UNIT
+			
+				_UnusedCoordinates1 ; B1/C2DE
+					.byte 11, 17
+			
+				_LeonsterKnightGroup ; B1/C2E0
+					UNIT LeonsterBowKnight, Player, [9, 6], [7, 7], Glade, [SteelBow], 5, False, [$00, $00, $00, $00]
+					UNIT LeonsterBowKnight, Player, [9, 6], [11, 7], Glade, [SteelBow], 5, False, [$00, $00, $00, $00]
+					UNIT LeonsterLanceKnight, Player, [9, 6], [8, 7], Glade, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT LeonsterLanceKnight, Player, [9, 6], [9, 7], Glade, [IronLance], 5, False, [$00, $00, $00, $00]
+					UNIT LeonsterLanceKnight, Player, [9, 6], [10, 7], Glade, [IronLance], 5, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_GladeCameraCoordinates ; B1/C346
+					.byte 9, 7
+			
+				_GladeGroup ; B1/C348
+					UNIT Glade, Player, [9, 6], [9, 6], Glade, [SilverLance], 2, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_BowKnightReinforcementsCameraCoordinates ; B1/C35E
+					.byte 31, 7
+			
+				_BowKnightReinforcementsGroup ; B1/C360
+					UNIT FriegeBowKnight2, Enemy, [38, 6], [38, 6], Liszt, [Shortbow], 4, False, [$00, $0F, $00, $00]
+				UNIT
+			
+				_ArmorReinforcementsCameraCoordinates ; B1/C376
+					.byte 10, 8
+			
+				_ArmorReinforcementsGroup ; B1/C378
+					UNIT FriegeArmoredLance2, Enemy, [8, 1], [8, 1], Baldach, [LongLance], 15, False, [$00, $0F, $00, $00]
+					UNIT FriegeArmoredLance2, Enemy, [10, 1], [10, 1], Baldach, [LongLance], 15, False, [$00, $0F, $00, $00]
+					UNIT FriegeArmoredBow2, Enemy, [9, 1], [9, 1], Baldach, [Longbow], 14, False, [$00, $0F, $00, $00]
+				UNIT
+			
+				_MageReinforcementsCameraCoordinates ; B1/C3B6
+					.byte 9, 8
+			
+				_MageReinforcementsGroup ; B1/C3B8
+					UNIT FriegeMage2, Enemy, [3, 1], [3, 1], Baldach, [Thunder], 10, False, [$0A, $0F, $00, $00]
+				UNIT
+			
+				_UnusedCoordinates2 ; B1/C3CE
+					.byte 9, 16
+			
+				_PaulusGroup ; B1/C3D0
+					UNIT Paulus, Enemy, [9, 23], [9, 21], Paulus, [KillerLance], 15, False, [$00, $03, $00, $80]
+				UNIT
+			
+				_StartingPositions ; B1/C3E6
+					.byte 30, 20
+					.byte 31, 19
+					.byte 32, 18
+					.byte 33, 17
+					.byte 34, 18
+					.byte 33, 19
+					.byte 32, 20
+					.byte 30, 18
+				.byte $FF
+
+    .endsection Chapter13DataSection
+
+    .section Chapter13WorldMapEventsSection
+
+			eventChapter13WorldMapEvents ; E7/EB21
+			
+				SCROLL_CAMERA_COORDS [9, 17], 4
+				SET_CURSOR_POSITION
+				YIELD
+			
+				PLAY_SOUND_WORD $00E0
+				PAUSE_SKIPPABLE 32
+				YIELD
+			
+				SET_MUSIC $29
+				YIELD
+			
+				FADE_IN 1
+				YIELD
+			
+				macroWMSetCyclePalette 0, aBGPaletteBuffer.aPalette6
+
+				macroWMDrawSpecialMarker [128, 88], WMMarkerTable.Circle, 0
+			
+				macroASMCWMDialogue dialogueChapter13WorldMap1
+			
+				HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+			
+				macroWMClearCyclePalette aBGPaletteBuffer.aPalette6
+				macroWMClearSpecialMarker 0
+			
+				PAUSE_SKIPPABLE 1
+				YIELD
+			
+				SCROLL_CAMERA_COORDS [6, 17], 1
+				SET_CURSOR_POSITION
+				YIELD
+			
+				macroWMSetCyclePalette 0, aBGPaletteBuffer.aPalette6
+
+				macroWMDrawSpecialMarker [128, 88], WMMarkerTable.Crown, 0
+
+				macroASMCWMDialogue dialogueChapter13WorldMap2
+			
+				HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+			
+				macroWMClearCyclePalette aBGPaletteBuffer.aPalette6
+				macroWMClearSpecialMarker 0
+			
+				PAUSE_SKIPPABLE 1
+				YIELD
+			
+				FADE_OUT 2
+				YIELD
+			
+				CALL_ASM_LOOP rlASMCEndWMEvents
+				YIELD
+			END1
+
+    .endsection Chapter13WorldMapEventsSection
+
+.endif ; GUARD_FE5_CHAPTER13

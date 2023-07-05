@@ -18,7 +18,7 @@ rlProcUnknown838196OnCycle ; 83/81A3
 	.autsiz
 	.databank ?
 
-	lda wUnknown000E6D,b
+	lda wForcedMapScrollFlag,b
 	bne +
 
 	jsl rlProcEngineFreeProc

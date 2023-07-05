@@ -86,13 +86,13 @@ rlRevertWindowTilemapRect ; 81/FA59
 	rtl
 
 aCopyInventoryItemInfoWindowTextLayerWindowInfo ; 81/FA8E
-	.byte 12, 22 	; 12/18 vanilla
+	.byte 12, 22
 	.long aBG3TilemapBuffer
 	.byte $00
 	.long $7F8614
 
 aCopyInventoryItemInfoWindowBackgroundLayerWindowInfo ; 81/FA97
-	.byte 12, 22 	; 12/18 vanilla
+	.byte 12, 22
 	.long aBG2TilemapBuffer
 	.byte $00
 	.long $7F8614
@@ -110,13 +110,13 @@ aCopyInventorySkillInfoWindowBackgroundLayerWindowInfo ; 81/FAA9
 	.long $7F8614
 
 aCopyTradeItemInfoWindowTextLayerWindowInfo ; 81/FAB2
-	.byte 12, 18
+	.byte 12, 22
 	.long aBG3TilemapBuffer
 	.byte $00
 	.long $7F8614
 
 aCopyTradeItemInfoWindowBackgroundLayerWindowInfo ; 81/FABB
-	.byte 12, 18
+	.byte 12, 22
 	.long aBG2TilemapBuffer
 	.byte $00
 	.long $7F8614
@@ -173,11 +173,11 @@ rlCopyInventoryItemInfoWindowTilemaps ; 81/FAC4
 	; Now clear the area for the text layer
 
 	lda #<>aCopyInventoryItemInfoWindowTextLayerWindowInfo
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`aCopyInventoryItemInfoWindowTextLayerWindowInfo
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	lda #$01DF
-	sta wUnknown000DE9,b
+	sta aCurrentTilemapInfo.wFillTile,b
 	jsl $87D69D
 
 	; Create window borders
@@ -187,7 +187,7 @@ rlCopyInventoryItemInfoWindowTilemaps ; 81/FAC4
 	lda #>`$85801A
 	sta lR18+1
 	lda #$0800
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	jsl $87D7FD
 
 	; Copy borders to tilemap
@@ -198,15 +198,15 @@ rlCopyInventoryItemInfoWindowTilemaps ; 81/FAC4
 	; Create background
 
 	lda #<>aCopyInventoryItemInfoWindowBackgroundLayerWindowInfo
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`aCopyInventoryItemInfoWindowBackgroundLayerWindowInfo
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	lda #<>$85970F
 	sta lR18
 	lda #>`$85970F
 	sta lR18+1
 	lda #$3C00
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	jsl $87D6FC
 
 	; Copy background to tilemap
@@ -307,11 +307,11 @@ rlCopyInventorySkillInfoWindowTilemaps ; 81/FBC4
 	jsl rlCopyWindowTilemapRect
 
 	lda #<>aCopyInventorySkillInfoWindowTextLayerWindowInfo
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`aCopyInventorySkillInfoWindowTextLayerWindowInfo
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	lda #$01DF
-	sta wUnknown000DE9,b
+	sta aCurrentTilemapInfo.wFillTile,b
 	jsl $87D69D
 
 	lda #<>$85801A
@@ -319,22 +319,22 @@ rlCopyInventorySkillInfoWindowTilemaps ; 81/FBC4
 	lda #>`$85801A
 	sta lR18+1
 	lda #$0800
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	jsl $87D7FD
 
 	ldx #((2 + (30 * $20)) * 2)
 	jsl $87D4DD
 
 	lda #<>aCopyInventorySkillInfoWindowBackgroundLayerWindowInfo
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`aCopyInventorySkillInfoWindowBackgroundLayerWindowInfo
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	lda #<>$85970F
 	sta lR18
 	lda #>`$85970F
 	sta lR18+1
 	lda #$3C00
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	jsl $87D6FC
 
 	ldx #((2 + (30 * $20)) * 2)
@@ -416,9 +416,9 @@ rlClearInventorySkillInfoWindow ; 81/FCE8
 	.databank `wInfoWindowTarget
 
 	lda #(`procSkillInfo)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procSkillInfo
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	stz wInfoWindowTarget
 	jsr rsProcItemInfoClearIcons

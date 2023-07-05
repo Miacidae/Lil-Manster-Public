@@ -4,8 +4,7 @@
 * = $0266D0
 .logical lorom($0266D0, 1)
 
-.text "(Mov increased"
-.word $0000
+.text "(Mov increased\n"
 
 .here
 
@@ -15,52 +14,32 @@
 * = $02676A
 .logical lorom($02676A, 1)
 
-.long weaponrankblank
+.long menutextPopUpWeaponLevelBlank
 
 .here
 
 * = $026772
 .logical lorom($026772, 1)
 
-.long weaponranktext
+.long menutextPopUpWeaponLevelIncreased
 
 .here
 
 * = $475C90
 .logical lorom($475C90, 1)
 
-weaponranktext
+menutextPopUpWeaponLevelIncreased
 .text ")Weapon level increased "
-weaponrankblank
-.word $0000
+menutextPopUpWeaponLevelBlank
+.text "\n"
 
 .here
 
 ;	Too many items message
 
-* = $0364D5
-.logical lorom($0364D5, 1)
+; See InventoryFullConvoyMenu.asm
 
-.text "Too [many ite[ms. "	; Character limit: 22
-.word $0000
 
-.here
-
-* = $0364FD
-.logical lorom($0364FD, 1)
-
-.text "Pick an ite[m to"	; Character limit: 24
-.word $0000
-
-.here
-
-* = $03652B
-.logical lorom($03652B, 1)
-
-.text "send to Supply"	; Character limit: 16
-.word $0000
-
-.here
 
 ;	Enemy escaped message
 ;	Character limit: ~50 (it's repointed and the box is stretchy)
@@ -68,16 +47,15 @@ weaponrankblank
 * = $01FAB8
 .logical lorom($01FAB8, 1)
 
-.long enemyesc
+.long menutextPopUpEnemyEscaped
 
 .here
 
 * = $475500
 .logical lorom($475500, 1)
 
-enemyesc
-.text "Unit escaped"
-.word $0000
+menutextPopUpEnemyEscaped
+.text "Unit escaped\n"
 
 .here
 
@@ -95,14 +73,14 @@ enemyesc
       .long \SkillPointer
     .endsegment
 
-    POPUP_DRAW_ITEM_NAME .segment ItemPointer
-      .byte $06
-      .long \ItemPointer
-    .endsegment
-
     POPUP_DRAW_TEXT .segment TextPointer
       .byte $02
       .long \TextPointer
+    .endsegment
+
+    POPUP_DRAW_ITEM_NAME .segment ItemPointer
+      .byte $06
+      .long \ItemPointer
     .endsegment
 
     POPUP_END .segment
@@ -120,7 +98,7 @@ enemyesc
 
 POPUP_DRAW_ITEM_ICON $7EF79B
 POPUP_DRAW_ITEM_NAME $7EF79B
-POPUP_DRAW_TEXT menutextItemObtained
+POPUP_DRAW_TEXT menutextPopUpItemObtained
 POPUP_END
 
 .here
@@ -131,7 +109,7 @@ POPUP_END
 
 POPUP_DRAW_ITEM_ICON $7EF79E
 POPUP_DRAW_ITEM_NAME $7EF79E
-POPUP_DRAW_TEXT menutextItemStolenStealCommand
+POPUP_DRAW_TEXT menutextPopUpItemStolenStealCommand
 POPUP_END
 
 .here
@@ -141,7 +119,7 @@ POPUP_END
 
 POPUP_DRAW_ITEM_ICON $7EF79B
 POPUP_DRAW_ITEM_NAME $7EF79B
-POPUP_DRAW_TEXT menutextItemStolenThiefStaff
+POPUP_DRAW_TEXT menutextPopUpItemStolenThiefStaff
 POPUP_END
 
 .here
@@ -152,7 +130,7 @@ POPUP_END
 
 POPUP_DRAW_ITEM_ICON $7EF79E
 POPUP_DRAW_ITEM_NAME $7EF79E
-POPUP_DRAW_TEXT menutextItemPurchased
+POPUP_DRAW_TEXT menutextPopUpItemPurchased
 POPUP_END
 
 .here
@@ -163,7 +141,7 @@ POPUP_END
 
 POPUP_DRAW_ITEM_ICON $7EF79E
 POPUP_DRAW_ITEM_NAME $7EF79E
-POPUP_DRAW_TEXT menutextItemExchanged
+POPUP_DRAW_TEXT menutextPopUpItemExchanged
 POPUP_END
 
 .here
@@ -173,7 +151,7 @@ POPUP_END
 .logical lorom($026881, 1)
 
 POPUP_DRAW_SKILL $7EF79E
-POPUP_DRAW_TEXT menutextSkillLearned
+POPUP_DRAW_TEXT menutextPopUpSkillLearned
 POPUP_END
 
 .here
@@ -184,9 +162,8 @@ POPUP_END
 * = $0265E9
 .logical lorom($0265E9, 1)
 
-menutextItemObtained
-.text " received "
-.word $0000
+menutextPopUpItemObtained
+.text " received \n"
 
 .here
 
@@ -196,18 +173,16 @@ menutextItemObtained
 * = $0A1657
 .logical lorom($0A1657, 1)
 
-menutextItemStolenStealCommand
-.text " ]was stolen"
-.word $0000
+menutextPopUpItemStolenStealCommand
+.text " ]was stolen\n"
 
 .here
 
 * = $01F7BE
 .logical lorom($01F7BE, 1)
 
-menutextItemStolenThiefStaff
-.text " ]was stolen"
-.word $0000
+menutextPopUpItemStolenThiefStaff
+.text " ]was stolen\n"
 
 .here
 
@@ -217,9 +192,8 @@ menutextItemStolenThiefStaff
 * = $01F8C2
 .logical lorom($01F8C2, 1)
 
-menutextItemPurchased
-.text " purchased"
-.word $0000
+menutextPopUpItemPurchased
+.text " purchased\n"
 
 .here
 
@@ -229,9 +203,8 @@ menutextItemPurchased
 * = $01F86A
 .logical lorom($01F86A, 1)
 
-menutextItemExchanged
-.text " ]was taken "
-.word $0000
+menutextPopUpItemExchanged
+.text " ]was taken \n"
 
 .here
 
@@ -241,36 +214,35 @@ menutextItemExchanged
 * = $02683B
 .logical lorom($02683B, 1)
 
-.long skill_text_table
+.long aPopUpBoxSkillNames
 
 .here
 
 * = $026843
 .logical lorom($026843, 1)
 
-.long skill_text_table+1
+.long aPopUpBoxSkillNames+1
 
 .here
 
 * = $02688A
 .logical lorom($02688A, 1)
 
-menutextSkillLearned
-.text " learned  "
-.word $0000
+menutextPopUpSkillLearned
+.text " learned  \n"
 
-skill_text_table
-	.long skill_name_text._ParagonName
-	.long skill_name_text._AccostName
-	.long skill_name_text._BargainName
-	.long skill_name_text._VantageName
-	.long skill_name_text._WrathName
-	.long skill_name_text._AdeptName
-	.long skill_name_text._MiracleName
-	.long skill_name_text._NihilName
-	.long skill_name_text._SolName
-	.long skill_name_text._LunaSkillName
-	.long skill_name_text._AstraName
+aPopUpBoxSkillNames
+	.long menutextParagonName
+	.long menutextAccostName
+	.long menutextBargainName
+	.long menutextVantageName
+	.long menutextWrathName
+	.long menutextAdeptName
+	.long menutextMiracleName
+	.long menutextNihilName
+	.long menutextSolName
+	.long menutextLunaSkillName
+	.long menutextAstraName
 
 .here
 
@@ -279,56 +251,56 @@ skill_text_table
 * = $0737D8
 .logical lorom($0737D8, 1)
 
-.byte    `VulneraryText
+.byte    `menutextPopUpVulneraryText
 
 .here
 
 * = $080766
 .logical lorom($080766, 1)
 
-.word    <>VulneraryText
+.word    <>menutextPopUpVulneraryText
 
 .here
 
 * = $08076A
 .logical lorom($08076A, 1)
 
-.word    <>PureWaterText
+.word    <>menutextPopUpPureWaterText
 
 .here
 
 * = $08076E
 .logical lorom($08076E, 1)
 
-.word    <>PoisonText
+.word    <>menutextPopUpPoisonText
 
 .here
 
 * = $080776
 .logical lorom($080776, 1)
 
-.word    <>AntitoxinText
+.word    <>menutextPopUpAntitoxinText
 
 .here
 
 * = $08077A
 .logical lorom($08077A, 1)
 
-.word    <>TorchText
+.word    <>menutextPopUpTorchText
 
 .here
 
 * = $08077E
 .logical lorom($08077E, 1)
 
-.word    <>BaileText
+.word    <>menutextPopUpBaileText
 
 .here
 
 * = $080782
 .logical lorom($080782, 1)
 
-.word    <>BrionacText
+.word    <>menutextPopUpBrionacText
 
 .here
 
@@ -337,56 +309,49 @@ skill_text_table
 
 * = $475A50
 .logical lorom($475A50, 1)
-VulneraryText
-.text "Vulnerary used"
-.word $0000
+menutextPopUpVulneraryText
+.text "Vulnerary used\n"
 
 .here
 
 * = $475700
 .logical lorom($475700, 1)
-PureWaterText
-.text "Pure )Water used"
-.word $0000
+menutextPopUpPureWaterText
+.text "Pure )Water used\n"
 
 .here
 
 * = $475730
 .logical lorom($475730, 1)
-PoisonText
-.text "Poisoned"
-.word $0000
+menutextPopUpPoisonText
+.text "Poisoned\n"
 
 .here
 
 * = $475760
 .logical lorom($475760, 1)
-TorchText
-.text "Torch used"
-.word $0000
+menutextPopUpTorchText
+.text "Torch used\n"
 
 .here
 
 * = $475790
 .logical lorom($475790, 1)
-BaileText
-.text "By Ethlyn used"
-.word $0000
+menutextPopUpBaileText
+.text "By Ethlyn used\n"
 
 .here
 
 * = $4757C0
 .logical lorom($4757C0, 1)
-BrionacText
-.text "Brionac used"
-.word $0000
+menutextPopUpBrionacText
+.text "Brionac used\n"
 
 .here
 
 * = $475800
 .logical lorom($475800, 1)
-AntitoxinText
-.text "Antitoxin used"
-.word $0000
+menutextPopUpAntitoxinText
+.text "Antitoxin used\n"
 
 .here

@@ -1,5 +1,5 @@
 * = $0B17C6
-.logical lorom($0B17C6, 1)
+.logical mapped($0B17C6)
 
 ; B17C6 - B185B
 ; No item is attributed this animation by default.

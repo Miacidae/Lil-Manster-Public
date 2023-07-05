@@ -7,7 +7,7 @@ aTransformingItemTable ; 88/8223
 	.byte VeninBallista
 	.byte Venin
 	.byte Petrify
-.byte $00
+.byte 0
 
 aTransformedItemTable ; 88/822B
 	.byte IronSword

@@ -1,529 +1,434 @@
 
-eventChapter24xEvents ; 97/8895
-
-	_OpeningEventDefinitions ; 97/8895
-		EVENT $00, _OpeningEvent
-			CMP_WORD wCurrentTurn, 0
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_TurnEventDefinitions ; 97/88A2
-		EVENT $01, eventMapDeathQuoteDummyEvent
-			TEST_FLAG_SET $03
-		END_DEFINITION
-		EVENT $00, _SorcererReinforcements
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD wCurrentTurn, 2
-		END_DEFINITION
-		EVENT $00, _SorcererReinforcements
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD_RANGE wCurrentTurn, 1, 32
-		END_DEFINITION
-		EVENT $00, _SniperHeroReinforcements
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD_RANGE wCurrentTurn, 1, 20
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_TalkEventDefinitions ; 97/88E2
-		EVENT $07, _LeifEyvelTalk
-			CHECK_CHARS2 Leif, Eyvel
-		END_DEFINITION
-		EVENT $07, _MareetaEyvelTalk
-			CHECK_CHARS2 Mareeta, Eyvel
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_LocationEventDefinitions ; 97/88F8
-		EVENT $21, _Door1
-			CMP_BYTE wEventEngineUnknownXTarget, 13
-			CMP_BYTE wEventEngineUnknownYTarget, 4
-		END_DEFINITION
-		EVENT $22, _Door2
-			CMP_BYTE wEventEngineUnknownXTarget, 4
-			CMP_BYTE wEventEngineUnknownYTarget, 16
-		END_DEFINITION
-		EVENT $23, _Door3
-			CMP_BYTE wEventEngineUnknownXTarget, 22
-			CMP_BYTE wEventEngineUnknownYTarget, 16
-		END_DEFINITION
-		EVENT $24, _Door4
-			CMP_BYTE wEventEngineUnknownXTarget, 13
-			CMP_BYTE wEventEngineUnknownYTarget, 22
-		END_DEFINITION
-		EVENT $25, _Door5
-			CMP_BYTE wEventEngineUnknownXTarget, 4
-			CMP_BYTE wEventEngineUnknownYTarget, 23
-		END_DEFINITION
-		EVENT $26, _Door6
-			CMP_BYTE wEventEngineUnknownXTarget, 3
-			CMP_BYTE wEventEngineUnknownYTarget, 32
-		END_DEFINITION
-		EVENT $27, eventChapter24xData._Chest1Events
-			CMP_BYTE_AT wCursorXCoord, eventChapter24xData._Chest1Coordinates
-			CMP_BYTE_AT wCursorYCoord, eventChapter24xData._Chest1Coordinates+1
-		END_DEFINITION
-		EVENT $28, eventChapter24xData._Chest2Events
-			CMP_BYTE_AT wCursorXCoord, eventChapter24xData._Chest2Coordinates
-			CMP_BYTE_AT wCursorYCoord, eventChapter24xData._Chest2Coordinates+1
-		END_DEFINITION
-		EVENT $29, eventChapter24xData._Chest3Events
-			CMP_BYTE_AT wCursorXCoord, eventChapter24xData._Chest3Coordinates
-			CMP_BYTE_AT wCursorYCoord, eventChapter24xData._Chest3Coordinates+1
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_BeforeActionEventDefinitions ; 97/898D
-		EVENT $06, _PlayerRetreat
-			CMP_BITS $7E4F98, $0008
-			RUN_ASM rlEventDefinitionCheckRetreatCoordinates
-			CMP_WORD aSelectedCharacterBuffer.Character, Leif
-		END_DEFINITION
-		EVENT $06, _PlayerRetreat
-			CMP_BITS $7E4F98, $0008
-			RUN_ASM rlEventDefinitionCheckRetreatCoordinates
-			CHECK_CARRYING Leif
-		END_DEFINITION
-		EVENT $00, _PlayerRetreat
-			CMP_BITS $7E4F98, $0008
-			TEST_FLAG_UNSET $06
-			RUN_ASM rlEventDefinitionCheckRetreatCoordinates
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $00, eventChapter16BEvents._WarpTile
-			RUN_ASM rlGetWarpTileTargetCoords
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_AfterActionEventDefinitions ; 97/89D6
-		EVENT $00, _EndingEvent
-			TEST_FLAG_SET $06
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_BattleEventDefinitions ; 97/89DF
-	END_DEFINITION_ARRAY
-
-	_ShopEventDefinitions ; 97/89E1
-	END_DEFINITION_ARRAY
-
-	_SorcererReinforcements ; 97/89E3
-		SCROLL_CAMERA_ADDRESS eventChapter24xData._SorcererReinforcementsCameraCoordinates
-		YIELD
-
-		LOAD2 eventChapter24xData._SorcererReinforcementsGroup
-		WAIT_MOVE
-		YIELD
-
-		YIELD_UNK
-	END2
-
-	_SniperHeroReinforcements ; 97/89F0
-		SCROLL_CAMERA_ADDRESS eventChapter24xData._SniperHeroReinforcementsCameraCoordinates
-		YIELD
-
-		LOAD2 eventChapter24xData._SniperHeroReinforcementsGroup
-		WAIT_MOVE
-		YIELD
-
-		YIELD_UNK
-	END2
-
-	_Door1 ; 97/89FD
-		PLAY_SOUND_BYTE $6B
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 0
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-	END1
-
-	_Door2 ; 97/8A28
-		PLAY_SOUND_BYTE $6B
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 1
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-	END1
-
-	_Door3 ; 97/8A53
-		PLAY_SOUND_BYTE $6B
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 2
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-	END1
-
-	_Door4 ; 97/8A7E
-		PLAY_SOUND_BYTE $6B
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 3
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-	END1
-
-	_Door5 ; 97/8AA9
-		PLAY_SOUND_BYTE $6B
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 4
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-	END1
-
-	_Door6 ; 97/8AD4
-		PLAY_SOUND_BYTE $6B
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 5
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-	END1
-
-	_PlayerRetreat ; 97/8AFF
-		PAUSE_SKIPPABLE 15
-		YIELD
-
-		STORE_WORD wEventEngineCharacterTarget, $0000
-		STORE_WORD_FROM wEventEngineCharacterTarget, aSelectedCharacterBuffer.Character
-		DIALOGUE_ARRAY aRetreatQuoteTable
-		YIELD
-
-		CALL_ASM_LOOP rlASMCUpdateRetreatingUnitTurnStatus, $0000
-		CALL_ASM_LOOP rlASMCCopyRetreatingUnitDataToEventBuffer, $0000
-
-		MOVE_UNIT $FFFF, [0, 0], [0, 0], 1, _RetreatMovestring
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCUnknown8CA097, $0000
-		WAIT_MOVE
-		YIELD
-
-		CALL_ASM_LOOP rlASMCCopyRetreatingUnitDataFromEventBuffer, $0000
-	END2
-
-	_RetreatMovestring ; 97/8B3C
-	MS_END
-
-	_LeifEyvelTalk ; 97/8B3D
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $50
-		YIELD
-
-		DIALOGUE ch24xkaiaeyvelleif
-		YIELD
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		CALL_ASM_LOOP rlASMCChangeAllegianceToPlayer, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineParameter2, Leif
-		CALL_ASM_LOOP rlASMCSetCharacterDataWord, $0000
-	END2
-
-	_MareetaEyvelTalk ; 97/8B71
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $50
-		YIELD
-
-		DIALOGUE ch24xkaiaeyvelmareeta
-		YIELD
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		CALL_ASM_LOOP rlASMCChangeAllegianceToPlayer, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineParameter2, Leif
-		CALL_ASM_LOOP rlASMCSetCharacterDataWord, $0000
-	END2
-
-	_PrepGroups ; 97/8BA4
-		.long eventChapter24xData._PrepGroup
-	.word $0000
-
-	_OpeningEvent ; 97/8BAA
-		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		STORE_WORD wEventEngineParameter1, TurnStatusCaptured
-		CALL_ASM_LOOP rlASMCUnsetUnitTurnStatus, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		STORE_WORD wEventEngineParameter1, TurnStatusInvisible
-		CALL_ASM_LOOP rlASMCSetUnitTurnStatus, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		STORE_WORD wEventEngineParameter1, TurnStatusInvisible
-		CALL_ASM_LOOP rlASMCCheckUnitTurnStatusSet, $0000
-		JUMP_FALSE +
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		STORE_WORD wEventEngineParameter1, TurnStatusUnknown1 | TurnStatusInvisible
-		CALL_ASM_LOOP rlASMCUnsetUnitTurnStatus, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		STORE_WORD wEventEngineXCoordinate, 13
-		STORE_WORD wEventEngineYCoordinate, 2
-		CALL_ASM_LOOP rlASMCSetUnitPosition, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Fatigue
-		STORE_WORD wEventEngineParameter2, 0
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		+
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		CALL_ASM_LOOP rlASMCChangeAllegianceToNPC, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $03
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Skills2
-		STORE_WORD wEventEngineParameter2, Skill2Anchor | (Skill3Immortal << 8)
-		CALL_ASM_LOOP rlASMCUnsetBitsCharacterDataWord, $0000
-
-		CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
-
-		FADE_IN $02
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $3C
-		YIELD
-
-		STORE_LONG wProcInput1+1, ch24xtitlename
-		STORE_WORD wProcInput1, <>ch24xtitlename
-		STORE_LONG lR43, $9A814C
-		CALL_ASM_SKIPPABLE rlEventEngineCreateProcAndSetActive, $0000
-		YIELD
-
-		SCROLL_CAMERA_CHAR Leif
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		DIALOGUE ch24xopening
-		YIELD
-	END2
-
-	_EndingEvent ; 97/8CEC
-		CALL_ASM_LOOP rlASMCSetUnitsLeftBehindAsCaptured, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Eyvel
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_FALSE _SkipEyvel
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 16
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd, $0000
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $45
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveChapterAndTurncount, $0000
-
-		STORE_WORD wEventEngineParameter1, 2
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, ch24xeyvelleif
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-
-		STORE_WORD wEventEngineCharacterTarget, Nanna
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_FALSE +
-
-		STORE_LONG lEventEngineLongParameter, ch24xeyvelnanna
-		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
-
-		+
-		STORE_WORD wEventEngineCharacterTarget, Dagdar
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_FALSE +
-
-		STORE_WORD wEventEngineCharacterTarget, Dagdar
-		STORE_WORD wEventEngineParameter1, TurnStatusInvisible
-		CALL_ASM_LOOP rlASMCCheckUnitTurnStatusSet, $0000
-		JUMP_TRUE +
-
-		STORE_LONG lEventEngineLongParameter, ch24xeyveldagdar
-		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Tanya
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_FALSE +
-
-		STORE_WORD wEventEngineCharacterTarget, Tanya
-		STORE_WORD wEventEngineParameter1, TurnStatusInvisible
-		CALL_ASM_LOOP rlASMCCheckUnitTurnStatusSet, $0000
-		JUMP_TRUE +
-
-		STORE_LONG lEventEngineLongParameter, ch24xeyveltanya
-		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
-
-		+
-		STORE_WORD wEventEngineCharacterTarget, Halvan
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_FALSE +
-
-		STORE_LONG lEventEngineLongParameter, ch24xeyvelhalvan
-		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
-
-		+
-		STORE_WORD wEventEngineCharacterTarget, Osian
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_FALSE +
-
-		STORE_LONG lEventEngineLongParameter, ch24xeyvelosian
-		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
-
-		+
-		STORE_WORD wEventEngineCharacterTarget, Mareeta
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_FALSE +
-
-		STORE_LONG lEventEngineLongParameter, ch24xeyvelmareeta
-		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Galzus
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_FALSE +
-
-		STORE_LONG lEventEngineLongParameter, ch24xeyvelgalzus
-		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
-
-		+
-		STORE_WORD wEventEngineCharacterTarget, Finn
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_FALSE +
-
-		STORE_LONG lEventEngineLongParameter, ch24xeyvelfinn
-		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
-
-		+
-		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
-		YIELD
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-
-		_SkipEyvel
-		STORE_WORD wEventEngineCharacterTarget, Dean
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_FALSE +
-
-		STORE_WORD wEventEngineCharacterTarget, Linoan
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_TRUE +
-
-		STORE_WORD wCurrentMapMusic, $0000
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $42
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, 3
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, linoandeathdean
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-		YIELD
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut, $0000
-
-		STORE_BYTE bBuf_INIDISP, $00
-		STORE_WORD wEventEngineCharacterTarget, Dean
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		+
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCChapterEnd, $0000
-	END1
+.weak
+  WARNINGS :?= "None"
+.endweak
+
+GUARD_FE5_CHAPTER24x :?= false
+.if (!GUARD_FE5_CHAPTER24x)
+  GUARD_FE5_CHAPTER24x := true
+
+  ; Definitions
+
+    .weak
+
+    .endweak
+
+  ; Freespace inclusions
+
+    .section Chapter24xEventsSection
+
+			eventChapter24xEvents ; 97/8895
+			
+					_FlagEnding				 				= enum.enum($06)
+					_FlagEyvelTalk		 				= enum.enum()
+
+					_FlagDoor1				 				= enum.enum($21)
+					_FlagDoor2				 				= enum.enum()
+					_FlagDoor3				 				= enum.enum()
+					_FlagDoor4				 				= enum.enum()
+					_FlagDoor5				 				= enum.enum()
+					_FlagDoor6				 				= enum.enum()
+					_FlagChest1				 				= enum.enum()
+					_FlagChest2				 				= enum.enum()
+					_FlagChest3				 				= enum.enum()
+
+				_OpeningEventDefinitions ; 97/8895
+					EVENT FlagAlwaysZero, _OpeningEvent
+						CMP_WORD wCurrentTurn, 0
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_TurnEventDefinitions ; 97/88A2
+					EVENT FlagAlliedDeath, eventMapDeathQuoteDummyEvent
+						TEST_FLAG_SET FlagPlayerDeath
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _SorcererReinforcements
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD wCurrentTurn, 2
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _SorcererReinforcements
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD_RANGE wCurrentTurn, 1, 32
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _SniperHeroReinforcements
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD_RANGE wCurrentTurn, 1, 20
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_TalkEventDefinitions ; 97/88E2
+					EVENT _FlagEyvelTalk, _LeifEyvelTalk
+						CHECK_CHARS2 Leif, Eyvel
+					END_DEFINITION
+					EVENT _FlagEyvelTalk, _MareetaEyvelTalk
+						CHECK_CHARS2 Mareeta, Eyvel
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_LocationEventDefinitions ; 97/88F8
+					macroECDoor _FlagDoor1, [13, 4], _Door1
+					macroECDoor _FlagDoor2, [4, 16], _Door2
+					macroECDoor _FlagDoor3, [22, 16], _Door3
+					macroECDoor _FlagDoor4, [13, 22], _Door4
+					macroECDoor _FlagDoor5, [4, 23], _Door5
+					macroECDoor _FlagDoor6, [3, 32], _Door6
+					macroECVanillaChest _FlagChest1, eventChapter24xData._Chest1
+					macroECVanillaChest _FlagChest2, eventChapter24xData._Chest2
+					macroECVanillaChest _FlagChest3, eventChapter24xData._Chest3
+				END_DEFINITION_ARRAY
+			
+				_BeforeActionEventDefinitions ; 97/898D
+					macroECPlayerRetreat _FlagEnding, _PlayerRetreat, Leif
+					EVENT FlagAlwaysZero, eventChapter16BEvents._WarpTile
+						RUN_ASM rlGetWarpTileTargetCoords
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_AfterActionEventDefinitions ; 97/89D6
+					EVENT FlagAlwaysZero, _EndingEvent
+						TEST_FLAG_SET _FlagEnding
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_BattleEventDefinitions ; 97/89DF
+				END_DEFINITION_ARRAY
+			
+				_ShopEventDefinitions ; 97/89E1
+				END_DEFINITION_ARRAY
+			
+				_SorcererReinforcements ; 97/89E3
+					SCROLL_CAMERA_ADDRESS eventChapter24xData._SorcererReinforcementsCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP_BLOCKABLE eventChapter24xData._SorcererReinforcementsGroup
+					WAIT_MOVE
+					YIELD
+			
+					YIELD_UNK
+				END2
+			
+				_SniperHeroReinforcements ; 97/89F0
+					SCROLL_CAMERA_ADDRESS eventChapter24xData._SniperHeroReinforcementsCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP_BLOCKABLE eventChapter24xData._SniperHeroReinforcementsGroup
+					WAIT_MOVE
+					YIELD
+			
+					YIELD_UNK
+				END2
+			
+				_Door1 ; 97/89FD
+					macroOpenDoorByTileChangeID 0
+				END1
+			
+				_Door2 ; 97/8A28
+					macroOpenDoorByTileChangeID 1
+				END1
+			
+				_Door3 ; 97/8A53
+					macroOpenDoorByTileChangeID 2
+				END1
+			
+				_Door4 ; 97/8A7E
+					macroOpenDoorByTileChangeID 3
+				END1
+			
+				_Door5 ; 97/8AA9
+					macroOpenDoorByTileChangeID 4
+				END1
+			
+				_Door6 ; 97/8AD4
+					macroOpenDoorByTileChangeID 5
+				END1
+			
+				_PlayerRetreat ; 97/8AFF
+					macroHaveActiveUnitRetreat _RetreatMovestring
+				END2
+			
+				_RetreatMovestring ; 97/8B3C
+				MS_END
+			
+				_LeifEyvelTalk ; 97/8B3D
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $50
+					YIELD
+			
+					DIALOGUE dialogueChapter24xKaiaEyvelLeif
+					YIELD
+
+					macroASMCChangeAllegianceToPlayer Eyvel
+
+					macroASMCSetCharacterDataWord Eyvel, Leader, Leif
+				END2
+			
+				_MareetaEyvelTalk ; 97/8B71
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $50
+					YIELD
+			
+					DIALOGUE dialogueChapter24xKaiaEyvelMareeta
+					YIELD
+
+					macroASMCChangeAllegianceToPlayer Eyvel
+
+					macroASMCSetCharacterDataWord Eyvel, Leader, Leif
+				END2
+			
+				_PrepGroups ; 97/8BA4
+					.long eventChapter24xData._PrepGroup
+				.word 0
+			
+				_OpeningEvent ; 97/8BAA
+					CALL_ASM_SKIPPABLE rlEventEngineCancelFading
+
+					macroASMCUnsetUnitState Eyvel, UnitStateCaptured
+
+					macroASMCSetUnitState Eyvel, UnitStateDisabled
+			
+					macroASMCCheckUnitStateSet Eyvel, UnitStateDisabled
+					JUMP_FALSE +
+
+						macroASMCUnsetUnitState Eyvel, UnitStateUnknown1 | UnitStateDisabled
+
+						macroASMCSetUnitPosition Eyvel, [13, 2]
+
+						macroASMCSetCharacterDataByte Eyvel, Fatigue, 0
+			
+					+
+					macroASMCChangeAllegianceToNPC Eyvel
+
+					macroSetCharacterAI Eyvel, [$02, $00, $03, $00]
+
+					macroASMCUnsetBitsCharacterDataWord Eyvel, Skills2, pack([Skill2Anchor, Skill3Immortal])
+			
+					CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog
+			
+					FADE_IN 2
+			
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $3C
+					YIELD
+
+					macroChapterTitlePopup dialogueChapter24xTitle
+			
+					GET_CHARACTER_COORDS Leif
+					SCROLL_CAMERA 4
+					YIELD
+			
+					DIALOGUE dialogueChapter24xOpening
+					YIELD
+				END2
+			
+				_EndingEvent ; 97/8CEC
+					CALL_ASM_LOOP rlASMCSetUnitsLeftBehindAsCaptured
+
+					macroASMCCountAllUnitsAlive Eyvel
+					JUMP_FALSE _SkipEyvel
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 16
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $45
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCSaveChapterAndTurncount
+
+					macroDialogueWithBG dialogueChapter24xEyvelLeif, 2
+			
+					macroASMCCountAllUnitsAlive Nanna
+					JUMP_FALSE +
+			
+						STORE_LONG lEventEngineLongParameter, dialogueChapter24xEyvelNanna
+						CALL_ASM_LOOP rlASMCDialogueContinue
+			
+					+
+					macroASMCCountAllUnitsAlive Dagdar
+					JUMP_FALSE +
+
+						macroASMCCheckUnitStateSet Dagdar, UnitStateDisabled
+						JUMP_TRUE +
+			
+							STORE_LONG lEventEngineLongParameter, dialogueChapter24xEyvelDagdar
+							CALL_ASM_LOOP rlASMCDialogueContinue
+				
+							macroASMCCountAllUnitsAlive Tanya
+							JUMP_FALSE +
+
+								macroASMCCheckUnitStateSet Tanya, UnitStateDisabled
+								JUMP_TRUE +
+			
+									STORE_LONG lEventEngineLongParameter, dialogueChapter24xEyvelTanya
+									CALL_ASM_LOOP rlASMCDialogueContinue
+			
+					+
+					macroASMCCountAllUnitsAlive Halvan
+					JUMP_FALSE +
+			
+						STORE_LONG lEventEngineLongParameter, dialogueChapter24xEyvelHalvan
+						CALL_ASM_LOOP rlASMCDialogueContinue
+			
+					+
+					macroASMCCountAllUnitsAlive Osian
+					JUMP_FALSE +
+			
+						STORE_LONG lEventEngineLongParameter, dialogueChapter24xEyvelOsian
+						CALL_ASM_LOOP rlASMCDialogueContinue
+			
+					+
+					macroASMCCountAllUnitsAlive Mareeta
+					JUMP_FALSE +
+			
+						STORE_LONG lEventEngineLongParameter, dialogueChapter24xEyvelMareeta
+						CALL_ASM_LOOP rlASMCDialogueContinue
+			
+						macroASMCCountAllUnitsAlive Galzus
+						JUMP_FALSE +
+			
+							STORE_LONG lEventEngineLongParameter, dialogueChapter24xEyvelGalzus
+							CALL_ASM_LOOP rlASMCDialogueContinue
+			
+					+
+					macroASMCCountAllUnitsAlive Finn
+					JUMP_FALSE +
+			
+						STORE_LONG lEventEngineLongParameter, dialogueChapter24xEyvelFinn
+						CALL_ASM_LOOP rlASMCDialogueContinue
+			
+					+
+					CALL_ASM_LOOP rlASMCDialogueWithBGEnd
+					YIELD
+			
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
+			
+					_SkipEyvel
+					macroASMCCountAllUnitsAlive Dean
+					JUMP_FALSE +
+
+						macroASMCCountAllUnitsAlive Linoan
+						JUMP_TRUE +
+			
+							STORE_WORD wCurrentMapMusic, $0000
+							PLAY_SOUND_WORD $00E0
+							PAUSE_SKIPPABLE 32
+							YIELD
+			
+							SET_MUSIC $42
+							YIELD
+
+							macroDialogueWithBG dialogueLinoanDeathDean, 3
+							YIELD
+			
+							HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+							FADE_OUT 1
+							YIELD
+			
+							CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut
+			
+							STORE_BYTE bBufferINIDISP, $00
+
+							macroASMCRemoveUnit Dean
+			
+					+
+					FADE_OUT 1
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCChapterEnd
+				END1
+
+    .endsection Chapter24xEventsSection
+
+    .section Chapter24xDataSection
+
+			eventChapter24xData ; 99/F7B3
+			
+				_PrepGroup ; 99/F7B3
+					.byte 8, 7
+			
+					UNIT LoptrianDarkBishop, Enemy, [13, 19], [13, 19], LoptrianDarkBishop, [Venin, Berserk, Jormungand], 15, True, [$01, $03, $00, $80]
+					UNIT LoptrianSorcerer1, Enemy, [12, 19], [12, 19], LoptrianDarkBishop, [Jormungand, Fenrir, Silence], 20, False, [$00, $03, $00, $00]
+					UNIT LoptrianSorcerer1, Enemy, [14, 19], [14, 19], LoptrianDarkBishop, [Jormungand, Fenrir, Sleep], 20, False, [$00, $03, $00, $00]
+					UNIT LoptrianSorcerer1, Enemy, [11, 18], [11, 18], LoptrianDarkBishop, [Jormungand], 15, False, [$00, $03, $00, $00]
+					UNIT LoptrianSorcerer1, Enemy, [12, 18], [12, 18], LoptrianDarkBishop, [Jormungand], 15, False, [$00, $03, $00, $00]
+					UNIT LoptrianSorcerer1, Enemy, [13, 18], [13, 18], LoptrianDarkBishop, [Jormungand], 15, False, [$00, $03, $00, $00]
+					UNIT LoptrianSorcerer1, Enemy, [14, 18], [14, 18], LoptrianDarkBishop, [Jormungand], 15, False, [$00, $03, $00, $00]
+					UNIT LoptrianSorcerer1, Enemy, [15, 18], [15, 18], LoptrianDarkBishop, [Jormungand], 15, False, [$00, $03, $00, $00]
+					UNIT BerserkerEnemy1, Enemy, [13, 8], [13, 8], LoptrianDarkBishop, [DevilAxe, Hammer], 20, False, [$00, $15, $00, $00]
+					UNIT BerserkerEnemy1, Enemy, [12, 8], [12, 8], LoptrianDarkBishop, [DevilAxe, Hammer], 20, False, [$00, $15, $00, $00]
+					UNIT BerserkerEnemy1, Enemy, [14, 8], [14, 8], LoptrianDarkBishop, [DevilAxe, Hammer], 20, False, [$00, $15, $00, $00]
+					UNIT BerserkerEnemy1, Enemy, [11, 8], [11, 8], LoptrianDarkBishop, [DevilAxe, Hammer], 20, False, [$00, $15, $00, $00]
+					UNIT BerserkerEnemy1, Enemy, [15, 8], [15, 8], LoptrianDarkBishop, [DevilAxe, Hammer], 20, False, [$00, $15, $00, $00]
+					UNIT BerserkerEnemy1, Enemy, [15, 30], [15, 30], LoptrianDarkBishop, [DevilAxe, Hammer], 20, False, [$00, $03, $00, $00]
+					UNIT BerserkerEnemy1, Enemy, [8, 30], [8, 30], LoptrianDarkBishop, [DevilAxe, Hammer, Torch], 20, False, [$00, $03, $00, $00]
+					UNIT BerserkerEnemy1, Enemy, [21, 26], [21, 26], LoptrianDarkBishop, [DevilAxe, Hammer, Torch], 20, False, [$00, $03, $00, $00]
+					UNIT BerserkerEnemy1, Enemy, [20, 19], [20, 19], LoptrianDarkBishop, [DevilAxe, Hammer], 20, False, [$00, $03, $00, $00]
+					UNIT BerserkerEnemy1, Enemy, [21, 14], [21, 14], LoptrianDarkBishop, [DevilAxe, Hammer, Torch], 20, False, [$00, $03, $00, $00]
+					UNIT BerserkerEnemy1, Enemy, [23, 10], [23, 10], LoptrianDarkBishop, [DevilAxe, Hammer], 20, False, [$00, $03, $00, $00]
+					UNIT BerserkerEnemy1, Enemy, [5, 13], [5, 13], LoptrianDarkBishop, [DevilAxe, Hammer], 20, False, [$00, $03, $00, $00]
+					UNIT BerserkerEnemy1, Enemy, [4, 25], [4, 25], LoptrianDarkBishop, [DevilAxe, Hammer], 20, False, [$00, $03, $00, $00]
+					UNIT LoptrianSorcerer1, Enemy, [12, 37], [12, 37], LoptrianDarkBishop, [Warp, Warp, Jormungand, Physic, PureWater], 14, False, [$00, $03, $00, $00]
+					UNIT LoptrianSorcerer1, Enemy, [14, 37], [14, 37], LoptrianDarkBishop, [Warp, Warp, Jormungand, Physic, PureWater], 14, False, [$00, $03, $00, $00]
+				UNIT
+			
+				_SorcererReinforcementsCameraCoordinates ; 99/F983
+					.byte 8, 7
+			
+				_SorcererReinforcementsGroup ; 99/F985
+					UNIT LoptrianSorcerer1, Enemy, [24, 14], [24, 14], LoptrianDarkBishop, [Hel, Jormungand, Rewarp], 16, False, [$00, $00, $00, $00]
+					UNIT LoptrianSorcerer1, Enemy, [24, 17], [24, 17], LoptrianDarkBishop, [Hel, Jormungand, Rewarp], 16, False, [$00, $00, $00, $00]
+					UNIT LoptrianSorcerer1, Enemy, [2, 14], [2, 14], LoptrianDarkBishop, [Hel, Jormungand, Rewarp], 16, False, [$00, $00, $00, $00]
+					UNIT LoptrianSorcerer1, Enemy, [2, 17], [2, 17], LoptrianDarkBishop, [Hel, Jormungand, Rewarp], 16, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_SniperHeroReinforcementsCameraCoordinates ; 99/F9D7
+					.byte 8, 7
+			
+				_SniperHeroReinforcementsGroup ; 99/F9D9
+					UNIT SniperEnemy, Enemy, [11, 37], [11, 37], LoptrianDarkBishop, [VeninBow], 20, False, [$00, $00, $00, $00]
+					UNIT Hero3, Enemy, [15, 37], [15, 37], LoptrianDarkBishop, [SleepEdge], 20, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_StartingPositions ; 99/FA03
+					.byte 19, 34
+					.byte 1, 33
+					.byte 20, 34
+					.byte 2, 33
+					.byte 21, 34
+					.byte 3, 33
+					.byte 22, 34
+					.byte 4, 33
+					.byte 23, 34
+					.byte 5, 33
+					.byte 24, 34
+					.byte 2, 34
+					.byte 21, 35
+					.byte 3, 34
+					.byte 22, 35
+					.byte 4, 34
+				.byte $FF
+			
+				_Chest1 VANILLA_CHEST MasterSeal, [3, 25] ; 99/FA24
+				_Chest2 VANILLA_CHEST StrengthRing, [5, 25] ; 99/FA68
+				_Chest3 VANILLA_CHEST ShieldRing, [4, 26] ; 99/FAAC
+
+    .endsection Chapter24xDataSection
+
+.endif ; GUARD_FE5_CHAPTER24x

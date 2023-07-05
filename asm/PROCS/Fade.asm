@@ -12,7 +12,7 @@ rlProcFadeIn1Init ; 82/A119
 	jsl rlClearFadeOuts
 	sep #$20
 	lda #$FF
-	sta wScreenBrightnessFlag,b
+	sta wScreenFadingFlag,b
 	plp
 	rtl
 
@@ -49,7 +49,7 @@ rlProcFadeOut1Init ; 82/A13F
 	jsl rlClearFadeIns
 	sep #$20
 	lda #$FF
-	sta wScreenBrightnessFlag,b
+	sta wScreenFadingFlag,b
 	plp
 	rtl
 
@@ -82,9 +82,9 @@ rlClearFadeIns ; 82/A15D
 
 	phx
 	lda #(`procFadeIn1)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn1
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
@@ -94,9 +94,9 @@ rlClearFadeIns ; 82/A15D
 
 	+
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
@@ -117,9 +117,9 @@ rlClearFadeOuts ; 82/A18C
 
 	phx
 	lda #(`procFadeOut1)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeOut1
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
@@ -129,9 +129,9 @@ rlClearFadeOuts ; 82/A18C
 
 	+
 	lda #(`procFadeOut2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeOut2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
@@ -152,20 +152,20 @@ rlProcUnknown82A1BBInit ; 82/A1C3
 	.autsiz
 	.databank ?
 
-	lda wProcInput0,b
-	sta aProcBody0,b,x
+	lda aProcSystem.wInput0,b
+	sta aProcSystem.aBody0,b,x
 
-	lda bBuf_INIDISP
-	bit #INIDISP.ForcedBlank
+	lda bBufferINIDISP
+	bit #INIDISP_ForcedBlank
 	bne +
 
 	bit #INIDISP_Setting(False, 15)
 	beq +
 
 	lda #(`procFadeOut1)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeOut1
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 
 	+
@@ -178,21 +178,21 @@ rlProcUnknown82A1BBOnCycle ; 82/A1E4
 	.autsiz
 	.databank ?
 
-	lda bBuf_INIDISP
-	bit #INIDISP.ForcedBlank
+	lda bBufferINIDISP
+	bit #INIDISP_ForcedBlank
 	bne +
 
 	bit #INIDISP_Setting(False, 15)
 	bne ++
 
 	+
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlUnknown80B554
 	sei
 	sep #$20
-	lda bBuf_NMITIMEN
-	and #~(NMITIMEN.VCountIRQEnable | NMITIMEN.HCountIRQEnable)
-	sta bBuf_NMITIMEN
+	lda bBufferNMITIMEN
+	and #~(NMITIMEN_VCountIRQ | NMITIMEN_HCountIRQ)
+	sta bBufferNMITIMEN
 	sta NMITIMEN,b
 	rep #$20
 	jsl rlProcEngineFreeProc
@@ -217,9 +217,9 @@ rlProcFadeIn2Init ; 82/A214
 	jsl rlClearFadeOuts
 	sep #$20
 	lda #$FF
-	sta wScreenBrightnessFlag,b
-	lda wUnknown00033F,b
-	sta aProcBody0,b,x
+	sta wScreenFadingFlag,b
+	lda wScreenFadingProcInput,b
+	sta aProcSystem.aBody0,b,x
 	plp
 	rtl
 
@@ -231,7 +231,7 @@ rlProcFadeIn2OnCycle ; 82/A228
 	.databank ?
 
 	lda #<>rlProcFadeIn2OnCycle2
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 	rtl
 
 rlProcFadeIn2OnCycle2 ; 82/A22F
@@ -242,7 +242,7 @@ rlProcFadeIn2OnCycle2 ; 82/A22F
 	.databank ?
 
 	lda #<>rlProcFadeIn2OnCycle3
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 	rtl
 
 rlProcFadeIn2OnCycle3 ; 82/A236
@@ -252,7 +252,7 @@ rlProcFadeIn2OnCycle3 ; 82/A236
 	.autsiz
 	.databank ?
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlFadeInByTimer
 	bcc +
 
@@ -278,9 +278,9 @@ rlProcFadeOut2Init ; 82/A24E
 	jsl rlClearFadeIns
 	sep #$20
 	lda #$FF
-	sta wScreenBrightnessFlag,b
-	lda wUnknown00033F,b
-	sta aProcBody0,b,x
+	sta wScreenFadingFlag,b
+	lda wScreenFadingProcInput,b
+	sta aProcSystem.aBody0,b,x
 	plp
 	rtl
 
@@ -291,7 +291,7 @@ rlProcFadeOut2OnCycle ; 82/A262
 	.autsiz
 	.databank ?
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlFadeOutByTimer
 	bcc +
 
@@ -313,20 +313,20 @@ rlProcUnknown82A272Init ; 82/A27A
 	.autsiz
 	.databank ?
 
-	lda wProcInput0,b
-	sta aProcBody0,b,x
+	lda aProcSystem.wInput0,b
+	sta aProcSystem.aBody0,b,x
 
-	lda bBuf_INIDISP
-	bit #INIDISP.ForcedBlank
+	lda bBufferINIDISP
+	bit #INIDISP_ForcedBlank
 	bne +
 
 	bit #INIDISP_Setting(False, 15)
 	beq +
 
 	lda #(`procFadeOut2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeOut2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 
 	+
@@ -339,21 +339,21 @@ rlProcUnknown82A272OnCycle ; 82/A29B
 	.autsiz
 	.databank ?
 
-	lda bBuf_INIDISP
-	bit #INIDISP.ForcedBlank
+	lda bBufferINIDISP
+	bit #INIDISP_ForcedBlank
 	bne +
 
 	bit #INIDISP_Setting(False, 15)
 	bne ++
 
 	+
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlUnknown80B554
 	sei
 	sep #$20
-	lda bBuf_NMITIMEN
-	and #~(NMITIMEN.VCountIRQEnable | NMITIMEN.HCountIRQEnable)
-	sta bBuf_NMITIMEN
+	lda bBufferNMITIMEN
+	and #~(NMITIMEN_VCountIRQ | NMITIMEN_HCountIRQ)
+	sta bBufferNMITIMEN
 	sta NMITIMEN,b
 	rep #$20
 	jsl rlProcEngineFreeProc
@@ -374,17 +374,17 @@ rlProcUnknown82A2C3Init ; 82/A2CB
 	.autsiz
 	.databank ?
 
-	lda wProcInput0,b
-	sta aProcBody0,b,x
+	lda aProcSystem.wInput0,b
+	sta aProcSystem.aBody0,b,x
 
-	lda wProcInput1,b
-	sta aProcBody1,b,x
+	lda aProcSystem.wInput1,b
+	sta aProcSystem.aBody1,b,x
 
-	lda wProcInput2,b
-	sta aProcBody2,b,x
+	lda aProcSystem.wInput2,b
+	sta aProcSystem.aBody2,b,x
 
-	lda wProcInput3,b
-	sta aProcBody3,b,x
+	lda aProcSystem.wInput3,b
+	sta aProcSystem.aBody3,b,x
 
 	rtl
 
@@ -395,12 +395,12 @@ rlProcUnknown82A2C3OnCycle ; 82/A2E4
 	.autsiz
 	.databank ?
 
-	lda aProcBody3,b,x
+	lda aProcSystem.aBody3,b,x
 	and #$FF00
-	sta lR43+1
+	sta lR44+1
 
-	lda aProcBody2,b,x
-	sta lR43
+	lda aProcSystem.aBody2,b,x
+	sta lR44
 
 	phx
 	jsl rlProcEngineFindProc
@@ -408,16 +408,16 @@ rlProcUnknown82A2C3OnCycle ; 82/A2E4
 	bcs +
 
 	phx
-	lda aProcBody0,b,x
-	sta wProcInput0,b
+	lda aProcSystem.aBody0,b,x
+	sta aProcSystem.wInput0,b
 
-	lda aProcBody3,b,x
+	lda aProcSystem.aBody3,b,x
 	xba
 	and #$FF00
-	sta lR43+1
+	sta lR44+1
 
-	lda aProcBody1,b,x
-	sta lR43
+	lda aProcSystem.aBody1,b,x
+	sta lR44
 
 	jsl rlProcEngineCreateProc
 

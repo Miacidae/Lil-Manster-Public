@@ -11,7 +11,7 @@ rlBlockCopy ; 80/B340
 	; Inputs:
 	; lR18: Source
 	; lR19: Destination
-	; wR20: Count
+	; lR20: Count
 
 	; Outputs:
 	; None
@@ -30,7 +30,7 @@ rlBlockCopy ; 80/B340
 
 	; If nothing to copy, end
 
-	ldy wR20
+	ldy lR20
 	beq _End
 
 	; Else check if we have an odd number of
@@ -88,7 +88,7 @@ rlBlockFillWord ; 80/B36C
 	; Inputs:
 	; A: Fill value
 	; lR18: Destination
-	; wR19: Count
+	; lR19: Count
 
 	phb
 	php
@@ -105,7 +105,7 @@ rlBlockFillWord ; 80/B36C
 
 	; If count = 0, end
 
-	ldy wR19
+	ldy lR19
 	beq _End
 
 	; Else check if we have an odd number of
@@ -158,7 +158,7 @@ rlBlockANDWord ; 80/B397
 	; Inputs:
 	; A: AND value
 	; lR18: Destination
-	; wR19: Count
+	; lR19: Count
 
 	; Outputs:
 	; None
@@ -184,7 +184,7 @@ rlBlockANDWord ; 80/B397
 	; ANDing it with the value, and then storing
 	; it back.
 
-	ldy wR19
+	ldy lR19
 	beq _End
 
 	tya
@@ -234,7 +234,7 @@ rlBlockORRWord ; 80/B3D1
 	; Inputs:
 	; A: ORR value
 	; lR18: Destination
-	; wR19: Count
+	; lR19: Count
 
 	; Outputs:
 	; None
@@ -251,7 +251,7 @@ rlBlockORRWord ; 80/B3D1
 	ldy wR0
 	phy
 	sta wR0
-	ldy wR19
+	ldy lR19
 	beq _End
 
 	tya
@@ -301,7 +301,7 @@ rlBlockAddWord ; 80/B40B
 	; Inputs:
 	; A: added value
 	; lR18: Destination
-	; wR19: Count
+	; lR19: Count
 
 	; Outputs:
 	; None
@@ -318,7 +318,7 @@ rlBlockAddWord ; 80/B40B
 	ldy wR0
 	phy
 	sta wR0
-	ldy wR19
+	ldy lR19
 	beq _End
 
 	tya
@@ -459,7 +459,7 @@ rlUnknown80B498 ; 80/B498
 	phy
 	sta wR0
 
-	lda wR20
+	lda lR20
 	xba
 	and #$00FF
 	tay
@@ -470,9 +470,9 @@ rlUnknown80B498 ; 80/B498
 	dec a
 	xba
 	clc
-	adc wR19
+	adc lR19
 	jsl rlUnknown80B4DD
-	lda wR20
+	lda lR20
 	and #$00FF
 	tax
 	lda wR0
@@ -548,7 +548,7 @@ rlBlockCopyMVNByRAM ; 80/B4F0
 
 	; Inputs:
 	; lBlockCopySource: Source
-	; lBlockCopyDest: Destination
+	; lBlockCopyDestination: Destination
 	; wBlockCopySize: Count
 
 	; Outputs:
@@ -564,17 +564,17 @@ rlBlockCopyMVNByRAM ; 80/B4F0
 	phx
 	phy
 	sep #$20
-	lda lBlockCopyDest+2,b
-	sta bBlockCopyMVNDestBank,b
+	lda lBlockCopyDestination+2,b
+	sta rsBlockCopyMVNRAM+1,b
 	lda lBlockCopySource+2,b
-	sta bBlockCopyMVNSourceBank,b
+	sta rsBlockCopyMVNRAM+2,b
 	lda #rsBlockCopyMVNRoutine[0]
-	sta bBlockCopyMVNOpcode,b
+	sta rsBlockCopyMVNRAM,b
 	lda #rsBlockCopyMVNRoutine[3]
-	sta bBlockCopyMVNRetOpcode,b
+	sta rsBlockCopyMVNRAM+3,b
 	rep #$20
 	ldx lBlockCopySource,b
-	ldy lBlockCopyDest,b
+	ldy lBlockCopyDestination,b
 	lda wBlockCopySize,b
 	dec a
 	jsr <>rsBlockCopyMVNRAM,k
@@ -596,7 +596,7 @@ rlBlockCopyMVPByRAM ; 80/B522
 
 	; Inputs:
 	; lBlockCopySource: Source
-	; lBlockCopyDest: Destination
+	; lBlockCopyDestination: Destination
 	; wBlockCopySize: Count
 
 	; Outputs:
@@ -612,17 +612,17 @@ rlBlockCopyMVPByRAM ; 80/B522
 	phx
 	phy
 	sep #$20
-	lda lBlockCopyDest+2,b
-	sta bBlockCopyMVPDestBank,b
+	lda lBlockCopyDestination+2,b
+	sta rsBlockCopyMVPRAM+1,b
 	lda lBlockCopySource+2,b
-	sta bBlockCopyMVPSourceBank,b
+	sta rsBlockCopyMVPRAM+2,b
 	lda #rsBlockCopyMVPRoutine[0]
-	sta bBlockCopyMVPOpcode,b
+	sta rsBlockCopyMVPRAM,b
 	lda #rsBlockCopyMVPRoutine[3]
-	sta bBlockCopyMVPRetOpcode,b
+	sta rsBlockCopyMVPRAM+3,b
 	rep #$20
 	ldx lBlockCopySource,b
-	ldy lBlockCopyDest,b
+	ldy lBlockCopyDestination,b
 	lda wBlockCopySize,b
 	dec a
 	jsr <>rsBlockCopyMVPRAM,k

@@ -18,7 +18,7 @@ rlProcUnitActionOnCycle ; 82/8FF7
 	.databank ?
 
 	lda #<>rlProcUnitActionOnCycle2
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 	rtl
 
 rlProcUnitActionOnCycle2 ; 82/8FFE

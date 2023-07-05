@@ -1,4 +1,4 @@
-ch11kemphdeath
+dialogueChapter11KempfDeathQuote
 .text "Ugh... What a joke...!"
 .byte NewLine
 .text "I must flee this place,"
@@ -7,71 +7,71 @@ ch11kemphdeath
 .byte WaitForA
 .byte EndText
 
-ch11freddeath
+dialogueChapter11FredDeathQuote
 .text "Olwen... I tried to save you..."
 .byte NewLine
 .text "F-Forgive me..."
 .byte WaitForA
 .byte EndText
 
-ch12salemdeath
+dialogueChapter12SalemDeathQuote
 .text "Perne..."
 .byte NewLine
 .text "I don't have any regrets..."
 .byte WaitForA
 .byte EndText
 
-ch12Xpernedeath
+dialogueChapter12xPerneDeathQuote
 .text "Ugh..."
 .byte NewLine
 .text "It's been...quite the ride..."
 .byte WaitForA
 .byte EndText
 
-ch12Xtrudedeath
+dialogueChapter12xTrudeDeathQuote
 .text "Tch..."
 .byte NewLine
 .text "Was I...not good enough?"
 .byte WaitForA
 .byte EndText
 
-ch12Xtinadeath
+dialogueChapter12xTinaDeath
 .text "B-Big Sis... I'm...sorry..."
 .byte WaitForA
 .byte EndText
 
-ch13baldackdeath		; Unused, but it's the same as his ch14 one
+dialogueChapter13BaldachDeathQuote		; Unused, but it's the same as his ch14 one
 .text "Wh-What tomfoolery..."
 .byte NewLine
 .text "How...could...this..."
 .byte WaitForA
 .byte EndText
 
-ch16Aconomordeath
+dialogueChapter16AConomorDeathQuote
 .text "Ulster shall yet...rise again..."
 .byte WaitForA
 .byte EndText
 
-ch17Bsarahdeath
+dialogueChapter17BSaraDeathQuote
 .text "I feel so...alone..."
 .byte WaitForA
 .byte EndText
 
-ch19wolfedeath
+dialogueChapter19WolfeDeathQuote
 .text "Ugh..."
 .byte NewLine
 .text "This...isn't possible..."
 .byte WaitForA
 .byte EndText
 
-ch24galzusdeath
+dialogueChapter24GalzusDeathQuote
 .text "Ugh..."
 .byte NewLine
 .text "Mareeta... I'm..."
 .byte WaitForA
 .byte EndText
 
-ch24raydrikdeath
+dialogueChapter24RaydrikDeathQuote
 .text "Ugggh...!"
 .byte NewLine
 .text "This is...absurd..."
@@ -87,14 +87,14 @@ ch24raydrikdeath
 .byte WaitForA
 .byte EndText
 
-leifdeath
+dialogueLeifDeathQuote
 .text "Everyone..."
 .byte NewLine
 .text "I-I'm...sorry..."
 .byte WaitForA
 .byte EndText
 
-finndeath
+dialogueFinnDeathQuote
 .text "Lord Leif..."
 .byte NewLine
 .text "Y-You must...fulfill"
@@ -103,21 +103,21 @@ finndeath
 .byte WaitForA
 .byte EndText
 
-osiandeath
+dialogueOsianDeathQuote
 .text "D-Dammit...! There's no"
 .byte NewLine
 .text "patching over...this mistake..."
 .byte WaitForA
 .byte EndText
 
-halvandeath
+dialogueHalvanDeathQuote
 .text "Ma... Pa... I'm sorry..."
 .byte NewLine
 .text "I...lasted as long as I could..."
 .byte WaitForA
 .byte EndText
 
-eyveldeath
+dialogueEyvelDeathQuote
 .text "Everyone... S-Someday this will all"
 .byte NewLine
 .text "just be a bad memory... So don't"
@@ -126,7 +126,7 @@ eyveldeath
 .byte WaitForA
 .byte EndText
 
-dagdardeath
+dialogueDagdarDeathQuote
 .text "I...led an awful strange life,"
 .byte NewLine
 .text "didn't I...? But it was MY life,"
@@ -135,19 +135,19 @@ dagdardeath
 .byte WaitForA
 .byte EndText
 
-martydeath
+dialogueMartyDeathQuote
 .text "Th-That's an awful lotta blood..."
 .byte NewLine
 .text "Wh-Why me...? What'd I do...?"
 .byte WaitForA
 .byte EndText
 
-ronandeath
+dialogueRonanDeathQuote
 .text "Ugh...! Ma... I'm scared..."
 .byte WaitForA
 .byte EndText
 
-mirandadeath
+dialogueMirandaDeathQuote
 .text "Aah, Prince Leif..."
 .byte NewLine
 .text "If I could just go back..."
@@ -156,35 +156,35 @@ mirandadeath
 .byte WaitForA
 .byte EndText
 
-safiedeath
+dialogueSafyDeathQuote
 .text "...Gods above, return your light..."
 .byte NewLine
 .text "to this world..."
 .byte WaitForA
 .byte EndText
 
-laradeath
+dialogueLaraDeathQuote
 .text "Heh... Maybe in the next life,"
 .byte NewLine
 .text "I can be...something more..."
 .byte WaitForA
 .byte EndText
 
-brightondeath
+dialogueBrightonDeathQuote
 .text "Ugh! I... I just wanted things"
 .byte NewLine
 .text "to go back...the way they were..."
 .byte WaitForA
 .byte EndText
 
-fergusdeath
+dialogueFergusDeathQuote
 .text "Ugh... L-Like hell am I dyin' here..."
 .byte NewLine
 .text "I still got so much...to..."
 .byte WaitForA
 .byte EndText
 
-edadeath
+dialogueEdaDeathQuote
 .text "Kate, my faithful dragon..."
 .byte NewLine
 .text "Thank you."
@@ -196,33 +196,33 @@ edadeath
 .byte WaitForA
 .byte EndText
 
-asbeldeath
+dialogueAsbelDeathQuote
 .text "Lord Leif... P-please..."
 .byte NewLine
 .text "For Thracia..."
 .byte WaitForA
 .byte EndText
 
-machadeath
+dialogueMachaDeathQuote
 .text "I...wanted to see Munster become..."
 .byte NewLine
 .text "the beautiful land it once was..."
 .byte WaitForA
 .byte EndText
 
-hicksdeath
+dialogueHicksDeathQuote
 .text "Murphy... Keep yerself safe..."
 .byte NewLine
 .text "An' grow up far away from all this..."
 .byte WaitForA
 .byte EndText
 
-nannadeath
+dialogueNannaDeathQuote
 .text "Lord Leif... Don't you dare lose..."
 .byte WaitForA
 .byte EndText
 
-selphinadeath
+dialogueSelphinaDeathQuote
 .text "*Huff... Huff...*"
 .byte NewLine
 .text "I...made it this far..."
@@ -231,7 +231,7 @@ selphinadeath
 .byte WaitForA
 .byte EndText
 
-dalsindeath
+dialogueDalsinDeathQuote
 .text "D-Damn! Jubel..."
 .byte NewLine
 .text "Live a long and happy life"
@@ -240,34 +240,34 @@ dalsindeath
 .byte WaitForA
 .byte EndText
 
-calliondeath
+dialogueCallionDeathQuote
 .text "L-Leonster will...rise again..."
 .byte WaitForA
 .byte EndText
 
-lithisdeath
+dialogueLifisDeathQuote
 .text "Ugh...! S-Safy, I...need..."
 .byte WaitForA
 .byte EndText
 
-karindeath
+dialogueKarinDeathQuote
 .text "Queen Erinys... Prince Ced..."
 .byte NewLine
 .text "I'm sorry..."
 .byte WaitForA
 .byte EndText
 
-tanyadeath
+dialogueTanyaDeathQuote
 .text "Ugh...! O-Osian... Help...me..."
 .byte WaitForA
 .byte EndText
 
-mareetadeath
+dialogueMareetaDeathQuote
 .text "M-Mother... I..."
 .byte WaitForA
 .byte EndText
 
-galzusdeath
+dialogueGalzusDeathQuote
 .text "Hah! So this is it..."
 .byte NewLine
 .text "You're a...real fascinating sort..."
@@ -276,28 +276,28 @@ galzusdeath
 .byte WaitForA
 .byte EndText
 
-shivadeath
+dialogueShivaDeathQuote
 .text "How...careless."
 .byte NewLine
 .text "All this way, just to die...here..."
 .byte WaitForA
 .byte EndText
 
-kanedeath
+dialogueKaneDeathQuote
 .text "N-Not yet..."
 .byte NewLine
 .text "My dream... I still...need to..."
 .byte WaitForA
 .byte EndText
 
-albadeath
+dialogueAlbaDeathQuote
 .text "May the banner of Njörun..."
 .byte NewLine
 .text "fly forever..."
 .byte WaitForA
 .byte EndText
 
-robertdeath
+dialogueRobertDeathQuote
 .text "Lady Selphina..."
 .byte NewLine
 .text "I wanted to be more useful to you."
@@ -306,42 +306,42 @@ robertdeath
 .byte WaitForA
 .byte EndText
 
-weismanndeath
+dialogueWeismannDeathQuote
 .text "D-Damn... You'll...live to regret"
 .byte NewLine
 .text "this, all of you..."
 .byte WaitForA
 .byte EndText
 
-bucksdeath
+dialogueBucksDeathQuote
 .text "Ugh... You'll regret this someday..."
 .byte NewLine
 .text "I...deserved to die at sea..."
 .byte WaitForA
 .byte EndText
 
-lobosdeath
+dialogueLobosDeathQuote
 .text "Ugh... You fools..."
 .byte NewLine
 .text "This doesn't end with me..."
 .byte WaitForA
 .byte EndText
 
-eisenaudeath
+dialogueEisenhauDeathQuote
 .text "What madness..."
 .byte NewLine
 .text "I can't...believe...they..."
 .byte WaitForA
 .byte EndText
 
-rumaighdeath
+dialogueLemayDeathQuote
 .text "Elaine... Mahal... Min... I'm sorry..."
 .byte NewLine
 .text "P-Papa isn't comin' home..."
 .byte WaitForA
 .byte EndText
 
-gomezdeath
+dialogueGomezDeathQuote
 .text "D-Dagdar, boss... I'm sorry... But"
 .byte NewLine
 .text "everybody was starvin' to death,"
@@ -350,80 +350,80 @@ gomezdeath
 .byte WaitForA
 .byte EndText
 
-merlochdeath
+dialogueMerlochDeathQuote
 .text "F-Forgive me, King Travant,"
 .byte NewLine
 .text "Your Majesty..."
 .byte WaitForA
 .byte EndText
 
-largodeath
+dialogueLargoDeathQuote
 .text "Argh...! So... This is how it ends..."
 .byte WaitForA
 .byte EndText
 
-oltophdeath
+dialogueOltophDeathQuote
 .text "G-Glory to House Friege..."
 .byte WaitForA
 .byte EndText
 
-colhodeath
+dialogueColhoDeathQuote
 .text "Argggh!"
 .byte NewLine
 .text "You...rotten..."
 .byte WaitForA
 .byte EndText
 
-freddeath
+dialogueFredDeathQuote
 .text "L-Lady Olwen..."
 .byte NewLine
 .text "P-Please...forgive me..."
 .byte WaitForA
 .byte EndText
 
-olwendeath
+dialogueOlwenDeathQuote
 .text "N-Not here...like this..."
 .byte NewLine
 .text "B-Brother..."
 .byte WaitForA
 .byte EndText
 
-pernedeath
+dialoguePerneDeathQuote
 .text "Ugh..."
 .byte NewLine
 .text "So this is...all I could do..."
 .byte WaitForA
 .byte EndText
 
-trudedeath
+dialogueTrudeDeathQuote
 .text "Hah... So this is it...?"
 .byte NewLine
 .text "Perne... I'm sorry..."
 .byte WaitForA
 .byte EndText
 
-salemdeath
+dialogueSalemDeathQuote
 .text "Th-This is the hour of my defeat..."
 .byte NewLine
 .text "Still... I've no regrets..."
 .byte WaitForA
 .byte EndText
 
-tinadeath
+dialogueTinaDeathQuote
 .text "Why...me...?"
 .byte NewLine
 .text "I can't...believe..."
 .byte WaitForA
 .byte EndText
 
-gladedeath
+dialogueGladeDeathQuote
 .text "Even without me..."
 .byte NewLine
 .text "Leonster...shall...rise again..."
 .byte WaitForA
 .byte EndText
 
-lisztdeath
+dialogueLisztDeathQuote
 .text "Ugh..."
 .byte NewLine
 .text "All the glory...the honor..."
@@ -432,14 +432,14 @@ lisztdeath
 .byte WaitForA
 .byte EndText
 
-homerdeath
+dialogueHomerDeath
 .text "Ugh!"
 .byte NewLine
 .text "I-I'm done for..."
 .byte WaitForA
 .byte EndText
 
-deandeath
+dialogueDeanDeathQuote
 .text "D-Damn!"
 .byte NewLine
 .text "Linoan..."
@@ -448,7 +448,7 @@ deandeath
 .byte WaitForA
 .byte EndText
 
-paulusdeath
+dialoguePaulusDeathQuote
 .text "King Bloom, I beg of you..."
 .byte NewLine
 .text "I've...seen what will happen..."
@@ -457,14 +457,14 @@ paulusdeath
 .byte WaitForA
 .byte EndText
 
-baldachdeath
+dialogueBaldachDeathQuote
 .text "Wh-What tomfoolery..."
 .byte NewLine
 .text "How...could...this..."
 .byte WaitForA
 .byte EndText
 
-codhadeath
+dialogueCodhaDeathQuote
 .text "Loptous, lord of all..."
 .byte NewLine
 .text "Take this humble servant's soul..."
@@ -473,14 +473,14 @@ codhadeath
 .byte WaitForA
 .byte EndText
 
-linoandeath
+dialogueLinoanDeathQuote
 .text "Aaah...!"
 .byte NewLine
 .text "Dean..."
 .byte WaitForA
 .byte EndText
 
-ralphdeath
+dialogueRalphDeathQuote
 .text "Hrk..."
 .byte NewLine
 .text "Looks like this is it...for me..."
@@ -489,14 +489,14 @@ ralphdeath
 .byte WaitForA
 .byte EndText
 
-shannamdeath
+dialogueShannamDeathQuote
 .text "Hrk..."
 .byte NewLine
 .text "F-Forgive me, Leif..."
 .byte WaitForA
 .byte EndText
 
-amaldadeath
+dialogueAmaldaDeathQuote
 .text "Fitting..."
 .byte NewLine
 .text "A life lived steeped in blood"
@@ -505,35 +505,35 @@ amaldadeath
 .byte WaitForA
 .byte EndText
 
-seildeath
+dialogueSeilDeathQuote
 .text "Ugh!"
 .byte NewLine
 .text "D-Damned...fools..."
 .byte WaitForA
 .byte EndText
 
-kempfdeath
+dialogueKempfDeathQuote
 .text "I-Is this...a joke?"
 .byte NewLine
 .text "How could I...be bested...by them?"
 .byte WaitForA
 .byte EndText
 
-brookdeath
+dialogueBrookDeathQuote
 .text "Ugh..."
 .byte NewLine
 .text "This isn't...the end..."
 .byte WaitForA
 .byte EndText
 
-iliosdeath
+dialogueIliosDeathQuote
 .text "After all this..."
 .byte NewLine
 .text "I still die...a commoner..."
 .byte WaitForA
 .byte EndText
 
-schroffdeath
+dialogueSchroffDeathQuote
 .text "Agh...!"
 .byte NewLine
 .text "Father Claud..."
@@ -542,14 +542,14 @@ schroffdeath
 .byte WaitForA
 .byte EndText
 
-mooredeath
+dialogueMooreDeathQuote
 .text "Loptous, O Lord God..."
 .byte NewLine
 .text "I give myself...to your new era..."
 .byte WaitForA
 .byte EndText
 
-mullerdeath
+dialogueMullerDeathQuote
 .text "Ergh..."
 .byte NewLine
 .text "It's unthinkable..."
@@ -558,7 +558,7 @@ mullerdeath
 .byte WaitForA
 .byte EndText
 
-nicolovdeath
+dialogueNicolovDeathQuote
 .text "Ugh..."
 .byte NewLine
 .text "Not bad..."
@@ -567,7 +567,7 @@ nicolovdeath
 .byte WaitForA
 .byte EndText
 
-mishadeath
+dialogueMishaDeath
 .text "Ugh..."
 .byte NewLine
 .text "Díthorba, my beloved mother..."
@@ -576,7 +576,7 @@ mishadeath
 .byte WaitForA
 .byte EndText
 
-reinkochdeath
+dialogueReinkochDeathQuote
 .text "O Lord..."
 .byte NewLine
 .text "I beg for your...divine..."
@@ -585,31 +585,31 @@ reinkochdeath
 .byte WaitForA
 .byte EndText
 
-sarahdeath
+dialogueSaraDeath
 .text "I feel so...alone..."
 .byte WaitForA
 .byte EndText
 
-shannamdeath1
+dialogueShannamDeathQuote2
 .text "Ngh..."
 .byte NewLine
 .text "What a stupid way...to..."
 .byte WaitForA
 .byte EndText
 
-palmandeath
+dialoguePalmanDeathQuote
 .text "Castle Friege...is so very far..."
 .byte WaitForA
 .byte EndText
 
-xavierdeath
+dialogueXavierDeathQuote
 .text "F-Forgive me, Lord Leif..."
 .byte NewLine
 .text "Glory...to Leonster...!"
 .byte WaitForA
 .byte EndText
 
-gustavdeath
+dialogueGustavDeathQuote
 .text "Ugh..."
 .byte NewLine
 .text "This rabble...?"
@@ -618,14 +618,14 @@ gustavdeath
 .byte WaitForA
 .byte EndText
 
-bharatdeath
+dialogueBharatDeathQuote
 .text "Ugh..."
 .byte NewLine
 .text "So this is...where..."
 .byte WaitForA
 .byte EndText
 
-dermottdeath
+dialogueDiarmuidDeathQuote
 .text "L-Lord Leif..."
 .byte NewLine
 .text "Take care of Nanna..."
@@ -634,21 +634,21 @@ dermottdeath
 .byte WaitForA
 .byte EndText
 
-seimetzdeath
+dialogueSeimetzDeathQuote
 .text "Your Majesty..."
 .byte NewLine
 .text "I'm sorry... I...couldn't..."
 .byte WaitForA
 .byte EndText
 
-frausdeath
+dialogueFrausDeathQuote
 .text "Ugh..."
 .byte NewLine
 .text "I regret...I...couldn't..."
 .byte WaitForA
 .byte EndText
 
-zaundeath
+dialogueZaunDeathQuote
 .text "Gah!"
 .byte NewLine
 .text "No..."
@@ -657,26 +657,26 @@ zaundeath
 .byte WaitForA
 .byte EndText
 
-cohendeath
+dialogueCohenDeathQuote
 .text "The Empire...is undefeatable..."
 .byte NewLine
 .text "Guhh!"
 .byte WaitForA
 .byte EndText
 
-reinhardtdeath
+dialogueReinhardtDeathQuote
 .text "I am...undone..."
 .byte WaitForA
 .byte EndText
 
-coulterdeath
+dialogueCoulterDeathQuote
 .text "Glory...to...Thracia!"
 .byte NewLine
 .text "Ugh..."
 .byte WaitForA
 .byte EndText
 
-alphanddeath
+dialogueAlphandDeathQuote
 .text "Ugh..."
 .byte NewLine
 .text "Not yet..."
@@ -685,14 +685,14 @@ alphanddeath
 .byte WaitForA
 .byte EndText
 
-fadendeath
+dialogueFadenDeathQuote
 .text "Ugh..."
 .byte NewLine
 .text "But I was...supposed to..."
 .byte WaitForA
 .byte EndText
 
-saiasdeath
+dialogueSaiasDeathQuote
 .text "I can't fight with these wounds..."
 .byte NewLine
 .text "I'm of no use like this..."
@@ -701,7 +701,7 @@ saiasdeath
 .byte WaitForA
 .byte EndText
 
-ceddeath
+dialogueCedDeathQuote
 .text "So this is it..."
 .byte NewLine
 .text "Mother..."
@@ -713,7 +713,7 @@ ceddeath
 .byte WaitForA
 .byte EndText
 
-velddeath
+dialogueVeldDeathQuote
 .text "Gah..."
 .byte NewLine
 .text "This is my...own folly..."
@@ -743,7 +743,7 @@ velddeath
 
 ; Unused
 
-gunterdeath
+dialogueGunterDeathQuote
 .text "Oof..."
 .byte NewLine
 .text "I suppose I've lived long enough..."
@@ -752,7 +752,7 @@ gunterdeath
 .byte WaitForA
 .byte EndText
 
-mannheimdeath
+dialogueMannheimDeathQuote
 .text "Ugh...!"
 .byte NewLine
 .text "King Bloom, I've failed you..."

@@ -1,4 +1,11 @@
 
+	.weak
+
+    aChapterDialoguePointers                             :?= address($82DB8A)
+    
+	.endweak
+
+
 procEventTest .dstruct structProcInfo, "ec", rlProcEventTestInit, None, aProcEventTestCode ; 82/8000
 
 rlProcEventTestInit ; 82/8008
@@ -95,27 +102,27 @@ rlProcEventTestSetBG3 ; 82/807A
 	jsl rsUnknown829B99
 
 	lda #0
-	sta wBuf_BG3HOFS
+	sta wBufferBG3HOFS
 
 	lda #0
-	sta wBuf_BG3VOFS
+	sta wBufferBG3VOFS
 
 	lda #(`aBG3TilemapBuffer)<<8
 	sta lR18+1
 	lda #<>aBG3TilemapBuffer
 	sta lR18
 	lda #$0800
-	sta wR19
+	sta lR19
 	lda #$0000
 	jsl rlBlockFillWord
 
 	lda #(`$83C0F6)<<8
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 
 	lda #$2180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	ldx #(5 << 8) | 6 ; (Y << 8) | X
 	lda #(`menutextEventTestTitle)<<8
@@ -125,7 +132,9 @@ rlProcEventTestSetBG3 ; 82/807A
 	jsl $87E728
 	bra +
 
-	.include "../../TEXT/EVENTTEST/Title.asm"
+		menutextEventTestTitle ; 82/80DB
+  	.enc "SJIS"
+  	.text "イベントテスト\n"
 
 	+
 	jsr rsProcEventTestUpdateText
@@ -146,7 +155,7 @@ rlProcEventTestClearBG1Tilemap ; 82/80F7
 	lda #<>aBG1TilemapBuffer
 	sta lR18
 	lda #$0800
-	sta wR19
+	sta lR19
 	lda #$02FF
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
@@ -162,10 +171,10 @@ rlProcEventTestGetJoypadInput ; 82/811B
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 
-	lda wJoy1Alt
-	bit #JoypadX | JoypadA | JoypadDown | JoypadUp | JoypadStart | JoypadY | JoypadB
+	lda wJoy1Repeated
+	bit #JOY_X | JOY_A | JOY_Down | JOY_Up | JOY_Start | JOY_Y | JOY_B
 	bne +
 
 	; If nothing to do
@@ -173,17 +182,17 @@ rlProcEventTestGetJoypadInput ; 82/811B
 	jmp _End
 
 	+
-	ldx wProcIndex,b
-	bit #JoypadUp
+	ldx aProcSystem.wOffset,b
+	bit #JOY_Up
 	bne _Up
 
-	bit #JoypadDown
+	bit #JOY_Down
 	beq ++
 
-	; aProcBody0 is which option we're hovering
+	; aProcSystem.aBody0 is which option we're hovering
 	; over, 0-2
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	inc a
 	cmp #$0003
 	blt +
@@ -194,7 +203,7 @@ rlProcEventTestGetJoypadInput ; 82/811B
 	bra +
 
 	_Up
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	dec a
 	bpl +
 
@@ -203,7 +212,7 @@ rlProcEventTestGetJoypadInput ; 82/811B
 	lda #$0002
 
 	+
-	sta aProcBody0,b,x
+	sta aProcSystem.aBody0,b,x
 	bra _End
 
 	+
@@ -215,8 +224,8 @@ rlProcEventTestGetJoypadInput ; 82/811B
 
 	jsr rsProcEventTestGetOptionNumberOffset
 
-	lda wJoy1Alt
-	bit #JoypadA
+	lda wJoy1Repeated
+	bit #JOY_A
 	beq +
 
 	; Add 1 to number
@@ -226,7 +235,7 @@ rlProcEventTestGetJoypadInput ; 82/811B
 	bra _End
 
 	+
-	bit #JoypadB
+	bit #JOY_B
 	beq +
 
 	; Sub 1 from number
@@ -236,7 +245,7 @@ rlProcEventTestGetJoypadInput ; 82/811B
 	bra _End
 
 	+
-	bit #JoypadX
+	bit #JOY_X
 	beq +
 
 	; Add 10 to number
@@ -249,7 +258,7 @@ rlProcEventTestGetJoypadInput ; 82/811B
 	bra _End
 
 	+
-	bit #JoypadY
+	bit #JOY_Y
 	beq +
 
 	; Sub 10 from number
@@ -262,19 +271,19 @@ rlProcEventTestGetJoypadInput ; 82/811B
 	bra _End
 
 	+
-	bit #JoypadStart
+	bit #JOY_Start
 	beq _End
 
 	; Sleep until start is pressed
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	_End
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	jsr rsProcEventTestDrawCursor
 	rtl
 
@@ -288,12 +297,12 @@ rsProcEventTestUpdateText ; 82/81AF
 	; Write option labels
 
 	lda #(`$83C0F6)<<8
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 
 	lda #$2180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	ldx #(10 << 8) | 8 ; (Y << 8) | X
 	lda #(`menutextEventTestEventLabel)<<8
@@ -303,7 +312,9 @@ rsProcEventTestUpdateText ; 82/81AF
 	jsl $87E728
 	bra +
 
-	.include "../../TEXT/EVENTTEST/EventLabel.asm"
+		menutextEventTestEventLabel ; 82/81D4
+		.enc "SJIS"
+		.text "イベント　　　　　　　\n"
 
 	+
 	ldx #(12 << 8) | 8 ; (Y << 8) | X
@@ -314,7 +325,9 @@ rsProcEventTestUpdateText ; 82/81AF
 	jsl $87E728
 	bra +
 
-	.include "../../TEXT/EVENTTEST/ConversationLabel.asm"
+		menutextEventTestConversationLabel ; 81/81FF
+ 		.enc "SJIS"
+ 		.text "かいわ　　　　　　　　\n"
 
 	+
 	ldx #(14 << 8) | 8 ; (Y << 8) | X
@@ -325,22 +338,24 @@ rsProcEventTestUpdateText ; 82/81AF
 	jsl $87E728
 	bra +
 
-	.include "../../TEXT/EVENTTEST/MapSelectLabel.asm"
+		menutextEventTestMapSelectLabel ; 81/822A
+		.enc "SJIS"
+		.text "マップセレクト　　　　\n"
 
 	+
 	lda #(`$83C0F6)<<8
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 
 	lda #$22A0
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	; Write event number
 
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	sta lR18
 	stz lR18+2
 	stz lR19+1
@@ -351,9 +366,9 @@ rsProcEventTestUpdateText ; 82/81AF
 
 	; write conversation number
 
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 
-	lda aProcBody2,b,x
+	lda aProcSystem.aBody2,b,x
 	sta lR18
 	stz lR18+2
 	stz lR19+1
@@ -365,14 +380,14 @@ rsProcEventTestUpdateText ; 82/81AF
 	; clamp chapter values
 	; for some reason exclude chapter 1
 
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 
-	lda aProcBody3,b,x
+	lda aProcSystem.aBody3,b,x
 	cmp #ChapterUnknown
 	blt +
 
-	lda #Chapter2 - 1
-	sta aProcBody3,b,x
+	lda #Chapter02 - 1
+	sta aProcSystem.aBody3,b,x
 
 	+
 	asl a
@@ -384,7 +399,7 @@ rsProcEventTestUpdateText ; 82/81AF
 	lda _aMapSelectNumberCoordinates
 	tax
 	lda #$2180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	jsl $87E728
 	jsl rlEnableBG3Sync
 	rts
@@ -398,44 +413,186 @@ rsProcEventTestUpdateText ; 82/81AF
 	_aMapSelectNumberCoordinates ; 82/82BB
 		.word (14 << 8) | 18
 
-.include "../../tables/EventTestMapSelectNames.asm"
+	aEventTestMapSelectNames ; 82/82BD
+	  .word <>menutextEventTestMap02
+	  .word <>menutextEventTestMap02x
+	  .word <>menutextEventTestMap03
+	  .word <>menutextEventTestMap04
+	  .word <>menutextEventTestMap04x
+	  .word <>menutextEventTestMap05
+	  .word <>menutextEventTestMap06
+	  .word <>menutextEventTestMap07
+	  .word <>menutextEventTestMap08
+	  .word <>menutextEventTestMap08x
+	  .word <>menutextEventTestMap09
+	  .word <>menutextEventTestMap10
+	  .word <>menutextEventTestMap11
+	  .word <>menutextEventTestMap11x
+	  .word <>menutextEventTestMap12
+	  .word <>menutextEventTestMap12x
+	  .word <>menutextEventTestMap13
+	  .word <>menutextEventTestMap14
+	  .word <>menutextEventTestMap14x
+	  .word <>menutextEventTestMap15
+	  .word <>menutextEventTestMap16A
+	  .word <>menutextEventTestMap17A
+	  .word <>menutextEventTestMap16B
+	  .word <>menutextEventTestMap17B
+	  .word <>menutextEventTestMap18
+	  .word <>menutextEventTestMap19
+	  .word <>menutextEventTestMap20
+	  .word <>menutextEventTestMap21
+	  .word <>menutextEventTestMap21x
+	  .word <>menutextEventTestMap22
+	  .word <>menutextEventTestMap23
+	  .word <>menutextEventTestMap24
+	  .word <>menutextEventTestMap24x
+	  .word <>menutextEventTestMap25
+	  .word <>menutextEventTestWorldMap
 
-.include "../../TEXT/EVENTTEST/Map01.asm"
-.include "../../TEXT/EVENTTEST/Map02.asm"
-.include "../../TEXT/EVENTTEST/Map02x.asm"
-.include "../../TEXT/EVENTTEST/Map03.asm"
-.include "../../TEXT/EVENTTEST/Map04.asm"
-.include "../../TEXT/EVENTTEST/Map04x.asm"
-.include "../../TEXT/EVENTTEST/Map05.asm"
-.include "../../TEXT/EVENTTEST/Map06.asm"
-.include "../../TEXT/EVENTTEST/Map07.asm"
-.include "../../TEXT/EVENTTEST/Map08.asm"
-.include "../../TEXT/EVENTTEST/Map08x.asm"
-.include "../../TEXT/EVENTTEST/Map09.asm"
-.include "../../TEXT/EVENTTEST/Map10.asm"
-.include "../../TEXT/EVENTTEST/Map11.asm"
-.include "../../TEXT/EVENTTEST/Map11x.asm"
-.include "../../TEXT/EVENTTEST/Map12.asm"
-.include "../../TEXT/EVENTTEST/Map12x.asm"
-.include "../../TEXT/EVENTTEST/Map13.asm"
-.include "../../TEXT/EVENTTEST/Map14.asm"
-.include "../../TEXT/EVENTTEST/Map14x.asm"
-.include "../../TEXT/EVENTTEST/Map15.asm"
-.include "../../TEXT/EVENTTEST/Map16A.asm"
-.include "../../TEXT/EVENTTEST/Map17A.asm"
-.include "../../TEXT/EVENTTEST/Map16B.asm"
-.include "../../TEXT/EVENTTEST/Map17B.asm"
-.include "../../TEXT/EVENTTEST/Map18.asm"
-.include "../../TEXT/EVENTTEST/Map19.asm"
-.include "../../TEXT/EVENTTEST/Map20.asm"
-.include "../../TEXT/EVENTTEST/Map21.asm"
-.include "../../TEXT/EVENTTEST/Map21x.asm"
-.include "../../TEXT/EVENTTEST/Map22.asm"
-.include "../../TEXT/EVENTTEST/Map23.asm"
-.include "../../TEXT/EVENTTEST/Map24.asm"
-.include "../../TEXT/EVENTTEST/Map24x.asm"
-.include "../../TEXT/EVENTTEST/Map25.asm"
-.include "../../TEXT/EVENTTEST/WorldMap.asm"
+menutextEventTestMap01 ; 82/8303
+  .enc "SJIS"
+  .text "マップ０１　\n"
+
+menutextEventTestMap02 ; 82/8311
+  .enc "SJIS"
+  .text "マップ０２　\n"
+
+menutextEventTestMap02x ; 82/831F
+  .enc "SJIS"
+  .text "マップ０２ｘ\n"
+
+menutextEventTestMap03 ; 82/832D
+  .enc "SJIS"
+  .text "マップ０３　\n"
+
+menutextEventTestMap04 ; 82/833B
+  .enc "SJIS"
+  .text "マップ０４　\n"
+
+menutextEventTestMap04x ; 82/8349
+  .enc "SJIS"
+  .text "マップ０４ｘ\n"
+
+menutextEventTestMap05 ; 82/8357
+  .enc "SJIS"
+  .text "マップ０５　\n"
+
+menutextEventTestMap06 ; 82/8365
+  .enc "SJIS"
+  .text "マップ０６　\n"
+
+menutextEventTestMap07 ; 82/8373
+  .enc "SJIS"
+  .text "マップ０７　\n"
+
+menutextEventTestMap08 ; 82/8381
+  .enc "SJIS"
+  .text "マップ０８　\n"
+
+menutextEventTestMap08x ; 82/838F
+  .enc "SJIS"
+  .text "マップ０８ｘ\n"
+
+menutextEventTestMap09 ; 82/839D
+  .enc "SJIS"
+  .text "マップ０９　\n"
+
+menutextEventTestMap10 ; 82/83AB
+  .enc "SJIS"
+  .text "マップ１０　\n"
+
+menutextEventTestMap11 ; 82/83B9
+  .enc "SJIS"
+  .text "マップ１１　\n"
+
+menutextEventTestMap11x ; 82/83C7
+  .enc "SJIS"
+  .text "マップ１１ｘ\n"
+
+menutextEventTestMap12 ; 82/83D5
+  .enc "SJIS"
+  .text "マップ１２　\n"
+
+menutextEventTestMap12x ; 82/83E3
+  .enc "SJIS"
+  .text "マップ１２ｘ\n"
+
+menutextEventTestMap13 ; 82/83F1
+  .enc "SJIS"
+  .text "マップ１３　\n"
+
+menutextEventTestMap14 ; 82/83FF
+  .enc "SJIS"
+  .text "マップ１４　\n"
+
+menutextEventTestMap14x ; 82/840D
+  .enc "SJIS"
+  .text "マップ１４ｘ\n"
+
+menutextEventTestMap15 ; 82/841B
+  .enc "SJIS"
+  .text "マップ１５　\n"
+
+menutextEventTestMap16A ; 82/8429
+  .enc "SJIS"
+  .text "マップ１６Ａ\n"
+
+menutextEventTestMap17A ; 82/8437
+  .enc "SJIS"
+  .text "マップ１７Ａ\n"
+
+menutextEventTestMap16B ; 82/8445
+  .enc "SJIS"
+  .text "マップ１６Ｂ\n"
+
+menutextEventTestMap17B ; 82/8453
+  .enc "SJIS"
+  .text "マップ１７Ｂ\n"
+
+menutextEventTestMap18 ; 82/8461
+  .enc "SJIS"
+  .text "マップ１８　\n"
+
+menutextEventTestMap19 ; 82/846F
+  .enc "SJIS"
+  .text "マップ１９　\n"
+
+menutextEventTestMap20 ; 82/847D
+  .enc "SJIS"
+  .text "マップ２０　\n"
+
+menutextEventTestMap21 ; 82/848B
+  .enc "SJIS"
+  .text "マップ２１　\n"
+
+menutextEventTestMap21x ; 82/8499
+  .enc "SJIS"
+  .text "マップ２１ｘ\n"
+
+menutextEventTestMap22 ; 82/84A7
+  .enc "SJIS"
+  .text "マップ２２　\n"
+
+menutextEventTestMap23 ; 82/84B5
+  .enc "SJIS"
+  .text "マップ２３　\n"
+
+menutextEventTestMap24 ; 82/84C3
+  .enc "SJIS"
+  .text "マップ２４　\n"
+
+menutextEventTestMap24x ; 82/84D1
+  .enc "SJIS"
+  .text "マップ２４ｘ\n"
+
+menutextEventTestMap25 ; 82/84DF
+  .enc "SJIS"
+  .text "マップ２５　\n"
+
+menutextEventTestWorldMap ; 82/84ED
+  .enc "SJIS"
+  .text "ぜんたいマップ\n"
 
 rlProcEventTestHandleAction ; 82/84FD
 
@@ -447,7 +604,7 @@ rlProcEventTestHandleAction ; 82/84FD
 	; Figure out what to do by the option
 	; we're on
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	beq _Event
 
 	cmp #$0001
@@ -466,7 +623,7 @@ rlProcEventTestHandleAction ; 82/84FD
 	; Get event number
 
 	phx
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	cmp #$0000
 	blt +
 
@@ -498,7 +655,7 @@ rlProcEventTestHandleAction ; 82/84FD
 	lda #<>aBG3TilemapBuffer
 	sta lR18
 	lda #$0800
-	sta wR19
+	sta lR19
 	lda #$01DF
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
@@ -516,7 +673,7 @@ rlProcEventTestHandleAction ; 82/84FD
 
 	; Get pointer to dialogue
 
-	lda aProcBody2,b,x
+	lda aProcSystem.aBody2,b,x
 	cmp #$0344 ; size(aChapterDialoguePointers) / 3
 	blt +
 
@@ -539,7 +696,7 @@ rlProcEventTestHandleAction ; 82/84FD
 	lda #<>aBG3TilemapBuffer
 	sta lR18
 	lda #$0800
-	sta wR19
+	sta lR19
 	lda #$01DF
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
@@ -552,13 +709,13 @@ rlProcEventTestHandleAction ; 82/84FD
 	_Map
 
 	phx
-	lda aProcBody3,b,x
+	lda aProcSystem.aBody3,b,x
 	sta wCurrentChapter,b
 	phx
 	lda #(`procMapSwitch)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procMapSwitch
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 
 	plx
@@ -573,20 +730,20 @@ rlProcEventTestWaitForEventEnd ; 82/85C5
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	phx
 	jsl rlUnknown828965
 	plx
 	lda wEventEngineStatus,b
 	bne +
 
-	lda wUnknown0017E9,b
+	lda wDialogueEngineStatus,b
 	bne +
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	+
@@ -599,19 +756,19 @@ rsProcEventTestGetOptionNumberOffset ; 82/85E4
 	.autsiz
 	.databank ?
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	asl a
 	tax
 	lda _aOptionOffsets,x
 	clc
-	adc wProcIndex,b
+	adc aProcSystem.wOffset,b
 	tax
 	rts
 
 	_aOptionOffsets ; 82/85F3
-		.word aProcBody1
-		.word aProcBody2
-		.word aProcBody3
+		.word aProcSystem.aBody1
+		.word aProcSystem.aBody2
+		.word aProcSystem.aBody3
 
 
 rsProcEventTestDrawCursor ; 82/85F9
@@ -622,7 +779,7 @@ rsProcEventTestDrawCursor ; 82/85F9
 	.databank ?
 
 	phx
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	asl a
 	asl a
 	tax

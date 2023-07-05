@@ -25,42 +25,42 @@ GUARD_ZQOL_GUARD_AI_DISPLAY :?= false
       ; in case more stationary AI settings are
       ; discovered.
 
-      ZQOL_GUARD_AI_LIST := [(aTemporaryActionStruct.AI1, [$01, $03]), (aTemporaryActionStruct.AI1, [$02, $03])]
+      ZQOL_GUARD_AI_LIST := [(aTemporaryActionStruct.ActionAI, [$01, $03]), (aTemporaryActionStruct.ActionAI, [$02, $03])]
 
     .endweak
 
   ; Fixed location inclusions
 
-    * := $0187D5
-    .logical $8387D5
-
-      rlGetEffectiveMove ; 83/87D5
-
-        .autsiz
-        .databank ?
-
-        ; Given a short pointer to
-        ; a filled character data buffer
-        ; in wR14, return effective move
-        ; in A.
-
-        ; Inputs:
-        ; wR14: Short pointer to character buffer
-
-        ; Outputs:
-        ; A: Effective move
-
-        ; Replacement is larger than
-        ; original, repointing.
-
-        jsl rlGetEffectiveMoveReplacement
-        rtl
-
-        .checkfit $838853
-
-        .databank 0
-
-    .here
+;    * := $0187D5
+;    .logical $8387D5
+;
+;      rlGetEffectiveMove ; 83/87D5
+;
+;        .autsiz
+;        .databank ?
+;
+;        ; Given a short pointer to
+;        ; a filled character data buffer
+;        ; in wR14, return effective move
+;        ; in A.
+;
+;        ; Inputs:
+;        ; wR14: Short pointer to character buffer
+;
+;        ; Outputs:
+;        ; A: Effective move
+;
+;        ; Replacement is larger than
+;        ; original, repointing.
+;
+;        jsl rlGetEffectiveMoveReplacement
+;        rtl
+;
+;        .checkfit $838853
+;
+;        .databank 0
+;
+;    .here
 
   ; Freespace inclusions
 
@@ -139,11 +139,11 @@ GUARD_ZQOL_GUARD_AI_DISPLAY :?= false
         _Guard
 
         ; check if unit with guard AI is trying to escape with captured unit or if guard AI units has no weapons/items
-        lda aTemporaryActionStruct.Unknown3F
+        lda aTemporaryActionStruct.AIProperties
         bit #$1000
         bne _NotGuard 
 
-        lda aOptions.wTerrainWindowOption
+        lda aOptions.wTerrainWindow
         and #$0F00
         cmp #$0200
         bcs +
@@ -157,8 +157,8 @@ GUARD_ZQOL_GUARD_AI_DISPLAY :?= false
       _NotGuard
       ; AI is not guard, check if rescuing.
 
-      lda aSelectedCharacterBuffer.TurnStatus,b
-      bit #TurnStatusRescuing
+      lda aSelectedCharacterBuffer.UnitState,b
+      bit #UnitStateRescuing
       beq _End
 
         ; Unit is rescuing, check if

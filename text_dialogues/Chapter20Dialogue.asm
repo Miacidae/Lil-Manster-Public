@@ -1,4 +1,4 @@
-ch20silencehouse
+dialogueChapter20SilenceHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -25,7 +25,7 @@ ch20silencehouse
 .byte EndText
 
 
-ch20opening1
+dialogueChapter20Opening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -175,7 +175,7 @@ ch20opening1
 .byte EndText
 
 
-ch20opening2
+dialogueChapter20Opening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -213,7 +213,7 @@ ch20opening2
 .byte EndText
 
 
-ch20opening3
+dialogueChapter20Opening3
 
 .byte Right_slot
 .word LoadPortrait
@@ -308,7 +308,7 @@ ch20opening3
 .byte EndText
 
 
-ch20closing1
+dialogueChapter20Closing1
 
 .byte Right_slot
 .word LoadPortrait
@@ -401,7 +401,7 @@ ch20closing1
 .byte EndText
 
 
-ch20ending2nannadead
+dialogueChapter20Closing2NannaDead
 
 .byte Left_slot
 .byte ScrollText
@@ -434,7 +434,7 @@ ch20ending2nannadead
 .byte EndText
 
 
-ch20closing2
+dialogueChapter20Closing2
 
 .byte Left_slot
 .byte ScrollText
@@ -482,7 +482,7 @@ ch20closing2
 .byte EndText
 
 
-ch20closing3
+dialogueChapter20Closing3
 
 .byte Right_slot
 .byte ScrollText
@@ -641,7 +641,7 @@ ch20closing3
 .byte EndText
 
 
-ch20fall
+dialogueChapter20Fall
 
 .byte Right_slot
 .word LoadPortrait
@@ -659,7 +659,7 @@ ch20fall
 .byte EndText
 
 
-ch20wm1
+dialogueChapter20WorldMap
 
 .text "...Half a year has passed."
 .byte WaitForA

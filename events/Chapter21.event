@@ -1,539 +1,583 @@
 
-eventChapter21Events ; FD/E42D
-
-	_OpeningEventDefinitions ; FD/E42D
-		EVENT $00, _OpeningEvent
-			CMP_WORD wCurrentTurn, 0
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_TurnEventDefinitions ; FD/E43A
-		EVENT $02, eventMapDeathQuoteDummyEvent
-			CHECK_DEAD Fraus
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $01, eventMapDeathQuoteDummyEvent
-			TEST_FLAG_SET $03
-		END_DEFINITION
-		EVENT $07, _SeimetzDead
-			CHECK_NUM_UNITS_LTE Seimetz, 0
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $00, _RightReinforcements
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD_RANGE wCurrentTurn, 6, 10
-		END_DEFINITION
-		EVENT $00, _SoldierReinforcements
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD_RANGE wCurrentTurn, 2, 7
-		END_DEFINITION
-		EVENT $00, _SorcererReinforcements
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD_RANGE wCurrentTurn, 7, 10
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_TalkEventDefinitions ; FD/E499
-	END_DEFINITION_ARRAY
-
-	_LocationEventDefinitions ; FD/E49B
-		EVENT $21, _ChurchVisit
-			CMP_BYTE wCursorXCoord, 30
-			CMP_BYTE wCursorYCoord, 6
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $24, _ChurchDestroy
-			CMP_BYTE wCursorXCoord, 30
-			CMP_BYTE wCursorYCoord, 6
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $22, _PureWaterHouseVisit
-			CMP_BYTE wCursorXCoord, 2
-			CMP_BYTE wCursorYCoord, 10
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $25, _PureWaterHouseDestroy
-			CMP_BYTE wCursorXCoord, 2
-			CMP_BYTE wCursorYCoord, 10
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $23, _SilverSwordHouseVisit
-			CMP_BYTE wCursorXCoord, 8
-			CMP_BYTE wCursorYCoord, 22
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $26, _SilverSwordHouseDestroy
-			CMP_BYTE wCursorXCoord, 8
-			CMP_BYTE wCursorYCoord, 22
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $0A, _LinoanPromotion
-			TEST_FLAG_SET $09
-		END_DEFINITION
-		EVENT $00, _EndingEvent
-			CMP_BYTE wCursorXCoord, 23
-			CMP_BYTE wCursorYCoord, 24
-			CMP_WORD wCurrentPhase, Player
-			CMP_WORD aSelectedCharacterBuffer.Character, Leif
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_BeforeActionEventDefinitions ; FD/E53D
-	END_DEFINITION_ARRAY
-
-	_AfterActionEventDefinitions ; FD/E53F
-	END_DEFINITION_ARRAY
-
-	_BattleEventDefinitions ; FD/E541
-		EVENT $05, eventBattleQuoteDummyEvent
-			CHECK_SINGLE Fraus
-		END_DEFINITION
-		EVENT $06, eventBattleQuoteDummyEvent
-			CHECK_SINGLE Seimetz
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_ShopEventDefinitions ; FD/E553
-		EVENT $00, eventChapter21Data._Armory
-			CMP_BYTE_AT wCursorXCoord, eventChapter21Data._Armory
-			CMP_BYTE_AT wCursorYCoord, eventChapter21Data._Armory+1
-		END_DEFINITION
-		EVENT $00, eventChapter21Data._Vendor
-			CMP_BYTE_AT wCursorXCoord, eventChapter21Data._Vendor
-			CMP_BYTE_AT wCursorYCoord, eventChapter21Data._Vendor+1
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_RightReinforcements ; FD/E57B
-		SCROLL_CAMERA_ADDRESS eventChapter21Data._RightReinforcementsCameraCoordinates
-		YIELD
-
-		LOAD2 eventChapter21Data._RightReinforcementsGroup
-		WAIT_MOVE
-		YIELD
-
-		YIELD_UNK
-	END2
-
-	_SoldierReinforcements ; FD/E588
-		SCROLL_CAMERA_ADDRESS eventChapter21Data._SoldierReinforcementsCameraCoordinates
-		YIELD
-
-		LOAD2 eventChapter21Data._SoldierReinforcementsGroup
-		WAIT_MOVE
-		YIELD
-
-		YIELD_UNK
-	END2
-
-	_SorcererReinforcements ; FD/E595
-		SCROLL_CAMERA_ADDRESS eventChapter21Data._SorcererReinforcementsCameraCoordinates
-		YIELD
-
-		LOAD2 eventChapter21Data._SorcererReinforcementsGroup
-		WAIT_MOVE
-		YIELD
-
-		YIELD_UNK
-	END2
-
-	_SeimetzDead ; FD/E5A2
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Seimetz
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Seimetz
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Seimetz
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0B
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Seimetz
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-	END2
-
-	_ChurchVisit ; FD/E61B
-		EVENT_CMP_BYTE_AT_EQ wUnknown001730, $00
-		JUMP_FALSE +
-
-		EVENT_CMP_WORD_AT_EQ aSelectedCharacterBuffer.Character, Linoan
-		JUMP_FALSE ++
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $4D
-		YIELD
-
-		DIALOGUE ch21churchlinoan
-		YIELD
-
-		SET_FLAG $09
-
-		+
-		STORE_WORD wEventEngineXCoordinate, 30
-		STORE_WORD wEventEngineYCoordinate, 6
-		STORE_WORD wEventEngineParameter1, $002C
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END1
-
-		+
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch21churchother
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitSetTurnStatus, $0000
-
-		STORE_WORD wEventEngineParameter1, PureWater
-		PAUSE_SKIPPABLE 10
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSetPopupGivenItemWithMaxDurability, $0000
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCSetupGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCSetupGiveToConvoyIfInventoryFull, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveToConvoyIfInventoryFull, $0000
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitUnsetTurnStatus, $0000
-
-		STORE_WORD wEventEngineXCoordinate, 30
-		STORE_WORD wEventEngineYCoordinate, 6
-		STORE_WORD wEventEngineParameter1, $002C
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_PureWaterHouseVisit ; FD/E6BA
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch21purewaterhouse
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitSetTurnStatus, $0000
-
-		STORE_WORD wEventEngineParameter1, PureWater
-		PAUSE_SKIPPABLE 10
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSetPopupGivenItemWithMaxDurability, $0000
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCSetupGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCSetupGiveToConvoyIfInventoryFull, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveToConvoyIfInventoryFull, $0000
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitUnsetTurnStatus, $0000
-
-		STORE_WORD wEventEngineXCoordinate, 2
-		STORE_WORD wEventEngineYCoordinate, 10
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_SilverSwordHouseVisit ; FD/E71D
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch21silverswordhouse
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitSetTurnStatus, $0000
-
-		STORE_WORD wEventEngineParameter1, SilverSword
-		PAUSE_SKIPPABLE 10
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSetPopupGivenItemWithMaxDurability, $0000
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCSetupGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCSetupGiveToConvoyIfInventoryFull, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveToConvoyIfInventoryFull, $0000
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitUnsetTurnStatus, $0000
-
-		STORE_WORD wEventEngineXCoordinate, 8
-		STORE_WORD wEventEngineYCoordinate, 22
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_LinoanPromotion ; FD/E780
-		STORE_WORD wEventEngineCharacterTarget, Linoan
-		STORE_WORD wEventEngineParameter1, SageF
-		CALL_ASM_LOOP rlASMCPromoteUnit, $0000
-
-		HALT_UNTIL_WORD_SKIPPABLE $7FAA14, $0000
-
-		STORE_WORD wUnknown001791, $FFFF
-	END1
-
-	_ChurchDestroy ; FD/E79F
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 0
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_PureWaterHouseDestroy ; FD/E7CE
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 1
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_SilverSwordHouseDestroy ; FD/E7FD
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 2
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_PrepGroups ; FD/E82C
-		.long eventChapter21Data._PrepGroup1
-		.long eventChapter21Data._PrepGroup2
-	.word $0000
-
-	_OpeningEvent ; FD/E834
-		CALL_ASM_SKIPPABLE rlEventEngineCancelFading, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Nanna
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-
-		JUMP_FALSE +
-
-		SCROLL_CAMERA_ADDRESS eventChapter21Data._DiarmuidCameraCoordinates
-		YIELD
-
-		LOAD1 eventChapter21Data._DiarmuidGroup
-		WAIT_MOVE
-		YIELD
-
-		+
-		FADE_IN $02
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $4B
-		YIELD
-
-		STORE_LONG wProcInput1+1, ch21titlename
-		STORE_WORD wProcInput1, <>ch21titlename
-		STORE_LONG lR43, $9A814C
-		CALL_ASM_SKIPPABLE rlEventEngineCreateProcAndSetActive, $0000
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, 3
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, ch21opening1
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
-		YIELD
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-
-		SCROLL_CAMERA_CHAR Leif
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		DIALOGUE ch21opening2
-
-		STORE_WORD wEventEngineCharacterTarget, Diarmuid
-		CALL_ASM_LOOP rlASMCCountAllUnitUncapturedAlive, $0000
-
-		JUMP_FALSE +
-
-		STORE_LONG lEventEngineLongParameter, ch21opening3dermott
-		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
-
-		+
-		YIELD
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $3D
-		YIELD
-
-		SCROLL_CAMERA_CHAR Seimetz
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		DIALOGUE ch21opening4
-		YIELD
-	END2
-
-	_EndingEvent ; FD/E8E3
-		STORE_WORD wCurrentMapMusic, $0000
-		PAUSE_SKIPPABLE 16
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd, $0000
-		CALL_ASM_LOOP rlASMCSaveChapterAndTurncount, $0000
-
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.TurnStatus
-		STORE_WORD wEventEngineParameter2, TurnStatusCaptured
-		CALL_ASM_LOOP rlASMCCountAllUnitsWithCharacterDataWordBitsSet, $0000
-		JUMP_TRUE +
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $41
-		YIELD
-
-		ADD_WORD wCurrentChapter, Chapter22 - Chapter21 - 1
-		YIELD_UNK
-
-		STORE_WORD wEventEngineParameter1, 1
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, ch21noprisoners
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-
-		JUMP ++
-
-		+
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $42
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, 1
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, ch21prisoners
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-
-		+
-		YIELD
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000
-
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut, $0000
-
-		STORE_BYTE bBuf_INIDISP, $00
-
-		STORE_WORD wEventEngineCharacterTarget, Dean
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_FALSE +
-
-		STORE_WORD wEventEngineCharacterTarget, Linoan
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_TRUE +
-
-		STORE_WORD wCurrentMapMusic, $0000
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $42
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, 3
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, linoandeathdean
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-		YIELD
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut, $0000
-
-		STORE_BYTE bBuf_INIDISP, $00
-		STORE_WORD wEventEngineCharacterTarget, Dean
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		+
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCChapterEnd, $0000
-	END1
+.weak
+  WARNINGS :?= "None"
+.endweak
+
+GUARD_FE5_CHAPTER21 :?= false
+.if (!GUARD_FE5_CHAPTER21)
+  GUARD_FE5_CHAPTER21 := true
+
+  ; Definitions
+
+    .weak
+
+    .endweak
+
+  ; Freespace inclusions
+
+    .section Chapter21EventsSection
+
+			eventChapter21Events ; FD/E42D
+
+					_FlagFrausBattleQuote 					= enum.enum($05)
+					_FlagSeimetzBattleQuote 				= enum.enum()
+					_FlagSeimetzDead 								= enum.enum()
+
+					_FlagChruchVisitLinoan 					= enum.enum($09)
+					_FlagLinoanPromotion 						= enum.enum()
+
+					_FlagChurchVisit 								= enum.enum($21)
+					_FlagPureWaterHouseVisit 				= enum.enum()
+					_FlagSilverSwordHouseVisit 			= enum.enum()
+					_FlagChurchDestroy							= enum.enum()
+					_FlagPureWaterHouseDestroy			= enum.enum()
+					_FlagSilverSwordHouseDestroy		= enum.enum()
+
+				_OpeningEventDefinitions ; FD/E42D
+					EVENT FlagAlwaysZero, _OpeningEvent
+						CMP_WORD wCurrentTurn, 0
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_TurnEventDefinitions ; FD/E43A
+					EVENT FlagBossDeath, eventMapDeathQuoteDummyEvent
+						CHECK_IF_BOSS_DEAD Fraus
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT FlagAlliedDeath, eventMapDeathQuoteDummyEvent
+						TEST_FLAG_SET FlagPlayerDeath
+					END_DEFINITION
+					EVENT _FlagSeimetzDead, _SeimetzDead
+						CHECK_NUM_UNITS_LTE Seimetz, 0
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _RightReinforcements
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD_RANGE wCurrentTurn, 6, 10
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _SoldierReinforcements
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD_RANGE wCurrentTurn, 2, 7
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _SorcererReinforcements
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD_RANGE wCurrentTurn, 7, 10
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_TalkEventDefinitions ; FD/E499
+				END_DEFINITION_ARRAY
+			
+				_LocationEventDefinitions ; FD/E49B
+					EVENT _FlagChurchVisit, _ChurchVisit
+						macroECCheckCoordinates [30, 6]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagChurchDestroy, _ChurchDestroy
+						macroECCheckCoordinates [30, 6]
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagPureWaterHouseVisit, _PureWaterHouseVisit
+						macroECCheckCoordinates [2, 10]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagPureWaterHouseDestroy, _PureWaterHouseDestroy
+						macroECCheckCoordinates [2, 10]
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagSilverSwordHouseVisit, _SilverSwordHouseVisit
+						macroECCheckCoordinates [8, 22]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagSilverSwordHouseDestroy, _SilverSwordHouseDestroy
+						macroECCheckCoordinates [8, 22]
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagLinoanPromotion, _LinoanPromotion
+						TEST_FLAG_SET _FlagChruchVisitLinoan
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _EndingEvent
+						macroECCheckCoordinates [23, 24]
+						CMP_WORD wCurrentPhase, Player
+						CMP_WORD aSelectedCharacterBuffer.Character, Leif
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_BeforeActionEventDefinitions ; FD/E53D
+				END_DEFINITION_ARRAY
+			
+				_AfterActionEventDefinitions ; FD/E53F
+				END_DEFINITION_ARRAY
+			
+				_BattleEventDefinitions ; FD/E541
+					macroECBossQuote _FlagFrausBattleQuote, Fraus
+					macroECBossQuote _FlagSeimetzBattleQuote, Seimetz
+				END_DEFINITION_ARRAY
+			
+				_ShopEventDefinitions ; FD/E553
+					macroECShop eventChapter21Data._Armory
+					macroECShop eventChapter21Data._Vendor
+				END_DEFINITION_ARRAY
+			
+				_RightReinforcements ; FD/E57B
+					SCROLL_CAMERA_ADDRESS eventChapter21Data._RightReinforcementsCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP_BLOCKABLE eventChapter21Data._RightReinforcementsGroup
+					WAIT_MOVE
+					YIELD
+			
+					YIELD_UNK
+				END2
+			
+				_SoldierReinforcements ; FD/E588
+					SCROLL_CAMERA_ADDRESS eventChapter21Data._SoldierReinforcementsCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP_BLOCKABLE eventChapter21Data._SoldierReinforcementsGroup
+					WAIT_MOVE
+					YIELD
+			
+					YIELD_UNK
+				END2
+			
+				_SorcererReinforcements ; FD/E595
+					SCROLL_CAMERA_ADDRESS eventChapter21Data._SorcererReinforcementsCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP_BLOCKABLE eventChapter21Data._SorcererReinforcementsGroup
+					WAIT_MOVE
+					YIELD
+			
+					YIELD_UNK
+				END2
+			
+				_SeimetzDead ; FD/E5A2
+					macroSetAllUnitsAIIfCharacterDataWord Leader, Seimetz, [$02, $00, $0B, $00]
+				END2
+			
+				_ChurchVisit ; FD/E61B
+					EVENT_CMP_BYTE_EQ wEventEngineMapChangeFlag, $00
+					JUMP_FALSE +
+			
+						EVENT_CMP_WORD_EQ aSelectedCharacterBuffer.Character, Linoan
+						JUMP_FALSE ++
+			
+							PLAY_SOUND_WORD $00E0
+							PAUSE_SKIPPABLE 32
+							YIELD
+			
+							SET_MUSIC $4D
+							YIELD
+			
+							DIALOGUE dialogueChapter21ChurchLinoan
+							YIELD
+			
+							SET_FLAG _FlagChruchVisitLinoan
+			
+					+
+					macroASMCSingleTileChangeByCoords [30, 6], $002C
+				END1
+			
+					+
+					macroItemHouse dialogueChapter21ChurchOther, PureWater, [30, 6], $002C
+				END2
+			
+				_PureWaterHouseVisit ; FD/E6BA
+					macroItemHouse dialogueChapter21PureWaterHouse, PureWater, [2, 10], $0021
+				END2
+			
+				_SilverSwordHouseVisit ; FD/E71D
+					macroItemHouse dialogueChapter21SilverSwordHouse, SilverSword, [8, 22], $0021
+				END2
+			
+				_LinoanPromotion ; FD/E780
+					macroASMCPromoteUnit Linoan, SageF
+			
+					HALT_UNTIL_WORD_SKIPPABLE wMapBattleFlag, $0000
+			
+					STORE_WORD wEventEngineUnknown001791, $FFFF
+				END1
+			
+				_ChurchDestroy ; FD/E79F
+					macroDestroyHouseByTileChangeID 0
+				END1
+			
+				_PureWaterHouseDestroy ; FD/E7CE
+					macroDestroyHouseByTileChangeID 1
+				END1
+			
+				_SilverSwordHouseDestroy ; FD/E7FD
+					macroDestroyHouseByTileChangeID 2
+				END1
+			
+				_PrepGroups ; FD/E82C
+					.long eventChapter21Data._PrepGroup1
+					.long eventChapter21Data._PrepGroup2
+				.word 0
+			
+				_OpeningEvent ; FD/E834
+					CALL_ASM_SKIPPABLE rlEventEngineCancelFading
+			
+					macroASMCCountAllUnitsAlive Nanna
+					JUMP_FALSE +
+			
+						SCROLL_CAMERA_ADDRESS eventChapter21Data._DiarmuidCameraCoordinates
+						YIELD
+			
+						LOAD_GROUP eventChapter21Data._DiarmuidGroup
+						WAIT_MOVE
+						YIELD
+			
+					+
+					FADE_IN 2
+			
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $4B
+					YIELD
+
+					macroChapterTitlePopup dialogueChapter21Title
+
+					macroDialogueWithBG dialogueChapter21Opening1, 3
+			
+					CALL_ASM_LOOP rlASMCDialogueWithBGEnd
+					YIELD
+			
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
+			
+					GET_CHARACTER_COORDS Leif
+					SCROLL_CAMERA 4
+					YIELD
+			
+					DIALOGUE dialogueChapter21Opening2
+
+					macroASMCCountAllUnitsUncapturedAlive Diarmuid
+					JUMP_FALSE +
+			
+						STORE_LONG lEventEngineLongParameter, dialogueChapter21Opening3Diarmuid
+						CALL_ASM_LOOP rlASMCDialogueContinue
+			
+					+
+					YIELD
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $3D
+					YIELD
+			
+					GET_CHARACTER_COORDS Seimetz
+					SCROLL_CAMERA 4
+					YIELD
+			
+					DIALOGUE dialogueChapter21Opening4
+					YIELD
+				END2
+			
+				_EndingEvent ; FD/E8E3
+					STORE_WORD wCurrentMapMusic, $0000
+					PAUSE_SKIPPABLE 16
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
+					CALL_ASM_LOOP rlASMCSaveChapterAndTurncount
+
+					macroASMCCountAllUnitsWithCharacterDataWordBitsSet UnitState, UnitStateCaptured
+					JUMP_TRUE +
+			
+						PLAY_SOUND_WORD $00E0
+						PAUSE_SKIPPABLE 32
+						YIELD
+			
+						SET_MUSIC $41
+						YIELD
+			
+						ADD_WORD wCurrentChapter, Chapter22 - Chapter21 - 1
+						YIELD_UNK
+
+						macroDialogueWithBG dialogueChapter21NoPrisoners, 1
+						JUMP ++
+			
+					+
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $42
+					YIELD
+
+					macroDialogueWithBG dialogueChapter21Prisoners, 1
+			
+					+
+					YIELD
+			
+					HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+			
+					FADE_OUT 1
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut
+			
+					STORE_BYTE bBufferINIDISP, $00
+
+					macroASMCCountAllUnitsAlive Dean
+					JUMP_FALSE +
+
+						macroASMCCountAllUnitsAlive Linoan
+						JUMP_TRUE +
+			
+							STORE_WORD wCurrentMapMusic, $0000
+							PLAY_SOUND_WORD $00E0
+							PAUSE_SKIPPABLE 32
+							YIELD
+			
+							SET_MUSIC $42
+							YIELD
+
+							macroDialogueWithBG dialogueLinoanDeathDean, 3
+							YIELD
+			
+							HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+							FADE_OUT 1
+							YIELD
+			
+							CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut
+			
+							STORE_BYTE bBufferINIDISP, $00
+
+							macroASMCRemoveUnit Dean
+			
+					+
+					FADE_OUT 1
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCChapterEnd
+				END1
+
+    .endsection Chapter21EventsSection
+
+    .section Chapter21DataSection
+
+			eventChapter21Data ; B1/8D4F
+			
+				_PrepGroup1 ; B1/8D4F
+					.byte 23, 23
+			
+					UNIT Fraus, Enemy, [23, 24], [23, 24], Fraus, [Blizzard, Tornado, Fortify], 19, True, [$01, $03, $00, $80]
+					UNIT ThraciaDracoknight2, Enemy, [14, 26], [14, 26], Seimetz, [Ridersbane, Javelin, Vulnerary], 7, False, [$00, $0C, $02, $40]
+					UNIT ThraciaDracoknight2, Enemy, [13, 27], [13, 27], Seimetz, [Ridersbane, Javelin, Vulnerary], 7, False, [$00, $0C, $02, $40]
+					UNIT ThraciaDracoknight2, Enemy, [12, 28], [12, 28], Seimetz, [Ridersbane, Javelin, Vulnerary], 7, False, [$00, $0C, $02, $40]
+					UNIT ThraciaDracoknight2, Enemy, [11, 29], [11, 29], Seimetz, [Ridersbane, Javelin, Vulnerary], 7, False, [$00, $0C, $02, $40]
+					UNIT ThraciaDracoknight2, Enemy, [15, 27], [15, 27], Seimetz, [Ridersbane, Javelin, Vulnerary], 7, False, [$00, $0C, $02, $40]
+					UNIT ThraciaDracoknight2, Enemy, [16, 28], [16, 28], Seimetz, [Ridersbane, Javelin, Vulnerary], 7, False, [$00, $0C, $02, $40]
+					UNIT ThraciaDracoknight2, Enemy, [17, 29], [17, 29], Seimetz, [Ridersbane, Javelin, Vulnerary], 7, False, [$00, $0C, $02, $40]
+					UNIT FriegeArmoredAxe1, Enemy, [22, 19], [22, 19], Fraus, [BattleAxe, Hammer, Vulnerary], 17, False, [$00, $03, $02, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [24, 19], [24, 19], Fraus, [BattleAxe, Hammer, Vulnerary], 17, False, [$00, $03, $02, $00]
+					UNIT FriegeArmoredSword2, Enemy, [23, 20], [23, 20], Fraus, [Greatsword], 20, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredSword2, Enemy, [22, 21], [22, 21], Fraus, [Greatsword], 20, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredSword2, Enemy, [24, 21], [24, 21], Fraus, [Greatsword], 20, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredSword2, Enemy, [22, 25], [22, 25], Fraus, [Greatsword], 20, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredSword2, Enemy, [24, 25], [24, 25], Fraus, [Greatsword], 20, False, [$00, $03, $00, $00]
+					UNIT FriegeBishop2, Enemy, [23, 26], [23, 26], Fraus, [Bolting, Thunder, Physic], 8, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [11, 12], [11, 12], Fraus, [Ballista], 12, False, [$00, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [15, 10], [15, 10], Fraus, [Ballista], 12, False, [$00, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [23, 21], [23, 21], Fraus, [Ballista], 12, False, [$00, $03, $00, $00]
+					UNIT FriegeBallista1, Enemy, [23, 9], [23, 9], Fraus, [Ballista], 12, False, [$00, $03, $00, $00]
+					UNIT FriegeVeninBallista, Enemy, [20, 2], [20, 2], Fraus, [VeninBallista], 6, False, [$00, $03, $00, $00]
+					UNIT FriegeVeninBallista, Enemy, [18, 5], [18, 5], Fraus, [VeninBallista], 6, False, [$00, $03, $00, $00]
+					UNIT FriegeVeninBallista, Enemy, [20, 20], [20, 20], Fraus, [VeninBallista], 6, False, [$00, $03, $00, $00]
+					UNIT FriegeVeninBallista, Enemy, [20, 23], [20, 23], Fraus, [VeninBallista], 6, False, [$00, $03, $00, $00]
+					UNIT FriegeBallista5, Enemy, [7, 24], [7, 24], Fraus, [IronBallista], 10, False, [$00, $03, $00, $00]
+					UNIT FriegeBallista5, Enemy, [30, 7], [30, 7], Fraus, [IronBallista], 10, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [16, 2], [16, 2], Fraus, [BattleAxe, Hammer, Vulnerary], 13, False, [$00, $03, $02, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [29, 6], [29, 6], Fraus, [BattleAxe, Hammer, Vulnerary], 13, False, [$00, $03, $02, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [22, 8], [22, 8], Fraus, [BattleAxe, Hammer, Vulnerary], 15, False, [$00, $03, $02, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [24, 8], [24, 8], Fraus, [BattleAxe, Hammer, Vulnerary], 15, False, [$00, $03, $02, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [22, 10], [22, 10], Fraus, [BattleAxe, Hammer, Vulnerary], 15, False, [$00, $03, $02, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [24, 10], [24, 10], Fraus, [BattleAxe, Hammer, Vulnerary], 15, False, [$00, $03, $02, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [6, 23], [6, 23], Fraus, [BattleAxe, Hammer, Vulnerary], 14, False, [$00, $03, $02, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [7, 23], [7, 23], Fraus, [BattleAxe, Hammer, Vulnerary], 16, False, [$00, $03, $02, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [9, 18], [9, 18], Fraus, [BattleAxe, Hammer, Vulnerary], 18, False, [$00, $03, $02, $00]
+					UNIT FriegeBallista5, Enemy, [24, 27], [24, 27], Fraus, [IronBallista], 10, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [30, 3], [30, 3], Fraus, [BattleAxe, Hammer, Vulnerary], 18, False, [$00, $03, $02, $00]
+				UNIT
+			
+				_RightReinforcementsCameraCoordinates ; B1/9037
+					.byte 22, 13
+			
+				_RightReinforcementsGroup ; B1/9039
+					UNIT FriegeMageKnight, Enemy, [31, 10], [30, 10], Fraus, [Elfire], 8, False, [$00, $00, $00, $00]
+					UNIT FriegeArmoredAxe4, Enemy, [31, 11], [30, 11], Fraus, [Poleax], 14, False, [$00, $00, $00, $00]
+					UNIT FriegeArmoredAxe4, Enemy, [31, 12], [30, 12], Fraus, [Poleax], 14, False, [$00, $00, $00, $00]
+					UNIT FriegeArchKnight1, Enemy, [31, 13], [30, 13], Fraus, [Greatbow], 13, False, [$00, $00, $00, $00]
+					UNIT FriegeLanceKnight2, Enemy, [31, 14], [30, 14], Fraus, [VeninLance], 18, False, [$00, $00, $00, $00]
+					UNIT FriegePaladin1, Enemy, [31, 15], [30, 15], Fraus, [Greatsword], 7, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_PrepGroup2 ; B1/90B3
+					.byte 23, 24
+			
+					UNIT Seimetz, Enemy, [14, 28], [14, 28], Seimetz, [KillerLance, Javelin, Vulnerary], 13, False, [$00, $0C, $02, $40]
+					UNIT FriegePriest1, Enemy, [23, 25], [23, 25], Fraus, [Sleep, Fortify], 16, False, [$0D, $03, $00, $00]
+				UNIT
+			
+				_SoldierReinforcementsCameraCoordinates ; B1/90DF
+					.byte 11, 13
+			
+				_SoldierReinforcementsGroup ; B1/90E1
+					UNIT FriegeSoldier2, Enemy, [10, 13], [10, 13], Fraus, [Javelin, VeninLance, Antitoxin], 10, False, [$00, $00, $02, $00]
+					UNIT FriegeSoldier2, Enemy, [11, 13], [11, 13], Fraus, [Javelin, VeninLance, Antitoxin], 10, False, [$00, $00, $02, $00]
+				UNIT
+			
+				_SorcererReinforcementsCameraCoordinates ; B1/910B
+					.byte 15, 10
+			
+				_SorcererReinforcementsGroup ; B1/910D
+					UNIT LoptrianSorcerer1, Enemy, [14, 10], [14, 10], Codha, [Jormungand, Rewarp], 8, False, [$00, $03, $00, $00]
+					UNIT LoptrianSorcerer1, Enemy, [15, 9], [15, 9], Codha, [Jormungand, Rewarp], 8, False, [$00, $03, $00, $00]
+				UNIT
+			
+				_DiarmuidCameraCoordinates ; B1/9137
+					.byte 9, 8
+			
+				_DiarmuidGroup ; B1/9139
+					UNIT Diarmuid, Player, [1, 4], [1, 4], Leif, [BeoBlade], 3, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_StartingPositions ; B1/914F
+					.byte 1, 3
+					.byte 2, 2
+					.byte 3, 2
+					.byte 4, 2
+					.byte 5, 2
+					.byte 6, 2
+					.byte 2, 3
+					.byte 3, 3
+					.byte 4, 3
+					.byte 5, 3
+					.byte 6, 3
+					.byte 2, 4
+					.byte 3, 4
+					.byte 4, 4
+					.byte 5, 4
+					.byte 6, 4
+				.byte $FF
+			
+				_Armory ; B1/9170
+					SHOP [8, 26], [SilverSword, SilverLance, SilverAxe, SilverBow]
+			
+				_Vendor ; B1/9182
+					SHOP [9, 25], [Vulnerary, Antitoxin, Thunder, Wind]
+
+    .endsection Chapter21DataSection
+
+    .section Chapter21WorldMapEventsSection
+
+			eventChapter21WorldMapEvents ; E7/F242
+			
+				SCROLL_CAMERA_COORDS [12, 8], 4
+				SET_CURSOR_POSITION
+				YIELD
+			
+				PLAY_SOUND_WORD $00E0
+				PAUSE_SKIPPABLE 32
+				YIELD
+			
+				SET_MUSIC $2A
+				YIELD
+			
+				FADE_IN 1
+				YIELD
+			
+				macroWMSetCyclePalette 0, aBGPaletteBuffer.aPalette6
+
+				macroWMDrawSpecialMarker [128, 56], WMMarkerTable.Crown, 0
+
+				macroASMCWMDialogue dialogueChapter21WorldMap1
+			
+				HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+			
+				macroWMClearCyclePalette aBGPaletteBuffer.aPalette6
+				macroWMClearSpecialMarker 0
+			
+				PAUSE_SKIPPABLE 1
+				YIELD
+			
+				SCROLL_CAMERA_COORDS [12, 11], 1
+				SET_CURSOR_POSITION
+				YIELD
+			
+				macroWMSetCyclePalette 0, aBGPaletteBuffer.aPalette6
+
+				macroWMDrawSpecialMarker [104, 104], WMMarkerTable.Crown, 0
+
+				macroASMCWMDialogue dialogueChapter21WorldMap2
+			
+				HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+			
+				macroWMClearCyclePalette aBGPaletteBuffer.aPalette6
+				macroWMClearSpecialMarker 0
+			
+				PAUSE_SKIPPABLE 1
+				YIELD
+			
+				SCROLL_CAMERA_COORDS [20, 11], 1
+				SET_CURSOR_POSITION
+				YIELD
+			
+				SCROLL_CAMERA_COORDS [20, 8], 1
+				SET_CURSOR_POSITION
+				YIELD
+			
+				macroWMSetCyclePalette 0, aBGPaletteBuffer.aPalette6
+			
+				macroWMDrawSpecialMarker [104, 64], WMMarkerTable.Crown, 0
+ 
+				macroASMCWMDialogue dialogueChapter21WorldMap3
+			
+				HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+			
+				macroWMClearCyclePalette aBGPaletteBuffer.aPalette6
+				macroWMClearSpecialMarker 0
+			
+				PAUSE_SKIPPABLE 1
+				YIELD
+			
+				SCROLL_CAMERA_COORDS [20, 11], 1
+				SET_CURSOR_POSITION
+				YIELD
+			
+				SCROLL_CAMERA_COORDS [12, 11], 1
+				SET_CURSOR_POSITION
+				YIELD
+
+				macroWMSetCyclePalette 0, aBGPaletteBuffer.aPalette6
+			
+				macroWMDrawSpecialMarker [104, 104], WMMarkerTable.Crown, 0
+
+				macroASMCWMDialogue dialogueChapter21WorldMap4
+
+				HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+			
+				macroWMClearCyclePalette aBGPaletteBuffer.aPalette6
+				macroWMClearSpecialMarker 0
+			
+				PAUSE_SKIPPABLE 1
+				YIELD
+			
+				FADE_OUT 2
+				YIELD
+			
+				CALL_ASM_LOOP rlASMCEndWMEvents
+				YIELD
+			END1
+
+    .endsection Chapter21WorldMapEventsSection
+
+.endif ; GUARD_FE5_CHAPTER21

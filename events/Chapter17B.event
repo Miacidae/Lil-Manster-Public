@@ -1,645 +1,658 @@
 
-eventChapter17BEvents ; FD/C4D0
-
-	_OpeningEventDefinitions ; FD/C4D0
-		EVENT $00, _OpeningEvent
-			CMP_WORD wCurrentTurn, 0
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_TurnEventDefinitions ; FD/C4DD
-		EVENT $01, eventMapDeathQuoteDummyEvent
-			TEST_FLAG_SET $03
-		END_DEFINITION
-		EVENT $00, _NPCSpawn
-			CMP_WORD wCurrentPhase, NPC
-			TEST_FLAG_SET $07
-		END_DEFINITION
-		EVENT $0B, eventMapDeathQuoteDummyEvent
-			CMP_WORD wCurrentPhase, Enemy
-			CHECK_NUM_UNITS_LTE Amalda, 0
-		END_DEFINITION
-		EVENT $00, _DummyReinforcements1
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD_RANGE wCurrentTurn, 1, 20
-			ROLL_RNG 60
-		END_DEFINITION
-		EVENT $00, _DummyReinforcements2
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD_RANGE wCurrentTurn, 5, 25
-			ROLL_RNG 60
-		END_DEFINITION
-		EVENT $00, _DummyReinforcements3
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD_RANGE wCurrentTurn, 3, 20
-			ROLL_RNG 60
-		END_DEFINITION
-		EVENT $00, _DummyReinforcements4
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD_RANGE wCurrentTurn, 10, 20
-			ROLL_RNG 60
-		END_DEFINITION
-		EVENT $00, _DummyReinforcements5
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD_RANGE wCurrentTurn, 10, 20
-			ROLL_RNG 60
-		END_DEFINITION
-		EVENT $00, _DummyReinforcements6
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD_RANGE wCurrentTurn, 10, 20
-			ROLL_RNG 60
-		END_DEFINITION
-		EVENT $00, _DummyReinforcements7
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD_RANGE wCurrentTurn, 10, 20
-			ROLL_RNG 60
-		END_DEFINITION
-		EVENT $0A, _AmaldaMove
-			TEST_FLAG_SET $09
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_TalkEventDefinitions ; FD/C5A2
-	END_DEFINITION_ARRAY
-
-	_LocationEventDefinitions ; FD/C5A4
-		EVENT $21, _NPCVisit
-			CMP_BYTE wCursorXCoord, 15
-			CMP_BYTE wCursorYCoord, 14
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $21, _NPCVisit
-			CMP_BYTE wCursorXCoord, 12
-			CMP_BYTE wCursorYCoord, 15
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $21, _NPCVisit
-			CMP_BYTE wCursorXCoord, 10
-			CMP_BYTE wCursorYCoord, 15
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $21, _NPCVisit
-			CMP_BYTE wCursorXCoord, 13
-			CMP_BYTE wCursorYCoord, 18
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $21, _NPCVisit
-			CMP_BYTE wCursorXCoord, 9
-			CMP_BYTE wCursorYCoord, 18
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $21, _NPCVisit
-			CMP_BYTE wCursorXCoord, 10
-			CMP_BYTE wCursorYCoord, 19
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $21, _NPCVisit
-			CMP_BYTE wCursorXCoord, 4
-			CMP_BYTE wCursorYCoord, 20
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $21, _NPCVisit
-			CMP_BYTE wCursorXCoord, 3
-			CMP_BYTE wCursorYCoord, 22
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $22, _GateHouse
-			CMP_BYTE wCursorXCoord, 1
-			CMP_BYTE wCursorYCoord, 27
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $23, _LowerGateOpen
-		END_DEFINITION
-		EVENT $24, _MiddleGateOpen
-		END_DEFINITION
-		EVENT $00, _EndingEvent
-			CMP_BYTE wCursorXCoord, 3
-			CMP_BYTE wCursorYCoord, 1
-			CMP_WORD wCurrentPhase, Player
-			CMP_WORD aSelectedCharacterBuffer.Character, Leif
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_BeforeActionEventDefinitions ; FD/C688
-	END_DEFINITION_ARRAY
-
-	_AfterActionEventDefinitions ; FD/C68A
-		EVENT $09, eventMapDeathQuoteDummyEvent
-			CMP_BYTE_RANGE wCursorXCoord, 1, 7
-			CMP_BYTE_RANGE wCursorYCoord, 1, 7
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $23, _LowerGateOpen
-			CMP_BYTE wCursorXCoord, 22
-			CMP_BYTE wCursorYCoord, 8
-			TEST_FLAG_SET $0C
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $24, _MiddleGateOpenStanding
-			CMP_BYTE wCursorXCoord, 16
-			CMP_BYTE wCursorYCoord, 2
-			TEST_FLAG_SET $0C
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_BattleEventDefinitions ; FD/C6D2
-		EVENT $05, eventBattleQuoteDummyEvent
-			CHECK_SINGLE Palman
-		END_DEFINITION
-		EVENT $06, eventBattleQuoteDummyEvent
-			CHECK_SINGLE Amalda
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_ShopEventDefinitions ; FD/C6E4
-		EVENT $00, eventChapter17BData._Armory
-			CMP_BYTE_AT wCursorXCoord, eventChapter17BData._Armory
-			CMP_BYTE_AT wCursorYCoord, eventChapter17BData._Armory+1
-		END_DEFINITION
-		EVENT $00, eventChapter17BData._Vendor
-			CMP_BYTE_AT wCursorXCoord, eventChapter17BData._Vendor
-			CMP_BYTE_AT wCursorYCoord, eventChapter17BData._Vendor+1
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_DummyReinforcements1 ; FD/C70C
-	END2
-
-	_DummyReinforcements2 ; FD/C70D
-	END2
-
-	_DummyReinforcements3 ; FD/C70E
-	END2
-
-	_DummyReinforcements4 ; FD/C70F
-	END2
-
-	_DummyReinforcements5 ; FD/C710
-	END2
-
-	_DummyReinforcements6 ; FD/C711
-	END2
-
-	_DummyReinforcements7 ; FD/C712
-	END2
-
-	_NPCSpawn ; FD/C713
-		STORE_WORD wEventEngineCharacterTarget, $0000
-		CALL_ASM_LOOP rlASMCCountNPCUnitUncapturedAlive, $0000
-		CALL_ASM_LOOP _rlNPCRoutine, $0000
-
-		SCROLL_CAMERA_ADDRESS eventChapter17BData._NPCCameraCoordinates
-		YIELD
-
-		LOAD2 eventChapter17BData._NPCGroup
-		WAIT_MOVE
-		YIELD
-		YIELD_UNK
-
-		STORE_WORD wEventEngineCharacterTarget, $0000
-		CALL_ASM_LOOP rlASMCCountNPCUnitUncapturedAlive, $0000
-
-		STORE_BYTE_FROM $7E4976, wEventEngineParameter1
-	END2
-
-	_rlNPCRoutine ; FD/C745
-
-		.al
-		.xl
-		.autsiz
-		.databank ?
-
-		lda $7E4976
-		and #$00FF
-		sta wR0
-		lda wEventEngineParameter1,b
-		cmp wR0
-		bge +
-
-		lda #$0008
-		jsl rlSetEventFlag
-		lda #$0000
-		sta wEventEngineTruthFlag,b
-		clc
-		rtl
-
-		+
-		lda #$0001
-		sta wEventEngineTruthFlag,b
-		clc
-		rtl
-
-	_AmaldaMove ; FD/C76C
-		EVENT_TEST_FLAG_SET $0B
-		JUMP_TRUE +
-
-		SCROLL_CAMERA_CHAR Amalda
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		RESET_PHASE_MUSIC
-		YIELD
-
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch17Bamaldacharge
-		YIELD
-
-		STORE_WORD wEventEngineCharacterTarget, Amalda
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Amalda
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Amalda
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Amalda
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		+
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Amalda
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Amalda
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Amalda
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Amalda
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-	JUMP _MiddleGateOpen
-
-	_GateHouse ; FD/C85B
-		EVENT_CMP_BYTE_AT_EQ wUnknown001730, $0000
-		JUMP_FALSE +
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $3A
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, 20000
-		CALL_ASM_LOOP rlASMCComparePlayerGoldGTE, $0000
-		JUMP_FALSE ++
-
-		DIALOGUE ch17Bopengate1
-		YIELD
-
-		STORE_WORD wEventEngineTruthFlag, $0000
-		DIALOGUE ch17Bopengate2
-		YIELD
-
-		JUMP_FALSE +
-
-		STORE_WORD wEventEngineParameter1, 20000
-		CALL_ASM_LOOP rlASMCSubtractGoldShortSilent, $0000
-
-		SET_FLAG $0C
-
-		+
-		STORE_WORD wEventEngineXCoordinate, 1
-		STORE_WORD wEventEngineYCoordinate, 27
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-		+
-		DIALOGUE ch17Bopengatenomoney
-		YIELD
-
-		UNSET_FLAG $22
-	END2
-
-	_NPCVisit ; FD/C8BF
-		EVENT_CMP_BYTE_AT_EQ wUnknown001730, $0000
-		JUMP_FALSE ++
-
-		EVENT_CMP_WORD_AT_EQ aSelectedCharacterBuffer.Character, Leif
-		JUMP_TRUE +
-
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch17Bhouseother
-		YIELD
-
-		UNSET_FLAG $21
-		JUMP +++
-
-		+
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $45
-		YIELD
-
-		DIALOGUE ch17Belder1
-		YIELD
-
-		STORE_WORD wEventEngineTruthFlag, $0000
-		DIALOGUE ch17Belder2
-		YIELD
-
-		JUMP_FALSE +
-
-		SET_FLAG $07
-
-		+
-		STORE_WORD wEventEngineXCoordinate, 15
-		STORE_WORD wEventEngineYCoordinate, 14
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-
-		STORE_WORD wEventEngineXCoordinate, 12
-		STORE_WORD wEventEngineYCoordinate, 15
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-
-		STORE_WORD wEventEngineXCoordinate, 10
-		STORE_WORD wEventEngineYCoordinate, 15
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-
-		STORE_WORD wEventEngineXCoordinate, 13
-		STORE_WORD wEventEngineYCoordinate, 18
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-
-		STORE_WORD wEventEngineXCoordinate, 9
-		STORE_WORD wEventEngineYCoordinate, 18
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-
-		STORE_WORD wEventEngineXCoordinate, 10
-		STORE_WORD wEventEngineYCoordinate, 19
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-
-		STORE_WORD wEventEngineXCoordinate, 4
-		STORE_WORD wEventEngineYCoordinate, 20
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-
-		STORE_WORD wEventEngineXCoordinate, 3
-		STORE_WORD wEventEngineYCoordinate, 22
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-
-		+
-	END2
-
-	_LowerGateOpen ; FD/C9C5
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch17Bopengate3
-		YIELD
-
-		PLAY_SOUND_WORD $00E8
-
-		SET_FLAG $23
-
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 0
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-	END1
-
-	_MiddleGateOpenStanding ; FD/C9FD
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch17Bopengate3
-		YIELD
-
-		PLAY_SOUND_WORD $00E8
-		JUMP +
-
-
-	_MiddleGateOpen ; FD/CA0B
-		EVENT_TEST_FLAG_SET $24
-		JUMP_TRUE ++
-
-		+
-
-		SET_FLAG $24
-		PLAY_SOUND_BYTE $45
-
-		+
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 1
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-	END1
-
-	_PrepGroups ; FD/CA3D
-		.long eventChapter17BData._PrepGroup
-	.word $0000
-
-	_OpeningEvent ; FD/CA42
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $32
-		YIELD
-
-		STORE_LONG wProcInput1+1, ch17Btitlename
-		STORE_WORD wProcInput1, <>ch17Btitlename
-		STORE_LONG lR43, $9A814C
-		CALL_ASM_SKIPPABLE rlEventEngineCreateProcAndSetActive, $0000
-		YIELD
-
-		SCROLL_CAMERA_CHAR Leif
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		DIALOGUE ch17Bopening1
-		YIELD
-
-		STORE_LONG lEventEngineUnitGroupPointer, eventChapter17BData._AmaldaCavalierGroup
-		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
-		YIELD_UNK
-
-		EVENT_TEST_FLAG_SET $A2
-		JUMP_TRUE +
-
-		STORE_LONG lEventEngineUnitGroupPointer, eventChapter17BData._AmaldaGroup
-		CALL_ASM_LOOP rlASMCLoadUnitGroup, $0000
-		YIELD_UNK
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $39
-		YIELD
-
-		SCROLL_CAMERA_CHAR Palman
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, 1
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $09
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, ch17Bopening2
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
-		YIELD
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-
-		+
-	END2
-
-	_EndingEvent ; FD/CACF
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 16
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd, $0000
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $41
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveChapterAndTurncount, $0000
-
-		STORE_WORD wEventEngineParameter1, 1
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, ch17Bclosing1
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-
-		EVENT_TEST_FLAG_SET $08
-		JUMP_TRUE +
-
-		STORE_LONG lEventEngineLongParameter, ch17Bclosing2
-		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
-
-		+
-		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
-		YIELD
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-
-		EVENT_TEST_FLAG_SET $08
-		JUMP_TRUE +
-
-		STORE_WORD wEventEngineParameter1, MasterSeal
-		CALL_ASM_LOOP rlASMCSetRewardGivenItem, $0000
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCSetupGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveItemPopup, $0000
-
-		+
-		STORE_WORD wEventEngineCharacterTarget, Dean
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_FALSE +
-
-		STORE_WORD wEventEngineCharacterTarget, Linoan
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_TRUE +
-
-		STORE_WORD wCurrentMapMusic, $0000
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $42
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, 3
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, linoandeathdean
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-		YIELD
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut, $0000
-
-		STORE_BYTE bBuf_INIDISP, $00
-
-		STORE_WORD wEventEngineCharacterTarget, Dean
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		+
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCChapterEnd, $0000
-	END1
-
-
-
-
-
-
-
+.weak
+  WARNINGS :?= "None"
+.endweak
+
+GUARD_FE5_CHAPTER17B :?= false
+.if (!GUARD_FE5_CHAPTER17B)
+  GUARD_FE5_CHAPTER17B := true
+
+  ; Definitions
+
+    .weak
+
+    .endweak
+
+  ; Freespace inclusions
+
+    .section Chapter17BEventsSection
+
+			eventChapter17BEvents ; FD/C4D0
+
+					_FlagPalmanBattleQuote 					= enum.enum($05)
+					_FlagAmaldaBattleQuote 					= enum.enum()
+					_FlagNPCHelpAccepted 						= enum.enum()
+					_FlagNPCsKilled			 						= enum.enum()
+					_FlagEnterCourtyard	 						= enum.enum()
+					_FlagAmaldaMove			 						= enum.enum()
+					_FlagAmaldaGone			 						= enum.enum()
+					_FlagPaidForGateOpen						= enum.enum()
+
+					_FlagNPCHouseVisit							= enum.enum($21)
+					_FlagGateHouseVisit							= enum.enum()
+					_FlagLowerGateOpen							= enum.enum()
+					_FlagMiddleGateOpen							= enum.enum()
+
+				_OpeningEventDefinitions ; FD/C4D0
+					EVENT FlagAlwaysZero, _OpeningEvent
+						CMP_WORD wCurrentTurn, 0
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_TurnEventDefinitions ; FD/C4DD
+					EVENT FlagAlliedDeath, eventMapDeathQuoteDummyEvent
+						TEST_FLAG_SET FlagPlayerDeath
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _NPCSpawn
+						CMP_WORD wCurrentPhase, NPC
+						TEST_FLAG_SET _FlagNPCHelpAccepted
+					END_DEFINITION
+					EVENT _FlagAmaldaGone, eventMapDeathQuoteDummyEvent
+						CMP_WORD wCurrentPhase, Enemy
+						CHECK_NUM_UNITS_LTE Amalda, 0
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _DummyReinforcements1
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD_RANGE wCurrentTurn, 1, 20
+						ROLL_RNG 60
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _DummyReinforcements2
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD_RANGE wCurrentTurn, 5, 25
+						ROLL_RNG 60
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _DummyReinforcements3
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD_RANGE wCurrentTurn, 3, 20
+						ROLL_RNG 60
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _DummyReinforcements4
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD_RANGE wCurrentTurn, 10, 20
+						ROLL_RNG 60
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _DummyReinforcements5
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD_RANGE wCurrentTurn, 10, 20
+						ROLL_RNG 60
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _DummyReinforcements6
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD_RANGE wCurrentTurn, 10, 20
+						ROLL_RNG 60
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _DummyReinforcements7
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD_RANGE wCurrentTurn, 10, 20
+						ROLL_RNG 60
+					END_DEFINITION
+					EVENT _FlagAmaldaMove, _AmaldaMove
+						TEST_FLAG_SET _FlagEnterCourtyard
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_TalkEventDefinitions ; FD/C5A2
+				END_DEFINITION_ARRAY
+			
+				_LocationEventDefinitions ; FD/C5A4
+					EVENT _FlagNPCHouseVisit, _NPCVisit
+						macroECCheckCoordinates [15, 14]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagNPCHouseVisit, _NPCVisit
+						macroECCheckCoordinates [12, 15]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagNPCHouseVisit, _NPCVisit
+						macroECCheckCoordinates [10, 15]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagNPCHouseVisit, _NPCVisit
+						macroECCheckCoordinates [13, 18]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagNPCHouseVisit, _NPCVisit
+						macroECCheckCoordinates [9, 18]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagNPCHouseVisit, _NPCVisit
+						macroECCheckCoordinates [10, 19]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagNPCHouseVisit, _NPCVisit
+						macroECCheckCoordinates [4, 20]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagNPCHouseVisit, _NPCVisit
+						macroECCheckCoordinates [3, 22]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagGateHouseVisit, _GateHouse
+						macroECCheckCoordinates [1, 27]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagLowerGateOpen, _LowerGateOpen
+					END_DEFINITION
+					EVENT _FlagMiddleGateOpen, _MiddleGateOpen
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _EndingEvent
+						macroECCheckCoordinates [3, 1]
+						CMP_WORD wCurrentPhase, Player
+						CMP_WORD aSelectedCharacterBuffer.Character, Leif
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_BeforeActionEventDefinitions ; FD/C688
+				END_DEFINITION_ARRAY
+			
+				_AfterActionEventDefinitions ; FD/C68A
+					EVENT _FlagEnterCourtyard, eventMapDeathQuoteDummyEvent
+						macroECCheckCoordinateRanges [1, 1], [7, 7]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagLowerGateOpen, _LowerGateOpen
+						macroECCheckCoordinates [22, 8]
+						TEST_FLAG_SET _FlagPaidForGateOpen
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagMiddleGateOpen, _MiddleGateOpenStanding
+						macroECCheckCoordinates [16, 2]
+						TEST_FLAG_SET _FlagPaidForGateOpen
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_BattleEventDefinitions ; FD/C6D2
+					macroECBossQuote _FlagPalmanBattleQuote, Palman
+					macroECBossQuote _FlagAmaldaBattleQuote, Amalda
+				END_DEFINITION_ARRAY
+			
+				_ShopEventDefinitions ; FD/C6E4
+					macroECShop eventChapter17BData._Armory
+					macroECShop eventChapter17BData._Vendor
+				END_DEFINITION_ARRAY
+			
+				_DummyReinforcements1 ; FD/C70C
+				END2
+			
+				_DummyReinforcements2 ; FD/C70D
+				END2
+			
+				_DummyReinforcements3 ; FD/C70E
+				END2
+			
+				_DummyReinforcements4 ; FD/C70F
+				END2
+			
+				_DummyReinforcements5 ; FD/C710
+				END2
+			
+				_DummyReinforcements6 ; FD/C711
+				END2
+			
+				_DummyReinforcements7 ; FD/C712
+				END2
+			
+				_NPCSpawn ; FD/C713
+
+					macroASMCCountNPCUnitsUncapturedAlive None
+					CALL_ASM_LOOP _rlNPCRoutine
+			
+					SCROLL_CAMERA_ADDRESS eventChapter17BData._NPCCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP_BLOCKABLE eventChapter17BData._NPCGroup
+					WAIT_MOVE
+					YIELD
+					YIELD_UNK
+
+					macroASMCCountNPCUnitsUncapturedAlive None
+
+					STORE_BYTE_FROM $7E4976, wEventEngineParameter1
+				END2
+			
+				_rlNPCRoutine ; FD/C745
+			
+					.al
+					.xl
+					.autsiz
+					.databank ?
+			
+					lda $7E4976
+					and #$00FF
+					sta wR0
+
+					lda wEventEngineParameter1,b
+					cmp wR0
+					bge +
+			
+						lda #_FlagNPCsKilled
+						jsl rlSetEventFlag
+
+						lda #$0000
+						sta wEventEngineTruthFlag,b
+						clc
+						rtl
+			
+					+
+					lda #$0001
+					sta wEventEngineTruthFlag,b
+					clc
+					rtl
+			
+				_AmaldaMove ; FD/C76C
+					EVENT_TEST_FLAG_SET _FlagAmaldaGone
+					JUMP_TRUE +
+			
+						GET_CHARACTER_COORDS Amalda
+						SCROLL_CAMERA 4
+						YIELD
+			
+						RESET_PHASE_MUSIC
+						YIELD
+
+						macroDialogue dialogueChapter17BAmaldaCharge
+
+						macroSetCharacterAI Amalda, [$00, $00, $00, $00]
+			
+					+
+					macroSetAllUnitsAIIfCharacterDataWord Leader, Amalda, [$00, $00, $00, $00]
+				JUMP _MiddleGateOpen
+			
+				_GateHouse ; FD/C85B
+					EVENT_CMP_BYTE_EQ wEventEngineMapChangeFlag, $0000
+					JUMP_FALSE +
+			
+						PLAY_SOUND_WORD $00E0
+						PAUSE_SKIPPABLE 32
+						YIELD
+			
+						SET_MUSIC $3A
+						YIELD
+			
+						STORE_WORD wEventEngineParameter1, 20000
+						CALL_ASM_LOOP rlASMCComparePlayerGoldGTE
+						JUMP_FALSE ++
+			
+							DIALOGUE dialogueChapter17BOpenGate1
+							YIELD
+			
+							STORE_WORD wEventEngineTruthFlag, $0000
+							DIALOGUE dialogueChapter17BOpenGate2
+							YIELD
+			
+							JUMP_FALSE +
+			
+								STORE_WORD wEventEngineParameter1, 20000
+								CALL_ASM_LOOP rlASMCSubtractGoldShortSilent
+			
+								SET_FLAG _FlagPaidForGateOpen
+			
+					+
+					macroASMCSingleTileChangeByCoords [1, 27], $0021
+				END2
+			
+					+
+					DIALOGUE dialogueChapter17BOpenGateNoMoney
+					YIELD
+			
+					UNSET_FLAG _FlagGateHouseVisit
+				END2
+			
+				_NPCVisit ; FD/C8BF
+					EVENT_CMP_BYTE_EQ wEventEngineMapChangeFlag, $0000
+					JUMP_FALSE ++
+			
+						EVENT_CMP_WORD_EQ aSelectedCharacterBuffer.Character, Leif
+						JUMP_TRUE +
+
+							macroDialogue dialogueChapter17BHouseOther
+			
+							UNSET_FLAG _FlagNPCHouseVisit
+							JUMP +++
+			
+						+
+						PLAY_SOUND_WORD $00E0
+						PAUSE_SKIPPABLE 32
+						YIELD
+			
+						SET_MUSIC $45
+						YIELD
+			
+						DIALOGUE dialogueChapter17BElder1
+						YIELD
+			
+						STORE_WORD wEventEngineTruthFlag, $0000
+						DIALOGUE dialogueChapter17BElder2
+						YIELD
+			
+						JUMP_FALSE +
+			
+							SET_FLAG _FlagNPCHelpAccepted
+			
+					+
+
+					macroASMCSingleTileChangeByCoords [15, 14], $0021
+					macroASMCSingleTileChangeByCoords [12, 15], $0021
+					macroASMCSingleTileChangeByCoords [10, 15], $0021
+					macroASMCSingleTileChangeByCoords [13, 18], $0021
+					macroASMCSingleTileChangeByCoords [9, 18], $0021
+					macroASMCSingleTileChangeByCoords [10, 19], $0021		
+					macroASMCSingleTileChangeByCoords [4, 20], $0021
+					macroASMCSingleTileChangeByCoords [3, 22], $0021
+
+					+
+				END2
+			
+				_LowerGateOpen ; FD/C9C5
+					macroDialogue dialogueChapter17BOpenGate3
+			
+					PLAY_SOUND_WORD $00E8
+			
+					SET_FLAG _FlagLowerGateOpen
+
+					PLAY_SOUND_BYTE $45
+					macroTileChangeByID 0
+				END1
+			
+				_MiddleGateOpenStanding ; FD/C9FD
+					macroDialogue dialogueChapter17BOpenGate3
+			
+					PLAY_SOUND_WORD $00E8
+					JUMP +
+			
+			
+				_MiddleGateOpen ; FD/CA0B
+					EVENT_TEST_FLAG_SET _FlagMiddleGateOpen
+					JUMP_TRUE ++
+			
+						+
+						SET_FLAG _FlagMiddleGateOpen
+						PLAY_SOUND_BYTE $45
+			
+					+
+					macroTileChangeByID 1
+				END1
+			
+				_PrepGroups ; FD/CA3D
+					.long eventChapter17BData._PrepGroup
+				.word 0
+			
+				_OpeningEvent ; FD/CA42
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $32
+					YIELD
+
+					macroChapterTitlePopup dialogueChapter17bTitle
+			
+					GET_CHARACTER_COORDS Leif
+					SCROLL_CAMERA 4
+					YIELD
+			
+					DIALOGUE dialogueChapter17BOpening1
+					YIELD
+
+					macroASMCLoadUnitGroup eventChapter17BData._AmaldaCavalierGroup
+			
+					EVENT_TEST_FLAG_SET FlagAmaldaDead
+					JUMP_TRUE +
+
+						macroASMCLoadUnitGroup eventChapter17BData._AmaldaGroup
+			
+						PLAY_SOUND_WORD $00E0
+						PAUSE_SKIPPABLE 32
+						YIELD
+			
+						SET_MUSIC $39
+						YIELD
+			
+						GET_CHARACTER_COORDS Palman
+						SCROLL_CAMERA 4
+						YIELD
+
+						macroDialogueWithBG dialogueChapter17BOpening2, 1
+			
+						CALL_ASM_LOOP rlASMCDialogueWithBGEnd
+						YIELD
+			
+						HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
+			
+					+
+				END2
+			
+				_EndingEvent ; FD/CACF
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 16
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $41
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCSaveChapterAndTurncount
+
+					macroDialogueWithBG dialogueChapter17BClosing1, 1
+			
+					EVENT_TEST_FLAG_SET _FlagNPCsKilled
+					JUMP_TRUE +
+			
+						STORE_LONG lEventEngineLongParameter, dialogueChapter17BClosing2
+						CALL_ASM_LOOP rlASMCDialogueContinue
+			
+					+
+					CALL_ASM_LOOP rlASMCDialogueWithBGEnd
+					YIELD
+			
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
+			
+					EVENT_TEST_FLAG_SET _FlagNPCsKilled
+					JUMP_TRUE +
+			
+						STORE_WORD wEventEngineParameter1, MasterSeal
+						CALL_ASM_LOOP rlASMCSetRewardGivenItem
+						YIELD_UNK
+			
+					CALL_ASM_LOOP rlASMCSetupGiveItemPopup
+					CALL_ASM_LOOP rlASMCWaitWhileGiveItemPopup
+			
+					+
+					macroASMCCountAllUnitsAlive Dean
+					JUMP_FALSE +
+
+						macroASMCCountAllUnitsAlive Linoan
+						JUMP_TRUE +
+			
+							STORE_WORD wCurrentMapMusic, $0000
+			
+							PLAY_SOUND_WORD $00E0
+							PAUSE_SKIPPABLE 32
+							YIELD
+			
+							SET_MUSIC $42
+							YIELD
+
+							macroDialogueWithBG dialogueLinoanDeathDean, 3
+							YIELD
+			
+							HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+							FADE_OUT 1
+							YIELD
+			
+							CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut
+			
+							STORE_BYTE bBufferINIDISP, $00
+
+							macroASMCRemoveUnit Dean
+			
+					+
+					FADE_OUT 1
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCChapterEnd
+				END1
+
+    .endsection Chapter17BEventsSection
+
+    .section Chapter17BDataSection
+
+			eventChapter17BData ; B1/A2A9
+			
+				_PrepGroup ;B1/A2A9
+					.byte 8, 7
+			
+					UNIT FriegeSniper, Enemy, [22, 16], [22, 16], Palman, [SilverBow], 15, False, [$00, $03, $00, $00]
+					UNIT FriegeSniper, Enemy, [21, 15], [21, 15], Palman, [SilverBow], 15, False, [$00, $03, $00, $00]
+					UNIT FriegeSniper, Enemy, [23, 15], [23, 15], Palman, [SilverBow], 15, False, [$00, $03, $00, $00]
+					UNIT FriegeSniper, Enemy, [22, 15], [22, 15], Palman, [SilverBow], 15, False, [$00, $03, $00, $00]
+					UNIT FriegeBallista4, Enemy, [23, 5], [23, 5], Palman, [Ballista], 12, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista4, Enemy, [21, 5], [21, 5], Palman, [Ballista], 12, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista4, Enemy, [25, 3], [25, 3], Palman, [Ballista], 12, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista4, Enemy, [13, 5], [13, 5], Palman, [Ballista], 12, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista4, Enemy, [10, 5], [10, 5], Palman, [Ballista], 12, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista4, Enemy, [19, 3], [19, 3], Palman, [Ballista], 12, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista4, Enemy, [17, 3], [17, 3], Palman, [Ballista], 12, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista4, Enemy, [4, 7], [4, 7], Palman, [Ballista], 12, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista4, Enemy, [2, 7], [2, 7], Palman, [Ballista], 12, False, [$01, $03, $00, $00]
+					UNIT FriegePriest1, Enemy, [4, 3], [4, 3], Palman, [Physic, Silence], 15, False, [$13, $03, $00, $00]
+					UNIT FriegePriest1, Enemy, [2, 3], [2, 3], Palman, [Physic, Silence], 15, False, [$13, $03, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [2, 10], [2, 10], Palman, [Javelin], 15, False, [$01, $03, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [3, 10], [3, 10], Palman, [Javelin], 15, False, [$01, $03, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [4, 10], [4, 10], Palman, [Javelin], 15, False, [$01, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [21, 9], [21, 9], Palman, [BattleAxe], 12, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [22, 9], [22, 9], Palman, [BattleAxe], 12, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [23, 9], [23, 9], Palman, [BattleAxe], 12, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [10, 22], [10, 22], Palman, [BattleAxe], 12, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [10, 28], [10, 28], Palman, [BattleAxe], 12, False, [$00, $03, $00, $00]
+					UNIT FriegeSniper, Enemy, [12, 19], [12, 19], Palman, [SilverBow], 15, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredAxe4, Enemy, [11, 17], [11, 17], Palman, [BattleAxe], 16, False, [$00, $03, $00, $00]
+					UNIT FriegeBowKnight2, Enemy, [5, 22], [5, 22], Palman, [KillerBow], 15, False, [$00, $03, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [13, 14], [13, 14], Palman, [LongLance], 6, False, [$02, $15, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [13, 19], [13, 19], Palman, [LongLance], 6, False, [$02, $15, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [8, 17], [8, 17], Palman, [LongLance], 6, False, [$02, $15, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [6, 20], [6, 20], Palman, [LongLance], 6, False, [$02, $15, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [13, 21], [13, 21], Palman, [LongLance], 6, False, [$02, $15, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [15, 13], [15, 13], Palman, [BattleAxe], 12, False, [$02, $15, $00, $00]
+					UNIT Palman, Enemy, [3, 1], [3, 1], Palman, [Greatsword, Vulnerary], 14, True, [$01, $03, $00, $80]
+				UNIT
+			
+				_NPCCameraCoordinates ; B1/A541
+					.byte 9, 19
+			
+				_NPCGroup ; B1/A543
+					UNIT ResistanceFighter, NPC, [9, 16], [9, 16], Emily, [HandAxe], 1, False, [$00, $19, $00, $00]
+					UNIT ResistanceMyrmidon1, NPC, [4, 24], [4, 24], Emily, [IronSword], 1, False, [$00, $19, $00, $00]
+					UNIT ResistanceMyrmidon1, NPC, [10, 15], [10, 15], Emily, [IronSword], 1, False, [$00, $19, $00, $00]
+					UNIT ResistanceMyrmidon1, NPC, [14, 13], [14, 13], Emily, [IronSword], 1, False, [$00, $19, $00, $00]
+					UNIT ResistanceFighter, NPC, [9, 18], [9, 18], Emily, [IronAxe], 1, False, [$00, $19, $00, $00]
+					UNIT ResistanceFighter, NPC, [15, 14], [15, 14], Emily, [IronAxe], 1, False, [$00, $19, $00, $00]
+					UNIT ResistanceArcher1, NPC, [3, 22], [3, 22], Emily, [IronBow], 1, False, [$00, $19, $00, $00]
+					UNIT ResistancePriest, NPC, [4, 20], [4, 20], Emily, [Heal], 1, False, [$00, $19, $00, $00]
+					UNIT ResistanceArcher2, NPC, [10, 19], [10, 19], Emily, [IronBow], 1, False, [$00, $19, $00, $00]
+					UNIT ResistanceMyrmidon2, NPC, [13, 18], [13, 18], Emily, [IronSword], 1, False, [$00, $19, $00, $00]
+					UNIT ResistanceMage, NPC, [12, 15], [12, 15], Emily, [Fire], 1, False, [$00, $19, $00, $00]
+				UNIT
+			
+				_UnusedCoordinates1 ; B1/A621
+					.byte 8, 7
+			
+				_AmaldaGroup ; B1/A623
+					UNIT Amalda, Enemy, [22, 1], [22, 1], Amalda, [MasterSword, Heal, Vulnerary, BragisScroll], 7, False, [$09, $03, $00, $00]
+				UNIT
+			
+				_UnusedCoordinates2 ; B1/A639
+					.byte 8, 7
+			
+				_AmaldaCavalierGroup ; B1/A63B
+					UNIT FriegeCavalier2, Enemy, [19, 1], [19, 1], Amalda, [Rapier, Javelin, Vulnerary], 14, False, [$09, $03, $02, $00]
+					UNIT FriegeCavalier2, Enemy, [20, 1], [20, 1], Amalda, [Rapier, Javelin, Vulnerary], 14, False, [$09, $03, $02, $00]
+					UNIT FriegeCavalier2, Enemy, [21, 1], [21, 1], Amalda, [Rapier, Javelin, Vulnerary], 14, False, [$09, $03, $02, $00]
+					UNIT FriegeCavalier2, Enemy, [23, 1], [23, 1], Amalda, [Rapier, Javelin, Vulnerary], 14, False, [$09, $03, $02, $00]
+					UNIT FriegeCavalier2, Enemy, [24, 1], [24, 1], Amalda, [Rapier, Javelin, Vulnerary], 14, False, [$09, $03, $02, $00]
+					UNIT FriegeCavalier2, Enemy, [25, 1], [25, 1], Amalda, [Rapier, Javelin, Vulnerary], 14, False, [$09, $03, $02, $00]
+				UNIT
+			
+				_StartingPositions ; B1/A6B5
+					.byte 22, 27
+					.byte 23, 27
+					.byte 24, 27
+					.byte 25, 27
+					.byte 26, 27
+					.byte 22, 28
+					.byte 23, 28
+					.byte 24, 28
+					.byte 25, 28
+					.byte 26, 28
+					.byte 22, 29
+					.byte 23, 29
+					.byte 24, 29
+					.byte 25, 29
+					.byte 26, 29
+					.byte 24, 30
+				.byte $FF
+			
+				_Armory ; B1/A6D6
+					SHOP [9, 28], [IronBow, SteelBow, SilverBow, SilverAxe]
+			
+				_Vendor ; B1/A6E8
+					SHOP [10, 27], [Fire, Elfire, Vulnerary, Antitoxin]
+
+    .endsection Chapter17BDataSection
+
+    .section Chapter17BWorldMapEventsSection
+
+			eventChapter17BWorldMapEvents ; E7/EF60
+			
+				SCROLL_CAMERA_COORDS [4, 8], 4
+				SET_CURSOR_POSITION
+				YIELD
+			
+				PLAY_SOUND_WORD $00E0
+				PAUSE_SKIPPABLE 32
+				YIELD
+			
+				SET_MUSIC $2C
+				YIELD
+			
+				FADE_IN 1
+				YIELD
+			
+				SCROLL_CAMERA_COORDS [12, 8], 1
+				SET_CURSOR_POSITION
+				YIELD
+			
+				macroWMSetCyclePalette 0, aBGPaletteBuffer.aPalette6
+
+				macroWMDrawSpecialMarker [128, 56], WMMarkerTable.Crown, 0
+
+				macroASMCWMDialogue dialogueChapter17BWorldMap
+			
+				HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+			
+				macroWMClearCyclePalette aBGPaletteBuffer.aPalette6
+				macroWMClearSpecialMarker 0
+			
+				PAUSE_SKIPPABLE 1
+				YIELD
+			
+				FADE_OUT 2
+				YIELD
+			
+				CALL_ASM_LOOP rlASMCEndWMEvents
+				YIELD
+			END1
+
+    .endsection Chapter17BWorldMapEventsSection
+
+.endif ; GUARD_FE5_CHAPTER17B

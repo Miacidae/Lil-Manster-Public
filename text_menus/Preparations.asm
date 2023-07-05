@@ -1,111 +1,99 @@
 ;	Preparations menu pointers
 
-* = $050588
-.logical lorom($050588, 1)
+	.section PreparationsMenuOptionPointersSection
 
-prep_option_pointers			.block
+		.word <>aPreparationsMenuOptionMap
+		.word <>aPreparationsMenuOptionItems
+		.word <>aPreparationsMenuOptionPickUnits
+		.word <>aPreparationsMenuOptionUnitList
+		.word <>aPreparationsMenuOptionOptions
+		.word <>aPreparationsMenuOptionSave
+		.word 0
 
-.word <>prep_option_text._PrepMapOption
-.word <>prep_option_text._PrepItemsOption
-.word <>prep_option_text._PrepPickUnitsOption
-.word <>prep_option_text._PrepUnitListOption
-.word <>prep_option_text._PrepOptionsOption
-.word <>prep_option_text._PrepSaveOption
-.word $0000
-
-.bend
-.here
+	.endsection PreparationsMenuOptionPointersSection
 
 ;	Preparations menu text
 ;	Character limit: 8
 
-* = $0568E2
-.logical lorom($0568E2, 1)
+	.section PreparationsMenuOptionDataSection
 
-prep_option_text				.block
+		aPreparationsMenuOptionMap
+			.long $8A86FE
+			.long 0
+			.long 0
+			.long $8A870B
+			.long $8A870B
+			.long 0
+			.word $2020
+			.text "(Map\n"
+		
+		aPreparationsMenuOptionItems
+			.long 0
+			.long 0
+			.long 0
+			.long $8A86C4
+			.long $8A870B
+			.long 0
+			.word $2020
+			.text "Ite[ms\n"
+		
+		aPreparationsMenuOptionPickUnits
+			.long 0
+			.long 0
+			.long 0
+			.long $8A86B7
+			.long $8A870B
+			.long 0
+			.word $2020
+			.text "Deploy\n"
+		
+		aPreparationsMenuOptionSave
+			.long 0
+			.long 0
+			.long 0
+			.long $8A87D6
+			.long $8A870B
+			.long 0
+			.word $2020
+			.text "Save\n"
+		
+		aPreparationsMenuOptionUnitList
+			.long 0
+			.long 0
+			.long 0
+			.long $8A86DE
+			.long $8A870B
+			.long 0
+			.word $2020
+			.text "Unit\n"
+		
+		aPreparationsMenuOptionOptions
+			.long 0
+			.long 0
+			.long 0
+			.long $8A86EB
+			.long $8A870B
+			.long 0
+			.word $2020
+			.text "Options \n"
 
-_PrepMapOption
-	.long lorom($506FE, 1)
-	.long $000000
-	.long $000000
-	.long lorom($5070B, 1)
-	.long lorom($5070B, 1)
-	.long $000000
-	.word $2020
-	.text "(Map"
-.word $0000
+	.endsection PreparationsMenuOptionDataSection
 
-_PrepItemsOption
-	.long $000000
-	.long $000000
-	.long $000000
-	.long lorom($506C4, 1)
-	.long lorom($5070B, 1)
-	.long $000000
-	.word $2020
-	.text "Ite[ms"
-.word $0000
 
-_PrepPickUnitsOption
-	.long $000000
-	.long $000000
-	.long $000000
-	.long lorom($506B7, 1)
-	.long lorom($5070B, 1)
-	.long $000000
-	.word $2020
-	.text "Deploy"
-.word $0000
-
-_PrepSaveOption
-	.long $000000
-	.long $000000
-	.long $000000
-	.long lorom($507D6, 1)
-	.long lorom($5070B, 1)
-	.long $000000
-	.word $2020
-	.text "Save"
-.word $0000
-
-_PrepUnitListOption
-	.long $000000
-	.long $000000
-	.long $000000
-	.long lorom($506DE, 1)
-	.long lorom($5070B, 1)
-	.long $000000
-	.word $2020
-	.text "Unit"
-.word $0000
-
-_PrepOptionsOption
-	.long $000000
-	.long $000000
-	.long $000000
-	.long lorom($506EB, 1)
-	.long lorom($5070B, 1)
-	.long $000000
-	.word $2020
-	.text "Options "
-.word $0000
-
-.bend
-.here
 
 ;	Deploy menu pointers
 
 * = $02F955
 .logical lorom($02F955, 1)
 
-lda #<>fatigued_text
+lda #<>menutextPreparationsFatigued
 sta lR18
-lda #(>`fatigued_text)
+lda #(>`menutextPreparationsFatigued)
 sta lR18+1
 rts
-lda #<>use_drink_text
+lda #<>menutextPreparationsSDrink
 sta lR18
-lda #(>`use_drink_text)
+lda #(>`menutextPreparationsSDrink)
 sta lR18+1
 
 .here
@@ -116,139 +104,110 @@ sta lR18+1
 * = $056A00
 .logical lorom($056A00, 1)
 
-fatigued_text
-.text "Fatigued"
-.word $0000
+menutextPreparationsFatigued
+.text "Fatigued\n"
 
-use_drink_text
-.text "S Drink "
-.word $0000
+menutextPreparationsSDrink
+.text "S Drink \n"
 
 .here
 
 ;	Preps Items menu pointers
 
-* = $00F391
-.logical lorom($00F391, 1)
 
-prep_item_options_pointers		.block
+	.section PrepItemsLabels
 
-.word <>prep_item_options_text._OrganizeItemText
-.word <>prep_item_options_text._SelectToReturnText
-.word <>prep_item_options_text._SelectItemFromListText
-.word <>prep_item_options_text._SpaceText
-.word <>prep_item_options_text._TradeText
-.word <>prep_item_options_text._SpaceText
-.word <>prep_item_options_text._SupplyText
-.word <>prep_item_options_text._SpaceText
-.word <>prep_item_options_text._DiscardText
-.word <>prep_item_options_text._SpaceText
-.word <>prep_item_options_text._SortAndOwnerText
-.word <>prep_item_options_text._OwnerText
-.word <>prep_item_options_text._ShopText
-.word <>prep_item_options_text._SpaceText
+		aPrepItemsDescriptionPointers ; 81/F391
+	
+	  _MainDescription 		.addr menutextPrepItemsOrganizeItem, 				menutextPrepItemsSelectToReturn
+		_List 						.addr menutextPrepItemsSelectItemFromList, 	menutextPrepItemsSpace
+		_Trade 						.addr menutextPrepItemsTrade, 				menutextPrepItemsSpace
+		_Supply 					.addr menutextPrepItemsSupply, 				menutextPrepItemsSpace
+		_Discard 					.addr menutextPrepItemsDiscard, 			menutextPrepItemsSpace
+		_ListActive 				.addr menutextPrepItemsSortAndOwner, 		menutextPrepItemsOwner
+		_Shop		 				.addr menutextPrepItemsShop, 				menutextPrepItemsSpace
+	
+		;	Preps Items menu text
+		;	Character limit: 28 each. 168 total.
+	
+		menutextPrepItemsOrganizeItem
+		.text "Arrange ite[ms"
+		menutextPrepItemsOwner
+		menutextPrepItemsSpace
+		.text "\n"
+	
+		menutextPrepItemsSelectToReturn
+		.text "              {SEL1}{SEL2}Exit [menu\n"
+	
+		menutextPrepItemsSelectItemFromList
+		menutextPrepItemsSortAndOwner
+		.text "Pick ite[ms fro[m a list\n"
+		
+		menutextPrepItemsTrade
+		.text "Trade ite[ms a[mong units \n"
+		
+		menutextPrepItemsShop
+		.text "Visit the shop\n"
+		
+		menutextPrepItemsSupply
+		.text "Visit the Supply\n"
+		
+		menutextPrepItemsDiscard
+		.text "Discard ite[ms\n"
 
-.bend
+    .fill $81F457 - *, $FF
 
-;	Preps Items menu text
-;	Character limit: 28 each. 168 total.
+	.endsection PrepItemsLabels
 
-prep_item_options_text			.block
 
-_OrganizeItemText
-.text "Arrange ite[ms"
-_OwnerText
-_SpaceText
-.word $0000
 
-_SelectToReturnText
-.text "              {SEL1}{SEL2}Exit [menu"
-.word $0000
-
-_SelectItemFromListText
-_SortAndOwnerText
-.text "Pick ite[ms fro[m a list"
-.word $0000
-
-_TradeText
-.text "Trade ite[ms a[mong units "
-.word $0000
-
-_ShopText
-.text "Visit the shop"
-.word $0000
-
-_SupplyText
-.text "Visit the Supply"
-.word $0000
-
-_DiscardText
-.text "Discard ite[ms"
-.word $0000
-
-.bend
-.here
 
 ;	Sorting categories pointers
 
-* = $02CDC2
-.logical lorom($02CDC2, 1)
+	.section PreparationsMenuSortingTextPointersSection
 
-sort_type_pointers			.block
+		.word <>aPreparationsMenuSortingTypeOrder
+		.word <>aPreparationsMenuSortingKanaOrder
+		.word <>aPreparationsMenuSortingPossessionOrder
 
-.word <>sort_type_text._TypeOrder
-.word <>sort_type_text._KanaOrder
-.word <>sort_type_text._PossessionOrder
-
-.bend
+	.endsection PreparationsMenuSortingTextPointersSection
 
 ;	Sorting categories text
 ;	Character limit: 8 each, not counting the Select icon.
 
-sort_type_text				.block
+	.section PreparationsMenuSortingTextSection
 
-_TypeOrder
-.text "{SEL1}{SEL2}Type    "
-.word $0000
+		aPreparationsMenuSortingTypeOrder
+		.text "{SEL1}{SEL2}Type    \n"
+		
+		aPreparationsMenuSortingKanaOrder
+		.text "{SEL1}{SEL2}Alphabet\n"
+		
+		aPreparationsMenuSortingPossessionOrder
+		.text "{SEL1}{SEL2}Holder  \n"
 
-_KanaOrder
-.text "{SEL1}{SEL2}Alphabet"
-.word $0000
+	.endsection PreparationsMenuSortingTextSection
 
-_PossessionOrder
-.text "{SEL1}{SEL2}Holder  "
-.word $0000
 
-.bend
-.here
+
+
 
 ;	Discard prompts
 
-* = $00F20B
-.logical lorom($00F20B, 1)
+; See PrepItems.asm menutextPrepItemsDiscardPrompt and menutextPrepItemsDiscardOptions
 
-.text "Discard ite[m?"		; Character limit: 26
-.word $0000
 
-.here
 
-* = $00F234
-.logical lorom($00F234, 1)
 
-.text "Yes       +No "		; Character limit: 22
-.word $0000
 
-.here
 
 ;	Discard from Supply
 
 * = $02CAAF
 .logical lorom($02CAAF, 1)
 
-.text "Discard ite[m?      "		; Character limit: 26
-.word $0000
-.text "    Yes       +No       "	; Character COUNT: 24
-.word $0000
-.word $0000
+.text "Discard ite[m?      \n"		; Character limit: 26
+.text "    Yes       +No       \n"	; Character COUNT: 24
+.text "\n"
 
 .here

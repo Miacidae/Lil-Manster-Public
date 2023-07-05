@@ -1,4 +1,4 @@
-ch15ralphamaldaspawn
+dialogueChapter15RalphAmaldaSpawn
 
 .byte Right_slot
 .word LoadPortrait
@@ -264,7 +264,7 @@ ch15ralphamaldaspawn
 .byte EndText
 
 
-ch15armorslayerhouse
+dialogueChapter15ArmorslayerHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -279,7 +279,7 @@ ch15armorslayerhouse
 .byte EndText
 
 
-ch15skillringhouse
+dialogueChapter15SkillRingHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -299,7 +299,7 @@ ch15skillringhouse
 .byte EndText
 
 
-ch15killerlancehouse
+dialogueChapter15KillerLanceHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -337,7 +337,7 @@ ch15killerlancehouse
 .byte EndText
 
 
-ch15ullurscroll
+dialogueChapter15UllrScroll
 
 .byte Right_slot
 .word LoadPortrait
@@ -383,7 +383,7 @@ ch15ullurscroll
 .byte EndText
 
 
-ch15ralphrecruitment
+dialogueChapter15RalphRecruitment
 
 .byte Right_slot
 .word LoadPortrait
@@ -509,7 +509,7 @@ ch15ralphrecruitment
 .byte EndText
 
 
-ch15amaldaleave
+dialogueChapter15AmaldaLeave
 
 .byte Right_slot
 .word LoadPortrait
@@ -531,7 +531,7 @@ ch15amaldaleave
 .byte EndText
 
 
-ch15mareetashannam1
+dialogueChapter15MareetaShannam1
 
 .byte Right_slot
 .word LoadPortrait
@@ -790,7 +790,7 @@ ch15mareetashannam1
 .byte EndText
 
 
-ch15mareetashannam2
+dialogueChapter15MareetaShannam2
 
 .byte Right_slot
 .word LoadPortrait
@@ -870,7 +870,7 @@ ch15mareetashannam2
 .byte EndText
 
 
-ch15opening1
+dialogueChapter15Opening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -1038,7 +1038,7 @@ ch15opening1
 .byte EndText
 
 
-ch15opening2
+dialogueChapter15Opening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -1094,7 +1094,7 @@ ch15opening2
 .byte EndText
 
 
-ch15rightaugustus
+dialogueChapter15RightAugust
 
 .byte Right_slot
 .word LoadPortrait
@@ -1116,7 +1116,7 @@ ch15rightaugustus
 .byte EndText
 
 
-ch15rightaugustusyesno
+dialogueChapter15RightAugustYesNo
 
 .word $2E00
 .long $8CBBBC
@@ -1134,7 +1134,7 @@ ch15rightaugustusyesno
 .byte EndText
 
 
-ch15bishopnoleif
+dialogueChapter15BishopNoLeif
 
 .byte Right_slot
 .word LoadPortrait
@@ -1154,7 +1154,7 @@ ch15bishopnoleif
 .byte EndText
 
 
-ch15bishopleif
+dialogueChapter15BishopLeif
 
 .byte Left_slot
 .word LoadPortrait
@@ -1178,7 +1178,7 @@ ch15bishopleif
 .byte EndText
 
 
-ch15closing
+dialogueChapter15Closing
 
 .byte Left_slot
 .word LoadPortrait
@@ -1245,7 +1245,7 @@ ch15closing
 .byte EndText
 
 
-ch15bishopyesno
+dialogueChapter15BishopYesNo
 
 .word $2E00
 .long $8CBBBC
@@ -1269,7 +1269,7 @@ ch15bishopyesno
 .byte EndText
 
 
-ch15leftdorias
+dialogueChapter15LeftDorias
 
 .byte Right_slot
 .word LoadPortrait
@@ -1289,7 +1289,7 @@ ch15leftdorias
 .byte EndText
 
 
-ch15leftdoriasyesno
+dialogueChapter15LeftDoriasYesNo
 
 .word $2E00
 .long $8CBBBC
@@ -1307,7 +1307,7 @@ ch15leftdoriasyesno
 .byte EndText
 
 
-ch15wm1
+dialogueChapter15WorldMap1
 
 .text "Abiding by the armistice"
 .byte NewLine
@@ -1337,7 +1337,7 @@ ch15wm1
 .byte EndText
 
 
-ch15wm2
+dialogueChapter15WorldMap2
 
 .byte NewLine
 .word LoadPortraitalt_1
@@ -1356,7 +1356,7 @@ ch15wm2
 .byte EndText
 
 
-ch15wm3
+dialogueChapter15WorldMap3
 
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2
@@ -1385,7 +1385,7 @@ ch15wm3
 .byte EndText
 
 
-ch15wm4
+dialogueChapter15WorldMap4
 
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2

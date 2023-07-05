@@ -6,14 +6,14 @@ rlUnknown9A8000 ; 9A/8000
 	.databank ?
 
 	lda lR18
-	sta wProcInput1,b
+	sta aProcSystem.wInput1,b
 	lda lR18+1
-	sta wProcInput2,b
+	sta aProcSystem.wInput2,b
 
 	lda #(`procUnknown9A8019)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown9A8019
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 
 	rtl
@@ -27,14 +27,14 @@ rlCreateChapterTitleWindow ; 9A/8133
 	.databank ?
 
 	lda lR18
-	sta wProcInput1,b
+	sta aProcSystem.wInput1,b
 	lda lR18+1
-	sta wProcInput2,b
+	sta aProcSystem.wInput2,b
 
 	lda #(`procChapterTitle)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procChapterTitle
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 
 	rtl

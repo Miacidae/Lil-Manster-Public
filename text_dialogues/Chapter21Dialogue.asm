@@ -1,4 +1,4 @@
-ch21churchlinoan
+dialogueChapter21ChurchLinoan
 
 .byte Right_slot
 .word LoadPortrait
@@ -106,7 +106,7 @@ ch21churchlinoan
 .byte EndText
 
 
-ch21churchother
+dialogueChapter21ChurchOther
 
 .byte Right_slot
 .word LoadPortrait
@@ -126,7 +126,7 @@ ch21churchother
 .byte EndText
 
 
-ch21purewaterhouse
+dialogueChapter21PureWaterHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -153,7 +153,7 @@ ch21purewaterhouse
 .byte EndText
 
 
-ch21silverswordhouse
+dialogueChapter21SilverSwordHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -175,7 +175,7 @@ ch21silverswordhouse
 .byte EndText
 
 
-ch21opening1
+dialogueChapter21Opening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -260,7 +260,7 @@ ch21opening1
 .byte EndText
 
 
-ch21opening2
+dialogueChapter21Opening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -379,7 +379,7 @@ ch21opening2
 .byte EndText
 
 
-ch21opening3dermott
+dialogueChapter21Opening3Diarmuid
 
 .byte Right_Slot
 .byte ScrollText
@@ -406,7 +406,7 @@ ch21opening3dermott
 .byte EndText
 
 
-ch21opening4
+dialogueChapter21Opening4
 
 .byte Right_slot
 .word LoadPortrait
@@ -424,7 +424,7 @@ ch21opening4
 .byte EndText
 
 
-ch21noprisoners
+dialogueChapter21NoPrisoners
 
 .byte Right_slot
 .word LoadPortrait
@@ -485,7 +485,7 @@ ch21noprisoners
 .byte EndText
 
 
-ch21prisoners
+dialogueChapter21Prisoners
 
 .byte Right_slot
 .word LoadPortrait
@@ -557,7 +557,7 @@ ch21prisoners
 .byte EndText
 
 
-ch21wm1
+dialogueChapter21WorldMap1
 
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2
@@ -575,7 +575,7 @@ ch21wm1
 .byte EndText
 
 
-ch21wm2
+dialogueChapter21WorldMap2
 
 .text "for Ulster, the city had already fallen to the"
 .byte NewLine
@@ -586,7 +586,7 @@ ch21wm2
 .byte EndText
 
 
-ch21wm3
+dialogueChapter21WorldMap3
 
 .text "However, the head of House Friege,"
 .word LoadPortraitalt_1
@@ -604,7 +604,7 @@ ch21wm3
 .byte EndText
 
 
-ch21wm4
+dialogueChapter21WorldMap4
 
 .text "In the now-liberated Ulster,"
 .word LoadPortraitalt_1

@@ -69,7 +69,7 @@ rlUnknown8C8046 ; 8C/8046
 	lda #$0008
 	trb wEventEngineStatus,b
 
-	lda wUnknown001791,b
+	lda wEventEngineUnknown001791,b
 	cmp #$000E
 	beq +
 
@@ -98,7 +98,7 @@ rlUnknown8C806F ; 8C/806F
 	cmp #$0003
 	bne +
 
-	sta wUnknown001791,b
+	sta wEventEngineUnknown001791,b
 
 	lda #$0000
 	sta wUnknown000302,b
@@ -127,11 +127,11 @@ rsEventEngineHandleEvent ; 8C/8097
 
 	; Store pointer to events
 
-	lda lEventStartPointer+1,b
+	lda lEventEngineStartPointer+1,b
 	sta lR22+1
-	lda lEventStartPointer,b
+	lda lEventEngineStartPointer,b
 	sta lR22
-	ldy wEventExecutionOffset,b
+	ldy wEventEngineOffset,b
 	bra +
 
 	_Loop
@@ -139,7 +139,7 @@ rsEventEngineHandleEvent ; 8C/8097
 	; Save offset in events
 
 	inc y
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	phy
 
 	; Handle event code and continue
@@ -154,7 +154,7 @@ rsEventEngineHandleEvent ; 8C/8097
 
 	_Return
 	bcc +
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	bra _End
 
 	+
@@ -174,7 +174,7 @@ rsEventEngineHandleEvent ; 8C/8097
 	cmp #(-4 & $FF) ; YIELD
 	bne _Loop
 	inc y
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 
 	_End
 	rts
@@ -283,11 +283,11 @@ rsUnknown8C81BC ; 8C/81BC
 	bit #$2000 | $4000
 	bne _False
 
-	lda aUnknown0004BA,b
+	lda aSoundSystem.aUnknown0004BA,b
 	bne _False
 
 	lda wJoy1New
-	bit #JoypadStart
+	bit #JOY_Start
 	beq _False
 
 	lda #$4000
@@ -333,7 +333,7 @@ rlUnknown8C81F3 ; 8C/81F3
 
 	; Typo?
 
-	lda #wUnknown001791
+	lda #wEventEngineUnknown001791
 	cmp #$000E
 	beq ++
 
@@ -341,15 +341,15 @@ rlUnknown8C81F3 ; 8C/81F3
 	bit #$8000
 	bne +
 
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	and #$00FF
 	beq +
 
-	bit #INIDISP.ForcedBlank
+	bit #INIDISP_ForcedBlank
 	bne +
 
 	sep #$20
-	dec bBuf_INIDISP
+	dec bBufferINIDISP
 	rep #$20
 	bra _End
 
@@ -358,13 +358,13 @@ rlUnknown8C81F3 ; 8C/81F3
 	and #$00FF
 	bne _End
 
-	lda bDecompListFlag,b
+	lda bDecompressionArrayFlag,b
 	and #$00FF
 	bne _End
 
 	sep #$20
 	lda #INIDISP_Setting(True)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 
 	jsl rlEventEngineClearActiveProcs
@@ -463,11 +463,11 @@ rlUnknown8C82C0 ; 8C/82C0
 	php
 	rep #$30
 
-	lda bBuf_INIDISP
-	bit #INIDISP.ForcedBlank
+	lda bBufferINIDISP
+	bit #INIDISP_ForcedBlank
 	bne +
 
-	lda aUnknown0004BA,b
+	lda aSoundSystem.aUnknown0004BA,b
 	bne _End
 
 	+
@@ -476,7 +476,7 @@ rlUnknown8C82C0 ; 8C/82C0
 	lda #$0000
 	sta wEventEngineCycleType,b
 
-	stz wEventExecutionOffset,b
+	stz wEventEngineOffset,b
 
 	lda lEventEngineEventDefinitionPointer,b
 	beq +
@@ -507,12 +507,12 @@ rlUnknown8C82C0 ; 8C/82C0
 	jsl $95800B
 	jsl $8593EB
 
-	lda wUnknown001791,b
+	lda wEventEngineUnknown001791,b
 	cmp #$FFFF
 	beq _End
 
 	sta wUnknown000302,b
-	stz wUnknown001791,b
+	stz wEventEngineUnknown001791,b
 
 	_End
 	plp
@@ -559,7 +559,7 @@ rlUnknown8C833F ; 8C/833F
 	lda #$00E8
 	jsl rlUnknown808C7D
 
-	lda wUnknown001730,b
+	lda wEventEngineMapChangeFlag,b
 	bne +
 
 	lda wUnknown000E23,b
@@ -634,18 +634,18 @@ rlUnknown8C839F ; 8C/839F
 	lda wUnknown000302,b
 	beq +
 
-	sta wUnknown001791,b
+	sta wEventEngineUnknown001791,b
 
 	lda #$0000
 	sta wUnknown000302,b
 
 	+
 	lda lR18
-	sta lEventStartPointer,b
+	sta lEventEngineStartPointer,b
 	lda lR18+1
-	sta lEventStartPointer+1,b
+	sta lEventEngineStartPointer+1,b
 
-	stz wEventExecutionOffset,b
+	stz wEventEngineOffset,b
 	stz lEventEngineUnitGroupPointer,b
 
 	lda #$0009
@@ -692,8 +692,8 @@ rlEventEngineCreateProcAndSetActive ; 8C/83E7
 
 	php
 
-	lda bBuf_INIDISP
-	and #INIDISP.ForcedBlank
+	lda bBufferINIDISP
+	and #INIDISP_ForcedBlank
 	bne +
 
 	jsl rlProcEngineCreateProc
@@ -716,7 +716,7 @@ rlEventEngineDeleteProcAndClearActive ; 8C/8402
 	.databank ?
 
 	php
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 
 	lda #$0000
 	sta aEventEngineActiveProcs,b,x
@@ -772,7 +772,7 @@ rsUnknown8C8435 ; 8C/8435
 	ldx #size(aEventEngineActiveProcs) - 2
 
 	_Loop
-	lda aProcHeaderTypeOffset,b,x
+	lda aProcSystem.aHeaderTypeOffset,b,x
 	bne _ProcActive
 
 	lda #$0000
@@ -820,9 +820,9 @@ rlEventEngineCancelFadeIns ; 8C/846F
 
 	-
 	lda #(`procFadeIn1)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn1
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc _8488
 
@@ -833,9 +833,9 @@ rlEventEngineCancelFadeIns ; 8C/846F
 
 	_8488
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc _84A0
 
@@ -846,9 +846,9 @@ rlEventEngineCancelFadeIns ; 8C/846F
 
 	_84A0
 	lda #(`procEventFadeIn)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procEventFadeIn
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
@@ -859,7 +859,7 @@ rlEventEngineCancelFadeIns ; 8C/846F
 
 	+
 	lda #$FFFF
-	sta wScreenBrightnessFlag,b
+	sta wScreenFadingFlag,b
 	plp
 	rtl
 
@@ -874,9 +874,9 @@ rlEventEngineCancelFadeOuts ; 8C/84C0
 
 	-
 	lda #(`procFadeOut1)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeOut1
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc _84D9
 
@@ -887,9 +887,9 @@ rlEventEngineCancelFadeOuts ; 8C/84C0
 
 	_84D9
 	lda #(`procFadeOut2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeOut2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc _84F1
 
@@ -900,9 +900,9 @@ rlEventEngineCancelFadeOuts ; 8C/84C0
 
 	_84F1
 	lda #(`procEventFadeOut)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procEventFadeOut
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
@@ -913,7 +913,7 @@ rlEventEngineCancelFadeOuts ; 8C/84C0
 
 	+
 	lda #$FFFF
-	sta wScreenBrightnessFlag,b
+	sta wScreenFadingFlag,b
 	plp
 	rtl
 
@@ -926,9 +926,9 @@ rlEventEngineCancelFadeInClearJoypad ; 8C/8511
 
 	php
 	lda #(`procFadeInClearJoypad)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeInClearJoypad
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
@@ -947,7 +947,7 @@ rsEventCodeHandler_YIELD_UNK ; 8C/852A
 	.autsiz
 	.databank ?
 
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	sec
 	rts
 
@@ -967,7 +967,7 @@ rsEventCodeHandler_JUMP ; 8C/852F
 	sec
 	sbc lR22
 	tay
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	clc
 	rts
 
@@ -1000,7 +1000,7 @@ rsEventCodeHandler_JUMP_TRUE ; 8C/853A
 	tay
 
 	_End
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	clc
 	rts
 
@@ -1033,7 +1033,7 @@ rsEventCodeHandler_JUMP_FALSE ; 8C/854E
 	tay
 
 	_End
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	clc
 	rts
 
@@ -1046,9 +1046,9 @@ rsEventCodeHandler_JUMP_DISTANCE ; 8C/8562
 
 	lda [lR22],y
 	clc
-	adc wEventExecutionOffset,b
+	adc wEventEngineOffset,b
 	tay
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	clc
 	rts
 
@@ -1069,11 +1069,11 @@ rsEventCodeHandler_JUMP_DISTANCE_TRUE ; 8C/856E
 	_Jump
 	lda [lR22],y
 	clc
-	adc wEventExecutionOffset,b
+	adc wEventEngineOffset,b
 	tay
 
 	_End
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	clc
 	rts
 
@@ -1094,11 +1094,11 @@ rsEventCodeHandler_JUMP_DISTANCE_FALSE ; 8C/8583
 	_Jump
 	lda [lR22],y
 	clc
-	adc wEventExecutionOffset,b
+	adc wEventEngineOffset,b
 	tay
 
 	_End
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	clc
 	rts
 
@@ -1139,7 +1139,7 @@ rsEventCodeHandler_CMP_BYTE_AT_LT ; 8C/8598
 
 	+
 	inc y
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	clc
 	rts
 
@@ -1172,7 +1172,7 @@ rsEventCodeHandler_CMP_WORD_AT_LT ; 8C/85BF
 	+
 	inc y
 	inc y
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	clc
 	rts
 
@@ -1207,7 +1207,7 @@ rsEventCodeHandler_CMP_BYTE_AT_EQ ; 8C/85E1
 
 	+
 	inc y
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	clc
 	rts
 
@@ -1241,7 +1241,7 @@ rsEventCodeHandler_CMP_WORD_AT_EQ ; 8C/8608
 	+
 	inc y
 	inc y
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	clc
 	rts
 
@@ -1262,7 +1262,7 @@ rsEventCodeHandler_SET_FLAG ; 8C/862A
 	pla
 	clc
 	adc #$0001
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -1286,7 +1286,7 @@ rsEventCodeHandler_UNSET_FLAG ; 8C/8641
 	pla
 	clc
 	adc #$0001
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -1318,7 +1318,7 @@ rsEventCodeHandler_TEST_FLAG_SET ; 8C/8658
 	pla
 	clc
 	adc #$0001
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -1347,7 +1347,7 @@ rsEventCodeHandler_STORE_BYTE ; 8C/867D
 	rep #$20
 
 	inc y
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 
 	clc
 	rts
@@ -1373,7 +1373,7 @@ rsEventCodeHandler_STORE_WORD ; 8C/8696
 
 	inc y
 	inc y
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 
 	clc
 	rts
@@ -1404,7 +1404,7 @@ rsEventCodeHandler_STORE_LONG ; 8C/86AC
 
 	inc y
 	inc y
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 
 	clc
 	rts
@@ -1439,7 +1439,7 @@ rsEventCodeHandler_STORE_BYTE_FROM ; 8C/86C9
 	sta [lR24]
 	rep #$20
 
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	clc
 	rts
 
@@ -1471,7 +1471,7 @@ rsEventCodeHandler_STORE_WORD_FROM ; 8C/86EC
 	lda [lR25]
 	sta [lR24]
 
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	clc
 	rts
 
@@ -1508,7 +1508,7 @@ rsEventCodeHandler_STORE_LONG_FROM ; 8C/870B
 	lda [lR25]
 	sta [lR24]
 
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	clc
 	rts
 
@@ -1537,7 +1537,7 @@ rsEventCodeHandler_ADD_BYTE ; 8C/8732
 	rep #$20
 
 	inc y
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 
 	clc
 	rts
@@ -1566,7 +1566,7 @@ rsEventCodeHandler_ADD_WORD ; 8C/874F
 
 	inc y
 	inc y
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 
 	clc
 	rts
@@ -1612,7 +1612,7 @@ rsEventCodeHandler_ADD_LONG ; 8C/8769
 
 	rep #$20
 
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 	clc
 	rts
 
@@ -1639,7 +1639,7 @@ rsEventCodeHandler_ORR_BYTE ; 8C/879A
 	rep #$20
 
 	inc y
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 
 	clc
 	rts
@@ -1666,7 +1666,7 @@ rsEventCodeHandler_ORR_WORD ; 8C/87B5
 
 	inc y
 	inc y
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 
 	clc
 	rts
@@ -1706,7 +1706,7 @@ rsEventCodeHandler_ORR_LONG ; 8C/87CD
 	inc y
 
 	rep #$20
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 
 	clc
 	rts
@@ -1753,7 +1753,7 @@ rsEventCodeHandler_CALL_ASM_SKIPPABLE ; 8C/87FA
 	pla
 	clc
 	adc #$0005
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -1810,7 +1810,7 @@ rsEventCodeHandler_CALL_ASM_LONG_SKIPPABLE ; 8C/8832
 	pla
 	clc
 	adc #$0006
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -1858,7 +1858,7 @@ rsEventCodeHandler_CALL_ASM_LOOP ; 8C/886F
 	pla
 	clc
 	adc #$0005
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -1893,9 +1893,9 @@ rsEventCodeHandler_UNK_28 ; 8C/88A6
 
 	phx
 	lda #(`procUnknown828F09)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown828F09
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 
@@ -1903,7 +1903,7 @@ rsEventCodeHandler_UNK_28 ; 8C/88A6
 	pla
 	clc
 	adc #$0006
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -1936,7 +1936,7 @@ rsEventCodeHandler_UNK_29 ; 8C/88CC
 	pla
 	clc
 	adc #$0000
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -1978,9 +1978,9 @@ rsEventCodeHandler_DIALOGUE ; 8C/88FE
 
 	phx
 	lda #(`procDialogue)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procDialogue
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 
@@ -1988,7 +1988,7 @@ rsEventCodeHandler_DIALOGUE ; 8C/88FE
 	pla
 	clc
 	adc #$0003
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2030,9 +2030,9 @@ rsEventCodeHandler_DIALOGUE_ARRAY ; 8C/892F
 
 	phx
 	lda #(`procDialogue)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procDialogue
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 
 	plx
@@ -2043,7 +2043,7 @@ rsEventCodeHandler_DIALOGUE_ARRAY ; 8C/892F
 	pla
 	clc
 	adc #$0003
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2066,9 +2066,9 @@ rsEventCodeHandler_UNK_2D ; 8C/897E
 
 	phx
 	lda #(`procDialogueUnknown828A38)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procDialogueUnknown828A38
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 
@@ -2076,7 +2076,7 @@ rsEventCodeHandler_UNK_2D ; 8C/897E
 	pla
 	clc
 	adc #$0005
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2103,20 +2103,20 @@ rsEventCodeHandler_SET_MUSIC ; 8C/89A4
 	beq +
 
 	sta wCurrentMapMusic,b
-	sta aUnknown0004BA,b
+	sta aSoundSystem.aUnknown0004BA,b
 
 	phx
 	lda #(`procMusicEvent)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procMusicEvent
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 
 	+
 	ply
 	inc y
-	sty wEventExecutionOffset,b
+	sty wEventEngineOffset,b
 
 	plp
 	sec
@@ -2144,7 +2144,7 @@ rsEventCodeHandler_UNK_32 ; 8C/89A4
 	pla
 	clc
 	adc #$0001
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2172,7 +2172,7 @@ rsEventCodeHandler_NOP_33 ; 8C/89F5
 	pla
 	clc
 	adc #$0001
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2201,7 +2201,7 @@ rsEventCodeHandler_PLAY_SOUND_BYTE ; 8C/8A10
 	pla
 	clc
 	adc #$0001
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2229,7 +2229,7 @@ rsEventCodeHandler_PLAY_SOUND_WORD ; 8C/8A2F
 	pla
 	clc
 	adc #$0002
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2254,9 +2254,9 @@ rsEventCodeHandler_RESET_PHASE_MUSIC ; 8C/8A4B
 
 	phx
 	lda #(`procMusicEvent)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procMusicEvent
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 
@@ -2264,7 +2264,7 @@ rsEventCodeHandler_RESET_PHASE_MUSIC ; 8C/8A4B
 	pla
 	clc
 	adc #$0000
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2295,7 +2295,7 @@ rsEventCodeHandler_UNK_2E ; 8C/8A75
 	pla
 	clc
 	adc #$0000
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2328,7 +2328,7 @@ rsEventCodeHandler_UNK_2F ; 8C/8A97
 	pla
 	clc
 	adc #$0003
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2361,7 +2361,7 @@ rsEventCodeHandler_UNK_30 ; 8C/8ABA
 	pla
 	clc
 	adc #$0003
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2385,7 +2385,7 @@ rsEventCodeHandler_SCROLL_CAMERA_CHAR ; 8C/8ADD
 	pla
 	clc
 	adc #$0001
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2456,7 +2456,7 @@ rsEventCodeHandler_SET_CAMERA ; 8C/8B1A
 
 	clc
 	adc #$0002
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2488,7 +2488,7 @@ rsUnknown8C8B4C ; 8C/8B4C
 	lda wMapWidthPixels,b
 
 	+
-	sta wMapScrollWidthPixels,b
+	sta wMapScrollXPixels,b
 
 	lda wEventEngineYCoordinate,b
 	sec
@@ -2508,7 +2508,7 @@ rsUnknown8C8B4C ; 8C/8B4C
 	lda wMapHeightPixels,b
 
 	+
-	sta wMapScrollHeightPixels,b
+	sta wMapScrollYPixels,b
 	rts
 
 rsEventCodeHandler_UNK_3A ; 8C/8B83
@@ -2527,13 +2527,13 @@ rsEventCodeHandler_UNK_3A ; 8C/8B83
 
 	lda [lR22],y
 	and #$003F
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 
 	+
 	pla
 	clc
 	adc #$0001
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2557,7 +2557,7 @@ rsEventCodeHandler_NOP_3B ; 8C/8BA1
 	pla
 	clc
 	adc #$0000
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2593,7 +2593,7 @@ rsEventCodeHandler_NOP_3C ; 8C/8BB7
 	pla
 	clc
 	adc #$0003
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2629,7 +2629,7 @@ rsEventCodeHandler_SCROLL_CAMERA_SPEED ; 8C/8BDE
 	pla
 	clc
 	adc #$0003
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2655,7 +2655,7 @@ rsEventCodeHandler_SET_CAMERA_SPEED ; 8C/8C08
 	pla
 	clc
 	adc #$0001
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2690,9 +2690,9 @@ rsUnknown8C8C20 ; 8C/8C20
 
 	phx
 	lda #(`procMapScroll)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procMapScroll
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 
@@ -2717,9 +2717,9 @@ rsEventCodeHandler_FADE_IN ; 8C/8C52
 
 	phx
 	lda #(`procEventFadeIn)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procEventFadeIn
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 
@@ -2727,7 +2727,7 @@ rsEventCodeHandler_FADE_IN ; 8C/8C52
 	pla
 	clc
 	adc #$0001
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2752,9 +2752,9 @@ rsEventCodeHandler_FADE_OUT ; 8C/8C7C
 
 	phx
 	lda #(`procEventFadeOut)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procEventFadeOut
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 
@@ -2762,7 +2762,7 @@ rsEventCodeHandler_FADE_OUT ; 8C/8C7C
 	pla
 	clc
 	adc #$0001
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2785,9 +2785,9 @@ rsEventCodeHandler_PAUSE_SKIPPABLE ; 8C/8CA6
 
 	phx
 	lda #(`procEventPause)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procEventPause
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 
@@ -2795,7 +2795,7 @@ rsEventCodeHandler_PAUSE_SKIPPABLE ; 8C/8CA6
 	pla
 	clc
 	adc #$0002
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2813,15 +2813,15 @@ rsEventCodeHandler_PAUSE ; 8C/8CCC
 	phy
 	phx
 	lda #(`procEventPause)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procEventPause
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 	pla
 	clc
 	adc #$0002
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2843,15 +2843,15 @@ rsEventCodeHandler_UNK_20 ; 8C/8CEA
 	bne +
 
 	rep #$30
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	and #$0050
 	bne +
 
 	phx
 	lda #(`procEventPauseUntilButton)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procEventPauseUntilButton
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 
@@ -2859,7 +2859,7 @@ rsEventCodeHandler_UNK_20 ; 8C/8CEA
 	pla
 	clc
 	adc #$0000
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2883,9 +2883,9 @@ rsEventCodeHandler_UNK_21 ; 8C/8D19
 	rep #$30
 	phx
 	lda #(`procEventPauseUntilTimeOrButton)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procEventPauseUntilTimeOrButton
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 
@@ -2893,7 +2893,7 @@ rsEventCodeHandler_UNK_21 ; 8C/8D19
 	pla
 	clc
 	adc #$0002
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -2935,7 +2935,7 @@ rsEventCodeHandler_HALT_UNTIL_BYTE ; 8C/8D43
 	pla
 	clc
 	adc #$0004
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 	tay
 	plp
 	clc
@@ -2981,7 +2981,7 @@ rsEventCodeHandler_HALT_UNTIL_WORD ; 8C/8D6D
 	pla
 	clc
 	adc #$0005
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -3035,7 +3035,7 @@ rsEventCodeHandler_HALT_UNTIL_BYTE_SKIPPABLE ; 8C/8D93
 	pla
 	clc
 	adc #$0004
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -3087,7 +3087,7 @@ rsEventCodeHandler_HALT_UNTIL_WORD_SKIPPABLE ; 8C/8DC5
 	pla
 	clc
 	adc #$0005
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -3133,7 +3133,7 @@ rsEventCodeHandler_MOVE_TEMPORARY ; 8C/8DF3
 	pla
 	clc
 	adc #$0009
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -3172,7 +3172,7 @@ rsEventCodeHandler_MOVE_TEMPORARY_UNK ; 8C/8E16
 	pla
 	clc
 	adc #$0009
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 	tay
 	plp
 	clc
@@ -3352,7 +3352,7 @@ rsEventCodeHandler_MOVE_UNIT ; 8C/8EAA
 	pla
 	clc
 	adc #$000B
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -3623,7 +3623,7 @@ rsEventLOADMain ; 8C/9004
 	pla
 	clc
 	adc #$0003
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 	tay
 	plp
 	clc
@@ -3677,9 +3677,9 @@ rsEventCodeHandler_SCROLL_CAMERA_ADDRESS ; 8C/908E
 
 	phx
 	lda #(`procMapScroll)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procMapScroll
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 
@@ -3687,7 +3687,7 @@ rsEventCodeHandler_SCROLL_CAMERA_ADDRESS ; 8C/908E
 	pla
 	clc
 	adc #$0003
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -3730,9 +3730,9 @@ rsUnknown8C90DE ; 8C/90DE
 	jsl $839457
 	bcs +
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	ora #TurnStatusHidden
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	ora #UnitStateHidden
+	sta aSelectedCharacterBuffer.UnitState,b
 
 	lda #aSelectedCharacterBuffer
 	sta wR1
@@ -3750,7 +3750,7 @@ rsUnknown8C90DE ; 8C/90DE
 	sta lR19
 
 	lda #len(aSelectedCharacterBuffer)
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 
 	pla
@@ -3974,7 +3974,7 @@ rlEventGetMoveUnitTargetByCharacter ; 8C/922B
 	lda #aBurstWindowCharacterBuffer
 	sta wR1
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne +
 
@@ -4220,8 +4220,8 @@ rlUnknown8C936B ; 8C/936B
 	beq +
 
 	sep #$20
-	lda bBuf_INIDISP
-	cmp #INIDISP.Brightness
+	lda bBufferINIDISP
+	cmp #INIDISP_Brightness
 	bne +
 
 	lda [lR18]
@@ -4476,9 +4476,9 @@ rsEventCodeHandler_WAIT_MOVE ; 8C/9530
 	bne +
 
 	lda #(`procUnitAction)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnitAction
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcs +
 
@@ -4488,7 +4488,7 @@ rsEventCodeHandler_WAIT_MOVE ; 8C/9530
 	pla
 	clc
 	adc #$0000
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 
 	tay
 	plp
@@ -4571,7 +4571,7 @@ rsEventCodeHandler_WARP_UNIT ; 8C/955A
 	pla
 	clc
 	adc #$0006
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 	tay
 	plp
 	clc
@@ -4758,27 +4758,27 @@ rlUnknown8C9689 ; 8C/9689
 	.databank ?
 
 	lda #$0001
-	sta wUnknown001730,b
+	sta wEventEngineMapChangeFlag,b
 
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	pha
 
 	sep #$20
 	lda #INIDISP_Setting(True)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 
 	jsl rlASMCDecompressChapterMapChanges
 
 	pla
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 
 	jsr rsGetLocationEventDefinitionArrayPointer
 	jsl rlEventEngineGetTriggeredLocationEvents
 	jsl rlGetTriggeredRandomChests
 
 	lda #$0000
-	sta wUnknown001730,b
+	sta wEventEngineMapChangeFlag,b
 
 	lda #$00E8
 	jsl rlUnknown808C7D
@@ -4939,7 +4939,7 @@ aEventDefinitionTable ; 8C/9764
 	.addr rsEventDefinitionHandler_CMP_STATUS_UNSET
 	.addr rsEventDefinitionHandler_UNK_12
 	.addr rsEventDefinitionHandler_UNK_13
-	.addr rsEventDefinitionHandler_CHECK_CARRYING
+	.addr rsEventDefinitionHandler_CHECK_ACTIVE_CARRYING
 	.addr rsEventDefinitionHandler_UNK_15
 	.addr rsEventDefinitionHandler_CHECK_NUM_UNITS_LTE
 	.addr rsEventDefinitionHandler_CHECK_NUM_UNITS_GTE
@@ -5439,7 +5439,7 @@ rsEventDefinitionHandler_CMP_STATUS_SET ; 8C/993C
 	ldy lR18+1
 	phy
 
-	jsl rlASMCCheckUnitTurnStatusSet
+	jsl rlASMCCheckUnitStateSet
 
 	ply
 	sty lR18+1
@@ -5482,7 +5482,7 @@ rsEventDefinitionHandler_CMP_STATUS_UNSET ; 8C/9966
 	ldy lR18+1
 	phy
 
-	jsl rlASMCCheckUnitTurnStatusSet
+	jsl rlASMCCheckUnitStateSet
 
 	ply
 	sty lR18+1
@@ -5530,7 +5530,7 @@ rsEventDefinitionHandler_UNK_12 ; 8C/9990
 	lda wEventEngineCharacterTarget,b
 	sta wR0
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne _NoMatch
 
@@ -5598,7 +5598,7 @@ rsEventDefinitionHandler_UNK_13 ; 8C/99D9
 	_End
 	rts
 
-rsEventDefinitionHandler_CHECK_CARRYING ; 8C/9A06
+rsEventDefinitionHandler_CHECK_ACTIVE_CARRYING ; 8C/9A06
 
 	.al
 	.xl
@@ -5656,12 +5656,12 @@ rsEventDefinitionHandler_UNK_15 ; 8C/9A33
 	phy
 	lda #aItemSkillCharacterBuffer
 	sta wR1
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne _NoMatch
 
-	lda @l aBurstWindowCharacterBuffer.TurnStatus
-	bit #TurnStatusRescued
+	lda @l aBurstWindowCharacterBuffer.UnitState
+	bit #UnitStateRescued
 	beq _NoMatch
 
 	lda @l aItemSkillCharacterBuffer.Rescue
@@ -5758,7 +5758,7 @@ rsEventDefinitionHandler_ROLL_RNG ; 8C/9AA2
 	inc y
 	pha
 	lda #100
-	jsl rlUnknown80B0E6
+	jsl rlGetRandomNumber100
 
 	sta wR0
 	pla
@@ -6731,7 +6731,7 @@ rsUnknown8C9E33 ; 8C/9E33
 	.autsiz
 	.databank ?
 
-	lda bDecompListFlag,b
+	lda bDecompressionArrayFlag,b
 	bne _True
 
 	lda wEventEngineStatus,b
@@ -6786,7 +6786,7 @@ rsUnknown8C9E74 ; 8C/9E74
 	.autsiz
 	.databank ?
 
-	lda bDecompListFlag,b
+	lda bDecompressionArrayFlag,b
 	bne _False
 
 	lda wEventEngineStatus,b
@@ -6825,7 +6825,7 @@ rsUnknown8C9E98 ; 8C/9E98
 	ldx #$0006
 
 	-
-	lda bDecompListFlag,b
+	lda bDecompressionArrayFlag,b
 	and #$00FF
 	bne _Next
 
@@ -6917,12 +6917,12 @@ rsUnknown8C9EF4 ; 8C/9EF4
 	+
 	lda aSelectedCharacterBuffer.X,b
 	and #$00FF
-	cmp wMapWidth16,b
+	cmp wMapWidthMetatiles,b
 	bcs +
 
 	lda aSelectedCharacterBuffer.Y,b
 	and #$00FF
-	cmp wMapHeight16,b
+	cmp wMapHeightMetatiles,b
 	bcs +
 
 	lda @l aUnknown0017BF,x
@@ -7022,9 +7022,9 @@ rsUnknown8C9F9F ; 8C/9F9F
 	sta aBurstWindowCharacterBuffer.Y,b
 	rep #$20
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	ora #TurnStatusHidden
-	sta aBurstWindowCharacterBuffer.TurnStatus,b
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	ora #UnitStateHidden
+	sta aBurstWindowCharacterBuffer.UnitState,b
 
 	lda #aBurstWindowCharacterBuffer
 	sta wR1
@@ -7087,9 +7087,9 @@ rsUnknown8CA02F ; 8C/A02F
 
 	.databank ?
 
-	ldy #structCharacterDataRAM.TurnStatus
+	ldy #structCharacterDataRAM.UnitState
 	lda (wR1),y
-	ora #TurnStatusHidden
+	ora #UnitStateHidden
 	sta (wR1),y
 
 	jsl $839041
@@ -7120,10 +7120,10 @@ rsUnknown8CA04E ; 8C/A04E
 	phx
 	phy
 
-	ldy #structCharacterDataRAM.TurnStatus
+	ldy #structCharacterDataRAM.UnitState
 	lda (wR1),y
-	and #~TurnStatusGrayed
-	and #~TurnStatusHidden
+	and #~UnitStateGrayed
+	and #~UnitStateHidden
 	sta (wR1),y
 
 	lda wR1
@@ -7131,9 +7131,9 @@ rsUnknown8CA04E ; 8C/A04E
 
 	sep #$20
 	lda #$00
-	ldy #structCharacterDataRAM.AI4
+	ldy #structCharacterDataRAM.ActionAIOffset
 	sta (wR1),y
-	ldy #structCharacterDataRAM.Unknown3E
+	ldy #structCharacterDataRAM.MovementAIOffset
 	sta (wR1),y
 	rep #$20
 	jsl $839041
@@ -7194,11 +7194,11 @@ rlUnknown8CA0B6 ; 8C/A0B6
 
 	lda wUnknown000E25,b
 	cmp #$0000
-	beq rlASMCUnknown8CA0C0
+	beq rlASMCUpdateMapSprites
 	clc
 	rtl
 
-rlASMCUnknown8CA0C0 ; 8C/A0C0
+rlASMCUpdateMapSprites ; 8C/A0C0
 
 	.al
 	.xl
@@ -7423,12 +7423,12 @@ rlASMCChangeAllegianceToPlayerIfCaptured ; 8C/A1C7
 	lda wEventEngineCharacterTarget,b
 	sta wR0
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne _False
 
-	lda @l aBurstWindowCharacterBuffer.TurnStatus
-	bit #TurnStatusRescued
+	lda @l aBurstWindowCharacterBuffer.UnitState
+	bit #UnitStateRescued
 	beq _False
 
 	lda wEventEngineCharacterTarget,b
@@ -7483,12 +7483,12 @@ rlASMCIsUnitRescued ; 8C/A20C
 	lda wEventEngineCharacterTarget,b
 	sta wR0
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne _False
 
-	lda @l aBurstWindowCharacterBuffer.TurnStatus
-	bit #TurnStatusRescued
+	lda @l aBurstWindowCharacterBuffer.UnitState
+	bit #UnitStateRescued
 	beq _False
 
 	lda #$0001
@@ -7516,12 +7516,12 @@ rlASMCIsUnitCaptured ; 8C/A238
 	lda wEventEngineCharacterTarget,b
 	sta wR0
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne _False
 
-	lda @l aBurstWindowCharacterBuffer.TurnStatus
-	bit #TurnStatusRescued
+	lda @l aBurstWindowCharacterBuffer.UnitState
+	bit #UnitStateRescued
 	beq _False
 
 	lda @l aBurstWindowCharacterBuffer.Rescue
@@ -7556,7 +7556,7 @@ rlASMCClearRescue ; 8C/A270
 
 	ldy wR1
 	phy
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	ply
 	sty wR1
 	and #$FFFF
@@ -7590,14 +7590,14 @@ rlASMCClearRescue ; 8C/A270
 
 	jsl $83901C
 
-	lda aItemSkillCharacterBuffer.TurnStatus,b
-	and #~(TurnStatusRescued | TurnStatusRescuing)
-	sta aItemSkillCharacterBuffer.TurnStatus,b
+	lda aItemSkillCharacterBuffer.UnitState,b
+	and #~(UnitStateRescued | UnitStateRescuing)
+	sta aItemSkillCharacterBuffer.UnitState,b
 
 	ply
-	lda structCharacterDataRAM.TurnStatus,b,y
-	and #~(TurnStatusRescued | TurnStatusRescuing)
-	sta structCharacterDataRAM.TurnStatus,b,y
+	lda structCharacterDataRAM.UnitState,b,y
+	and #~(UnitStateRescued | UnitStateRescuing)
+	sta structCharacterDataRAM.UnitState,b,y
 
 	sep #$20
 	lda #$00
@@ -7719,7 +7719,7 @@ rlASMCRemoveUnit ; 8C/A343
 	lda wEventEngineCharacterTarget,b
 	sta wR0
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne +
 
@@ -7772,7 +7772,7 @@ rlASMCSetUnitPosition ; 8C/A385
 	.databank ?
 
 	php
-	lda wUnknown001730,b
+	lda wEventEngineMapChangeFlag,b
 	bne +
 
 	lda #aBurstWindowCharacterBuffer
@@ -7780,7 +7780,7 @@ rlASMCSetUnitPosition ; 8C/A385
 
 	lda wEventEngineCharacterTarget,b
 	sta wR0
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	ora #$0000
 	bne +
 
@@ -7809,7 +7809,7 @@ rlASMCSetUnitPosition ; 8C/A385
 	clc
 	rtl
 
-rlASMCUpdateRetreatingUnitTurnStatus ; 8C/A3C7
+rlASMCUpdateRetreatingUnitUnitState ; 8C/A3C7
 
 	.al
 	.xl
@@ -7827,11 +7827,11 @@ rlASMCUpdateRetreatingUnitTurnStatus ; 8C/A3C7
 
 	.databank `$7E4FCF
 
-	lda @l aSelectedCharacterBuffer.TurnStatus
-	and #~TurnStatusCaptured
-	ora #TurnStatusUnknown1 | TurnStatusHidden
-	ora #TurnStatusMovementStar
-	sta @l aSelectedCharacterBuffer.TurnStatus
+	lda @l aSelectedCharacterBuffer.UnitState
+	and #~UnitStateCaptured
+	ora #UnitStateUnknown1 | UnitStateHidden
+	ora #UnitStateMovementStar
+	sta @l aSelectedCharacterBuffer.UnitState
 
 	lda #aSelectedCharacterBuffer
 	sta wR1
@@ -7905,7 +7905,7 @@ rlASMCCopyRetreatingUnitDataToEventBuffer ; 8C/A424
 	lda #<>aEventCharacterBuffer
 	sta lR19
 	lda #size(structExpandedCharacterDataRAM)
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 	clc
 	rtl
@@ -7926,33 +7926,33 @@ rlASMCCopyRetreatingUnitDataFromEventBuffer ; 8C/A445
 	lda #<>aSelectedCharacterBuffer
 	sta lR19
 	lda #size(structExpandedCharacterDataRAM)
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 	clc
 	rtl
 
-rlASMCSetUnitTurnStatus ; 8C/A464
+rlASMCSetUnitState ; 8C/A464
 
 	.al
 	.xl
 	.autsiz
 	.databank ?
 
-	lda #<>rlASMCSetUnitTurnStatusEffect
+	lda #<>rlASMCSetUnitStateEffect
 	sta lUnknown7EA4EC
-	lda #>`rlASMCSetUnitTurnStatusEffect
+	lda #>`rlASMCSetUnitStateEffect
 	sta lUnknown7EA4EC+1
-	jsl rlFindUnitAndRunTurnStatusEffect
+	jsl rlFindUnitAndRunUnitStateEffect
 	rtl
 
-rlASMCSetUnitTurnStatusEffect ; 8C/A477
+rlASMCSetUnitStateEffect ; 8C/A477
 
 	.al
 	.xl
 	.autsiz
 	.databank ?
 
-	ldy #structCharacterDataRAM.TurnStatus
+	ldy #structCharacterDataRAM.UnitState
 
 	lda (wR1),y
 	ora wEventEngineParameter1,b
@@ -7961,28 +7961,28 @@ rlASMCSetUnitTurnStatusEffect ; 8C/A477
 	jsl $839041
 	rtl
 
-rlASMCUnsetUnitTurnStatus ; 8C/A486
+rlASMCUnsetUnitState ; 8C/A486
 
 	.al
 	.xl
 	.autsiz
 	.databank ?
 
-	lda #<>rlASMCUnsetUnitTurnStatusEffect
+	lda #<>rlASMCUnsetUnitStateEffect
 	sta lUnknown7EA4EC
-	lda #>`rlASMCUnsetUnitTurnStatusEffect
+	lda #>`rlASMCUnsetUnitStateEffect
 	sta lUnknown7EA4EC+1
-	jsl rlFindUnitAndRunTurnStatusEffect
+	jsl rlFindUnitAndRunUnitStateEffect
 	rtl
 
-rlASMCUnsetUnitTurnStatusEffect ; 8C/A499
+rlASMCUnsetUnitStateEffect ; 8C/A499
 
 	.al
 	.xl
 	.autsiz
 	.databank ?
 
-	ldy #structCharacterDataRAM.TurnStatus
+	ldy #structCharacterDataRAM.UnitState
 
 	lda wEventEngineParameter1,b
 	eor #$FFFF
@@ -7995,30 +7995,30 @@ rlASMCUnsetUnitTurnStatusEffect ; 8C/A499
 	jsl $839041
 	rtl
 
-rlASMCCheckUnitTurnStatusSet ; 8C/A4B1
+rlASMCCheckUnitStateSet ; 8C/A4B1
 
 	.al
 	.xl
 	.autsiz
 	.databank ?
 
-	lda #<>rlASMCCheckUnitTurnStatusSetEffect
+	lda #<>rlASMCCheckUnitStateSetEffect
 	sta lUnknown7EA4EC
-	lda #>`rlASMCCheckUnitTurnStatusSetEffect
+	lda #>`rlASMCCheckUnitStateSetEffect
 	sta lUnknown7EA4EC+1
 	lda #$0000
 	sta wEventEngineTruthFlag,b
-	jsl rlFindUnitAndRunTurnStatusEffect
+	jsl rlFindUnitAndRunUnitStateEffect
 	rtl
 
-rlASMCCheckUnitTurnStatusSetEffect ; 8C/A4CA
+rlASMCCheckUnitStateSetEffect ; 8C/A4CA
 
 	.al
 	.xl
 	.autsiz
 	.databank ?
 
-	ldy #structCharacterDataRAM.TurnStatus
+	ldy #structCharacterDataRAM.UnitState
 	lda (wR1),y
 	and wEventEngineParameter1,b
 	beq _Unset
@@ -8033,30 +8033,30 @@ rlASMCCheckUnitTurnStatusSetEffect ; 8C/A4CA
 	sta wEventEngineTruthFlag,b
 	rtl
 
-rlASMCCheckUnitTurnStatusUnset ; 8C/A4E0
+rlASMCCheckUnitUnitStateUnset ; 8C/A4E0
 
 	.al
 	.xl
 	.autsiz
 	.databank ?
 
-	lda #<>rlASMCCheckUnitTurnStatusUnsetEffect
+	lda #<>rlASMCCheckUnitUnitStateUnsetEffect
 	sta lUnknown7EA4EC
-	lda #>`rlASMCCheckUnitTurnStatusUnsetEffect
+	lda #>`rlASMCCheckUnitUnitStateUnsetEffect
 	sta lUnknown7EA4EC+1
 	lda #$0000
 	sta wEventEngineTruthFlag,b
-	jsl rlFindUnitAndRunTurnStatusEffect
+	jsl rlFindUnitAndRunUnitStateEffect
 	rtl
 
-rlASMCCheckUnitTurnStatusUnsetEffect ; 8C/A4F9
+rlASMCCheckUnitUnitStateUnsetEffect ; 8C/A4F9
 
 	.al
 	.xl
 	.autsiz
 	.databank ?
 
-	ldy #structCharacterDataRAM.TurnStatus
+	ldy #structCharacterDataRAM.UnitState
 	lda (wR1),y
 	and wEventEngineParameter1,b
 	bne _Set
@@ -8084,7 +8084,7 @@ rlASMCCheckUnitStatusSet ; 8C/A50F
 	sta lUnknown7EA4EC+1
 	lda #$0000
 	sta wEventEngineTruthFlag,b
-	jsl rlFindUnitAndRunTurnStatusEffect
+	jsl rlFindUnitAndRunUnitStateEffect
 	rtl
 
 rlASMCCheckUnitStatusSetEffect ; 8C/A528
@@ -8123,7 +8123,7 @@ rlASMCCheckUnitAvailableForDialogue ; 8C/A541
 	sta lUnknown7EA4EC+1
 	lda #$0000
 	sta wEventEngineTruthFlag,b
-	jsl rlFindUnitAndRunTurnStatusEffect
+	jsl rlFindUnitAndRunUnitStateEffect
 	rtl
 
 rlASMCCheckUnitAvailableForDialogueEffect ; 8C/A55A
@@ -8133,9 +8133,9 @@ rlASMCCheckUnitAvailableForDialogueEffect ; 8C/A55A
 	.autsiz
 	.databank ?
 
-	ldy #structCharacterDataRAM.TurnStatus
+	ldy #structCharacterDataRAM.UnitState
 	lda (wR1),y
-	bit #TurnStatusDead | TurnStatusUnknown1 | TurnStatusHidden | TurnStatusInvisible | TurnStatusCaptured
+	bit #UnitStateDead | UnitStateUnknown1 | UnitStateHidden | UnitStateDisabled | UnitStateCaptured
 	bne _False
 
 	ldy #structCharacterDataRAM.Status
@@ -8150,7 +8150,7 @@ rlASMCCheckUnitAvailableForDialogueEffect ; 8C/A55A
 	cmp #StatusSilence
 	beq _False
 
-	cmp #StatusStone
+	cmp #StatusPetrify
 	beq _False
 
 	lda #$0001
@@ -8163,7 +8163,7 @@ rlASMCCheckUnitAvailableForDialogueEffect ; 8C/A55A
 	sta wEventEngineTruthFlag,b
 	rtl
 
-rlFindUnitAndRunTurnStatusEffect ; 8C/A58C
+rlFindUnitAndRunUnitStateEffect ; 8C/A58C
 
 	.al
 	.xl
@@ -8187,7 +8187,7 @@ rlFindUnitAndRunTurnStatusEffect ; 8C/A58C
 	lda wEventEngineCharacterTarget,b
 	sta wR0
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 
 	and #$FFFF
 	bne _Return
@@ -8195,7 +8195,7 @@ rlFindUnitAndRunTurnStatusEffect ; 8C/A58C
 	lda #aBurstWindowCharacterBuffer
 	sta wR1
 
-	ldy #structCharacterDataRAM.TurnStatus
+	ldy #structCharacterDataRAM.UnitState
 
 	lda lUnknown7EA4EC
 	sta lR18
@@ -8212,37 +8212,37 @@ rlFindUnitAndRunTurnStatusEffect ; 8C/A58C
 	clc
 	rtl
 
-rlASMCAllUnitsSetTurnStatus ; 8C/A5C8
+rlASMCAllUnitsSetUnitState ; 8C/A5C8
 
 	.al
 	.xl
 	.autsiz
 	.databank ?
 
-	lda #<>rlASMCAllUnitsSetTurnStatusEffect
+	lda #<>rlASMCAllUnitsSetUnitStateEffect
 	sta lR25
-	lda #>`rlASMCAllUnitsSetTurnStatusEffect
+	lda #>`rlASMCAllUnitsSetUnitStateEffect
 	sta lR25+1
 	jsr rsLoopThroughAllUnitsAndRunRoutine
 	rtl
 
-rlASMCAllUnitsSetTurnStatusEffect ; 8C/A5D6
+rlASMCAllUnitsSetUnitStateEffect ; 8C/A5D6
 
 	.al
 	.xl
 	.autsiz
 	.databank ?
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
+	lda aTargetingCharacterBuffer.UnitState,b
 	ora wEventEngineParameter1,b
-	sta aTargetingCharacterBuffer.TurnStatus,b
+	sta aTargetingCharacterBuffer.UnitState,b
 
 	lda #aTargetingCharacterBuffer
 	sta wR1
 	jsl $839041
 	rtl
 
-rlASMCAllUnitsUnsetTurnStatus ; 8C/A5E9
+rlASMCAllUnitsUnsetUnitState ; 8C/A5E9
 
 	.al
 	.xl
@@ -8253,44 +8253,44 @@ rlASMCAllUnitsUnsetTurnStatus ; 8C/A5E9
 	eor #$FFFF
 	sta wEventEngineParameter1,b
 
-	lda #<>rlASMCAllUnitsUnsetTurnStatusEffect
+	lda #<>rlASMCAllUnitsUnsetUnitStateEffect
 	sta lR25
-	lda #>`rlASMCAllUnitsUnsetTurnStatusEffect
+	lda #>`rlASMCAllUnitsUnsetUnitStateEffect
 	sta lR25+1
 	jsr rsLoopThroughAllUnitsAndRunRoutine
 	rtl
 
-rlASMCAllUnitsUnsetTurnStatusEffect ; 8C/A600
+rlASMCAllUnitsUnsetUnitStateEffect ; 8C/A600
 
 	.al
 	.xl
 	.autsiz
 	.databank ?
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
+	lda aTargetingCharacterBuffer.UnitState,b
 	and wEventEngineParameter1,b
-	sta aTargetingCharacterBuffer.TurnStatus,b
+	sta aTargetingCharacterBuffer.UnitState,b
 
 	lda #aTargetingCharacterBuffer
 	sta wR1
 	jsl $839041
 	rtl
 
-rlASMCActiveUnitSetTurnStatus ; 8C/A613
+rlASMCActiveUnitSetUnitState ; 8C/A613
 
 	.al
 	.xl
 	.autsiz
 	.databank ?
 
-	lda #<>rlASMCActiveUnitSetTurnStatusEffect
+	lda #<>rlASMCActiveUnitSetUnitStateEffect
 	sta lUnknown7EA4EC
-	lda #>`rlASMCActiveUnitSetTurnStatusEffect
+	lda #>`rlASMCActiveUnitSetUnitStateEffect
 	sta lUnknown7EA4EC+1
-	jsl rlGetActiveUnitAndRunTurnStatusEffect
+	jsl rlGetActiveUnitAndRunUnitStateEffect
 	rtl
 
-rlASMCActiveUnitSetTurnStatusEffect ; 8C/A626
+rlASMCActiveUnitSetUnitStateEffect ; 8C/A626
 
 	.al
 	.xl
@@ -8302,21 +8302,21 @@ rlASMCActiveUnitSetTurnStatusEffect ; 8C/A626
 	sta (wR1),y
 	rtl
 
-rlASMCActiveUnitUnsetTurnStatus ; 8C/A62E
+rlASMCActiveUnitUnsetUnitState ; 8C/A62E
 
 	.al
 	.xl
 	.autsiz
 	.databank ?
 
-	lda #<>rlASMCActiveUnitUnsetTurnStatusEffect
+	lda #<>rlASMCActiveUnitUnsetUnitStateEffect
 	sta lUnknown7EA4EC
-	lda #>`rlASMCActiveUnitUnsetTurnStatusEffect
+	lda #>`rlASMCActiveUnitUnsetUnitStateEffect
 	sta lUnknown7EA4EC+1
-	jsl rlGetActiveUnitAndRunTurnStatusEffect
+	jsl rlGetActiveUnitAndRunUnitStateEffect
 	rtl
 
-rlASMCActiveUnitUnsetTurnStatusEffect ; 8C/A641
+rlASMCActiveUnitUnsetUnitStateEffect ; 8C/A641
 
 	.al
 	.xl
@@ -8333,21 +8333,21 @@ rlASMCActiveUnitUnsetTurnStatusEffect ; 8C/A641
 	rtl
 
 
-rlASMCActiveUnitTestTurnStatus ; 8C/A652
+rlASMCActiveUnitTestUnitState ; 8C/A652
 
 	.al
 	.xl
 	.autsiz
 	.databank ?
 
-	lda #<>rlASMCActiveUnitTestTurnStatusEffect
+	lda #<>rlASMCActiveUnitTestUnitStateEffect
 	sta lUnknown7EA4EC
-	lda #>`rlASMCActiveUnitTestTurnStatusEffect
+	lda #>`rlASMCActiveUnitTestUnitStateEffect
 	sta lUnknown7EA4EC+1
-	jsl rlGetActiveUnitAndRunTurnStatusEffect
+	jsl rlGetActiveUnitAndRunUnitStateEffect
 	rtl
 
-rlASMCActiveUnitTestTurnStatusEffect ; 8C/A665
+rlASMCActiveUnitTestUnitStateEffect ; 8C/A665
 
 	.al
 	.xl
@@ -8368,7 +8368,7 @@ rlASMCActiveUnitTestTurnStatusEffect ; 8C/A665
 	sta wEventEngineTruthFlag,b
 	rtl
 
-rlGetActiveUnitAndRunTurnStatusEffect ; 8C/A678
+rlGetActiveUnitAndRunUnitStateEffect ; 8C/A678
 
 	.al
 	.xl
@@ -8389,7 +8389,7 @@ rlGetActiveUnitAndRunTurnStatusEffect ; 8C/A678
 	lda #aSelectedCharacterBuffer
 	sta wR1
 
-	ldy #structCharacterDataRAM.TurnStatus
+	ldy #structCharacterDataRAM.UnitState
 
 	lda lUnknown7EA4EC
 	sta lR18
@@ -8578,7 +8578,7 @@ rlASMCCheckUnitForItem ; 8C/A755
 	lda wEventEngineCharacterTarget,b
 	sta wR0
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne _False
 
@@ -8615,7 +8615,7 @@ rlASMCGiveUnitItemSilent ; 8C/A789
 	lda wEventEngineCharacterTarget,b
 	sta wR0
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne +
 
@@ -8645,7 +8645,7 @@ rlASMCCheckUnitExists ; 8C/A7B0
 
 	lda wEventEngineCharacterTarget,b
 	sta wR0
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	beq _True
 
@@ -8697,7 +8697,7 @@ rlASMCRemoveItemFromUnit ; 8C/A7DF
 	lda wEventEngineCharacterTarget,b
 	sta wR0
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne +
 
@@ -8727,7 +8727,7 @@ rlASMCGiveUnitItemsToConvoy ; 8C/A809
 	lda wEventEngineCharacterTarget,b
 	sta wR0
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne +
 
@@ -8765,8 +8765,8 @@ rlEventFindItemInInventory ; 8C/A830
 	phx
 
 	ldy wR1
-	lda structCharacterDataRAM.TurnStatus,b,y
-	bit #TurnStatusDead | TurnStatusCaptured
+	lda structCharacterDataRAM.UnitState,b,y
+	bit #UnitStateDead | UnitStateCaptured
 	bne +
 
 	ldx #$0000
@@ -8908,7 +8908,7 @@ rlEventMoveItemsToConvoy ; 8C/A8AC
 	clc
 	rtl
 
-rlASMCSetPopupGivenItemWithMaxDurability ; 8C/A8DD
+rlASMCGiveActiveUnitItem ; 8C/A8DD
 
 	.al
 	.xl
@@ -8959,14 +8959,14 @@ rlEventSetPopupGivenItemMain ; 8C/A8F3
 
 	.databank `aPlayerUnits
 
-	lda wUnknown001730,b
+	lda wEventEngineMapChangeFlag,b
 	bne _End
 
 	lda wR1
 	pha
 
 	lda wEventEngineParameter1,b
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 
 	ora wR0
 	sta wEventEngineParameter1,b
@@ -9017,7 +9017,7 @@ rlASMCSetRewardGivenItem ; 8C/A939
 	.databank `*
 
 	lda wEventEngineParameter1,b
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	ora #$FE00
 
 	jsl rlCopyItemDataToBuffer
@@ -9036,7 +9036,7 @@ rlASMCSetupGiveToConvoyIfInventoryFull ; 8C/A956
 	.autsiz
 	.databank ?
 
-	lda wUnknown001730,b
+	lda wEventEngineMapChangeFlag,b
 	bne +
 
 	lda wEventEngineTruthFlag,b
@@ -9060,9 +9060,9 @@ rlASMCWaitWhileGiveToConvoyIfInventoryFull ; 8C/A96D
 
 	phx
 	lda #(`$86E475)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$86E475
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	plx
 	rtl
@@ -9074,7 +9074,7 @@ rlASMCSetupGiveItemPopup ; 8C/A97E
 	.autsiz
 	.databank ?
 
-	lda wUnknown001730,b
+	lda wEventEngineMapChangeFlag,b
 	bne +
 
 	lda wCursorXCoord,b
@@ -9095,9 +9095,9 @@ rlASMCSetupGiveItemPopup ; 8C/A97E
 
 	phx
 	lda #(`$84E5A5)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$84E5A5
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 
@@ -9114,9 +9114,9 @@ rlASMCWaitWhileGiveItemPopup ; 8C/A9B4
 
 	phx
 	lda #(`$84E5A5)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$84E5A5
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	plx
 	rtl
@@ -9134,7 +9134,7 @@ rlEventCheckIfWeaponEquippedByUnit ; 8C/A9C5
 	lda wEventEngineCharacterTarget,b
 	sta wR0
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	beq +
 
@@ -9277,7 +9277,7 @@ rlSetActiveUnitTileToPlains ; 8C/AA67
 	jsl rlGetMapTileIndexByCoords
 
 	tax
-	lda #TerrainPlain
+	lda #TerrainPlains
 	jsl $848BE6
 
 	clc
@@ -9336,7 +9336,7 @@ rlUnknownMapChange8CAAA5 ; 8C/AAA5
 	lsr a
 	lsr a
 	lsr a
-	sta @l wEventEngineUnknownTileChangeIndex
+	sta @l wEventEngineSavedTile
 
 	clc
 	rtl
@@ -9348,7 +9348,7 @@ rlUnknownMapChange8CAACE ; 8C/AACE
 	.autsiz
 	.databank ?
 
-	lda wEventEngineUnknownTileChangeIndex,b
+	lda wEventEngineSavedTile,b
 	sta wEventEngineParameter1,b
 
 	jsl rlASMCSingleTileChangeByCoords
@@ -9381,7 +9381,7 @@ rlASMCSingleTileChangeByCoords ; 8C/AADA
 	asl a
 	jsr rsGetSingleTileChangeNewTerrain
 	jsr rsSetSingleTileChangeMetatileIndex
-	lda wUnknown001730,b
+	lda wEventEngineMapChangeFlag,b
 	bne +
 
 	jsl $83B476
@@ -9494,7 +9494,7 @@ rlASMCChapterEnd ; 8C/AB5B
 	jsl rlUnknown80C16D
 
 	lda #$FFFF
-	sta wUnknown001791,b
+	sta wEventEngineUnknown001791,b
 	plp
 	clc
 	rtl
@@ -9508,18 +9508,18 @@ rlChapterEndPrepareNextChapterWithWMEvents ; 8C/AB9B
 
 	php
 	lda #<>rsUnknown80BF58
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	phx
 
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 
 	plx
 	lda #$FFFF
-	sta wUnknown001791,b
+	sta wEventEngineUnknown001791,b
 
 	plp
 	clc
@@ -9536,7 +9536,7 @@ rlChapterEndPrepareNextChapter ; 8C/ABBB
 	jsl $888356
 
 	lda #$FFFF
-	sta wUnknown001791,b
+	sta wEventEngineUnknown001791,b
 
 	plp
 	clc
@@ -9554,7 +9554,7 @@ rlASMCFinalChapterEnd ; 8C/ABC9
 	jsl rlUnknown80C4AD
 
 	lda #$FFFF
-	sta wUnknown001791,b
+	sta wEventEngineUnknown001791,b
 
 	plp
 	clc
@@ -9590,10 +9590,10 @@ rlChapterEndResetCameraPosition ; 8C/ABE3
 	jsl $83C181
 
 	lda #$0000
-	sta wMapScrollWidthPixels,b
+	sta wMapScrollXPixels,b
 
 	lda #$0000
-	sta wMapScrollHeightPixels,b
+	sta wMapScrollYPixels,b
 
 	plp
 	rtl
@@ -9614,13 +9614,13 @@ rlUnknownChapterEnd8CAC00 ; 8C/AC00
 	beq +
 
 	lda #<>rsUnknown80BF58
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	phx
 
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	bra ++
@@ -9630,7 +9630,7 @@ rlUnknownChapterEnd8CAC00 ; 8C/AC00
 
 	+
 	lda #$FFFF
-	sta wUnknown001791,b
+	sta wEventEngineUnknown001791,b
 
 	plp
 	clc
@@ -9646,7 +9646,7 @@ rlUnknown8CAC3A ; 8C/AC3A
 	php
 	jsl rlUnknown8CA0B6
 
-	lda wUnknown001730,b
+	lda wEventEngineMapChangeFlag,b
 	bne _False
 
 	jsr rsUnknown8C81AD
@@ -9654,36 +9654,36 @@ rlUnknown8CAC3A ; 8C/AC3A
 	jsl rlUnknown809C9B
 	jsl rlUnknown8CBC71
 
-	lda bBuf_INIDISP
-	and #INIDISP.ForcedBlank
+	lda bBufferINIDISP
+	and #INIDISP_ForcedBlank
 	bne +
 
 	lda wEventEngineStatus,b
 	bit #$4000
 	beq _False
 
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	and #$00FF
 	bne _True
 
 	+
 	lda #$0000
-	sta @l wUnknown000E6D
+	sta @l wForcedMapScrollFlag
 
 	lda #$0000
-	sta wMapScrollWidthPixels,b
+	sta wMapScrollXPixels,b
 
 	lda #$0000
-	sta wMapScrollHeightPixels,b
+	sta wMapScrollYPixels,b
 
 	lda #<>rsUnknown809DBA
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	phx
 
 	lda #(`procUnknown82A272)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A272
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 
@@ -9718,13 +9718,13 @@ rlASMCEndWMEvents ; 8C/AC98
 	jsl rlChapterEndPrepareNextChapter
 
 	lda #$FFFF
-	sta wUnknown001791,b
+	sta wEventEngineUnknown001791,b
 
 	lda #$0000
-	sta @l wUnknown000E6D
+	sta @l wForcedMapScrollFlag
 
 	lda #$FFFF
-	sta wUnknown001791,b
+	sta wEventEngineUnknown001791,b
 
 	plp
 	clc
@@ -9742,7 +9742,7 @@ rlASMCTileChangeByID ; 8C/ACD3
 	.databank ?
 
 	php
-	lda bDecompListFlag,b
+	lda bDecompressionArrayFlag,b
 	bne _True
 
 	lda bDMAArrayFlag,b
@@ -9753,8 +9753,8 @@ rlASMCTileChangeByID ; 8C/ACD3
 	jsl $83B476
 	jsl $848B79
 
-	lda bBuf_INIDISP
-	and #INIDISP.ForcedBlank
+	lda bBufferINIDISP
+	and #INIDISP_ForcedBlank
 	bne _False
 
 	jsl rlUpdateFogTiles
@@ -10024,7 +10024,7 @@ rlASMCLoadUnitGroup ; 8C/AE1C
 
 	.databank `aPlayerUnits
 
-	lda wUnknown001730,b
+	lda wEventEngineMapChangeFlag,b
 	bne _False
 
 	lda lEventEngineUnitGroupPointer+1,b
@@ -10164,14 +10164,14 @@ rlPrepareCapturedUnitsForRescueEffect ; 8C/AED9
 	.autsiz
 	.databank ?
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	bit #TurnStatusDead | TurnStatusInvisible
+	lda aTargetingCharacterBuffer.UnitState,b
+	bit #UnitStateDead | UnitStateDisabled
 	beq +
 
 	jmp _End
 
 	+
-	bit #TurnStatusCaptured
+	bit #UnitStateCaptured
 	bne +
 
 	jmp _End
@@ -10192,7 +10192,7 @@ rlPrepareCapturedUnitsForRescueEffect ; 8C/AED9
 	+
 	sep #$20
 	lda aTargetingCharacterBuffer.Status,b
-	cmp #StatusStone
+	cmp #StatusPetrify
 	beq +
 
 	lda #None
@@ -10218,8 +10218,8 @@ rlPrepareCapturedUnitsForRescueEffect ; 8C/AED9
 	lda lEventEngineLongParameter,b
 	bne +
 
-	lda #TurnStatusCaptured
-	trb aTargetingCharacterBuffer.TurnStatus,b
+	lda #UnitStateCaptured
+	trb aTargetingCharacterBuffer.UnitState,b
 	lda #aTargetingCharacterBuffer
 	sta wR1
 	jsl $839041
@@ -10374,12 +10374,12 @@ rlPlaceLoadedUnit ; 8C/AFFB
 	.autsiz
 	.databank ?
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	bit #TurnStatusDead | TurnStatusInvisible | TurnStatusCaptured
+	lda aTargetingCharacterBuffer.UnitState,b
+	bit #UnitStateDead | UnitStateDisabled | UnitStateCaptured
 	bne rlPlaceLoadedUnitMain._True
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	bit #TurnStatusHidden
+	lda aTargetingCharacterBuffer.UnitState,b
+	bit #UnitStateHidden
 	beq rlPlaceLoadedUnitMain._True
 
 rlPlaceLoadedUnitMain ; 8C/B00B
@@ -10414,9 +10414,9 @@ rlPlaceLoadedUnitMain ; 8C/B00B
 	sta aSelectedCharacterBuffer.CurrentHP,b
 	rep #$20
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	and #~(TurnStatusUnknown1 | TurnStatusHidden | TurnStatusGrayed | TurnStatusCaptured)
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	and #~(UnitStateUnknown1 | UnitStateHidden | UnitStateGrayed | UnitStateCaptured)
+	sta aSelectedCharacterBuffer.UnitState,b
 
 	sep #$20
 	lda #None
@@ -10608,7 +10608,7 @@ rsEnsureNotSettingPlayerCharacterAIBytes ; 8C/B110
 	bne _True
 
 	lda wEventEngineParameter1,b
-	cmp #structCharacterDataRAM.AI
+	cmp #structCharacterDataRAM.ActionAI
 	bge _False
 
 	_True
@@ -11606,8 +11606,8 @@ rlCountUnitAliveUncapturedEffect ; 8C/B57E
 	cmp wEventEngineCharacterTarget,b
 	bne _End
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	bit #TurnStatusDead | TurnStatusUnknown1 | TurnStatusHidden | TurnStatusInvisible | TurnStatusCaptured
+	lda aTargetingCharacterBuffer.UnitState,b
+	bit #UnitStateDead | UnitStateUnknown1 | UnitStateHidden | UnitStateDisabled | UnitStateCaptured
 	bne _End
 
 	+
@@ -11669,8 +11669,8 @@ rlCountUnitAliveUncaptured2Effect ; 8C/B5C3
 	cmp wEventEngineCharacterTarget,b
 	bne _End
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	bit #TurnStatusDead | TurnStatusUnknown1 | TurnStatusInvisible | TurnStatusCaptured
+	lda aTargetingCharacterBuffer.UnitState,b
+	bit #UnitStateDead | UnitStateUnknown1 | UnitStateDisabled | UnitStateCaptured
 	bne _End
 
 	+
@@ -11792,7 +11792,7 @@ rlASMCCountAllUnitRescuedByPlayerOrNPCByTable ; 8C/B621
 	clc
 	rtl
 
-rlASMCCheckUnitRescuedByPlayerOrNPC ; 8C/B666
+rlASMCCountAllUnitsRescuedByPlayerOrNPC ; 8C/B666
 
 	.al
 	.xl
@@ -11845,12 +11845,12 @@ rlCheckAllUnitRescuedByPlayerOrNPCEffect ; 8C/B692
 	cmp wEventEngineCharacterTarget,b
 	bne _End
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	bit #TurnStatusDead | TurnStatusUnknown1 | TurnStatusHidden | TurnStatusInvisible | TurnStatusCaptured
+	lda aTargetingCharacterBuffer.UnitState,b
+	bit #UnitStateDead | UnitStateUnknown1 | UnitStateHidden | UnitStateDisabled | UnitStateCaptured
 	beq +
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	bit #TurnStatusRescued
+	lda aTargetingCharacterBuffer.UnitState,b
+	bit #UnitStateRescued
 	beq _End
 
 	lda aTargetingCharacterBuffer.Rescue,b
@@ -11892,12 +11892,12 @@ rlCheckSchroffDeadOrUnrecruited ; 8C/B6CD
 	+
 	lda #aBurstWindowCharacterBuffer
 	sta wR1
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne +
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	bit #TurnStatusDead
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	bit #UnitStateDead
 	bne +
 
 	clc
@@ -11918,7 +11918,7 @@ rlASMCCheckConomorOnMap ; 8C/B6EC
 	sta wR1
 	lda #Conomor
 	sta wR0
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	beq _True
 
@@ -11983,8 +11983,8 @@ rlCountUnitAliveEffect ; 8C/B738
 	cmp wEventEngineCharacterTarget,b
 	bne +
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	bit #TurnStatusDead | TurnStatusCaptured
+	lda aTargetingCharacterBuffer.UnitState,b
+	bit #UnitStateDead | UnitStateCaptured
 	bne +
 
 	lda aTargetingCharacterBuffer.DeploymentNumber,b
@@ -12098,8 +12098,8 @@ rlApplyLeftBehindCaptured ; 8C/B7A8
 	.autsiz
 	.databank ?
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	bit #TurnStatusDead | TurnStatusUnknown1 | TurnStatusInvisible | TurnStatusCaptured
+	lda aTargetingCharacterBuffer.UnitState,b
+	bit #UnitStateDead | UnitStateUnknown1 | UnitStateDisabled | UnitStateCaptured
 	bne +
 
 	lda #aTargetingCharacterBuffer
@@ -12116,10 +12116,10 @@ rlApplyLeftBehindCaptured ; 8C/B7A8
 	sta wR1
 	jsl $83A272
 
-	lda aSelectedCharacterBuffer.TurnStatus,b
-	and #~TurnStatusRescued
-	ora #TurnStatusHidden | TurnStatusCaptured
-	sta aSelectedCharacterBuffer.TurnStatus,b
+	lda aSelectedCharacterBuffer.UnitState,b
+	and #~UnitStateRescued
+	ora #UnitStateHidden | UnitStateCaptured
+	sta aSelectedCharacterBuffer.UnitState,b
 
 	lda #aSelectedCharacterBuffer
 	sta wR1
@@ -12165,8 +12165,8 @@ rlApplyLeftBehindCoordinates ; 8C/B805
 	.autsiz
 	.databank ?
 
-	lda aTargetingCharacterBuffer.TurnStatus,b
-	bit #TurnStatusDead | TurnStatusUnknown1 | TurnStatusInvisible | TurnStatusCaptured
+	lda aTargetingCharacterBuffer.UnitState,b
+	bit #UnitStateDead | UnitStateUnknown1 | UnitStateDisabled | UnitStateCaptured
 	bne +
 
 	lda #aTargetingCharacterBuffer
@@ -12251,8 +12251,8 @@ rlStoreInventoryToRandomChestItemArray ; 8C/B88F
 	.autsiz
 	.databank ?
 
-	lda @l aTargetingCharacterBuffer.TurnStatus
-	bit #TurnStatusDead | TurnStatusUnknown1 | TurnStatusInvisible | TurnStatusCaptured
+	lda @l aTargetingCharacterBuffer.UnitState
+	bit #UnitStateDead | UnitStateUnknown1 | UnitStateDisabled | UnitStateCaptured
 	bne _End
 
 	ldx #$0000
@@ -12633,11 +12633,11 @@ rlGetRandomChestCoordinates ; 8C/BA4E
 	and #$00FF
 	asl a
 	tax
-	lda eventChapter4Events._ChestPositionTable,x
+	lda eventChapter04Events._ChestPositionTable,x ;TO DO
 	and #$00FF
 	sta wR0
 
-	lda eventChapter4Events._ChestPositionTable+1,x
+	lda eventChapter04Events._ChestPositionTable+1,x
 	and #$00FF
 	sta wR1
 	rtl
@@ -12650,7 +12650,7 @@ rlGetTriggeredRandomChests ; 8C/BA6B
 	.databank ?
 
 	lda wCurrentChapter,b
-	cmp #Chapter4
+	cmp #Chapter04
 	bne _End
 
 	jsl rlASMCCreateRandomChestTiles
@@ -12689,8 +12689,8 @@ rlASMCCheckForcedBlank ; 8C/BA9F
 	.databank ?
 
 	php
-	lda bBuf_INIDISP
-	and #INIDISP.ForcedBlank
+	lda bBufferINIDISP
+	and #INIDISP_ForcedBlank
 	sta @l wEventEngineTruthFlag
 	plp
 	clc
@@ -12748,7 +12748,7 @@ rlScrollCameraCharEffect ; 8C/BAAC
 	+
 	lda #aBurstWindowCharacterBuffer
 	sta wR1
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne _End
 
@@ -12844,9 +12844,9 @@ rlUnknown8CBB8A ; 8C/BB8A
 
 	phx
 	lda #(`$8EB441)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$8EB441
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 	rtl
@@ -12860,9 +12860,9 @@ rlASMCFinalChapterMapChange ; 8C/BB9B
 
 	phx
 	lda #(`$949385)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$949385
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 	plx
 	clc
@@ -12892,9 +12892,9 @@ rlBeginDialoguePrompt ; 8C/BBBC
 	lda #$0001
 	sta wEventEngineTruthFlag,b
 
-	lda wUnknown0017E9,b
+	lda wDialogueEngineStatus,b
 	ora #$0040
-	sta wUnknown0017E9,b
+	sta wDialogueEngineStatus,b
 	rtl
 
 rlDialoguePromptSelector ; 8C/BBCC
@@ -12915,11 +12915,11 @@ rlDialoguePromptSelector ; 8C/BBCC
 	phx
 
 	lda wJoy1Input
-	bit #JoypadA
+	bit #JOY_A
 	bne _APressed
 
-	lda wJoy1Alt
-	bit #JoypadDown | JoypadUp
+	lda wJoy1Repeated
+	bit #JOY_Down | JOY_Up
 	beq +
 
 	lda wEventEngineTruthFlag,b
@@ -12929,11 +12929,11 @@ rlDialoguePromptSelector ; 8C/BBCC
 	+
 	jsl rlDialoguePromptMain
 
-	dec aUnknown00180A,b
-	dec aUnknown00180A,b
-	dec aUnknown00180A,b
-	dec aUnknown00180A,b
-	dec aUnknown00180A,b
+	dec lDialogueEngineTextPointer,b
+	dec lDialogueEngineTextPointer,b
+	dec lDialogueEngineTextPointer,b
+	dec lDialogueEngineTextPointer,b
+	dec lDialogueEngineTextPointer,b
 
 	_APressed
 	plx
@@ -12952,7 +12952,7 @@ rlDialoguePromptMain ; 8C/BC06
 	.autsiz
 	.databank ?
 
-	ldx wUnknown001808,b
+	ldx wDialogueEngineTargetIndex,b
 	beq +
 
 	ldx #$0004
@@ -13007,9 +13007,9 @@ rlUnknown8CBC34 ; 8C/BC34
 	lda aBurstWindowCharacterBuffer.Character,b
 	sta wUnknown001832,b
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	ora #TurnStatusHidden
-	sta aBurstWindowCharacterBuffer.TurnStatus,b
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	ora #UnitStateHidden
+	sta aBurstWindowCharacterBuffer.UnitState,b
 
 	lda #aBurstWindowCharacterBuffer
 	sta wR1
@@ -13042,20 +13042,20 @@ rlUnknown8CBC71 ; 8C/BC71
 	lda #aBurstWindowCharacterBuffer
 	sta wR1
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne _End
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	bit #TurnStatusDead | TurnStatusUnknown1 | TurnStatusInvisible | TurnStatusCaptured
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	bit #UnitStateDead | UnitStateUnknown1 | UnitStateDisabled | UnitStateCaptured
 	bne _End
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	bit #TurnStatusRescued
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	bit #UnitStateRescued
 	bne +
 
-	and #~TurnStatusHidden
-	sta aBurstWindowCharacterBuffer.TurnStatus,b
+	and #~UnitStateHidden
+	sta aBurstWindowCharacterBuffer.UnitState,b
 
 	+
 	lda #aBurstWindowCharacterBuffer
@@ -13088,12 +13088,12 @@ rsUnknown8CBCB4 ; 8C/BCB4
 	lda #aBurstWindowCharacterBuffer
 	sta wR1
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne _False
 
-	lda aBurstWindowCharacterBuffer.TurnStatus,b
-	bit #TurnStatusDead | TurnStatusUnknown1 | TurnStatusInvisible | TurnStatusCaptured
+	lda aBurstWindowCharacterBuffer.UnitState,b
+	bit #UnitStateDead | UnitStateUnknown1 | UnitStateDisabled | UnitStateCaptured
 	beq _True
 
 	_False
@@ -13126,7 +13126,7 @@ rlUnknown8CBCE3 ; 8C/BCE3
 	lda #aSelectedCharacterBuffer
 	sta wR1
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne _True
 
@@ -13144,7 +13144,7 @@ rlUnknown8CBCE3 ; 8C/BCE3
 	lda #aBurstWindowCharacterBuffer
 	sta wR1
 
-	jsl $83976E
+	jsl rlSearchForUnitAndWriteTargetToBuffer
 	and #$FFFF
 	bne _True
 
@@ -13195,11 +13195,11 @@ rsUnknown8CBD30 ; 8C/BD30
 
 	lda wEventEngineXCoordinate,b
 	and #$00FF
-	sta wEventEngineUnknownXTarget
+	sta wActiveTileUnitParameter1
 
 	lda wEventEngineYCoordinate,b
 	and #$00FF
-	sta wEventEngineUnknownYTarget
+	sta wActiveTileUnitParameter2
 
 	lda #(`$9A9029)<<8
 	sta lUnknown7EA4EC+1
@@ -13232,7 +13232,7 @@ rlEventStoneCastingEffect ; 8CBD8E
 	.databank `aActionStructUnit2
 
 	sep #$20
-	lda #StatusStone
+	lda #StatusPetrify
 	sta @l aActionStructUnit2.Status
 	rep #$20
 
@@ -13267,7 +13267,7 @@ rlASMCSetBattleQuoteMusic ; 8C/BDB7
 	lda #$001E
 
 	+
-	sta aUnknown0004BA,b
+	sta aSoundSystem.aUnknown0004BA,b
 	sta wCurrentMapMusic,b
 	rtl
 
@@ -13339,20 +13339,20 @@ rlUnknown8CBE0B ; 8C/BE0B
 
 	phy
 
-	stx wProcInput0,b
-	sta wProcInput2,b
+	stx aProcSystem.wInput0,b
+	sta aProcSystem.wInput2,b
 
 	lda #(`procPortrait4)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procPortrait4
-	sta lR43
+	sta lR44
 	txa
 	beq +
 
 	lda #(`procPortrait5)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procPortrait5
-	sta lR43
+	sta lR44
 
 	+
 	jsl rlProcEngineFindProc
@@ -13429,12 +13429,12 @@ rlCopyDialogueBoxPalette ; 8C/BE65
 
 	jsl rlGetDialogueBoxPalettePointer
 
-	lda #(`aBGPal0)<<8
+	lda #(`aBGPaletteBuffer.aPalette0)<<8
 	sta lR19+1
-	lda #<>aBGPal0
+	lda #<>aBGPaletteBuffer.aPalette0
 	sta lR19
-	lda #size(aBGPal0)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette0)
+	sta lR20
 	jsl rlBlockCopy
 
 	ply
@@ -13562,8 +13562,8 @@ rlDialogueBGDrawDialogueBoxTails ; 8C/BEC8
 		.addr _Sprite1
 		.addr _Sprite2
 
-	_Sprite1 .dstruct structSpriteArray, [[[0, 0], $42, true, $2A, 0, 0, false, false]]
-	_Sprite2 .dstruct structSpriteArray, [[[0, 0], $42, true, $28, 0, 0, false, false]]
+	_Sprite1 .dstruct structSpriteArray, [[[0, 0], $61, true, $2A, 0, 0, false, false]]
+	_Sprite2 .dstruct structSpriteArray, [[[0, 0], $61, true, $28, 0, 0, false, false]]
 
 rlUnknown8CBF21 ; 8C/BF21
 
@@ -13608,22 +13608,22 @@ rlUnknown8CBF2A ; 8C/BF2A
 	lda #$0001
 
 	+
-	stx wProcInput0,b
-	sta wProcInput2,b
+	stx aProcSystem.wInput0,b
+	sta aProcSystem.wInput2,b
 
 	lda wR0
-	sta wProcInput1,b
+	sta aProcSystem.wInput1,b
 
 	lda wR1
-	sta wProcInput3,b
+	sta aProcSystem.wInput3,b
 
 	txa
 	asl a
 	tax
 	lda #(`procPortrait0)<<8
-	sta lR43+1
+	sta lR44+1
 	lda @l _ProcTable,x
-	sta lR43
+	sta lR44
 
 	jsl rlProcEngineFindProc
 	bcs +
@@ -13998,8 +13998,8 @@ rlCopyPortraitPaletteToBuffer ; 8C/C08B
 
 	lda #(`aBGPaletteBuffer)<<8
 	sta lR19+1
-	lda #size(aBGPal0)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette0)
+	sta lR20
 	ply
 	sty wR1
 	pla
@@ -14111,14 +14111,14 @@ rlGetPortraitPaletteBufferPointer ; 8C/C0E9
 	rtl
 
 	_aPaletteTable ; 8C/C10C
-		.word <>aBGPal1
-		.word <>aBGPal2
-		.word <>aBGPal3
-		.word <>aBGPal4
-		.word <>aOAMPal2
-		.word <>aOAMPal3
-		.word <>aOAMPal0
-		.word <>aOAMPal1
+		.word <>aBGPaletteBuffer.aPalette1
+		.word <>aBGPaletteBuffer.aPalette2
+		.word <>aBGPaletteBuffer.aPalette3
+		.word <>aBGPaletteBuffer.aPalette4
+		.word <>aOAMPaletteBuffer.aPalette2
+		.word <>aOAMPaletteBuffer.aPalette3
+		.word <>aOAMPaletteBuffer.aPalette0
+		.word <>aOAMPaletteBuffer.aPalette1
 
 rlCopyPortraitAndPalette ; 8C/C11C
 
@@ -14161,13 +14161,13 @@ rlUnknown8CC137 ; 8C/C137
 	.autsiz
 	.databank ?
 
-	sta wProcInput1,b
+	sta aProcSystem.wInput1,b
 	lda wR0
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procItemSelectPortrait)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procItemSelectPortrait
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -14193,12 +14193,12 @@ rlRestoreMenuTextPalette ; 8C/C14E
 	sta lR18+1
 	lda #<>$9E8260
 	sta lR18
-	lda #(`aBGPal0)<<8
+	lda #(`aBGPaletteBuffer.aPalette0)<<8
 	sta lR19+1
-	lda #<>aBGPal0
+	lda #<>aBGPaletteBuffer.aPalette0
 	sta lR19
-	lda #size(aBGPal0)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette0)
+	sta lR20
 	jsl rlBlockCopy
 
 	ply
@@ -14326,7 +14326,7 @@ rlCopyPortraitBGTilemap ; 8C/C1CD
 	lda #<>$7FC0F5
 	sta lR19
 	lda #size(aLeftFacingPortraitTilemap)
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 
 	; Add base tile index depending on slot
@@ -14343,9 +14343,9 @@ rlCopyPortraitBGTilemap ; 8C/C1CD
 	; Copy tilemap as a rectangle to dest
 
 	lda #(`aPortraitTilemapInfo)<<8
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	lda #<>aPortraitTilemapInfo
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	plx
 	jsl $87D4DD
 
@@ -14521,7 +14521,7 @@ rlUnknown8CC2FD ; 8C/C2FD
 	lda #<>$7FC0F5
 	sta lR19
 	lda #$0018
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 
 	lda #(`$7FC0F5)<<8
@@ -14534,9 +14534,9 @@ rlUnknown8CC2FD ; 8C/C2FD
 	jsl rlBlockAddWord
 
 	lda #(`aUnknown8CC424)<<8
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	lda #<>aUnknown8CC424
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	plx
 	jsl $87D4DD
 
@@ -14701,9 +14701,9 @@ rlUnknown8CC43F ; 8C/C43F
 	asl a
 	tay
 	lda #(`aUnknown8CC424)<<8
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	lda #<>aPortraitTilemapInfo
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #(`$7FC0F5)<<8
 	sta lR18+1
 	lda #<>$7FC0F5
@@ -14814,12 +14814,12 @@ rlDrawPortraitSprite ; 8C/C49B
 		.addr _Sprite2
 		.addr _Sprite3
 
-	_Sprite1 .dstruct structSpriteArray, [[[0, 0], $42, true, $00, 0, 0, false, false], [[16, 0], $42, true, $02, 0, 0, false, false], [[32, 0], $42, true, $04, 0, 0, false, false], [[0, 16], $42, true, $20, 0, 0, false, false], [[16, 16], $42, true, $22, 0, 0, false, false], [[32, 16], $42, true, $24, 0, 0, false, false], [[0, 32], $42, true, $06, 0, 0, false, false], [[16, 32], $42, true, $08, 0, 0, false, false], [[32, 32], $42, true, $0A, 0, 0, false, false], [[0, 48], $42, true, $26, 0, 0, false, false], [[16, 48], $42, true, $28, 0, 0, false, false], [[32, 48], $42, true, $2A, 0, 0, false, false]]
-	_Sprite2 .dstruct structSpriteArray, [[[0, 0], $42, true, $00, 0, 0, false, false], [[16, 0], $42, true, $02, 0, 0, false, false], [[32, 0], $42, true, $04, 0, 0, false, false], [[0, 16], $42, true, $20, 0, 0, false, false], [[16, 16], $42, true, $22, 0, 0, false, false], [[32, 16], $42, true, $24, 0, 0, false, false], [[0, 32], $42, true, $0C, 0, 0, false, false], [[16, 32], $42, true, $0E, 0, 0, false, false], [[32, 32], $42, true, $0A, 0, 0, false, false], [[0, 48], $42, true, $26, 0, 0, false, false], [[16, 48], $42, true, $28, 0, 0, false, false], [[32, 48], $42, true, $2A, 0, 0, false, false]]
-	_Sprite3 .dstruct structSpriteArray, [[[0, 0], $42, true, $00, 0, 0, false, false], [[16, 0], $42, true, $02, 0, 0, false, false], [[32, 0], $42, true, $04, 0, 0, false, false], [[0, 16], $42, true, $20, 0, 0, false, false], [[16, 16], $42, true, $22, 0, 0, false, false], [[32, 16], $42, true, $24, 0, 0, false, false], [[0, 32], $42, true, $2C, 0, 0, false, false], [[16, 32], $42, true, $2E, 0, 0, false, false], [[32, 32], $42, true, $0A, 0, 0, false, false], [[0, 48], $42, true, $26, 0, 0, false, false], [[16, 48], $42, true, $28, 0, 0, false, false], [[32, 48], $42, true, $2A, 0, 0, false, false]]
-	_Sprite4 .dstruct structSpriteArray, [[[0, 0], $42, true, $04, 0, 0, true, false], [[16, 0], $42, true, $02, 0, 0, true, false], [[32, 0], $42, true, $00, 0, 0, true, false], [[0, 16], $42, true, $24, 0, 0, true, false], [[16, 16], $42, true, $22, 0, 0, true, false], [[32, 16], $42, true, $20, 0, 0, true, false], [[0, 32], $42, true, $0A, 0, 0, true, false], [[16, 32], $42, true, $08, 0, 0, true, false], [[32, 32], $42, true, $06, 0, 0, true, false], [[0, 48], $42, true, $2A, 0, 0, true, false], [[16, 48], $42, true, $28, 0, 0, true, false], [[32, 48], $42, true, $26, 0, 0, true, false]]
-	_Sprite5 .dstruct structSpriteArray, [[[0, 0], $42, true, $04, 0, 0, true, false], [[16, 0], $42, true, $02, 0, 0, true, false], [[32, 0], $42, true, $00, 0, 0, true, false], [[0, 16], $42, true, $24, 0, 0, true, false], [[16, 16], $42, true, $22, 0, 0, true, false], [[32, 16], $42, true, $20, 0, 0, true, false], [[0, 32], $42, true, $0A, 0, 0, true, false], [[16, 32], $42, true, $0E, 0, 0, true, false], [[32, 32], $42, true, $0C, 0, 0, true, false], [[0, 48], $42, true, $2A, 0, 0, true, false], [[16, 48], $42, true, $28, 0, 0, true, false], [[32, 48], $42, true, $26, 0, 0, true, false]]
-	_Sprite6 .dstruct structSpriteArray, [[[0, 0], $42, true, $04, 0, 0, true, false], [[16, 0], $42, true, $02, 0, 0, true, false], [[32, 0], $42, true, $00, 0, 0, true, false], [[0, 16], $42, true, $24, 0, 0, true, false], [[16, 16], $42, true, $22, 0, 0, true, false], [[32, 16], $42, true, $20, 0, 0, true, false], [[0, 32], $42, true, $0A, 0, 0, true, false], [[16, 32], $42, true, $2E, 0, 0, true, false], [[32, 32], $42, true, $2C, 0, 0, true, false], [[0, 48], $42, true, $2A, 0, 0, true, false], [[16, 48], $42, true, $28, 0, 0, true, false], [[32, 48], $42, true, $26, 0, 0, true, false]]
+	_Sprite1 .dstruct structSpriteArray, [[[0, 0], $61, true, $00, 0, 0, false, false], [[16, 0], $61, true, $02, 0, 0, false, false], [[32, 0], $61, true, $04, 0, 0, false, false], [[0, 16], $61, true, $20, 0, 0, false, false], [[16, 16], $61, true, $22, 0, 0, false, false], [[32, 16], $61, true, $24, 0, 0, false, false], [[0, 32], $61, true, $06, 0, 0, false, false], [[16, 32], $61, true, $08, 0, 0, false, false], [[32, 32], $61, true, $0A, 0, 0, false, false], [[0, 48], $61, true, $26, 0, 0, false, false], [[16, 48], $61, true, $28, 0, 0, false, false], [[32, 48], $61, true, $2A, 0, 0, false, false]]
+	_Sprite2 .dstruct structSpriteArray, [[[0, 0], $61, true, $00, 0, 0, false, false], [[16, 0], $61, true, $02, 0, 0, false, false], [[32, 0], $61, true, $04, 0, 0, false, false], [[0, 16], $61, true, $20, 0, 0, false, false], [[16, 16], $61, true, $22, 0, 0, false, false], [[32, 16], $61, true, $24, 0, 0, false, false], [[0, 32], $61, true, $0C, 0, 0, false, false], [[16, 32], $61, true, $0E, 0, 0, false, false], [[32, 32], $61, true, $0A, 0, 0, false, false], [[0, 48], $61, true, $26, 0, 0, false, false], [[16, 48], $61, true, $28, 0, 0, false, false], [[32, 48], $61, true, $2A, 0, 0, false, false]]
+	_Sprite3 .dstruct structSpriteArray, [[[0, 0], $61, true, $00, 0, 0, false, false], [[16, 0], $61, true, $02, 0, 0, false, false], [[32, 0], $61, true, $04, 0, 0, false, false], [[0, 16], $61, true, $20, 0, 0, false, false], [[16, 16], $61, true, $22, 0, 0, false, false], [[32, 16], $61, true, $24, 0, 0, false, false], [[0, 32], $61, true, $2C, 0, 0, false, false], [[16, 32], $61, true, $2E, 0, 0, false, false], [[32, 32], $61, true, $0A, 0, 0, false, false], [[0, 48], $61, true, $26, 0, 0, false, false], [[16, 48], $61, true, $28, 0, 0, false, false], [[32, 48], $61, true, $2A, 0, 0, false, false]]
+	_Sprite4 .dstruct structSpriteArray, [[[0, 0], $61, true, $04, 0, 0, true, false], [[16, 0], $61, true, $02, 0, 0, true, false], [[32, 0], $61, true, $00, 0, 0, true, false], [[0, 16], $61, true, $24, 0, 0, true, false], [[16, 16], $61, true, $22, 0, 0, true, false], [[32, 16], $61, true, $20, 0, 0, true, false], [[0, 32], $61, true, $0A, 0, 0, true, false], [[16, 32], $61, true, $08, 0, 0, true, false], [[32, 32], $61, true, $06, 0, 0, true, false], [[0, 48], $61, true, $2A, 0, 0, true, false], [[16, 48], $61, true, $28, 0, 0, true, false], [[32, 48], $61, true, $26, 0, 0, true, false]]
+	_Sprite5 .dstruct structSpriteArray, [[[0, 0], $61, true, $04, 0, 0, true, false], [[16, 0], $61, true, $02, 0, 0, true, false], [[32, 0], $61, true, $00, 0, 0, true, false], [[0, 16], $61, true, $24, 0, 0, true, false], [[16, 16], $61, true, $22, 0, 0, true, false], [[32, 16], $61, true, $20, 0, 0, true, false], [[0, 32], $61, true, $0A, 0, 0, true, false], [[16, 32], $61, true, $0E, 0, 0, true, false], [[32, 32], $61, true, $0C, 0, 0, true, false], [[0, 48], $61, true, $2A, 0, 0, true, false], [[16, 48], $61, true, $28, 0, 0, true, false], [[32, 48], $61, true, $26, 0, 0, true, false]]
+	_Sprite6 .dstruct structSpriteArray, [[[0, 0], $61, true, $04, 0, 0, true, false], [[16, 0], $61, true, $02, 0, 0, true, false], [[32, 0], $61, true, $00, 0, 0, true, false], [[0, 16], $61, true, $24, 0, 0, true, false], [[16, 16], $61, true, $22, 0, 0, true, false], [[32, 16], $61, true, $20, 0, 0, true, false], [[0, 32], $61, true, $0A, 0, 0, true, false], [[16, 32], $61, true, $2E, 0, 0, true, false], [[32, 32], $61, true, $2C, 0, 0, true, false], [[0, 48], $61, true, $2A, 0, 0, true, false], [[16, 48], $61, true, $28, 0, 0, true, false], [[32, 48], $61, true, $26, 0, 0, true, false]]
 
 rlUnknown8CC669 ; 8C/C669
 
@@ -15002,26 +15002,26 @@ rlASMCFinalChapterFadeToWhite ; 8C/C73E
 	.databank ?
 
 	lda #(`_aUnknown8CC778)<<8
-	sta wProcInput0+1,b
+	sta aProcSystem.wInput0+1,b
 	lda #<>_aUnknown8CC778
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	phx
 	lda #(`$8EEC55)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$8EEC55
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 
 	plx
 	lda #(`_aUnknown8CC782)<<8
-	sta wProcInput0+1,b
+	sta aProcSystem.wInput0+1,b
 	lda #<>_aUnknown8CC782
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	phx
 	lda #(`$8EEC55)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$8EEC55
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 
 	plx
@@ -15051,9 +15051,9 @@ rlASMCDialogueWithBGEndFadeOut ; 8C/C78C
 
 	phx
 	lda #(`procDialogueWithBG)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procDialogueWithBG
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
@@ -15065,9 +15065,9 @@ rlASMCDialogueWithBGEndFadeOut ; 8C/C78C
 	plx
 	phx
 	lda #(`aDialogueBoxHDMAInfo)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>aDialogueBoxHDMAInfo
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
@@ -15079,9 +15079,9 @@ rlASMCDialogueWithBGEndFadeOut ; 8C/C78C
 	plx
 	phx
 	lda #(`procPortrait0)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procPortrait0
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
@@ -15093,9 +15093,9 @@ rlASMCDialogueWithBGEndFadeOut ; 8C/C78C
 	plx
 	phx
 	lda #(`procPortrait1)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procPortrait1
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
@@ -15211,7 +15211,7 @@ rlGetTilesetFadePalettePointer ; 8C/C9D2
 	cmp #ChapterUnknown+1
 	blt +
 
-	lda #Chapter1
+	lda #Chapter01
 
 	+
 	sta wR0
@@ -15279,7 +15279,7 @@ rlUnknown8CCA8C ; 8C/CA8C
 	jsl $95800B
 
 	lda #$2000
-	sta wUnknown001804,b
+	sta wDialogueEngineTileBase,b
 
 	lda #$01DF
 	sta wUnknown001802,b
@@ -15347,7 +15347,7 @@ rlASMCWorldMapDialogue ; 8C/CAD4
 	sta wUnknown001800,b
 
 	lda #$0180
-	tsb wUnknown0017E9,b
+	tsb wDialogueEngineStatus,b
 
 	lda #$0000
 	sta @l wUnknown001836
@@ -15403,7 +15403,7 @@ rlUpdateTwoPositionDialogueArrow ; 8C/CB6A
 	.autsiz
 	.databank ?
 
-	lda wUnknown001808,b
+	lda wDialogueEngineTargetIndex,b
 	beq +
 
 	lda #$0001
@@ -15433,14 +15433,14 @@ rlUpdateDialogueArrow ; 8C/CB8B
 	.databank ?
 
 	lda #$0004
-	bit wUnknown0017E9,b
+	bit wDialogueEngineStatus,b
 	beq +
 
 	phx
 	lda #(`$83CB78)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$83CB78
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	plx
 	bcs ++
@@ -15451,9 +15451,9 @@ rlUpdateDialogueArrow ; 8C/CB8B
 	+
 	phx
 	lda #(`$83CB78)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$83CB78
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	plx
 	bcc +
@@ -16419,15 +16419,15 @@ rlASMCDialogueWithBGStart ; 8C/D0C3
 	.databank ?
 
 	lda lR18
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda lR18+1
-	sta wProcInput1,b
+	sta aProcSystem.wInput1,b
 	phx
 
 	lda #(`procDialogueWithBG)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procDialogueWithBG
-	sta lR43
+	sta lR44
 	jsl rlEventEngineCreateProcAndSetActive
 
 	plx
@@ -16461,7 +16461,7 @@ rlASMCChangeMapMusic ; 8C/D0ED
 	beq +
 
 	sta wCurrentMapMusic,b
-	sta aUnknown0004BA,b
+	sta aSoundSystem.aUnknown0004BA,b
 
 	+
 	rtl
@@ -16473,11 +16473,11 @@ rlASMCDialogueWithBGSetup ; 8C/D0FB
 	.autsiz
 	.databank ?
 
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 

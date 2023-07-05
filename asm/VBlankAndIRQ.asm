@@ -114,7 +114,7 @@ riIRQInterruptN ; 80/82B4
 	lda #$0000
 	tcd
 	lda TIMEUP,b
-	bit #TIMEUP.IRQFlag
+	bit #TIMEUP_IRQ
 	beq +
 	pea #<>(+)-1
 	jmp (wIRQPointer)
@@ -149,9 +149,9 @@ rlEnableVBlank ; 80/82DA
 
 	php
 	sep #$20
-	lda bBuf_NMITIMEN
-	ora #NMITIMEN.VBlankEnable
-	sta bBuf_NMITIMEN
+	lda bBufferNMITIMEN
+	ora #NMITIMEN_VBlank
+	sta bBufferNMITIMEN
 	sta NMITIMEN,b
 	plp
 	rtl
@@ -171,9 +171,9 @@ rlDisableVBlank ; 80/82E8
 
 	php
 	sep #$20
-	lda bBuf_NMITIMEN
-	and #~NMITIMEN.VBlankEnable
-	sta bBuf_NMITIMEN
+	lda bBufferNMITIMEN
+	and #~NMITIMEN_VBlank
+	sta bBufferNMITIMEN
 	sta NMITIMEN,b
 	plp
 	rtl
@@ -222,9 +222,9 @@ rlEnableForcedBlank ; 80/82FF
 	.databank `*
 
 	sep #$20
-	lda bBuf_INIDISP
-	ora #INIDISP.ForcedBlank
-	sta bBuf_INIDISP
+	lda bBufferINIDISP
+	ora #INIDISP_ForcedBlank
+	sta bBufferINIDISP
 	jsl rlHaltUntilVBlank
 	plb
 	plp
@@ -251,9 +251,9 @@ rlDisableForcedBlank ; 80/8312
 	.databank `*
 
 	sep #$20
-	lda bBuf_INIDISP
-	and #~INIDISP.ForcedBlank
-	sta bBuf_INIDISP
+	lda bBufferINIDISP
+	and #~INIDISP_ForcedBlank
+	sta bBufferINIDISP
 	jsl rlHaltUntilVBlank
 	plb
 	plp

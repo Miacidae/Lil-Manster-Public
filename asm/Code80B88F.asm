@@ -8,7 +8,7 @@ rsUnknown80B88F ; 80/B88F
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
 	stz bUnknown000F54,b
-	lda #HDMAEN_Setting(False, False, False, False, False, False, False, False)
+	lda #0 ; HDMAEN_Setting(False, False, False, False, False, False, False, False)
 	sta @l HDMAEN
 	rep #$30
 	jsl rlDMAPaletteAndOAMBuffer
@@ -63,11 +63,11 @@ rlUnknown80B907 ; 80/B907
 
 	stz $7EAD50
 	lda #<>rsUnknown80B948
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	lda #$0000
 	sta wMenuType,b
@@ -81,14 +81,14 @@ rlUnknown80B925 ; 80/B925
 
 	sep #$20
 	lda #INIDISP_Setting(False)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	lda #<>rsUnknown80B948
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	lda #$000D
 	sta wMenuType,b
@@ -103,21 +103,21 @@ rsUnknown80B948 ; 80/B948
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsl $8A9297
 	jsr rsUnknown80B8E2
 	jsl $85A898
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	rts
@@ -129,14 +129,14 @@ rlUnknown80B981 ; 80/B981
 
 	sep #$20
 	lda #INIDISP_Setting(False)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	lda #<>rsUnknown80B9C1
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -151,11 +151,11 @@ rlUnknown80B99E ; 80/B99E
 	lda #(rsUnknown809F74)>>8
 	sta lUnknown7EA4EC+1
 	lda #<>rsUnknown80B9C1
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -169,7 +169,7 @@ rsUnknown80B9C1 ; 80/B9C1
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsl $8593EB
@@ -178,9 +178,9 @@ rsUnknown80B9C1 ; 80/B9C1
 	jsl $859D16
 	phx
 	lda #(`$859AF9)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$859AF9
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	lda #$0001
@@ -191,16 +191,16 @@ rsUnknown80B9C1 ; 80/B9C1
 	lda #$000F
 	sta wMenuType,b
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 
 	+
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	rts
@@ -216,11 +216,11 @@ rlUnknown80BA1F ; 80/BA1F
 	lda #$0002
 	sta wMenuType,b
 	lda #<>rsUnknown80BA6B
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -236,14 +236,14 @@ rlUnknown80BA41 ; 80/BA41
 	sta wMenuType,b
 	sep #$20
 	lda #INIDISP_Setting(False)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	lda #<>rsUnknown80BA6B
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -256,7 +256,7 @@ rsUnknown80BA6B ; 80/BA6B
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsl rlUnknown809FE5
@@ -265,14 +265,14 @@ rsUnknown80BA6B ; 80/BA6B
 	jsr rsUnknown80B8E2
 	jsl $85B39B
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	rts
@@ -284,11 +284,11 @@ rlUnknown80BAAC ; 80/BAAC
 	.databank ?
 
 	lda #<>rsUnknown80BAC1
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -301,7 +301,7 @@ rsUnknown80BAC1 ; 80/BAC1
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsl $8593EB
@@ -311,14 +311,14 @@ rsUnknown80BAC1 ; 80/BAC1
 	sta wMenuType,b
 	jsl $85D323
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	rts
@@ -330,11 +330,11 @@ rlUnknown80BB04 ; 80/BB04
 	.databank ?
 
 	lda #<>rsUnknown80BB19
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -347,7 +347,7 @@ rsUnknown80BB19 ; 80/BB19
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsl $8593EB
@@ -358,13 +358,13 @@ rsUnknown80BB19 ; 80/BB19
 	jsl $8AB88C
 	phx
 	lda #(`procFadeOut1)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeOut1
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	jsl rlProcEngineFreeProc
 	clc
 	bra ++
@@ -375,12 +375,12 @@ rsUnknown80BB19 ; 80/BB19
 	+
 	plx
 	lda #(`$8ABAE1)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$8ABAE1
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	rts
@@ -392,11 +392,11 @@ rlUnknown80BB73 ; 80/BB73
 	.databank ?
 
 	lda #<>rsUnknown80BB88
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -409,7 +409,7 @@ rsUnknown80BB88 ; 80/BB88
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsl $8593EB
@@ -421,14 +421,14 @@ rsUnknown80BB88 ; 80/BB88
 	sta $7E4E04
 	jsl $85E321
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	rts
@@ -458,15 +458,15 @@ rlUnknown80BBE2 ; 80/BBE2
 	jsl $83901C
 	jsl rlUnknown809C9B
 	lda #<>rsUnknown80BC0E
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
 	lda #INIDISP_Setting(False)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	rtl
 
@@ -479,7 +479,7 @@ rsUnknown80BC0E ; 80/BC0E
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsl $8593EB
@@ -488,9 +488,9 @@ rsUnknown80BC0E ; 80/BC0E
 	jsr rsUnknown80B8E2
 	lda #$0007
 	sta wMenuType,b
-	jsl $81CE71 ; rlBuildInventoryWindow
+	jsl rlBuildInventoryWindow
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	rts
@@ -527,15 +527,15 @@ rlUnknown80BC41 ; 80/BC41
 
 	+
 	lda #<>rsUnknown80BC0E
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
 	lda #INIDISP_Setting(False)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	rtl
 
@@ -548,15 +548,15 @@ rlUnknown80BC9C ; 80/BC9C
 	lda #$FFFF
 	sta $7E4E12
 	lda #<>rsUnknown80BC0E
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
 	lda #INIDISP_Setting(False)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	lda #$000D
 	jsl rlUnknown808C87
@@ -569,11 +569,11 @@ rlUnknown80BCC7 ; 80/BCC7
 	.databank ?
 
 	lda #<>rsUnknown80BCDC
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -586,7 +586,7 @@ rsUnknown80BCDC ; 80/BCDC
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -599,14 +599,14 @@ rsUnknown80BCDC ; 80/BCDC
 	jsl $85E321
 	jsl $85EC3C
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	rts
@@ -618,11 +618,11 @@ rlUnknown80BD28 ; 80/BD28
 	.databank ?
 
 	lda #<>rsUnknown80BD3D
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -635,7 +635,7 @@ rsUnknown80BD3D ; 80/BD3D
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsl $8593EB
@@ -647,14 +647,14 @@ rsUnknown80BD3D ; 80/BD3D
 	sta $7E4DFE
 	jsl $85C3D2
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	rts
@@ -666,15 +666,15 @@ rlUnknown80BD87 ; 80/BD87
 	.databank ?
 
 	lda #<>rsUnknown80BDA4
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
 	lda #INIDISP_Setting(False)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	rtl
 
@@ -688,7 +688,7 @@ rsUnknown80BDA4 ; 80/BDA4
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsl $8593EB
@@ -698,14 +698,14 @@ rsUnknown80BDA4 ; 80/BDA4
 	sta wMenuType,b
 	jsl $85F385
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	rts
@@ -731,15 +731,15 @@ rlUnknown80BDE7 ; 80/BDE7
 	lda #$0078
 	sta @l wPrepUnitListLastScrollOffset
 	lda #<>rsUnknown80BE77
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
 	lda #INIDISP_Setting(False)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	plb
 	plp
@@ -782,15 +782,15 @@ rlUnknown80BE27 ; 80/BE27
 	sta wR1
 	jsl $839086
 	lda #<>rsUnknown80BE77
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
 	lda #INIDISP_Setting(False)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	plb
 	plp
@@ -805,7 +805,7 @@ rsUnknown80BE77 ; 80/BE77
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsl rlUnknown809FE5
@@ -821,22 +821,22 @@ rsUnknown80BE77 ; 80/BE77
 
 	phx
 	lda #(`procPrepItemsTradeInitiatorCursor)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procPrepItemsTradeInitiatorCursor
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 
 	+
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	rts
@@ -849,7 +849,7 @@ rsUnknown80BED7 ; 80/BED7
 	sep #$30
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	lda #HDMAEN_Setting(False, False, False, False, False, False, False, False)
+	lda #0 ; HDMAEN_Setting(False, False, False, False, False, False, False, False)
 	sta @l HDMAEN
 	rep #$30
 	jsl rlDMAPaletteAndOAMBuffer
@@ -910,7 +910,7 @@ rsUnknown80BF58 ; 80/BF58
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	lda wCurrentChapter,b
@@ -928,53 +928,53 @@ rsUnknown80BF58 ; 80/BF58
 	jsr rsUnknown809C55
 	jsr rsUnknown80BF3C
 	lda #$0000
-	sta @l wMapScrollWidthPixels
+	sta @l wMapScrollXPixels
 	lda #$0000
-	sta @l wMapScrollHeightPixels
+	sta @l wMapScrollYPixels
 	lda #$0000
-	sta @l wUnknown000E6D
+	sta @l wForcedMapScrollFlag
 	jsl rlUnknown80C082
 	jsl $83A73C
 	jsl rlUpdateUnitMapsAndFog
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #($83C0F6)>>8
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	sep #$20
 	lda #W12SEL_Setting(False, False, False, False, True, True, False, False)
-	sta bBuf_W12SEL
+	sta bBufferW12SEL
 	lda #W12SEL_Setting(False, False, False, False, False, False, False, False)
-	sta bBuf_W34SEL
+	sta bBufferW34SEL
 	lda #WOBJSEL_Setting(False, False, False, False, False, False, False, False)
-	sta bBuf_WOBJSEL
+	sta bBufferWOBJSEL
 	lda #WBGLOG_Setting(WLOG_ORR, WLOG_ORR, WLOG_ORR, WLOG_ORR)
-	sta bBuf_WBGLOG
+	sta bBufferWBGLOG
 	lda #WOBJLOG_Setting(WLOG_ORR, WLOG_ORR)
-	sta bBuf_WOBJLOG
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
-	lda #TS_Setting(False, False, True, False, False)
-	sta bBuf_TS
-	lda #TMW_Setting(False, True, False, False, False)
-	sta bBuf_TMW
-	lda #TSW_Setting(False, False, False, False, False)
-	sta bBuf_TSW
+	sta bBufferWOBJLOG
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
+	lda #T_Setting(False, False, True, False, False)
+	sta bBufferTS
+	lda #T_Setting(False, True, False, False, False)
+	sta bBufferTMW
+	lda #T_Setting(False, False, False, False, False)
+	sta bBufferTSW
 	lda #CGADSUB_Setting(CGADSUB_Add, True, False, True, False, False, False, False)
-	sta bBuf_CGADSUB
+	sta bBufferCGADSUB
 	lda #CGWSEL_Setting(False, True, CGWSEL_MathAlways, CGWSEL_BlackNever)
-	sta bBuf_CGWSEL
+	sta bBufferCGWSEL
 	rep #$20
 	lda #(`$9A83A1)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9A83A1
-	sta lR43
+	sta lR44
 	jsl rlHDMAArrayEngineCreateEntry
 	lda #(`aBG3TilemapBuffer)<<8
 	sta lR18+1
 	lda #<>aBG3TilemapBuffer
 	sta lR18
 	lda #$0800
-	sta wR19
+	sta lR19
 	lda #$02D0
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
@@ -987,11 +987,11 @@ rsUnknown80BF58 ; 80/BF58
 	ldx #$0000
 	jsl $94DA2A
 	lda #(`$9A83B8)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9A83B8
-	sta lR43
+	sta lR44
 	lda #$0005
-	sta wR39
+	sta wR40
 	jsl rlHDMAArrayEngineCreateEntryByIndex
 	pla
 	sta wCurrentChapter,b
@@ -999,18 +999,18 @@ rsUnknown80BF58 ; 80/BF58
 	jsl rlUnknown8C839F
 	jsl $91C9E1
 	lda #(`$9A9040)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9A9040
-	sta lR43
+	sta lR44
 	jsl rlUnknown82A701
 	lda #(`$9A9230)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9A9230
-	sta lR43
+	sta lR44
 	jsl rlUnknown82A701
 	jsl rlUnknown82A6C8
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -1029,9 +1029,9 @@ rlUnknown80C082 ; 80/C082
 	lda wCurrentChapter,b
 	jsl $848933
 	lda #<>$7FB0F5
-	sta wR19
+	sta lR19
 	lda #>`$7FB0F5
-	sta wR19+1
+	sta lR19+1
 	jsl rlAppendDecompList
 	lda #<>$7FB0F5
 	sta lR18
@@ -1050,11 +1050,11 @@ rlUnknown80C0BD ; 80/C0BD
 	.databank ?
 
 	lda #<>rsUnknown80C0D2
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -1068,7 +1068,7 @@ rsUnknown80C0D2 ; 80/C0D2
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -1077,13 +1077,13 @@ rsUnknown80C0D2 ; 80/C0D2
 	jsr rsUnknown80C2F0
 	phx
 	lda #(`$94ADE9)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$94ADE9
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -1098,9 +1098,9 @@ rlUnknown80C10B ; 80/C10B
 	jsr rsUnknown80C2F0
 	phx
 	lda #(`$94BE5F)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$94BE5F
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	rtl
@@ -1112,11 +1112,11 @@ rlUnknown80C11F ; 80/C11F
 	.databank ?
 
 	lda #<>rsUnknown80C134
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -1129,7 +1129,7 @@ rsUnknown80C134 ; 80/C134
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -1138,13 +1138,13 @@ rsUnknown80C134 ; 80/C134
 	jsr rsUnknown80C2F0
 	phx
 	lda #(`$94AE11)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$94AE11
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -1157,11 +1157,11 @@ rlUnknown80C16D ; 80/C16D
 	.databank ?
 
 	lda #<>rsUnknown80C182
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -1175,7 +1175,7 @@ rsUnknown80C182 ; 80/C182
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -1184,13 +1184,13 @@ rsUnknown80C182 ; 80/C182
 	jsr rsUnknown80C2F0
 	phx
 	lda #(`$94AE19)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$94AE19
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -1203,11 +1203,11 @@ rlUnknown80C1BB ; 80/C1BB
 	.databank ?
 
 	lda #<>rsUnknown80C1D0
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -1220,7 +1220,7 @@ rsUnknown80C1D0 ; 80/C1D0
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -1229,13 +1229,13 @@ rsUnknown80C1D0 ; 80/C1D0
 	jsr rsUnknown80C2F0
 	phx
 	lda #(`$94AE21)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$94AE21
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -1248,11 +1248,11 @@ rlUnknown80C209 ; 80/C209
 	.databank ?
 
 	lda #<>rsUnknown80C21E
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -1265,7 +1265,7 @@ rsUnknown80C21E ; 80/C21E
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -1274,13 +1274,13 @@ rsUnknown80C21E ; 80/C21E
 	jsr rsUnknown80C2F0
 	phx
 	lda #(`$94AE29)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$94AE29
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -1293,11 +1293,11 @@ rlUnknown80C257 ; 80/C257
 	.databank ?
 
 	lda #<>rsUnknown80C26C
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -1310,20 +1310,20 @@ rsUnknown80C26C ; 80/C26C
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
 	jsr rsUnknown80C2F0
 	phx
 	lda #(`$8EEA3D)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$8EEA3D
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -1338,13 +1338,13 @@ rlUnknown80C29D ; 80/C29D
 	lda #$0001
 	jsl $9A833C
 	lda #$0004
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #<>rsUnknown80C2BF
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A272)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A272
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -1357,20 +1357,20 @@ rsUnknown80C2BF ; 80/C2BF
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
 	jsr rsUnknown80C2F0
 	phx
 	lda #(`$8EE664)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$8EE664
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -1435,29 +1435,29 @@ rlUnknown80C356 ; 80/C356
 
 	sep #$20
 	lda wR1+1
-	and #BG12NBA.BG1Base << 4
+	and #BG12NBA_BG1_Address << 4
 	lsr a
 	lsr a
 	lsr a
 	lsr a
 	sta wR1+1
 	lda wR2+1
-	and #BG12NBA.BG2Base
+	and #BG12NBA_BG2_Address
 	ora wR1+1
 	sta wR1
 	lda wR3+1
-	and #BG34NBA.BG3Base << 4
+	and #BG34NBA_BG3_Address << 4
 	lsr a
 	lsr a
 	lsr a
 	lsr a
 	sta wR3+1
 	lda wR4+1
-	and #BG34NBA.BG4Base
+	and #BG34NBA_BG4_Address
 	ora wR3+1
 	sta wR3
 	lda wR5+1
-	and #OBSEL.Base << 5
+	and #OBSEL_Base << 5
 	lsr a
 	lsr a
 	lsr a
@@ -1465,41 +1465,41 @@ rlUnknown80C356 ; 80/C356
 	lsr a
 	sta wR5
 	lda wR6+1
-	and #BG1SC.Address
+	and #BGSC_Address
 	sta wR6
 	lda wR7+1
-	and #BG2SC.Address
+	and #BGSC_Address
 	sta wR7
 	lda wR8+1
-	and #BG3SC.Address
+	and #BGSC_Address
 	sta wR8
 	lda wR9+1
-	and #BG4SC.Address
+	and #BGSC_Address
 	sta wR9
-	lda bBuf_BG1SC
-	and #BG1SC.Size
+	lda bBufferBG1SC
+	and #BGSC_Size
 	ora wR6
-	sta bBuf_BG1SC
-	lda bBuf_BG2SC
-	and #BG2SC.Size
+	sta bBufferBG1SC
+	lda bBufferBG2SC
+	and #BGSC_Size
 	ora wR7
-	sta bBuf_BG2SC
-	lda bBuf_BG3SC
-	and #BG3SC.Size
+	sta bBufferBG2SC
+	lda bBufferBG3SC
+	and #BGSC_Size
 	ora wR8
-	sta bBuf_BG3SC
-	lda bBuf_BG4SC
-	and #BG4SC.Size
+	sta bBufferBG3SC
+	lda bBufferBG4SC
+	and #BGSC_Size
 	ora wR9
-	sta bBuf_BG4SC
-	lda bBuf_OBSEL
-	and #~OBSEL.Base
+	sta bBufferBG4SC
+	lda bBufferOBSEL
+	and #~OBSEL_Base
 	ora wR5
-	sta bBuf_OBSEL
+	sta bBufferOBSEL
 	lda wR1
-	sta bBuf_BG12NBA
+	sta bBufferBG12NBA
 	lda wR3
-	sta bBuf_BG34NBA
+	sta bBufferBG34NBA
 	plp
 	plb
 	rtl
@@ -1511,18 +1511,18 @@ rlUnknown80C3D6 ; 80/C3D6
 	.databank ?
 
 	lda #$0000
-	sta @l wUnknown000E6D
+	sta @l wForcedMapScrollFlag
 	lda #$0000
-	sta wMapScrollWidthPixels,b
+	sta wMapScrollXPixels,b
 	lda #$0000
-	sta wMapScrollHeightPixels,b
+	sta wMapScrollYPixels,b
 	jsl rlEventEngineClearActiveProcs
 	lda #<>rsUnknown80C402
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -1535,7 +1535,7 @@ rsUnknown80C402 ; 80/C402
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -1549,13 +1549,13 @@ rsUnknown80C402 ; 80/C402
 	sta wUnknown000302,b
 	phx
 	lda #(`$B9D634)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$B9D634
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -1568,11 +1568,11 @@ rlUnknown80C44B ; 80/C44B
 	.databank ?
 
 	lda #<>rsUnknown80C460
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -1585,7 +1585,7 @@ rsUnknown80C460 ; 80/C460
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -1600,13 +1600,13 @@ rsUnknown80C460 ; 80/C460
 	sta wUnknown000302,b
 	phx
 	lda #(`$B9E2E3)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$B9E2E3
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -1619,11 +1619,11 @@ rlUnknown80C4AD ; 80/C4AD
 	.databank ?
 
 	lda #<>rsUnknown80C4C2
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -1636,7 +1636,7 @@ rsUnknown80C4C2 ; 80/C4C2
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80		;Something to do with the turn count graphics
@@ -1649,13 +1649,13 @@ rsUnknown80C4C2 ; 80/C4C2
 	sta wUnknown000302,b
 	phx
 	lda #(`$94DD75)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$94DD75
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -1668,11 +1668,11 @@ rlUnknown80C507 ; 80/C507
 	.databank ?
 
 	lda #<>rsUnknown80C51C
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -1685,7 +1685,7 @@ rsUnknown80C51C ; 80/C51C
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -1698,13 +1698,13 @@ rsUnknown80C51C ; 80/C51C
 	sta wUnknown000302,b
 	phx
 	lda #(`$94E574)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$94E574
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -1717,11 +1717,11 @@ rlUnknown80C561 ; 80/C561
 	.databank ?
 
 	lda #<>rsUnknown80C576
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -1734,7 +1734,7 @@ rsUnknown80C576 ; 80/C576
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -1747,13 +1747,13 @@ rsUnknown80C576 ; 80/C576
 	sta wUnknown000302,b
 	phx
 	lda #(`$918012)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$918012
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -1770,11 +1770,11 @@ rlUnknown80C5BB ; 80/C5BB
 	lda #$0000
 	jsl $9A833C
 	lda #<>rsUnknown80C5DE
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -1787,7 +1787,7 @@ rsUnknown80C5DE ; 80/C5DE
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -1800,13 +1800,13 @@ rsUnknown80C5DE ; 80/C5DE
 	sta wUnknown000302,b
 	phx
 	lda #(`$8FE5DB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$8FE5DB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -1820,7 +1820,7 @@ rsUnknown80C623 ; 80/C623
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	lda #HDMAEN_Setting(False, False, False, False, False, False, False, False)
+	lda #0 ; HDMAEN_Setting(False, False, False, False, False, False, False, False)
 	sta @l HDMAEN
 	rep #$20
 	jsl rlProcessDMAStructArray
@@ -1935,7 +1935,7 @@ rsUnknown80C6FC ; 80/C6FC
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	lda #<>rsUnknown80C623
 	sta wVBlankPointer
@@ -1995,14 +1995,14 @@ rsUnknown80C6FC ; 80/C6FC
 	jsl $9AFD0E
 	sep #$20
 	lda #$0A
-	sta wJoyLongTime
+	sta wJoyRepeatDelay
 	lda #$04
-	sta wJoyShortTime
+	sta wJoyRepeatInterval
 	rep #$20
 	lda #(`$9AECCF)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9AECCF
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	lda #$0011
 	sta wUnknown000302,b
@@ -2159,7 +2159,7 @@ rlUnknown80C897 ; 80/C897
 	lda #<>aBG1TilemapBuffer
 	sta lR19
 	lda #$01C0
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 	jsl rlDMAByStruct
 
@@ -2174,7 +2174,7 @@ rlUnknown80C897 ; 80/C897
 	lda #<>aBG2TilemapBuffer
 	sta lR19
 	lda #$0400
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 	lda #(`$9FA4C0)<<8
 	sta lR18+1
@@ -2185,7 +2185,7 @@ rlUnknown80C897 ; 80/C897
 	lda #<>aBG2TilemapBuffer + $400
 	sta lR19
 	lda #$0400
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 	lda #(`$9FA4C0)<<8
 	sta lR18+1
@@ -2196,7 +2196,7 @@ rlUnknown80C897 ; 80/C897
 	lda #<>aBG2TilemapBuffer + $800
 	sta lR19
 	lda #$0400
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 	lda #(`$9FA4C0)<<8
 	sta lR18+1
@@ -2207,7 +2207,7 @@ rlUnknown80C897 ; 80/C897
 	lda #<>aBG2TilemapBuffer + $C00
 	sta lR19
 	lda #$0400
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 	jsl rlDMAByStruct
 
@@ -2224,56 +2224,56 @@ rlUnknown80C897 ; 80/C897
 	clc
 	adc lR18
 	sta lR18
-	lda #(`aBGPal4)<<8
+	lda #(`aBGPaletteBuffer.aPalette4)<<8
 	sta lR19+1
-	lda #<>aBGPal4
+	lda #<>aBGPaletteBuffer.aPalette4
 	sta lR19
-	lda #size(aBGPal4)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette4)
+	sta lR20
 	jsl rlBlockCopy
 	lda #(`$9FAA00)<<8
 	sta lR18+1
 	lda #<>$9FAA00
 	sta lR18
-	lda #(`aBGPal0)<<8
+	lda #(`aBGPaletteBuffer.aPalette0)<<8
 	sta lR19+1
-	lda #<>aBGPal0
+	lda #<>aBGPaletteBuffer.aPalette0
 	sta lR19
-	lda #size(aBGPal0) + size(aBGPal1)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette0) + size(aBGPaletteBuffer.aPalette1)
+	sta lR20
 	jsl rlBlockCopy
 	lda #(`$9FA9C0)<<8
 	sta lR18+1
 	lda #<>$9FA9C0
 	sta lR18
-	lda #(`aBGPal2)<<8
+	lda #(`aBGPaletteBuffer.aPalette2)<<8
 	sta lR19+1
-	lda #<>aBGPal2
+	lda #<>aBGPaletteBuffer.aPalette2
 	sta lR19
-	lda #size(aBGPal2) + size(aBGPal3)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette2) + size(aBGPaletteBuffer.aPalette3)
+	sta lR20
 	jsl rlBlockCopy
 	lda #(`$9E8240)<<8
 	sta lR18+1
 	lda #<>$9E8240
 	sta lR18
-	lda #(`aOAMPal5)<<8
+	lda #(`aOAMPaletteBuffer.aPalette5)<<8
 	sta lR19+1
-	lda #<>aOAMPal5
+	lda #<>aOAMPaletteBuffer.aPalette5
 	sta lR19
-	lda #size(aOAMPal5)
-	sta wR20
+	lda #size(aOAMPaletteBuffer.aPalette5)
+	sta lR20
 	jsl rlBlockCopy
 	lda #(`$9E8220)<<8
 	sta lR18+1
 	lda #<>$9E8220
 	sta lR18
-	lda #(`aOAMPal7)<<8
+	lda #(`aOAMPaletteBuffer.aPalette7)<<8
 	sta lR19+1
-	lda #<>aOAMPal7
+	lda #<>aOAMPaletteBuffer.aPalette7
 	sta lR19
-	lda #size(aOAMPal7)
-	sta wR20
+	lda #size(aOAMPaletteBuffer.aPalette7)
+	sta lR20
 	jsl rlBlockCopy
 	jsl $8591F0
 	lda #30
@@ -2288,7 +2288,7 @@ rlUnknown80C897 ; 80/C897
 	jsl $859233
 	jsl $859205
 	lda #CGADSUB_Setting(CGADSUB_Subtract, False, False, True, False, False, False, False)
-	sta bBuf_CGADSUB
+	sta bBufferCGADSUB
 	lda #7
 	sta wR0
 	lda #54
@@ -2481,58 +2481,58 @@ rlUnknown80CC11 ; 80/CC11
 	.databank ?
 
 	sep #$20
-	lda bBuf_BG1SC
-	and #~BG1SC.Size
-	ora #BGSC_Setting(BGSize64x32)
-	sta bBuf_BG1SC
-	lda bBuf_BG2SC
-	and #~BG2SC.Size
-	ora #BGSC_Setting(BGSize64x32)
-	sta bBuf_BG2SC
-	lda bBuf_BG3SC
-	and #~BG3SC.Size
-	ora #BGSC_Setting(BGSize64x32)
-	sta bBuf_BG3SC
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
-	lda #TS_Setting(False, False, False, False, False)
-	sta bBuf_TS
-	lda #TMW_Setting(False, False, False, False, False)
-	sta bBuf_TMW
-	lda #TSW_Setting(False, False, False, False, False)
-	sta bBuf_TSW
+	lda bBufferBG1SC
+	and #~BGSC_Size
+	ora #BGSC_Setting(0, BGSC_64x32)
+	sta bBufferBG1SC
+	lda bBufferBG2SC
+	and #~BGSC_Size
+	ora #BGSC_Setting(0, BGSC_64x32)
+	sta bBufferBG2SC
+	lda bBufferBG3SC
+	and #~BGSC_Size
+	ora #BGSC_Setting(0, BGSC_64x32)
+	sta bBufferBG3SC
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
+	lda #T_Setting(False, False, False, False, False)
+	sta bBufferTS
+	lda #T_Setting(False, False, False, False, False)
+	sta bBufferTMW
+	lda #T_Setting(False, False, False, False, False)
+	sta bBufferTSW
 	lda #W12SEL_Setting(False, False, False, False, False, False, False, False)
-	sta bBuf_W12SEL
+	sta bBufferW12SEL
 	lda #W34SEL_Setting(False, False, False, False, False, False, False, False)
-	sta bBuf_W34SEL
+	sta bBufferW34SEL
 	lda #WOBJSEL_Setting(False, False, False, False, False, False, False, False)
-	sta bBuf_WOBJSEL
+	sta bBufferWOBJSEL
 	lda #0
-	sta bBuf_WH0
+	sta bBufferWH0
 	lda #255
-	sta bBuf_WH1
+	sta bBufferWH1
 	lda #0
-	sta bBuf_WH2
-	sta bBuf_WH3
+	sta bBufferWH2
+	sta bBufferWH3
 	lda #WBGLOG_Setting(WLOG_ORR, WLOG_ORR, WLOG_ORR, WLOG_ORR)
-	sta bBuf_WBGLOG
-	sta bBuf_WOBJLOG
+	sta bBufferWBGLOG
+	sta bBufferWOBJLOG
 	lda #CGWSEL_Setting(False, False, CGWSEL_MathAlways, CGWSEL_BlackNever)
-	sta bBuf_CGWSEL
+	sta bBufferCGWSEL
 	lda #CGADSUB_Setting(CGADSUB_Subtract, False, False, True, False, False, False, False)
-	sta bBuf_CGADSUB
+	sta bBufferCGADSUB
 	lda #COLDATA_Setting(0, True, True, True)
-	sta bBuf_COLDATA_1
-	sta bBuf_COLDATA_2
-	sta bBuf_COLDATA_3
+	sta bBufferCOLDATA_1
+	sta bBufferCOLDATA_2
+	sta bBufferCOLDATA_3
 	rep #$20
-	stz wBuf_BG1HOFS
-	stz wBuf_BG3HOFS
-	stz wBuf_BG2HOFS
-	stz wBuf_BG2VOFS
+	stz wBufferBG1HOFS
+	stz wBufferBG3HOFS
+	stz wBufferBG2HOFS
+	stz wBufferBG2VOFS
 	lda #$0000
-	sta wBuf_BG1VOFS
-	sta wBuf_BG3VOFS
+	sta wBufferBG1VOFS
+	sta wBufferBG3VOFS
 	rts
 
 rlUnknown80CC7D ; 80/CC7D
@@ -2542,31 +2542,31 @@ rlUnknown80CC7D ; 80/CC7D
 	.databank ?
 
 	lda #(`aUnknown80CCC6)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>aUnknown80CCC6
-	sta lR43
+	sta lR44
 	lda #$0003
-	sta wR39
+	sta wR40
 	jsl rlHDMAArrayEngineCreateEntryByIndex
 	lda #(`aUnknown80CD11)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>aUnknown80CD11
-	sta lR43
+	sta lR44
 	lda #$0004
-	sta wR39
+	sta wR40
 	jsl rlHDMAArrayEngineCreateEntryByIndex
 	lda #(`aUnknown80CD5B)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>aUnknown80CD5B
-	sta lR43
+	sta lR44
 	lda #$0005
-	sta wR39
+	sta wR40
 	lda #(`aUnknown80CE84)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>aUnknown80CE84
-	sta lR43
+	sta lR44
 	lda #$0006
-	sta wR39
+	sta wR40
 	jsl rlHDMAArrayEngineCreateEntryByIndex
 	rts
 
@@ -3004,9 +3004,9 @@ rlUnknown80CF55 ; 80/CF8D
 	.databank `*
 
 	lda #(`aUnknown80C6F3)<<8
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	lda #<>aUnknown80C6F3
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #$0000
 
 	-
@@ -3018,7 +3018,7 @@ rlUnknown80CF55 ; 80/CF8D
 	sta wUnknown001AD1,b
 	jsl $90E3F7
 	lda #$2000
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	jsl $90E868
 	lda #$8000
 	bit #$4000
@@ -3030,7 +3030,7 @@ rlUnknown80CF55 ; 80/CF8D
 
 	+
 	lda #$2400
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	+
 	lda $7FB2A9
@@ -3369,7 +3369,7 @@ rsUnknown80D207 ; 80/D207
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	lda #HDMAEN_Setting(False, False, False, False, False, False, False, False)
+	lda #0 ; HDMAEN_Setting(False, False, False, False, False, False, False, False)
 	sta @l HDMAEN
 	rep #$20
 	jsl $9BC26F
@@ -3415,7 +3415,7 @@ rsUnknown80D276 ; 80/D276
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	lda #HDMAEN_Setting(False, False, False, False, False, False, False, False)
+	lda #0 ; HDMAEN_Setting(False, False, False, False, False, False, False, False)
 	sta @l HDMAEN
 	rep #$20
 	jsl $9BC26F
@@ -3447,7 +3447,7 @@ rlUnknown80D2CE ; 80/D2CE
 	.databank ?
 
 	lda #$0001
-	sta $7FAA14
+	sta wMapBattleFlag
 
 	lda $7EA67F
 	cmp #$0002
@@ -3484,9 +3484,9 @@ rsUnknown80D30E ; 80/D30E
 	.databank ?
 
 	lda #(`$9A8A2D)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9A8A2D
-	sta lR43
+	sta lR44
 	jsl rlHDMAArrayEngineCreateEntry
 	rts
 
@@ -3499,13 +3499,13 @@ rlUnknown80D31D ; 80/D31D
 	lda #$0001
 	sta $7E41AC
 	lda #$0001
-	sta $7FAA14
+	sta wMapBattleFlag
 	lda #<>rsUnknown80D369
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	jsr rsUnknown80D461
 	rtl
@@ -3519,13 +3519,13 @@ rlUnknown80D343 ; 80/D343
 	lda #$00FF
 	sta $7E41AC
 	lda #$0001
-	sta $7FAA14
+	sta wMapBattleFlag
 	lda #<>rsUnknown80D369
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	jsr rsUnknown80D461
 	rtl
@@ -3539,7 +3539,7 @@ rsUnknown80D369 ; 80/D369
 	php
 	sep #$20
 	lda #INIDISP_Setting(True)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	sta INIDISP,b
 	rep #$20
 	jsr rsUnknown80D44A
@@ -3565,29 +3565,29 @@ rsUnknown80D369 ; 80/D369
 	rep #$20
 	jsl $9B8000
 	lda #(`$9C8095)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9C8095
-	sta lR43
+	sta lR44
 	jsl rlUnknown82A701
 	lda #(`$9C8000)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9C8000
-	sta lR43
+	sta lR44
 	jsl rlUnknown82A701
 	lda #(`$9C800F)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9C800F
-	sta lR43
+	sta lR44
 	jsl rlUnknown82A701
 	lda #(`$9C8050)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9C8050
-	sta lR43
+	sta lR44
 	jsl rlUnknown82A701
 	lda #(`$9C8078)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9C8078
-	sta lR43
+	sta lR44
 	jsl rlUnknown82A701
 	jsl rlUnknown82A6C8
 	lda #$000B
@@ -3600,7 +3600,7 @@ rsUnknown80D369 ; 80/D369
 	jsl rlEnableVBlank
 	sep #$20
 	lda #$00
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	sta INIDISP,b
 	rep #$20
 	plp
@@ -3619,7 +3619,7 @@ rlUnknown80D433 ; 80/D433
 	lda #<>$7EB000
 	sta lR18
 	lda #$4000
-	sta wR19
+	sta lR19
 	lda #$0000
 	jsl rlBlockFillWord
 	rtl
@@ -3635,7 +3635,7 @@ rsUnknown80D44A ; 80/D44A
 	lda #<>$7FE000
 	sta lR18
 	lda #$2000
-	sta wR19
+	sta lR19
 	lda #$0000
 	jsl rlBlockFillWord
 	rts
@@ -4725,7 +4725,7 @@ rsUnknown80DBAF ; 80/DBAF
 	rep #$20
 	sep #$20
 	lda #INIDISP_Setting(True)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	sta INIDISP,b
 	rep #$20
 	jsl rlDisableVBlank
@@ -4745,14 +4745,14 @@ rsUnknown80DBAF ; 80/DBAF
 	jsl $9BEE3B
 	jsl $9BEFD1
 	lda #(`$9C80A4)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9C80A4
-	sta lR43
+	sta lR44
 	jsl rlUnknown82A701
 	lda #(`$9C80B3)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9C80B3
-	sta lR43
+	sta lR44
 	jsl rlUnknown82A701
 	jsl rlUnknown82A6C8
 	lda #$0000
@@ -4765,7 +4765,7 @@ rsUnknown80DBAF ; 80/DBAF
 	jsl rlEnableVBlank
 	sep #$20
 	lda #INIDISP_Setting(True)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	sta INIDISP,b
 	rep #$20
 	plp

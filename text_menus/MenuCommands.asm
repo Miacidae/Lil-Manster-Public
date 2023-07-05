@@ -1,585 +1,539 @@
 ; Unit action command pointers
 ; Reorder these pointers to change the action command order
 
-* = $038000
-.logical lorom($038000, 1)
 
-menu_command_pointers		.block
+	.section MenuCommandPointersSection
 
-.word    <>menu_commands._Seize_command
-.word    <>menu_commands._Arrive_command
-.word    <>menu_commands._Talk_command
-.word    <>menu_commands._Attack_command
-.word    <>menu_commands._Capture_command
-.word    <>menu_commands._Staff_command
-.word    <>menu_commands._Steal_command
-.word    <>menu_commands._Dance_command
-.word    <>menu_commands._Visit_command
-.word    <>menu_commands._Chest_command
-.word    <>menu_commands._Bridge_command
-.word    <>menu_commands._Door_command
-.word    <>menu_commands._Supply_command
-.word    <>menu_commands._Armory_command
-.word    <>menu_commands._Vendor_command
-.word    <>menu_commands._Secret_command
-.word    <>menu_commands._Arena_command
-.word    <>menu_commands._Rescue_command
-.word    <>menu_commands._Drop_command
-.word    <>menu_commands._Transfer_command
-.word    <>menu_commands._Transfer2_command
-.word    <>menu_commands._Item_command
-.word    <>menu_commands._Trade_command
-.word    <>menu_commands._Release_command
-.word    <>menu_commands._Retreat_command
-.word    <>menu_commands._Mount_command
-.word    <>menu_commands._Dismount_command
-.word    <>menu_commands._Animation_command
-.word    <>menu_commands._Wait_command
-.word    $0000
+		.word    <>aMenuCommandSeize
+		.word    <>aMenuCommandArrive
+		.word    <>aMenuCommandTalk
+		.word    <>aMenuCommandAttack
+		.word    <>aMenuCommandCapture
+		.word    <>aMenuCommandStaff
+		.word    <>aMenuCommandSteal
+		.word    <>aMenuCommandDance
+		.word    <>aMenuCommandVisit
+		.word    <>aMenuCommandChest
+		.word    <>aMenuCommandBridge
+		.word    <>aMenuCommandDoor
+		.word    <>aMenuCommandSupply
+		.word    <>aMenuCommandArmory
+		.word    <>aMenuCommandVendor
+		.word    <>aMenuCommandSecret
+		.word    <>aMenuCommandArena
+		.word    <>aMenuCommandRescue
+		.word    <>aMenuCommandDrop
+		.word    <>aMenuCommandTransfer
+		.word    <>aMenuCommandTransfer2
+		.word    <>aMenuCommandItem
+		.word    <>aMenuCommandTrade
+		.word    <>aMenuCommandRelease
+		.word    <>aMenuCommandRetreat
+		.word    <>aMenuCommandMount
+		.word    <>aMenuCommandDismount
+		.word    <>aMenuCommandAnimation
+		.word    <>aMenuCommandWait
+		.word    0
 
-.bend
-.here
+	.endsection MenuCommandPointersSection
+
 
 ;	Unit action command names
 ;	Character limit: 12, counting the two spaces
 ;	However, the textboxes can be extended at the end of this file.
 
-* = $03E952
-.logical lorom($03E952, 1)
+	.section MenuCommandDataSection
 
-menu_commands		.block
+		aMenuCommandSeize
+			.long $878570
+			.long 0
+			.long 0
+			.long $878EE0
+			.long $87846C
+			.long 0
+			.text "  Seize \n"
+		
+		aMenuCommandRetreat
+			.long $8785B3
+			.long 0
+			.long 0
+			.long $878F08
+			.long $87846C
+			.long 0
+			.text "  Escape\n"
+		
+		aMenuCommandArrive
+			.long $8785E5
+			.long 0
+			.long 0
+			.long $878F08
+			.long $87846C
+			.long 0
+			.text "  Arrive\n"
+		
+		aMenuCommandTalk
+			.long $878557
+			.long 0
+			.long 0
+			.long $878BA6
+			.long $87846C
+			.long 0
+			.text "  Talk\n"
+		
+		aMenuCommandAttack
+			.long $8786D8
+			.long 0
+			.long 0
+			.long $8784F8
+			.long $87846C
+			.long 0
+			.text "  Attack\n"
+		
+		aMenuCommandCapture
+			.long $879B37
+			.long 0
+			.long 0
+			.long $878517
+			.long $87846C
+			.long 0
+			.text "  Capture \n"
+		
+		aMenuCommandSteal
+			.long $8799B7
+			.long 0
+			.long 0
+			.long $879A7A
+			.long $87846C
+			.long 0
+			.text "  Steal \n"
+		
+		aMenuCommandArena
+			.long $87915C
+			.long 0
+			.long 0
+			.long $8791B4
+			.long $87846C
+			.long 0
+			.text "  Arena \n"
+		
+		aMenuCommandArmory
+			.long $878AE9
+			.long 0
+			.long 0
+			.long $878536
+			.long $87846C
+			.long 0
+			.text "  Ar[mory \n"
+		
+		aMenuCommandDoor
+			.long $878F14
+			.long 0
+			.long 0
+			.long $878F7E
+			.long $87846C
+			.long 0
+			.text "  Door\n"
+		
+		aMenuCommandSecret
+			.long $878B59
+			.long 0
+			.long 0
+			.long $878536
+			.long $87846C
+			.long 0
+			.text "  Secret\n"
+		
+		aMenuCommandVisit
+			.long $87861F
+			.long 0
+			.long 0
+			.long $878CDA
+			.long $87846C
+			.long 0
+			.text "  Visit \n"
+		
+		aMenuCommandSupply
+			.long $879D78
+			.long 0
+			.long 0
+			.long $879DB0
+			.long $87846C
+			.long 0
+			.text "  Supply\n"
+		
+		aMenuCommandVendor
+			.long $878B21
+			.long 0
+			.long 0
+			.long $878536
+			.long $87846C
+			.long 0
+			.text "  Vendor\n"
+		
+		aMenuCommandBridge
+			.long $878FF6
+			.long 0
+			.long 0
+			.long $879063
+			.long $87846C
+			.long 0
+			.text "  Bridge\n"
+		
+		aMenuCommandChest
+			.long $8790DB
+			.long 0
+			.long 0
+			.long $879130
+			.long $87846C
+			.long 0
+			.text "  Chest \n"
+		
+		aMenuCommandDance
+			.long $8793AB
+			.long 0
+			.long 0
+			.long $8793CC
+			.long $87846C
+			.long 0
+			.text "  Dance \n"
+		
+		aMenuCommandWait
+			.long $87963A
+			.long 0
+			.long 0
+			.long $8784CB
+			.long $87846C
+			.long 0
+			.text "  )Wait \n"
+		
+		aMenuCommandStaff
+			.long $87A31E
+			.long 0
+			.long 0
+			.long $87A2F9
+			.long $87846C
+			.long 0
+			.text "  Staff \n"
+		
+		aMenuCommandItem
+			.long $87A8FA
+			.long 0
+			.long 0
+			.long $87A90F
+			.long $87846C
+			.long 0
+			.text "  Ite[m \n"
+		
+		aMenuCommandRescue
+			.long $87988E
+			.long 0
+			.long 0
+			.long $8798A7
+			.long $87846C
+			.long 0
+			.text "  Rescue\n"
+		
+		aMenuCommandDrop
+			.long $879667
+			.long 0
+			.long 0
+			.long $8796F4
+			.long $87846C
+			.long 0
+			.text "  Drop\n"
+		
+		aMenuCommandRelease
+			.long $879CF4
+			.long 0
+			.long 0
+			.long $879D12
+			.long $87846C
+			.long 0
+			.text "  Release \n"
+		
+		aMenuCommandTransfer
+			.long $879DDD
+			.long 0
+			.long 0
+			.long $879E87
+			.long $87846C
+			.long 0
+			.text "  Give\n"
+		
+		aMenuCommandTransfer2
+			.long $87A03E
+			.long 0
+			.long 0
+			.long $87A0E6
+			.long $87846C
+			.long 0
+			.text "  Take\n"
+		
+		aMenuCommandTrade
+			.long $878D0D
+			.long 0
+			.long 0
+			.long $878DEC
+			.long $87846C
+			.long 0
+			.text "  Trade \n"
+		
+		aMenuCommandMount
+			.long $879474
+			.long 0
+			.long 0
+			.long $879532
+			.long $87846C
+			.long 0
+			.text "  (Mount\n"
+		
+		aMenuCommandDismount
+			.long $8794CF
+			.long 0
+			.long 0
+			.long $879549
+			.long $87846C
+			.long 0
+			.text "  Dis[mount \n"
+		
+		aMenuCommandAnimation
+			.long AnimationByUnitMenuCommandFix
+			.long 0
+			.long 0
+			.long $8791EC
+			.long $87846C
+			.long 0
+			.text "  An{im}ation \n"
 
-_Seize_command
-	.long lorom($038570, 1)
-	.long $000000
-	.long $000000
-	.long lorom($038EE0, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Seize "
-	.word $0000
+	.endsection MenuCommandDataSection
 
-_Retreat_command
-	.long lorom($0385B3, 1)
-	.long $000000
-	.long $000000
-	.long lorom($038F08, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Escape"
-	.word $0000
 
-_Arrive_command
-	.long lorom($0385E5, 1)
-	.long $000000
-	.long $000000
-	.long lorom($038F08, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Arrive"
-	.word $0000
-
-_Talk_command
-	.long lorom($038557, 1)
-	.long $000000
-	.long $000000
-	.long lorom($038BA6, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Talk"
-	.word $0000
-
-_Attack_command
-	.long lorom($0386D8, 1)
-	.long $000000
-	.long $000000
-	.long lorom($0384F8, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Attack"
-	.word $0000
-
-_Capture_command
-	.long lorom($039B37, 1)
-	.long $000000
-	.long $000000
-	.long lorom($038517, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Capture "
-	.word $0000
-
-_Steal_command
-	.long lorom($0399B7, 1)
-	.long $000000
-	.long $000000
-	.long lorom($039A7A, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Steal "
-	.word $0000
-
-_Arena_command
-	.long lorom($03915C, 1)
-	.long $000000
-	.long $000000
-	.long lorom($0391B4, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Arena "
-	.word $0000
-
-_Armory_command
-	.long lorom($038AE9, 1)
-	.long $000000
-	.long $000000
-	.long lorom($038536, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Ar[mory "
-	.word $0000
-
-_Door_command
-	.long lorom($038F14, 1)
-	.long $000000
-	.long $000000
-	.long lorom($038F7E, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Door"
-	.word $0000
-
-_Secret_command
-	.long lorom($038B59, 1)
-	.long $000000
-	.long $000000
-	.long lorom($038536, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Secret"
-	.word $0000
-
-_Visit_command
-	.long lorom($03861F, 1)
-	.long $000000
-	.long $000000
-	.long lorom($038CDA, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Visit "
-	.word $0000
-
-_Supply_command
-	.long lorom($039D78, 1)
-	.long $000000
-	.long $000000
-	.long lorom($039DB0, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Supply"
-	.word $0000
-
-_Vendor_command
-	.long lorom($038B21, 1)
-	.long $000000
-	.long $000000
-	.long lorom($038536, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Vendor"
-	.word $0000
-
-_Bridge_command
-	.long lorom($038FF6, 1)
-	.long $000000
-	.long $000000
-	.long lorom($039063, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Bridge"
-	.word $0000
-
-_Chest_command
-	.long lorom($0390DB, 1)
-	.long $000000
-	.long $000000
-	.long lorom($039130, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Chest "
-	.word $0000
-
-_Dance_command
-	.long lorom($0393AB, 1)
-	.long $000000
-	.long $000000
-	.long lorom($0393CC, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Dance "
-	.word $0000
-
-_Wait_command
-	.long lorom($03963A, 1)
-	.long $000000
-	.long $000000
-	.long lorom($0384CB, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  )Wait "
-	.word $0000
-
-_Staff_command
-	.long lorom($03A31E, 1)
-	.long $000000
-	.long $000000
-	.long lorom($03A2F9, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Staff "
-	.word $0000
-
-_Item_command
-	.long lorom($03A8FA, 1)
-	.long $000000
-	.long $000000
-	.long lorom($03A90F, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Ite[m "
-	.word $0000
-
-_Rescue_command
-	.long lorom($03988E, 1)
-	.long $000000
-	.long $000000
-	.long lorom($0398A7, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Rescue"
-	.word $0000
-
-_Drop_command
-	.long lorom($039667, 1)
-	.long $000000
-	.long $000000
-	.long lorom($0396F4, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Drop"
-	.word $0000
-
-_Release_command
-	.long lorom($039CF4, 1)
-	.long $000000
-	.long $000000
-	.long lorom($039D12, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Release "
-	.word $0000
-
-_Transfer_command
-	.long lorom($039DDD, 1)
-	.long $000000
-	.long $000000
-	.long lorom($039E87, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Give"
-	.word $0000
-
-_Transfer2_command
-	.long lorom($03A03E, 1)
-	.long $000000
-	.long $000000
-	.long lorom($03A0E6, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Take"
-	.word $0000
-
-_Trade_command
-	.long lorom($038D0D, 1)
-	.long $000000
-	.long $000000
-	.long lorom($038DEC, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Trade "
-	.word $0000
-
-_Mount_command
-	.long lorom($039474, 1)
-	.long $000000
-	.long $000000
-	.long lorom($039532, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  (Mount"
-	.word $0000
-
-_Dismount_command
-	.long lorom($0394CF, 1)
-	.long $000000
-	.long $000000
-	.long lorom($039549, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  Dis[mount "
-	.word $0000
-
-_Animation_command
-	.long AnimationByUnitMenuCommandFix ; vanilla: $0391DC
-	.long $000000
-	.long $000000
-	.long lorom($0391EC, 1)
-	.long lorom($03846C, 1)
-	.long $000000
-	.text "  An{im}ation "
-	.word $0000
-
-.bend
 
 ;	Item action command names
 ;	Character limit: 8, counting the two spaces
 ;	However, the textboxes can be extended at the end of this file.
 
-item_command_text				.block
+	.section ItemUseCommandDataSection
 
-_use_command
-	.long lorom($03AC25, 1)
-	.long $000000
-	.long $000000
-	.long lorom($03AC90, 1)
-	.long lorom($03ABEE, 1)
-	.long $000000
-	.text "  Use "
-.word $0000
+		aItemUseCommandUse
+			.long $87AC25
+			.long 0
+			.long 0
+			.long $87AC90
+			.long $87ABEE
+			.long 0
+			.text "  Use \n"
+		
+		aItemUseCommandEquip
+			.long $87AC51
+			.long 0
+			.long 0
+			.long $87ACE9
+			.long $87ABEE
+			.long 0
+			.text "  Equip \n"
+		
+		aItemUseCommandDiscard
+			.long $87AC76
+			.long 0
+			.long 0
+			.long $87AD23
+			.long $87ABEE
+			.long 0
+			.text "  Drop\n"
+		
+	.endsection ItemUseCommandDataSection
 
-_equip_command
-	.long lorom($03AC51, 1)
-	.long $000000
-	.long $000000
-	.long lorom($03ACE9, 1)
-	.long lorom($03ABEE, 1)
-	.long $000000
-	.text "  Equip "
-.word $0000
-
-_discard_command
-	.long lorom($03AC76, 1)
-	.long $000000
-	.long $000000
-	.long lorom($03AD23, 1)
-	.long lorom($03ABEE, 1)
-	.long $000000
-	.text "  Drop"
-.word $0000
-
-.bend
-.here
 
 ;	Item action command pointers
 
-* = $03AAD1
-.logical lorom($03AAD1, 1)
 
-item_command_pointers			.block
+	.section ItemUseCommandPointersSection
 
-.word <>item_command_text._use_command
-.word <>item_command_text._equip_command
-.word <>item_command_text._discard_command
+		.word <>aItemUseCommandUse
+		.word <>aItemUseCommandEquip
+		.word <>aItemUseCommandDiscard
 
-.bend
-.here
+	.endsection ItemUseCommandPointersSection
+
+
 
 ;	Discard Yes-No command pointers
 
-* = $03AD56
-.logical lorom($03AD56, 1)
+	.section DiscardCommandPointersSection
 
-discard_pointers				.block
+		.word <>aDiscardCommandYes
+		.word <>aDiscardCommandNo
 
-.word <>discard_text._discard_yes
-.word <>discard_text._discard_no
+	.endsection DiscardCommandPointersSection
 
-.bend
 
 ;	Discard Yes-No command names
 ;	Character limit: 8, counting the two spaces
 
-discard_text					.block
+	.section DiscardCommandDataSection
 
-_discard_yes
-	.long $000000
-	.long $000000
-	.long $000000
-	.long lorom($05077A, 1)
-	.long lorom($050788, 1)
-	.long $000000
-	.text "  Yes "
-.word $0000
+		aDiscardCommandYes
+			.long 0
+			.long 0
+			.long 0
+			.long $8A877A
+			.long $8A8788
+			.long 0
+			.text "  Yes \n"
+		
+		aDiscardCommandNo
+			.long 0
+			.long 0
+			.long 0
+			.long $8A8788
+			.long $8A8788
+			.long 0
+			.text "  +No \n"
 
-_discard_no
-	.long $000000
-	.long $000000
-	.long $000000
-	.long lorom($050788, 1)
-	.long lorom($050788, 1)
-	.long $000000
-	.text "  +No "
-.word $0000
-
-.bend
-.here
+	.endsection DiscardCommandDataSection
 
 ;	Animation command pointers
 
-* = $039205
-.logical lorom($039205, 1)
+	.section AnimationCommandPointersSection
 
-animation_command_pointers			.block
+		.word <>aAnimationCommandNormal
+		.word <>aAnimationCommandMap
+		.word 0
 
-.word <>animation_command_text._normal
-.word <>animation_command_text._map
-.word $0000
-
-.bend
+	.endsection AnimationCommandPointersSection
 
 ;	Animation command names
 ;	Character limit: 8, counting the two spaces
 
-animation_command_text				.block
+	.section AnimationCommandDataSection
 
-_normal
-	.long $000000
-	.long $000000
-	.long $000000
-	.long lorom($392D3, 1)
-	.long lorom($392FF, 1)
-	.long $000000
-	.text "  On"
-.word $0000
+		aAnimationCommandNormal
+			.long 0
+			.long 0
+			.long 0
+			.long $8792D3
+			.long $8792FF
+			.long 0
+			.text "  On\n"
+		
+		aAnimationCommandMap
+			.long 0
+			.long 0
+			.long 0
+			.long $87930B
+			.long $8792FF
+			.long 0
+			.text "  Off \n"
 
-_map
-	.long $000000
-	.long $000000
-	.long $000000
-	.long lorom($3930B, 1)
-	.long lorom($392FF, 1)
-	.long $000000
-	.text "  Off "
-.word $0000
-
-.bend
-.here
+	.endsection AnimationCommandDataSection
 
 ;	Select/R global command pointers
 
-* = $0502E7
-.logical lorom($0502E7, 1)
 
-menu_command_2_pointers		.block
+	.section MapMenuCommandPointersSection
 
-.word	<>menu_commands_2._Unit_command
-.word	<>menu_commands_2._Status_command
-.word	<>menu_commands_2._Options_command
-.word	<>menu_commands_2._Suspend_command
-.word	<>menu_commands_2._End_command
-.word	$0000
+		.word	<>aMapMenuCommandUnit
+		.word	<>aMapMenuCommandStatus
+		.word	<>aMapMenuCommandOptions
+		.word	<>aMapMenuCommandSuspend
+		.word	<>aMapMenuCommandEnd
+		.word	0
 
-.bend
+	.endsection MapMenuCommandPointersSection
 
 ;	Select/R global command names
 ;	Character limit: 10, counting the two spaces
 ;	However, the textboxes can be extended at the end of this file.
 
-menu_commands_2				.block
+	.section MapMenuCommandDataSection
 
-_Unit_command
-	.long $000000
-	.long $000000
-	.long $000000
-	.long lorom($0504D4, 1)
-	.long lorom($0504BD, 1)
-	.long $000000
-	.text "  Unit"
-	.word $0000
+		aMapMenuCommandUnit
+			.long 0
+			.long 0
+			.long 0
+			.long $8A84D4
+			.long $8A84BD
+			.long 0
+			.text "  Unit"
+			.word $0000
+		
+		aMapMenuCommandStatus
+			.long 0
+			.long 0
+			.long 0
+			.long $8A84FF
+			.long $8A84BD
+			.long 0
+			.text "  Status"
+			.word $0000
+		
+		aMapMenuCommandOptions
+			.long 0
+			.long 0
+			.long 0
+			.long $8A8555
+			.long $8A84BD
+			.long 0
+			.text "  Options "
+			.word $0000
+		
+		aMapMenuCommandSuspend
+			.long 0
+			.long 0
+			.long 0
+			.long $8A86D1
+			.long $8A84BD
+			.long 0
+			.text "  Suspend "
+			.word $0000
+		
+		aMapMenuCommandEnd
+			.long 0
+			.long 0
+			.long 0
+			.long $8A848F
+			.long $8A84BD
+			.long 0
+			.text "  End "
+			.word $0000
 
-_Status_command
-	.long $000000
-	.long $000000
-	.long $000000
-	.long lorom($0504FF, 1)
-	.long lorom($0504BD, 1)
-	.long $000000
-	.text "  Status"
-	.word $0000
+	.endsection MapMenuCommandDataSection
 
-_Options_command
-	.long $000000
-	.long $000000
-	.long $000000
-	.long lorom($050555, 1)
-	.long lorom($0504BD, 1)
-	.long $000000
-	.text "  Options "
-	.word $0000
 
-_Suspend_command
-	.long $000000
-	.long $000000
-	.long $000000
-	.long lorom($0506D1, 1)
-	.long lorom($0504BD, 1)
-	.long $000000
-	.text "  Suspend "
-	.word $0000
 
-_End_command
-	.long $000000
-	.long $000000
-	.long $000000
-	.long lorom($05048F, 1)
-	.long lorom($0504BD, 1)
-	.long $000000
-	.text "  End "
-	.word $0000
 
-.bend
-.here
 
 ;	Extending text boxes
 
 * = $038388
-.logical lorom($038388, 1)
+.logical mapped($038388)
 .byte $08 ; Unit action commands
 .here
 
 * = $0503D9
-.logical lorom($0503D9, 1)
+.logical mapped($0503D9)
 .byte $07 ; Select global commands
 .here
 
 * = $050430
-.logical lorom($050430, 1)
+.logical mapped($050430)
 .byte $07 ; R global commands (when all units have moved)
 .here
 
 ;	Moving boxes to fit size changes
 
 * = $038370
-.logical lorom($038370, 1)
+.logical mapped($038370)
 .byte $17 ; Unit action commands
 .here
 
 * = $050400
-.logical lorom($050400, 1)
+.logical mapped($050400)
 .byte $17 ; Select global commands
 .here
 
 * = $05045D
-.logical lorom($05045D, 1)
+.logical mapped($05045D)
 .byte $17 ; R global commands
 .here

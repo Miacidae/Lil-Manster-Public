@@ -1,42 +1,21 @@
 
+  .virtual #0
 
-	TypeSword   = 00
-	TypeLance   = 01
-	TypeAxe     = 02
-	TypeBow     = 03
-	TypeStaff   = 04
-	TypeFire    = 05
-	TypeThunder = 06
-	TypeWind    = 07
-	TypeLight   = 08
-	TypeDark    = 09
+    WeaponEffects .block 
 
-	TypeItem    = 11
+      NoneWeaponEffect      = NoneWeaponEffectPointerWeaponEffectTableEntry 			- aWeaponEffectPointers
+      PoisonWeaponEffect    = PoisonWeaponEffectPointerWeaponEffectTableEntry 		- aWeaponEffectPointers
+      DevilWeaponEffect     = DevilWeaponEffectPointerWeaponEffectTableEntry 			- aWeaponEffectPointers
+      LifestealWeaponEffect = LifestealWeaponEffectPointerWeaponEffectTableEntry 	- aWeaponEffectPointers
+      PetrifyWeaponEffect   = PetrifyWeaponEffectPointerWeaponEffectTableEntry 		- aWeaponEffectPointers
+      HelWeaponEffect       = HelWeaponEffectPointerWeaponEffectTableEntry 				- aWeaponEffectPointers
+      BerserkWeaponEffect   = BerserkWeaponEffectPointerWeaponEffectTableEntry 		- aWeaponEffectPointers
+      SleepWeaponEffect     = SleepWeaponEffectPointerWeaponEffectTableEntry 			- aWeaponEffectPointers
 
-	WeaponRankIncrement = 50
+    .bend
 
-	RankE = WeaponRankIncrement * 1
-	RankD = WeaponRankIncrement * 2
-	RankC = WeaponRankIncrement * 3
-	RankB = WeaponRankIncrement * 4
-	RankA = WeaponRankIncrement * 5
+  .endvirtual
 
-	TraitBallista     = %00000001 ; $01
-	TraitMagicRanged  = %00000010 ; $02
-	TraitWeapon       = %00000100 ; $04
-	TraitTome         = %00001000 ; $08
-	TraitStaff        = %00010000 ; $10
-	TraitUnbreakable  = %00100000 ; $20
-	TraitUnsellable   = %01000000 ; $40
-	TraitBroken       = %10000000 ; $80
-	
-	PoisonEffect	  = 1*2
-	CurseEffect		  = 2*2
-	DrainEffect		  = 3*2
-	StoneEffect		  = 4*2
-	HelEffect		  = 5*2
-	BerserkEffect	  = 6*2
-	SleepEffect		  = 7*2
 	
 	LuckRingUse       = 1*2
 	LifeRingUse       = 2*2
@@ -54,7 +33,7 @@
 	DoorKeyUse        = 13*2
 	BridgeKeyUse      = 14*2
 	LockpickUse       = 15*2
-	VulneraryUse	  = 16*2
+	VulneraryUse	  	= 16*2
 	PureWaterUse      = 17*2
 	TorchUse          = 18*2
 	AntitoxinUse      = 19*2
@@ -91,6 +70,6 @@
 	RewarpUse         = 48*2
 	
 	StaminaDrinkUse   = 51*2
-	KiaUse			  = 52*2
+	KiaUse			  		= 52*2
 	
 	

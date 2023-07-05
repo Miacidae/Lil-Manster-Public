@@ -1,4 +1,4 @@
-ch17Amullerspawn
+dialogueChapter17AMullerSpawn
 
 .byte Right_slot
 .word LoadPortrait
@@ -67,7 +67,7 @@ ch17Amullerspawn
 .byte EndText
 
 
-ch17Asaiasnicolov
+dialogueChapter17ASaiasNicolov
 
 .byte Right_slot
 .word LoadPortrait
@@ -142,7 +142,7 @@ ch17Asaiasnicolov
 .byte EndText
 
 
-ch17Asaiassoldier
+dialogueChapter17ASaiasSoldier
 
 .byte Right_slot
 .word LoadPortrait
@@ -212,7 +212,7 @@ ch17Asaiassoldier
 .byte EndText
 
 
-ch17Asaiasleif
+dialogueChapter17ASaiasLeif
 
 .byte Right_slot
 .word LoadPortrait
@@ -293,7 +293,7 @@ ch17Asaiasleif
 .byte EndText
 
 
-ch17Asaiasishtar
+dialogueChapter17ASaiasIshtar
 
 .byte Right_slot
 .word LoadPortrait
@@ -384,7 +384,7 @@ ch17Asaiasishtar
 .byte EndText
 
 
-ch17Amishakarin
+dialogueChapter17AMishaKarin
 
 .byte Right_slot
 .word LoadPortrait
@@ -426,7 +426,7 @@ ch17Amishakarin
 .byte EndText
 
 
-ch17Amagicringhouse
+dialogueChapter17AMagicRingHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -446,7 +446,7 @@ ch17Amagicringhouse
 .byte EndText
 
 
-ch17Apurewaterhouse
+dialogueChapter17APureWaterHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -461,7 +461,7 @@ ch17Apurewaterhouse
 .byte EndText
 
 
-ch17Arescuehouse
+dialogueChapter17ARescueHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -481,7 +481,7 @@ ch17Arescuehouse
 .byte EndText
 
 
-ch17Awarphouse
+dialogueChapter17AWarpHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -501,7 +501,7 @@ ch17Awarphouse
 .byte EndText
 
 
-ch17Asarah
+dialogueChapter17ASara
 
 .byte Right_slot
 .word LoadPortrait
@@ -588,7 +588,7 @@ ch17Asarah
 .byte EndText
 
 
-ch17Aopening1
+dialogueChapter17AOpening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -727,7 +727,7 @@ ch17Aopening1
 .byte EndText
 
 
-ch17Aopening2
+dialogueChapter17AOpening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -807,7 +807,7 @@ ch17Aopening2
 .byte EndText
 
 
-ch17Aopening3
+dialogueChapter17AOpening3
 
 .byte Right_slot
 .word LoadPortrait
@@ -871,7 +871,7 @@ ch17Aopening3
 .byte EndText
 
 
-ch17Aclosing
+dialogueChapter17AClosing
 
 .byte Right_slot
 .word LoadPortrait
@@ -917,7 +917,7 @@ ch17Aclosing
 .byte EndText
 
 
-ch17Amishajoin
+dialogueChapter17AMishaJoin
 
 .byte Left_slot
 .byte ScrollText
@@ -1103,7 +1103,7 @@ ch17Amishajoin
 .byte EndText
 
 
-ch17Awm1
+dialogueChapter17AWorldMap
 
 .text "Having breached Fort Nordrhein,"
 .byte WaitForA

@@ -130,6 +130,4 @@
 .byte	7		; Archer (Z Enemy)
 .byte	58		; Hero (F)
 
-
-
 .here

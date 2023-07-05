@@ -3,7 +3,6 @@
 .include "ChapterNamePointers.asm"
 .include "ObjectivePointers.asm"
 .include "RankingPointers.asm"
-.include "IntroPointers.asm"
 .include "EndingWhitePointers.asm"
 .include "EpilogueDescriptionsPointers.asm"
 .include "EpilogueTitlesPointers.asm"

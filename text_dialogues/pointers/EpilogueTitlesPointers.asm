@@ -1,57 +1,57 @@
 * = $07DFB9
-.logical lorom($07DFB9, 1)
+.logical mapped($07DFB9)
 
 aEpilogueTitleTable ; 8F/DFB9
-	.long leiftitle ; Leif
-	.long finntitle ; Finn
-	.long orsintitle ; Orsin
-	.long halvantitle ; Halvan
-	.long eyveltitle ; Eyvel
-	.long dagdartitle ; Dagdar
-	.long ralphtitle ; Ralph
-	.long martytitle ; Marty
-	.long ronantitle ; Ronan
-	.long mirandatitle ; Miranda
-	.long safiyatitle ; Sapphie
-	.long laratitle ; Lara
-	.long brightontitle ; Brighton
-	.long fergustitle ; Fergus
-	.long edatitle ; Eda
-	.long asbeltitle ; Asvel
-	.long machatitle ; Matria
-	.long hickstitle ; Hicks
-	.long nannatitle ; Nanna
-	.long selphinatitle ; Selphina
-	.long dalsintitle ; Dahlson
-	.long calliontitle ; Callion
-	.long shivatitle ; Shiva
-	.long pantitle ; Perne
-	.long gladetitle ; Glade
-	.long kanetitle ; Kane
-	.long albatitle ; Alba
-	.long roberttitle ; Robert
-	.long fredtitle ; Fred
-	.long olwentitle ; Olwen
-	.long cedtitle ; CedChp23
-	.long lithistitle ; Lifis
-	.long karintitle ; Karin
-	.long deantitle ; Dean
-	.long shanamtitle ; Shanam
-	.long trudetitle ; Trude
-	.long tanyatitle ; Tanya
-	.long linoantitle ; Linoan
-	.long mishatitle ; Mischa
-	.long salemtitle ; Salem
-	.long schrofftitle ; Schroff
-	.long mareetatitle ; Mareeta
-	.long tinatitle ; Tina
+	.long dialogueEpilogueLeifTitle ; Leif
+	.long dialogueEpilogueFinnTitle ; Finn
+	.long dialogueEpilogueOrsinTitle ; Orsin
+	.long dialogueEpilogueHalvanTitle ; Halvan
+	.long dialogueEpilogueEyvelTitle ; Eyvel
+	.long dialogueEpilogueDagdarTitle ; Dagdar
+	.long dialogueEpilogueRalphTitle ; Ralph
+	.long dialogueEpilogueMartyTitle ; Marty
+	.long dialogueEpilogueRonanTitle ; Ronan
+	.long dialogueEpilogueMirandaTitle ; Miranda
+	.long dialogueEpilogueSafyTitle ; Safy
+	.long dialogueEpilogueLaraTitle ; Lara
+	.long dialogueEpilogueBrightonTitle ; Brighton
+	.long dialogueEpilogueFergusTitle ; Fergus
+	.long dialogueEpilogueEdaTitle ; Eda
+	.long dialogueEpilogueAsbelTitle ; Asvel
+	.long dialogueEpilogueMachaTitle ; Matria
+	.long dialogueEpilogueHicksTitle ; Hicks
+	.long dialogueEpilogueNannaTitle ; Nanna
+	.long dialogueEpilogueSelphinaTitle ; Selphina
+	.long dialogueEpilogueDalsinTitle ; Dahlson
+	.long dialogueEpilogueCallionTitle ; Callion
+	.long dialogueEpilogueShivaTitle ; Shiva
+	.long dialogueEpiloguePerneTitle ; Perne
+	.long dialogueEpilogueGladeTitle ; Glade
+	.long dialogueEpilogueKaneTitle ; Kane
+	.long dialogueEpilogueAlbaTitle ; Alba
+	.long dialogueEpilogueRobertTitle ; Robert
+	.long dialogueEpilogueFredTitle ; Fred
+	.long dialogueEpilogueOlwenTitle ; Olwen
+	.long dialogueEpilogueCedTitle ; CedChp23
+	.long dialogueEpilogueLifisTitle ; Lifis
+	.long dialogueEpilogueKarinTitle ; Karin
+	.long dialogueEpilogueDeanTitle ; Dean
+	.long dialogueEpilogueShannamTitle ; Shanam
+	.long dialogueEpilogueTrudeTitle ; Trude
+	.long dialogueEpilogueTanyaTitle ; Tanya
+	.long dialogueEpilogueLinoanTitle ; Linoan
+	.long dialogueEpilogueMishaTitle ; Mischa
+	.long dialogueEpilogueSalemTitle ; Salem
+	.long dialogueEpilogueSchroffTitle ; Schroff
+	.long dialogueEpilogueMareetaTitle ; Mareeta
+	.long dialogueEpilogueTinaTitle ; Tina
 	.long $000000 ; GunterDialogue
-	.long amaldatitle ; Amalda
-	.long conomortitle ; Conomore
-	.long homertitle ; Homer
-	.long dermotttitle ; Diarmuid
-	.long sarahtitle ; Sara
-	.long saiastitle ; Saias
+	.long dialogueEpilogueAmaldaTitle ; Amalda
+	.long dialogueEpilogueConomorTitle ; Conomore
+	.long dialogueEpilogueHomerTitle ; Homer
+	.long dialogueEpilogueDiarmuidTitle ; Diarmuid
+	.long dialogueEpilogueSaraTitle ; Sara
+	.long dialogueEpilogueSaiasTitle ; Saias
 	.long $000000 ; Raydrik
 	.long $000000 ; JuliusSaiasPortrait
 	.long $000000 ; Veld
@@ -81,7 +81,7 @@ aEpilogueTitleTable ; 8F/DFB9
 	.long $000000 ; Bowie
 	.long $000000 ; Lina
 	.long $000000 ; MercenaryMyrmidon1
-	.long galzustitle ; Galzus
+	.long dialogueEpilogueGalzusTitle ; Galzus
 	.long $000000 ; MansterCavalier
 	.long $000000 ; MansterPaladin
 	.long $000000 ; MansterBowKnight
@@ -92,7 +92,7 @@ aEpilogueTitleTable ; 8F/DFB9
 	.long $000000 ; BanditBrigand1
 	.long $000000 ; BanditHunter
 	.long $000000 ; BanditWarrior
-	.long $000000 ; Rumaigh
+	.long $000000 ; Lemay
 	.long $000000 ; Gomer
 	.long $000000 ; Merloch
 	.long $000000 ; ThracianWyvernKnight1
@@ -213,7 +213,7 @@ aEpilogueTitleTable ; 8F/DFB9
 	.long $000000 ; ArmoredSwordEnemy1
 	.long $000000 ; SoldierEnemy
 	.long $000000 ; FriegeBallista3
-	.long iliostitle ; Ilios
+	.long dialogueEpilogueIliosTitle ; Ilios
 	.long $000000 ; SilessiaPegasusRider2
 	.long $000000 ; FriegeMageKnight1
 	.long $000000 ; PaladinEnemy
@@ -238,7 +238,7 @@ aEpilogueTitleTable ; 8F/DFB9
 	.long $000000 ; ArcherEnemy2
 	.long $000000 ; MyrmidonEnemy2
 	.long $000000 ; MyrmidonEnemy3
-	.long xaviertitle ; Xavier
+	.long dialogueEpilogueXavierTitle ; Xavier
 	.long $000000 ; XavierArmor1
 	.long $000000 ; XavierArmor2
 	.long $000000 ; XavierArmor3

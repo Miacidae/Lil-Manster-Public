@@ -8,10 +8,10 @@ rlProcSoundByteInit ; 82/A350
 	.autsiz
 	.databank ?
 
-	lda wProcInput0,b
-	sta aProcBody0,b,x
+	lda aProcSystem.wInput0,b
+	sta aProcSystem.aBody0,b,x
 
-	lda wProcInput1,b
+	lda aProcSystem.wInput1,b
 
 	jsl rlUnknown808C7D
 	rtl
@@ -32,21 +32,21 @@ rlProcSoundByteOnCycle2 ; 81/A35F
 	.autsiz
 	.databank ?
 
-	lda aUnknown0004BA,b
+	lda aSoundSystem.aUnknown0004BA,b
 	bne ++
 
 	lda wUnknown0004F6,b
 	bit #$0030
 	bne ++
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	cmp wUnknown000510,b
 	beq +
 
-	sta aUnknown0004BA,b
+	sta aSoundSystem.aUnknown0004BA,b
 
 	lda #<>rlProcSoundByteOnCycle3
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 	bra ++
 
 	+
@@ -62,7 +62,7 @@ rlProcSoundByteOnCycle3 ; 81/A384
 	.autsiz
 	.databank ?
 
-	lda aUnknown0004BA,b
+	lda aSoundSystem.aUnknown0004BA,b
 	bne +
 
 	jsl rlProcEngineFreeProc

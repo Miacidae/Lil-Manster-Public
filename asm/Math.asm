@@ -13,11 +13,11 @@ rlSignedMultiply32By32 ; 80/A91F
 	; a 64-bit number so it just uses two dws
 
 	; Inputs:
-	; dwR10: signed 32-bit multiplier
-	; dwR12: signed 32-bit multiplicand
+	; wR10: signed 32-bit multiplier
+	; wR12: signed 32-bit multiplicand
 
 	; Outputs:
-	; dwR14: signed 64-bit result
+	; wR14: signed 64-bit result
 
 	; Get sign of result
 	; upper bit set for both -> 0
@@ -26,14 +26,14 @@ rlSignedMultiply32By32 ; 80/A91F
 
 	; We'll check the N flag later
 
-	lda dwR10+2
-	eor dwR12+2
+	lda wR10+2
+	eor wR12+2
 	php
 
 	; check if multiplier negative
 	; if it is, negate it
 
-	lda dwR10+2
+	lda wR10+2
 	bpl _PositiveMultiplier
 
 	; Negation is just
@@ -42,30 +42,30 @@ rlSignedMultiply32By32 ; 80/A91F
 	; NOT is just val EOR -1
 
 	clc
-	lda dwR10
+	lda wR10
 	eor #-1
 	adc #1
-	sta dwR10
-	lda dwR10+2
+	sta wR10
+	lda wR10+2
 	eor #-1
 	adc #0
-	sta dwR10+2
+	sta wR10+2
 
 	_PositiveMultiplier
 
 	; Same for multiplicand
 
-	lda dwR12+2
+	lda wR12+2
 	bpl _PositiveMultiplicand
 	clc
-	lda dwR12
+	lda wR12
 	eor #-1
 	adc #1
-	sta dwR12
-	lda dwR12+2
+	sta wR12
+	lda wR12+2
 	eor #-1
 	adc #0
-	sta dwR12+2
+	sta wR12+2
 
 	_PositiveMultiplicand
 
@@ -81,22 +81,22 @@ rlSignedMultiply32By32 ; 80/A91F
 	; Negate result
 
 	clc
-	lda dwR14
+	lda wR14
 	eor #-1
 	adc #1
-	sta dwR14
-	lda dwR14+2
+	sta wR14
+	lda wR14+2
 	eor #-1
 	adc #0
-	sta dwR14+2
-	lda dwR16
+	sta wR14+2
+	lda wR16
 	eor #-1
 	adc #0
-	sta dwR16
-	lda dwR16+2
+	sta wR16
+	lda wR16+2
 	eor #-1
 	adc #0
-	sta dwR16+2
+	sta wR16+2
 
 	_PositiveResult
 	rtl
@@ -112,11 +112,11 @@ rlSignedDivide32By32 ; 80/A987
 	; and returns a signed 32-bit number
 
 	; Inputs:
-	; dwR12: 32-bit signed dividend
-	; dwR14: 32-bit signed divisor
+	; wR12: 32-bit signed dividend
+	; wR14: 32-bit signed divisor
 
 	; Outputs:
-	; dwR12: 32-bit signed result
+	; wR12: 32-bit signed result
 
 	; Get sign of result
 	; upper bit set for both -> 0
@@ -125,54 +125,54 @@ rlSignedDivide32By32 ; 80/A987
 
 	; We'll check the N flag later
 
-	lda dwR12+2
-	eor dwR14+2
+	lda wR12+2
+	eor wR14+2
 	php
 
 	; check if dividend negative
 	; if it is, negate it
 
-	lda dwR12+2
+	lda wR12+2
 	bpl _PositiveDividend
 	clc
-	lda dwR12
+	lda wR12
 	eor #-1
 	adc #1
-	sta dwR12
-	lda dwR12+2
+	sta wR12
+	lda wR12+2
 	eor #-1
 	adc #0
-	sta dwR12+2
+	sta wR12+2
 
 	_PositiveDividend
 
 	; Same for divisor
 
-	lda dwR14+2
+	lda wR14+2
 	bpl _PositiveDivisor
 	clc
-	lda dwR14
+	lda wR14
 	eor #-1
 	adc #1
-	sta dwR14
-	lda dwR14+2
+	sta wR14
+	lda wR14+2
 	eor #-1
 	adc #0
-	sta dwR14+2
+	sta wR14+2
 
 	_PositiveDivisor
 
 	; Multiply dividend by $100
 
 	sep #$20
-	lda dwR12+2
-	sta dwR12+3
-	lda dwR12+1
-	sta dwR12+2
-	lda dwR12
-	sta dwR12+1
+	lda wR12+2
+	sta wR12+3
+	lda wR12+1
+	sta wR12+2
+	lda wR12
+	sta wR12+1
 	lda #$00
-	sta dwR12
+	sta wR12
 	rep #$20
 
 	; Divide
@@ -182,14 +182,14 @@ rlSignedDivide32By32 ; 80/A987
 	; Multiply result by $100
 
 	sep #$20
-	lda dwR12+2
-	sta dwR12+3
-	lda dwR12+1
-	sta dwR12+2
-	lda dwR12
-	sta dwR12+1
+	lda wR12+2
+	sta wR12+3
+	lda wR12+1
+	sta wR12+2
+	lda wR12
+	sta wR12+1
 	lda #$00
-	sta dwR12
+	sta wR12
 	rep #$20
 
 	; Fetch result sign (N flag from earlier)
@@ -198,14 +198,14 @@ rlSignedDivide32By32 ; 80/A987
 	bpl _PositiveResult
 
 	clc
-	lda dwR12
+	lda wR12
 	eor #-1
 	adc #1
-	sta dwR12
-	lda dwR12+2
+	sta wR12
+	lda wR12+2
 	eor #-1
 	adc #0
-	sta dwR12+2
+	sta wR12+2
 
 	_PositiveResult
 	rtl
@@ -225,7 +225,7 @@ rlUnsignedMultiply16By16High ; 80/AA03
 	; wR35: 16-bit unsigned multiplicand
 
 	; Outputs:
-	; dwR36: 32-bit unsigned result
+	; wR36: 32-bit unsigned result
 
 	phx
 	php
@@ -236,8 +236,8 @@ rlUnsignedMultiply16By16High ; 80/AA03
 	.databank `*
 
 	rep #$30
-	stz dwR36
-	stz dwR36+2
+	stz wR36
+	stz wR36+2
 	ldx #16
 
 	-
@@ -246,12 +246,12 @@ rlUnsignedMultiply16By16High ; 80/AA03
 
 	lda wR35
 	clc
-	adc dwR36+2
-	sta dwR36+2
+	adc wR36+2
+	sta wR36+2
 
 	+
-	ror dwR36+2
-	ror dwR36
+	ror wR36+2
+	ror wR36
 	dec x
 	bne -
 	plb
@@ -272,7 +272,7 @@ rlUnsignedMultiply16By16 ; 80/AA27
 	; wR11: 16-bit unsigned multiplicand
 
 	; Outputs:
-	; dwR12: 32-bit unsigned result
+	; wR12: 32-bit unsigned result
 
 	phb
 	phk
@@ -297,7 +297,7 @@ rlUnsignedMultiply16By16 ; 80/AA27
 	nop
 	nop
 	lda RDMPY,b
-	sta dwR12
+	sta wR12
 
 	; Upper bytes
 
@@ -309,7 +309,7 @@ rlUnsignedMultiply16By16 ; 80/AA27
 	nop
 	nop
 	ldx RDMPY,b
-	stx dwR12+2
+	stx wR12+2
 
 	; Next multiply out middle bytes
 
@@ -320,10 +320,10 @@ rlUnsignedMultiply16By16 ; 80/AA27
 	stx WRMPYB,b
 	nop
 	nop
-	lda dwR12+1
+	lda wR12+1
 	clc
 	adc RDMPY,b
-	sta dwR12+1
+	sta wR12+1
 	bcc +
 
 	inc y
@@ -335,16 +335,16 @@ rlUnsignedMultiply16By16 ; 80/AA27
 	stx WRMPYB,b
 	nop
 	nop
-	lda dwR12+1
+	lda wR12+1
 	clc
 	adc RDMPY,b
-	sta dwR12+1
+	sta wR12+1
 	bcc +
 
 	inc y
 
 	+
-	sty dwR12+3
+	sty wR12+3
 	plp
 	pla
 	ply
@@ -361,11 +361,11 @@ rlUnsignedMultiply32By32 ; 80/AA8F
 	; and return a 64-bit unsigned number
 
 	; Inputs:
-	; dwR10: 32-bit unsigned multiplier
-	; dwR12: 32-bit unsigned multiplicand
+	; wR10: 32-bit unsigned multiplier
+	; wR12: 32-bit unsigned multiplicand
 
 	; Outputs:
-	; dwR14: 64-bit unsigned result
+	; wR14: 64-bit unsigned result
 
 	phx
 	php
@@ -376,30 +376,30 @@ rlUnsignedMultiply32By32 ; 80/AA8F
 	.databank `*
 
 	rep #$30
-	stz dwR14
-	stz dwR14+2
-	stz dwR16
-	stz dwR16+2
+	stz wR14
+	stz wR14+2
+	stz wR16
+	stz wR16+2
 	ldx #32
 
 	-
-	lsr dwR10+2
-	ror dwR10
+	lsr wR10+2
+	ror wR10
 	bcc +
 
-	lda dwR12
+	lda wR12
 	clc
-	adc dwR16
-	sta dwR16
-	lda dwR12+2
-	adc dwR16+2
-	sta dwR16+2
+	adc wR16
+	sta wR16
+	lda wR12+2
+	adc wR16+2
+	sta wR16+2
 
 	+
-	ror dwR16+2
-	ror dwR16
-	ror dwR14+2
-	ror dwR14
+	ror wR16+2
+	ror wR16
+	ror wR14+2
+	ror wR14
 	dec x
 	bne -
 
@@ -432,7 +432,7 @@ rlUnsignedDivide16By8 ; 80/AAC3
 
 	rep #$30
 	lda wR13
-	sta WRDIV,b
+	sta WRDIVA,b
 	sep #$20
 	lda wR14
 	sta WRDIVB,b
@@ -573,11 +573,11 @@ rlUnsignedDivide32By32 ; 80/AB45
 	; returns a 32-bit unsigned number
 
 	; Inputs:
-	; dwR12: 32-bit unsigned dividend
-	; dwR14: 32-bit unsigned divisor
+	; wR12: 32-bit unsigned dividend
+	; wR14: 32-bit unsigned divisor
 
 	; Outputs:
-	; dwR10: 32-bit result
+	; wR10: 32-bit result
 
 	phx
 	phy
@@ -589,14 +589,14 @@ rlUnsignedDivide32By32 ; 80/AB45
 	.databank `*
 
 	rep #$30
-	stz dwR10+2
-	stz dwR10
-	lda dwR14+2
-	ora dwR14 ; 32-bit divisor
+	stz wR10+2
+	stz wR10
+	lda wR14+2
+	ora wR14 ; 32-bit divisor
 	bne + ; clear result if div by 0
 
-	stz dwR12+2
-	stz dwR12
+	stz wR12+2
+	stz wR12
 	bra _End
 
 	+
@@ -604,27 +604,27 @@ rlUnsignedDivide32By32 ; 80/AB45
 	clc
 
 	-
-	rol dwR12
-	rol dwR12+2
+	rol wR12
+	rol wR12+2
 	dec x
 	beq _End
 
-	rol dwR10
-	rol dwR10+2
-	lda dwR10+2
-	ora dwR10
+	rol wR10
+	rol wR10+2
+	lda wR10+2
+	ora wR10
 	beq -
 
-	lda dwR10
+	lda wR10
 	sec
-	sbc dwR14
+	sbc wR14
 	tay
-	lda dwR10+2
-	sbc dwR14+2
+	lda wR10+2
+	sbc wR14+2
 	bcc -
 
-	sta dwR10+2
-	sty dwR10
+	sta wR10+2
+	sty wR10
 	bra -
 
 	_End

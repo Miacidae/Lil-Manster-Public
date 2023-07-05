@@ -1,4 +1,4 @@
-ch18xavierrecruitment
+dialogueChapter18XavierRecruitment
 
 .byte Right_slot
 .word LoadPortrait
@@ -131,7 +131,7 @@ ch18xavierrecruitment
 .byte EndText
 
 
-ch18villager1
+dialogueChapter18Villager1
 
 .byte Right_slot
 .word LoadPortrait
@@ -156,7 +156,7 @@ ch18villager1
 .byte EndText
 
 
-ch18villager2
+dialogueChapter18Villager2
 
 .byte Right_slot
 .word LoadPortrait
@@ -182,7 +182,7 @@ ch18villager2
 .byte EndText
 
 
-ch18villager3
+dialogueChapter18Villager3
 
 .byte Right_slot
 .word LoadPortrait
@@ -217,7 +217,7 @@ ch18villager3
 .byte EndText
 
 
-ch18villager4
+dialogueChapter18Villager4
 
 .byte Right_slot
 .word LoadPortrait
@@ -245,7 +245,7 @@ ch18villager4
 .byte EndText
 
 
-ch18villager5
+dialogueChapter18Villager5
 
 .byte Right_slot
 .word LoadPortrait
@@ -284,7 +284,7 @@ ch18villager5
 .byte EndText
 
 
-ch18villager6
+dialogueChapter18Villager6
 
 .byte Right_slot
 .word LoadPortrait
@@ -314,7 +314,7 @@ ch18villager6
 .byte EndText
 
 
-ch18villager7
+dialogueChapter18Villager7
 
 .byte Right_slot
 .word LoadPortrait
@@ -340,11 +340,11 @@ ch18villager7
 .byte EndText
 
 
-ch18villager8
+dialogueChapter18Villager8
 
 .byte Right_slot
 .word LoadPortrait
-.word $0062	;brown hair Rumaigh
+.word $0062	;brown hair Lemay
 
 .byte Left_slot
 .word LoadPortrait
@@ -370,7 +370,7 @@ ch18villager8
 .byte EndText
 
 
-ch18opening1
+dialogueChapter18Opening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -503,7 +503,7 @@ ch18opening1
 .byte EndText
 
 
-ch18opening2
+dialogueChapter18Opening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -576,7 +576,7 @@ ch18opening2
 .byte EndText
 
 
-ch18closing1
+dialogueChapter18Closing1
 
 .byte Right_slot
 .word LoadPortrait
@@ -613,7 +613,7 @@ ch18closing1
 .byte EndText
 
 
-ch18closing2finn
+dialogueChapter18Closing2Finn
 
 .byte Left_slot
 .byte ScrollText
@@ -641,7 +641,7 @@ ch18closing2finn
 .byte EndText
 
 
-ch18closing3miranda
+dialogueChapter18Closing3Miranda
 
 .byte Left_slot
 .byte ScrollText
@@ -698,7 +698,7 @@ ch18closing3miranda
 .byte EndText
 
 
-ch18closing4
+dialogueChapter18Closing4
 
 .byte Left_slot
 .byte ScrollText
@@ -793,7 +793,7 @@ ch18closing4
 .byte EndText
 
 
-ch18closing5
+dialogueChapter18Closing5
 
 .byte Right_slot
 .byte ScrollText
@@ -1069,7 +1069,7 @@ ch18closing5
 .byte EndText
 
 
-ch18soldiers
+dialogueChapter18Soldiers
 
 .byte Right_slot
 .word LoadPortrait
@@ -1120,7 +1120,7 @@ ch18soldiers
 .byte EndText
 
 
-ch18wm1
+dialogueChapter18WorldMap
 
 .text "Acting without pause or reprieve,"
 .word LoadPortraitalt_1

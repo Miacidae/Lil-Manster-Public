@@ -6,11 +6,11 @@ rsProcCodeEnd ; 82/9DB7
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderTypeOffset,b,x
+	stz aProcSystem.aHeaderTypeOffset,b,x
 
-	lda aProcHeaderBitfield,b,x
+	lda aProcSystem.aHeaderBitfield,b,x
 	ora #$2000
-	sta aProcHeaderBitfield,b,x
+	sta aProcSystem.aHeaderBitfield,b,x
 
 	pla
 	rts
@@ -23,7 +23,7 @@ rsProcCodeHaltSleep ; 82/9DC5
 	.databank ?
 
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 
 rsProcCodeHalt ; 82/9DCB
 
@@ -34,7 +34,7 @@ rsProcCodeHalt ; 82/9DCB
 	dec y
 	dec y
 	tya
-	sta aProcHeaderCodeOffset,b,x
+	sta aProcSystem.aHeaderCodeOffset,b,x
 	pla
 	rts
 
@@ -46,9 +46,9 @@ rsProcCodeCallRoutine ; 82/9DD3
 	.databank ?
 
 	lda $0000,b,y
-	sta lProcCodePointer,b
+	sta aProcSystem.lPointer,b
 	lda $0001,b,y
-	sta lProcCodePointer+1,b
+	sta aProcSystem.lPointer+1,b
 
 	phy
 	phx
@@ -62,7 +62,7 @@ rsProcCodeCallRoutine ; 82/9DD3
 	rts
 
 	+
-	jmp [lProcCodePointer]
+	jmp [aProcSystem.lPointer]
 
 rsProcCodeCallRoutineWithArgs ; 82/9DEE
 
@@ -72,9 +72,9 @@ rsProcCodeCallRoutineWithArgs ; 82/9DEE
 	.databank ?
 
 	lda $0000,b,y
-	sta lProcCodePointer,b
+	sta aProcSystem.lPointer,b
 	lda $0001,b,y
-	sta lProcCodePointer+1,b
+	sta aProcSystem.lPointer+1,b
 
 	lda $0003,b,y
 	and #$00FF
@@ -98,7 +98,7 @@ rsProcCodeCallRoutineWithArgs ; 82/9DEE
 	rts
 
 	+
-	jmp [lProcCodePointer]
+	jmp [aProcSystem.lPointer]
 
 rsProcCodeSetOnCycle ; 82/9E19
 
@@ -108,11 +108,11 @@ rsProcCodeSetOnCycle ; 82/9E19
 	.databank ?
 
 	lda $0000,b,y
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
-	lda aProcHeaderBitfield,b,x
+	lda aProcSystem.aHeaderBitfield,b,x
 	ora #$0800
-	sta aProcHeaderBitfield,b,x
+	sta aProcSystem.aHeaderBitfield,b,x
 	inc y
 	inc y
 	rts
@@ -136,7 +136,7 @@ rsProcCodeSetUnknownTimer ; 82/9E30
 	.databank ?
 
 	lda $0000,b,y
-	sta aProcHeaderUnknownTimer,b,x
+	sta aProcSystem.aHeaderUnknownTimer,b,x
 	inc y
 	inc y
 	rts
@@ -148,7 +148,7 @@ rsProcCodeJumpWhileUnknownTimer ; 82/9E39
 	.autsiz
 	.databank ?
 
-	dec aProcHeaderUnknownTimer,b,x
+	dec aProcSystem.aHeaderUnknownTimer,b,x
 	bne rsProcCodeJump
 
 	inc y
@@ -163,7 +163,7 @@ rsProcCodeJumpIfBitUnset ; 82/9E41
 	.databank ?
 
 	lda $0002,b,y
-	bit aProcHeaderBitfield,b,x
+	bit aProcSystem.aHeaderBitfield,b,x
 	beq rsProcCodeJump
 
 	inc y
@@ -180,7 +180,7 @@ rsProcCodeJumpIfBitSet ; 82/9E4E
 	.databank ?
 
 	lda $0002,b,y
-	bit aProcHeaderBitfield,b,x
+	bit aProcSystem.aHeaderBitfield,b,x
 	bne rsProcCodeJump
 
 	inc y
@@ -200,12 +200,12 @@ rsProcCodeUnknown829E5B ; 82/9E5B
 
 	phy
 
-	; write pointer to lR43
+	; write pointer to lR44
 
 	lda $0000,b,y
-	sta lR43
+	sta lR44
 	lda $0001,b,y
-	sta lR43+1
+	sta lR44+1
 
 	lda $0003,b,y ; arg1
 	pha
@@ -239,9 +239,9 @@ rsProcCodeJumpIfRoutineTrue ; 82/9E77
 	.databank ?
 
 	lda $0000,b,y
-	sta lProcCodePointer,b
+	sta aProcSystem.lPointer,b
 	lda $0001,b,y
-	sta lProcCodePointer+1,b
+	sta aProcSystem.lPointer+1,b
 	phy
 	phx
 	jsl ++
@@ -263,7 +263,7 @@ rsProcCodeJumpIfRoutineTrue ; 82/9E77
 	rts
 
 	+
-	jmp [lProcCodePointer]
+	jmp [aProcSystem.lPointer]
 
 rsProcCodeJumpIfRoutineFalse ; 82/9E9B
 
@@ -273,9 +273,9 @@ rsProcCodeJumpIfRoutineFalse ; 82/9E9B
 	.databank ?
 
 	lda $0000,b,y
-	sta lProcCodePointer,b
+	sta aProcSystem.lPointer,b
 	lda $0001,b,y
-	sta lProcCodePointer+1,b
+	sta aProcSystem.lPointer+1,b
 	phy
 	phx
 	jsl ++
@@ -297,7 +297,7 @@ rsProcCodeJumpIfRoutineFalse ; 82/9E9B
 	rts
 
 	+
-	jmp [lProcCodePointer]
+	jmp [aProcSystem.lPointer]
 
 rsProcCodeCreateProc ; 82/9EBF
 
@@ -307,9 +307,9 @@ rsProcCodeCreateProc ; 82/9EBF
 	.databank ?
 
 	lda $0000,b,y
-	sta lR43
+	sta lR44
 	lda $0001,b,y
-	sta lR43+1
+	sta lR44+1
 	phy
 	phx
 	jsl rlProcEngineCreateProc
@@ -328,9 +328,9 @@ rsProcCodeDeleteProc ; 82/9ED5
 	.databank ?
 
 	lda $0000,b,y
-	sta lR43
+	sta lR44
 	lda $0001,b,y
-	sta lR43+1
+	sta lR44+1
 	phx
 	phy
 	jsl rlProcEngineFindProc
@@ -354,9 +354,9 @@ rsProcCodeDeleteHDMAArrayEntry ; 82/9EF1
 	.databank ?
 
 	lda $0000,b,y
-	sta lR43
+	sta lR44
 	lda $0001,b,y
-	sta lR43+1
+	sta lR44+1
 	phx
 	phy
 	jsl rlHDMAArrayEngineFindEntry
@@ -380,9 +380,9 @@ rsProcCodeHaltWhile ; 82/9F0D
 	.databank ?
 
 	lda $0000,b,y
-	sta lR43
+	sta lR44
 	lda $0001,b,y
-	sta lR43+1
+	sta lR44+1
 	phx
 	phy
 	jsl rlProcEngineFindProc
@@ -397,11 +397,11 @@ rsProcCodeHaltWhile ; 82/9F0D
 
 	+
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	dey
 	dey
 	tya
-	sta aProcHeaderCodeOffset,b,x
+	sta aProcSystem.aHeaderCodeOffset,b,x
 	pla
 	rts
 
@@ -413,9 +413,9 @@ rsProcCodeCreateHDMAArrayEntry ; 82/9F33
 	.databank ?
 
 	lda $0000,b,y
-	sta lR43
+	sta lR44
 	lda $0001,b,y
-	sta lR43+1
+	sta lR44+1
 	phy
 	phx
 	jsl rlHDMAArrayEngineCreateEntry
@@ -434,9 +434,9 @@ rsProcCodeHaltWhileActiveSprite ; 82/9F49
 	.databank ?
 
 	lda $0000,b,y
-	sta lR43
+	sta lR44
 	lda $0001,b,y
-	sta lR43+1
+	sta lR44+1
 	phx
 	phy
 	jsl rlActiveSpriteEngineFindEntry
@@ -451,11 +451,11 @@ rsProcCodeHaltWhileActiveSprite ; 82/9F49
 
 	+
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	dey
 	dey
 	tya
-	sta aProcHeaderCodeOffset,b,x
+	sta aProcSystem.aHeaderCodeOffset,b,x
 	pla
 	rts
 
@@ -643,7 +643,7 @@ rsProcCodeUnknown82A023 ; 82/A023
 	.databank ?
 
 	lda $0000,b,y
-	sta aUnknown0004BA,b
+	sta aSoundSystem.aUnknown0004BA,b
 	inc y
 	inc y
 	rts
@@ -655,18 +655,18 @@ rsProcCodeUnknown82A02C ; 82/A02C
 	.autsiz
 	.databank ?
 
-	lda aUnknown0004BA,b
+	lda aSoundSystem.aUnknown0004BA,b
 	bne +
 
 	rts
 
 	+
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	dec y
 	dec y
 	tya
-	sta aProcHeaderCodeOffset,b,x
+	sta aProcSystem.aHeaderCodeOffset,b,x
 	pla
 	rts
 
@@ -690,18 +690,18 @@ rsProcCodeHaltWhileDecompressing ; 82/A04A
 	.autsiz
 	.databank ?
 
-	lda bDecompListFlag,b
+	lda bDecompressionArrayFlag,b
 	bne +
 
 	rts
 
 	+
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	dec y
 	dec y
 	tya
-	sta aProcHeaderCodeOffset,b,x
+	sta aProcSystem.aHeaderCodeOffset,b,x
 	pla
 	rts
 
@@ -715,7 +715,7 @@ rsProcCodeBranchAndLink ; 82/A05E
 	tya
 	clc
 	adc #$0002
-	sta aProcHeaderName,b,x
+	sta aProcSystem.aHeaderName,b,x
 	lda $0000,b,y
 	tay
 	rts
@@ -727,7 +727,7 @@ rsProcCodeReturn ; 82/A06B
 	.autsiz
 	.databank ?
 
-	lda aProcHeaderName,b,x
+	lda aProcSystem.aHeaderName,b,x
 	tay
 	rts
 
@@ -748,11 +748,11 @@ rsProcCodeHaltUntilButtonNew ; 82/A070
 
 	+
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	dec y
 	dec y
 	tya
-	sta aProcHeaderCodeOffset,b,x
+	sta aProcSystem.aHeaderCodeOffset,b,x
 	pla
 	rts
 
@@ -764,11 +764,11 @@ rsProcCodeUnknown82A088 ; 82/A088
 	.databank ?
 
 	lda $0002,b,y
-	sta aProcHeaderUnknownTimer,b,x
+	sta aProcSystem.aHeaderUnknownTimer,b,x
 	tya
-	sta aProcHeaderCodeOffset,b,x
+	sta aProcSystem.aHeaderCodeOffset,b,x
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	pla
 	rts
 
@@ -783,15 +783,15 @@ rsProcCodeHaltUntilButtonNewAndTime ; 82/A09A
 	bit wJoy1New
 	bne +
 
-	dec aProcHeaderUnknownTimer,b,x
+	dec aProcSystem.aHeaderUnknownTimer,b,x
 	beq +
 
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	dec y
 	dec y
 	tya
-	sta aProcHeaderCodeOffset,b,x
+	sta aProcSystem.aHeaderCodeOffset,b,x
 	pla
 	rts
 

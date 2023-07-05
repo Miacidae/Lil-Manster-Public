@@ -20,43 +20,43 @@ rlFadeInByTimer ; 80/AB89
 	.databank `*
 
 	sep #$20
-	sta wScreenBrightnessTimeIncrement,b
+	sta wScreenFadingTimeIncrement,b
 
 	; Check if we need to change brightness
 
-	lda wScreenBrightnessFlag,b
+	lda wScreenFadingFlag,b
 	bpl +
 
 	; Reset timer and flag
 
-	lda wScreenBrightnessTimeIncrement,b
-	sta wScreenBrightnessTimer,b
-	stz wScreenBrightnessFlag,b
+	lda wScreenFadingTimeIncrement,b
+	sta wScreenFadingTimer,b
+	stz wScreenFadingFlag,b
 
 	+
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	and #15
 	cmp #INIDISP_Setting(False, 15)
 	beq _MaxBrightness ; If max brightness
 
 	; dec timer
 
-	dec wScreenBrightnessTimer,b
+	dec wScreenFadingTimer,b
 	bne _NotTime
 
 	; If time to change brightness
 
 	; reset timer
 
-	lda wScreenBrightnessTimeIncrement,b
-	sta wScreenBrightnessTimer,b
+	lda wScreenFadingTimeIncrement,b
+	sta wScreenFadingTimer,b
 
 	; increment brightness
 
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	inc a
 	and #15
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 
 	_NotTime
 	plp
@@ -66,7 +66,7 @@ rlFadeInByTimer ; 80/AB89
 
 	_MaxBrightness
 	lda #-1
-	sta wScreenBrightnessFlag,b
+	sta wScreenFadingFlag,b
 	plp
 	plb
 	sec
@@ -93,42 +93,42 @@ rlFadeOutByTimer ; 80/ABC7
 	.databank `*
 
 	sep #$20
-	sta wScreenBrightnessTimeIncrement,b
+	sta wScreenFadingTimeIncrement,b
 
 	; Check if we need to change brightness
 
-	lda wScreenBrightnessFlag,b
+	lda wScreenFadingFlag,b
 	bpl +
 
 	; Reset timer and flag
 
-	lda wScreenBrightnessTimeIncrement,b
-	sta wScreenBrightnessTimer,b
-	stz wScreenBrightnessFlag,b
+	lda wScreenFadingTimeIncrement,b
+	sta wScreenFadingTimer,b
+	stz wScreenFadingFlag,b
 
 	+
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	and #15
 	beq _MinBrightness ; If min brightness
 
 	; dec timer
 
-	dec wScreenBrightnessTimer,b
+	dec wScreenFadingTimer,b
 	bne _NotTime
 
 	; If time to change brightness
 
 	; reset timer
 
-	lda wScreenBrightnessTimeIncrement,b
-	sta wScreenBrightnessTimer,b
+	lda wScreenFadingTimeIncrement,b
+	sta wScreenFadingTimer,b
 
 	; decrement brightness
 
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	dec a
 	and #15
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 
 	_NotTime
 	plp
@@ -138,9 +138,9 @@ rlFadeOutByTimer ; 80/ABC7
 
 	_MinBrightness
 	lda #-1
-	sta wScreenBrightnessFlag,b
+	sta wScreenFadingFlag,b
 	lda #INIDISP_Setting(True)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	plp
 	plb
 	sec
@@ -167,42 +167,42 @@ rlFadeOutColorByTimer ; 80/AC07
 	.databank `*
 
 	sep #$20
-	sta wScreenBrightnessTimeIncrement,b
+	sta wScreenFadingTimeIncrement,b
 
 	; Check if we need to change brightness
 
-	lda wScreenBrightnessFlag,b
+	lda wScreenFadingFlag,b
 	bpl +
 
 	; Reset timer
 
-	lda wScreenBrightnessTimeIncrement,b
-	sta wScreenBrightnessTimer,b
+	lda wScreenFadingTimeIncrement,b
+	sta wScreenFadingTimer,b
 	lda #COLDATA_Setting(31, True, True, True)
-	sta bBuf_COLDATA_0 ; color base?
-	stz bBuf_COLDATA_1 ; b?
-	stz bBuf_COLDATA_2 ; g?
-	stz wScreenBrightnessFlag,b
+	sta bBufferCOLDATA_0 ; color base?
+	stz bBufferCOLDATA_1 ; b?
+	stz bBufferCOLDATA_2 ; g?
+	stz wScreenFadingFlag,b
 
 	+
-	lda bBuf_COLDATA_0 ; get intensity of colors
-	and #COLDATA.Intensity
+	lda bBufferCOLDATA_0 ; get intensity of colors
+	and #COLDATA_Intensity
 	beq _MinIntensity
 
 	; dec timer
 
-	dec wScreenBrightnessTimer,b
+	dec wScreenFadingTimer,b
 	bne +
 
 	; decrement intensity and set all channels to be affected
 
-	lda wScreenBrightnessTimeIncrement,b
-	sta wScreenBrightnessTimer,b
-	lda bBuf_COLDATA_0
-	and #COLDATA.Intensity
+	lda wScreenFadingTimeIncrement,b
+	sta wScreenFadingTimer,b
+	lda bBufferCOLDATA_0
+	and #COLDATA_Intensity
 	dec a
 	ora #COLDATA_Setting(0, True, True, True)
-	sta bBuf_COLDATA_0
+	sta bBufferCOLDATA_0
 
 	+
 	plp
@@ -212,7 +212,7 @@ rlFadeOutColorByTimer ; 80/AC07
 
 	_MinIntensity
 	lda #-1
-	sta wScreenBrightnessFlag,b
+	sta wScreenFadingFlag,b
 	plp
 	plb
 	sec
@@ -239,39 +239,39 @@ rlFadeInColorByTimer ; 80/AC4D
 	.databank `*
 
 	sep #$20
-	sta wScreenBrightnessTimeIncrement,b
+	sta wScreenFadingTimeIncrement,b
 
 	; Check if we need to change brightness
 
-	lda wScreenBrightnessFlag,b
+	lda wScreenFadingFlag,b
 	bpl +
 
 	; Reset timer
 
-	lda wScreenBrightnessTimeIncrement,b
-	sta wScreenBrightnessTimer,b
+	lda wScreenFadingTimeIncrement,b
+	sta wScreenFadingTimer,b
 	lda #COLDATA_Setting(0, True, True, True)
-	sta bBuf_COLDATA_0
-	stz bBuf_COLDATA_1
-	stz bBuf_COLDATA_2
-	stz wScreenBrightnessFlag,b
+	sta bBufferCOLDATA_0
+	stz bBufferCOLDATA_1
+	stz bBufferCOLDATA_2
+	stz wScreenFadingFlag,b
 
 	+
-	lda bBuf_COLDATA_0
-	and #COLDATA.Intensity
-	cmp #COLDATA.Intensity
+	lda bBufferCOLDATA_0
+	and #COLDATA_Intensity
+	cmp #COLDATA_Intensity
 	beq _MaxIntensity
 
-	dec wScreenBrightnessTimer,b
+	dec wScreenFadingTimer,b
 	bne _NotTime
 
-	lda wScreenBrightnessTimeIncrement,b
-	sta wScreenBrightnessTimer,b
-	lda bBuf_COLDATA_0
-	and #COLDATA.Intensity
+	lda wScreenFadingTimeIncrement,b
+	sta wScreenFadingTimer,b
+	lda bBufferCOLDATA_0
+	and #COLDATA_Intensity
 	inc a
 	ora #COLDATA_Setting(0, True, True, True)
-	sta bBuf_COLDATA_0
+	sta bBufferCOLDATA_0
 
 	_NotTime
 	plp
@@ -281,7 +281,7 @@ rlFadeInColorByTimer ; 80/AC4D
 
 	_MaxIntensity
 	lda #-1
-	sta wScreenBrightnessFlag,b
+	sta wScreenFadingFlag,b
 	plp
 	plb
 	sec

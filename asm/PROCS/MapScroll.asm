@@ -18,7 +18,7 @@ rlProcMapScrollOnCycle ; 82/8FC9
 	.databank ?
 
 	php
-	lda wUnknown000E6D,b
+	lda wForcedMapScrollFlag,b
 	bne +
 
 	jsl rlEventEngineDeleteProcAndClearActive
@@ -50,7 +50,7 @@ rlProcMapScrollOnCycleUnknown ; 82/8FE0
 	.databank ?
 
 	php
-	lda wUnknown000E6D,b
+	lda wForcedMapScrollFlag,b
 	bne +
 
 	jsl rlEventEngineDeleteProcAndClearActive

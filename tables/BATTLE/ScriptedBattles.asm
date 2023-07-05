@@ -33,7 +33,7 @@ aScriptedBattleTable ; 9A/E802
 	.addr OsianHalvanScriptedBattle
 	.addr OsianHalvanScriptedBattle
 
-OsianHalvanScriptedBattle .dstruct structScriptedBattleSetup, $00, [Osian, Player, Fighter, Vouge, TerrainVillage, [22, 22], 1, 81, 13, 2, 0], [Halvan, Enemy, Fighter, BraveAxe, TerrainVillage, [24, 24], 1, 89, 15, 3, 0], $09, Osian, cinorsin, Halvan, cinhalvan, Chapter1, None ; 9A/E842
+OsianHalvanScriptedBattle .dstruct structScriptedBattleSetup, $00, [Osian, Player, Fighter, Vouge, TerrainVillage, [22, 22], 1, 81, 13, 2, 0], [Halvan, Enemy, Fighter, BraveAxe, TerrainVillage, [24, 24], 1, 89, 15, 3, 0], $09, Osian, dialogueDemoOsian, Halvan, dialogueDemoHalvan, Chapter01, None ; 9A/E842
 
 	; Rounds
 					   ; Dmg
@@ -56,7 +56,7 @@ MareetaShannamScriptedBattle .dstruct structScriptedBattleSetup, $00, [Mareeta, 
 	.byte $00, $02, $00, $0C	;Right0;Miss2;0;
 .word $FFFF, $FFFF
 
-NannaLoptrianScriptedBattle .dstruct structScriptedBattleSetup, $00, [Nanna, Player, TroubadourDismounted, EarthSword, TerrainCastle, [34, 34], 10, 99, 21, 11, 0], [LoptrianSorcerer1, Enemy, Sorcerer, Jormungand, TerrainCastle, [38, 38], 12, 67, 20, 10, 8], $0A, Halvan, None, Halvan, None, Chapter5, None ; 9A/E8CC
+NannaLoptrianScriptedBattle .dstruct structScriptedBattleSetup, $00, [Nanna, Player, TroubadourDismounted, EarthSword, TerrainCastle, [34, 34], 10, 99, 21, 11, 0], [LoptrianSorcerer1, Enemy, Sorcerer, Jormungand, TerrainCastle, [38, 38], 12, 67, 20, 10, 8], $0A, Halvan, None, Halvan, None, Chapter05, None ; 9A/E8CC
 
 	; Rounds
 					   ; Dmg

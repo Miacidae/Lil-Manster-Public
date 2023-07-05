@@ -1,5 +1,5 @@
 * = $0B1222
-.logical lorom($0B1222, 1)
+.logical mapped($0B1222)
 
 ; B1222 - B12B7
 

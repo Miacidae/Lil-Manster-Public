@@ -13,30 +13,30 @@ rlProcPortraitInit ; 82/904B
 
 	; Portrait slot
 
-	lda wProcInput0,b
-	sta aProcBody0,b,x
+	lda aProcSystem.wInput0,b
+	sta aProcSystem.aBody0,b,x
 
 	; Coordinates in tiles, packed (Y << 8) | X
 
-	lda wProcInput1,b
-	sta aProcBody1,b,x
+	lda aProcSystem.wInput1,b
+	sta aProcSystem.aBody1,b,x
 
 	; Portrait ID
 
-	lda wProcInput2,b
-	sta aProcBody3,b,x
+	lda aProcSystem.wInput2,b
+	sta aProcSystem.aBody3,b,x
 
 	; Fade-in flag?
 
-	lda wProcInput3,b
-	sta aProcBody6,b,x
+	lda aProcSystem.wInput3,b
+	sta aProcSystem.aBody6,b,x
 
 	lda #$0000
-	sta aProcBody4,b,x
+	sta aProcSystem.aBody4,b,x
 
 	; X to pixels
 
-	lda wProcInput1,b
+	lda aProcSystem.wInput1,b
 	pha
 	and #$00FF
 	asl a
@@ -57,7 +57,7 @@ rlProcPortraitInit ; 82/904B
 
 	xba
 	ora wR0
-	sta aProcBody2,b,x
+	sta aProcSystem.aBody2,b,x
 
 	; Display flag?
 
@@ -70,7 +70,7 @@ rlProcPortraitInit ; 82/904B
 
 	+
 	tya
-	sta aProcBody5,b,x
+	sta aProcSystem.aBody5,b,x
 
 rlProcPortraitOnCycle ; 82/9093
 
@@ -81,18 +81,18 @@ rlProcPortraitOnCycle ; 82/9093
 
 	; Wait until decomp list is free
 
-	lda bDecompListFlag,b
+	lda bDecompressionArrayFlag,b
 	and #$00FF
 	bne _End
 
 	; Portrait slot
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	sta wR1
 
 	; Portrait ID
 
-	lda aProcBody3,b,x
+	lda aProcSystem.aBody3,b,x
 	pha
 
 	; Copy portrait and fetch palette
@@ -104,7 +104,7 @@ rlProcPortraitOnCycle ; 82/9093
 
 	; Check if fading in
 
-	lda aProcBody6,b,x
+	lda aProcSystem.aBody6,b,x
 	beq _NoFade
 
 	; Copy palette to $7E4BF8
@@ -115,23 +115,23 @@ rlProcPortraitOnCycle ; 82/9093
 	sta lR19
 
 	lda #$0020
-	sta wR20
+	sta lR20
 
 	jsl rlBlockCopy
 
-	lda #(`aBGPal0)<<8
+	lda #(`aBGPaletteBuffer.aPalette0)<<8
 	sta lR18+1
-	lda #<>aBGPal0
+	lda #<>aBGPaletteBuffer.aPalette0
 	sta lR18
 
 	; Display flag?
 
-	lda aProcBody5,b,x
+	lda aProcSystem.aBody5,b,x
 	sta wR1
 
 	; Portrait slot
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlGetPortraitPaletteBufferPointer
 
 	; Clear palette slot
@@ -142,7 +142,7 @@ rlProcPortraitOnCycle ; 82/9093
 	sta lR18
 
 	lda #$0020
-	sta wR19
+	sta lR19
 
 	lda #$0000
 	jsl rlBlockFillWord
@@ -154,24 +154,24 @@ rlProcPortraitOnCycle ; 82/9093
 
 	; Display flag?
 
-	lda aProcBody5,b,x
+	lda aProcSystem.aBody5,b,x
 	sta wR1
 
 	; Portrait slot
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlGetPortraitPaletteBufferPointer
 
 	; Copy palette to slot
 
 	lda #$0020
-	sta wR20
+	sta lR20
 
 	jsl rlBlockCopy
 
 	_9106
 	lda #<>rlProcPortraitOnCycle2
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	_End
 	rtl
@@ -185,7 +185,7 @@ rlProcPortraitOnCycle2 ; 82/910D
 
 	; Loop here until portrait is decompressed
 
-	lda bDecompListFlag,b
+	lda bDecompressionArrayFlag,b
 	and #$00FF
 	beq +
 
@@ -193,7 +193,7 @@ rlProcPortraitOnCycle2 ; 82/910D
 
 	+
 	lda #<>rlProcPortraitOnCycle3
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 rlProcPortraitOnCycle3 ; 82/911C
 
@@ -208,35 +208,35 @@ rlProcPortraitOnCycle3 ; 82/911C
 
 	; Display flag?
 
-	lda aProcBody5,b,x
+	lda aProcSystem.aBody5,b,x
 	sta wR0
 
 	; Portrait slot
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 
 	jsl rlDMAPortraitFromBuffer
 
 	; Check if displaying?
 
-	lda aProcBody5,b,x
+	lda aProcSystem.aBody5,b,x
 	beq _Invisible
 
 	lda #<>rlProcPortraitOnCycle4c
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	; Check if fading in
 
-	lda aProcBody6,b,x
+	lda aProcSystem.aBody6,b,x
 	beq _End
 
 	lda #<>rlProcPortraitOnCycle4bFadingIn
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 	bra _End
 
 	_Invisible
 	lda #<>rlProcPortraitOnCycle4aInvisible
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	_End
 	rtl
@@ -248,12 +248,12 @@ rlProcPortraitOnCycle4aInvisible ; 82/914F
 	.autsiz
 	.databank ?
 
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	sta wR0
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlUnknown8CC176
 	lda #<>rlProcPortraitOnCycle4bFadingIn
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 	rtl
 
 rlProcPortraitOnCycle4bFadingIn ; 82/9162
@@ -269,7 +269,7 @@ rlProcPortraitOnCycle4bFadingIn ; 82/9162
 
 	jsl $959637
 	lda #<>rlProcPortraitOnCycle4c
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	+
 	rtl
@@ -282,14 +282,14 @@ rlProcPortraitOnCycle4c ; 82/9175
 	.databank ?
 
 	jsr rsUnknown82931A
-	lda aProcBody4,b,x
+	lda aProcSystem.aBody4,b,x
 	beq +
 
-	lda aProcBody6,b,x
+	lda aProcSystem.aBody6,b,x
 	beq rlProcPortraitOnCycle5._FreeProc
 
 	lda #<>rlProcPortraitOnCycle5
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	+
 	jsr rsProcPortraitRenderPortrait
@@ -306,17 +306,17 @@ rlProcPortraitOnCycle5 ; 82/918C
 	jsr rsUnknown82926E
 	bcc _End
 
-	lda aProcBody5,b,x
+	lda aProcSystem.aBody5,b,x
 	bne _FreeProc
 
 	; Coordinates
 
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	sta wR0
 
 	; slot
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlUnknown8CC43F
 
 	_FreeProc
@@ -335,27 +335,27 @@ rsProcPortraitRenderPortrait ; 82/91AC
 	.autsiz
 	.databank ?
 
-	lda aProcBody5,b,x
+	lda aProcSystem.aBody5,b,x
 	beq +
 
 	; Coordinates in pixels
 
-	lda aProcBody2,b,x
+	lda aProcSystem.aBody2,b,x
 	and #$00FF
 	sta wR0
 
-	lda aProcBody2,b,x
+	lda aProcSystem.aBody2,b,x
 	xba
 	and #$00FF
 	sta wR1
 
 	jsl rlUnknown829352
 	tay
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlDrawPortraitSprite
 
-	lda #TM.OBJEnable
-	tsb bBuf_TM
+	lda #TM_OBJ_Enable
+	tsb bBufferTM
 
 	+
 	rts
@@ -374,9 +374,9 @@ rsUnknow8291D8 ; 82/91D8
 	lda #$0010
 	sta wUnknown0017D7,b
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	tay
-	lda aProcBody5,b,x
+	lda aProcSystem.aBody5,b,x
 	beq +
 
 	inc y
@@ -544,9 +544,9 @@ rsUnknown82926E ; 82/926E
 	lda #$0008
 	sta wUnknown0017D7,b
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	tay
-	lda aProcBody5,b,x
+	lda aProcSystem.aBody5,b,x
 	beq +
 
 	inc y
@@ -735,19 +735,19 @@ rsUnknown82931A ; 82/931A
 	bra ++
 
 	+
-	lda wUnknown0017E9,b
+	lda wDialogueEngineStatus,b
 	bit #$0010
 	beq ++
 
-	lda aProcBody5,b,x
+	lda aProcSystem.aBody5,b,x
 	bne ++
 
 	+
 	jsl rlUnknown829352
 	sta wR1
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	sta wR0
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlUnknown8CC2FD
 
 	+
@@ -761,7 +761,7 @@ rlUnknown829352 ; 82/9352
 	.databank ?
 
 	phx
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	and #$0001
 	asl a
 	tax
@@ -781,7 +781,7 @@ rlUnknown829365 ; 82/9365
 
 	phx
 	pha
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	and #$0001
 	asl a
 	tax
@@ -805,7 +805,7 @@ rlClearWMPortraitByIndex ; 82/937A
 	bcc +
 
 	lda #$0001
-	sta aProcBody4,b,x
+	sta aProcSystem.aBody4,b,x
 
 	+
 	plx
@@ -830,9 +830,9 @@ rlUnknown829389 ; 82/9389
 	asl a
 	tax
 	lda #(`procPortrait0)<<8
-	sta lR43+1
+	sta lR44+1
 	lda @l aPortraitProcTable8293AB,x
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcc +
 
@@ -866,18 +866,18 @@ rlProcItemSelectPortraitInit ; 82/93BB
 
 	; Portrait ID
 
-	lda wProcInput0,b
-	sta aProcBody1,b,x
+	lda aProcSystem.wInput0,b
+	sta aProcSystem.aBody1,b,x
 
 	; Slot
 
-	lda wProcInput1,b
-	sta aProcBody0,b,x
+	lda aProcSystem.wInput1,b
+	sta aProcSystem.aBody0,b,x
 
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	sta wR0
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlCopyPortraitPaletteToBuffer
 	rtl
 
@@ -888,16 +888,16 @@ rlProcItemSelectPortraitOnCycle ; 82/93D4
 	.autsiz
 	.databank ?
 
-	lda bDecompListFlag,b
+	lda bDecompressionArrayFlag,b
 	and #$00FF
 	bne +
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	sta wR1
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	jsl rlUnknown8CBFEC
 	lda #<>rlProcItemSelectPortraitOnCycle2
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	+
 	rtl
@@ -909,7 +909,7 @@ rlProcItemSelectPortraitOnCycle2 ; 82/93EF
 	.autsiz
 	.databank ?
 
-	lda bDecompListFlag,b
+	lda bDecompressionArrayFlag,b
 	and #$00FF
 	bne +
 
@@ -917,10 +917,10 @@ rlProcItemSelectPortraitOnCycle2 ; 82/93EF
 	and #$00FF
 	bne +
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlUnknown8CC01B
 	lda #<>rlProcItemSelectPortraitOnCycle3
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	+
 	rtl
@@ -938,9 +938,7 @@ rlProcItemSelectPortraitOnCycle3 ; 82/940D
 aProcItemSelectPortraitCode ; 82/9412
 	PROC_HALT
 
-aDialogueBoxHDMAInfo .dstruct structHDMAArrayEntryInfo, rlDialogueBoxHDMAInit, rlDialogueBoxHDMAOnCycle, aDialogueBoxHDMACode, aDialogueHDMATable, CGADSUB - PPU_REG_BASE, DMAPx_Setting(DMAPx_TransferCPUToIO, DMAPx_Mode1, DMAPx_ABusIncrement, DMAPx_Direct) ; 82/9414
-
-.byte $00 ; Don't know
+aDialogueBoxHDMAInfo .dstruct structHDMAIndirectEntryInfo, rlDialogueBoxHDMAInit, rlDialogueBoxHDMAOnCycle, aDialogueBoxHDMACode, aDialogueHDMATable, CGADSUB, DMAP_DMA_Setting(DMAP_CPUToIO, DMAP_Increment, DMAP_Mode1), 0 ; 82/9414
 
 rlDialogueBoxHDMAInit ; 82/9420
 
@@ -950,14 +948,14 @@ rlDialogueBoxHDMAInit ; 82/9420
 	.databank ?
 
 	sep #$20
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
-	lda #TS_Setting(True, True, True, False, True)
-	sta bBuf_TS
-	lda #CGWSEL_Setting(True)
-	sta bBuf_CGWSEL
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTS
+	lda #CGWSEL_Setting(True, False, CGWSEL_MathAlways, CGWSEL_BlackNever)
+	sta bBufferCGWSEL
 	lda #CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	sta bBuf_CGADSUB
+	sta bBufferCGADSUB
 	rep #$20
 	rtl
 
@@ -975,7 +973,7 @@ aDialogueBoxHDMACode ; 82/9436
 
 aDialogueHDMATable ; 82/9438
 
-	.byte HDMA_DirectTableSetting(True, 64)
+	.byte NTRL_Setting(64, True)
 
 	.for i=0, i<8, i+=1
 		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Add, False, False, False, False, False, False, False)
@@ -1006,7 +1004,7 @@ aDialogueHDMATable ; 82/9438
 	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
 	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
 
-	.byte HDMA_DirectTableSetting(True, 64)
+	.byte NTRL_Setting(64, True)
 
 	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
 
@@ -1023,7 +1021,7 @@ aDialogueHDMATable ; 82/9438
 		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Add, False, False, False, False, False, False, False)
 	.next
 
-	.byte HDMA_DirectTableSetting(True, 64)
+	.byte NTRL_Setting(64, True)
 
 	.for i=0, i<32, i+=1
 		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Add, False, False, False, False, False, False, False)
@@ -1045,7 +1043,7 @@ aDialogueHDMATable ; 82/9438
 		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
 	.next
 
-	.byte HDMA_DirectTableSetting(True, 32)
+	.byte NTRL_Setting(32, True)
 
 	.for i=0, i<14, i+=1
 		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
@@ -1061,7 +1059,7 @@ aDialogueHDMATable ; 82/9438
 	.word (COLDATA_Setting(5, True, True, True) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
 	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
 
-.byte HDMA_DirectTableSetting(False, 0)
+.byte NTRL_Setting(0, False)
 
 procPortrait4 .dstruct structProcInfo, (4, "@"), rlProcPortraitBGInit, None, aProcPortraitBGCode ; 82/95FD
 procPortrait5 .dstruct structProcInfo, (5, "@"), rlProcPortraitBGInit, None, aProcPortraitBGCode ; 82/9605
@@ -1143,7 +1141,7 @@ rlUnknown829684 ; 82/9684
 	.autsiz
 	.databank ?
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	and #$0001
 	bne +
 
@@ -1162,9 +1160,9 @@ rlUnknown829684 ; 82/9684
 	+
 	phx
 	lda #(`$9A94AB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9A94AB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	rtl
@@ -1176,7 +1174,7 @@ rlUnknown8296B3 ; 82/96B3
 	.autsiz
 	.databank ?
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	and #$0001
 	bne +
 
@@ -1195,9 +1193,9 @@ rlUnknown8296B3 ; 82/96B3
 	+
 	phx
 	lda #(`$9A94AB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9A94AB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	rtl
@@ -1209,13 +1207,13 @@ rlUnknown8296E2 ; 82/96E2
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
-	lda bDecompListFlag,b
+	stz aProcSystem.aHeaderSleepTimer,b,x
+	lda bDecompressionArrayFlag,b
 	bne _End
 
 	lda #<>++
-	sta aProcHeaderOnCycle,b,x
-	lda aProcBody0,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
+	lda aProcSystem.aBody0,b,x
 	and #$0001
 	bne +
 
@@ -1243,14 +1241,14 @@ rlUnknown8296E2 ; 82/96E2
 	rtl
 
 	+
-	stz aProcHeaderSleepTimer,b,x
-	lda bDecompListFlag,b
+	stz aProcSystem.aHeaderSleepTimer,b,x
+	lda bDecompressionArrayFlag,b
 	bne _End
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	_End
@@ -1263,7 +1261,7 @@ rlUnknown82973E ; 82/973E
 	.autsiz
 	.databank ?
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	and #$0001
 	asl a
 	tay
@@ -1277,7 +1275,7 @@ rlUnknown82974B ; 82/974B
 	.autsiz
 	.databank ?
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	and #$0001
 	asl a
 	tay
@@ -1292,16 +1290,16 @@ rlUnknown829758 ; 82/9758
 	.databank ?
 
 	lda #(`$9A87BF)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9A87BF
-	sta lR43
+	sta lR44
 	jsl rlHDMAArrayEngineFindEntry
 	bcs +
 
 	lda #(`$9A87BF)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9A87BF
-	sta lR43
+	sta lR44
 	jsl rlHDMAArrayEngineCreateEntry
 
 	+
@@ -1314,28 +1312,28 @@ rlUnknown829777 ; 82/9777
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 
 	jsl rlProcEngineFreeProc
 
 	lda #(`procPortrait4)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procPortrait4
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcs +
 
 	lda #(`procPortrait5)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procPortrait5
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	bcs +
 
 	lda #(`$9A87BF)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9A87BF
-	sta lR43
+	sta lR44
 	jsl rlHDMAArrayEngineFindEntry
 	bcc +
 
@@ -1351,13 +1349,13 @@ rlUnknown8297B3 ; 82/97B3
 	.autsiz
 	.databank ?
 
-	lda aProcBody0,b,x
-	sta wProcInput0,b
+	lda aProcSystem.aBody0,b,x
+	sta aProcSystem.wInput0,b
 	phx
 	lda #(`$9A8814)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9A8814
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	rtl
@@ -1369,13 +1367,13 @@ rlUnknown8297CA ; 82/97CA
 	.autsiz
 	.databank ?
 
-	lda aProcBody0,b,x
-	sta wProcInput0,b
+	lda aProcSystem.aBody0,b,x
+	sta aProcSystem.wInput0,b
 	phx
 	lda #(`$9A88C3)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>$9A88C3
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	rtl
@@ -1387,19 +1385,19 @@ rlProcPortraitBGInit ; 82/97E1
 	.autsiz
 	.databank ?
 
-	lda wProcInput0,b
-	sta aProcBody0,b,x
+	lda aProcSystem.wInput0,b
+	sta aProcSystem.aBody0,b,x
 
-	lda wProcInput2,b
-	sta aProcBody2,b,x
+	lda aProcSystem.wInput2,b
+	sta aProcSystem.aBody2,b,x
 
 	lda #$0000
-	sta aProcBody3,b,x
+	sta aProcSystem.aBody3,b,x
 
 	lda #$0001
 	sta @l wUnknown001586
 
-	lda aProcBody2,b,x
+	lda aProcSystem.aBody2,b,x
 	jsl rlScrollCameraCharEffect
 
 	lda @l wEventEngineXCoordinate
@@ -1415,21 +1413,21 @@ rlProcPortraitBGInit ; 82/97E1
 	lsr a
 	lsr a
 	lsr a
-	sta aProcBody5,b,x
+	sta aProcSystem.aBody5,b,x
 
 	lda wR1
 	lsr a
 	lsr a
 	lsr a
 	lsr a
-	sta aProcBody6,b,x
+	sta aProcSystem.aBody6,b,x
 
 	rtl
 
 	+
 	lda #$0000
-	sta aProcBody5,b,x
-	sta aProcBody6,b,x
+	sta aProcSystem.aBody5,b,x
+	sta aProcSystem.aBody6,b,x
 	rtl
 
 rlUnknown829832 ; 82/9832
@@ -1439,23 +1437,23 @@ rlUnknown829832 ; 82/9832
 	.autsiz
 	.databank `*
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	lda bDMAArrayFlag,b
 	and #$00FF
 	bne +
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 
 	plx
 	phx
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	asl a
 	tay
 	lda aUnknown829856,y
-	sta aProcBody1,b,x
+	sta aProcSystem.aBody1,b,x
 	plx
 
 	+
@@ -1471,16 +1469,16 @@ rlCopyDialogueBoxGraphicsAndPalette ; 82/985A
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 
-	lda bDecompListFlag,b
+	lda bDecompressionArrayFlag,b
 	and #$00FF
 	bne +
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 	lda #$0000
 	pha
@@ -1505,11 +1503,11 @@ rsClearDialogueBoxBG3 ; 82/988C
 	.databank ?
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	asl a
 	tax
 	jsr (aUnknown8298A0,x)
@@ -1532,7 +1530,7 @@ rsClearUpperDialogueBoxBG3 ; 82/98A4
 	lda #<>aBG3TilemapBuffer
 	sta lR18
 	lda #$0400
-	sta wR19
+	sta lR19
 	lda #$02D0
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
@@ -1555,7 +1553,7 @@ rsClearLowerDialogueBoxBG3 ; 82/98CA
 	lda #<>$7EEB7C
 	sta lR18
 	lda #$0400
-	sta wR19
+	sta lR19
 	lda #$02D0
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
@@ -1573,9 +1571,9 @@ rlUnknown8298F0 ; 82/98F0
 	.databank ?
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 	phx
 	lda #(`$7EEF7C)<<8
@@ -1583,7 +1581,7 @@ rlUnknown8298F0 ; 82/98F0
 	lda #<>$7EEF7C
 	sta lR18
 	lda #$0800
-	sta wR19
+	sta lR19
 	lda #$02D0
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
@@ -1600,16 +1598,16 @@ rlUnknown829921 ; 82/9921
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 
 	lda bDMAArrayFlag,b
 	and #$00FF
 	bne +
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 	lda #$0800
 	sta wR0
@@ -1633,14 +1631,14 @@ rlUnknown829952 ; 82/9952
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	lda #<>rlUnknown829973
-	sta aProcHeaderOnCycle,b,x
-	lda aProcBody5,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
+	lda aProcSystem.aBody5,b,x
 	sta @l wEventEngineXCoordinate
-	lda aProcBody6,b,x
+	lda aProcSystem.aBody6,b,x
 	sta @l wEventEngineYCoordinate
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	sta wR1
 	jsl rlUnknown8CCDA5
 	rtl
@@ -1652,15 +1650,15 @@ rlUnknown829973 ; 82/9973
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	jsl rlUnknown8CCEE3
 	lda @l wUnknown0017DF
 	bne +
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	+
@@ -1674,9 +1672,9 @@ rlUnknown82998C ; 82/998C
 	.databank ?
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 	jsl rlUnknown829B6E
 	rtl
@@ -1689,9 +1687,9 @@ rlUnknown82999C ; 82/999C
 	.databank ?
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 	jsl $959637
 	rtl
@@ -1703,14 +1701,14 @@ rlUnknown8299AC ; 82/99AC
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
-	lda aProcBody3,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
+	lda aProcSystem.aBody3,b,x
 	beq +
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	+
@@ -1723,14 +1721,14 @@ rlUnknown8299C0 ; 82/99C0
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	lda #<>rlUnknown8299E1
-	sta aProcHeaderOnCycle,b,x
-	lda aProcBody5,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
+	lda aProcSystem.aBody5,b,x
 	sta @l wEventEngineXCoordinate
-	lda aProcBody6,b,x
+	lda aProcSystem.aBody6,b,x
 	sta @l wEventEngineYCoordinate
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	sta wR1
 	jsl rlUnknown8CCE19
 	rtl
@@ -1742,15 +1740,15 @@ rlUnknown8299E1 ; 82/99E1
 	.autsiz
 	.databank ?
 
-	stz aProcHeaderSleepTimer,b,x
+	stz aProcSystem.aHeaderSleepTimer,b,x
 	jsl rlUnknown8CCEE3
 	lda @l wUnknown0017DF
 	bne +
 
 	phx
-	ldx wProcIndex,b
+	ldx aProcSystem.wOffset,b
 	lda #$0001
-	sta aProcHeaderSleepTimer,b,x
+	sta aProcSystem.aHeaderSleepTimer,b,x
 	plx
 
 	+
@@ -1766,7 +1764,7 @@ rsUnknown8299FA ; 82/99FA
 	lda #$0010
 	sta wUnknown0017D7,b
 	clc
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	bne +
 
 	jsl $979B67
@@ -1799,7 +1797,7 @@ rsUnknown829A1D ; 82/9A1D
 	sta wUnknown0017D7,b
 
 	clc
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	bne +
 
 	jsl $979BD5
@@ -1845,12 +1843,12 @@ rlUnknown829A4A ; 82/9A4A
 	tay
 
 	lda #(`aUnknown829AF3)<<8
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	lda #<>aUnknown829AF3
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 
 	lda #$2000
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda #(`aUnknown929AA7)<<8
 	sta lR18+1
@@ -1953,7 +1951,7 @@ rlUpdateDialogueBoxBG1Tilemap ; 82/9B14
 	lda aUnknown829B39,y
 	sta lR18
 	lda #$0200
-	sta wR19
+	sta lR19
 	lda #$02FF
 	jsl rlBlockFillWord
 	lda #$0200
@@ -1983,7 +1981,7 @@ rlUpdateDialogueBoxBG3Tilemap ; 82/9B41
 	lda aUnknown829B66,y
 	sta lR18
 	lda #$0200
-	sta wR19
+	sta lR19
 	lda #$02D0
 	jsl rlBlockFillWord
 	lda #$0200
@@ -2036,10 +2034,10 @@ rsUnknown829B7D ; 82/9B7D
 	bra ++
 
 	+
-	lda aProcBody3,b,x
+	lda aProcSystem.aBody3,b,x
 	bne +
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlUnknown829A4A
 
 	+
@@ -2057,7 +2055,7 @@ rsUnknown829B99 ; 82/9B99
 	bcc +
 
 	lda #$0001
-	sta aProcBody3,b,x
+	sta aProcSystem.aBody3,b,x
 
 	+
 	plx
@@ -2081,16 +2079,16 @@ rlCheckPortrait4Or5Active ; 82/9BA8
 	phy
 	tax
 	lda #(`procPortrait4)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procPortrait4
-	sta lR43
+	sta lR44
 	txa
 	beq +
 
 	lda #(`procPortrait5)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procPortrait5
-	sta lR43
+	sta lR44
 
 	+
 	jsl rlProcEngineFindProc

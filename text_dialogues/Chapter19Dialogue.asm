@@ -1,4 +1,4 @@
-ch19conomorrecruit
+dialogueChapter19ConomorRecruit
 
 .byte Right_slot
 .word LoadPortrait
@@ -104,7 +104,7 @@ ch19conomorrecruit
 .byte EndText
 
 
-ch19amaldarecruit
+dialogueChapter19AmaldaRecruit
 
 .byte Right_slot
 .word LoadPortrait
@@ -196,7 +196,7 @@ ch19amaldarecruit
 .byte EndText
 
 
-ch19balladpurewater
+dialogueChapter19BalladPureWater
 
 .byte Right_slot
 .word LoadPortrait
@@ -339,7 +339,7 @@ ch19balladpurewater
 .byte EndText
 
 
-ch19silverswordhouse
+dialogueChapter19SilverSwordHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -362,7 +362,7 @@ ch19silverswordhouse
 .byte EndText
 
 
-ch19killerlancehouse
+dialogueChapter19KillerLanceHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -392,7 +392,7 @@ ch19killerlancehouse
 .byte EndText
 
 
-ch19speedringhouse
+dialogueChapter19SpeedRingHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -421,7 +421,7 @@ ch19speedringhouse
 .byte EndText
 
 
-ch19purewaterhouse2
+dialogueChapter19PureWaterHouse2
 
 .byte Right_slot
 .word LoadPortrait
@@ -448,7 +448,7 @@ ch19purewaterhouse2
 .byte EndText
 
 
-ch19healhouse
+dialogueChapter19HealHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -468,7 +468,7 @@ ch19healhouse
 .byte EndText
 
 
-ch19ensorcelhouse
+dialogueChapter19EnsorcelHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -497,7 +497,7 @@ ch19ensorcelhouse
 .byte EndText
 
 
-ch19healhouse2
+dialogueChapter19HealHouse2
 
 .byte Right_slot
 .word LoadPortrait
@@ -515,7 +515,7 @@ ch19healhouse2
 .byte EndText
 
 
-ch19windhouse
+dialogueChapter19WindHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -542,7 +542,7 @@ ch19windhouse
 .byte EndText
 
 
-ch19opening1
+dialogueChapter19Opening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -666,7 +666,7 @@ ch19opening1
 .byte EndText
 
 
-ch19opening2
+dialogueChapter19Opening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -694,7 +694,7 @@ ch19opening2
 .byte EndText
 
 
-ch19opening3conomor
+dialogueChapter19Opening3Conomor
 
 .byte Right_slot
 .word LoadPortrait
@@ -707,7 +707,7 @@ ch19opening3conomor
 .byte EndText
 
 
-ch19opening3amalda
+dialogueChapter19Opening3Amalda
 
 .byte Right_slot
 .word LoadPortrait
@@ -725,7 +725,7 @@ ch19opening3amalda
 .byte EndText
 
 
-ch19closing1
+dialogueChapter19Closing1
 
 .byte Right_slot
 .word LoadPortrait
@@ -974,7 +974,7 @@ ch19closing1
 .byte EndText
 
 
-ch19closing2
+dialogueChapter19Closing2
 
 .byte Right_slot
 .word LoadPortrait
@@ -1018,7 +1018,7 @@ ch19closing2
 .byte EndText
 
 
-ch19wm1
+dialogueChapter19WorldMap1
 
 .text "Already a day behind Dorius,"
 .word LoadPortraitalt_1
@@ -1033,7 +1033,7 @@ ch19wm1
 .byte EndText
 
 
-ch19wm2
+dialogueChapter19WorldMap2
 
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2
@@ -1051,7 +1051,7 @@ ch19wm2
 .byte EndText
 
 
-ch19wm3
+dialogueChapter19WorldMap3
 
 .text "It was this moment that marked Leif's"
 .byte NewLine

@@ -47,11 +47,11 @@ rlUnknown80B564 ; 80/B564
 	php
 	phb
 	rep #$30
-	ldy lDecompSource
-	stz lDecompSource
+	ldy DecompressionVariables.lSource
+	stz DecompressionVariables.lSource
 	sep #$20
 	lda #$01
-	sta bDecompFlag
+	sta DecompressionVariables.bFlag
 	bra rlDecompressor._Unknown80B593
 
 rlDecompressor ; 80/B574
@@ -64,8 +64,8 @@ rlDecompressor ; 80/B574
 	; and handles some basic decompression setup
 
 	; Inputs:
-	; lDecompSource: Long pointer to compressed data
-	; lDecompDest: Long pointer to where to decompress to
+	; DecompressionVariables.lSource: Long pointer to compressed data
+	; DecompressionVariables.lDest: Long pointer to where to decompress to
 
 	; Outputs:
 	; None
@@ -76,7 +76,7 @@ rlDecompressor ; 80/B574
 
 	; Fetch source in Y
 
-	ldy lDecompSource
+	ldy DecompressionVariables.lSource
 	bmi _ROMSource
 
 	; If decompressing from RAM,
@@ -88,9 +88,9 @@ rlDecompressor ; 80/B574
 	adc #$8000
 	tay
 	lda #$8000
-	sta lDecompSource
+	sta DecompressionVariables.lSource
 	sep #$20
-	dec lDecompSource+2
+	dec DecompressionVariables.lSource+2
 	bra +
 
 	_ROMSource
@@ -100,7 +100,7 @@ rlDecompressor ; 80/B574
 	.autsiz
 	.databank ?
 
-	stz lDecompSource
+	stz DecompressionVariables.lSource
 	sep #$20
 
 	+
@@ -108,17 +108,17 @@ rlDecompressor ; 80/B574
 	; Clear internal stuff and
 	; fetch dest in X
 
-	stz bDecompFlag
+	stz DecompressionVariables.bFlag
 
 	_Unknown80B593
-	stz bDecompCount
-	lda lDecompDest+2
+	stz DecompressionVariables.bCount
+	lda DecompressionVariables.lDest+2
 	pha
 	plb
 
 	.databank ?
 
-	ldx lDecompDest
+	ldx DecompressionVariables.lDest
 	jmp _GetNextMethod
 
 	_DecCount ; 80/B59E
@@ -129,7 +129,7 @@ rlDecompressor ; 80/B574
 	.databank ?
 
 	dec a
-	sta bDecompCount
+	sta DecompressionVariables.bCount
 	bne +
 
 	_SetSource ; 80/B5A3
@@ -139,9 +139,9 @@ rlDecompressor ; 80/B574
 	.autsiz
 	.databank ?
 
-	lda lDecompTemp+2
-	sta lDecompSource+2
-	ldy lDecompTemp
+	lda DecompressionVariables.lTemp+2
+	sta DecompressionVariables.lSource+2
+	ldy DecompressionVariables.lTemp
 
 	+
 	rts
@@ -153,12 +153,12 @@ rlDecompressor ; 80/B574
 	.autsiz
 	.databank ?
 
-	inc lDecompSource+2
-	ldy lDecompSource
+	inc DecompressionVariables.lSource+2
+	ldy DecompressionVariables.lSource
 	bne _End
 
 	pha
-	lda bDecompFlag
+	lda DecompressionVariables.bFlag
 	bne +
 
 	ldy #$8000
@@ -176,7 +176,7 @@ rlDecompressor ; 80/B574
 	.autsiz
 	.databank ?
 
-	sta bDecompVar0
+	sta DecompressionVariables.bVar0
 	asl a
 	bpl _LessThanC0
 
@@ -189,7 +189,7 @@ rlDecompressor ; 80/B574
 	; Upper nybble data
 	; Lower nybble F
 
-	lda bDecompVar0
+	lda DecompressionVariables.bVar0
 	asl a
 	asl a
 	asl a
@@ -206,7 +206,7 @@ rlDecompressor ; 80/B574
 	; Upper nybble F
 	; Lower nybble data
 
-	lda bDecompVar0
+	lda DecompressionVariables.bVar0
 	and #$0F
 	ora #$F0
 	sta $0000,b,x
@@ -222,7 +222,7 @@ rlDecompressor ; 80/B574
 	; Upper nybble data
 	; Lower nybble 0
 
-	lda bDecompVar0
+	lda DecompressionVariables.bVar0
 	asl a
 	asl a
 	asl a
@@ -238,7 +238,7 @@ rlDecompressor ; 80/B574
 	; Upper nybble 0
 	; Lower nybble data
 
-	lda bDecompVar0
+	lda DecompressionVariables.bVar0
 	and #$0F
 	sta $0000,b,x
 	inc x
@@ -254,11 +254,11 @@ rlDecompressor ; 80/B574
 
 	and #$0F ; count
 	inc a
-	sta bDecompMethodCount
+	sta DecompressionVariables.bMethodCount
 
 	; Next byte determines the type of ORR
 
-	lda [lDecompSource],y
+	lda [DecompressionVariables.lSource],y
 	inc y
 	bne +
 
@@ -266,11 +266,11 @@ rlDecompressor ; 80/B574
 
 	+
 	pha
-	lda bDecompCount
+	lda DecompressionVariables.bCount
 	beq +
 
 	dec a
-	sta bDecompCount
+	sta DecompressionVariables.bCount
 	bne +
 
 	jsr _SetSource
@@ -285,39 +285,39 @@ rlDecompressor ; 80/B574
 	blt _LowerNybbleData
 
 	and #$0F
-	sta bDecompVar0
+	sta DecompressionVariables.bVar0
 
 	_UpperDataLoop
-	lda [lDecompSource],y
+	lda [DecompressionVariables.lSource],y
 	inc y
 	bne +
 
 	jsr _BankBoundary
 
 	+
-	sta bDecompVar1
+	sta DecompressionVariables.bVar1
 	and #$F0
-	ora bDecompVar0
+	ora DecompressionVariables.bVar0
 	sta $0000,b,x
 	inc x
-	lda bDecompCount
+	lda DecompressionVariables.bCount
 	beq +
 
 	jsr _DecCount
 
 	+
-	dec bDecompMethodCount
+	dec DecompressionVariables.bMethodCount
 	bmi _ORREnd
 
-	lda bDecompVar1
+	lda DecompressionVariables.bVar1
 	asl a
 	asl a
 	asl a
 	asl a
-	ora bDecompVar0
+	ora DecompressionVariables.bVar0
 	sta $0000,b,x
 	inc x
-	dec bDecompMethodCount
+	dec DecompressionVariables.bMethodCount
 	bpl _UpperDataLoop
 
 	jmp _GetNextMethod
@@ -327,39 +327,39 @@ rlDecompressor ; 80/B574
 	asl a
 	asl a
 	asl a
-	sta bDecompVar0
+	sta DecompressionVariables.bVar0
 
 	_LowerDataLoop
-	lda [lDecompSource],y
+	lda [DecompressionVariables.lSource],y
 	inc y
 	bne +
 
 	jsr _BankBoundary
 
 	+
-	sta bDecompVar1
+	sta DecompressionVariables.bVar1
 	lsr a
 	lsr a
 	lsr a
 	lsr a
-	ora bDecompVar0
+	ora DecompressionVariables.bVar0
 	sta $0000,b,x
 	inc x
-	lda bDecompCount
+	lda DecompressionVariables.bCount
 	beq +
 
 	jsr _DecCount
 
 	+
-	dec bDecompMethodCount
+	dec DecompressionVariables.bMethodCount
 	bmi _ORREnd
 
-	lda bDecompVar1
+	lda DecompressionVariables.bVar1
 	and #$0F
-	ora bDecompVar0
+	ora DecompressionVariables.bVar0
 	sta $0000,b,x
 	inc x
-	dec bDecompMethodCount
+	dec DecompressionVariables.bMethodCount
 	bpl _LowerDataLoop
 
 	_ORREnd
@@ -380,10 +380,10 @@ rlDecompressor ; 80/B574
 
 	+
 	and #$0F
-	sta bDecompMethodCount
+	sta DecompressionVariables.bMethodCount
 
 	_DupLoop
-	lda [lDecompSource],y ; get data
+	lda [DecompressionVariables.lSource],y ; get data
 	inc y
 	bne +
 
@@ -394,13 +394,13 @@ rlDecompressor ; 80/B574
 	inc x
 	sta $0000,b,x
 	inc x
-	lda bDecompCount
+	lda DecompressionVariables.bCount
 	beq +
 
 	jsr _DecCount
 
 	+
-	dec bDecompMethodCount
+	dec DecompressionVariables.bMethodCount
 	bpl _DupLoop
 
 	jmp _GetNextMethod
@@ -422,7 +422,7 @@ rlDecompressor ; 80/B574
 	; next byte is the value that is appended
 
 	xba
-	lda [lDecompSource],y
+	lda [DecompressionVariables.lSource],y
 	inc y
 	bne +
 
@@ -430,30 +430,30 @@ rlDecompressor ; 80/B574
 
 	+
 	pha
-	lda bDecompCount
+	lda DecompressionVariables.bCount
 	beq +
 
 	dec a
-	sta bDecompCount
+	sta DecompressionVariables.bCount
 	bne +
 
 	jsr _SetSource
 
 	+
 	pla
-	sta bDecompVar0
+	sta DecompressionVariables.bVar0
 	xba
 	cmp #$70
 	and #$0F
 	inc a
-	sta bDecompMethodCount
+	sta DecompressionVariables.bMethodCount
 	bge _Postappend
 
 	_Preappend
-	lda bDecompVar0 ; append val
+	lda DecompressionVariables.bVar0 ; append val
 	sta $0000,b,x
 	inc x
-	lda [lDecompSource],y ; then data
+	lda [DecompressionVariables.lSource],y ; then data
 	inc y
 	bne +
 
@@ -462,18 +462,18 @@ rlDecompressor ; 80/B574
 	+
 	sta $0000,b,x
 	inc x
-	lda bDecompCount
+	lda DecompressionVariables.bCount
 	beq +
 
 	jsr _DecCount
 
 	+
-	dec bDecompMethodCount
+	dec DecompressionVariables.bMethodCount
 	bpl _Preappend
 	bra _GetNextMethod
 
 	_Postappend
-	lda [lDecompSource],y ; append data
+	lda [DecompressionVariables.lSource],y ; append data
 	inc y
 	bne +
 
@@ -482,16 +482,16 @@ rlDecompressor ; 80/B574
 	+
 	sta $0000,b,x
 	inc x
-	lda bDecompCount
+	lda DecompressionVariables.bCount
 	beq +
 
 	jsr _DecCount
 
 	+
-	lda bDecompVar0 ; then val
+	lda DecompressionVariables.bVar0 ; then val
 	sta $0000,b,x
 	inc x
-	dec bDecompMethodCount
+	dec DecompressionVariables.bMethodCount
 	bpl _Postappend
 
 	bra _GetNextMethod
@@ -513,10 +513,10 @@ rlDecompressor ; 80/B574
 
 	; Number of bytes to copy
 
-	sta bDecompMethodCount
+	sta DecompressionVariables.bMethodCount
 
 	_LiteralLoop
-	lda [lDecompSource],y ; get byte to copy
+	lda [DecompressionVariables.lSource],y ; get byte to copy
 	inc y
 	bne +
 
@@ -525,13 +525,13 @@ rlDecompressor ; 80/B574
 	+
 	sta $0000,b,x ; Store to dest
 	inc x
-	lda bDecompCount
+	lda DecompressionVariables.bCount
 	beq +
 
 	jsr _DecCount
 
 	+
-	dec bDecompMethodCount
+	dec DecompressionVariables.bMethodCount
 	bpl _LiteralLoop
 
 	_GetNextMethod ; 80/B737
@@ -546,7 +546,7 @@ rlDecompressor ; 80/B574
 
 	; Fetch method from source
 
-	lda [lDecompSource],y
+	lda [DecompressionVariables.lSource],y
 	inc y
 	bne +
 
@@ -557,11 +557,11 @@ rlDecompressor ; 80/B574
 
 	; Decrement lookback method count
 
-	lda bDecompCount
+	lda DecompressionVariables.bCount
 	beq +
 
 	dec a
-	sta bDecompCount
+	sta DecompressionVariables.bCount
 	bne +
 
 	jsr _SetSource
@@ -592,7 +592,7 @@ rlDecompressor ; 80/B574
 	lsr a
 	lsr a
 	inc a
-	sta bDecompMethodCount
+	sta DecompressionVariables.bMethodCount
 	pla
 
 	; upper bits of distance
@@ -601,7 +601,7 @@ rlDecompressor ; 80/B574
 	xba
 
 	_LZGetLowerDistByte
-	lda [lDecompSource],y ; get lower distance byte
+	lda [DecompressionVariables.lSource],y ; get lower distance byte
 	inc y
 	bne +
 
@@ -614,10 +614,10 @@ rlDecompressor ; 80/B574
 	; Subtract current dest point
 	; to get pos in decomp to read
 
-	sta lDecompDest
+	sta DecompressionVariables.lDest
 	txa
 	sec
-	sbc lDecompDest
+	sbc DecompressionVariables.lDest
 	tay
 	sep #$20
 
@@ -626,7 +626,7 @@ rlDecompressor ; 80/B574
 	sta $0000,b,x
 	inc y
 	inc x
-	dec bDecompMethodCount
+	dec DecompressionVariables.bMethodCount
 	bpl _LZLoop
 
 	ply
@@ -638,7 +638,7 @@ rlDecompressor ; 80/B574
 	.autsiz
 	.databank ?
 
-	lda bDecompCount
+	lda DecompressionVariables.bCount
 	beq _GetNextMethod
 
 	jsr _DecCount
@@ -660,7 +660,7 @@ rlDecompressor ; 80/B574
 
 	and #$1F
 	xba
-	lda [lDecompSource],y
+	lda [DecompressionVariables.lSource],y
 	inc y
 	bne +
 
@@ -668,11 +668,11 @@ rlDecompressor ; 80/B574
 
 	+
 	pha
-	lda bDecompCount
+	lda DecompressionVariables.bCount
 	beq +
 
 	dec a
-	sta bDecompCount
+	sta DecompressionVariables.bCount
 	bne +
 
 	jsr _SetSource
@@ -685,7 +685,7 @@ rlDecompressor ; 80/B574
 	lsr a
 	xba
 	inc a
-	sta bDecompMethodCount
+	sta DecompressionVariables.bMethodCount
 	bra _LZGetLowerDistByte
 
 	_RLEOrSpecial ; 80/B7B1
@@ -703,22 +703,22 @@ rlDecompressor ; 80/B574
 	; length = 3 + (method&0xF)<<8 + data[pos+1]
 
 	and #$0F
-	sta bDecompVar1
-	lda [lDecompSource],y
+	sta DecompressionVariables.bVar1
+	lda [DecompressionVariables.lSource],y
 	inc y
 	bne +
 
 	jsr _BankBoundary
 
 	+
-	sta bDecompVar0
-	lda bDecompCount
+	sta DecompressionVariables.bVar0
+	lda DecompressionVariables.bCount
 	beq +
 
 	jsr _DecCount
 
 	+
-	lda [lDecompSource],y ; grab byte to repeat
+	lda [DecompressionVariables.lSource],y ; grab byte to repeat
 	inc y
 	bne +
 
@@ -729,7 +729,7 @@ rlDecompressor ; 80/B574
 	pha
 	pha
 	rep #$20
-	lda bDecompVar0
+	lda DecompressionVariables.bVar0
 	clc
 	adc #$0003
 	lsr a
@@ -770,8 +770,8 @@ rlDecompressor ; 80/B574
 
 	and #$07
 	adc #$02
-	sta bDecompMethodCount
-	lda [lDecompSource],y ; byte to repeat
+	sta DecompressionVariables.bMethodCount
+	lda [DecompressionVariables.lSource],y ; byte to repeat
 	inc y
 	bne _ShortRLELoop
 	jsr _BankBoundary
@@ -779,7 +779,7 @@ rlDecompressor ; 80/B574
 	_ShortRLELoop
 	sta $0000,b,x
 	inc x
-	dec bDecompMethodCount
+	dec DecompressionVariables.bMethodCount
 	bpl _ShortRLELoop
 	jmp _NextLookbackOrEnd
 
@@ -797,7 +797,7 @@ rlDecompressor ; 80/B574
 
 	and #$03
 	xba
-	lda [lDecompSource],y
+	lda [DecompressionVariables.lSource],y
 	inc y
 	bne +
 
@@ -814,7 +814,7 @@ rlDecompressor ; 80/B574
 	lsr a
 	xba
 	pha
-	lda [lDecompSource],y
+	lda [DecompressionVariables.lSource],y
 	inc y
 	bne +
 
@@ -826,18 +826,18 @@ rlDecompressor ; 80/B574
 	adc #$0003
 
 	_SetReadposAndCount
-	sty lDecompTemp
-	sta lDecompDest
+	sty DecompressionVariables.lTemp
+	sta DecompressionVariables.lDest
 	sep #$20
-	lda lDecompSource+2
-	sta lDecompTemp+2
-	lda bDecompFlag
+	lda DecompressionVariables.lSource+2
+	sta DecompressionVariables.lTemp+2
+	lda DecompressionVariables.bFlag
 	rep #$20
 	beq _GetPreviousBankOffset
 
 	tya
 	sec
-	sbc lDecompDest
+	sbc DecompressionVariables.lDest
 	bge _SetCountAndDecomp
 
 	bra _GetPreviousBank
@@ -845,14 +845,14 @@ rlDecompressor ; 80/B574
 	_GetPreviousBankOffset
 	tya
 	sec
-	sbc lDecompDest
+	sbc DecompressionVariables.lDest
 	bmi _SetCountAndDecomp
 
 	clc
 	adc #$8000
 
 	_GetPreviousBank
-	dec lDecompSource+2
+	dec DecompressionVariables.lSource+2
 
 	_SetCountAndDecomp
 	tay
@@ -860,7 +860,7 @@ rlDecompressor ; 80/B574
 	pla
 	clc
 	adc #$03
-	sta bDecompCount
+	sta DecompressionVariables.bCount
 	jmp _GetNextMethod
 
 	_CheckForEndFlag
@@ -873,7 +873,7 @@ rlDecompressor ; 80/B574
 
 	and #$01
 	xba
-	lda [lDecompSource],y
+	lda [DecompressionVariables.lSource],y
 	inc y
 	bne +
 

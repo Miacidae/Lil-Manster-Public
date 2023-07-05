@@ -13,10 +13,10 @@ rlProcEventFadeInInit ; 82/8EB6
 
 	php
 	rep #$20
-	ldy wEventExecutionOffset,b
+	ldy wEventEngineOffset,b
 	lda [lR22],y
 	and #$00FF
-	sta aProcBody0,b,x
+	sta aProcSystem.aBody0,b,x
 	plp
 	rtl
 
@@ -27,7 +27,7 @@ rlProcEventFadeInOnCycle ; 82/8EC6
 	.autsiz
 	.databank ?
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlFadeInByTimer
 	bcc +
 
@@ -54,10 +54,10 @@ rlProcEventFadeOutInit ; 82/8EE0
 
 	php
 	rep #$20
-	ldy wEventExecutionOffset,b
+	ldy wEventEngineOffset,b
 	lda [lR22],y
 	and #$00FF
-	sta aProcBody0,b,x
+	sta aProcSystem.aBody0,b,x
 	plp
 	rtl
 
@@ -68,12 +68,12 @@ rlProcEventFadeOutOnCycle ; 82/8EF0
 	.autsiz
 	.databank ?
 
-	lda aProcBody0,b,x
+	lda aProcSystem.aBody0,b,x
 	jsl rlFadeOutByTimer
 	bcc +
 
 	sep #$20
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	sta INIDISP,b
 	rep #$20
 

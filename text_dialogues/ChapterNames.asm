@@ -1,139 +1,141 @@
-ch1titlename
+dialogueChapter01Title
 .text "Chapter 1: The Warrior of Fiana"
 .byte $01
 
-ch2titlename
+dialogueChapter02Title
 .text "Chapter 2: The Coastal Village"
 .byte $01
 
-ch2xtitlename
+dialogueChapter02xTitle
 .text "Chapter 2x: The Corsair Isles"
 .byte $01
 
-ch3titlename
+dialogueChapter03Title
 .text "Chapter 3: Kerberos' Gate"
 .byte $01
 
-ch4titlename
+dialogueChapter04Title
 .text "Chapter 4: Imprisoned"
 .byte $01
 
-ch4xtitlename
+dialogueChapter04xTitle
 .text "Chapter 4x: Hero on the Wind"
 .byte $01
 
-ch5titlename
+dialogueChapter05Title
 .text "Chapter 5: Mother and Daughter"
 .byte $01
 
-ch6titlename
+dialogueChapter06Title
 .text "Chapter 6: The Escape"
 .byte $01
 
-ch7titlename
+dialogueChapter07Title
 .text "Chapter 7: The Shield of Thracia"
 .byte $01
 
-ch8titlename
+dialogueChapter08Title
 .text "Chapter 8: Mount Violdrake"
 .byte $01
 
-ch8xtitlename
+dialogueChapter08xTitle
 .text "Chapter 8x: Dagdar's Manor"
 .byte $01
 
-ch9titlename
+dialogueChapter09Title
 .text "Chapter 9: The Banner of Njörun"
 .byte $01
 
-ch10titlename
+dialogueChapter10Title
 .text "Chapter 10: Nowell Valley"
 .byte $01
 
-ch11titlename
+dialogueChapter11Title
 .text "Chapter 11: Fort Dundrum"
 .byte $01
 
-ch11xtitlename
+dialogueChapter11xTitle
 .text "Chapter 11x: Desperate Ground"
 .byte $01
 
-ch12titlename
+dialogueChapter12Title
 .text "Chapter 12: The Bandits of Dacia"
 .byte $01
 
-ch12xtitlename
+dialogueChapter12xTitle
 .text "Chapter 12x: The Dandelion"
 .byte $01
 
-ch13titlename
+dialogueChapter13Title
 .text "Chapter 13: The Walled City"
 .byte $01
 
-ch14titlename
+dialogueChapter14Title
 .text "Chapter 14: The Onslaught"
 .byte $01
 
-ch14xtitlename
+dialogueChapter14xTitle
 .text "Chapter 14x: Yearning to Breathe Free"
 .byte $01
 
-ch15titlename
+dialogueChapter15Title
 .text "Chapter 15: Two Paths"
 .byte $01
 
-ch16Atitlename
+dialogueChapter16ATitle
 .text "Chapter 16: Nordrhein"
 .byte $01
 
-ch17Atitlename
+dialogueChapter17ATitle
 .text "Chapter 17: The Gates of Leonster"
 .byte $01
 
-ch16Btitlename
+dialogueChapter16BTitle
 .text "Chapter 16: Dark Forest"
 .byte $01
 
-ch17Btitlename
+dialogueChapter17BTitle
 .text "Chapter 17: The Gathering Storm"
 .byte $01
 
-ch18titlename
+dialogueChapter18Title
 .text "Chapter 18: The Liberation of Leonster"
 .byte $01
 
-ch19titlename
+dialogueChapter19Title
 .text "Chapter 19: The Empire's Wrath"
 .byte $01
 
-ch20titlename
+dialogueChapter20Title
 .text "Chapter 20: The Scion of Light"
 .byte $01
 
-ch21titlename
+dialogueChapter21Title
 .text "Chapter 21: The War of Liberation"
 .byte $01
 
-ch21xtitlename
+dialogueChapter21xTitle
 .text "Chapter 21x: The Prison Camp"
 .byte $01
 
-ch22titlename
+dialogueChapter22Title
 .text "Chapter 22: Beyond the River"
 .byte $01
 
-ch23titlename
+; dialogueChapter22xTitle
+
+dialogueChapter23Title
 .text "Chapter 23: The Fiend's Lair"
 .byte $01
 
-ch24titlename
+dialogueChapter24Title
 .text "Chapter 24: The Baron in Black"
 .byte $01
 
-ch24xtitlename
+dialogueChapter24xTitle
 .text "Chapter 24x: The Loptrian Altar"
 .byte $01
 
-ch25titlename
+dialogueChapterFinalTitle
 .text "Endgame: Sworn Upon a Sword"
 .byte $01

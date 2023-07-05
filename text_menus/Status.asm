@@ -1,48 +1,37 @@
 ;	Status text pointers
 
-* = $476700
-.logical lorom($476700, 1)
+	.section StatusTextPointersSection
 
-status_text_pointers			.block
+		.word <>menutextNoStatus
+		.word <>menutextSleepStatus
+		.word <>menutextPoisonStatus
+		.word <>menutextSilenceStatus
+		.word <>menutextBerserkStatus
+		.word <>menutextStoneStatus
 
-.word <>status_text._NoStatus
-.word <>status_text._SleepStatus
-.word <>status_text._PoisonStatus
-.word <>status_text._SilenceStatus
-.word <>status_text._BerserkStatus
-.word <>status_text._StoneStatus
-
-.bend
+	.endsection StatusTextPointersSection
 
 ;	Status text
 ;	Character limit: 14
 
-status_text						.block
+	.section StatusTextDataSection
+		
+		menutextNoStatus
+			.text "{-}{-}{-}{-}  \n"
+		
+		menutextSleepStatus
+			.text "Sleep \n"
+		
+		menutextPoisonStatus
+			.text "Poison\n"
+		
+		menutextSilenceStatus
+			.text "Silence \n"
+		
+		menutextBerserkStatus
+			.text "Berserk \n"
+		
+		menutextStoneStatus
+			.text "Stone \n"
 
-_NoStatus
-	.text "{-}{-}{-}{-}  "
-.word $0000
-
-_SleepStatus
-	.text "Sleep "
-.word $0000
-
-_PoisonStatus
-	.text "Poison"
-.word $0000
-
-_SilenceStatus
-	.text "Silence "
-.word $0000
-
-_BerserkStatus
-	.text "Berserk "
-.word $0000
-
-_StoneStatus
-	.text "Stone "
-.word $0000
-
-.bend
-
-.here
+	.endsection StatusTextDataSection

@@ -11,9 +11,9 @@ rlDrawAttackRange ; 81/BB21
 
 	; Clear map
 
-	lda #<>aMovementMap
+	lda #<>aRangeMap
 	sta lR18
-	lda #>`aMovementMap
+	lda #>`aRangeMap
 	sta lR18+1
 	lda #$0000
 	jsl rlFillMapByWord
@@ -188,7 +188,7 @@ rlDrawAttackRangeByMinMaxEffect ; 81/BC20
 	rep #$30
 	txa
 	jsl rlGetMapCoordsByTileIndex
-	lda #<>aMovementMap
+	lda #<>aRangeMap
 	sta wR3
 	lda wR17 ; min | (max << 4)
 	jsl rlUnknown80E5CD
@@ -300,11 +300,11 @@ rlUnknown81BCAE ; 81/BCAE
 	.al
 	.xl
 	.autsiz
-	.databank `wEventEngineUnknownXTarget
+	.databank `wActiveTileUnitParameter1
 
 	lda #5 * $10
 	sta wR0
-	lda #<>aBGPal3
+	lda #<>aBGPaletteBuffer.aPalette3
 	sta wR1
 	lda #<>aFadingBGPaletteBands
 	sta wR2
@@ -312,16 +312,16 @@ rlUnknown81BCAE ; 81/BCAE
 
 	lda #4 * $10
 	sta wR0
-	lda #<>aOAMPal0
+	lda #<>aOAMPaletteBuffer.aPalette0
 	sta wR1
 	lda #<>aFadingOAMPaletteBands
 	sta wR2
 	jsl rlSeparatePaletteBands
 
-	stz wEventEngineUnknownXTarget
+	stz wActiveTileUnitParameter1
 
 	-
-	ldx wEventEngineUnknownXTarget
+	ldx wActiveTileUnitParameter1
 	lda aUnknown81BD14,x
 	beq +
 
@@ -332,7 +332,7 @@ rlUnknown81BCAE ; 81/BCAE
 	sta wR1
 	jsl rlReduceAndCombinePaletteBands
 
-	ldx wEventEngineUnknownXTarget
+	ldx wActiveTileUnitParameter1
 	lda aUnknown81BD14+2,x
 	sta wR2
 	lda #4 * $10
@@ -341,10 +341,10 @@ rlUnknown81BCAE ; 81/BCAE
 	sta wR1
 	jsl rlReduceAndCombinePaletteBands
 
-	lda wEventEngineUnknownXTarget
+	lda wActiveTileUnitParameter1
 	clc
 	adc #$0004
-	sta wEventEngineUnknownXTarget
+	sta wActiveTileUnitParameter1
 	bra -
 
 	+
@@ -367,7 +367,7 @@ rlSeparatePaletteBands ; 81/BD36
 	.al
 	.xl
 	.autsiz
-	.databank `wEventEngineUnknownXTarget
+	.databank `wActiveTileUnitParameter1
 
 	; Separates colors in a palette out into
 	; their r, g, b intensities
@@ -413,7 +413,7 @@ rlReduceAndCombinePaletteBands ; 81/BD62
 	.al
 	.xl
 	.autsiz
-	.databank `wEventEngineUnknownXTarget
+	.databank `wActiveTileUnitParameter1
 
 	; Reduces the intensity of color bands by one
 	; and recombines them. Wouldn't this miss the first color?

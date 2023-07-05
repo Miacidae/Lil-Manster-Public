@@ -1,17 +1,17 @@
 
 aWorldMapEventPointers ; 8C/D99B
-	.long eventChapter1WorldMapEvents
-	.long eventChapter2WorldMapEvents
-	.long None ; Chapter2x
-	.long eventChapter3WorldMapEvents
-	.long eventChapter4WorldMapEvents
-	.long None ; Chapter4x
-	.long None ; Chapter5
-	.long None ; Chapter6
-	.long eventChapter7WorldMapEvents
-	.long eventChapter8WorldMapEvents
-	.long None ; Chapter8x
-	.long eventChapter9WorldMapEvents
+	.long eventChapter01WorldMapEvents
+	.long eventChapter02WorldMapEvents
+	.long None ; Chapter02x
+	.long eventChapter03WorldMapEvents
+	.long eventChapter04WorldMapEvents
+	.long None ; Chapter04x
+	.long None ; Chapter05
+	.long None ; Chapter06
+	.long eventChapter07WorldMapEvents
+	.long eventChapter08WorldMapEvents
+	.long None ; Chapter08x
+	.long eventChapter09WorldMapEvents
 	.long eventChapter10WorldMapEvents
 	.long eventChapter11WorldMapEvents
 	.long None ; Chapter11x

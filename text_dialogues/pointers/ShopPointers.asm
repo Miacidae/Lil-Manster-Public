@@ -1,5 +1,5 @@
 * = $02A6B6
-.logical lorom($02A6B6, 1)
+.logical mapped($02A6B6)
 
 .long shop_text._intro_armory
 .byte 11, 2

@@ -1,4 +1,4 @@
-cinch1
+dialogueDemo1
 
 .byte Right_slot
 .word LoadPortrait
@@ -50,7 +50,7 @@ cinch1
 .byte EndText
 
 
-cinch2
+dialogueDemo2
 
 .byte Right_slot
 .word LoadPortrait
@@ -87,7 +87,7 @@ cinch2
 .byte EndText
 
 
-cinraydrik
+dialogueDemoRaydrik
 
 .byte Right_slot
 .word LoadPortrait
@@ -120,7 +120,7 @@ cinraydrik
 .byte EndText
 
 
-cinorsin
+dialogueDemoOsian
 .word $1400
 .byte $00
 .text "You're on, Halvan!"
@@ -130,7 +130,7 @@ cinorsin
 .byte EndText
 
 
-cinhalvan
+dialogueDemoHalvan
 
 .text "Not bad!"
 .byte NewLine

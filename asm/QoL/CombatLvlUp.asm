@@ -15,7 +15,10 @@ jsl CombatLvlUp
 * = $0F0787
 .logical $9E8787
 
+
 CombatLvlUp
+
+  .as
 
 lda $7E4494
 cmp #$0053		; $0053 last frame where stat ups are displayed
@@ -35,6 +38,7 @@ pha
 plb
 rep #$20
 
+  .al
 
 ; do it in fe5s order (first row down, then 2nd row down) instead of fe4 (left to right)
 LDA $7E448E 		; coordinates of stat increase

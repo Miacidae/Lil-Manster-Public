@@ -12,8 +12,8 @@ rlUnknown95800B ; 95/800B
 	phx
 	phy
 	lda #$0000
-	sta wUnknown0017E9,b
-	sta wUnknown0017EB,b
+	sta wDialogueEngineStatus,b
+	sta wDialogueEngineControlCodeExecutionStep,b
 	sta wUnknown0017EF,b
 	sta wUnknown0017F1,b
 	sta wUnknown0017F3,b
@@ -25,21 +25,21 @@ rlUnknown95800B ; 95/800B
 	jsl $959106
 
 	sep #$20
-	stz bUnknown0017F9,b
+	stz bDialogueEngineFontPage,b
 	stz wUnknown001800,b
 	rep #$20
 
 	lda #$0000
-	sta wUnknown001808,b
+	sta wDialogueEngineTargetIndex,b
 	stz wUnknown0017F5,b
-	stz wUnknown0017FC,b
-	stz wUnknown0017FE,b
+	stz wDialogueEngineCurrentPixelWidth,b
+	stz wDialogueEngineTotalPixelWidth,b
 
 	lda #$000A
 	sta wUnknown0017F7,b
 
 	lda #$2000
-	sta wUnknown001804,b
+	sta wDialogueEngineTileBase,b
 
 	lda #$02D0
 	sta wUnknown001802,b

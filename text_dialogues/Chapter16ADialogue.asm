@@ -1,4 +1,4 @@
-ch16Aconomorarrive
+dialogueChapter16AConomorArrive
 
 .byte Right_slot
 .word LoadPortrait
@@ -40,7 +40,7 @@ ch16Aconomorarrive
 .byte EndText
 
 
-ch16Ailiosintro
+dialogueChapter16AIliosIntro
 
 .byte Right_slot
 .word LoadPortrait
@@ -60,7 +60,7 @@ ch16Ailiosintro
 .byte EndText
 
 
-ch16Ailioskarin
+dialogueChapter16AIliosKarin
 
 .byte Right_slot
 .word LoadPortrait
@@ -317,7 +317,7 @@ ch16Ailioskarin
 .byte EndText
 
 
-ch16Akempfolwen
+dialogueChapter16AKempfOlwen
 
 .byte Right_slot
 .word LoadPortrait
@@ -445,7 +445,7 @@ ch16Akempfolwen
 .byte EndText
 
 
-ch16Akempfcharge
+dialogueChapter16AKempfCharge
 
 .byte Right_slot
 .word LoadPortrait
@@ -487,7 +487,7 @@ ch16Akempfcharge
 .byte EndText
 
 
-ch16Aschroffleif
+dialogueChapter16ASchroffLeif
 
 .byte Right_slot
 .word LoadPortrait
@@ -555,7 +555,7 @@ ch16Aschroffleif
 .byte EndText
 
 
-ch16Aschroffother
+dialogueChapter16ASchroffOther
 
 .byte Right_slot
 .word LoadPortrait
@@ -570,7 +570,7 @@ ch16Aschroffother
 .byte EndText
 
 
-ch16Abridgekeyhouse
+dialogueChapter16ABridgeKeyHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -612,7 +612,7 @@ ch16Abridgekeyhouse
 .byte EndText
 
 
-ch16Apurewaterhouse
+dialogueChapter16APureWaterHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -632,7 +632,7 @@ ch16Apurewaterhouse
 .byte EndText
 
 
-ch16Amastersealhouse
+dialogueChapter16AMasterSealHouse
 
 .byte Right_slot
 .word LoadPortrait
@@ -657,7 +657,7 @@ ch16Amastersealhouse
 .byte EndText
 
 
-ch16Aschroffintro
+dialogueChapter16ASchroffIntro
 
 .byte Right_slot
 .word LoadPortrait
@@ -689,7 +689,7 @@ ch16Aschroffintro
 .byte EndText
 
 
-ch16Aopening1
+dialogueChapter16AOpening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -849,7 +849,7 @@ ch16Aopening1
 .byte EndText
 
 
-ch16Aopening2
+dialogueChapter16AOpening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -920,7 +920,7 @@ ch16Aopening2
 .byte EndText
 
 
-ch16Aopening3
+dialogueChapter16AOpening3
 
 .byte Left_slot
 .byte ScrollText
@@ -957,7 +957,7 @@ ch16Aopening3
 .byte EndText
 
 
-ch16Aclosing1
+dialogueChapter16AClosing1
 
 .byte Right_slot
 .word LoadPortrait
@@ -989,7 +989,7 @@ ch16Aclosing1
 .byte EndText
 
 
-ch16Aclosing2
+dialogueChapter16AClosing2
 
 .byte Left_slot
 .byte ScrollText
@@ -1096,7 +1096,7 @@ ch16Aclosing2
 .byte EndText
 
 
-ch16Aclosing3
+dialogueChapter16AClosing3
 
 .byte Right_slot
 .byte ScrollText
@@ -1157,7 +1157,7 @@ ch16Aclosing3
 .byte EndText
 
 
-ch16Awm1
+dialogueChapter16AWorldMap1
 
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2
@@ -1184,7 +1184,7 @@ ch16Awm1
 .byte EndText
 
 
-ch16Awm2
+dialogueChapter16AWorldMap2
 
 .text "the army would have to breach"
 .byte NewLine

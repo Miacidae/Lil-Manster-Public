@@ -1,310 +1,310 @@
-leiftitle
+dialogueEpilogueLeifTitle
 .byte $09
 .text "Leif — Prince of Leonster"
 .byte $05
 .byte EndText
 
-finntitle
+dialogueEpilogueFinnTitle
 .byte $09
 .text "Finn — Lance of Legend"
 .byte $05
 .byte EndText
 
-orsintitle
+dialogueEpilogueOrsinTitle
 .byte $09
 .text "Osian — Scolded Soldier"
 .byte $05
 .byte EndText
 
-halvantitle
+dialogueEpilogueHalvanTitle
 .byte $09
 .text "Halvan — Layman Turned Hero"
 .byte $05
 .byte EndText
 
-eyveltitle
+dialogueEpilogueEyvelTitle
 .byte $09
 .text "Eyvel — Mistress of Fiana"
 .byte $05
 .byte EndText
 
-dagdartitle
+dialogueEpilogueDagdarTitle
 .byte $09
 .text "Dagdar — Ex-Bandit of Mount Violdrake"
 .byte $05
 .byte EndText
 
-ralphtitle
+dialogueEpilogueRalphTitle
 .byte $09
 .text "Ralph — Wandering Sellsword"
 .byte $05
 .byte EndText
 
-martytitle
+dialogueEpilogueMartyTitle
 .byte $09
 .text "Marty — Dagdar's Beloved Man"
 .byte $05
 .byte EndText
 
-ronantitle
+dialogueEpilogueRonanTitle
 .byte $09
 .text "Ronan — Villager of Iz"
 .byte $05
 .byte EndText
 
-mirandatitle
+dialogueEpilogueMirandaTitle
 .byte $09
 .text "Miranda — Willful Princess"
 .byte $05
 .byte EndText
 
-safiyatitle
+dialogueEpilogueSafyTitle
 .byte $09
 .text "Safy — Servant of the Divine"
 .byte $05
 .byte EndText
 
-laratitle
+dialogueEpilogueLaraTitle
 .byte $09
 .text "Lara — From Innocence to Thievery"
 .byte $05
 .byte EndText
 
-brightontitle
+dialogueEpilogueBrightonTitle
 .byte $09
 .text "Brighton — Knight of Munster"
 .byte $05
 .byte EndText
 
-fergustitle
+dialogueEpilogueFergusTitle
 .byte $09
 .text "Fergus — Free-Spirited Knight"
 .byte $05
 .byte EndText
 
-edatitle
+dialogueEpilogueEdaTitle
 .byte $09
 .text "Eda — Dracoknight of Thracia"
 .byte $05
 .byte EndText
 
-asbeltitle
+dialogueEpilogueAsbelTitle
 .byte $09
 .text "Asbel — Windswept Youth"
 .byte $05
 .byte EndText
 
-machatitle
+dialogueEpilogueMachaTitle
 .byte $09
 .text "Macha — Blade of Gales"
 .byte $05
 .byte EndText
 
-hickstitle
+dialogueEpilogueHicksTitle
 .byte $09
 .text "Hicks — Father and Axeman"
 .byte $05
 .byte EndText
 
-nannatitle
+dialogueEpilogueNannaTitle
 .byte $09
 .text "Nanna — Nordion Princess"
 .byte $05
 .byte EndText
 
-selphinatitle
+dialogueEpilogueSelphinaTitle
 .byte $09
 .text "Selphina — Bow of Beauty"
 .byte $05
 .byte EndText
 
-dalsintitle
+dialogueEpilogueDalsinTitle
 .byte $09
 .text "Dalsin — Knight of Unwavering Resolve"
 .byte $05
 .byte EndText
 
-calliontitle
+dialogueEpilogueCallionTitle
 .byte $09
 .text "Callion — Nobleman of Leonster"
 .byte $05
 .byte EndText
 
-shivatitle
+dialogueEpilogueShivaTitle
 .byte $09
 .text "Shiva — Sellsword of Saban"
 .byte $05
 .byte EndText
 
-pantitle
+dialogueEpiloguePerneTitle
 .byte $09
 .text "Perne — Bandit of Dacia"
 .byte $05
 .byte EndText
 
-gladetitle
+dialogueEpilogueGladeTitle
 .byte $09
 .text "Glade — Knight of Integrity"
 .byte $05
 .byte EndText
 
-kanetitle
+dialogueEpilogueKaneTitle
 .byte $09
 .text "Kane — Lance of Leonster"
 .byte $05
 .byte EndText
 
-albatitle
+dialogueEpilogueAlbaTitle
 .byte $09
 .text "Alba — Lance of Leonster"
 .byte $05
 .byte EndText
 
-roberttitle
+dialogueEpilogueRobertTitle
 .byte $09
 .text "Robert — Bowman of Leonster"
 .byte $05
 .byte EndText
 
-fredtitle
+dialogueEpilogueFredTitle
 .byte $09
 .text "Fred — Knight of House Stade"
 .byte $05
 .byte EndText
 
-olwentitle
+dialogueEpilogueOlwenTitle
 .byte $09
 .text "Olwen — Blue Mage Knight"
 .byte $05
 .byte EndText
 
-cedtitle
+dialogueEpilogueCedTitle
 .byte $09
 .text "Ced — Crusader of Wind"
 .byte $05
 .byte EndText
 
-lithistitle
+dialogueEpilogueLifisTitle
 .byte $09
 .text "Lifis — Shy Thief"
 .byte $05
 .byte EndText
 
-karintitle
+dialogueEpilogueKarinTitle
 .byte $09
 .text "Karin — Swift Rider"
 .byte $05
 .byte EndText
 
-deantitle
+dialogueEpilogueDeanTitle
 .byte $09
 .text "Dean — Hero of the Clear Blue Skies"
 .byte $05
 .byte EndText
 
-shanamtitle
+dialogueEpilogueShannamTitle
 .byte $09
 .text "Shannam — The Charlatan"
 .byte $05
 .byte EndText
 
-trudetitle
+dialogueEpilogueTrudeTitle
 .byte $09
 .text "Trude — The Man Called Death Itself"
 .byte $05
 .byte EndText
 
-tanyatitle
+dialogueEpilogueTanyaTitle
 .byte $09
 .text "Tanya — Dagdar's Beloved Kid"
 .byte $05
 .byte EndText
 
-linoantitle
+dialogueEpilogueLinoanTitle
 .byte $09
 .text "Linoan — Blossoming Flower of Tahra"
 .byte $05
 .byte EndText
 
-mishatitle
+dialogueEpilogueMishaTitle
 .byte $09
 .text "Misha — First of the New Falcon Knights"
 .byte $05
 .byte EndText
 
-salemtitle
+dialogueEpilogueSalemTitle
 .byte $09
 .text "Salem — The Sorcerer"
 .byte $05
 .byte EndText
 
-schrofftitle
+dialogueEpilogueSchroffTitle
 .byte $09
 .text "Schroff — Priest of Bragi"
 .byte $05
 .byte EndText
 
-mareetatitle
+dialogueEpilogueMareetaTitle
 .byte $09
 .text "Mareeta — Sword of Stars"
 .byte $05
 .byte EndText
 
-tinatitle
+dialogueEpilogueTinaTitle
 .byte $09
 .text "Tina — Mischievous Little Sister"
 .byte $05
 .byte EndText
 
-amaldatitle
+dialogueEpilogueAmaldaTitle
 .byte $09
 .text "Amalda — Retired Knight"
 .byte $05
 .byte EndText
 
-conomortitle
+dialogueEpilogueConomorTitle
 .byte $09
 .text "Conomor — Knight of Ulster"
 .byte $05
 .byte EndText
 
-homertitle
+dialogueEpilogueHomerTitle
 .byte $09
 .text "Homer — Traveling Bard"
 .byte $05
 .byte EndText
 
-dermotttitle
+dialogueEpilogueDiarmuidTitle
 .byte $09
 .text "Diarmuid — Charming Knight"
 .byte $05
 .byte EndText
 
-sarahtitle
+dialogueEpilogueSaraTitle
 .byte $09
 .text "Sara — Doomed by Fate"
 .byte $05
 .byte EndText
 
-saiastitle
+dialogueEpilogueSaiasTitle
 .byte $09
 .text "Saias — Bishop of Flame"
 .byte $05
 .byte EndText
 
-galzustitle
+dialogueEpilogueGalzusTitle
 .byte $09
 .text "Galzus — Sullied Swordsman of Od"
 .byte $05
 .byte EndText
 
-iliostitle
+dialogueEpilogueIliosTitle
 .byte $09
 .text "Ilios — Aspiring Knight"
 .byte $05
 .byte EndText
 
-xaviertitle
+dialogueEpilogueXavierTitle
 .byte $09
 .text "Xavier — Loyal Warhorse"
 .byte $05

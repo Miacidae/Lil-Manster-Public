@@ -15,29 +15,29 @@ rlProcInventoryRescueIconInit ; 81/E0A9
 	lda #>`$F4FF80
 	sta lR18+1
 
-	lda #<>aOAMPal1
+	lda #<>aOAMPaletteBuffer.aPalette1
 	sta lR19
-	lda #>`aOAMPal1
+	lda #>`aOAMPaletteBuffer.aPalette1
 	sta lR19+1
 
 	; Use allegiance to get right palette
 
-	lda wProcInput0,b
+	lda aProcSystem.wInput0,b
 	lsr a
 	and #(Player | Enemy | NPC) >> 1
 	clc
 	adc lR18
 	sta lR18
 
-	lda #size(aOAMPal1)
-	sta wR20
+	lda #size(aOAMPaletteBuffer.aPalette1)
+	sta lR20
 
 	jsl rlBlockCopy
 
 	; Palette setting for sprite
 
 	lda #$0200
-	sta aProcBody1,b,x
+	sta aProcSystem.aBody1,b,x
 	rtl
 
 rlProcInventoryRescueIconOnCycle ; 81/E0D9
@@ -49,9 +49,9 @@ rlProcInventoryRescueIconOnCycle ; 81/E0D9
 
 	phx
 	lda #(`procSkillInfo)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procSkillInfo
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	plx
 	bcc +
@@ -71,12 +71,12 @@ rlProcInventoryRescueIconOnCycle ; 81/E0D9
 
 	lda #256 + 40
 	sec
-	sbc wBuf_BG3VOFS
+	sbc wBufferBG3VOFS
 	sta wR1
 
 	stz wR4
 
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	sta wR5
 
 	ldy #<>_Sprite

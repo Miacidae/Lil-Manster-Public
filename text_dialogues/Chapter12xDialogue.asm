@@ -1,4 +1,4 @@
-ch12xpansalem
+dialogueChapter12xPerneSalem
 
 .byte Right_slot
 .word LoadPortrait
@@ -78,7 +78,7 @@ ch12xpansalem
 .byte EndText
 
 
-ch12xpanlithis
+dialogueChapter12xPerneLifis
 
 .byte Right_slot
 .word LoadPortrait
@@ -242,7 +242,7 @@ ch12xpanlithis
 .byte EndText
 
 
-ch12xpanlithis2
+dialogueChapter12xPerneLifis2
 
 .byte Right_slot
 .byte ScrollText
@@ -265,7 +265,7 @@ ch12xpanlithis2
 .byte EndText
 
 
-ch12xpanlara
+dialogueChapter12xPerneLara
 
 .byte Right_slot
 .word LoadPortrait
@@ -439,7 +439,7 @@ ch12xpanlara
 .byte EndText
 
 
-ch12xpantrude
+dialogueChapter12xPerneTrude
 
 .byte Right_slot
 .word LoadPortrait
@@ -516,7 +516,7 @@ ch12xpantrude
 .byte EndText
 
 
-ch12xtinasafie
+dialogueChapter12xTinaSafy
 
 .byte Right_slot
 .word LoadPortrait
@@ -716,7 +716,7 @@ ch12xtinasafie
 .byte EndText
 
 
-ch12xopening1
+dialogueChapter12xOpening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -834,7 +834,7 @@ ch12xopening1
 .byte EndText
 
 
-ch12xopening2salem
+dialogueChapter12xOpening2Salem
 
 .byte Right_slot
 .word LoadPortrait
@@ -864,7 +864,7 @@ ch12xopening2salem
 .byte EndText
 
 
-ch12xopening3lithis
+dialogueChapter12xOpening3Lifis
 
 .byte Right_slot
 .word LoadPortrait
@@ -937,7 +937,7 @@ ch12xopening3lithis
 .byte EndText
 
 
-ch12xopening4lara
+dialogueChapter12xOpening4Lara
 
 .byte Right_slot
 .word LoadPortrait
@@ -1010,7 +1010,7 @@ ch12xopening4lara
 .byte EndText
 
 
-ch12xending1
+dialogueChapter12xEnding1
 
 .byte Left_slot
 .word LoadPortrait
@@ -1029,7 +1029,7 @@ ch12xending1
 .byte EndText
 
 
-ch12xending2
+dialogueChapter12xEnding2
 
 .byte Right_slot
 .byte ScrollText
@@ -1050,7 +1050,7 @@ ch12xending2
 .byte EndText
 
 
-ch12xending3
+dialogueChapter12xEnding3
 
 .byte Right_slot
 .byte ScrollText

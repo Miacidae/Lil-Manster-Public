@@ -1,4 +1,4 @@
-ch11kempfleave
+dialogueChapter11KempfLeave
 
 .byte Right_slot
 .word LoadPortrait
@@ -13,7 +13,7 @@ ch11kempfleave
 .byte EndText
 
 
-ch11kempfleif
+dialogueChapter11KempfLeif
 
 .byte Right_slot
 .word LoadPortrait
@@ -58,7 +58,7 @@ ch11kempfleif
 .byte EndText
 
 
-ch11kempftrapactivated
+dialogueChapter11KempfTrapActivated
 
 .byte Right_slot
 .word LoadPortrait
@@ -72,7 +72,7 @@ ch11kempftrapactivated
 .byte EndText
 
 
-ch11leiffred
+dialogueChapter11LeifFred
 
 .byte Right_slot
 .word LoadPortrait
@@ -193,7 +193,7 @@ ch11leiffred
 .byte EndText
 
 
-ch11opening1
+dialogueChapter11Opening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -468,7 +468,7 @@ ch11opening1
 .byte EndText
 
 
-ch11opening2
+dialogueChapter11Opening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -493,7 +493,7 @@ ch11opening2
 .byte EndText
 
 
-ch11opening3
+dialogueChapter11Opening3
 
 .byte Right_slot
 .word LoadPortrait
@@ -612,7 +612,7 @@ ch11opening3
 .byte EndText
 
 
-ch11endfredsaved
+dialogueChapter11EndFredSaved
 
 .byte Left_slot
 .word LoadPortrait
@@ -648,7 +648,7 @@ ch11endfredsaved
 .byte EndText
 
 
-ch11endfreddead
+dialogueChapter11EndFredDead
 
 .byte Left_slot
 .word LoadPortrait
@@ -680,7 +680,7 @@ ch11endfreddead
 .byte EndText
 
 
-ch11wm1
+dialogueChapter11WorldMap1
 
 .text "Breaking through the enemy's lines, the"
 .byte NewLine
@@ -694,7 +694,7 @@ ch11wm1
 .byte EndText
 
 
-ch11wm2
+dialogueChapter11WorldMap2
 
 .word LoadPortraitalt_1
 .long LoadPortraitalt_2

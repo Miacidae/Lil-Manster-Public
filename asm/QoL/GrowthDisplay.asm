@@ -5,7 +5,7 @@
 
 GrowthsDisplaySelectCheck
 
-	bit #JoypadSelect
+	bit #JOY_Select
 	bne _SelectPressed
 
 	; X Pressed
@@ -34,7 +34,7 @@ _SelectPressed
 	jml rsInventoryHandleInput._End ; dont allow window on lower half
 
 	+
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$0F00
 	bne +
 
@@ -70,18 +70,18 @@ rlDrawGrowthInfo ; 13c29b
 	; X
 
 	lda #1
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 
 	; Y
 
 	lda #7
-	sta wProcInput1,b
+	sta aProcSystem.wInput1,b
 
 	phx
 	lda #(`procGrowthInfo)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procGrowthInfo
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 
@@ -97,39 +97,39 @@ rlProcGrowthInfoInit ; 13C2C4
 	.autsiz
 	.databank ?
 
-	; aProcBody1: X | (Y << 8)
+	; aProcSystem.aBody1: X | (Y << 8)
 
-	lda wProcInput1,b 	; Y 
+	lda aProcSystem.wInput1,b 	; Y 
 	xba
-	ora wProcInput0,b
-	sta aProcBody1,b,x
+	ora aProcSystem.wInput0,b
+	sta aProcSystem.aBody1,b,x
 
-	; aProcBody3: X+2, where labels go
+	; aProcSystem.aBody3: X+2, where labels go
 
-	lda wProcInput0,b
+	lda aProcSystem.wInput0,b
 	clc
 	adc #2
-	sta aProcBody3,b,x
+	sta aProcSystem.aBody3,b,x
 
-	; aProcBody4: Y
+	; aProcSystem.aBody4: Y
 
-	lda wProcInput1,b
-	sta aProcBody4,b,x
+	lda aProcSystem.wInput1,b
+	sta aProcSystem.aBody4,b,x
 
-	; aProcBody2: tilemap position
+	; aProcSystem.aBody2: tilemap position
 
-	lda wProcInput1,b ; Y
+	lda aProcSystem.wInput1,b ; Y
 	asl a
 	asl a
 	asl a
 	asl a
 	asl a ; x32
 	clc
-	adc wProcInput0,b ; X
+	adc aProcSystem.wInput0,b ; X
 	asl a
 	clc
 	adc #<>aBG3TilemapBuffer
-	sta aProcBody2,b,x
+	sta aProcSystem.aBody2,b,x
 	rtl
 
 rlProcGrowthInfoOnCycle ; 13C304
@@ -149,11 +149,11 @@ rlProcGrowthInfoOnCycle ; 13C304
 	plb
 
 	lda #<>$83C0F6
-	sta lUnknown000DDE,b
+	sta aCurrentTilemapInfo.lInfoPointer,b
 	lda #>`$83C0F6
-	sta lUnknown000DDE+1,b
+	sta aCurrentTilemapInfo.lInfoPointer+1,b
 
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	sta wR16
 
 	phx
@@ -163,7 +163,7 @@ rlProcGrowthInfoOnCycle ; 13C304
 	plx
 
 	lda #$0000
-	sta aProcHeaderOnCycle,b,x
+	sta aProcSystem.aHeaderOnCycle,b,x
 
 	plb
 	plp
@@ -178,13 +178,13 @@ rsProcItemInfoDrawGrowthLabels
 	.databank $7E
 
 	lda #$2180
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	lda #<>GrowthLabels
 	sta lR18
 	lda #>`GrowthLabels
 	sta lR18+1
-	lda aProcBody1,b,x
+	lda aProcSystem.aBody1,b,x
 	tax
 	jsl $8588E4 	; draw text on several lines
 
@@ -203,7 +203,7 @@ rsProcItemInfoDrawGrowthStatNumbers
 
 
 	lda #$2AA0
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 
 	stz wR17
 
@@ -413,15 +413,15 @@ _UnmodifiedGrowthNumberTable
 
 _ModifiedGrowthNumberTable
 
-	.word <>wAutolevelHPGrowth
-	.word <>wAutolevelSTRGrowth
-	.word <>wAutolevelMAGGrowth
-	.word <>wAutolevelSKLGrowth
-	.word <>wAutolevelSPDGrowth
-	.word <>wAutolevelLUKGrowth
-	.word <>wAutolevelDEFGrowth
-	.word <>wAutolevelCONGrowth
-	.word <>wAutolevelMOVGrowth
+	.word <>aUnitAdjustedGrowths.wHP
+	.word <>aUnitAdjustedGrowths.wSTR
+	.word <>aUnitAdjustedGrowths.wMAG
+	.word <>aUnitAdjustedGrowths.wSKL
+	.word <>aUnitAdjustedGrowths.wSPD
+	.word <>aUnitAdjustedGrowths.wLUK
+	.word <>aUnitAdjustedGrowths.wDEF
+	.word <>aUnitAdjustedGrowths.wCON
+	.word <>aUnitAdjustedGrowths.wMOV
 
 rsDrawGreenModifiedGrowthText
 
@@ -435,7 +435,7 @@ rsDrawGreenModifiedGrowthText
 	phx
 	pha
 	lda #$3580
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	lda #<>_GreenGrowthString
 	sta lR18
 	lda #>`_GreenGrowthString
@@ -497,7 +497,7 @@ rsDrawRedModifiedGrowthText
 	pha 
 
 	lda #$3D80
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	lda #<>_RedGrowthString
 	sta lR18
 	lda #>`_RedGrowthString
@@ -547,7 +547,7 @@ rsTurnHexIntoText
 	ldx #2+2 ; offset the 2 dex when waiting for the hardware calc
 
 	-
-	sta @l WRDIV 		; dividend
+	sta @l WRDIVA 		; dividend
 	sep #$20
 	lda #10
 	sta @l WRDIVB		; divisor, store hex number and divide by $A
@@ -595,7 +595,7 @@ rsInventoryActionUpdateGrowthInfoWindow
 	; only thing to do is to check for B/Select press to close
 
 	lda wJoy1New
-	bit #JoypadB | JoypadSelect
+	bit #JOY_B | JOY_Select
 	bne _CloseGrowthWindow
 
 	jml rsInventoryActionUpdateGrowthInfoWindowReturn
@@ -625,9 +625,9 @@ rlCloseGrowthInfo ; 81/F873
 	.databank `wInfoWindowTarget
 
 	lda #(`procGrowthInfo)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procGrowthInfo
-	sta lR43
+	sta lR44
 	jsl rlProcEngineFindProc
 	stz wInfoWindowTarget 		; reused as flag if growth window is displayed, zero it out 
 	jsl rlProcEngineFreeProc

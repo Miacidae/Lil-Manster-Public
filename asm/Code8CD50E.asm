@@ -67,22 +67,22 @@ rlUnknown8CD52F ; 8C/D52F
 	php
 	rep #$20
 	lda #$0000
-	sta wUnknown001730,b
+	sta wEventEngineMapChangeFlag,b
 
 	jsl $95800B
 	jsr rsUnknown8C83D5
 
 	lda #$0000
 	sta wEventEngineCycleType,b
-	sta wEventExecutionOffset,b
+	sta wEventEngineOffset,b
 	sta lEventEngineEventDefinitionPointer,b
 	sta lEventEngineEventDefinitionPointer+1,b
-	sta wUnknown001791,b
+	sta wEventEngineUnknown001791,b
 	stz wEventEngineStatus,b
 
 	sep #$20
-	lda #TM_Setting(False, False, False, False, False)
-	sta bBuf_TM
+	lda #T_Setting(False, False, False, False, False)
+	sta bBufferTM
 	plp
 	rtl
 

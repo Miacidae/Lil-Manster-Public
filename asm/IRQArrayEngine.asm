@@ -177,9 +177,9 @@ rlUnknown82A6C8 ; 82/A6C8
 	.databank `*
 
 	sep #$20
-	lda bBuf_NMITIMEN
-	ora #NMITIMEN_Setting(False, True, True, False)
-	sta bBuf_NMITIMEN
+	lda bBufferNMITIMEN
+	ora #$30
+	sta bBufferNMITIMEN
 	rep #$20
 
 	lda #$8000
@@ -201,9 +201,9 @@ rlUnknown82A6EA ; 82/A6EA
 
 	sei
 	sep #$20
-	lda bBuf_NMITIMEN
-	and #~NMITIMEN_Setting(False, True, True, False)
-	sta bBuf_NMITIMEN
+	lda bBufferNMITIMEN
+	and #~($30)
+	sta bBufferNMITIMEN
 	rep #$20
 	lda #$8000
 	tsb wIRQArrayFlag,b
@@ -227,10 +227,10 @@ rlUnknown82A701 ; 82/A701
 	.databank `*
 
 	phx
-	lda lR43
+	lda lR44
 	tay
 	sep #$20
-	lda lR43+2
+	lda lR44+2
 	pha
 	rep #$20
 	plb
@@ -250,7 +250,7 @@ rlUnknown82A701 ; 82/A701
 	tax
 	tya
 	sta aIRQArrayTypeOffset,b,x
-	lda lR43+1
+	lda lR44+1
 	and #$FF00
 	xba
 	sta aIRQArrayTypeBank,b,x
@@ -316,8 +316,8 @@ rlUnknown82A770 ; 82/A770
 	.databank ?
 
 	sep #$20
-	lda bBuf_INIDISP
-	and #INIDISP.ForcedBlank
+	lda bBufferINIDISP
+	and #INIDISP_ForcedBlank
 	sta INIDISP,b
 	rep #$20
 	rtl

@@ -7,11 +7,11 @@ rsHDMAArrayCodeSleep ; 82/A5A8
 	.databank ?
 
 	lda $0000,b,y
-	sta aHDMAArraySleepTimer,b,x
+	sta aHDMASystem.aSleepTimer,b,x
 	inc y
 	inc y
 	tya
-	sta aHDMAArrayCodeOffset,b,x
+	sta aHDMASystem.aCodeOffset,b,x
 	pla
 	rts
 
@@ -22,10 +22,10 @@ rsHDMAArrayCodeEnd ; 82/A5B6
 	.autsiz
 	.databank ?
 
-	stz aHDMAArrayTypeOffset,b,x
-	lda aHDMAArrayBitfield,b,x
+	stz aHDMASystem.aTypeOffset,b,x
+	lda aHDMASystem.aBitfield,b,x
 	ora #$2000
-	sta aHDMAArrayBitfield,b,x
+	sta aHDMASystem.aBitfield,b,x
 	pla
 	rts
 
@@ -37,7 +37,7 @@ rsHDMAArrayCodeHaltSleep ; 82/A5C4
 	.databank ?
 
 	lda #$0001
-	sta aHDMAArraySleepTimer,b,x
+	sta aHDMASystem.aSleepTimer,b,x
 
 rsHDMAArrayCodeHalt ; 82/A5CA
 
@@ -49,7 +49,7 @@ rsHDMAArrayCodeHalt ; 82/A5CA
 	dec y
 	dec y
 	tya
-	sta aHDMAArrayCodeOffset,b,x
+	sta aHDMASystem.aCodeOffset,b,x
 	pla
 	rts
 
@@ -61,9 +61,9 @@ rsHDMAArrayCodeCallRoutine ; 82/A5D2
 	.databank ?
 
 	lda $0000,b,y
-	sta lHDMAArrayCodePointer,b
+	sta aHDMASystem.lPointer,b
 	lda $0001,b,y
-	sta lHDMAArrayCodePointer+1,b
+	sta aHDMASystem.lPointer+1,b
 	phy
 	phx
 	jsl _Goto
@@ -75,7 +75,7 @@ rsHDMAArrayCodeCallRoutine ; 82/A5D2
 	rts
 
 	_Goto
-	jmp [lHDMAArrayCodePointer]
+	jmp [aHDMASystem.lPointer]
 
 rsHDMAArrayCodeSetOnCycle ; 82/A5ED
 
@@ -85,10 +85,10 @@ rsHDMAArrayCodeSetOnCycle ; 82/A5ED
 	.databank ?
 
 	lda $0000,b,y
-	sta aHDMAArrayOnCycle,b,x
-	lda aHDMAArrayBitfield,b,x
+	sta aHDMASystem.aOnCycle,b,x
+	lda aHDMASystem.aBitfield,b,x
 	ora #$0800
-	sta aHDMAArrayBitfield,b,x
+	sta aHDMASystem.aBitfield,b,x
 	inc y
 	inc y
 	rts
@@ -112,7 +112,7 @@ rsHDMAArrayCodeSetUnknownTimer ; 82/A604
 	.databank ?
 
 	lda $0000,b,y
-	sta aHDMAArrayUnknownTimer,b,x
+	sta aHDMASystem.aTimer,b,x
 	inc y
 	inc y
 	rts
@@ -124,7 +124,7 @@ rsHDMAArrayCodeJumpWhileUnknownTimer ; 82/A60D
 	.autsiz
 	.databank ?
 
-	dec aHDMAArrayUnknownTimer,b,x
+	dec aHDMASystem.aTimer,b,x
 	bne rsHDMAArrayCodeJump
 
 	inc y
@@ -139,7 +139,7 @@ rsHDMAArrayCodeJumpIfBitUnset ; 82/A615
 	.databank ?
 
 	lda $0002,b,y
-	bit aHDMAArrayBitfield,b,x
+	bit aHDMASystem.aBitfield,b,x
 	beq rsHDMAArrayCodeJump
 
 	inc y
@@ -156,7 +156,7 @@ rsHDMAArrayCodeJumpIfBitSet ; 82/A622
 	.databank ?
 
 	lda $0002,b,y
-	bit aHDMAArrayBitfield,b,x
+	bit aHDMASystem.aBitfield,b,x
 	bne rsHDMAArrayCodeJump
 
 	inc y
@@ -174,7 +174,7 @@ rsHDMAArrayCodeSetTableBank ; 82/A62F
 
 	sep #$20
 	lda $0000,b,y
-	sta aHDMAArrayTableBank,b,x
+	sta aHDMASystem.aBankAndBBADx[0].bBank,b,x
 	rep #$20
 	inc y
 	rts

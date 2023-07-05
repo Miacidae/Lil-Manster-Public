@@ -1,845 +1,771 @@
 
-eventChapter16AEvents ; FD/B120
-
-	_OpeningEventDefinitions ; FD/B120
-		EVENT $00, _OpeningEvent
-			CMP_WORD wCurrentTurn, 0
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_TurnEventDefinitions ; FD/B12D
-		EVENT $02, eventMapDeathQuoteDummyEvent
-			CHECK_DEAD Brook
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $01, eventMapDeathQuoteDummyEvent
-			TEST_FLAG_SET $03
-		END_DEFINITION
-		EVENT $0B, _KempfDead
-			CHECK_NUM_UNITS_LTE Kempf, 0
-		END_DEFINITION
-		EVENT $00, _IliosComplaint
-			CHECK_NUM_UNITS_GTE Ilios, 1
-			TEST_FLAG_UNSET $0A
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD wCurrentTurn, 2
-		END_DEFINITION
-		EVENT $0C, _IliosDead
-			CHECK_NUM_UNITS_LTE Ilios, 0
-		END_DEFINITION
-		EVENT $0D, _BrookDead
-			CHECK_NUM_UNITS_LTE Brook, 0
-		END_DEFINITION
-		EVENT $12, _ConomorUnitsFlee
-			TEST_FLAG_SET $A4
-		END_DEFINITION
-		EVENT $12, _ConomorUnitsFlee
-			TEST_FLAG_SET $0E
-		END_DEFINITION
-		EVENT $00, _SchroffDialogue
-			RUN_ASM rlCheckSchroffDeadOrUnrecruited
-			CMP_WORD wCurrentPhase, Player
-			CMP_WORD wCurrentTurn, 2
-		END_DEFINITION
-		EVENT $00, _TopPirateReinforcements
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD wCurrentTurn, 5
-		END_DEFINITION
-		EVENT $00, _BottomPirateReinforcements
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD wCurrentTurn, 12
-		END_DEFINITION
-		EVENT $00, _PegasusReinforcements
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD wCurrentTurn, 15
-		END_DEFINITION
-		EVENT $00, _ConomorReinforcements
-			CMP_WORD wCurrentPhase, Enemy
-			CMP_WORD wCurrentTurn, 20
-		END_DEFINITION
-		EVENT $10, _KempfCharge
-			CMP_WORD wCurrentPhase, Enemy
-			CHECK_NUM_UNITS_GTE Kempf, 1
-			TEST_FLAG_SET $09
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_TalkEventDefinitions ; FD/B1EE
-		EVENT $09, _OlwenKempfTalk
-			CHECK_CHARS2 Olwen, Kempf
-		END_DEFINITION
-		EVENT $0A, _KarinIliosTalk
-			CHECK_CHARS2 Karin, Ilios
-			RUN_ASM rlCheckOlwenDeadOrUnrecruited
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_LocationEventDefinitions ; FD/B208
-		EVENT $29, _Drawbridge
-			CMP_BYTE wEventEngineUnknownXTarget, 42
-			CMP_BYTE wEventEngineUnknownYTarget, 11
-		END_DEFINITION
-		EVENT $21, _SchroffHouseLeif
-			CMP_BYTE wCursorXCoord, 41
-			CMP_BYTE wCursorYCoord, 12
-			CMP_WORD aSelectedCharacterBuffer.Character, Leif
-			TEST_FLAG_SET $A1
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $00, _SchroffHouseOther
-			CMP_BYTE wCursorXCoord, 41
-			CMP_BYTE wCursorYCoord, 12
-			TEST_FLAG_UNSET $21
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $22, _BridgeKeyHouseVisit
-			CMP_BYTE wCursorXCoord, 26
-			CMP_BYTE wCursorYCoord, 11
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $23, _PureWaterHouseVisit
-			CMP_BYTE wCursorXCoord, 8
-			CMP_BYTE wCursorYCoord, 8
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $24, _MasterSealHouseVisit
-			CMP_BYTE wCursorXCoord, 41
-			CMP_BYTE wCursorYCoord, 16
-			CMP_WORD wCurrentPhase, Player
-		END_DEFINITION
-		EVENT $25, _SchroffHouseDestroy
-			CMP_BYTE wCursorXCoord, 41
-			CMP_BYTE wCursorYCoord, 12
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $26, _BridgeKeyHouseDestroy
-			CMP_BYTE wCursorXCoord, 26
-			CMP_BYTE wCursorYCoord, 11
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $27, _PureWaterHouseDestroy
-			CMP_BYTE wCursorXCoord, 8
-			CMP_BYTE wCursorYCoord, 8
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $28, _MasterSealHouseDestroy
-			CMP_BYTE wCursorXCoord, 41
-			CMP_BYTE wCursorYCoord, 16
-			CMP_WORD wCurrentPhase, Enemy
-		END_DEFINITION
-		EVENT $00, _EndingEvent
-			CMP_BYTE wCursorXCoord, 55
-			CMP_BYTE wCursorYCoord, 6
-			CMP_WORD wCurrentPhase, Player
-			CMP_WORD aSelectedCharacterBuffer.Character, Leif
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_BeforeActionEventDefinitions ; FD/B2FB
-	END_DEFINITION_ARRAY
-
-	_AfterActionEventDefinitions ; FD/B2FD
-		EVENT $0F, _SchroffSpawn
-			TEST_FLAG_SET $21
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_BattleEventDefinitions ; FD/B306
-		EVENT $05, eventBattleQuoteDummyEvent
-			CHECK_SINGLE Brook
-		END_DEFINITION
-		EVENT $06, eventBattleQuoteDummyEvent
-			CHECK_SINGLE Kempf
-		END_DEFINITION
-		EVENT $07, eventBattleQuoteDummyEvent
-			CHECK_SINGLE Ilios
-		END_DEFINITION
-		EVENT $08, eventBattleQuoteDummyEvent
-			CHECK_SINGLE Conomor
-		END_DEFINITION
-	END_DEFINITION_ARRAY
-
-	_ShopEventDefinitions ; FD/B328
-	END_DEFINITION_ARRAY
-
-	_ConomorReinforcements ; FD/B32A
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $39
-		YIELD
-
-		SCROLL_CAMERA_ADDRESS eventChapter16AData._ConomorCameraCoordinates
-		YIELD
-
-		LOAD1 eventChapter16AData._ConomorGroup
-		WAIT_MOVE
-		YIELD
-
-		SCROLL_CAMERA_CHAR Conomor
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		DIALOGUE ch16Aconomorarrive
-		YIELD
-	END2
-
-	_BottomPirateReinforcements ; FD/B34A
-		SCROLL_CAMERA_ADDRESS eventChapter16AData._BottomPirateReinforcements1CameraCoordinates
-		YIELD
-
-		LOAD1 eventChapter16AData._BottomPirateReinforcements1Group
-		WAIT_MOVE
-		YIELD
-
-		SCROLL_CAMERA_ADDRESS eventChapter16AData._BottomPirateReinforcements2CameraCoordinates
-		YIELD
-
-		LOAD1 eventChapter16AData._BottomPirateReinforcements2Group
-		WAIT_MOVE
-		YIELD
-	END2
-
-	_TopPirateReinforcements ; FD/B361
-		SCROLL_CAMERA_ADDRESS eventChapter16AData._TopPirateReinforcements1CameraCoordinates
-		YIELD
-
-		LOAD1 eventChapter16AData._TopPirateReinforcements1Group
-		WAIT_MOVE
-		YIELD
-
-		SCROLL_CAMERA_ADDRESS eventChapter16AData._TopPirateReinforcements2CameraCoordinates
-		YIELD
-
-		LOAD1 eventChapter16AData._TopPirateReinforcements2Group
-		WAIT_MOVE
-		YIELD
-	END2
-
-	_PegasusReinforcements
-		SCROLL_CAMERA_ADDRESS eventChapter16AData._PegasusReinforcementsCameraCoordinates
-		YIELD
-
-		LOAD1 eventChapter16AData._PegasusReinforcementsGroup
-		WAIT_MOVE
-		YIELD
-	END2
-
-	_IliosComplaint ; FD/B384
-		SCROLL_CAMERA_CHAR Ilios
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		RESET_PHASE_MUSIC
-		YIELD
-
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch16Ailiosintro
-		YIELD
-	END2
-
-	_KarinIliosTalk ; FD/B394
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $4A
-		YIELD
-
-		STORE_WORD wEventEngineCharacterTarget, Olwen
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		CALL_ASM_LOOP rlASMCClearOlwenWinsLosses, $0000
-
-		DIALOGUE ch16Ailioskarin
-		YIELD
-
-		STORE_WORD wEventEngineCharacterTarget, Ilios
-		CALL_ASM_LOOP rlASMCChangeAllegianceToPlayer, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Ilios
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineParameter2, Leif
-		CALL_ASM_LOOP rlASMCSetCharacterDataWord, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Ilios
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.LeadershipStars
-		STORE_WORD wEventEngineParameter2, 0
-		CALL_ASM_LOOP rlASMCSetCharacterDataByte, $0000
-
-		SET_FLAG $07
-	END2
-
-	_OlwenKempfTalk ; FD/B3F4
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $33
-		YIELD
-
-		DIALOGUE ch16Akempfolwen
-		YIELD
-	END2
-
-	_KempfCharge ; FD/B404
-		SCROLL_CAMERA_CHAR Kempf
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $39
-		YIELD
-
-		DIALOGUE ch16Akempfcharge
-		YIELD
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Kempf
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Kempf
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Kempf
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Kempf
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-	END2
-
-	_KempfDead ; FD/B490
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Kempf
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Kempf
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Kempf
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0B
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Kempf
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-	END2
-
-	_IliosDead ; FD/B509
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Ilios
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Ilios
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Ilios
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0B
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Ilios
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-	END2
-
-	_BrookDead
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Brook
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Brook
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Brook
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0B
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Brook
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-	END2
-
-	_ConomorUnitsFlee
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Conomor
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI1
-		STORE_WORD wEventEngineParameter2, $02
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Conomor
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI4
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Conomor
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.AI2
-		STORE_WORD wEventEngineParameter2, $0B
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-
-		STORE_WORD wEventEngineCharacterStructParameter, structCharacterDataRAM.Leader
-		STORE_WORD wEventEngineCharacterTarget, Conomor
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Unknown3E
-		STORE_WORD wEventEngineParameter2, $00
-		CALL_ASM_LOOP rlASMCSetCharacterDataByteIfWord, $0000
-	END2
-
-	_SchroffHouseLeif ; FD/B675
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $4A
-		YIELD
-
-		DIALOGUE ch16Aschroffleif
-		YIELD
-
-		STORE_WORD wEventEngineXCoordinate, 41
-		STORE_WORD wEventEngineYCoordinate, 12
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-
-		YIELD_UNK
-	END2
-
-	_SchroffSpawn ; FD/B69E
-		SCROLL_CAMERA_ADDRESS eventChapter16AData._SchroffCameraCoordinates
-		YIELD
-
-		LOAD1 eventChapter16AData._SchroffGroup
-		WAIT_MOVE
-		YIELD
-	END2
-
-	_SchroffHouseOther ; FD/B6AA
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch16Aschroffother
-		YIELD
-	END2
-
-	_BridgeKeyHouseVisit ; FD/B6B3
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch16Abridgekeyhouse
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitSetTurnStatus, $0000
-
-		STORE_WORD wEventEngineParameter1, BridgeKey
-		PAUSE_SKIPPABLE 10
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSetPopupGivenItemWithMaxDurability, $0000
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCSetupGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCSetupGiveToConvoyIfInventoryFull, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveToConvoyIfInventoryFull, $0000
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitUnsetTurnStatus, $0000
-
-		STORE_WORD wEventEngineXCoordinate, 26
-		STORE_WORD wEventEngineYCoordinate, 11
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_PureWaterHouseVisit ; FD/B716
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch16Apurewaterhouse
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitSetTurnStatus, $0000
-
-		STORE_WORD wEventEngineParameter1, PureWater
-		PAUSE_SKIPPABLE 10
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSetPopupGivenItemWithMaxDurability, $0000
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCSetupGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCSetupGiveToConvoyIfInventoryFull, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveToConvoyIfInventoryFull, $0000
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitUnsetTurnStatus, $0000
-
-		STORE_WORD wEventEngineXCoordinate, 8
-		STORE_WORD wEventEngineYCoordinate, 8
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_MasterSealHouseVisit ; FD/B779
-		PLAY_SOUND_WORD $00F7
-		DIALOGUE ch16Amastersealhouse
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitSetTurnStatus, $0000
-
-		STORE_WORD wEventEngineParameter1, MasterSeal
-		PAUSE_SKIPPABLE 10
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSetPopupGivenItemWithMaxDurability, $0000
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCSetupGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveItemPopup, $0000
-		CALL_ASM_LOOP rlASMCSetupGiveToConvoyIfInventoryFull, $0000
-		CALL_ASM_LOOP rlASMCWaitWhileGiveToConvoyIfInventoryFull, $0000
-
-		STORE_WORD wEventEngineParameter1, TurnStatusHidden
-		CALL_ASM_LOOP rlASMCActiveUnitUnsetTurnStatus, $0000
-
-		STORE_WORD wEventEngineXCoordinate, 41
-		STORE_WORD wEventEngineYCoordinate, 16
-		STORE_WORD wEventEngineParameter1, $0021
-		CALL_ASM_LOOP rlASMCSingleTileChangeByCoords, $0000
-		YIELD_UNK
-	END2
-
-	_SchroffDialogue ; FD/B7DC
-		RESET_PHASE_MUSIC
-		YIELD
-
-		PLAY_SOUND_WORD $00F7
-		SCROLL_CAMERA_SPEED [41, 12], 4
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, 3
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, ch16Aschroffintro
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEnd, $0000
-		YIELD
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-	END2
-
-	_SchroffHouseDestroy ; FD/B80F
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 2
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_BridgeKeyHouseDestroy ; FD/B83E
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 1
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_PureWaterHouseDestroy ; FD/B86D
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 0
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_MasterSealHouseDestroy ; Fd/B89C
-		PLAY_SOUND_BYTE $45
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 3
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-
-		PAUSE_SKIPPABLE 10
-		YIELD
-	END1
-
-	_Drawbridge ; FD/B8CB
-		PLAY_SOUND_BYTE $6E
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-
-		CALL_ASM_LOOP rlASMCDecompressChapterMapChanges, $0000
-		HALT_UNTIL_BYTE bDecompListFlag, $00
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-
-		STORE_WORD wEventEngineParameter1, 4
-		CALL_ASM_LOOP rlASMCTileChangeByID, $0000
-		HALT_UNTIL_BYTE bDMAArrayFlag, $00
-		YIELD_UNK
-		YIELD_UNK
-	END1
-
-	_PrepGroups ; FD/B8F6
-		.long eventChapter16AData._PrepGroup1
-		.long eventChapter16AData._PrepGroup2
-	.word $0000
-
-	_OpeningEvent ; FD/B8FE
-		STORE_WORD wEventEngineCharacterTarget, Kempf
-		STORE_WORD wEventEngineParameter1, structCharacterDataRAM.Skills2
-		STORE_WORD wEventEngineParameter2, Skill2Anchor | (Skill3Immortal << 8)
-		CALL_ASM_LOOP rlASMCUnsetBitsCharacterDataWord, $0000
-
-		STORE_WORD wEventEngineCharacterTarget, Kempf
-		CALL_ASM_LOOP rlASMCMount, $0000
-		YIELD
-
-		HALT_UNTIL_BYTE_SKIPPABLE bBuf_INIDISP, $0F
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $39
-		YIELD
-
-		STORE_LONG wProcInput1+1, ch16Atitlename
-		STORE_WORD wProcInput1, <>ch16Atitlename
-		STORE_LONG lR43, $9A814C
-		CALL_ASM_SKIPPABLE rlEventEngineCreateProcAndSetActive, $0000
-		YIELD
-
-		SCROLL_CAMERA_CHAR Kempf
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		DIALOGUE ch16Aopening1
-		YIELD
-
-		MOVE_UNIT Nicolov, [0, 0], [55, 6], 1, _NicolovMovestring
-		YIELD_UNK
-		WAIT_MOVE
-		YIELD
-
-		STORE_WORD wEventEngineCharacterTarget, Nicolov
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $32
-		YIELD
-
-		SCROLL_CAMERA_CHAR Leif
-		SET_CAMERA_SPEED 4
-		YIELD
-
-		DIALOGUE ch16Aopening2
-		STORE_WORD wEventEngineCharacterTarget, Olwen
-		CALL_ASM_LOOP rlASMCCountAllUnitUncapturedAlive, $0000
-		JUMP_FALSE +
-
-		STORE_LONG lEventEngineLongParameter, ch16Aopening3
-		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
-
-		+
-		YIELD
-	END2
-
-	_NicolovMovestring ; FD/B9A2
-		MS_MOVE_RIGHT
-		MS_MOVE_RIGHT
-		MS_MOVE_RIGHT
-		MS_MOVE_RIGHT
-		MS_MOVE_RIGHT
-		MS_MOVE_RIGHT
-		MS_MOVE_RIGHT
-		MS_MOVE_UP
-		MS_MOVE_UP
-	MS_END
-
-	_EndingEvent ; FD/B9AC
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 16
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd, $0000
-
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $42
-		YIELD
-
-		CALL_ASM_LOOP rlASMCSaveChapterAndTurncount, $0000
-
-		STORE_WORD wEventEngineParameter1, 1
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, ch16Aclosing1
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-
-		STORE_WORD wEventEngineCharacterTarget, Finn
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_FALSE +
-
-		STORE_LONG lEventEngineLongParameter, ch16Aclosing2
-		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
-
-		+
-		EVENT_TEST_FLAG_SET $A4
-		JUMP_TRUE +
-
-		CALL_ASM_LOOP rlASMCCheckConomorOnMap, $0000
-		JUMP_TRUE +
-
-		EVENT_CMP_WORD_AT_LT wCurrentTurn, 20
-		JUMP_FALSE +
-
-		STORE_LONG lEventEngineLongParameter, ch16Aclosing3
-		CALL_ASM_LOOP rlASMCDialogueContinue, $0000
-
-		+
-		YIELD
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000
-
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut, $0000
-
-		STORE_BYTE bBuf_INIDISP, $00
-
-		STORE_WORD wEventEngineCharacterTarget, Dean
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_FALSE +
-
-		STORE_WORD wEventEngineCharacterTarget, Linoan
-		CALL_ASM_LOOP rlASMCCheckAllUnitAlive, $0000
-		JUMP_TRUE +
-
-		STORE_WORD wCurrentMapMusic, $0000
-		PLAY_SOUND_WORD $00E0
-		PAUSE_SKIPPABLE 32
-		YIELD
-
-		SET_MUSIC $42
-		YIELD
-
-		STORE_WORD wEventEngineParameter1, 3
-		CALL_ASM_SKIPPABLE rlASMCDialogueWithBGSetup, <>rsUnknown80A23A
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown000302, $0009
-
-		CALL_ASM_LONG_SKIPPABLE rlASMCDialogueWithBGStart, linoandeathdean
-		YIELD_UNK
-		YIELD_UNK
-		YIELD_UNK
-		YIELD
-
-		HALT_UNTIL_WORD_SKIPPABLE wUnknown0017E9, $0000
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut, $0000
-
-		STORE_BYTE bBuf_INIDISP, $00
-		STORE_WORD wEventEngineCharacterTarget, Dean
-		CALL_ASM_LOOP rlASMCRemoveUnit, $0000
-
-		+
-		FADE_OUT $01
-		YIELD
-
-		CALL_ASM_LOOP rlASMCChapterEnd, $0000
-	END1
+.weak
+  WARNINGS :?= "None"
+.endweak
+
+GUARD_FE5_CHAPTER16A :?= false
+.if (!GUARD_FE5_CHAPTER16A)
+  GUARD_FE5_CHAPTER16A := true
+
+  ; Definitions
+
+    .weak
+
+    .endweak
+
+  ; Freespace inclusions
+
+    .section Chapter16AEventsSection
+
+			eventChapter16AEvents ; FD/B120
+
+					_FlagBrookBattleQuote 					= enum.enum($05)
+					_FlagKempfBattleQuote 					= enum.enum()
+					_FlagIliosBattleQuote 					= enum.enum()
+					_FlagConomorBattleQuote 				= enum.enum()
+					_FlagOlwenKempfTalk			 				= enum.enum()
+					_FlagKarinIliosTalk			 				= enum.enum()
+					_FlagKempfDead					 				= enum.enum()
+					_FlagIliosDead					 				= enum.enum()
+					_FlagBrookDead					 				= enum.enum()
+					_FlagUlsterCavalier2Death				= enum.enum()
+					_FlagSchroffSpawn								= enum.enum()
+					_FlagKempfCharge								= enum.enum()
+
+					_FlagConomorFlee								= enum.enum($12)
+
+					_FlagSchroffHouseVisit					= enum.enum($21)
+					_FlagBridgeKeyHouseVisit				= enum.enum()
+					_FlagPureWaterHouseVisit				= enum.enum()
+					_FlagMasterSealHouseVisit				= enum.enum()
+					_FlagSchroffHouseDestroy				= enum.enum()
+					_FlagBridgeKeyHouseDestroy			= enum.enum()
+					_FlagPureWaterHouseDestroy			= enum.enum()
+					_FlagMasterSealHouseDestroy			= enum.enum()
+					_FlagDrawbridge									= enum.enum()
+
+
+				_OpeningEventDefinitions ; FD/B120
+					EVENT FlagAlwaysZero, _OpeningEvent
+						CMP_WORD wCurrentTurn, 0
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_TurnEventDefinitions ; FD/B12D
+					EVENT FlagBossDeath, eventMapDeathQuoteDummyEvent
+						CHECK_IF_BOSS_DEAD Brook
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT FlagAlliedDeath, eventMapDeathQuoteDummyEvent
+						TEST_FLAG_SET FlagPlayerDeath
+					END_DEFINITION
+					EVENT _FlagKempfDead, _KempfDead
+						CHECK_NUM_UNITS_LTE Kempf, 0
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _IliosComplaint
+						CHECK_NUM_UNITS_GTE Ilios, 1
+						TEST_FLAG_UNSET _FlagKarinIliosTalk
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD wCurrentTurn, 2
+					END_DEFINITION
+					EVENT _FlagIliosDead, _IliosDead
+						CHECK_NUM_UNITS_LTE Ilios, 0
+					END_DEFINITION
+					EVENT _FlagBrookDead, _BrookDead
+						CHECK_NUM_UNITS_LTE Brook, 0
+					END_DEFINITION
+					EVENT _FlagConomorFlee, _ConomorUnitsFlee
+						TEST_FLAG_SET FlagConomorDead
+					END_DEFINITION
+					EVENT _FlagConomorFlee, _ConomorUnitsFlee
+						TEST_FLAG_SET _FlagUlsterCavalier2Death
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _SchroffDialogue
+						RUN_ASM rlCheckSchroffDeadOrUnrecruited
+						CMP_WORD wCurrentPhase, Player
+						CMP_WORD wCurrentTurn, 2
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _TopPirateReinforcements
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD wCurrentTurn, 5
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _BottomPirateReinforcements
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD wCurrentTurn, 12
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _PegasusReinforcements
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD wCurrentTurn, 15
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _ConomorReinforcements
+						CMP_WORD wCurrentPhase, Enemy
+						CMP_WORD wCurrentTurn, 20
+					END_DEFINITION
+					EVENT _FlagKempfCharge, _KempfCharge
+						CMP_WORD wCurrentPhase, Enemy
+						CHECK_NUM_UNITS_GTE Kempf, 1
+						TEST_FLAG_SET _FlagOlwenKempfTalk
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_TalkEventDefinitions ; FD/B1EE
+					EVENT _FlagOlwenKempfTalk, _OlwenKempfTalk
+						CHECK_CHARS2 Olwen, Kempf
+					END_DEFINITION
+					EVENT _FlagKarinIliosTalk, _KarinIliosTalk
+						CHECK_CHARS2 Karin, Ilios
+						RUN_ASM rlCheckOlwenDeadOrUnrecruited
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_LocationEventDefinitions ; FD/B208
+					EVENT _FlagDrawbridge, _Drawbridge
+						CMP_BYTE wActiveTileUnitParameter1, 42
+						CMP_BYTE wActiveTileUnitParameter2, 11
+					END_DEFINITION
+					EVENT _FlagSchroffHouseVisit, _SchroffHouseLeif
+						macroECCheckCoordinates [41, 12]
+						CMP_WORD aSelectedCharacterBuffer.Character, Leif
+						TEST_FLAG_SET $A1
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _SchroffHouseOther
+						macroECCheckCoordinates [41, 12]
+						TEST_FLAG_UNSET _FlagSchroffHouseVisit
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagBridgeKeyHouseVisit, _BridgeKeyHouseVisit
+						macroECCheckCoordinates [26, 11]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagPureWaterHouseVisit, _PureWaterHouseVisit
+						macroECCheckCoordinates [8, 8]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagMasterSealHouseVisit, _MasterSealHouseVisit
+						macroECCheckCoordinates [41, 16]
+						CMP_WORD wCurrentPhase, Player
+					END_DEFINITION
+					EVENT _FlagSchroffHouseDestroy, _SchroffHouseDestroy
+						macroECCheckCoordinates [41, 12]
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagBridgeKeyHouseDestroy, _BridgeKeyHouseDestroy
+						macroECCheckCoordinates [26, 11]
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagPureWaterHouseDestroy, _PureWaterHouseDestroy
+						macroECCheckCoordinates [8, 8]
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT _FlagMasterSealHouseDestroy, _MasterSealHouseDestroy
+						macroECCheckCoordinates [41, 16]
+						CMP_WORD wCurrentPhase, Enemy
+					END_DEFINITION
+					EVENT FlagAlwaysZero, _EndingEvent
+						macroECCheckCoordinates [55, 6]
+						CMP_WORD wCurrentPhase, Player
+						CMP_WORD aSelectedCharacterBuffer.Character, Leif
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_BeforeActionEventDefinitions ; FD/B2FB
+				END_DEFINITION_ARRAY
+			
+				_AfterActionEventDefinitions ; FD/B2FD
+					EVENT _FlagSchroffSpawn, _SchroffSpawn
+						TEST_FLAG_SET _FlagSchroffHouseVisit
+					END_DEFINITION
+				END_DEFINITION_ARRAY
+			
+				_BattleEventDefinitions ; FD/B306
+					macroECBossQuote _FlagBrookBattleQuote, Brook
+					macroECBossQuote _FlagKempfBattleQuote, Kempf
+					macroECBossQuote _FlagIliosBattleQuote, Ilios
+					macroECBossQuote _FlagConomorBattleQuote, Conomor
+				END_DEFINITION_ARRAY
+			
+				_ShopEventDefinitions ; FD/B328
+				END_DEFINITION_ARRAY
+			
+				_ConomorReinforcements ; FD/B32A
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $39
+					YIELD
+			
+					SCROLL_CAMERA_ADDRESS eventChapter16AData._ConomorCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP eventChapter16AData._ConomorGroup
+					WAIT_MOVE
+					YIELD
+			
+					GET_CHARACTER_COORDS Conomor
+					SCROLL_CAMERA 4
+					YIELD
+			
+					DIALOGUE dialogueChapter16AConomorArrive
+					YIELD
+				END2
+			
+				_BottomPirateReinforcements ; FD/B34A
+					SCROLL_CAMERA_ADDRESS eventChapter16AData._BottomPirateReinforcements1CameraCoordinates
+					YIELD
+			
+					LOAD_GROUP eventChapter16AData._BottomPirateReinforcements1Group
+					WAIT_MOVE
+					YIELD
+			
+					SCROLL_CAMERA_ADDRESS eventChapter16AData._BottomPirateReinforcements2CameraCoordinates
+					YIELD
+			
+					LOAD_GROUP eventChapter16AData._BottomPirateReinforcements2Group
+					WAIT_MOVE
+					YIELD
+				END2
+			
+				_TopPirateReinforcements ; FD/B361
+					SCROLL_CAMERA_ADDRESS eventChapter16AData._TopPirateReinforcements1CameraCoordinates
+					YIELD
+			
+					LOAD_GROUP eventChapter16AData._TopPirateReinforcements1Group
+					WAIT_MOVE
+					YIELD
+			
+					SCROLL_CAMERA_ADDRESS eventChapter16AData._TopPirateReinforcements2CameraCoordinates
+					YIELD
+			
+					LOAD_GROUP eventChapter16AData._TopPirateReinforcements2Group
+					WAIT_MOVE
+					YIELD
+				END2
+			
+				_PegasusReinforcements
+					SCROLL_CAMERA_ADDRESS eventChapter16AData._PegasusReinforcementsCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP eventChapter16AData._PegasusReinforcementsGroup
+					WAIT_MOVE
+					YIELD
+				END2
+			
+				_IliosComplaint ; FD/B384
+					GET_CHARACTER_COORDS Ilios
+					SCROLL_CAMERA 4
+					YIELD
+			
+					RESET_PHASE_MUSIC
+					YIELD
+				
+					macroDialogue dialogueChapter16AIliosIntro
+				END2
+			
+				_KarinIliosTalk ; FD/B394
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $4A
+					YIELD
+			
+					macroASMCRemoveUnit Olwen
+			
+					CALL_ASM_LOOP rlASMCClearOlwenWinsLosses
+			
+					DIALOGUE dialogueChapter16AIliosKarin
+					YIELD
+	
+					macroASMCChangeAllegianceToPlayer Ilios
+
+					macroASMCSetCharacterDataWord Ilios, Leader, Leif
+			
+					macroASMCSetCharacterDataByte Ilios, LeadershipStars, 0
+
+					SET_FLAG _FlagIliosBattleQuote
+				END2
+
+				_OlwenKempfTalk ; FD/B3F4
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $33
+					YIELD
+			
+					DIALOGUE dialogueChapter16AKempfOlwen
+					YIELD
+				END2
+			
+				_KempfCharge ; FD/B404
+					GET_CHARACTER_COORDS Kempf
+					SCROLL_CAMERA 4
+					YIELD
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $39
+					YIELD
+			
+					DIALOGUE dialogueChapter16AKempfCharge
+					YIELD
+			
+ 					macroSetAllUnitsAIIfCharacterDataWord Leader, Kempf, [$00, $00, $00, $00]
+				END2
+			
+				_KempfDead ; FD/B490
+					macroSetAllUnitsAIIfCharacterDataWord Leader, Kempf, [$02, $00, $0B, $00]
+				END2
+			
+				_IliosDead ; FD/B509
+					macroSetAllUnitsAIIfCharacterDataWord Leader, Ilios, [$02, $00, $0B, $00]
+				END2
+			
+				_BrookDead
+					macroSetAllUnitsAIIfCharacterDataWord Leader, Brook, [$02, $00, $0B, $00]
+				END2
+			
+				_ConomorUnitsFlee
+					macroSetAllUnitsAIIfCharacterDataWord Leader, Conomor, [$02, $00, $0B, $00]
+				END2
+			
+				_SchroffHouseLeif ; FD/B675
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $4A
+					YIELD
+			
+					DIALOGUE dialogueChapter16ASchroffLeif
+					YIELD
+
+					macroASMCSingleTileChangeByCoords [41, 12], $0021
+				END2
+			
+				_SchroffSpawn ; FD/B69E
+					SCROLL_CAMERA_ADDRESS eventChapter16AData._SchroffCameraCoordinates
+					YIELD
+			
+					LOAD_GROUP eventChapter16AData._SchroffGroup
+					WAIT_MOVE
+					YIELD
+				END2
+			
+				_SchroffHouseOther ; FD/B6AA
+					macroDialogue dialogueChapter16ASchroffOther
+				END2
+			
+				_BridgeKeyHouseVisit ; FD/B6B3
+					macroItemHouse dialogueChapter16ABridgeKeyHouse, BridgeKey, [26, 11], $0021
+				END2
+			
+				_PureWaterHouseVisit ; FD/B716
+					macroItemHouse dialogueChapter16APureWaterHouse, PureWater, [8, 8], $0021
+				END2
+			
+				_MasterSealHouseVisit ; FD/B779
+					macroItemHouse dialogueChapter16AMasterSealHouse, MasterSeal, [41, 16], $0021
+				END2
+			
+				_SchroffDialogue ; FD/B7DC
+					RESET_PHASE_MUSIC
+					YIELD
+			
+					PLAY_SOUND_WORD $00F7
+					SCROLL_CAMERA_COORDS [41, 12], 4
+					YIELD
+
+					macroDialogueWithBG dialogueChapter16ASchroffIntro, 3
+
+					CALL_ASM_LOOP rlASMCDialogueWithBGEnd
+					YIELD
+			
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
+				END2
+			
+				_SchroffHouseDestroy ; FD/B80F
+					macroDestroyHouseByTileChangeID 2
+				END1
+			
+				_BridgeKeyHouseDestroy ; FD/B83E
+					macroDestroyHouseByTileChangeID 1
+				END1
+			
+				_PureWaterHouseDestroy ; FD/B86D
+					macroDestroyHouseByTileChangeID 0
+				END1
+			
+				_MasterSealHouseDestroy ; Fd/B89C
+					macroDestroyHouseByTileChangeID 3
+				END1
+			
+				_Drawbridge ; FD/B8CB
+					PLAY_SOUND_BYTE $6E
+					macroTileChangeByID 4
+				END1
+			
+				_PrepGroups ; FD/B8F6
+					.long eventChapter16AData._PrepGroup1
+					.long eventChapter16AData._PrepGroup2
+				.word 0
+			
+				_OpeningEvent ; FD/B8FE
+					macroASMCUnsetBitsCharacterDataWord Kempf, Skills2, Skill2Anchor | (Skill3Immortal << 8)
+
+					macroASMCMount Kempf
+					YIELD
+
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $39
+					YIELD
+
+					macroChapterTitlePopup dialogueChapter16ATitle
+			
+					GET_CHARACTER_COORDS Kempf
+					SCROLL_CAMERA 4
+					YIELD
+			
+					DIALOGUE dialogueChapter16AOpening1
+					YIELD
+
+					MOVE_CHAR Nicolov, [55, 6], 1, _NicolovMovestring
+
+					WAIT_MOVE
+					YIELD
+
+					macroASMCRemoveUnit Nicolov
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $32
+					YIELD
+			
+					GET_CHARACTER_COORDS Leif
+					SCROLL_CAMERA 4
+					YIELD
+			
+					DIALOGUE dialogueChapter16AOpening2
+
+					macroASMCCountAllUnitsUncapturedAlive Olwen
+					JUMP_FALSE +
+
+					  STORE_LONG lEventEngineLongParameter, dialogueChapter16AOpening3
+      			CALL_ASM_LOOP rlASMCDialogueContinue
+
+					+
+					YIELD
+				END2
+			
+				_NicolovMovestring ; FD/B9A2
+					MS_MOVE_RIGHT
+					MS_MOVE_RIGHT
+					MS_MOVE_RIGHT
+					MS_MOVE_RIGHT
+					MS_MOVE_RIGHT
+					MS_MOVE_RIGHT
+					MS_MOVE_RIGHT
+					MS_MOVE_UP
+					MS_MOVE_UP
+				MS_END
+			
+				_EndingEvent ; FD/B9AC
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 16
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
+			
+					PLAY_SOUND_WORD $00E0
+					PAUSE_SKIPPABLE 32
+					YIELD
+			
+					SET_MUSIC $42
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCSaveChapterAndTurncount
+
+					macroDialogueWithBG dialogueChapter16AClosing1, 1
+
+					macroASMCCountAllUnitsAlive Finn
+					JUMP_FALSE +
+
+						STORE_LONG lEventEngineLongParameter, dialogueChapter16AClosing2
+						CALL_ASM_LOOP rlASMCDialogueContinue
+
+					+
+					EVENT_TEST_FLAG_SET FlagConomorDead
+					JUMP_TRUE +
+			
+						CALL_ASM_LOOP rlASMCCheckConomorOnMap
+						JUMP_TRUE +
+			
+							EVENT_CMP_WORD_LT wCurrentTurn, 20
+							JUMP_FALSE +
+
+								STORE_LONG lEventEngineLongParameter, dialogueChapter16AClosing3
+								CALL_ASM_LOOP rlASMCDialogueContinue
+			
+					+
+					YIELD
+			
+					HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+			
+					FADE_OUT 1
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut
+			
+					STORE_BYTE bBufferINIDISP, $00
+			
+					macroASMCCountAllUnitsAlive Dean
+					JUMP_FALSE +
+
+						macroASMCCountAllUnitsAlive Linoan
+						JUMP_TRUE +
+			
+							STORE_WORD wCurrentMapMusic, $0000
+							PLAY_SOUND_WORD $00E0
+							PAUSE_SKIPPABLE 32
+							YIELD
+			
+							SET_MUSIC $42
+							YIELD
+
+							macroDialogueWithBG dialogueLinoanDeathDean, 3
+							YIELD
+			
+							HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+							FADE_OUT 1
+							YIELD
+			
+							CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut
+			
+							STORE_BYTE bBufferINIDISP, $00
+
+							macroASMCRemoveUnit Dean
+
+					+
+					FADE_OUT 1
+					YIELD
+			
+					CALL_ASM_LOOP rlASMCChapterEnd
+				END1
+
+    .endsection Chapter16AEventsSection
+
+    .section Chapter16ADataSection
+
+			eventChapter16AData ; B1/AE46
+			
+				_PrepGroup1 ; B1/AE46
+					.byte 42, 12
+			
+					UNIT FriegeBishop2, Enemy, [47, 12], [47, 12], Brook, [Physic, Elfire], 6, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [55, 8], [55, 8], Brook, [KillerLance, Vulnerary], 13, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [56, 7], [56, 7], Brook, [KillerLance, Vulnerary], 13, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [18, 9], [18, 9], Brook, [KillerLance, Vulnerary], 13, False, [$00, $03, $00, $00]
+					UNIT Kempf, Enemy, [49, 8], [49, 8], Kempf, [VeninEdge, Thoron], 10, False, [$01, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [45, 7], [45, 7], Kempf, [BattleAxe], 10, False, [$01, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [45, 8], [45, 8], Kempf, [BattleAxe], 10, False, [$01, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [45, 9], [45, 9], Kempf, [BattleAxe], 10, False, [$01, $03, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [46, 7], [46, 7], Kempf, [Javelin], 14, False, [$01, $03, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [46, 8], [46, 8], Kempf, [Javelin], 14, False, [$01, $03, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [46, 9], [46, 9], Kempf, [Javelin], 14, False, [$01, $03, $00, $00]
+					UNIT FriegeArcher, Enemy, [47, 7], [47, 7], Kempf, [Longbow], 13, False, [$01, $03, $00, $00]
+					UNIT FriegeArcher, Enemy, [47, 8], [47, 8], Kempf, [Longbow], 13, False, [$01, $03, $00, $00]
+					UNIT FriegeArcher, Enemy, [47, 9], [47, 9], Kempf, [Longbow], 13, False, [$01, $03, $00, $00]
+					UNIT FriegeMage1, Enemy, [48, 7], [48, 7], Kempf, [Thunder], 10, False, [$01, $03, $00, $00]
+					UNIT FriegeMage1, Enemy, [48, 9], [48, 9], Kempf, [Thunder], 10, False, [$01, $03, $00, $00]
+					UNIT FriegeBallista3, Enemy, [50, 8], [50, 8], Brook, [Ballista], 10, False, [$00, $03, $00, $00]
+					UNIT FriegeBallista3, Enemy, [50, 9], [50, 9], Brook, [Ballista], 10, False, [$00, $03, $00, $00]
+					UNIT FriegeBallista3, Enemy, [51, 8], [51, 8], Brook, [Ballista], 10, False, [$00, $03, $00, $00]
+					UNIT FriegeBallista3, Enemy, [49, 11], [49, 11], Brook, [Ballista], 10, False, [$00, $03, $00, $00]
+					UNIT FriegeBallista3, Enemy, [23, 9], [23, 9], Brook, [Ballista], 10, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredSword2, Enemy, [46, 13], [46, 13], Brook, [Greatsword], 10, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredSword2, Enemy, [47, 14], [47, 14], Brook, [Greatsword], 10, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredSword2, Enemy, [45, 14], [45, 14], Brook, [Greatsword], 10, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredSword2, Enemy, [21, 9], [21, 9], Brook, [Greatsword], 10, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [54, 7], [54, 7], Brook, [KillerLance, Vulnerary], 13, False, [$00, $03, $00, $00]
+					UNIT Ilios, Enemy, [36, 7], [36, 7], Ilios, [Bolting, MasterSword, Thoron, SolManual], 8, False, [$02, $15, $00, $00]
+					UNIT FriegeBowKnight1, Enemy, [35, 6], [35, 6], Ilios, [Longbow], 14, False, [$02, $15, $02, $00]
+					UNIT FriegeTroubadour2, Enemy, [35, 7], [35, 7], Ilios, [Rapier, Heal], 10, False, [$02, $15, $02, $00]
+					UNIT FriegeBowKnight1, Enemy, [35, 8], [35, 8], Ilios, [Longbow], 14, False, [$02, $15, $02, $00]
+					UNIT FriegeLanceKnight1, Enemy, [34, 6], [34, 6], Ilios, [Ridersbane], 13, False, [$02, $15, $02, $00]
+					UNIT FriegeLanceKnight1, Enemy, [34, 7], [34, 7], Ilios, [Ridersbane], 13, False, [$02, $15, $02, $00]
+					UNIT FriegeLanceKnight1, Enemy, [34, 8], [34, 8], Ilios, [Ridersbane], 13, False, [$02, $15, $02, $00]
+					UNIT FriegeCavalier2, Enemy, [33, 6], [33, 6], Ilios, [SleepEdge], 15, False, [$02, $15, $02, $00]
+					UNIT FriegeCavalier2, Enemy, [33, 7], [33, 7], Ilios, [SleepEdge], 15, False, [$02, $15, $02, $00]
+					UNIT FriegeCavalier2, Enemy, [33, 8], [33, 8], Ilios, [SleepEdge], 15, False, [$02, $15, $02, $00]
+					UNIT BanditBrigand1, Enemy, [36, 5], [36, 5], Seil, [Hammer], 3, False, [$02, $09, $00, $00]
+					UNIT BanditBrigand1, Enemy, [2, 12], [2, 12], Seil, [Hammer], 3, False, [$02, $09, $00, $00]
+					UNIT FriegeBallista3, Enemy, [50, 7], [50, 7], Brook, [Ballista], 10, False, [$00, $03, $00, $00]
+					UNIT Brook, Enemy, [55, 8], [55, 6], Brook, [MasterLance, Armorslayer, MasterBow, Ridersbane], 16, True, [$01, $03, $00, $80]
+				UNIT
+			
+				_ConomorCameraCoordinates ; B1/B16A
+					.byte 9, 12
+			
+				_ConomorGroup ; B1/B16C
+					UNIT UlsterCavalier2, Enemy, [4, 11], [4, 11], Conomor, [Rapier, Javelin], 15, False, [$00, $00, $00, $00]
+					UNIT UlsterCavalier2, Enemy, [1, 13], [1, 13], Conomor, [Rapier, Javelin], 15, False, [$00, $00, $00, $00]
+					UNIT UlsterCavalier2, Enemy, [4, 12], [4, 12], Conomor, [Rapier, Javelin], 15, False, [$00, $00, $00, $00]
+					UNIT UlsterCavalier2, Enemy, [2, 13], [2, 13], Conomor, [Rapier, Javelin], 15, False, [$00, $00, $00, $00]
+					UNIT UlsterCavalier2, Enemy, [3, 13], [3, 13], Conomor, [Rapier, Javelin], 15, False, [$00, $00, $00, $00]
+					UNIT UlsterCavalier2, Enemy, [4, 13], [4, 13], Conomor, [Rapier, Javelin], 15, False, [$00, $00, $00, $00]
+					UNIT Conomor, Enemy, [1, 12], [1, 12], Conomor, [MasterLance, KillingEdge, NihilManual], 13, False, [$00, $00, $00, $00]
+					UNIT UlsterCavalier2, Enemy, [2, 12], [2, 12], Conomor, [Rapier, Javelin], 15, False, [$00, $00, $00, $00]
+					UNIT UlsterCavalier2, Enemy, [3, 12], [3, 12], Conomor, [Rapier, Javelin], 15, False, [$00, $00, $00, $00]
+					UNIT UlsterCavalier2, Enemy, [1, 11], [1, 11], Conomor, [Rapier, Javelin], 15, False, [$00, $00, $00, $00]
+					UNIT UlsterCavalier2, Enemy, [2, 11], [2, 11], Conomor, [Rapier, Javelin], 15, False, [$00, $00, $00, $00]
+					UNIT UlsterCavalier2, Enemy, [3, 11], [3, 11], Conomor, [Rapier, Javelin], 15, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_SchroffCameraCoordinates ; B1/B25E
+					.byte 41, 12
+			
+				_SchroffGroup ; B1/B260
+					UNIT Schroff, Player, [41, 12], [41, 12], Leif, [Mend, BragisScroll], 6, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_PegasusReinforcementsCameraCoordinates ; B1/B276
+					.byte 36, 14
+			
+				_PegasusReinforcementsGroup ; B1/B278
+					UNIT SilessePegasusRider1, Enemy, [32, 20], [32, 20], Misha, [Ridersbane], 6, False, [$00, $0C, $00, $40]
+					UNIT SilessePegasusRider1, Enemy, [33, 20], [33, 20], Misha, [Ridersbane], 6, False, [$00, $0C, $00, $40]
+					UNIT SilessePegasusRider1, Enemy, [34, 20], [34, 20], Misha, [Ridersbane], 6, False, [$00, $0C, $00, $40]
+					UNIT SilessePegasusRider1, Enemy, [35, 20], [35, 20], Misha, [Ridersbane], 6, False, [$00, $0C, $00, $40]
+					UNIT SilessePegasusRider1, Enemy, [36, 20], [36, 20], Misha, [Ridersbane], 6, False, [$00, $0C, $00, $40]
+					UNIT SilessePegasusRider1, Enemy, [37, 20], [37, 20], Misha, [Ridersbane], 6, False, [$00, $0C, $00, $40]
+					UNIT SilessePegasusRider1, Enemy, [38, 20], [38, 20], Misha, [Ridersbane], 6, False, [$00, $0C, $00, $40]
+					UNIT SilessePegasusRider1, Enemy, [39, 20], [39, 20], Misha, [Ridersbane], 6, False, [$00, $0C, $00, $40]
+				UNIT
+			
+				_BottomPirateReinforcements1CameraCoordinates ; B1/B31A
+					.byte 42, 14
+			
+				_BottomPirateReinforcements1Group ; B1/B31C
+					UNIT PirateEnemy, Enemy, [42, 20], [42, 20], Seil, [IronAxe], 3, False, [$02, $09, $00, $00]
+				UNIT
+			
+				_TopPirateReinforcements1CameraCoordinates ; B1/B332
+					.byte 18, 8
+			
+				_TopPirateReinforcements1Group ; B1/B334
+					UNIT PirateEnemy, Enemy, [18, 1], [18, 1], Seil, [IronAxe], 3, False, [$02, $09, $00, $00]
+				UNIT
+			
+				_BottomPirateReinforcements2CameraCoordinates ; B1/B34A
+					.byte 51, 14
+			
+				_BottomPirateReinforcements2Group ; B1/B34C
+					UNIT PirateEnemy, Enemy, [55, 20], [55, 20], Seil, [IronAxe], 3, False, [$02, $09, $00, $00]
+				UNIT
+			
+				_TopPirateReinforcements2CameraCoordinates ; B1/B362
+					.byte 45, 8
+			
+				_TopPirateReinforcements2Group ; B1/B364
+					UNIT PirateEnemy, Enemy, [45, 1], [45, 1], Seil, [IronAxe], 3, False, [$02, $09, $00, $00]
+				UNIT
+			
+				_PrepGroup2 ; B1/B37A
+					.byte 8, 7
+			
+					UNIT Nicolov, Enemy, [48, 8], [48, 8], Nicolov, [], 2, False, [$00, $00, $00, $00]
+				UNIT
+			
+				_StartingPositions ; B1/B392
+					.byte 14, 17
+					.byte 12, 17
+					.byte 16, 17
+					.byte 14, 15
+					.byte 13, 16
+					.byte 15, 16
+					.byte 13, 18
+					.byte 15, 18
+					.byte 14, 19
+					.byte 16, 19
+					.byte 15, 20
+					.byte 17, 18
+					.byte 18, 17
+					.byte 17, 16
+					.byte 16, 15
+					.byte 12, 15
+				.byte $FF
+
+    .endsection Chapter16ADataSection
+
+    .section Chapter16AWorldMapEventsSection
+
+			eventChapter16AWorldMapEvents ; E7/ECFB
+			
+				SCROLL_CAMERA_COORDS [4, 14], 4
+				SET_CURSOR_POSITION
+				YIELD
+			
+				PLAY_SOUND_WORD $00E0
+				PAUSE_SKIPPABLE 32
+				YIELD
+			
+				SET_MUSIC $2C
+				YIELD
+			
+				FADE_IN 1
+				YIELD
+			
+				SCROLL_CAMERA_COORDS [4, 8], 1
+				SET_CURSOR_POSITION
+				YIELD
+
+				macroWMSetCyclePalette 0, aOAMPaletteBuffer.aPalette5
+
+				macroWMDrawSpecialMarker [180, 165], WMMarkerTable.Marker09, 0, aOAMPaletteBuffer.aPalette5
+			
+				macroASMCWMDialogue dialogueChapter16AWorldMap1
+			
+				HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+
+				macroWMClearSpecialMarker 0
+			
+				PAUSE_SKIPPABLE 1
+				YIELD
+
+				macroWMClearCyclePalette aOAMPaletteBuffer.aPalette5
+			
+				macroWMSetCyclePalette 0, aBGPaletteBuffer.aPalette6
+
+				macroWMDrawSpecialMarker [168, 80], WMMarkerTable.Circle, 0
+
+				macroASMCWMDialogue dialogueChapter16AWorldMap2
+			
+				HALT_UNTIL_WORD_SKIPPABLE wDialogueEngineStatus, $0000
+			
+				macroWMClearCyclePalette aBGPaletteBuffer.aPalette6
+				macroWMClearSpecialMarker 0
+			
+				PAUSE_SKIPPABLE 1
+				YIELD
+			
+				FADE_OUT 2
+				YIELD
+			
+				CALL_ASM_LOOP rlASMCEndWMEvents
+				YIELD
+			END1
+
+    .endsection Chapter16AWorldMapEventsSection
+
+.endif ; GUARD_FE5_CHAPTER16A

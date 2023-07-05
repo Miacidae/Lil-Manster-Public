@@ -4,105 +4,10 @@
 .include "TitleScreenMenu.asm"
 .include "EpilogueMisc.asm"
 
-; Positions dialogue chunks in expanded areas of the rom
-; Adjust addresses if necessary to optimize your free space
-
-* = $408000
-.logical lorom($408000, 1)
-.include "Chapter1Dialogue.asm"
-.include "Chapter2Dialogue.asm"
-.include "ShopDialogue.asm"
-.include "ArenaDialogue.asm"
-.include "ChapterNames.asm"
-.include "Objectives.asm"
-.include "BattleQuotes.asm"
-.include "DeathQuotes.asm"
-.include "LeifDeathReactions.asm"
-.here
-* = $410020
-.logical lorom($410020, 1)
-.include "Chapter2xDialogue.asm"
-.include "Chapter3Dialogue.asm"
-.include "Chapter4Dialogue.asm"
-.include "RetreatQuotes.asm"
-.include "ReleaseQuotes.asm"
-.here
-* = $418030
-.logical lorom($418030, 1)
-.include "Chapter4xDialogue.asm"
-.include "Chapter5Dialogue.asm"
-.include "Chapter6Dialogue.asm"
-.here
-* = $420040
-.logical lorom($420040, 1)
-.include "Chapter7Dialogue.asm"
-.include "Chapter8Dialogue.asm"
-.include "Chapter8xDialogue.asm"
-.here
-* = $428040
-.logical lorom($428040, 1)
-.include "Chapter9Dialogue.asm"
-.include "Chapter10Dialogue.asm"
-.include "Chapter11Dialogue.asm"
-.here
-* = $430020
-.logical lorom($430020, 1)
-.include "Chapter11xDialogue.asm"
-.include "Chapter12Dialogue.asm"
-.include "Chapter12xDialogue.asm"
-.here
-* = $438040
-.logical lorom($438040, 1)
-.include "Chapter13Dialogue.asm"
-.include "Chapter14Dialogue.asm"
-.include "Chapter14xDialogue.asm"
-.here
-* = $440030
-.logical lorom($440030, 1)
-.include "Chapter15Dialogue.asm"
-.include "Chapter16ADialogue.asm"
-.here
-* = $448020
-.logical lorom($448020, 1)
-.include "Chapter17ADialogue.asm"
-.include "Chapter16BDialogue.asm"
-.include "Chapter17BDialogue.asm"
-.here
-* = $450030
-.logical lorom($450030, 1)
-.include "Chapter18Dialogue.asm"
-.include "Chapter19Dialogue.asm"
-.include "Chapter20Dialogue.asm"
-.here
-* = $458040
-.logical lorom($458040, 1)
-.include "Chapter21Dialogue.asm"
-.include "Chapter21xDialogue.asm"
-.include "Chapter22Dialogue.asm"
-.here
-* = $460020
-.logical lorom($460020, 1)
-.include "Chapter23Dialogue.asm"
-.include "Chapter24Dialogue.asm"
-.here
-* = $468030
-.logical lorom($468030, 1)
-.include "Chapter24xDialogue.asm"
-.include "Chapter25Dialogue.asm"
-.here
-* = $470040
-.logical lorom($470040, 1)
-.include "EpilogueDescriptions.asm"
-.include "EpilogueTitles.asm"
-.include "IntroDialogue.asm"
-.include "EndingWhite.asm"
-.include "Ranking.asm"
-.here
-
 ; Actual font setup
 
 * = $0A9A50
-.logical lorom($0A9A50, 1)
+.logical mapped($0A9A50)
 
 ; Font width table
 
@@ -200,7 +105,7 @@ fontwidthtable
 .here
 
 * = $340000
-.logical lorom($340000, 1)
+.logical mapped($340000)
 
 .binary "font/font-2bpp.bin"
 

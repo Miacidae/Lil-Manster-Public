@@ -1,4 +1,4 @@
-ch5leifesc
+dialogueChapter05LeifRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word leif_portrait2
@@ -16,7 +16,7 @@ ch5leifesc
 .byte WaitForA
 .byte EndText
 
-ch5nannaesc
+dialogueChapter05NannaRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word nanna_portrait
@@ -26,7 +26,7 @@ ch5nannaesc
 .byte WaitForA
 .byte EndText
 
-finnesc
+dialogueFinnRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word finn_portrait
@@ -34,7 +34,7 @@ finnesc
 .byte WaitForA
 .byte EndText
 
-osianesc
+dialogueOsianRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word osian_portrait
@@ -42,7 +42,7 @@ osianesc
 .byte WaitForA
 .byte EndText
 
-halvanesc
+dialogueHalvanRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word halvan_portrait
@@ -50,7 +50,7 @@ halvanesc
 .byte WaitForA
 .byte EndText
 
-eyvelesc
+dialogueEyvelRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word eyvel_portrait
@@ -60,7 +60,7 @@ eyvelesc
 .byte WaitForA
 .byte EndText
 
-dagdaresc
+dialogueDagdarRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word dagdar_portrait
@@ -70,7 +70,7 @@ dagdaresc
 .byte WaitForA
 .byte EndText
 
-ralphesc
+dialogueRalphRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word ralph_portrait
@@ -80,7 +80,7 @@ ralphesc
 .byte WaitForA
 .byte EndText
 
-martyesc
+dialogueMartyRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word marty_portrait
@@ -90,7 +90,7 @@ martyesc
 .byte WaitForA
 .byte EndText
 
-ronanesc
+dialogueRonanRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word ronan_portrait
@@ -98,7 +98,7 @@ ronanesc
 .byte WaitForA
 .byte EndText
 
-safieesc
+dialogueSafyRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word safie_portrait
@@ -108,7 +108,7 @@ safieesc
 .byte WaitForA
 .byte EndText
 
-laraesc
+dialogueLaraRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word lara_portrait
@@ -118,7 +118,7 @@ laraesc
 .byte WaitForA
 .byte EndText
 
-brightonesc
+dialogueBrightonRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word brighton_portrait
@@ -128,7 +128,7 @@ brightonesc
 .byte WaitForA
 .byte EndText
 
-fergusesc
+dialogueFergusRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word fergus_portrait
@@ -138,7 +138,7 @@ fergusesc
 .byte WaitForA
 .byte EndText
 
-asbelesc
+dialogueAsbelRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word asbel_portrait
@@ -148,7 +148,7 @@ asbelesc
 .byte WaitForA
 .byte EndText
 
-machaesc
+dialogueMachaRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word macha_portrait
@@ -156,7 +156,7 @@ machaesc
 .byte WaitForA
 .byte EndText
 
-hicksesc
+dialogueHicksRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word hicks_portrait
@@ -164,7 +164,7 @@ hicksesc
 .byte WaitForA
 .byte EndText
 
-nannaesc
+dialogueNannaRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word nanna_portrait
@@ -172,7 +172,7 @@ nannaesc
 .byte WaitForA
 .byte EndText
 
-dalsinesc
+dialogueDalsinRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word dalsin_portrait
@@ -182,7 +182,7 @@ dalsinesc
 .byte WaitForA
 .byte EndText
 
-callionesc
+dialogueCallionRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word callion_portrait
@@ -190,7 +190,7 @@ callionesc
 .byte WaitForA
 .byte EndText
 
-ch4Xcedesc
+dialogChapter04xCedRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word ced_portrait
@@ -198,7 +198,7 @@ ch4Xcedesc
 .byte WaitForA
 .byte EndText
 
-lithisesc
+dialogueLifisRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word lifis_portrait
@@ -208,7 +208,7 @@ lithisesc
 .byte WaitForA
 .byte EndText
 
-karinesc
+dialogueKarinRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word karin_portrait
@@ -220,7 +220,7 @@ karinesc
 .byte WaitForA
 .byte EndText
 
-tanyaesc
+dialogueTanyaRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word tanya_portrait
@@ -230,7 +230,7 @@ tanyaesc
 .byte WaitForA
 .byte EndText
 
-mareetaesc
+dialogueMareetaRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word mareeta_portrait
@@ -240,7 +240,7 @@ mareetaesc
 .byte WaitForA
 .byte EndText
 
-shivaesc
+dialogueShivaRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word shiva_portrait
@@ -248,7 +248,7 @@ shivaesc
 .byte WaitForA
 .byte EndText
 
-selphinaesc
+dialogueSelphinaRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word selphina_portrait
@@ -258,7 +258,7 @@ selphinaesc
 .byte WaitForA
 .byte EndText
 
-kaneesc
+dialogueKaneRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word kane_portrait
@@ -266,7 +266,7 @@ kaneesc
 .byte WaitForA
 .byte EndText
 
-albaesc
+dialogueAlbaRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word alba_portrait
@@ -276,7 +276,7 @@ albaesc
 .byte WaitForA
 .byte EndText
 
-robertesc
+dialogueRobertRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word robert_portrait
@@ -284,7 +284,7 @@ robertesc
 .byte WaitForA
 .byte EndText
 
-fredesc
+dialogueFredRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word fred_portrait
@@ -294,7 +294,7 @@ fredesc
 .byte WaitForA
 .byte EndText
 
-olwenesc
+dialogueOlwenRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word olwen_portrait
@@ -302,7 +302,7 @@ olwenesc
 .byte WaitForA
 .byte EndText
 
-salemesc
+dialogueSalemRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word salem_portrait
@@ -310,7 +310,7 @@ salemesc
 .byte WaitForA
 .byte EndText
 
-perneesc
+dialoguePerneRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word pan_portrait
@@ -320,7 +320,7 @@ perneesc
 .byte WaitForA
 .byte EndText
 
-trudeesc
+dialogueTrudeRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word trude_portrait
@@ -328,7 +328,7 @@ trudeesc
 .byte WaitForA
 .byte EndText
 
-tinaesc
+dialogueTinaRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word tina_portrait
@@ -338,7 +338,7 @@ tinaesc
 .byte WaitForA
 .byte EndText
 
-gladeesc
+dialogueGladeRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word glade_portrait
@@ -348,7 +348,7 @@ gladeesc
 .byte WaitForA
 .byte EndText
 
-homeresc
+dialogueHomerRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word homer_portrait
@@ -358,7 +358,7 @@ homeresc
 .byte WaitForA
 .byte EndText
 
-deanesc
+dialogueDeanRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word dean_portrait
@@ -366,7 +366,7 @@ deanesc
 .byte WaitForA
 .byte EndText
 
-edaesc
+dialogueEdaRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word eda_portrait
@@ -374,7 +374,7 @@ edaesc
 .byte WaitForA
 .byte EndText
 
-linoanesc
+dialogueLinoanRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word linoan_portrait
@@ -384,7 +384,7 @@ linoanesc
 .byte WaitForA
 .byte EndText
 
-iliosesc
+dialogueIliosRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word ilios_portrait
@@ -396,7 +396,7 @@ iliosesc
 .byte WaitForA
 .byte EndText
 
-schroffesc
+dialogueSchroffRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word schroff_portrait
@@ -406,7 +406,7 @@ schroffesc
 .byte WaitForA
 .byte EndText
 
-mishaesc
+dialogueMishaRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word misha_portrait
@@ -416,7 +416,7 @@ mishaesc
 .byte WaitForA
 .byte EndText
 
-shannamesc
+dialogueShannamRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word shannam_portrait
@@ -424,7 +424,7 @@ shannamesc
 .byte WaitForA
 .byte EndText
 
-mirandaesc
+dialogueMirandaRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word miranda_portrait
@@ -432,7 +432,7 @@ mirandaesc
 .byte WaitForA
 .byte EndText
 
-sarahesc
+dialogueSaraRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word sarah_portrait
@@ -440,7 +440,7 @@ sarahesc
 .byte WaitForA
 .byte EndText
 
-xavieresc
+dialogueXavierRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word xavier_portrait
@@ -448,7 +448,7 @@ xavieresc
 .byte WaitForA
 .byte EndText
 
-amaldaesc
+dialogueAmaldaRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word amalda_portrait
@@ -456,7 +456,7 @@ amaldaesc
 .byte WaitForA
 .byte EndText
 
-conomoresc
+dialogueConomorRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word conomor_portrait
@@ -466,7 +466,7 @@ conomoresc
 .byte WaitForA
 .byte EndText
 
-dermottesc
+dialogueDiarmuidRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word dermott_portrait
@@ -474,7 +474,7 @@ dermottesc
 .byte WaitForA
 .byte EndText
 
-saiasesc
+dialogueSaiasRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word saias_portrait
@@ -484,7 +484,7 @@ saiasesc
 .byte WaitForA
 .byte EndText
 
-cedesc
+dialogueCedRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word ced_portrait
@@ -492,7 +492,7 @@ cedesc
 .byte WaitForA
 .byte EndText
 
-galzusesc
+dialogueGalzusRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word galzus_portrait
@@ -502,7 +502,7 @@ galzusesc
 
 ; Unused
 
-gunteresc
+dialogueGunterRetreatQuote
 .byte Right_slot
 .word LoadPortrait
 .word cohen_portrait

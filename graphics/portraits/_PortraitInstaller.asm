@@ -1,8 +1,6 @@
 * = $354000
 .logical $EAC000
 
-	segmentStart
-
 	aPortraitPalette00 .binary "sprites/PortraitPalette00.bin"
 	aPortraitPalette01 .binary "sprites/PortraitPalette01.bin"
 	aPortraitPalette02 .binary "sprites/PortraitPalette02.bin"
@@ -254,16 +252,21 @@
 	g4bppcPortraitEAEE23 .binary "sprites/PortraitEAEE23.4bpp.comp"
 	g4bppcPortraitEAF322 .binary "sprites/PortraitEAF322.4bpp.comp"
 	g4bppcPortraitEAF8A6 .binary "sprites/PortraitEAF8A6.4bpp.comp"
-	g4bppcPortraitEAFE34 .binary "sprites/PortraitEAFE34.4bpp.comp"
-
-	segmentEnd $EB0318
+	g4bppcPortraitEAFE34 .crossbank.start *, "sprites/PortraitEAFE34.4bpp.comp"
 
 .here
 
+* = $358000
+.logical $EB0000
+
+	.crossbank.end
+
+.here
+
+
+
 * = $358318
 .logical $EB8318
-
-	segmentStart
 
 	g4bppcPortraitEB8318 .binary "sprites/PortraitEB8318.4bpp.comp"
 	g4bppcPortraitEB8851 .binary "sprites/PortraitEB8851.4bpp.comp"
@@ -289,16 +292,20 @@
 	g4bppcPortraitEBEE1D .binary "sprites/PortraitEBEE1D.4bpp.comp"
 	g4bppcPortraitEBF2FF .binary "sprites/PortraitEBF2FF.4bpp.comp"
 	g4bppcPortraitEBF862 .binary "sprites/PortraitEBF862.4bpp.comp"
-	g4bppcPortraitEBFD2F .binary "sprites/PortraitEBFD2F.4bpp.comp"
-
-	segmentEnd $EC0209
+	g4bppcPortraitEBFD2F .crossbank.start *, "sprites/PortraitEBFD2F.4bpp.comp"
 
 .here
 
+* = $360000
+.logical $EC0000
+
+	.crossbank.end
+
+.here
+
+
 * = $360209
 .logical $EC8209
-
-	segmentStart
 
 	g4bppcPortraitEC8209 .binary "sprites/PortraitEC8209.4bpp.comp"
 	g4bppcPortraitEC8729 .binary "sprites/PortraitEC8729.4bpp.comp"
@@ -325,16 +332,20 @@
 	g4bppcPortraitECF0A4 .binary "sprites/PortraitECF0A4.4bpp.comp"
 	g4bppcPortraitECF4EA .binary "sprites/PortraitECF4EA.4bpp.comp"
 	g4bppcPortraitECF9CB .binary "sprites/PortraitECF9CB.4bpp.comp"
-	g4bppcPortraitECFE67 .binary "sprites/PortraitECFE67.4bpp.comp"
-
-	segmentEnd $ED0356
+	g4bppcPortraitECFE67 .crossbank.start *, "sprites/PortraitECFE67.4bpp.comp"
 
 .here
 
+* = $368000
+.logical $ED0000
+
+	.crossbank.end
+
+.here
+
+
 * = $368356
 .logical $ED8356
-
-	segmentStart
 
 	g4bppcPortraitED8356 .binary "sprites/PortraitED8356.4bpp.comp"
 	g4bppcPortraitED885F .binary "sprites/PortraitED885F.4bpp.comp"
@@ -361,16 +372,20 @@
 	g4bppcPortraitEDED87 .binary "sprites/PortraitEDED87.4bpp.comp"
 	g4bppcPortraitEDF246 .binary "sprites/PortraitEDF246.4bpp.comp"
 	g4bppcPortraitEDF6BA .binary "sprites/PortraitEDF6BA.4bpp.comp"
-	g4bppcPortraitEDFBE9 .binary "sprites/PortraitEDFBE9.4bpp.comp"
-
-	segmentEnd $EE0071
+	g4bppcPortraitEDFBE9 .crossbank.start *, "sprites/PortraitEDFBE9.4bpp.comp"
 
 .here
 
+* = $370000
+.logical $EE0000
+
+	.crossbank.end
+
+.here
+
+
 * = $370071
 .logical $EE8071
-
-	segmentStart
 
 	g4bppcPortraitEE8071 .binary "sprites/PortraitEE8071.4bpp.comp"
 	g4bppcPortraitEE84E4 .binary "sprites/PortraitEE84E4.4bpp.comp"
@@ -398,16 +413,20 @@
 	g4bppcPortraitEEEE9B .binary "sprites/PortraitEEEE9B.4bpp.comp"
 	g4bppcPortraitEEF32A .binary "sprites/PortraitEEF32A.4bpp.comp"
 	g4bppcPortraitEEF712 .binary "sprites/PortraitEEF712.4bpp.comp"
-	g4bppcPortraitEEFC0A .binary "sprites/PortraitEEFC0A.4bpp.comp"
-
-	segmentEnd $EF0019
+	g4bppcPortraitEEFC0A .crossbank.start *, "sprites/PortraitEEFC0A.4bpp.comp"
 
 .here
 
+* = $378000
+.logical $EF0000
+
+	.crossbank.end
+
+.here
+
+
 * = $378019
 .logical $EF8019
-
-	segmentStart
 
 	g4bppcPortraitEF8019 .binary "sprites/PortraitEF8019.4bpp.comp"
 	g4bppcPortraitEF8470 .binary "sprites/PortraitEF8470.4bpp.comp"
@@ -437,7 +456,5 @@
 	g4bppcPortraitEFE801 .binary "sprites/PortraitEFE801.4bpp.comp"
 	g4bppcPortraitEFEBDE .binary "sprites/PortraitEFEBDE.4bpp.comp"
 	g4bppcPortraitEFEF61 .binary "sprites/PortraitEFEF61.4bpp.comp"
-
-	segmentEnd
 
 .here

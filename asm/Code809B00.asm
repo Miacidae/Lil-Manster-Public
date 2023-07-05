@@ -8,7 +8,7 @@ rsUnknown809B00 ; 80/9B00
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
 	stz bUnknown000F54,b
-	lda #HDMAEN_Setting(False, False, False, False, False, False, False, False)
+	lda #0 		; HDMAEN_Setting(False, False, False, False, False, False, False, False)
 	sta @l HDMAEN
 	rep #$30
 	jsl rlDMAPaletteAndOAMBuffer
@@ -61,7 +61,7 @@ rsUnknown809B80 ; 80/9B80
 	lda #<>$7EA2DC
 	sta lR18
 	lda #$0001
-	sta wUnknown000DA6,b
+	sta $000DA6,b
 	lda #$5A23
 	jsl rlUnknown82B26A
 	lda #(`$7EA2DC)<<8
@@ -69,13 +69,13 @@ rsUnknown809B80 ; 80/9B80
 	lda #<>$7EA2DC
 	sta lR18
 	lda #$0001
-	sta wUnknown000DA6,b
+	sta $000DA6,b
 	lda #$0200
 	jsl rlUnknown82B26A
 	lda #$000A
-	sta wJoyLongTime
+	sta wJoyRepeatDelay
 	lda #$0004
-	sta wJoyShortTime
+	sta wJoyRepeatInterval
 	lda #<>aBG1TilemapBuffer
 	sta wR0
 	lda #$02FF
@@ -113,23 +113,24 @@ rsUnknown809B80 ; 80/9B80
 	jsl rlUnknown82A6AE
 	jsl $87C851
 	jsl rlResetRNTable
+
 	sep #$20
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
-	lda #BGMODE_Setting(1, True)
-	sta bBuf_BGMODE
-	lda bBuf_BG1SC
-	and #~BG1SC.Size
-	ora #BGSC_Setting(BGSize64x32)
-	sta bBuf_BG1SC
-	lda bBuf_BG2SC
-	and #~BG2SC.Size
-	ora #BGSC_Setting(BGSize64x32)
-	sta bBuf_BG2SC
-	lda bBuf_BG3SC
-	and #~BG3SC.Size
-	ora #BGSC_Setting(BGSize64x32)
-	sta bBuf_BG3SC
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
+	lda #BGMODE_Setting(BG_Mode1, false, false, false, false, True)
+	sta bBufferBGMODE
+	lda bBufferBG1SC
+	and #~BGSC_Size
+	ora #BGSC_Setting(0, BGSC_64x32)
+	sta bBufferBG1SC
+	lda bBufferBG2SC
+	and #~BGSC_Size
+	ora #BGSC_Setting(0, BGSC_64x32)
+	sta bBufferBG2SC
+	lda bBufferBG3SC
+	and #~BGSC_Size
+	ora #BGSC_Setting(0, BGSC_64x32)
+	sta bBufferBG3SC
 	plp
 	rts
 
@@ -171,34 +172,34 @@ rlUnknown809C9B ; 80/9C9B
 	sta lR18+1
 	lda #<>$9E8200
 	sta lR18
-	lda #(`aOAMPal4)<<8
+	lda #(`aOAMPaletteBuffer.aPalette4)<<8
 	sta lR19+1
-	lda #<>aOAMPal4
+	lda #<>aOAMPaletteBuffer.aPalette4
 	sta lR19
 	lda #$0060
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 	lda #(`$9E8260)<<8
 	sta lR18+1
 	lda #<>$9E8260
 	sta lR18
-	lda #(`aBGPal0)<<8
+	lda #(`aBGPaletteBuffer.aPalette0)<<8
 	sta lR19+1
-	lda #<>aBGPal0
+	lda #<>aBGPaletteBuffer.aPalette0
 	sta lR19
 	lda #$0020
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 	lda #(`$F4FF80)<<8
 	sta lR18+1
 	lda #<>$F4FF80
 	sta lR18
-	lda #(`aOAMPal0)<<8
+	lda #(`aOAMPaletteBuffer.aPalette0)<<8
 	sta lR19+1
-	lda #<>aOAMPal0
+	lda #<>aOAMPaletteBuffer.aPalette0
 	sta lR19
 	lda #$0080
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 	rtl
 
@@ -228,7 +229,7 @@ rsUnknown809D0F ; 80/9D0F
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -267,18 +268,18 @@ rsUnknown809D0F ; 80/9D0F
 	jsl rlUpdateVisibilityMap
 	jsl rlUpdateUnitMapsAndFog
 	jsr rsUnknown80A139
-	stz wUnknown000E6D,b
+	stz wForcedMapScrollFlag,b
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	stz bBufferINIDISP
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -293,7 +294,7 @@ rsUnknown809DBA ; 80/9DBA
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -332,15 +333,15 @@ rsUnknown809DBA ; 80/9DBA
 
 	phx
 	lda #(`procFadeInClearJoypad)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeInClearJoypad
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	stz bBufferINIDISP
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -355,7 +356,7 @@ rsUnknown809E46 ; 80/9E46
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -367,16 +368,16 @@ rsUnknown809E46 ; 80/9E46
 	jsl $85910B
 	jsl $85E1D8
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	stz bBufferINIDISP
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -391,7 +392,7 @@ rsUnknown809E95 ; 80/9E95
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -406,16 +407,16 @@ rsUnknown809E95 ; 80/9E95
 	jsl $83A74E
 	jsl $8885D1
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	stz bBufferINIDISP
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -430,7 +431,7 @@ rsUnknown809EF0 ; 80/9EF0
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -468,9 +469,9 @@ rsUnknown809EF0 ; 80/9EF0
 	+
 	sep #$20
 	lda #INIDISP_Setting(False, 15)
-	sta bBuf_INIDISP
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	sta bBufferINIDISP
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -485,7 +486,7 @@ rsUnknown809F74 ; 80/9F74
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	lda #<>aBG1TilemapBuffer
@@ -507,16 +508,16 @@ rsUnknown809F74 ; 80/9F74
 	jsl $85910B
 	jsl $8A927D
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	stz bBufferINIDISP
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -544,18 +545,18 @@ rlUnknown809FE5 ; 80/9FE5
 	bpl -
 
 	sep #$20
-	lda bBuf_BG1SC
-	and #~BG1SC.Size
-	ora #BGSC_Setting(BGSize64x32)
-	sta bBuf_BG1SC
-	lda bBuf_BG2SC
-	and #~BG2SC.Size
-	ora #BGSC_Setting(BGSize64x32)
-	sta bBuf_BG2SC
-	lda bBuf_BG3SC
-	and #~BG3SC.Size
-	ora #BGSC_Setting(BGSize64x32)
-	sta bBuf_BG3SC
+	lda bBufferBG1SC
+	and #~BGSC_Size
+	ora #BGSC_Setting(0, BGSC_64x32)
+	sta bBufferBG1SC
+	lda bBufferBG2SC
+	and #~BGSC_Size
+	ora #BGSC_Setting(0, BGSC_64x32)
+	sta bBufferBG2SC
+	lda bBufferBG3SC
+	and #~BGSC_Size
+	ora #BGSC_Setting(0, BGSC_64x32)
+	sta bBufferBG3SC
 	rep #$30
 	rtl
 
@@ -567,11 +568,11 @@ rlUnknown80A01A ; 80/A01A
 	.databank ?
 
 	lda #<>rsUnknown809D0F
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -583,11 +584,11 @@ rlUnknown80A02F ; 80/A02F
 	.databank ?
 
 	lda #<>rsUnknown80A059
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -599,11 +600,11 @@ rlUnknown80A044 ; 80/A044
 	.databank ?
 
 	lda #<>rsUnknown809F74
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	rtl
 
@@ -618,7 +619,7 @@ rsUnknown80A059 ; 80/A059
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -634,16 +635,16 @@ rsUnknown80A059 ; 80/A059
 	jsr rsUnknown80A139
 	jsl $85910B
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	stz bBufferINIDISP
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -660,7 +661,7 @@ rsUnknown80A0B5 ; 80/A0B5
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	jsl rlDisableVBlank
 	jsr rsUnknown809B80
@@ -690,15 +691,15 @@ rsUnknown80A0B5 ; 80/A0B5
 
 	phx
 	lda #(`procFadeInAfterSound)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeInAfterSound
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	stz bBuf_INIDISP
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	stz bBufferINIDISP
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
 	cli
@@ -736,7 +737,7 @@ rsUnknown80A161 ; 80/A161
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 
 	jsl rlDisableVBlank
@@ -762,19 +763,19 @@ rsUnknown80A161 ; 80/A161
 	jsr rsUnknown80A139
 
 	lda #$0001
-	sta wUnknown00033F,b
+	sta wScreenFadingProcInput,b
 
 	lda #(`procFadeIn2)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procFadeIn2
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 
 	jsl rlEnableVBlank
 	plp
@@ -792,7 +793,7 @@ rsUnknown80A1E0 ; 80/A1E0
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 
 	jsl rlDisableVBlank
@@ -817,9 +818,9 @@ rsUnknown80A1E0 ; 80/A1E0
 
 	sep #$20
 	lda #INIDISP_Setting(False, 15)
-	sta bBuf_INIDISP
-	lda #TM_Setting(True, True, True, False, True)
-	sta bBuf_TM
+	sta bBufferINIDISP
+	lda #T_Setting(True, True, True, False, True)
+	sta bBufferTM
 
 	jsl rlEnableVBlank
 	plp
@@ -843,12 +844,12 @@ rsUnknown80A23A ; 80/A23A
 	sep #$20
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 
-	lda #BGSC_Setting(BGSize32x32, $0000)
-	sta bBuf_BG1SC
-	sta bBuf_BG2SC
-	sta bBuf_BG3SC
+	lda #BGSC_Setting(0, BGSC_32x32)
+	sta bBufferBG1SC
+	sta bBufferBG2SC
+	sta bBufferBG3SC
 	rep #$20
 
 	jsl rlDisableVBlank
@@ -856,9 +857,9 @@ rsUnknown80A23A ; 80/A23A
 	jsl rlUnknown80A711
 
 	lda #16
-	sta wJoyLongTime
+	sta wJoyRepeatDelay
 	lda #4
-	sta wJoyShortTime
+	sta wJoyRepeatInterval
 	lda #$2000
 	sta wR1
 	lda #$2000
@@ -964,12 +965,12 @@ rsUnknown80A23A ; 80/A23A
 	sta lR18+1
 	lda #<>$7EB135
 	sta lR18
-	lda #(`aBGPal2)<<8
+	lda #(`aBGPaletteBuffer.aPalette2)<<8
 	sta lR19+1
-	lda #<>aBGPal2
+	lda #<>aBGPaletteBuffer.aPalette2
 	sta lR19
 	lda #$0080
-	sta wR20
+	sta lR20
 	jsl rlBlockCopy
 	jsl rlLoadDialogueBGDialogueBoxGraphicsAndPalette
 	jsl rlDMAByStruct
@@ -991,30 +992,30 @@ rsUnknown80A23A ; 80/A23A
 	lda #$0200
 	sta wR1
 	jsl rlDMAByPointer
-	lda #(`aBGPal0)<<8
+	lda #(`aBGPaletteBuffer.aPalette0)<<8
 	sta lR18+1
-	lda #<>aBGPal0
+	lda #<>aBGPaletteBuffer.aPalette0
 	sta lR18
-	lda #(`aOAMPal7)<<8
+	lda #(`aOAMPaletteBuffer.aPalette7)<<8
 	sta lR19+1
-	lda #<>aOAMPal7
+	lda #<>aOAMPaletteBuffer.aPalette7
 	sta lR19
-	lda #size(aBGPal0)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette0)
+	sta lR20
 	jsl rlBlockCopy
 
 	lda #$0000
-	sta wBuf_BG1VOFS
-	sta wBuf_BG1HOFS
-	sta wBuf_BG2VOFS
-	sta wBuf_BG2HOFS
-	sta wBuf_BG3VOFS
-	sta wBuf_BG3HOFS
+	sta wBufferBG1VOFS
+	sta wBufferBG1HOFS
+	sta wBufferBG2VOFS
+	sta wBufferBG2HOFS
+	sta wBufferBG3VOFS
+	sta wBufferBG3HOFS
 	sep #$20
-	lda #TM_Setting(True, False, False, False, False)
-	sta bBuf_TM
+	lda #T_Setting(True, False, False, False, False)
+	sta bBufferTM
 	lda #INIDISP_Setting(False)
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 	rep #$20
 	lda #$0007
 	sta wUnknown000300,b
@@ -1043,14 +1044,14 @@ rlUnknown80A45E ; 80/A45E
 	.databank ?
 
 	lda #(`rsUnknown80A23A)<<8
-	sta wProcInput0+1,b
+	sta aProcSystem.wInput0+1,b
 	lda #<>rsUnknown80A23A
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	phx
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 	rtl
@@ -1077,7 +1078,7 @@ rsUnknown80A488 ; 80/A488
 	sep #$30
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	lda #HDMAEN_Setting(False, False, False, False, False, False, False, False)
+	lda #0 ; HDMAEN_Setting(False, False, False, False, False, False, False, False)
 	sta @l HDMAEN
 	rep #$30
 
@@ -1253,14 +1254,14 @@ rlUnknown80A569 ; 80/A569
 
 	+
 	ldy #$0000
-	lda lR43+1
+	lda lR44+1
 	sta aUnknown000309+1,b,x
 	sta lUnknown000306+1,b
-	lda [lR43],y
+	lda [lR44],y
 	sta lUnknown000306,b
 	inc y
 	inc y
-	lda [lR43],y
+	lda [lR44],y
 	sta aUnknown000309,b,x
 	jsl _Goto
 
@@ -1287,9 +1288,9 @@ rlUnknown80A5A3 ; 80/A5A3
 	.databank `*
 
 	ldy #$0002
-	lda lR43+1
+	lda lR44+1
 	sta lUnknown000306+1,b
-	lda [lR43],y
+	lda [lR44],y
 	sta lUnknown000306,b
 	ldx #size(aUnknown000309) - 3
 
@@ -1314,7 +1315,7 @@ rlUnknown80A5A3 ; 80/A5A3
 
 	+
 	ldy #$0004
-	lda [lR43],y
+	lda [lR44],y
 	sta lUnknown000306,b
 	jsl _Goto
 	clc
@@ -1396,14 +1397,14 @@ rsUnknown80A63B ; 80/A63B
 
 	sep #$30
 	stz NMITIMEN,b
-	stz bBuf_NMITIMEN
+	stz bBufferNMITIMEN
 
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
+	sta bBufferINIDISP
 
-	stz wNextFreeSpriteOffs,b
-	stz wUnknown1E22,b
+	stz wNextFreeSpriteOffset,b
+	stz wUnknown001E22,b
 	jsl rlClearSpriteAttributeBuffer
 	jsl rlHideSprites
 	rep #$30
@@ -1413,33 +1414,33 @@ rsUnknown80A63B ; 80/A63B
 	jsl rlUnknown80A553
 
 	lda #(`aUnknown8CD529)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>aUnknown8CD529
-	sta lR43
+	sta lR44
 	jsl rlUnknown80A569
 
 	lda #(`aProcEngineMainProcActionTable)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>aProcEngineMainProcActionTable
-	sta lR43
+	sta lR44
 	jsl rlUnknown80A569
 
 	lda #(`aActiveSpriteEngineMainActionTable)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>aActiveSpriteEngineMainActionTable
-	sta lR43
+	sta lR44
 	jsl rlUnknown80A569
 
 	lda #(`aHDMAArrayEngineMainActionTable)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>aHDMAArrayEngineMainActionTable
-	sta lR43
+	sta lR44
 	jsl rlUnknown80A569
 
 	lda #(`aIRQArrayEngineMainActionTable)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>aIRQArrayEngineMainActionTable
-	sta lR43
+	sta lR44
 	jsl rlUnknown80A569
 
 	stz wUnknown000300,b
@@ -1493,28 +1494,28 @@ rlUnknown80A6CA ; 80/A6CA
 	sep #$30
 	lda #NMITIMEN_Setting(True, False, False, False)
 	sta NMITIMEN,b
-	sta bBuf_NMITIMEN
-	lda #WRIO_Setting(False, True)
+	sta bBufferNMITIMEN
+	lda #WRIO_Setting(False, True, 0)
 	sta WRIO,b
 	stz WRMPYA,b
 	stz WRMPYB,b
-	stz WRDIV,b
-	stz WRDIV+1,b
-	stz WRDIV+2,b
+	stz WRDIVA,b
+	stz WRDIVA+1,b
+	stz WRDIVA+2,b
 	stz HTIME,b
-	stz bBuf_HTIMEL
+	stz bBufferHTIMEL
 	stz HTIME+1,b
-	stz bBuf_HTIMEH
+	stz bBufferHTIMEH
 	stz VTIME,b
-	stz bBuf_VTIMEL
+	stz bBufferVTIMEL
 	stz VTIME+1,b
-	stz bBuf_VTIMEH
+	stz bBufferVTIMEH
 	stz MDMAEN,b
 	stz HDMAEN,b
-	stz bBuf_HDMAEN
+	stz bBufferHDMAEN
 	lda #MEMSEL_Setting(True)
 	sta MEMSEL,b
-	sta bBuf_MEMSEL
+	sta bBufferMEMSEL
 	plp
 	plb
 	rtl
@@ -1536,70 +1537,70 @@ rlUnknown80A711 ; 80/A711
 	sep #$30
 	lda #INIDISP_Setting(True)
 	sta INIDISP,b
-	sta bBuf_INIDISP
-	lda #OBSEL_Setting(ObjectSize8x8And16x16, $0000, $0000)
+	sta bBufferINIDISP
+	lda #0
 	sta OBSEL,b
-	sta bBuf_OBSEL
-	lda #OAMADDL_Setting($010)
-	sta OAMADDL,b
-	sta wBuf_OAMADD
-	lda #OAMADDH_Setting(False, $010)
-	sta OAMADDH,b
-	sta wBuf_OAMADD+1
+	sta bBufferOBSEL
+	lda #$10
+	sta OAMADD,b
+	sta wBufferOAMADD
+	lda #0
+	sta OAMADD+1,b
+	sta wBufferOAMADD+1
 	stz OAMDATA,b
 	stz OAMDATA,b
-	lda #BGMODE_Setting(1, True)
+	lda #BGMODE_Setting(BG_Mode1, false, false, false, false, true)
 	sta BGMODE,b
-	sta bBuf_BGMODE
+	sta bBufferBGMODE
 	stz MOSAIC,b
-	stz bBuf_MOSAIC
+	stz bBufferMOSAIC
 	stz BG1SC,b
-	stz bBuf_BG1SC
+	stz bBufferBG1SC
 	stz BG2SC,b
-	stz bBuf_BG2SC
+	stz bBufferBG2SC
 	stz BG3SC,b
-	stz bBuf_BG3SC
+	stz bBufferBG3SC
 	stz BG4SC,b
-	stz bBuf_BG4SC
+	stz bBufferBG4SC
 	stz BG12NBA,b
-	stz bBuf_BG12NBA
+	stz bBufferBG12NBA
 	stz BG34NBA,b
-	stz bBuf_BG34NBA
+	stz bBufferBG34NBA
 	stz BG1HOFS,b
-	stz wBuf_BG1HOFS
+	stz wBufferBG1HOFS
 	stz BG1HOFS,b
-	stz wBuf_BG1HOFS+1
+	stz wBufferBG1HOFS+1
 	stz BG1VOFS,b
-	stz wBuf_BG1VOFS
+	stz wBufferBG1VOFS
 	stz BG1VOFS,b
-	stz wBuf_BG1VOFS+1
+	stz wBufferBG1VOFS+1
 	stz BG2HOFS,b
-	stz wBuf_BG2HOFS
+	stz wBufferBG2HOFS
 	stz BG2HOFS,b
-	stz wBuf_BG2HOFS+1
+	stz wBufferBG2HOFS+1
 	stz BG2VOFS,b
-	stz wBuf_BG2VOFS
+	stz wBufferBG2VOFS
 	stz BG2VOFS,b
-	stz wBuf_BG2VOFS+1
+	stz wBufferBG2VOFS+1
 	stz BG3HOFS,b
-	stz wBuf_BG3HOFS
+	stz wBufferBG3HOFS
 	stz BG3HOFS,b
-	stz wBuf_BG3HOFS+1
+	stz wBufferBG3HOFS+1
 	stz BG3VOFS,b
-	stz wBuf_BG3VOFS
+	stz wBufferBG3VOFS
 	stz BG3VOFS,b
-	stz wBuf_BG3VOFS+1
+	stz wBufferBG3VOFS+1
 	stz BG4HOFS,b
-	stz wBuf_BG4HOFS
+	stz wBufferBG4HOFS
 	stz BG4HOFS,b
-	stz wBuf_BG4HOFS+1
+	stz wBufferBG4HOFS+1
 	stz BG4VOFS,b
-	stz wBuf_BG4VOFS
+	stz wBufferBG4VOFS
 	stz BG4VOFS,b
-	stz wBuf_BG4VOFS+1
+	stz wBufferBG4VOFS+1
 	stz VMAIN,b
 	stz M7SEL,b
-	stz bBuf_M7SEL
+	stz bBufferM7SEL
 	stz M7A,b
 	stz M7B,b
 	stz M7C,b
@@ -1608,54 +1609,54 @@ rlUnknown80A711 ; 80/A711
 	stz M7Y,b
 	lda #W12SEL_Setting(False, False, False, False, False, False, False, False)
 	sta W12SEL,b
-	sta bBuf_W12SEL
+	sta bBufferW12SEL
 	lda #W34SEL_Setting(False, False, False, False, False, False, False, False)
 	sta W34SEL,b
-	sta bBuf_W34SEL
+	sta bBufferW34SEL
 	stz WOBJSEL,b
-	stz bBuf_WOBJSEL
+	stz bBufferWOBJSEL
 	lda #0
 	sta WH0,b
-	sta bBuf_WH0
+	sta bBufferWH0
 	lda #255
 	sta WH1,b
-	sta bBuf_WH1
+	sta bBufferWH1
 	stz WH2,b
-	stz bBuf_WH2
+	stz bBufferWH2
 	stz WH3,b
-	stz bBuf_WH3
+	stz bBufferWH3
 	stz WBGLOG,b
-	stz bBuf_WBGLOG
+	stz bBufferWBGLOG
 	stz WOBJLOG,b
-	stz bBuf_WOBJLOG
-	lda #TM_Setting(True, False, False, False, True)
+	stz bBufferWOBJLOG
+	lda #T_Setting(True, False, False, False, True)
 	sta TM,b
-	sta bBuf_TM
+	sta bBufferTM
 	sta TMW,b
-	sta bBuf_TMW
-	lda #TS_Setting(False, False, False, False, False)
+	sta bBufferTMW
+	lda #T_Setting(False, False, False, False, False)
 	sta TS,b
-	sta bBuf_TS
+	sta bBufferTS
 	sta TSW,b
-	sta bBuf_TSW
+	sta bBufferTSW
 	lda #CGWSEL_Setting(False, True, CGWSEL_MathAlways, CGWSEL_BlackNever)
 	sta CGWSEL,b
-	sta bBuf_CGWSEL
+	sta bBufferCGWSEL
 	lda #CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, False, True)
 	sta CGADSUB,b
-	sta bBuf_CGADSUB
+	sta bBufferCGADSUB
 	lda #COLDATA_Setting(0, True, False, False)
 	sta COLDATA,b
-	sta bBuf_COLDATA_1
+	sta bBufferCOLDATA_1
 	lda #COLDATA_Setting(0, False, True, False)
 	sta COLDATA,b
-	sta bBuf_COLDATA_2
+	sta bBufferCOLDATA_2
 	lda #COLDATA_Setting(0, False, False, True)
 	sta COLDATA,b
-	sta bBuf_COLDATA_3
+	sta bBufferCOLDATA_3
 	lda #$00
 	sta SETINI,b
-	sta bBuf_SETINI
+	sta bBufferSETINI
 	plp
 	plb
 	rtl
@@ -1788,14 +1789,14 @@ rlUnknown80A883 ; 80/A883
 	.databank `*
 
 	sep #$20
-	lda bBuf_INIDISP
+	lda bBufferINIDISP
 	bmi +
 
 	jmp _End
 
 	+
 	lda wR1+1
-	and #BG12NBA.BG1Base << 4
+	and #BG12NBA_BG1_Address << 4
 	lsr a
 	lsr a
 	lsr a
@@ -1803,12 +1804,12 @@ rlUnknown80A883 ; 80/A883
 	sta wR1+1
 
 	lda wR2+1
-	and #BG12NBA.BG2Base
+	and #BG12NBA_BG2_Address
 	ora wR1+1
 	sta wR1
 
 	lda wR3+1
-	and #BG34NBA.BG3Base << 4
+	and #BG34NBA_BG3_Address << 4
 	lsr a
 	lsr a
 	lsr a
@@ -1816,7 +1817,7 @@ rlUnknown80A883 ; 80/A883
 	sta wR3+1
 
 	lda wR4+1
-	and #BG34NBA.BG4Base
+	and #BG34NBA_BG4_Address
 	ora wR3+1
 	sta wR3
 
@@ -1830,58 +1831,58 @@ rlUnknown80A883 ; 80/A883
 	sta wR5
 
 	lda wR6+1
-	and #BG1SC.Address
+	and #BGSC_Address
 	sta wR6
 
 	lda wR7+1
-	and #BG2SC.Address
+	and #BGSC_Address
 	sta wR7
 
 	lda wR8+1
-	and #BG3SC.Address
+	and #BGSC_Address
 	sta wR8
 
 	lda wR9+1
-	and #BG4SC.Address
+	and #BGSC_Address
 	sta wR9
 
-	lda bBuf_BG1SC
-	and #BG1SC.Size
+	lda bBufferBG1SC
+	and #BGSC_Size
 	ora wR6
 	sta BG1SC,b
-	sta bBuf_BG1SC
+	sta bBufferBG1SC
 
-	lda bBuf_BG2SC
-	and #BG2SC.Size
+	lda bBufferBG2SC
+	and #BGSC_Size
 	ora wR7
 	sta BG2SC,b
-	sta bBuf_BG2SC
+	sta bBufferBG2SC
 
-	lda bBuf_BG3SC
-	and #BG3SC.Size
+	lda bBufferBG3SC
+	and #BGSC_Size
 	ora wR8
 	sta BG3SC,b
-	sta bBuf_BG3SC
+	sta bBufferBG3SC
 
-	lda bBuf_BG4SC
-	and #BG4SC.Size
+	lda bBufferBG4SC
+	and #BGSC_Size
 	ora wR9
 	sta BG4SC,b
-	sta bBuf_BG4SC
+	sta bBufferBG4SC
 
-	lda bBuf_OBSEL
-	and #~OBSEL.Base
+	lda bBufferOBSEL
+	and #~OBSEL_Base
 	ora wR5
 	sta OBSEL,b
-	sta bBuf_OBSEL
+	sta bBufferOBSEL
 
 	lda wR1
 	sta BG12NBA,b
-	sta bBuf_BG12NBA
+	sta bBufferBG12NBA
 
 	lda wR3
 	sta BG34NBA,b
-	sta bBuf_BG34NBA
+	sta bBufferBG34NBA
 
 	_End
 	plp

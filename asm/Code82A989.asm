@@ -14,17 +14,17 @@ rlUnknown82A989 ; 82/A989
 
 	.databank `*
 
-	ldx #size(aUnknownArraySpace)-2
+	ldx #$21
 	lda #$0000
 
 	-
-	sta aUnknownArraySpace,b,x
+	sta $000DA0,b,x
 	dec x
 	dec x
 	bpl -
 
 	lda #$0010
-	sta wUnknown000DC1,b
+	sta $000DC1,b
 	plp
 	plb
 	rtl
@@ -129,9 +129,9 @@ rlUnknown82A9F2 ; 82/A9F2
 
 	jsl rlUnknown82ACD8
 	inc a
-	sta wUnknown000DA6
+	sta $000DA6
 	jsl rlUnknown82AAEB
-	lda wUnknown000DA6
+	lda $000DA6
 	rtl
 
 rlUnknown82AA04 ; 82/AA04
@@ -142,7 +142,7 @@ rlUnknown82AA04 ; 82/AA04
 	.databank ?
 
 	lda #$0001
-	sta wUnknown000DA6
+	sta $000DA6
 	jsl rlUnknown82AAEB
 	rtl
 
@@ -160,7 +160,7 @@ rlUnknown82AA10 ; 82/AA10
 
 	plb
 	jsl rlUnknown82AE38
-	sta wUnknown000DA6,b
+	sta $000DA6,b
 	jsl rlUnknown82AA20
 	plb
 	rtl
@@ -182,11 +182,11 @@ rlUnknown82AA20 ; 82/AA20
 
 	phx
 	phy
-	lda lUnknown000DB2,b
+	lda $000DB2,b
 	tax
 
 	sep #$20
-	lda lUnknown000DB2+2,b
+	lda $000DB2+2,b
 	pha
 	rep #$20
 	plb
@@ -199,9 +199,9 @@ rlUnknown82AA20 ; 82/AA20
 
 	lda $0002,b,x
 	and #$00FF
-	sta wUnknown000DAA
+	sta $000DAA
 	sep #$20
-	lda wUnknown000DA6
+	lda $000DA6
 	beq _True
 
 	cmp $0000,b,x
@@ -216,17 +216,17 @@ rlUnknown82AA20 ; 82/AA20
 	rep #$20
 	and #$00FF
 	sec
-	sbc wUnknown000DA6
+	sbc $000DA6
 	inc a
 	jsr rlUnknown82AE90
-	sta wUnknown000DAC
-	lda wUnknown000DA6
+	sta $000DAC
+	lda $000DA6
 	jsr rlUnknown82AE90
 	clc
-	adc lUnknown000DB2
+	adc $000DB2
 	tax
 	clc
-	adc wUnknown000DAA
+	adc $000DAA
 	tay
 
 	-
@@ -236,9 +236,9 @@ rlUnknown82AA20 ; 82/AA20
 	rep #$20
 	inc y
 	inc x
-	lda wUnknown000DAC
+	lda $000DAC
 	dec a
-	sta wUnknown000DAC
+	sta $000DAC
 	bne -
 
 	plx
@@ -282,12 +282,12 @@ rlUnknown82AAAE ; 82/AAAE
 
 	jsl rlUnknown82AE38
 	inc a
-	sta wUnknown000DA6,b
+	sta $000DA6,b
 	pha
-	lda aUnknown000DA0+4,b
-	sta aUnknown000DA0+1,b
-	lda aUnknown000DA0+3,b
-	sta aUnknown000DA0,b
+	lda $000DA0+4,b
+	sta $000DA0+1,b
+	lda $000DA0+3,b
+	sta $000DA0,b
 	jsl rlUnknown82AAEB
 	pla
 	plb
@@ -308,12 +308,12 @@ rlUnknown82AACD ; 82/AACD
 	.databank `*
 
 	jsl rlUnknown82AE38
-	sta wUnknown000DA6,b
+	sta $000DA6,b
 	pha
-	lda aUnknown000DA0+4,b
-	sta aUnknown000DA0+1,b
-	lda aUnknown000DA0+3,b
-	sta aUnknown000DA0,b
+	lda $000DA0+4,b
+	sta $000DA0+1,b
+	lda $000DA0+3,b
+	sta $000DA0,b
 	jsl rlUnknown82AAEB
 	pla
 	plb
@@ -337,11 +337,11 @@ rlUnknown82AAEB ; 82/AAEB
 	phx
 	phy
 
-	lda lUnknown000DB2,b
+	lda $000DB2,b
 	tax
 
 	sep #$20
-	lda lUnknown000DB2+2,b
+	lda $000DB2+2,b
 	pha
 	rep #$20
 	plb
@@ -354,36 +354,36 @@ rlUnknown82AAEB ; 82/AAEB
 
 	lda $0002,b,x
 	and #$00FF
-	sta wUnknown000DAA
+	sta $000DAA
 	sep #$20
 	lda $0000,b,x
-	sta wUnknown000DA8
+	sta $000DA8
 	cmp $0001,b,x
 	bcs _True
 
-	cmp wUnknown000DA6
+	cmp $000DA6
 	bcc +
 
 	phx
 	rep #$20
 	and #$00FF
 	sec
-	sbc wUnknown000DA6
+	sbc $000DA6
 	inc a
 	inc a
 	jsr rlUnknown82AE90
-	sta wUnknown000DAC
+	sta $000DAC
 
-	lda wUnknown000DA8
+	lda $000DA8
 	and #$00FF
 	jsr rlUnknown82AE90
 	clc
-	adc lUnknown000DB2
+	adc $000DB2
 	clc
-	adc wUnknown000DAA
+	adc $000DAA
 	tay
 	clc
-	adc wUnknown000DAA
+	adc $000DAA
 	tax
 	sep #$20
 
@@ -392,9 +392,9 @@ rlUnknown82AAEB ; 82/AAEB
 	sta $0003,b,x
 	dec y
 	dec x
-	lda wUnknown000DAC
+	lda $000DAC
 	dec a
-	sta wUnknown000DAC
+	sta $000DAC
 	bne -
 
 	plx
@@ -402,11 +402,11 @@ rlUnknown82AAEB ; 82/AAEB
 
 	+
 	inc a
-	sta wUnknown000DA6
+	sta $000DA6
 
 	+
 	rep #$20
-	lda wUnknown000DA6
+	lda $000DA6
 	jsr rsUnknown82AEDF
 	lda $0000,b,x
 	inc a
@@ -444,9 +444,9 @@ rlUnknown82AB8E ; 82/AB8E
 	.databank `*
 
 	jsl rlUnknown82AE38
-	sta wUnknown000DA6,b
+	sta $000DA6,b
 	lda #$0001
-	sta wUnknown000DA8,b
+	sta $000DA8,b
 	jsl rlUnknown82ABF3
 	plb
 	rtl
@@ -466,9 +466,9 @@ rlUnknown82ABA4 ; 82/ABA4
 	.databank `*
 
 	jsl rlUnknown82AE38
-	sta wUnknown000DA6,b
+	sta $000DA6,b
 	jsl rlUnknown82ACD8
-	sta wUnknown000DA8,b
+	sta $000DA8,b
 	jsl rlUnknown82ABF3
 	plb
 	rtl
@@ -488,9 +488,9 @@ rlUnknown82ABBB ; 82/ABBB
 	.databank `*
 
 	jsl rlUnknown82AE38
-	sta wUnknown000DA6,b
+	sta $000DA6,b
 	dec a
-	sta wUnknown000DA8,b
+	sta $000DA8,b
 	jsl rlUnknown82ABF3
 	plb
 	rtl
@@ -510,9 +510,9 @@ rlUnknown82ABCF ; 82/ABCF
 	.databank `*
 
 	jsl rlUnknown82AE38
-	sta wUnknown000DA6,b
+	sta $000DA6,b
 	inc a
-	sta wUnknown000DA8,b
+	sta $000DA8,b
 	jsl rlUnknown82ABF3
 	plb
 	rtl
@@ -532,7 +532,7 @@ rlUnknown82ABE3 ; 82/ABE3
 	.databank `*
 
 	jsl rlUnknown82AE38
-	sta wUnknown000DA6,b
+	sta $000DA6,b
 	jsl rlUnknown82ABF3
 	plb
 	rtl
@@ -555,24 +555,24 @@ rlUnknown82ABF3 ; 82/ABF3
 	phx
 	phy
 
-	lda wUnknown000DA6,b
-	ora wUnknown000DA8,b
+	lda $000DA6,b
+	ora $000DA8,b
 	bne +
 
 	jmp _End
 
 	+
-	lda wUnknown000DA6,b
+	lda $000DA6,b
 	beq _True
 
-	lda wUnknown000DA8,b
+	lda $000DA8,b
 	beq _True
 
-	lda lUnknown000DB2
+	lda $000DB2
 	tay
 
 	sep #$20
-	lda lUnknown000DB2+2
+	lda $000DB2+2
 	pha
 	rep #$20
 	plb
@@ -580,19 +580,19 @@ rlUnknown82ABF3 ; 82/ABF3
 	.databank ?
 
 	lda $0000,b,y
-	cmp wUnknown000DA6
+	cmp $000DA6
 	bcc _True
 
-	cmp wUnknown000DA8
+	cmp $000DA8
 	bcc _True
 
 	lda $0002,b,y
 	and #$00FF
-	sta wUnknown000DAA
-	lda wUnknown000DA6
+	sta $000DAA
+	lda $000DA6
 	jsr rsUnknown82B084
-	lda wUnknown000DA6
-	cmp wUnknown000DA8
+	lda $000DA6
+	cmp $000DA8
 	bcc ++
 
 	bra +
@@ -607,21 +607,21 @@ rlUnknown82ABF3 ; 82/ABF3
 
 	+
 	sec
-	sbc wUnknown000DA8
+	sbc $000DA8
 	inc a
 	jsr rlUnknown82AE90
-	sta wUnknown000DAC
-	lda wUnknown000DA6
+	sta $000DAC
+	lda $000DA6
 	and #$00FF
 	dec a
 	jsr rlUnknown82AE90
 	clc
-	adc lUnknown000DB2
+	adc $000DB2
 	clc
-	adc wUnknown000DAA
+	adc $000DAA
 	tay
 	clc
-	adc wUnknown000DAA
+	adc $000DAA
 	tax
 	sep #$20
 
@@ -630,28 +630,28 @@ rlUnknown82ABF3 ; 82/ABF3
 	sta $0003,b,x
 	dec y
 	dec x
-	lda wUnknown000DAC
+	lda $000DAC
 	dec a
-	sta wUnknown000DAC
+	sta $000DAC
 	bne -
 
 	rep #$20
 	bra ++
 
 	+
-	lda wUnknown000DA8
+	lda $000DA8
 	sec
-	sbc wUnknown000DA6
+	sbc $000DA6
 	inc a
 	jsr rlUnknown82AE90
-	sta wUnknown000DAC,b
-	lda wUnknown000DA6
+	sta $000DAC,b
+	lda $000DA6
 	jsr rlUnknown82AE90
 	clc
-	adc lUnknown000DB2
+	adc $000DB2
 	tax
 	clc
-	adc wUnknown000DAA
+	adc $000DAA
 	tay
 	sep #$20
 
@@ -660,15 +660,15 @@ rlUnknown82ABF3 ; 82/ABF3
 	sta $0004,b,x
 	inc y
 	inc x
-	lda wUnknown000DAC
+	lda $000DAC
 	dec a
-	sta wUnknown000DAC
+	sta $000DAC
 	bne -
 
 	rep #$20
 
 	+
-	lda wUnknown000DA8
+	lda $000DA8
 	jsr rsUnknown82B0BB
 
 	_End
@@ -695,11 +695,11 @@ rlUnknown82ACD8 ; 82/ACD8
 	.databank `*
 
 	phy
-	lda lUnknown000DB2
+	lda $000DB2
 	tay
 
 	sep #$20
-	lda lUnknown000DB2+2
+	lda $000DB2+2
 	pha
 	rep #$20
 	plb
@@ -729,11 +729,11 @@ rlUnknown82ACF6 ; 82/ACF6
 	.databank `*
 
 	phy
-	lda lUnknown000DB2
+	lda $000DB2
 	tay
 
 	sep #$20
-	lda lUnknown000DB2+2
+	lda $000DB2+2
 	pha
 	rep #$20
 	plb
@@ -765,11 +765,11 @@ rlUnknown82AD14 ; 82/AD14
 	phy
 	pha
 
-	lda lUnknown000DB2
+	lda $000DB2
 	tay
 
 	sep #$20
-	lda lUnknown000DB2+2
+	lda $000DB2+2
 	pha
 	rep #$20
 	plb
@@ -802,7 +802,7 @@ rlUnknown82AD40 ; 82/AD40
 	.databank ?
 
 	lda #$0001
-	sta wUnknown000DA6
+	sta $000DA6
 	jsl rlUnknown82AD59
 	rtl
 
@@ -814,7 +814,7 @@ rlUnknown82AD4C ; 82/AD4C
 	.databank ?
 
 	jsl rlUnknown82ACD8
-	sta wUnknown000DA6
+	sta $000DA6
 	jsl rlUnknown82AD59
 	rtl
 
@@ -834,11 +834,11 @@ rlUnknown82AD59 ; 82/AD59
 	.databank `*
 
 	phy
-	lda lUnknown000DB2
+	lda $000DB2
 	tay
 
 	sep #$20
-	lda lUnknown000DB2+2
+	lda $000DB2+2
 	pha
 	rep #$20
 	plb
@@ -847,14 +847,14 @@ rlUnknown82AD59 ; 82/AD59
 
 	lda $0000,b,y
 	and #$00FF
-	cmp wUnknown000DA6
+	cmp $000DA6
 	bcc _True
 
 	lda $0002,b,y
 	and #$00FF
-	sta wUnknown000DAA
+	sta $000DAA
 
-	lda wUnknown000DA6
+	lda $000DA6
 	jsr rsUnknown82AF64
 
 	ply
@@ -878,7 +878,7 @@ rlUnknown82AD94 ; 82/AD94
 	.databank ?
 
 	lda #$0001
-	sta wUnknown000DA6
+	sta $000DA6
 	jsl rlUnknown82ADAD
 	rtl
 
@@ -890,7 +890,7 @@ rlUnknown82ADA0 ; 82/ADA0
 	.databank ?
 
 	jsl rlUnknown82ACD8
-	sta wUnknown000DA6
+	sta $000DA6
 	jsl rlUnknown82ADAD
 	rtl
 
@@ -910,11 +910,11 @@ rlUnknown82ADAD ; 82/ADAD
 	.databank `*
 
 	phy
-	lda lUnknown000DB2
+	lda $000DB2
 	tay
 
 	sep #$20
-	lda lUnknown000DB2+2
+	lda $000DB2+2
 	pha
 	rep #$20
 	plb
@@ -923,23 +923,23 @@ rlUnknown82ADAD ; 82/ADAD
 
 	lda $0000,b,y
 	and #$00FF
-	cmp wUnknown000DA6
+	cmp $000DA6
 	bcc _True
 
 	lda $0002,b,y
 	and #$00FF
-	sta wUnknown000DAA
+	sta $000DAA
 
-	lda lUnknown000DB2+1
-	sta aUnknown000DA0+1
+	lda $000DB2+1
+	sta $000DA0+1
 
-	lda wUnknown000DA6
+	lda $000DA6
 	jsr rlUnknown82AE90
 	clc
 	adc #$0004
 	clc
-	adc lUnknown000DB2
-	sta aUnknown000DA0
+	adc $000DB2
+	sta $000DA0
 	ply
 	plp
 	plb
@@ -970,11 +970,11 @@ rlUnknown82ADFD ; 82/ADFD
 
 	phy
 
-	lda lUnknown000DB2
+	lda $000DB2
 	tay
 
 	sep #$20
-	lda lUnknown000DB2+2
+	lda $000DB2+2
 	pha
 	rep #$20
 	plb
@@ -983,13 +983,13 @@ rlUnknown82ADFD ; 82/ADFD
 
 	lda $0000,b,y
 	and #$00FF
-	cmp wUnknown000DA6
+	cmp $000DA6
 	bcc _True
 
 	lda $0002,b,y
 	and #$00FF
-	sta wUnknown000DAA
-	lda wUnknown000DA6
+	sta $000DAA
+	lda $000DA6
 	jsr rsUnknown82AEDF
 	ply
 	plp
@@ -1022,11 +1022,11 @@ rlUnknown82AE38 ; 82/AE38
 	phx
 	phy
 
-	lda lUnknown000DB2
+	lda $000DB2
 	tay
 
 	sep #$20
-	lda lUnknown000DB2+2
+	lda $000DB2+2
 	pha
 	rep #$20
 	plb
@@ -1040,9 +1040,9 @@ rlUnknown82AE38 ; 82/AE38
 	tax
 	lda $0002,b,y
 	and #$00FF
-	sta wUnknown000DAA
+	sta $000DAA
 	lda #$0001
-	sta wUnknown000DAC
+	sta $000DAC
 
 	-
 	jsr rsUnknown82AFE9
@@ -1050,11 +1050,11 @@ rlUnknown82AE38 ; 82/AE38
 
 	tya
 	clc
-	adc wUnknown000DAA
+	adc $000DAA
 	tay
-	lda wUnknown000DAC
+	lda $000DAC
 	inc a
-	sta wUnknown000DAC
+	sta $000DAC
 	dec x
 	bne -
 
@@ -1067,7 +1067,7 @@ rlUnknown82AE38 ; 82/AE38
 	rtl
 
 	+
-	lda wUnknown000DAC
+	lda $000DAC
 	ply
 	plx
 	plp
@@ -1102,37 +1102,37 @@ rlUnknown82AE90 ; 82/AE90
 	cmp #$0002
 	beq _AEAD
 
-	lda wUnknown000DAA,b
+	lda $000DAA,b
 	bra _End
 
 	_AEAD
-	lda wUnknown000DAA,b
+	lda $000DAA,b
 	asl a
 	bra _End
 
 	_AEB3
-	lda wUnknown000DAA,b
+	lda $000DAA,b
 	asl a
 	clc
-	adc wUnknown000DAA,b
+	adc $000DAA,b
 	bra _End
 
 	_AEBD
 	phx
 	xba
-	sta wUnknown000DAE,b
-	lda wUnknown000DAA,b
-	sta wUnknown000DB0,b
+	sta $000DAE,b
+	lda $000DAA,b
+	sta $000DB0,b
 	lda #$0000
 	ldx #$0008
 
 	-
 	asl a
-	asl wUnknown000DAE,b
+	asl $000DAE,b
 	bcc +
 
 	clc
-	adc wUnknown000DB0,b
+	adc $000DB0,b
 
 	+
 	dec x
@@ -1156,9 +1156,9 @@ rsUnknown82AEDF ; 82/AEDF
 	phy
 	jsr rlUnknown82AE90
 	clc
-	adc lUnknown000DB2
+	adc $000DB2
 	tay
-	lda wUnknown000DAA
+	lda $000DAA
 	cmp #$0004
 	bcs _AF23
 
@@ -1169,57 +1169,57 @@ rsUnknown82AEDF ; 82/AEDF
 	beq _AF0A
 
 	sep #$20
-	lda aUnknown000DA0
+	lda $000DA0
 	sta $0004,b,y
 	rep #$20
 	bra _End
 
 	_AF0A
-	lda aUnknown000DA0
+	lda $000DA0
 	sta $0004,b,y
 	bra _End
 
 	_AF13
-	lda aUnknown000DA0
+	lda $000DA0
 	sta $0004,b,y
-	lda aUnknown000DA0+1
+	lda $000DA0+1
 	sta $0005,b,y
 	bra _End
 
 	_AF23
-	lda wUnknown000DAA
+	lda $000DAA
 	pha
-	lda lR37
+	lda lR38
 	pha
-	lda lR37+1
+	lda lR38+1
 	pha
 	phx
-	lda aUnknown000DA0
-	sta lR37
-	lda aUnknown000DA0+1
-	sta lR37+1
+	lda $000DA0
+	sta lR38
+	lda $000DA0+1
+	sta lR38+1
 	sep #$20
 	tyx
 	ldy #$0000
 
 	-
-	lda [lR37],y
+	lda [lR38],y
 	sta $0004,b,x
 	inc y
 	inc x
-	lda wUnknown000DAA
+	lda $000DAA
 	dec a
-	sta wUnknown000DAA
+	sta $000DAA
 	bne -
 
 	rep #$20
 	plx
 	pla
-	sta lR37+1
+	sta lR38+1
 	pla
-	sta lR37
+	sta lR38
 	pla
-	sta wUnknown000DAA
+	sta $000DAA
 
 	_End
 	ply
@@ -1238,9 +1238,9 @@ rsUnknown82AF64 ; 82/AF64
 	phy
 	jsr rlUnknown82AE90
 	clc
-	adc lUnknown000DB2
+	adc $000DB2
 	tay
-	lda wUnknown000DAA
+	lda $000DAA
 	cmp #$0004
 	bcs _AFA9
 
@@ -1252,54 +1252,54 @@ rsUnknown82AF64 ; 82/AF64
 
 	sep #$20
 	lda $0004,b,y
-	sta aUnknown000DA0
+	sta $000DA0
 	rep #$20
 	bra _End
 
 	_AF90
 	lda $0004,b,y
-	sta aUnknown000DA0
+	sta $000DA0
 	bra _End
 
 	_AF99
 	lda $0004,b,y
-	sta aUnknown000DA0
+	sta $000DA0
 	lda $0005,b,y
-	sta aUnknown000DA0+1
+	sta $000DA0+1
 	bra _End
 
 	_AFA9
-	lda wUnknown000DAA
+	lda $000DAA
 	pha
-	lda lR37
+	lda lR38
 	pha
-	lda lR37+1
+	lda lR38+1
 	pha
-	lda aUnknown000DA0
-	sta lR37
-	lda aUnknown000DA0+1
-	sta lR37+1
+	lda $000DA0
+	sta lR38
+	lda $000DA0+1
+	sta lR38+1
 	sep #$20
 	tyx
 	ldy #$0000
 
 	-
 	lda $0004,b,x
-	sta [lR37],y
+	sta [lR38],y
 	inc x
 	inc y
-	lda wUnknown000DAA
+	lda $000DAA
 	dec a
-	sta wUnknown000DAA
+	sta $000DAA
 	bne -
 
 	rep #$20
 	pla
-	sta lR37+1
+	sta lR38+1
 	pla
-	sta lR37
+	sta lR38
 	pla
-	sta wUnknown000DAA
+	sta $000DAA
 
 	_End
 	ply
@@ -1314,7 +1314,7 @@ rsUnknown82AFE9 ; 82/AFE9
 	.autsiz
 	.databank ?
 
-	lda wUnknown000DAA
+	lda $000DAA
 	cmp #$0004
 	bcs _B029
 
@@ -1326,62 +1326,62 @@ rsUnknown82AFE9 ; 82/AFE9
 
 	lda $0004,b,y
 	and #$00FF
-	cmp aUnknown000DA0
+	cmp $000DA0
 	beq _Zero
 
 	bra _One
 
 	_B00A
 	lda $0004,b,y
-	cmp aUnknown000DA0
+	cmp $000DA0
 	beq _Zero
 	bra _One
 
 	_B015
 	lda $0004,b,y
-	cmp aUnknown000DA0
+	cmp $000DA0
 	bne _One
 	lda $0005,b,y
-	cmp aUnknown000DA0+1
+	cmp $000DA0+1
 	beq _Zero
 	bra _One
 
 	_B029
 	phx
 	phy
-	lda wUnknown000DAA
+	lda $000DAA
 	pha
-	lda lR37
+	lda lR38
 	pha
-	lda lR37+1
+	lda lR38+1
 	pha
-	lda aUnknown000DA0
-	sta lR37
-	lda aUnknown000DA0+1
-	sta lR37+1
+	lda $000DA0
+	sta lR38
+	lda $000DA0+1
+	sta lR38+1
 	sep #$20
 	tyx
 	ldy #$0000
 
 	-
 	lda $0004,b,x
-	cmp [lR37],y
+	cmp [lR38],y
 	bne _B06D
 
 	inc x
 	inc y
-	lda wUnknown000DAA
+	lda $000DAA
 	dec a
-	sta wUnknown000DAA
+	sta $000DAA
 	bne -
 
 	rep #$20
 	pla
-	sta lR37+1
+	sta lR38+1
 	pla
-	sta lR37
+	sta lR38
 	pla
-	sta wUnknown000DAA
+	sta $000DAA
 
 	ply
 	plx
@@ -1390,11 +1390,11 @@ rsUnknown82AFE9 ; 82/AFE9
 	_B06D
 	rep #$20
 	pla
-	sta lR37+1
+	sta lR38+1
 	pla
-	sta lR37
+	sta lR38
 	pla
-	sta wUnknown000DAA
+	sta $000DAA
 	ply
 	plx
 
@@ -1415,7 +1415,7 @@ rsUnknown82B084 ; 82/B084
 
 	phy
 	pha
-	lda lUnknown000DB2
+	lda $000DB2
 	tay
 	lda $0002,b,y
 	and #$00FF
@@ -1427,12 +1427,12 @@ rsUnknown82B084 ; 82/B084
 	inc a
 	jsr rlUnknown82AE90
 	clc
-	adc lUnknown000DB2
-	sta aUnknown000DA0
+	adc $000DB2
+	sta $000DA0
 
 	sep #$20
-	lda lUnknown000DB2+1
-	sta aUnknown000DA0+1
+	lda $000DB2+1
+	sta $000DA0+1
 	rep #$20
 
 	+
@@ -1450,7 +1450,7 @@ rsUnknown82B0BB ; 82/B0BB
 
 	phy
 	pha
-	lda lUnknown000DB2
+	lda $000DB2
 	tay
 	lda $0002,b,y
 	and #$00FF
@@ -1462,11 +1462,11 @@ rsUnknown82B0BB ; 82/B0BB
 	inc a
 	jsr rlUnknown82AE90
 	clc
-	adc lUnknown000DB2
-	sta aUnknown000DA0
+	adc $000DB2
+	sta $000DA0
 	sep #$20
-	lda lUnknown000DB2+1
-	sta aUnknown000DA0+1
+	lda $000DB2+1
+	sta $000DA0+1
 	rep #$20
 
 	+
@@ -1545,11 +1545,11 @@ rlUnknown82B123 ; 82/B123
 	phy
 	lda wR1
 	pha
-	lda lUnknown000DB5
+	lda $000DB5
 	tay
 
 	sep #$20
-	lda lUnknown000DB5+2
+	lda $000DB5+2
 	pha
 	rep #$20
 	plb
@@ -1574,7 +1574,7 @@ rlUnknown82B123 ; 82/B123
 	sta $0000,b,y
 	txa
 	clc
-	adc lUnknown000DB5
+	adc $000DB5
 	tax
 	dec x
 	ldy wR1
@@ -1608,11 +1608,11 @@ rlUnknown82B123 ; 82/B123
 	rep #$20
 
 	+
-	lda lUnknown000DB5
+	lda $000DB5
 	tay
-	lda lUnknown000DB5+1
+	lda $000DB5+1
 	sta lR18+1
-	lda lUnknown000DB5
+	lda $000DB5
 	clc
 	adc $0000,b,y
 	clc
@@ -1656,11 +1656,11 @@ rlUnknown82B1AE ; 82/B1AE
 	phy
 	lda wR1
 	pha
-	lda lUnknown000DB5
+	lda $000DB5
 	tay
 
 	sep #$20
-	lda lUnknown000DB5+2
+	lda $000DB5+2
 	pha
 	rep #$20
 	plb
@@ -1683,7 +1683,7 @@ rlUnknown82B1AE ; 82/B1AE
 
 	sta $0000,b,y
 	clc
-	adc lUnknown000DB5
+	adc $000DB5
 	tax
 	dec x
 	ldy wR1
@@ -1738,9 +1738,9 @@ rlUnknown82B210 ; 82/B210
 
 	.databank `*
 
-	lda lUnknown000DB5+1,b
+	lda $000DB5+1,b
 	sta lR18+1
-	lda lUnknown000DB5,b
+	lda $000DB5,b
 	sta lR18
 	plp
 	plb
@@ -1762,9 +1762,9 @@ rlUnknown82B221 ; 82/B221
 	.databank `*
 
 	lda lR18+1
-	sta lUnknown000DB5+1,b
+	sta $000DB5+1,b
 	lda lR18
-	sta lUnknown000DB5,b
+	sta $000DB5,b
 	plp
 	plb
 	rtl
@@ -1784,15 +1784,15 @@ rlUnknown82B232 ; 82/B232
 
 	.databank `*
 
-	lda lUnknown000DB5+1,b
-	sta lUnknown000DB8+1,b
-	lda lUnknown000DB5,b
-	sta lUnknown000DB8,b
+	lda $000DB5+1,b
+	sta $000DB8+1,b
+	lda $000DB5,b
+	sta $000DB8,b
 
 	lda lR18+1
-	sta lUnknown000DB5+1,b
+	sta $000DB5+1,b
 	lda lR18
-	sta lUnknown000DB5,b
+	sta $000DB5,b
 	plp
 	plb
 	rtl
@@ -1812,14 +1812,14 @@ rlUnknown82B24F ; 82/B24F
 
 	.databank `*
 
-	lda lUnknown000DB8,b
-	ora lUnknown000DB8+1,b
+	lda $000DB8,b
+	ora $000DB8+1,b
 	beq +
 
-	lda lUnknown000DB8+1,b
-	sta lUnknown000DB5+1,b
-	lda lUnknown000DB8,b
-	sta lUnknown000DB5,b
+	lda $000DB8+1,b
+	sta $000DB5+1,b
+	lda $000DB8,b
+	sta $000DB5,b
 
 	+
 	plp
@@ -1860,7 +1860,7 @@ rlUnknown82B26A ; 82/B26A
 	.databank ?
 
 	sep #$20
-	lda wUnknown000DA6
+	lda $000DA6
 	beq +
 
 	lda #$80
@@ -1869,7 +1869,7 @@ rlUnknown82B26A ; 82/B26A
 	sta $0000,b,y
 	bne +
 
-	lda wUnknown000DC1
+	lda $000DC1
 	bra ++
 
 	+
@@ -1880,7 +1880,7 @@ rlUnknown82B26A ; 82/B26A
 	rep #$20
 	lda @l wR0
 	clc
-	adc lUnknown000DBB
+	adc $000DBB
 	sta $0001,b,y
 	lda @l wR0
 	sec
@@ -1948,8 +1948,8 @@ rlUnknown82B2E8 ; 82/B2E8
 	pha
 	tya
 	sta @l wR0
-	lda lUnknown000DBB
-	ora lUnknown000DBB+1
+	lda $000DBB
+	ora $000DBB+1
 	bne +
 
 	jmp _B39A
@@ -1959,11 +1959,11 @@ rlUnknown82B2E8 ; 82/B2E8
 	clc
 	adc #$0006
 	sta @l wR0
-	lda lUnknown000DBB
+	lda $000DBB
 	tay
 
 	sep #$20
-	lda lUnknown000DBB+2
+	lda $000DBB+2
 	pha
 	rep #$20
 	plb
@@ -2012,7 +2012,7 @@ rlUnknown82B2E8 ; 82/B2E8
 
 	.databank `*
 
-	lda lUnknown000DBB+1
+	lda $000DBB+1
 	sta @l lR25+1
 	lda @l wR1
 	sta @l lR25
@@ -2108,19 +2108,19 @@ rlUnknown82B3D9 ; 82/B3D9
 
 	tya
 	sta @l wR0
-	lda lUnknown000DBB
-	ora lUnknown000DBB+1
+	lda $000DBB
+	ora $000DBB+1
 	beq _End
 
 	lda @l wR0
 	clc
 	adc #$0006
 	sta @l wR0
-	lda lUnknown000DBB
+	lda $000DBB
 	tay
 
 	sep #$20
-	lda lUnknown000DBB+2
+	lda $000DBB+2
 	pha
 	rep #$20
 	plb
@@ -2157,7 +2157,7 @@ rlUnknown82B3D9 ; 82/B3D9
 
 	.databank `*
 
-	lda lUnknown000DBB+1
+	lda $000DBB+1
 	sta @l lR25+1
 	tya
 	clc
@@ -2192,7 +2192,7 @@ rlUnknown82B36D ; 82/B36D
 	.databank `*
 
 	sep #$20
-	lda lUnknown000DBB+2
+	lda $000DBB+2
 	pha
 	rep #$20
 	plb
@@ -2341,11 +2341,11 @@ rlUnknown82B4F6 ; 82/B4F6
 	lda @l wR4
 	pha
 
-	lda lUnknown000DBB
+	lda $000DBB
 	tay
 
 	sep #$20
-	lda lUnknown000DBB+2
+	lda $000DBB+2
 	pha
 	rep #$20
 	plb
@@ -2435,9 +2435,9 @@ rlUnknown82B5AB ; 82/B5AB
 
 	.databank `*
 
-	lda lUnknown000DBB+1
+	lda $000DBB+1
 	sta @l lR18+1
-	lda lUnknown000DBB
+	lda $000DBB
 	sta @l lR18
 	plp
 	plb
@@ -2459,9 +2459,9 @@ rlUnknown82B5C2 ; 82/B5C2
 	.databank `*
 
 	lda @l lR18+1
-	sta lUnknown000DBB+1
+	sta $000DBB+1
 	lda @l lR18
-	sta lUnknown000DBB
+	sta $000DBB
 	plp
 	plb
 	rtl
@@ -2481,14 +2481,14 @@ rlUnknown82B5D9 ; 82/B5D9
 
 	.databank `*
 
-	lda lUnknown000DBB+1
-	sta lUnknown000DBE+1
-	lda lUnknown000DBB
-	sta lUnknown000DBE
+	lda $000DBB+1
+	sta $000DBE+1
+	lda $000DBB
+	sta $000DBE
 	lda @l lR18+1
-	sta lUnknown000DBB+1
+	sta $000DBB+1
 	lda @l lR18
-	sta lUnknown000DBB
+	sta $000DBB
 	plp
 	plb
 	rtl
@@ -2508,14 +2508,14 @@ rlUnknown82B600 ; 82/B600
 
 	.databank `*
 
-	lda lUnknown000DBE
-	ora lUnknown000DBE+1
+	lda $000DBE
+	ora $000DBE+1
 	beq +
 
-	lda lUnknown000DBE+1
-	sta lUnknown000DBB+1
-	lda lUnknown000DBE
-	sta lUnknown000DBB
+	lda $000DBE+1
+	sta $000DBB+1
+	lda $000DBE
+	sta $000DBB
 
 	+
 	plp
@@ -2538,11 +2538,11 @@ rlUnknown82B621 ; 82/B621
 	.databank `*
 
 	phy
-	lda lUnknown000DBB
+	lda $000DBB
 	tay
 
 	sep #$20
-	lda lUnknown000DBB+2
+	lda $000DBB+2
 	pha
 	rep #$20
 	plb
@@ -2589,9 +2589,9 @@ rsUnknown82B65D ; 82/B65D
 	lda #$40
 	sta $0000,b,y
 	rep #$20
-	lda lUnknown000DBB+1
+	lda $000DBB+1
 	sta $0004,b,y
-	lda lUnknown000DBB
+	lda $000DBB
 	sta $0003,b,y
 	rts
 
@@ -2606,7 +2606,7 @@ rsUnknown82B675 ; 82/B675
 	lda #$00
 	sta $0000,b,y
 	rep #$20
-	lda lUnknown000DBB+1
+	lda $000DBB+1
 	sta $0004,b,y
 	lda @l wR1
 	sta $0003,b,y
@@ -2735,24 +2735,24 @@ rsUnknown82B6EB ; 82/B6EB
 	sec
 	sbc #$0006
 	sta @l wR2
-	lda lUnknown000DBB
-	ora lUnknown000DBB+1
+	lda $000DBB
+	ora $000DBB+1
 	beq +
 
 	sep #$20
-	lda lUnknown000DBB+2
+	lda $000DBB+2
 	cmp @l lR25+2
 	bne +
 
 	rep #$20
 	lda @l wR2
-	cmp lUnknown000DBB
+	cmp $000DBB
 	bcc +
 
-	lda lUnknown000DBB
+	lda $000DBB
 	tay
 	sep #$20
-	lda lUnknown000DBB+2
+	lda $000DBB+2
 	pha
 	rep #$20
 	plb 
@@ -2764,7 +2764,7 @@ rsUnknown82B6EB ; 82/B6EB
 	lda @l wR2
 	tay
 	jsr rsUnknown82B64A
-	lda lUnknown000DBB
+	lda $000DBB
 	tay
 	sep #$20
 	lda $0000,b,y
@@ -2793,7 +2793,7 @@ rsUnknown82B762 ; 82/B762
 	phy
 	lda @l wR2
 	pha
-	lda lUnknown000DBB
+	lda $000DBB
 	tay
 	lda $0001,b,y
 	sta @l wR2
@@ -2954,7 +2954,7 @@ rsUnknown82B835 ; 82/B835
 
 	+
 	tyx
-	lda lUnknown000DBB
+	lda $000DBB
 	tay
 	jsr rsUnknown82B7C4
 	sta $0000,b,x
@@ -2993,7 +2993,7 @@ rsUnknown82B885 ; 82/B885
 	lda #$00
 	sta $0003,b,x
 	rep #$20
-	lda lUnknown000DBB+1
+	lda $000DBB+1
 	sta $0001,b,x
 	tya
 	clc

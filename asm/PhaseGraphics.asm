@@ -18,14 +18,14 @@ rlGetPhaseChangeGraphics ; 81/B563
 	stz wUnknown000302,b
 	jsl $8593EB
 	sep #$20
-	lda #TM_Setting(False, False, False, False, True)
-	sta bBuf_TM
-	lda #TS_Setting(False, True, True, False, False)
-	sta bBuf_TS
+	lda #T_Setting(False, False, False, False, True)
+	sta bBufferTM
+	lda #T_Setting(False, True, True, False, False)
+	sta bBufferTS
 	lda #CGADSUB_Setting(CGADSUB_Add, False, False, False, False, False, True, True)
-	sta bBuf_CGADSUB
+	sta bBufferCGADSUB
 	lda #CGWSEL_Setting(False, True, CGWSEL_MathAlways, CGWSEL_BlackNever)
-	sta bBuf_CGWSEL
+	sta bBufferCGWSEL
 	rep #$30
 	lda #<>$F2E780
 	sta lR18
@@ -73,29 +73,29 @@ rlUnknown81B5D9 ; 81/B5D9
 	sta lR18+1
 	lda #<>$9E81E0
 	sta lR18
-	lda #(`aOAMPal7)<<8
+	lda #(`aOAMPaletteBuffer.aPalette7)<<8
 	sta lR19+1
-	lda #<>aOAMPal7
+	lda #<>aOAMPaletteBuffer.aPalette7
 	sta lR19
-	lda #size(aOAMPal7)
-	sta wR20
+	lda #size(aOAMPaletteBuffer.aPalette7)
+	sta lR20
 	jsl rlBlockCopy
 
 	lda #(`$9E81E0)<<8
 	sta lR18+1
 	lda #<>$9E81E0
 	sta lR18
-	lda #(`aBGPal1)<<8
+	lda #(`aBGPaletteBuffer.aPalette1)<<8
 	sta lR19+1
-	lda #<>aBGPal1
+	lda #<>aBGPaletteBuffer.aPalette1
 	sta lR19
-	lda #size(aBGPal1)
-	sta wR20
+	lda #size(aBGPaletteBuffer.aPalette1)
+	sta lR20
 	jsl rlBlockCopy
 
 	lda #$0010
 	sta wR0
-	lda #<>aOAMPal7
+	lda #<>aOAMPaletteBuffer.aPalette7
 	sta wR1
 	lda #$B8FD
 	sta wR2
@@ -120,34 +120,34 @@ rlUnknown81B5D9 ; 81/B5D9
 	lda #$0003
 	sta wR1
 	lda #$CA8A
-	sta wR19
+	sta lR19
 	lda #$2400
-	sta wUnknown000DE7,b
+	sta aCurrentTilemapInfo.wBaseTile,b
 	jsl $84A3FF
 	jsl rlEnableBG1Sync
 	jsl $87B171
 
 	phx
 	lda #(`procUnknown81BDA3)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown81BDA3
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 
 	phx
 	lda #(`procUnknown81BE18)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown81BE18
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 
 	phx
 	lda #(`procPhaseGraphicSprites)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procPhaseGraphicSprites
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	plx
 

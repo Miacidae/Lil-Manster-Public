@@ -1,4 +1,4 @@
-ch17Bamaldacharge
+dialogueChapter17BAmaldaCharge
 
 .byte Right_slot
 .word LoadPortrait
@@ -13,7 +13,7 @@ ch17Bamaldacharge
 .byte EndText
 
 
-ch17Bopengate1
+dialogueChapter17BOpenGate1
 
 .byte Right_slot
 .word LoadPortrait
@@ -54,7 +54,7 @@ ch17Bopengate1
 .byte EndText
 
 
-ch17Bopengate2
+dialogueChapter17BOpenGate2
 
 .word $2E00
 .long $8CBBBC
@@ -72,7 +72,7 @@ ch17Bopengate2
 .byte EndText
 
 
-ch17Bopengatenomoney
+dialogueChapter17BOpenGateNoMoney
 
 .byte Right_slot
 .word LoadPortrait
@@ -85,7 +85,7 @@ ch17Bopengatenomoney
 .byte EndText
 
 
-ch17Bhouseother
+dialogueChapter17BHouseOther
 
 .byte Right_slot
 .word LoadPortrait
@@ -98,7 +98,7 @@ ch17Bhouseother
 .byte EndText
 
 
-ch17Belder1
+dialogueChapter17BElder1
 
 .byte Right_slot
 .word LoadPortrait
@@ -330,7 +330,7 @@ ch17Belder1
 .byte EndText
 
 
-ch17Belder2
+dialogueChapter17BElder2
 
 .word $2E00
 .long $8CBBBC
@@ -354,7 +354,7 @@ ch17Belder2
 .byte EndText
 
 
-ch17Bopengate3
+dialogueChapter17BOpenGate3
 
 .byte Right_slot
 .word LoadPortrait
@@ -369,7 +369,7 @@ ch17Bopengate3
 .byte EndText
 
 
-ch17Bopening1
+dialogueChapter17BOpening1
 
 .byte Right_slot
 .word LoadPortrait
@@ -459,7 +459,7 @@ ch17Bopening1
 .byte EndText
 
 
-ch17Bopening2
+dialogueChapter17BOpening2
 
 .byte Right_slot
 .word LoadPortrait
@@ -546,7 +546,7 @@ ch17Bopening2
 .byte EndText
 
 
-ch17Bclosing1
+dialogueChapter17BClosing1
 
 .byte Right_slot
 .word LoadPortrait
@@ -773,7 +773,7 @@ ch17Bclosing1
 .byte EndText
 
 
-ch17Bclosing2
+dialogueChapter17BClosing2
 
 .byte Left_slot
 .byte ScrollText
@@ -836,7 +836,7 @@ ch17Bclosing2
 .byte EndText
 
 
-ch17Bwm1
+dialogueChapter17BWorldMap
 
 .text "Leaving the forest behind them,"
 .byte WaitForA

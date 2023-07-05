@@ -1,4 +1,4 @@
-leifdeathnanna
+dialogueLeifDeathNannaReaction
 .byte Right_slot
 .word LoadPortrait
 .word nanna_portrait
@@ -10,7 +10,7 @@ leifdeathnanna
 .byte WaitForA
 .byte EndText
 
-leifdeathfinn
+dialogueLeifDeathFinnReaction
 .byte Right_slot
 .word LoadPortrait
 .word finn_portrait
@@ -20,7 +20,7 @@ leifdeathfinn
 .byte WaitForA
 .byte EndText
 
-leifdeatheyvel
+dialogueLeifDeathEyvelReaction
 .byte Right_slot
 .word LoadPortrait
 .word eyvel_portrait
@@ -32,7 +32,7 @@ leifdeatheyvel
 .byte WaitForA
 .byte EndText
 
-leifdeathdorias
+dialogueLeifDeathDoriasReaction
 .byte Right_slot
 .word LoadPortrait
 .word dorias_portrait
@@ -42,7 +42,7 @@ leifdeathdorias
 .byte WaitForA
 .byte EndText
 
-leifdeathaugustus
+dialogueLeifDeathAugustReaction
 .byte Right_slot
 .word LoadPortrait
 .word augustus_portrait

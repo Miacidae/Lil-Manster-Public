@@ -9,7 +9,7 @@ rlUnknown81C2F4 ; 81/C2F4
 
 	pha
 	lda #$0002
-	cmp aOptions.wVolumeOption
+	cmp aOptions.wVolume
 	beq +
 
 	pla
@@ -30,7 +30,7 @@ rlUnknown81C306 ; 81/C306
 
 	pha
 	lda #$0002
-	cmp aOptions.wVolumeOption
+	cmp aOptions.wVolume
 	beq +
 
 	pla

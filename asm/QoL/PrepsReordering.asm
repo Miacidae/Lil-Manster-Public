@@ -11,11 +11,11 @@ rlPreps83B854
 	plb
 	rep #$30
 	lda #(`$83C0F6)<<8
-	sta lUnknown000DDE+1
+	sta aCurrentTilemapInfo.lInfoPointer+1
 	lda #<>$83C0F6
-	sta lUnknown000DDE
+	sta aCurrentTilemapInfo.lInfoPointer
 	lda #$2180
-	sta wUnknown000DE7
+	sta aCurrentTilemapInfo.wBaseTile
 	jsl rlUnknown83B69F ; background stuff
 
 	lda #$8300
@@ -48,7 +48,7 @@ rlPreps83B854
 	bne _Loop
 
 	lda #$2A70
-	sta wUnknown000DE7
+	sta aCurrentTilemapInfo.wBaseTile
 	tdc 
 	tax 
 	bra _B8D5
@@ -311,13 +311,13 @@ rsPreps83BA48 ; pressed Y code
 	.autsiz
 	.databank ?
 
-	lda wUnknown000E6D,b
+	lda wForcedMapScrollFlag,b
 	bne _Out1
 
 	jsr rsPreps83BB1D
 
 	lda wJoy1New
-	bit #JoypadR
+	bit #JOY_R
 	beq +
 
 	; pressed R
@@ -331,7 +331,7 @@ rsPreps83BA48 ; pressed Y code
 	bcc +
 
 	lda wJoy1New
-	bit #JoypadY | JoypadA
+	bit #JOY_Y | JOY_A
 	beq ++
 
 	jsr $83B9DB
@@ -486,8 +486,8 @@ rlPreps83BB39 ; push deployed characters to the start of the deployment slots
 	ldy aPrepDeploymentSlots,X 
 	beq +
 
-	lda structCharacterDataRAM.TurnStatus,b,Y 
-	bit #TurnStatusMoved
+	lda structCharacterDataRAM.UnitState,b,Y 
+	bit #UnitStateMoved
 	bne -
 
 	+ ; unselected unit ? 
@@ -512,8 +512,8 @@ rlPreps83BB39 ; push deployed characters to the start of the deployment slots
 	ldy aPrepDeploymentSlots,X 
 	beq _BB92
 
-	lda structCharacterDataRAM.TurnStatus,b,Y 
-	and #TurnStatusMoved
+	lda structCharacterDataRAM.UnitState,b,Y 
+	and #UnitStateMoved
 	beq +
 
 	lda wR17 	; deployment index
@@ -637,7 +637,7 @@ rsPrepsMapRearrangeAllowedCheck
 	bcs _NotAllowed
 
 	tax
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	bit #$2000
 	beq +
 
@@ -655,7 +655,7 @@ rsPrepsMapRearrangeAllowedCheck
 
 rlPrepsAutomaticRearrageAllowedCheck
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	bit #$2000
 	beq _NotAllowed
 
@@ -963,9 +963,9 @@ rlPrepsCheckIfUnitIsDeployable ; 85F483
 
 	+
 	rep #$20
-	lda structCharacterDataRAM.TurnStatus,b,X 
-	and #$9FFF ; unset TurnStatusUnknown3 and TurnStatusUnknown4
-	sta structCharacterDataRAM.TurnStatus,b,X
+	lda structCharacterDataRAM.UnitState,b,X 
+	and #$9FFF ; unset UnitStateUnknown3 and UnitStateUnknown4
+	sta structCharacterDataRAM.UnitState,b,X
 
 	+
 	rtl 
@@ -987,19 +987,19 @@ rsPrepsUpdateStatusIfStaminaDrink ; 85F4A6
 	plx
 	lda wR17
 	cmp #1
-	lda structCharacterDataRAM.TurnStatus,b,X 
+	lda structCharacterDataRAM.UnitState,b,X 
 	bcc +
 
-	ora #TurnStatusUnknown4
+	ora #UnitStateUnknown4
 	and #$DFFF
 	bra ++
 
 	+
-	ora #TurnStatusUnknown3
+	ora #UnitStateUnknown3
 	and #$BFFF
 
 	+
-	sta structCharacterDataRAM.TurnStatus,b,X
+	sta structCharacterDataRAM.UnitState,b,X
 	pla 
 	sta lR25+1
 	pla 
@@ -1019,10 +1019,10 @@ rsPrepsCheckIfItemIsStaminaDrink ;	85F4E3
 rsPreps85F4EE
 
 	ldx aPrepDeploymentSlots	
-	lda structCharacterDataRAM.TurnStatus,b,X
+	lda structCharacterDataRAM.UnitState,b,X
 	and #$DFFF
-	ora #TurnStatusMoved
-	sta structCharacterDataRAM.TurnStatus,b,X
+	ora #UnitStateMoved
+	sta structCharacterDataRAM.UnitState,b,X
 	lda #<>rsPreps85F50C
 	sta lR25
 	lda #>`rsPreps85F50C
@@ -1032,15 +1032,15 @@ rsPreps85F4EE
 
 rsPreps85F50C
 
-	lda structCharacterDataRAM.TurnStatus,b,X
-	bit #TurnStatusMoved
+	lda structCharacterDataRAM.UnitState,b,X
+	bit #UnitStateMoved
 	beq +
 
-	bit #TurnStatusUnknown3
+	bit #UnitStateUnknown3
 	beq +
 	
 	and #$FDFF
-	sta structCharacterDataRAM.TurnStatus,b,X
+	sta structCharacterDataRAM.UnitState,b,X
 	
 	+
 	rtl 
@@ -1090,7 +1090,7 @@ rlPreps85F558 ; assign units the starting position coords based on deployment sl
 
 	_AssignStartingCoords
 	and #$F3BA
-	sta structCharacterDataRAM.TurnStatus,b,X
+	sta structCharacterDataRAM.UnitState,b,X
 	ldy wR17
 	lda [lR18],Y
 	iny
@@ -1099,8 +1099,8 @@ rlPreps85F558 ; assign units the starting position coords based on deployment sl
 	bra +
 
 	_HideUnit ; hide undeployed units and give them generic coords 
-	ora #TurnStatusHidden
-	sta structCharacterDataRAM.TurnStatus,b,X
+	ora #UnitStateHidden
+	sta structCharacterDataRAM.UnitState,b,X
 	lda #$0101
 
 	+
@@ -1114,10 +1114,10 @@ rsPreps85F57D
 	.databank `wPrepSelectedDeployableUnits
 
 	ldy wR1
-	lda structCharacterDataRAM.TurnStatus,b,Y
+	lda structCharacterDataRAM.UnitState,b,Y
 	and #$FDFF
-	ora #TurnStatusHidden
-	sta structCharacterDataRAM.TurnStatus,b,Y
+	ora #UnitStateHidden
+	sta structCharacterDataRAM.UnitState,b,Y
 	lda #$0101
 	sta structCharacterDataRAM.Coordinates,b,Y
 	dec wPrepSelectedDeployableUnits
@@ -1125,19 +1125,19 @@ rsPreps85F57D
 
 HideOrDisplayUnitsOnPerpsMapCheck
 
-	lda aOptions.wTerrainWindowOption
+	lda aOptions.wTerrainWindow
 	and #$F000
 	beq _Hide 
 
-	lda structCharacterDataRAM.TurnStatus,b,X
-	bit #TurnStatusMoved
+	lda structCharacterDataRAM.UnitState,b,X
+	bit #UnitStateMoved
 	beq _Hide
 
 	jmp rlPreps85F558._AssignStartingCoords
 
 
 	_Hide
-	lda structCharacterDataRAM.TurnStatus,b,X
+	lda structCharacterDataRAM.UnitState,b,X
 	jmp rlPreps85F558._HideUnit
 
 
@@ -1149,8 +1149,8 @@ HideOrDisplayUnitsOnPerpsMapCheck
 .logical $85F996
 
 
-	lda wJoy1Alt
-	bit #JoypadUp | JoypadDown | JoypadLeft | JoypadRight
+	lda wJoy1Repeated
+	bit #JOY_Up | JOY_Down | JOY_Left | JOY_Right
 	beq _F9D2
 
 	xba
@@ -1189,31 +1189,31 @@ HideOrDisplayUnitsOnPerpsMapCheck
 _F9D2
 
 	lda wJoy1New
-	bit #JoypadA
+	bit #JOY_A
 	beq +
 	
 	jmp $85FD31
 
 	+
-	bit #JoypadB | JoypadSelect
+	bit #JOY_B | JOY_Select
 	beq +
 
 	jmp _PrepsBOrSelectPress
 
 	+
-	bit #JoypadX
+	bit #JOY_X
 	beq +
 
 	jmp _PrepsXPress
 
 	+
-	bit #JoypadStart
+	bit #JOY_Start
 	beq +
 
 	jmp $85FDA7
 
 	+
-	bit #JoypadR
+	bit #JOY_R
 	beq +
 
 	jmp $85FF39
@@ -1225,14 +1225,14 @@ _PrepsBOrSelectPress ; 	85F9FD
 
 	jsr rsPreps85FA46
 	lda #$A1E0
-	sta wProcInput0,b
+	sta aProcSystem.wInput0,b
 	lda #(`procUnknown82A1BB)<<8
-	sta lR43+1
+	sta lR44+1
 	lda #<>procUnknown82A1BB
-	sta lR43
+	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	stz bBuf_INIDISP
+	stz bBufferINIDISP
 	rep #$20
 	jsl $81FCE0
 	rts
@@ -1302,14 +1302,14 @@ rsPreps85FA53
 
 	jsr rsPreps85FA53
 	ldy wR1
-	lda structCharacterDataRAM.TurnStatus,b,Y
-	ora #TurnStatusMoved
+	lda structCharacterDataRAM.UnitState,b,Y
+	ora #UnitStateMoved
 	bcc +
 
 	and #$F3BA
 
 	+
-	sta structCharacterDataRAM.TurnStatus,b,Y
+	sta structCharacterDataRAM.UnitState,b,Y
 	inc wPrepSelectedDeployableUnits
 
 	+

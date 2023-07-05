@@ -57,7 +57,7 @@ GUARD_ZQOL_MOVEMENT_SPEEDUP :?= false
         ; Check if player is holding A
 
         lda wJoy1Input
-        bit #JoypadA
+        bit #JOY_A
         bne _SpeedupMax
 
       +
@@ -84,7 +84,7 @@ GUARD_ZQOL_MOVEMENT_SPEEDUP :?= false
         bit #$0001
         bne _SpeedupHalf
 
-        lda aOptions.wTerrainWindowOption ; unit speed 
+        lda aOptions.wTerrainWindow ; unit speed 
         and #$00F0
         bne _SpeedupHalf
 
