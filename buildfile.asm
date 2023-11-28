@@ -34,6 +34,7 @@ DSizeEnds		     := []
 .include "graphics/_GraphicsInstaller.asm"
 .include "graphics/portraits/_PortraitInstaller.asm"
 .include "graphics/battle_animations/_BattlePaletteInstaller.asm"
+.include "graphics/battle_animations/_UnitsInstaller.asm"
 .include "graphics/battle_animations/_WeaponsInstaller.asm"
 .include "graphics/battle_animations/_ShieldsInstaller.asm"
 
@@ -686,14 +687,24 @@ DSizeEnds		     := []
 
   .here
 
-  * = $05590C
-  .logical $8AD90C
+  * = $0554A5
+  .logical $8AD4A5
 
     startData
 
-      aBattleAnimationPaletteTable      .include "tables/BATTLE/BattleAnimationPaletteTable.casm"
-      aBattleAnimationPaletteData       .include "tables/BATTLE/BattleAnimationPaletteData.casm"
-      aBattleAnimationCharacterPalettes .include "tables/BATTLE/BattleAnimationCharacterPalettes.casm"
+      aBattleAnimationDynamicSpriteTable	.include "tables/BATTLE/BattleAnimationDynamicSpriteTable.casm"
+	  aBattleAnimationDynamicSpriteData		.include "tables/BATTLE/BattleAnimationDynamicSpriteData.casm"
+	  .byte 0
+	  aBattleAnimationStaticSpriteTable    	.include "tables/BATTLE/BattleAnimationStaticSpriteTable.casm"
+	  aBattleAnimationStaticSpriteData    	.include "tables/BATTLE/BattleAnimationStaticSpriteData.casm"
+	  .byte 0
+	  aBattleAnimationPaletteTable      	.include "tables/BATTLE/BattleAnimationPaletteTable.casm"
+      aBattleAnimationPaletteData       	.include "tables/BATTLE/BattleAnimationPaletteData.casm"
+      aBattleAnimationCharacterPalettes 	.include "tables/BATTLE/BattleAnimationCharacterPalettes.casm"
+	  .sint -1
+	  .byte 3
+	  aBattleAnimationScriptTable      		.include "tables/BATTLE/BattleAnimationScriptTable.casm"
+      aBattleAnimationScriptData       		.include "tables/BATTLE/BattleAnimationScriptData.casm"
 
     endData
 

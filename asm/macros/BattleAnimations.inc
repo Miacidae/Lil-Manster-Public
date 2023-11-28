@@ -43,6 +43,42 @@ structAnimationWeaponType .struct BA_WeaponType, BA_WeaponAnimationType
 	.byte (\BA_WeaponType << 4) | (\BA_WeaponAnimationType)
 	.ends
 
+structBattleAnimationDynamicSpriteTable .struct BA_DynamicSprite_Index
+
+	.byte \BA_DynamicSprite_Index
+	.ends
+	
+
+structBattleAnimationDynamicSpriteData .struct Offset, Unknown
+
+	.long \Offset
+	.word \Unknown
+	.ends
+
+structBattleAnimationStaticSpriteTable .struct BA_StaticSprite_Index
+
+	.byte \BA_StaticSprite_Index
+	.ends
+	
+
+structBattleAnimationStaticSpriteData .struct Size, Offset, Unknown
+
+	.word \Size
+	.long \Offset
+	.word \Unknown
+	.ends
+	
+structBattleAnimationScriptTable .struct BA_AnimationScript_Index
+
+	.byte \BA_AnimationScript_Index
+	.ends
+	
+structBattleAnimationScriptData .struct ScriptOffset, SubsheetOffset
+
+	.long \ScriptOffset
+	.long \SubsheetOffset
+	.ends
+
 structBattleAnimationPaletteTable .struct BA_Palette_Index
 
 	.byte \BA_Palette_Index
