@@ -528,7 +528,7 @@ GUARD_FE5_CHAPTER14x :?= false
 				_OpeningEvent ; FD/A6EC
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -547,7 +547,7 @@ GUARD_FE5_CHAPTER14x :?= false
 					DIALOGUE dialogueChapter14xOpening1
 					YIELD
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -563,13 +563,13 @@ GUARD_FE5_CHAPTER14x :?= false
 				END2
 			
 				_EndingEvent ; FD/A749
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -597,7 +597,7 @@ GUARD_FE5_CHAPTER14x :?= false
 			
 							STORE_WORD wCurrentMapMusic, $0000
 			
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			

@@ -237,7 +237,7 @@ GUARD_FE5_CHAPTER15 :?= false
 					SCROLL_CAMERA_COORDS [18, 14], 4
 					YIELD
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -270,7 +270,7 @@ GUARD_FE5_CHAPTER15 :?= false
 				END2
 			
 				_LeifRalphTalk ; FD/AC23
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -286,7 +286,7 @@ GUARD_FE5_CHAPTER15 :?= false
 				END2
 			
 				_AmaldaFlee ; FD/AC57
-					PLAY_SOUND_WORD $00F7
+					PLAY_SOUND_FORCED $00F7
 					GET_CHARACTER_COORDS Amalda
 					SCROLL_CAMERA 4
 					YIELD
@@ -300,7 +300,7 @@ GUARD_FE5_CHAPTER15 :?= false
 				END2
 			
 				_MareetaShannamTalk ; FD/ACDD
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -314,7 +314,7 @@ GUARD_FE5_CHAPTER15 :?= false
 				_MareetaSkillGain ; FD/ACED
 					macroASMCUnsetUnitState Mareeta, UnitStateGrayed
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -332,7 +332,7 @@ GUARD_FE5_CHAPTER15 :?= false
 			
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -407,7 +407,7 @@ GUARD_FE5_CHAPTER15 :?= false
 					FADE_IN 2
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -423,7 +423,7 @@ GUARD_FE5_CHAPTER15 :?= false
 					DIALOGUE dialogueChapter15Opening1
 					YIELD
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -439,7 +439,7 @@ GUARD_FE5_CHAPTER15 :?= false
 				END2
 			
 				_LeftPath ; FD/AF35
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -466,7 +466,7 @@ GUARD_FE5_CHAPTER15 :?= false
 					JUMP _SplitContinue
 			
 				_RightPath ; FD/AF66
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -503,13 +503,13 @@ GUARD_FE5_CHAPTER15 :?= false
 				END2
 			
 				_EndingEvent
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -535,7 +535,7 @@ GUARD_FE5_CHAPTER15 :?= false
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitData
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -576,7 +576,7 @@ GUARD_FE5_CHAPTER15 :?= false
 			
 							STORE_WORD wCurrentMapMusic, $0000
 			
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			
@@ -735,7 +735,7 @@ GUARD_FE5_CHAPTER15 :?= false
 				SET_CURSOR_POSITION
 				YIELD
 			
-				PLAY_SOUND_WORD $00E0
+				PLAY_SOUND_FORCED $00E0
 				PAUSE_SKIPPABLE 32
 				YIELD
 			

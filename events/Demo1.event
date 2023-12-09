@@ -85,7 +85,7 @@ GUARD_FE5_CHAPTERDEMO1 :?= false
 			
 				STORE_WORD wCurrentChapter, Chapter16A
 			
-				CALL_ASM_SKIPPABLE rlASMCSwapChapterMaps
+				CALL_ASM_SKIPPABLE rlSetChapterVisionRange
 				CALL_ASM_SKIPPABLE $9A98CF
 			
 				HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $01
@@ -174,7 +174,7 @@ GUARD_FE5_CHAPTERDEMO1 :?= false
 			
 				STORE_WORD wCurrentChapter, Chapter12
 			
-				CALL_ASM_SKIPPABLE rlASMCSwapChapterMaps
+				CALL_ASM_SKIPPABLE rlSetChapterVisionRange
 				CALL_ASM_SKIPPABLE $9A98B8
 			
 				HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $01
@@ -250,7 +250,7 @@ GUARD_FE5_CHAPTERDEMO1 :?= false
 			
 				STORE_WORD wCurrentChapter, Chapter13
 			
-				CALL_ASM_SKIPPABLE rlASMCSwapChapterMaps
+				CALL_ASM_SKIPPABLE rlSetChapterVisionRange
 				CALL_ASM_SKIPPABLE $9A98CF
 			
 				HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $01

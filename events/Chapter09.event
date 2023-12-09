@@ -104,7 +104,7 @@ GUARD_FE5_CHAPTER09 :?= false
         END_DEFINITION_ARRAY
 
         _LeifSelphinaTalk ; 8C/F13F
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -116,7 +116,7 @@ GUARD_FE5_CHAPTER09 :?= false
         END2
 
         _SelphinaFinnTalk ; 8C/F14F
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -136,7 +136,7 @@ GUARD_FE5_CHAPTER09 :?= false
         END2
 
         _CallionSelphinaTalk ; 8C/F171
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -203,7 +203,7 @@ GUARD_FE5_CHAPTER09 :?= false
 
           HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(false, 15)
 
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -225,7 +225,7 @@ GUARD_FE5_CHAPTER09 :?= false
           DIALOGUE dialogueChapter09Opening1
           YIELD
 
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -280,13 +280,13 @@ GUARD_FE5_CHAPTER09 :?= false
 
         _EndingEvent ; 8C/F56D
 
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 16
           YIELD
 
           CALL_ASM_LOOP rlASMCSaveActiveUnitClearHDMA
 
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -316,7 +316,7 @@ GUARD_FE5_CHAPTER09 :?= false
 
           macroASMCAddCharacterDataByte Leif, LeadershipStars, 1
 
-          PLAY_SOUND_WORD $00E7
+          PLAY_SOUND_FORCED $00E7
 
           FADE_OUT 1
           YIELD
@@ -331,7 +331,7 @@ GUARD_FE5_CHAPTER09 :?= false
 
         _PlayerLoss ; 8C/F5F5
 
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -456,7 +456,7 @@ GUARD_FE5_CHAPTER09 :?= false
         SET_CURSOR_POSITION
         YIELD
 
-        PLAY_SOUND_WORD $00E0
+        PLAY_SOUND_FORCED $00E0
         PAUSE_SKIPPABLE 32
         YIELD
 

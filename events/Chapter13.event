@@ -225,7 +225,7 @@ GUARD_FE5_CHAPTER13 :?= false
 				END2
 			
 				_FinnGladeTalk ; 99/EA59
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -237,7 +237,7 @@ GUARD_FE5_CHAPTER13 :?= false
 				END2
 			
 				_SelphinaGladeTalk ; 99/EA69
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -264,7 +264,7 @@ GUARD_FE5_CHAPTER13 :?= false
 				END2
 			
 				_LeifGladeTalk ; 99/EAC6
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -291,7 +291,7 @@ GUARD_FE5_CHAPTER13 :?= false
 			
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -345,7 +345,7 @@ GUARD_FE5_CHAPTER13 :?= false
 					WAIT_MOVE
 					YIELD
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -367,13 +367,13 @@ GUARD_FE5_CHAPTER13 :?= false
 				MS_END
 			
 				_EndingEvent ; 99/EBE2
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -402,7 +402,7 @@ GUARD_FE5_CHAPTER13 :?= false
 			
 					CALL_ASM_LOOP rlASMCSetUnitsLeftBehindAsCaptured
 			
-					PLAY_SOUND_WORD $00E7
+					PLAY_SOUND_FORCED $00E7
 			
 					FADE_OUT 1
 					YIELD
@@ -411,7 +411,7 @@ GUARD_FE5_CHAPTER13 :?= false
 				END1
 			
 				_PlayerLoss ; 99/EC7F
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 			
 					STORE_WORD wCurrentMapMusic, $00
 			
@@ -540,7 +540,7 @@ GUARD_FE5_CHAPTER13 :?= false
 				SET_CURSOR_POSITION
 				YIELD
 			
-				PLAY_SOUND_WORD $00E0
+				PLAY_SOUND_FORCED $00E0
 				PAUSE_SKIPPABLE 32
 				YIELD
 			

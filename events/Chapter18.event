@@ -202,7 +202,7 @@ GUARD_FE5_CHAPTER18 :?= false
 				END1
 			
 				_XavierLeifTalk ; E7/83FA
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -218,7 +218,7 @@ GUARD_FE5_CHAPTER18 :?= false
 				END2
 			
 				_LeifXavierTalk ; E7/8415
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -429,7 +429,7 @@ GUARD_FE5_CHAPTER18 :?= false
 				_OpeningEvent ; E7/89B8
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -455,7 +455,7 @@ GUARD_FE5_CHAPTER18 :?= false
 					WAIT_MOVE
 					YIELD
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -471,13 +471,13 @@ GUARD_FE5_CHAPTER18 :?= false
 				END2
 			
 				_EndingEvent ; E7/8A1D
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -530,7 +530,7 @@ GUARD_FE5_CHAPTER18 :?= false
 			
 					CALL_ASM_LOOP rlEventEngineCancelFading
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitData
 			
@@ -542,7 +542,7 @@ GUARD_FE5_CHAPTER18 :?= false
 					EVENT_TEST_FLAG_SET _FlagLeonsterSoldierKilled
 					JUMP_TRUE +
 			
-						PLAY_SOUND_WORD $00E0
+						PLAY_SOUND_FORCED $00E0
 						PAUSE_SKIPPABLE 32
 						YIELD
 			
@@ -571,7 +571,7 @@ GUARD_FE5_CHAPTER18 :?= false
 						JUMP_TRUE +
 			
 							STORE_WORD wCurrentMapMusic, $0000
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			
@@ -739,7 +739,7 @@ GUARD_FE5_CHAPTER18 :?= false
 				SET_CURSOR_POSITION
 				YIELD
 			
-				PLAY_SOUND_WORD $00E0
+				PLAY_SOUND_FORCED $00E0
 				PAUSE_SKIPPABLE 32
 				YIELD
 			

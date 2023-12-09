@@ -2179,7 +2179,7 @@ rsEventCodeHandler_NOP_33 ; 8C/89F5
 	clc
 	rts
 
-rsEventCodeHandler_PLAY_SOUND_BYTE ; 8C/8A10
+rsEventCodeHandler_PLAY_EXTENDED_SOUND ; 8C/8A10
 
 	.al
 	.xl
@@ -2208,7 +2208,7 @@ rsEventCodeHandler_PLAY_SOUND_BYTE ; 8C/8A10
 	clc
 	rts
 
-rsEventCodeHandler_PLAY_SOUND_WORD ; 8C/8A2F
+rsEventCodeHandler_PLAY_SOUND_FORCED ; 8C/8A2F
 
 	.al
 	.xl

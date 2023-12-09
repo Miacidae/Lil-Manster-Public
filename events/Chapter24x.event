@@ -150,7 +150,7 @@ GUARD_FE5_CHAPTER24x :?= false
 				MS_END
 			
 				_LeifEyvelTalk ; 97/8B3D
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -166,7 +166,7 @@ GUARD_FE5_CHAPTER24x :?= false
 				END2
 			
 				_MareetaEyvelTalk ; 97/8B71
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -214,7 +214,7 @@ GUARD_FE5_CHAPTER24x :?= false
 			
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -237,13 +237,13 @@ GUARD_FE5_CHAPTER24x :?= false
 					macroASMCCountAllUnitsAlive Eyvel
 					JUMP_FALSE _SkipEyvel
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -327,7 +327,7 @@ GUARD_FE5_CHAPTER24x :?= false
 						JUMP_TRUE +
 			
 							STORE_WORD wCurrentMapMusic, $0000
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			

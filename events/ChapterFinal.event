@@ -190,7 +190,7 @@ GUARD_FE5_CHAPTERFINAL :?= false
 					SCROLL_CAMERA_COORDS [16, 12], 1
 					YIELD
 			
-					PLAY_SOUND_BYTE $6A
+					PLAY_EXTENDED_SOUND $6A
 					macroTileChangeByID 3
 
 					macroDialogue dialogueChapterFinalThroneOpened
@@ -334,7 +334,7 @@ GUARD_FE5_CHAPTERFINAL :?= false
 			
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -356,7 +356,7 @@ GUARD_FE5_CHAPTERFINAL :?= false
 			
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -378,13 +378,13 @@ GUARD_FE5_CHAPTERFINAL :?= false
 			
 					STORE_WORD aSoundSystem.wStatus, $0000
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -475,7 +475,7 @@ GUARD_FE5_CHAPTERFINAL :?= false
 					CALL_ASM_LOOP rlASMCFinalChapterFadeToWhite
 					YIELD
 			
-					PLAY_SOUND_WORD $00E7
+					PLAY_SOUND_FORCED $00E7
 			
 					CALL_ASM_LOOP $9A9D8A
 			

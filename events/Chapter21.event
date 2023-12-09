@@ -163,7 +163,7 @@ GUARD_FE5_CHAPTER21 :?= false
 						EVENT_CMP_WORD_EQ aSelectedCharacterBuffer.Character, Linoan
 						JUMP_FALSE ++
 			
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			
@@ -234,7 +234,7 @@ GUARD_FE5_CHAPTER21 :?= false
 			
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -265,7 +265,7 @@ GUARD_FE5_CHAPTER21 :?= false
 					+
 					YIELD
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -291,7 +291,7 @@ GUARD_FE5_CHAPTER21 :?= false
 					macroASMCCountAllUnitsWithCharacterDataWordBitsSet UnitState, UnitStateCaptured
 					JUMP_TRUE +
 			
-						PLAY_SOUND_WORD $00E0
+						PLAY_SOUND_FORCED $00E0
 						PAUSE_SKIPPABLE 32
 						YIELD
 			
@@ -305,7 +305,7 @@ GUARD_FE5_CHAPTER21 :?= false
 						JUMP ++
 			
 					+
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -333,7 +333,7 @@ GUARD_FE5_CHAPTER21 :?= false
 						JUMP_TRUE +
 			
 							STORE_WORD wCurrentMapMusic, $0000
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			
@@ -485,7 +485,7 @@ GUARD_FE5_CHAPTER21 :?= false
 				SET_CURSOR_POSITION
 				YIELD
 			
-				PLAY_SOUND_WORD $00E0
+				PLAY_SOUND_FORCED $00E0
 				PAUSE_SKIPPABLE 32
 				YIELD
 			

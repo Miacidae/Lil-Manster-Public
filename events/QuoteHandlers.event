@@ -17,7 +17,7 @@ eventBattleQuoteDummyEvent ; 99/8024
 END1
 
 eventMapBattleQuoteHandler ; 99/8025
-	PLAY_SOUND_WORD $00E0
+	PLAY_SOUND_FORCED $00E0
 	STORE_WORD wCurrentMapMusic, $0000
 	PAUSE_SKIPPABLE 10
 	YIELD

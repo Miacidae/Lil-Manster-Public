@@ -143,7 +143,7 @@ GUARD_FE5_CHAPTER11x :?= false
 				END2
 			
 				_OltophLeave ; 99/D6C9
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -161,7 +161,7 @@ GUARD_FE5_CHAPTER11x :?= false
 
 					macroSetCharacterAI Oltoph, [$02, $00, $0B, $00]
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 			
 					EVENT_TEST_FLAG_SET _FlagDoor8
 					JUMP_FALSE _Door8
@@ -206,7 +206,7 @@ GUARD_FE5_CHAPTER11x :?= false
 			
 					CALL_ASM_SKIPPABLE rlUpdateUnitMapsAndFog, $0000
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -259,7 +259,7 @@ GUARD_FE5_CHAPTER11x :?= false
 				END1
 			
 				_LeifOlwenTalk ; 99/D99A
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -271,7 +271,7 @@ GUARD_FE5_CHAPTER11x :?= false
 				END2
 			
 				_FredOlwenTalk ; 99/D9AA
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -347,7 +347,7 @@ GUARD_FE5_CHAPTER11x :?= false
 			
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(False, 15)
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -367,7 +367,7 @@ GUARD_FE5_CHAPTER11x :?= false
 			
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(False, 15)
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -383,13 +383,13 @@ GUARD_FE5_CHAPTER11x :?= false
 				END2
 			
 				_EndingEvent ; 99/DB42
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			

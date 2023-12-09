@@ -175,7 +175,7 @@ GUARD_FE5_CHAPTER12 :?= false
 				END2
 			
 				_Unused ; 99/DF3A
-					PLAY_SOUND_WORD $00F7
+					PLAY_SOUND_FORCED $00F7
 			
 					EVENT_TEST_FLAG_SET FlagRosaSaved
 					JUMP_TRUE +
@@ -216,7 +216,7 @@ GUARD_FE5_CHAPTER12 :?= false
 				END2
 			
 				_SeraHouseVisit ; 99/DFFC
-					PLAY_SOUND_WORD $00F7
+					PLAY_SOUND_FORCED $00F7
 			
 					EVENT_TEST_FLAG_SET FlagSeraSaved
 					JUMP_TRUE +
@@ -241,7 +241,7 @@ GUARD_FE5_CHAPTER12 :?= false
 				END2
 			
 				_PeterHouseVisit ; 99/E06C
-					PLAY_SOUND_WORD $00F7
+					PLAY_SOUND_FORCED $00F7
 			
 					EVENT_TEST_FLAG_SET FlagPeterSaved
 					JUMP_TRUE +
@@ -315,7 +315,7 @@ GUARD_FE5_CHAPTER12 :?= false
 						macroASMCIsUnitHeld Salem
 						JUMP_TRUE +
 			
-							PLAY_SOUND_WORD $00F7
+							PLAY_SOUND_FORCED $00F7
 							GET_CHARACTER_COORDS Salem
 							SCROLL_CAMERA 4
 							YIELD
@@ -327,7 +327,7 @@ GUARD_FE5_CHAPTER12 :?= false
 				END2
 			
 				_ColhoDialogue ; 99/E14E
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -343,7 +343,7 @@ GUARD_FE5_CHAPTER12 :?= false
 				END2
 			
 				_MareetaArrive ; 99/E163
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -393,7 +393,7 @@ GUARD_FE5_CHAPTER12 :?= false
 				_OpeningEvent ; 99/E1D8
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(False, 15)
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -412,7 +412,7 @@ GUARD_FE5_CHAPTER12 :?= false
 					EVENT_TEST_FLAG_SET FlagMareetaDiedInChp5
 					JUMP_TRUE +
 			
-						PLAY_SOUND_WORD $00E0
+						PLAY_SOUND_FORCED $00E0
 						PAUSE_SKIPPABLE 32
 						YIELD
 			
@@ -430,13 +430,13 @@ GUARD_FE5_CHAPTER12 :?= false
 				END2
 			
 				_EndingEvent ; 99/E244
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -485,14 +485,14 @@ GUARD_FE5_CHAPTER12 :?= false
 					macroASMCCountAllUnitsRescuedByPlayerOrNPC Mareeta
 					JUMP_FALSE +
 			
-						PLAY_SOUND_WORD $00E0
+						PLAY_SOUND_FORCED $00E0
 			
 						STORE_WORD wCurrentMapMusic, $00
 			
 						PAUSE_SKIPPABLE 10
 						YIELD
 			
-						PLAY_SOUND_WORD $00E0
+						PLAY_SOUND_FORCED $00E0
 						PAUSE_SKIPPABLE 32
 						YIELD
 			
@@ -620,7 +620,7 @@ GUARD_FE5_CHAPTER12 :?= false
 				SET_CURSOR_POSITION
 				YIELD
 			
-				PLAY_SOUND_WORD $00E0
+				PLAY_SOUND_FORCED $00E0
 				PAUSE_SKIPPABLE 32
 				YIELD
 			

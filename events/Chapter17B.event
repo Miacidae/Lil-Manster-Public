@@ -265,7 +265,7 @@ GUARD_FE5_CHAPTER17B :?= false
 					EVENT_CMP_BYTE_EQ wEventEngineMapChangeFlag, $0000
 					JUMP_FALSE +
 			
-						PLAY_SOUND_WORD $00E0
+						PLAY_SOUND_FORCED $00E0
 						PAUSE_SKIPPABLE 32
 						YIELD
 			
@@ -314,7 +314,7 @@ GUARD_FE5_CHAPTER17B :?= false
 							JUMP +++
 			
 						+
-						PLAY_SOUND_WORD $00E0
+						PLAY_SOUND_FORCED $00E0
 						PAUSE_SKIPPABLE 32
 						YIELD
 			
@@ -349,18 +349,18 @@ GUARD_FE5_CHAPTER17B :?= false
 				_LowerGateOpen ; FD/C9C5
 					macroDialogue dialogueChapter17BOpenGate3
 			
-					PLAY_SOUND_WORD $00E8
+					PLAY_SOUND_FORCED $00E8
 			
 					SET_FLAG _FlagLowerGateOpen
 
-					PLAY_SOUND_BYTE $45
+					PLAY_EXTENDED_SOUND $45
 					macroTileChangeByID 0
 				END1
 			
 				_MiddleGateOpenStanding ; FD/C9FD
 					macroDialogue dialogueChapter17BOpenGate3
 			
-					PLAY_SOUND_WORD $00E8
+					PLAY_SOUND_FORCED $00E8
 					JUMP +
 			
 			
@@ -370,7 +370,7 @@ GUARD_FE5_CHAPTER17B :?= false
 			
 						+
 						SET_FLAG _FlagMiddleGateOpen
-						PLAY_SOUND_BYTE $45
+						PLAY_EXTENDED_SOUND $45
 			
 					+
 					macroTileChangeByID 1
@@ -383,7 +383,7 @@ GUARD_FE5_CHAPTER17B :?= false
 				_OpeningEvent ; FD/CA42
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -406,7 +406,7 @@ GUARD_FE5_CHAPTER17B :?= false
 
 						macroASMCLoadUnitGroup eventChapter17BData._AmaldaGroup
 			
-						PLAY_SOUND_WORD $00E0
+						PLAY_SOUND_FORCED $00E0
 						PAUSE_SKIPPABLE 32
 						YIELD
 			
@@ -428,13 +428,13 @@ GUARD_FE5_CHAPTER17B :?= false
 				END2
 			
 				_EndingEvent ; FD/CACF
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -476,7 +476,7 @@ GUARD_FE5_CHAPTER17B :?= false
 			
 							STORE_WORD wCurrentMapMusic, $0000
 			
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			
@@ -618,7 +618,7 @@ GUARD_FE5_CHAPTER17B :?= false
 				SET_CURSOR_POSITION
 				YIELD
 			
-				PLAY_SOUND_WORD $00E0
+				PLAY_SOUND_FORCED $00E0
 				PAUSE_SKIPPABLE 32
 				YIELD
 			

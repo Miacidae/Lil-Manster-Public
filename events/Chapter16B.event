@@ -134,7 +134,7 @@ GUARD_FE5_CHAPTER16B :?= false
 				END2
 			
 				_MirandaDialogue ; 99/EDEC
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -159,7 +159,7 @@ GUARD_FE5_CHAPTER16B :?= false
 				END2
 			
 				_HomerShannamTalk ; 99/EE2B
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -177,7 +177,7 @@ GUARD_FE5_CHAPTER16B :?= false
 				END2
 			
 				_SalemSaraTalk ; 99/EE61
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -189,7 +189,7 @@ GUARD_FE5_CHAPTER16B :?= false
 				END2
 			
 				_LeifSaraTalk ; 99/EE71
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -216,7 +216,7 @@ GUARD_FE5_CHAPTER16B :?= false
 					macroASMCCountAllUnitsUncapturedAlive Reinkoch
 					JUMP_FALSE +
 			
-						PLAY_SOUND_WORD $00E0
+						PLAY_SOUND_FORCED $00E0
 						PAUSE_SKIPPABLE 32
 						YIELD
 			
@@ -305,7 +305,7 @@ GUARD_FE5_CHAPTER16B :?= false
 					+
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -336,13 +336,13 @@ GUARD_FE5_CHAPTER16B :?= false
 				END2
 			
 				_EndingEvent ; 99/F207
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -361,7 +361,7 @@ GUARD_FE5_CHAPTER16B :?= false
 						JUMP_TRUE +
 			
 							STORE_WORD wCurrentMapMusic, $0000
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			
@@ -475,7 +475,7 @@ GUARD_FE5_CHAPTER16B :?= false
 				SET_CURSOR_POSITION
 				YIELD
 			
-				PLAY_SOUND_WORD $00E0
+				PLAY_SOUND_FORCED $00E0
 				PAUSE_SKIPPABLE 32
 				YIELD
 			

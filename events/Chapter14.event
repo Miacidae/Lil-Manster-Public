@@ -290,12 +290,12 @@ GUARD_FE5_CHAPTER14 :?= false
 					EVENT_CMP_BYTE_EQ wEventEngineMapChangeFlag, $00
 					JUMP_FALSE _Close
 			
-						PLAY_SOUND_WORD $00F7
+						PLAY_SOUND_FORCED $00F7
 						EVENT_CMP_WORD_EQ aSelectedCharacterBuffer.Character, Nanna
 						JUMP_FALSE _SkipRecruitmentMusic
 			
-							PLAY_SOUND_WORD $00E8
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E8
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			
@@ -372,7 +372,7 @@ GUARD_FE5_CHAPTER14 :?= false
 				END2
 			
 				_DragonpikeHouseDean ; $FD/9C65
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -448,7 +448,7 @@ GUARD_FE5_CHAPTER14 :?= false
 				END1
 			
 				_WyvernReinforcements ; FD/9F3B
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -559,7 +559,7 @@ GUARD_FE5_CHAPTER14 :?= false
 							RESET_PHASE_MUSIC
 							YIELD
 			
-							PLAY_SOUND_WORD $00F7
+							PLAY_SOUND_FORCED $00F7
 
 							macroDialogueWithBG dialogueChapter14ShannamLeave, 3
 
@@ -567,7 +567,7 @@ GUARD_FE5_CHAPTER14 :?= false
 							YIELD
 			
 							HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
-							PLAY_SOUND_WORD $00E8
+							PLAY_SOUND_FORCED $00E8
 
 					+
 				END2
@@ -583,7 +583,7 @@ GUARD_FE5_CHAPTER14 :?= false
 			
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -614,7 +614,7 @@ GUARD_FE5_CHAPTER14 :?= false
 					WAIT_MOVE
 					YIELD
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -643,13 +643,13 @@ GUARD_FE5_CHAPTER14 :?= false
 				_EndingEvent ; FD/A0B0
 					macroASMCCheckUnitExists Leif
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			

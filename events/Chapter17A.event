@@ -160,7 +160,7 @@ GUARD_FE5_CHAPTER17A :?= false
 				END_DEFINITION_ARRAY
 			
 				_MullerSpawn ; FD/BC9E
-					PLAY_SOUND_WORD $E0
+					PLAY_SOUND_FORCED $E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -203,7 +203,7 @@ GUARD_FE5_CHAPTER17A :?= false
 				END2
 			
 				_SaiasSpawn ; FD/CD8
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -255,7 +255,7 @@ GUARD_FE5_CHAPTER17A :?= false
 					SCROLL_CAMERA 4
 					YIELD
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -274,7 +274,7 @@ GUARD_FE5_CHAPTER17A :?= false
 					JUMP _CenterBridgeLower
 			
 				_SaiasLeave ; FD/BF69
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -336,7 +336,7 @@ GUARD_FE5_CHAPTER17A :?= false
 				MS_END
 			
 				_KarinMishaTalk ; FD/BFF0
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -380,7 +380,7 @@ GUARD_FE5_CHAPTER17A :?= false
 				END1
 			
 				_ChurchVisit ; FD/C248
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -415,7 +415,7 @@ GUARD_FE5_CHAPTER17A :?= false
 				END1
 			
 				_GateLower ; FD/C2D3
-					PLAY_SOUND_BYTE $45
+					PLAY_EXTENDED_SOUND $45
 
 					macroTileChangeByID 6
 				END1
@@ -427,7 +427,7 @@ GUARD_FE5_CHAPTER17A :?= false
 				_OpeningEvent ; FD/C303
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -458,7 +458,7 @@ GUARD_FE5_CHAPTER17A :?= false
 					SCROLL_CAMERA_COORDS [4, 3], 4
 					YIELD
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -474,13 +474,13 @@ GUARD_FE5_CHAPTER17A :?= false
 				END2
 			
 				_EndingEvent ; FD/C387
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -536,7 +536,7 @@ GUARD_FE5_CHAPTER17A :?= false
 						JUMP_TRUE +
 			
 							STORE_WORD wCurrentMapMusic, $0000
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			
@@ -714,7 +714,7 @@ GUARD_FE5_CHAPTER17A :?= false
 				SET_CURSOR_POSITION
 				YIELD
 			
-				PLAY_SOUND_WORD $00E0
+				PLAY_SOUND_FORCED $00E0
 				PAUSE_SKIPPABLE 32
 				YIELD
 

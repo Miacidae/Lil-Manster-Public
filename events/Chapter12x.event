@@ -279,7 +279,7 @@ GUARD_FE5_CHAPTER12x :?= false
 				END1
 			
 				_SalemPerneTalk ; FD/93F0
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -298,7 +298,7 @@ GUARD_FE5_CHAPTER12x :?= false
 				END2
 			
 				_LifisPerneTalk ; FD/943E
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -324,7 +324,7 @@ GUARD_FE5_CHAPTER12x :?= false
 				END2
 			
 				_LaraPerneTalk ; FD/94A8
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -354,7 +354,7 @@ GUARD_FE5_CHAPTER12x :?= false
 				END1
 			
 				_PerneTrudeTalk ; FD/952D
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -371,7 +371,7 @@ GUARD_FE5_CHAPTER12x :?= false
 				END2
 			
 				_SafyTinaTalk ; FD/9563
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -399,7 +399,7 @@ GUARD_FE5_CHAPTER12x :?= false
 				_OpeningEvent ; FD/95AD
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(False, 15)
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -428,7 +428,7 @@ GUARD_FE5_CHAPTER12x :?= false
 			
 						macroASMCSetCharacterDataWord Salem, Leader, Leif
 			
-						PLAY_SOUND_WORD $00E0
+						PLAY_SOUND_FORCED $00E0
 						PAUSE_SKIPPABLE 32
 						YIELD
 			
@@ -466,13 +466,13 @@ GUARD_FE5_CHAPTER12x :?= false
 				END2
 			
 				_EndingEvent ; FD/96C2
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -517,7 +517,7 @@ GUARD_FE5_CHAPTER12x :?= false
 					+
 					YIELD
 			
-					PLAY_SOUND_WORD $00E7
+					PLAY_SOUND_FORCED $00E7
 					FADE_OUT 1
 					YIELD
 			

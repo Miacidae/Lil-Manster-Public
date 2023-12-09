@@ -258,7 +258,7 @@ GUARD_FE5_CHAPTER07 :?= false
 
           CALL_ASM_LOOP rlUpdateUnitMapsAndFog
 
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -297,7 +297,7 @@ GUARD_FE5_CHAPTER07 :?= false
 
             SCROLL_CAMERA_CHAR Finn, 4
 
-            PLAY_SOUND_WORD $00E0
+            PLAY_SOUND_FORCED $00E0
             PAUSE_SKIPPABLE 32
             YIELD
 
@@ -330,7 +330,7 @@ GUARD_FE5_CHAPTER07 :?= false
         END2
 
         _UnknownDialogue ; 99/B3D6
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -342,7 +342,7 @@ GUARD_FE5_CHAPTER07 :?= false
         END2
 
         _SafyShivaTalk ; 99/B3E6
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -360,7 +360,7 @@ GUARD_FE5_CHAPTER07 :?= false
         END2
 
         _LeifFinnTalk ; 99/B41C
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -372,7 +372,7 @@ GUARD_FE5_CHAPTER07 :?= false
         END2
 
         _NannaFinnTalk ; 99/B42C
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -395,7 +395,7 @@ GUARD_FE5_CHAPTER07 :?= false
           SCROLL_CAMERA_COORDS [10, 48], 4
           YIELD
 
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -423,7 +423,7 @@ GUARD_FE5_CHAPTER07 :?= false
         END2
 
         _RaydrikDialogue ; 99/B475
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -508,7 +508,7 @@ GUARD_FE5_CHAPTER07 :?= false
           SCROLL_CAMERA_COORDS [7, 9], 3
           YIELD
 
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -537,7 +537,7 @@ GUARD_FE5_CHAPTER07 :?= false
 
         _AntitoxinHouse ; 99/BA71
 
-          PLAY_SOUND_WORD $00F7
+          PLAY_SOUND_FORCED $00F7
 
           macroASMCSingleTileChangeByCoords [2, 12], $0021
 
@@ -565,7 +565,7 @@ GUARD_FE5_CHAPTER07 :?= false
         _OpeningEvent ; 99/BB75
           HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(false, 15)
 
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -604,7 +604,7 @@ GUARD_FE5_CHAPTER07 :?= false
 
             SCROLL_CAMERA_CHAR Shiva, 4
 
-            PLAY_SOUND_WORD $00E0
+            PLAY_SOUND_FORCED $00E0
             PAUSE_SKIPPABLE 32
             YIELD
 
@@ -618,13 +618,13 @@ GUARD_FE5_CHAPTER07 :?= false
         END2
 
         _EndingEvent ; 99/BC0A
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 16
           YIELD
 
           CALL_ASM_LOOP rlASMCSaveActiveUnitClearHDMA
 
-          PLAY_SOUND_WORD $00E0
+          PLAY_SOUND_FORCED $00E0
           PAUSE_SKIPPABLE 32
           YIELD
 
@@ -714,7 +714,7 @@ GUARD_FE5_CHAPTER07 :?= false
           CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut
           STORE_BYTE bBufferINIDISP, INIDISP_Setting(false, 0)
 
-          PLAY_SOUND_WORD $00E7
+          PLAY_SOUND_FORCED $00E7
 
           CALL_ASM_LOOP rlASMCSetUnitsLeftBehindAsCaptured
 
@@ -875,7 +875,7 @@ GUARD_FE5_CHAPTER07 :?= false
         SET_CURSOR_POSITION
         YIELD
 
-        PLAY_SOUND_WORD $00E0
+        PLAY_SOUND_FORCED $00E0
         PAUSE_SKIPPABLE 32
         YIELD
 

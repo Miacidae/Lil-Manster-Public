@@ -28,7 +28,7 @@ GUARD_FE5_CHAPTERDEMO2 :?= false
 			
 				STORE_WORD wCurrentChapter, Chapter01
 			
-				CALL_ASM_SKIPPABLE rlASMCSwapChapterMaps
+				CALL_ASM_SKIPPABLE rlSetChapterVisionRange
 				CALL_ASM_SKIPPABLE $9A98CF
 			
 				HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $01

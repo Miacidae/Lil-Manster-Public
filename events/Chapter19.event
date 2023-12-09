@@ -224,7 +224,7 @@ GUARD_FE5_CHAPTER19 :?= false
 				END2
 			
 				_MirandaConomorTalk ; FD/CE61
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -256,7 +256,7 @@ GUARD_FE5_CHAPTER19 :?= false
 				END2
 			
 				_SchroffAmaldaTalk ; FD/D0A8
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -414,7 +414,7 @@ GUARD_FE5_CHAPTER19 :?= false
 			
 				_OpeningEvent ; FD/D791
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -437,7 +437,7 @@ GUARD_FE5_CHAPTER19 :?= false
 					WAIT_MOVE
 					YIELD
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -483,13 +483,13 @@ GUARD_FE5_CHAPTER19 :?= false
 				MS_END
 			
 				_EndingEvent ; FD/D83A
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -535,7 +535,7 @@ GUARD_FE5_CHAPTER19 :?= false
 						JUMP_TRUE +
 			
 							STORE_WORD wCurrentMapMusic, $0000
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			
@@ -711,7 +711,7 @@ GUARD_FE5_CHAPTER19 :?= false
 				SET_CURSOR_POSITION
 				YIELD
 			
-				PLAY_SOUND_WORD $00E0
+				PLAY_SOUND_FORCED $00E0
 				PAUSE_SKIPPABLE 32
 				YIELD
 			

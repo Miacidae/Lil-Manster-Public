@@ -183,7 +183,7 @@ GUARD_FE5_CHAPTER24 :?= false
 				END2
 			
 				_Door2 ; B9/B4A5
-					PLAY_SOUND_WORD $00F7
+					PLAY_SOUND_FORCED $00F7
 			
 					CALL_ASM_SKIPPABLE rlASMCPrepActiveUnitPortrait
 			
@@ -243,7 +243,7 @@ GUARD_FE5_CHAPTER24 :?= false
 				END1
 			
 				_Door2TileChange ; B9/B521
-					PLAY_SOUND_BYTE $6A
+					PLAY_EXTENDED_SOUND $6A
 					macroTileChangeByID 1
 			
 					CALL_ASM_SKIPPABLE rlASMCPrepActiveUnitPortrait
@@ -251,7 +251,7 @@ GUARD_FE5_CHAPTER24 :?= false
 					DIALOGUE dialogueChapter24Door2
 					YIELD
 			
-					PLAY_SOUND_WORD $00E8
+					PLAY_SOUND_FORCED $00E8
 					SET_FLAG _FlagDoor2
 				END1
 			
@@ -276,7 +276,7 @@ GUARD_FE5_CHAPTER24 :?= false
 				END1
 			
 				_MareetaGalzusTalk ; B9/B633
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -392,7 +392,7 @@ GUARD_FE5_CHAPTER24 :?= false
 			
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -416,7 +416,7 @@ GUARD_FE5_CHAPTER24 :?= false
 
 					macroASMCRemoveUnit Veld
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -476,7 +476,7 @@ GUARD_FE5_CHAPTER24 :?= false
 						macroASMCCountAllUnitsAlive Sara
 						JUMP_FALSE +
 			
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			
@@ -491,7 +491,7 @@ GUARD_FE5_CHAPTER24 :?= false
 							JUMP ++
 			
 					+
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -529,7 +529,7 @@ GUARD_FE5_CHAPTER24 :?= false
 						JUMP_TRUE +
 			
 							STORE_WORD wCurrentMapMusic, $0000
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			
@@ -703,7 +703,7 @@ GUARD_FE5_CHAPTER24 :?= false
 				SET_CURSOR_POSITION
 				YIELD
 			
-				PLAY_SOUND_WORD $00E0
+				PLAY_SOUND_FORCED $00E0
 				PAUSE_SKIPPABLE 32
 				YIELD
 			

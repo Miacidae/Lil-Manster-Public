@@ -141,7 +141,7 @@ GUARD_FE5_CHAPTER10 :?= false
 			
 						macroASMCSetUnitState Largo, UnitStateHidden
 			
-						PLAY_SOUND_WORD $00E0
+						PLAY_SOUND_FORCED $00E0
 						PAUSE_SKIPPABLE 32
 						YIELD
 			
@@ -169,14 +169,14 @@ GUARD_FE5_CHAPTER10 :?= false
 				END2
 			
 				_OlwenFredLeave ; 99/C7AC
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
 					SET_MUSIC $0A
 					YIELD
 			
-					PLAY_SOUND_WORD $00F7
+					PLAY_SOUND_FORCED $00F7
 			
 					macroASMCCountAllUnitsUncapturedAlive Olwen
 					JUMP_FALSE +
@@ -230,7 +230,7 @@ GUARD_FE5_CHAPTER10 :?= false
 			
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(False, 15)
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -266,7 +266,7 @@ GUARD_FE5_CHAPTER10 :?= false
 					WAIT_MOVE
 					YIELD
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -297,13 +297,13 @@ GUARD_FE5_CHAPTER10 :?= false
 				MS_END
 			
 				_EndingEvent ; 99/CACB
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -445,7 +445,7 @@ GUARD_FE5_CHAPTER10 :?= false
 				SET_CURSOR_POSITION
 				YIELD
 			
-				PLAY_SOUND_WORD $00E0
+				PLAY_SOUND_FORCED $00E0
 				PAUSE_SKIPPABLE 32
 				YIELD
 			

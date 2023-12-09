@@ -187,7 +187,7 @@ GUARD_FE5_CHAPTER22 :?= false
 					RESET_PHASE_MUSIC
 					YIELD
 			
-					PLAY_SOUND_WORD $00F7
+					PLAY_SOUND_FORCED $00F7
 
 					macroASMCCheckIfUnitAtCoords Cohen, [28, 3]
 					JUMP_FALSE +
@@ -255,7 +255,7 @@ GUARD_FE5_CHAPTER22 :?= false
 					EVENT_CMP_BYTE_EQ wEventEngineMapChangeFlag, $00
 					JUMP_FALSE _JustBridgeDrop
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -397,7 +397,7 @@ GUARD_FE5_CHAPTER22 :?= false
 						YIELD
 			
 					+
-					PLAY_SOUND_BYTE $6D
+					PLAY_EXTENDED_SOUND $6D
 					macroTileChangeByID 3
 
 					macroASMCCountAllUnitsUncapturedAlive Reinhardt
@@ -418,7 +418,7 @@ GUARD_FE5_CHAPTER22 :?= false
 				END1
 			
 				_OlwenReinhardtTalk ; 8C/FDF2
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -443,7 +443,7 @@ GUARD_FE5_CHAPTER22 :?= false
 				_OpeningEvent ; 8C/FE55
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -497,7 +497,7 @@ GUARD_FE5_CHAPTER22 :?= false
 					WAIT_MOVE
 					YIELD
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -513,13 +513,13 @@ GUARD_FE5_CHAPTER22 :?= false
 				END2
 			
 				_EndingEvent ; 8C/FF31
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -547,7 +547,7 @@ GUARD_FE5_CHAPTER22 :?= false
 						JUMP_TRUE +
 			
 							STORE_WORD wCurrentMapMusic, $0000
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			
@@ -689,7 +689,7 @@ GUARD_FE5_CHAPTER22 :?= false
 				SET_CURSOR_POSITION
 				YIELD
 			
-				PLAY_SOUND_WORD $00E0
+				PLAY_SOUND_FORCED $00E0
 				PAUSE_SKIPPABLE 32
 				YIELD
 			

@@ -112,7 +112,7 @@ GUARD_FE5_CHAPTER11 :?= false
 				END_DEFINITION_ARRAY
 			
 				_KempfLeave ; 99/CC69
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -132,7 +132,7 @@ GUARD_FE5_CHAPTER11 :?= false
 					macroASMCCountAllUnitsUncapturedAlive Kempf
 					JUMP_FALSE +
 			
-						PLAY_SOUND_WORD $00E0
+						PLAY_SOUND_FORCED $00E0
 						PAUSE_SKIPPABLE 32
 						YIELD
 			
@@ -196,7 +196,7 @@ GUARD_FE5_CHAPTER11 :?= false
 					macroASMCCountAllUnitsUncapturedAlive Kempf
 					JUMP_FALSE _EndChange
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -218,7 +218,7 @@ GUARD_FE5_CHAPTER11 :?= false
 					WAIT_MOVE
 					YIELD
 			
-					PLAY_SOUND_BYTE $6C
+					PLAY_EXTENDED_SOUND $6C
 			
 					macroASMCSingleTileChangeByCoords [8, 2], $03A5
 			
@@ -413,7 +413,7 @@ GUARD_FE5_CHAPTER11 :?= false
 			
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(False, 15)
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -488,7 +488,7 @@ GUARD_FE5_CHAPTER11 :?= false
 			
 					macroASMCUnsetBitsCharacterDataWord Fred, Skills2, (Skill2Anchor | (Skill3Immortal << 8))
 			
-					PLAY_SOUND_BYTE $6C
+					PLAY_EXTENDED_SOUND $6C
 			
 					macroASMCSingleTileChangeByCoords [9, 0], $0389
 					macroASMCSingleTileChangeByCoords [9, 1], $03A9
@@ -559,13 +559,13 @@ GUARD_FE5_CHAPTER11 :?= false
 				MS_END
 			
 				_EndingEvent ; 99/D471
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 16
 					YIELD
 			
 					CALL_ASM_LOOP rlASMCSaveActiveUnitDataChapterEnd, $0000
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -712,7 +712,7 @@ GUARD_FE5_CHAPTER11 :?= false
 				SET_CURSOR_POSITION
 				YIELD
 			
-				PLAY_SOUND_WORD $00E0
+				PLAY_SOUND_FORCED $00E0
 				PAUSE_SKIPPABLE 32
 				YIELD
 			

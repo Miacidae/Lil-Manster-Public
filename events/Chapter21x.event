@@ -141,7 +141,7 @@ GUARD_FE5_CHAPTER21x :?= false
 					SCROLL_CAMERA_COORDS [2, 6], 4
 					YIELD
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -297,7 +297,7 @@ GUARD_FE5_CHAPTER21x :?= false
 			
 					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, $0F
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -313,7 +313,7 @@ GUARD_FE5_CHAPTER21x :?= false
 					DIALOGUE dialogueChapter21xOpening1
 					YIELD
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -343,7 +343,7 @@ GUARD_FE5_CHAPTER21x :?= false
 			
 					CALL_ASM_LOOP rlASMCSetUnitsLeftBehindCoordinates
 			
-					PLAY_SOUND_WORD $00E0
+					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
 					YIELD
 			
@@ -384,7 +384,7 @@ GUARD_FE5_CHAPTER21x :?= false
 						JUMP_TRUE +
 			
 							STORE_WORD wCurrentMapMusic, $0000
-							PLAY_SOUND_WORD $00E0
+							PLAY_SOUND_FORCED $00E0
 							PAUSE_SKIPPABLE 32
 							YIELD
 			
