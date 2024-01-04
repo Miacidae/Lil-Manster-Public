@@ -48,12 +48,12 @@ GUARD_FE5_CHAPTER06 :?= false
 
         _TurnEventDefinitions ; 99/A353
           EVENT FlagAlwaysZero, _CedAppear
-            RUN_ASM $99AF6D
+            RUN_ASM _rlChapter04xCheck
             CMP_WORD wCurrentTurn, 5
             CMP_WORD wCurrentPhase, NPC
           END_DEFINITION
           EVENT FlagAlwaysZero, _CedFlee
-            RUN_ASM $99AF6D
+            RUN_ASM _rlChapter04xCheck
             CMP_WORD wCurrentTurn, 9
             CMP_WORD wCurrentPhase, NPC
           END_DEFINITION
