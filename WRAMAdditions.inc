@@ -522,9 +522,8 @@
 
   .endvirtual
 
-  .virtual $7EB603
+  .virtual $7EB6C3
 
-    aPrepDeploymentSlots        .fill (2 * $60) ; $7EB603
     wPrepDeploymentSlotsOffset        .word ?   ; $7EB6C3
     wPrepUnitListColumn           .word ?   ; $7EB6C5
     wPrepUnitListRow            .word ?   ; $7EB6C7

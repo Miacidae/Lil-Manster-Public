@@ -18,7 +18,12 @@ VOLTEDGE/HDMA/*.h
 VOLTEDGE/PROCS/*.h
 VOLTEDGE/VANILLA/*.h
 
-text_menus/textformatter/output/
+text_menus/textformatter/output/MenuText.asm
+text_menus/textformatter/output/MenuTextFont.2bpp
+text_menus/textformatter/output/MenuTextFont.png
+text_menus/textformatter/output/MenuTextOffsets.bin
+text_menus/textformatter/output/MenuTextSupplement.2bpp
+text_menus/textformatter/output/MenuTextTable.bin
 
 tools/Assembler/syntax/
 tools/Assembler/*.exe

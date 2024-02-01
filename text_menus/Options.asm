@@ -700,7 +700,7 @@ DefaultSettingName
 .here
 
 ;	Window default color
-;	Counted from left to right. Rightmost value is 0. Leftmost is 24.
+;	Counted from right to left. Rightmost value is 0. Leftmost is 24.
 
 * = $0295E5
 .logical lorom($0295E5, 1)
