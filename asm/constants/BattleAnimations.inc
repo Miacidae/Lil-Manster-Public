@@ -1,3 +1,8 @@
+;	Types of animation setting override
+
+	Map		= 1
+	Battle	= 2
+
 ;	Animation script and subsheet addresses
 
 	aBAScript_Soldier_Lance                                = $89EABA

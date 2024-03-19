@@ -1,3 +1,8 @@
+structAnimationOverrides .struct Item, AnimationType
+	.byte \Item
+	.byte \AnimationType
+	.ends
+
 structAnimationMovementData .struct BA_EdgeDistance, BA_SpriteHeight, BA_AttackDistance, BA_AttackSpeed, BA_CritSpeed, Unknown1, BA_OpponentDistance, Unknown2
 	.byte \BA_EdgeDistance
 	.byte \BA_SpriteHeight

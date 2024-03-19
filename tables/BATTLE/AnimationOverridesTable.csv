@@ -1,0 +1,12 @@
+structAnimationOverrides 0,Item,AnimationType
+AnimationOverride00,Loptous,Battle
+AnimationOverride01,Physic,Map
+AnimationOverride02,Rescue,Map
+AnimationOverride03,Warp,Map
+AnimationOverride04,TorchStaff,Map
+AnimationOverride05,ReturnStaff,Map
+AnimationOverride06,Hammerne,Map
+AnimationOverride07,ThiefStaff,Map
+AnimationOverride08,Watch,Map
+AnimationOverride09,Unlock,Map
+AnimationOverride0A,Rewarp,Map

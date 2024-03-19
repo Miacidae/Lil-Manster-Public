@@ -211,6 +211,17 @@ DSizeEnds		     := []
     ; 83B6C8
   
   .here
+  
+  * = $01CE08
+  .logical $83CE08
+  
+    startData
+  
+      aAnimationOverrideTable .include "tables/BATTLE/AnimationOverridesTable.casm"
+  
+    endData  
+  
+  .here
 
 
   * = $01CE64
