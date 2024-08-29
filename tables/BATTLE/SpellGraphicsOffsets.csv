@@ -137,4 +137,4 @@ GraphicsUnknown86,$0,$0,$0,$0
 GraphicsUnknown87,$0,$0,$0,$0
 GraphicsPromotionAgain,$d6f0a0,$7eb000,$2000,$c00
 GraphicsPromotionBGTilemap,$d6f7da,$7eb000,$3800,$1000
-GraphicsHUDNumbers,$c6eae2,$7eb800,$ed82,$c6
+GraphicsHUDNumbers,$c6eae2,$7eb800,<>levelupwithanim,`levelupwithanim
