@@ -1,6 +1,6 @@
 
 dialogueChapter02xOpening1
-	.byte Left_slot ; Left slot
+	.byte Left_Slot ; Left slot
   .word LoadPortrait    ; load portrait
   .word shiva_portrait
 
@@ -8,7 +8,7 @@ dialogueChapter02xOpening1
   .word LoadPortrait    ; load portrait
   .word lifis_portrait
 	
-	.byte Left_slot ; opentext left
+	.byte Left_Slot ; opentext left
 	.byte $09 ; font 9(always use font 9)
 	
 	.text "I shouldn't have to say this, Lifis,"
@@ -21,13 +21,13 @@ dialogueChapter02xOpening1
 	.byte WaitForA
 	.byte ScrollText
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	
 	.byte Right_Slot
 	.word ClearPortrait
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.word ClearPortrait
     .word LoadPortrait    ; load portrait
     .word lifis_portrait
@@ -36,7 +36,7 @@ dialogueChapter02xOpening1
 	.word LoadPortrait    ; load portrait
     .word safie_portrait
 	
-	.byte Left_slot ; Right slot
+	.byte Left_Slot ; Right slot
 	.text "You could stand to give me the time of day,"
 	.byte NewLine
 	.text "Safy. We both know I could get"
@@ -55,7 +55,7 @@ dialogueChapter02xOpening1
 	.text "in fighting for Tahra, I will not falter."
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "T-Take up arms against the Empire?!"
 	.byte NewLine
@@ -106,7 +106,7 @@ dialogueChapter02xOpening1
 	.text "when history is written?"
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Well... I..."
 	.byte WaitForA
@@ -123,7 +123,7 @@ dialogueChapter02xOpening1
 	.text "If it is within my power, I will."
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "It's a deal. I'll talk to my boys,"
 	.byte NewLine
@@ -149,7 +149,7 @@ dialogueChapter02xOpening2
 	.text "We just had to land right as it was getting dark."
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
     .word LoadPortrait    ; load portrait
     .word augustus_portrait
 	.text "The timing isn't ideal, granted,"
@@ -166,7 +166,7 @@ dialogueChapter02xOpening2
 	.text "handy. What are our chances without torches?"
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Your men won't be totally blind, but they'll"
 	.byte NewLine
@@ -189,7 +189,7 @@ dialogueChapter02xOpening2
 	
 dialogueChapter02xReinforcementsDialogue
 
-	.byte Left_slot ; Left slot
+	.byte Left_Slot ; Left slot
   .word LoadPortrait    ; load portrait
   .word bandit_portrait
 
@@ -197,7 +197,7 @@ dialogueChapter02xReinforcementsDialogue
   .word LoadPortrait    ; load portrait
   .word lifis_portrait
 	
-	.byte Left_slot ; opentext left
+	.byte Left_Slot ; opentext left
 	.byte $09 ; font 9(always use font 9)
 	
 	.text "Boss, you really mean to make for Tahra?"
@@ -225,7 +225,7 @@ dialogueChapter02xReinforcementsDialogue
 	.text "grow a conscience when nobody was looking?"
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.word LoadPortrait    ; load portrait
     .word bandit1_portrait
@@ -235,7 +235,7 @@ dialogueChapter02xReinforcementsDialogue
 	.text "scurryin' in from the west!"
 	.byte WaitForA
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "What? Here? You gotta be joking!"
 	.byte WaitForA
@@ -248,21 +248,21 @@ dialogueChapter02xReinforcementsDialogue
 	.byte EndText
 	
 dialogueChapter02xLeifEyvelTalk
-	.byte Left_slot
+	.byte Left_Slot
 	.word LoadPortrait
 	.word leif_portrait
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.word LoadPortrait
 	.word eyvel_portrait
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.text "The pirates seem to have greater numbers..."
 	.byte NewLine
 	.text "Can we make it through this, Commander?"
 	.byte WaitForA
 
-	.byte Right_slot
+	.byte Right_Slot
 	.text "Numbers aren't everything."
 	.byte NewLine
 	.text "We keep our heads about us,"
@@ -270,7 +270,7 @@ dialogueChapter02xLeifEyvelTalk
 	.text "we'll make it through just fine."
 	.byte WaitForA
 
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "O-Of course, Commander."
 	.byte NewLine
@@ -279,7 +279,7 @@ dialogueChapter02xLeifEyvelTalk
 	.text "useful about this Lifis thug?"
 	.byte WaitForA
 
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "Hah! “Thug” is too generous for Lifis."
 	.byte NewLine
@@ -299,7 +299,7 @@ dialogueChapter02xLeifEyvelTalk
 	.byte EndText
 	
 dialogueChapter02xEnding1
-	.byte Left_slot
+	.byte Left_Slot
 	.word LoadPortrait
 	.word leif_portrait
 	
@@ -308,17 +308,17 @@ dialogueChapter02xEnding1
 	.text "but never mind that—is the cleric safe?"
 	.byte WaitForA
 
-	.byte Right_slot
+	.byte Right_Slot
 	.word LoadPortrait
 	.word augustus_potrait
 	.text "Ahem. I've found her, sire."
 	.byte WaitForA
 	.byte ScrollText
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.word ClearPortrait
 	.word LoadPortrait
 	.word safie_portrait
@@ -329,7 +329,7 @@ dialogueChapter02xEnding1
 	.text "Hm? Is that...?"
 	.byte WaitForA
 
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "I beg your pardon, milady."
 	.byte NewLine
@@ -338,21 +338,21 @@ dialogueChapter02xEnding1
 	.text "some grime or blood on my face—"
 	.byte WaitForA
 
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "Have you forgotten me already, Lord Leif?"
 	.byte NewLine
 	.text "It's me, Safy—we met in Tahra."
 	.byte WaitForA
 
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Safy, you say? I knew a young woman"
 	.byte NewLine
 	.text "at the monastery in Tahra by that name."
 	.byte WaitForA
 
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "I only had the honor of seeing you"
 	.byte NewLine
@@ -368,7 +368,7 @@ dialogueChapter02xEnding1
 	.text "who wiped Lady Linoan's face of tears."
 	.byte WaitForA
 
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Ah, now I can place you."
 	.byte NewLine
@@ -377,7 +377,7 @@ dialogueChapter02xEnding1
 	.text "close with Linoan, were you not?"
 	.byte WaitForA
 
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "As close as a woman of common birth can be, I"
 	.byte NewLine
@@ -386,14 +386,14 @@ dialogueChapter02xEnding1
 	.text "father, and I am more her servant than peer."
 	.byte WaitForA
 
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "That aside, how did you come to be here?"
 	.byte NewLine
 	.text "Has something happened to Linoan?"
 	.byte WaitForA
 
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "You mean to say you don't know"
 	.byte NewLine
@@ -414,12 +414,12 @@ dialogueChapter02xEnding1
 	.text "they even began child hunts in Tahra."
 	.byte WaitForA
 
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Child hunts...?"
 	.byte WaitForA
 
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "That proved to be the breaking point."
 	.byte NewLine
@@ -454,7 +454,7 @@ dialogueChapter02xEnding1
 	.text "who would fight in Tahra's defense."
 	.byte WaitForA
 
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Are things truly that dire...?"
 	.byte NewLine
@@ -475,7 +475,7 @@ dialogueChapter02xEnding1
 	.text "Let's be off, Safy."
 	.byte WaitForA
 
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "You will be most welcome in Tahra, Lord Leif."
 	.byte NewLine
@@ -489,7 +489,7 @@ dialogueChapter02xEnding2
 .word PlayMusic
 .byte $41
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 
 .byte Right_Slot
@@ -501,25 +501,25 @@ dialogueChapter02xEnding2
 .text "What are you gonna do with me?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "That's up to the villagers of Iz. We're taking"
 .byte NewLine
 .text "you back there to answer for your crimes."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "We both know what'll happen! You handin' me"
 .byte NewLine
 .text "over to them is as good as killin' me yourself!"
 .byte WaitForA
 
-.byte Left_slot ; Left slot
+.byte Left_Slot ; Left slot
 .byte ScrollText
 .word LoadPortrait; load portrait
 .word safie_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Safy, c'mon, we had a deal—"
 .byte NewLine
@@ -527,11 +527,11 @@ dialogueChapter02xEnding2
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word safie_portrait
 .text "...Lord Leif, Lifis is not an evil man."
@@ -553,7 +553,7 @@ dialogueChapter02xEnding2
 .word LoadPortrait; load portrait
 .word lifis_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .text "...All right. If Safy believes in you,"
 .byte NewLine
 .text "I can give you a chance for the time being."
@@ -563,7 +563,7 @@ dialogueChapter02xEnding2
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah, I've cheated death once again!"
 .byte NewLine

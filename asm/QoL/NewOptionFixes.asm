@@ -138,7 +138,7 @@ OptionMenuCursorFixHook
 	lda #<>aOptionsMenuPointers
 	sta lR18+1
 	ldx wR17 
-	lda $A95F,X 		; main option pointer 
+	lda $A95F,x 		; main option pointer 
 	beq + 				; branch if end reached
 	sta lR18
 	jsr $85D534 		; copy option data to ram 
@@ -191,7 +191,7 @@ OptionsMenuLeftPress
 	lda $A99F 			; option offset, animation = 0, terrain = 1,...
 	asl
 	tax 
-	lda $A95F,X  		; options main pointer 
+	lda $A95F,x  		; options main pointer 
 	sta lR18
 	jsr rsCopyOptionsPointerData			; copies pointer data to ram 
 
@@ -228,7 +228,7 @@ OptionsMenuRightPress
 	lda $A99F 			; main option number eg animation = 0 
 	asl
 	tax 
-	lda $A95F,X  		; options main pointer 
+	lda $A95F,x  		; options main pointer 
 	sta lR18
 	jsr rsCopyOptionsPointerData			; copies pointer data to ram 
 
@@ -277,7 +277,7 @@ NybbleShiftingGetter
 	lsr
 	ldx wR0
 	sta wR0
-	lda $A97F,X 	; selected option offset /// X needs to be :4'd 
+	lda $A97F,x 	; selected option offset /// X needs to be :4'd 
 	ldx wR0			; use main option offset as counter
 
 	-
@@ -318,7 +318,7 @@ NybbleShiftingSaver ; A has new selected option value to store
 	asl
 	asl
 	sta wR1 		; amount of times ^ needs to be shifted 
-	lda $A97F,X 	; selected option offset  
+	lda $A97F,x 	; selected option offset  
 	ldx wR1
 
 	-
@@ -338,7 +338,7 @@ NybbleShiftingSaver ; A has new selected option value to store
 
 	+ ; finished shifting 
 	and #$FFF0 		; null the thing to be modified and keep the other 3 nybbles
-	ora $01,S 		; ora the value onto it
+	ora #1,s 		; ora the value onto it
 	ldx wR1 
 	-
 	cpx #0
@@ -356,7 +356,7 @@ NybbleShiftingSaver ; A has new selected option value to store
 
 	+
 	ldx wR0
-	sta $A97F,X 	; store new value there
+	sta $A97F,x 	; store new value there
 	pla
 
 	rts
@@ -364,7 +364,7 @@ NybbleShiftingSaver ; A has new selected option value to store
 
 Repointed85DAEA			; enters with X:4
 
-	lda $A97F,X 		; currently selected options // correct
+	lda $A97F,x 		; currently selected options // correct
 	pha
 	jsr rsHighAndUnHighlightTilesCycle
 	jsr rsRepointed85E07E
@@ -411,9 +411,9 @@ rsHighAndUnHighlightTilesCycle
 	asl
 	asl
 	tay
-	lda $A947,Y 	; position 1,Y 
+	lda $A947,y 	; position 1,y
 	sta wR0
-	lda $A949,Y 	; tiles to highlight,Y 
+	lda $A949,y 	; tiles to highlight,y
 	sta wR1 
 	plx
 	lda $A99F
@@ -444,9 +444,9 @@ rsHighAndUnHighlightTilesInit
 	asl
 	asl
 	tay
-	lda $A947,Y 	; position 1,Y 
+	lda $A947,y 	; position 1,y
 	sta wR0
-	lda $A949,Y 	; tiles to highlight,Y 
+	lda $A949,y 	; tiles to highlight,y
 	sta wR1 
 	plx
 	jsr rsHightlightTiles
@@ -458,17 +458,17 @@ rsHighAndUnHighlightTilesInit
 rsUnhightlightTiles 	; unhighlight tiles of previous option , enters with X:4, also exits with X:4
 
 	phx
-	lda aHighAndUnHighlightTilesCoordTable,X 	; in vanilla x is option x2
+	lda aHighAndUnHighlightTilesCoordTable,x 	; in vanilla x is option x2
 	tay 
 	ldx #$000D ; width to clear
 
 	-
-	lda <>aBG3TilemapBuffer,Y
+	lda <>aBG3TilemapBuffer,y
 	ora #$0400
-	sta <>aBG3TilemapBuffer,Y
-	lda <>aBG3TilemapBuffer+$40,Y
+	sta <>aBG3TilemapBuffer,y
+	lda <>aBG3TilemapBuffer+$40,y
 	ora #$0400
-	sta <>aBG3TilemapBuffer+$40,Y
+	sta <>aBG3TilemapBuffer+$40,y
 	iny
 	iny
 	dex
@@ -483,18 +483,18 @@ rsHightlightTiles
 	lda wR0 		; position 
 	asl
 	clc
-	adc aHighAndUnHighlightTilesCoordTable,X 
+	adc aHighAndUnHighlightTilesCoordTable,x
 	tay 
 	ldx wR1 
 	dex
 
 	-
-	lda $E77C,Y 
+	lda $E77C,y
 	and #$FBFF
-	sta $E77C,Y
-	lda $E7BC,Y
+	sta $E77C,y
+	lda $E7BC,y
 	and #$FBFF
-	sta $E7BC,Y
+	sta $E7BC,y
 	iny
 	iny
 	dex
@@ -510,7 +510,7 @@ rsRepointed85E07E
 	lda $A99F
 	asl
 	tax 
-	lda $85D5C3,X 
+	lda $85D5C3,x
 	xba
 	and #$00FF
 	asl
@@ -538,7 +538,7 @@ rsOptionDMAtoVRAM
 	tax 
 	lda #$7EE7
 	sta lR18+1
-	lda $85D5C3,X 
+	lda $85D5C3,x
 	xba
 	and #$00FF
 	asl
@@ -724,7 +724,7 @@ rlInventoryWEXPBars
 
 	_Loop
 	ldx wR17
-	lda aInventoryWEXPBarStats,X
+	lda aInventoryWEXPBarStats,x
 	bne +
 
 	jmp _End
@@ -770,47 +770,47 @@ rlInventoryWEXPBars
 
 	; left bar special, right bar empty 
 
-	lda aInventoryWEXPBarTilemapTable,X
+	lda aInventoryWEXPBarTilemapTable,x
 	pha
 	ldx wR17
-	lda aInventoryWEXPBarTilemapBufferTable,X
+	lda aInventoryWEXPBarTilemapBufferTable,x
 	tax
 	pla
-	sta $7E0000,X
+	sta $7E0000,x
 	inx
 	inx
 	lda #$0CB0 + $2000	; empty bar tile
-	sta $7E0000,X
+	sta $7E0000,x
 	bra _NextBar
 
 
 	_SpecialRight
 
-	lda aInventoryWEXPBarTilemapTable,X
+	lda aInventoryWEXPBarTilemapTable,x
 	pha
 	ldx wR17
-	lda aInventoryWEXPBarTilemapBufferTable,X
+	lda aInventoryWEXPBarTilemapBufferTable,x
 	tax
 	pla
 	inx
 	inx
-	sta $7E0000,X
+	sta $7E0000,x
 	lda #$0CB4 + $2000 	; full left bar 
 	dex
 	dex
-	sta $7E0000,X
+	sta $7E0000,x
 	bra _NextBar
 
 	_EmptyBar
 
 	ldx wR17
-	lda aInventoryWEXPBarTilemapBufferTable,X
+	lda aInventoryWEXPBarTilemapBufferTable,x
 	tax
 	lda #$0CB0 + $2000	; empty bar tile
-	sta $7E0000,X
+	sta $7E0000,x
 	inx
 	inx
-	sta $7E0000,X
+	sta $7E0000,x
 
 	
 	_NextBar
@@ -833,7 +833,7 @@ rsDrawWEXPNumber ; input: WEXP in A
 	lda #>`$83C0F6
 	sta aCurrentTilemapInfo.lInfoPointer+1,b
 
-	lda aInventoryNewWEXPBarCoordinateTable,X
+	lda aInventoryNewWEXPBarCoordinateTable,x
 	tax
 	lda #$268F 	
 	sta aCurrentTilemapInfo.wBaseTile,b
@@ -848,7 +848,7 @@ rsDrawWEXPNumber ; input: WEXP in A
 	phx
 	asl a
 	tax
-	lda aInventoryWEXPNumberTileTable,X
+	lda aInventoryWEXPNumberTileTable,x
 	sta wR14
 	stz wR15
 
@@ -1454,7 +1454,7 @@ rlCritInBattle
 	lda @l aActionStructUnit1.BattleAdjustedCrit
 
 	+
-	sta $003E,b,X
+	sta $003E,b,x
 
 
 	lda @l aActionStructUnit2.BattleAdjustedHit
@@ -1464,7 +1464,7 @@ rlCritInBattle
 	lda @l aActionStructUnit2.BattleAdjustedCrit
 
 	+
-	sta $003E,b,Y
+	sta $003E,b,y
 	rep #$20
 
 	_Vanilla
@@ -1508,25 +1508,25 @@ rlCritInBattleActualStats
 	and #$0F00
 	bne _Modified
 
-	lda _LevelCombatStatTable,X 
+	lda _LevelCombatStatTable,x
 	inx 
 	inx 
 	pha 
-	lda _LevelCombatStatTable,X 
+	lda _LevelCombatStatTable,x
 	sta lR18
 	inx 
-	lda _LevelCombatStatTable,X 
+	lda _LevelCombatStatTable,x
 	bra +
 
 	_Modified
-	lda _CritCombatStatTable,X 
+	lda _CritCombatStatTable,x
 	inx 
 	inx 
 	pha 
-	lda _CritCombatStatTable,X 
+	lda _CritCombatStatTable,x
 	sta lR18
 	inx 
-	lda _CritCombatStatTable,X 
+	lda _CritCombatStatTable,x
 
 	+
 	sta lR18+1
@@ -1535,7 +1535,7 @@ rlCritInBattleActualStats
 	pla 
 	phx 
 	tax 
-	lda [lR18],Y
+	lda [lR18],y
 	cmp #100
 	bcc +
 
@@ -1569,7 +1569,7 @@ rlCritInBattleActualStats
 
 
 	jsl rlDMAByStruct
-	.dstruct structDMAToVRAM, BattleStatsLevel, $0030, VMAIN_Setting(True), $F690
+	.dstruct structDMAToVRAM, BattleStatsLevel, $0030, VMAIN_Setting(true), $F690
 
 
 	_Vanilla
@@ -2047,13 +2047,13 @@ aInventorySkillIconCoordinateTable
 rlDMAMoreOptionGraphics
 
 	jsl rlDMAByStruct
-	.dstruct structDMAToVRAM, $7FB0F5, $0C00, VMAIN_Setting(True), $5000 ; normal graphic
+	.dstruct structDMAToVRAM, $7FB0F5, $0C00, VMAIN_Setting(true), $5000 ; normal graphic
 
 	jsl rlDMAByStruct
-	.dstruct structDMAToVRAM, AdditionalOptionGraphics, $0080, VMAIN_Setting(True), $5C00
+	.dstruct structDMAToVRAM, AdditionalOptionGraphics, $0080, VMAIN_Setting(true), $5C00
 
 	jsl rlDMAByStruct
-	.dstruct structDMAToVRAM, (AdditionalOptionGraphics+$200), $0080, VMAIN_Setting(True), $5E00
+	.dstruct structDMAToVRAM, (AdditionalOptionGraphics+$200), $0080, VMAIN_Setting(true), $5E00
 
 	rtl
 

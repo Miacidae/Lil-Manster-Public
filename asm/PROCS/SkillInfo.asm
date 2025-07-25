@@ -137,7 +137,7 @@ rlProcSkillInfoOnCycle ; 81/F8FA
 	jsr rlProcSkillInfoDrawSkillType
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer+$0780, $03C0, VMAIN_Setting(True), $A780
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer+$0780, $03C0, VMAIN_Setting(true), $A780
 
 	plb
 	plp

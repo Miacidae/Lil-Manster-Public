@@ -82,7 +82,7 @@ rlRenderObjectiveMarkers ; 81/C318
 	plp
 	rtl
 
-	_Sprite .dstruct structSpriteArray, [[[0, 0], $61, True, $000, 2, 0, False, False]] ; 81/C37B
+	_Sprite .dstruct structSpriteArray, [[[0, 0], $61, true, $000, 2, 0, false, false]] ; 81/C37B
 
 	_FrameTable ; 81/C382
 	.for n in range(2, 8, 2)
@@ -251,10 +251,10 @@ rsAppendObjectiveMarkerArray ; 81/C40D
 
 aObjectiveMarkerArrowSpriteTable ; 81/C444
 	; Tile ID, X flip, Y flip
-	_Right	.word $011E | (False << 14) | (False << 15)
-	_Left	.word $011E | (True  << 14) | (False << 15)
-	_Up		.word $0124 | (False << 14) | (False << 15)
-	_Down	.word $0124 | (False << 14) | (True  << 15)
+	_Right	.word $011E | (false << 14) | (false << 15)
+	_Left	.word $011E | (true  << 14) | (false << 15)
+	_Up		.word $0124 | (false << 14) | (false << 15)
+	_Down	.word $0124 | (false << 14) | (true  << 15)
 
 rlFindObjectiveMarker ; 81/C44C
 

@@ -1,5 +1,5 @@
 dialogueLeifDeathNannaReaction
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word nanna_portrait
 .text "Aaah!"
@@ -11,7 +11,7 @@ dialogueLeifDeathNannaReaction
 .byte EndText
 
 dialogueLeifDeathFinnReaction
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word finn_portrait
 .text "Lord Leif...!"
@@ -21,7 +21,7 @@ dialogueLeifDeathFinnReaction
 .byte EndText
 
 dialogueLeifDeathEyvelReaction
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word eyvel_portrait
 .text "No..."
@@ -33,7 +33,7 @@ dialogueLeifDeathEyvelReaction
 .byte EndText
 
 dialogueLeifDeathDoriasReaction
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "N-No..."
@@ -43,7 +43,7 @@ dialogueLeifDeathDoriasReaction
 .byte EndText
 
 dialogueLeifDeathAugustReaction
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "Prince Leif...is dead...?"

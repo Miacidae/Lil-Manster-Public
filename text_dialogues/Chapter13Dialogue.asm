@@ -1,6 +1,6 @@
 dialogueChapter13MasterSealHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word moustache_portrait
 .text "Bleedin' Baldr, so you're the folks"
@@ -27,7 +27,7 @@ dialogueChapter13MasterSealHouse
 
 dialogueChapter13ArmorslayerHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldman_portrait
 .text "If you're headed to help Tahra, watch out"
@@ -49,7 +49,7 @@ dialogueChapter13ArmorslayerHouse
 
 dialogueChapter13HammerHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word beardedman_portrait
 .text "Right in the nick of time!"
@@ -74,30 +74,30 @@ dialogueChapter13HammerHouse
 
 dialogueChapter13GladeFinn
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word glade_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word finn_portrait
 .text "Glade! You're all right!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Finn! It feels like a lifetime since last we met..."
 .byte NewLine
 .text "How long has it been?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ten years. The last time we stood together"
 .byte NewLine
 .text "was at the battle for Ulster..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That's right..."
 .byte WaitForA
@@ -109,7 +109,7 @@ dialogueChapter13GladeFinn
 .text "You have my deepest thanks, truly."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The feeling is mutual, Sir Glade. After all,"
 .byte NewLine
@@ -127,7 +127,7 @@ dialogueChapter13GladeFinn
 .text "wouldn't have been able to come this far."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I merely kept my word, nothing more."
 .byte NewLine
@@ -141,7 +141,7 @@ dialogueChapter13GladeFinn
 .text "We swore to defend them both with our lives."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Well, looking around us, I'd say we've finally"
 .byte NewLine
@@ -157,7 +157,7 @@ dialogueChapter13GladeFinn
 .text "We cannot lose focus, even for but a moment."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Indeed. Until the flag of the Gáe Bolg"
 .byte NewLine
@@ -192,11 +192,11 @@ dialogueChapter13GladeFinn
 
 dialogueChapter13GladeSelphinaA
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word glade_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word selphina_portrait
 .text "Glade! Oh, it does my heart a world of good"
@@ -204,13 +204,13 @@ dialogueChapter13GladeSelphinaA
 .text "to see you safe..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Selphina..."
 .byte NewLine
 .text "You came along too, my beloved?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Of course! Prince Leif heard that Tahra"
 .byte NewLine
@@ -219,7 +219,7 @@ dialogueChapter13GladeSelphinaA
 .text "Oh, I'm truly grateful to be with you again..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm deeply sorry to have worried you."
 .byte WaitForA
@@ -234,7 +234,7 @@ dialogueChapter13GladeSelphinaA
 .text "I lament just how weak I am..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No! My dearest, you are the highest exemplar"
 .byte NewLine
@@ -246,7 +246,7 @@ dialogueChapter13GladeSelphinaA
 .text "So, please, don't be so hard on yourself..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Thank you, Selphina. Ah, did the gods smile"
 .byte NewLine
@@ -260,7 +260,7 @@ dialogueChapter13GladeSelphinaA
 .text "Here. I want you to take a look at this."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "This is...?"
 .byte NewLine
@@ -272,7 +272,7 @@ dialogueChapter13GladeSelphinaA
 .text "Just like the ones in the legends!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I came across it by chance during my time"
 .byte NewLine
@@ -284,7 +284,7 @@ dialogueChapter13GladeSelphinaA
 .text "Will you use it?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Of course I will!"
 .byte NewLine
@@ -298,11 +298,11 @@ dialogueChapter13GladeSelphinaA
 
 dialogueChapter13GladeSelphinaB
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word glade_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word selphina_portrait
 .text "Glade! Oh, it does my heart a world of good"
@@ -310,20 +310,20 @@ dialogueChapter13GladeSelphinaB
 .text "to see you safe..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Selphina..."
 .byte NewLine
 .text "You came along too, my beloved?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Of course! Prince Leif heard that Tahra"
 .byte NewLine
 .text "was in jeopardy, and we set off together."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah, so I saw! I had the honor"
 .byte NewLine
@@ -337,7 +337,7 @@ dialogueChapter13GladeSelphinaB
 .text "and now he's already a boy of 15..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I shared your shock when I reunited with him,"
 .byte NewLine
@@ -346,7 +346,7 @@ dialogueChapter13GladeSelphinaB
 .text "has grown so tall..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...He's no longer a boy, is he? He's a man."
 .byte NewLine
@@ -355,7 +355,7 @@ dialogueChapter13GladeSelphinaB
 .text "a striking resemblance to Prince Quan."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed? I thought he bore more of"
 .byte NewLine
@@ -364,7 +364,7 @@ dialogueChapter13GladeSelphinaB
 .text "I could feel Lady Ethlyn's grace once again..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Truly? Ah, but he must get his eyes"
 .byte NewLine
@@ -373,7 +373,7 @@ dialogueChapter13GladeSelphinaB
 .text "He has the same determined gaze as his father."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Oh, nonsense! He gets his eyes from Lady"
 .byte NewLine
@@ -382,7 +382,7 @@ dialogueChapter13GladeSelphinaB
 .text "and I remember her face all the better for it."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "All right, all right, point taken, my dearest."
 .byte NewLine
@@ -396,7 +396,7 @@ dialogueChapter13GladeSelphinaB
 .text "the two of them in a few different ways."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah... You've the right of it, of course."
 .byte NewLine
@@ -408,7 +408,7 @@ dialogueChapter13GladeSelphinaB
 .text "of Lady Ethlyn, and I..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No, I understand..."
 .byte NewLine
@@ -429,7 +429,7 @@ dialogueChapter13GladeSelphinaB
 .text "to have left Prince Leif behind?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I... I don't know."
 .byte WaitForA
@@ -465,19 +465,19 @@ dialogueChapter13GladeSelphinaB
 .text "mistaken for a waking nightmare..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Selphina...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I-I'm sorry..."
 .byte NewLine
 .text "I swore I would never cry again..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No, it's better to let it out now."
 .byte WaitForA
@@ -489,7 +489,7 @@ dialogueChapter13GladeSelphinaB
 .text "Take a look at this bow, Selphina."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "This is...?"
 .byte NewLine
@@ -501,7 +501,7 @@ dialogueChapter13GladeSelphinaB
 .text "Just like the ones in the legends!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I came across it by chance during my time"
 .byte NewLine
@@ -513,7 +513,7 @@ dialogueChapter13GladeSelphinaB
 .text "Will you use it?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Of course I will!"
 .byte NewLine
@@ -527,11 +527,11 @@ dialogueChapter13GladeSelphinaB
 
 dialogueChapter13GladeLeif
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word glade_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "Glade...?"
@@ -539,7 +539,7 @@ dialogueChapter13GladeLeif
 .text "A-Are you the knight Glade, sir?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Hm...?"
 .byte NewLine
 .text "Prince Leif?!"
@@ -547,7 +547,7 @@ dialogueChapter13GladeLeif
 .text "It... It can't be..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word dorias_portrait
@@ -568,7 +568,7 @@ dialogueChapter13GladeLeif
 .text "is also his doing—and his to command."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "House Leonster's army and the Liberation"
 .byte NewLine
@@ -577,7 +577,7 @@ dialogueChapter13GladeLeif
 .text "been answered, Duke Dorius!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed, Glade—our homeland of Leonster"
 .byte NewLine
@@ -593,17 +593,17 @@ dialogueChapter13GladeLeif
 .text "over the land of Njörun!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah... The day has finally come...!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word leif_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Prince Leif... Long have we mourned the"
 .byte NewLine
@@ -617,13 +617,13 @@ dialogueChapter13GladeLeif
 .text "and realize his will!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "I shall!"
 .byte NewLine
 .text "Join me, Glade, and we'll reclaim Leonster!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah! You needn't ask, milord!"
 .byte NewLine
@@ -637,17 +637,17 @@ dialogueChapter13GladeLeif
 
 dialogueChapter13Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word liszt_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word paulus_portrait
 .text "How's our situation here, General Liszt?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "We have the city surrounded, Colonel Paulus."
 .byte NewLine
 .text "I formally request that we begin our assault"
@@ -655,7 +655,7 @@ dialogueChapter13Opening1
 .text "now."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Why the hurry? Baldach and the 8th Division"
 .byte NewLine
@@ -667,7 +667,7 @@ dialogueChapter13Opening1
 .text "we'd only be wasting good soldiers."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I see. As you wish, Colonel."
 .byte WaitForA
@@ -677,7 +677,7 @@ dialogueChapter13Opening1
 
 dialogueChapter13Opening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word liszt_portrait
 .text "Hmph! I'll be damned if I just sit on my hands"
@@ -697,11 +697,11 @@ dialogueChapter13Opening2
 
 dialogueChapter13Opening3
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word glade_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dean_portrait
 .text "The Empire's finally making their move..."
@@ -709,7 +709,7 @@ dialogueChapter13Opening3
 .text "What's the plan, Glade?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "...The reality is that we can't match"
 .byte NewLine
 .text "the strength of their army."
@@ -717,7 +717,7 @@ dialogueChapter13Opening3
 .text "All we can do is postpone the inevitable."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word eda_portrait
@@ -728,7 +728,7 @@ dialogueChapter13Opening3
 .text "I reckon that would buy you some time, but—"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word dean_portrait
@@ -747,7 +747,7 @@ dialogueChapter13Opening3
 .text "Impatience will just get you killed."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "All due respect, Brother, but this isn't"
 .byte NewLine
@@ -763,7 +763,7 @@ dialogueChapter13Opening3
 .text "of knights to the field."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "But will your small band of knights be enough"
 .byte NewLine
@@ -775,7 +775,7 @@ dialogueChapter13Opening3
 .text "Your men will have to go it alone."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...We must call upon Prince Shannan."
 .byte NewLine
@@ -794,7 +794,7 @@ dialogueChapter13Opening3
 .text "Would that I knew why he refuses to help us!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Tch... That pompous little dastard?"
 .byte WaitForA
@@ -806,7 +806,7 @@ dialogueChapter13Opening3
 .text "I just don't understand that guy..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "So he means to keep womanizing"
 .byte NewLine
@@ -818,7 +818,7 @@ dialogueChapter13Opening3
 .text "We must fight the inevitable on our own, then."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Don't push yourself, Glade."
 .byte NewLine
@@ -828,7 +828,7 @@ dialogueChapter13Opening3
 .text "However this ends, we've got a long way to go."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Yes..."
 .byte NewLine
@@ -840,11 +840,11 @@ dialogueChapter13Opening3
 
 dialogueChapter13Opening4
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "My prince, take a gander"
@@ -862,7 +862,7 @@ dialogueChapter13Opening4
 .text "The Empire has already begun their assault!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "To arms, then!"
 .byte NewLine
 .text "Tell our forces to charge into Tahra!"
@@ -870,7 +870,7 @@ dialogueChapter13Opening4
 .text "We can't abandon the city's people!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That will not do, my prince. The main body"
 .byte NewLine
@@ -889,7 +889,7 @@ dialogueChapter13Opening4
 .text "more than their share of danger."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...I'm aware of the risks. But if we stand here"
 .byte NewLine
@@ -899,16 +899,16 @@ dialogueChapter13Opening4
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "Are you in agreement, August?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "I am. If we do nothing to defend Tahra,"
 .byte NewLine
 .text "we lose the support of the people."
@@ -928,13 +928,13 @@ dialogueChapter13Opening4
 
 dialogueChapter13Closing
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word linoan_portrait
 .text "...L-Lord Leif?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "Linoan!"
@@ -942,7 +942,7 @@ dialogueChapter13Closing
 .text "Good, I made it in time... Just barely..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Lord Leif! I... I can scarcely believe my eyes!"
 .byte NewLine
@@ -952,7 +952,7 @@ dialogueChapter13Closing
 .text "Gods above, I give thanks for your mercy..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Linoan, you have my apologies."
 .byte NewLine
@@ -971,7 +971,7 @@ dialogueChapter13Closing
 .text "Because of me, your father..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No, you have it all wrong!"
 .byte WaitForA
@@ -1016,7 +1016,7 @@ dialogueChapter13Closing
 .text "in the face of this crisis..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Dry your eyes, Linoan. Fear not."
 .byte NewLine
@@ -1130,7 +1130,7 @@ dialogueChapter13WorldMap2
 
 dialogueChapter13Fall
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "T-Tahra has fallen!"

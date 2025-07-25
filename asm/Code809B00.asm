@@ -5,10 +5,10 @@ rsUnknown809B00 ; 80/9B00
 	.databank ?
 
 	sep #$30
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	stz bUnknown000F54,b
-	lda #0 		; HDMAEN_Setting(False, False, False, False, False, False, False, False)
+	lda #0 		; HDMAEN_Setting(false, false, false, false, false, false, false, false)
 	sta @l HDMAEN
 	rep #$30
 	jsl rlDMAPaletteAndOAMBuffer
@@ -115,9 +115,9 @@ rsUnknown809B80 ; 80/9B80
 	jsl rlResetRNTable
 
 	sep #$20
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
-	lda #BGMODE_Setting(BG_Mode1, false, false, false, false, True)
+	lda #BGMODE_Setting(BG_Mode1, false, false, false, false, true)
 	sta bBufferBGMODE
 	lda bBufferBG1SC
 	and #~BGSC_Size
@@ -143,11 +143,11 @@ rsUnknown809C55 ; 80/9C55
 	rep #$30
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $F3CC80, $2800, VMAIN_Setting(True), $B800
+	.dstruct structDMAToVRAM, $F3CC80, $2800, VMAIN_Setting(true), $B800
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $F1F080, $800, VMAIN_Setting(True), $2000
+	.dstruct structDMAToVRAM, $F1F080, $800, VMAIN_Setting(true), $2000
 
 	lda #$0000
 	sta $7E4FC4
@@ -227,7 +227,7 @@ rsUnknown809D0F ; 80/9D0F
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -278,7 +278,7 @@ rsUnknown809D0F ; 80/9D0F
 	jsl rlProcEngineCreateProc
 	sep #$20
 	stz bBufferINIDISP
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
@@ -292,7 +292,7 @@ rsUnknown809DBA ; 80/9DBA
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -329,7 +329,7 @@ rsUnknown809DBA ; 80/9DBA
 	sta $7E4FBC
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $7F2614, $2000, VMAIN_Setting(True), $0000
+	.dstruct structDMAToVRAM, $7F2614, $2000, VMAIN_Setting(true), $0000
 
 	phx
 	lda #(`procFadeInClearJoypad)<<8
@@ -340,7 +340,7 @@ rsUnknown809DBA ; 80/9DBA
 	plx
 	sep #$20
 	stz bBufferINIDISP
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
@@ -354,7 +354,7 @@ rsUnknown809E46 ; 80/9E46
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -376,7 +376,7 @@ rsUnknown809E46 ; 80/9E46
 	jsl rlProcEngineCreateProc
 	sep #$20
 	stz bBufferINIDISP
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
@@ -390,7 +390,7 @@ rsUnknown809E95 ; 80/9E95
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -415,7 +415,7 @@ rsUnknown809E95 ; 80/9E95
 	jsl rlProcEngineCreateProc
 	sep #$20
 	stz bBufferINIDISP
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
@@ -429,7 +429,7 @@ rsUnknown809EF0 ; 80/9EF0
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -450,15 +450,15 @@ rsUnknown809EF0 ; 80/9EF0
 	sta $7E4FBC
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0700, VMAIN_Setting(True), $E000
+	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0700, VMAIN_Setting(true), $E000
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG2TilemapBuffer, $0700, VMAIN_Setting(True), $F000
+	.dstruct structDMAToVRAM, aBG2TilemapBuffer, $0700, VMAIN_Setting(true), $F000
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0700, VMAIN_Setting(True), $A000
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0700, VMAIN_Setting(true), $A000
 
 	lda wPrepScreenFlag,b
 	beq +
@@ -468,9 +468,9 @@ rsUnknown809EF0 ; 80/9EF0
 
 	+
 	sep #$20
-	lda #INIDISP_Setting(False, 15)
+	lda #INIDISP_Setting(false, 15)
 	sta bBufferINIDISP
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
@@ -484,7 +484,7 @@ rsUnknown809F74 ; 80/9F74
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -516,7 +516,7 @@ rsUnknown809F74 ; 80/9F74
 	jsl rlProcEngineCreateProc
 	sep #$20
 	stz bBufferINIDISP
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
@@ -617,7 +617,7 @@ rsUnknown80A059 ; 80/A059
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -643,7 +643,7 @@ rsUnknown80A059 ; 80/A059
 	jsl rlProcEngineCreateProc
 	sep #$20
 	stz bBufferINIDISP
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
@@ -659,7 +659,7 @@ rsUnknown80A0B5 ; 80/A0B5
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -687,7 +687,7 @@ rsUnknown80A0B5 ; 80/A0B5
 	sta $7E4FBC
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $7F2614, $2000, VMAIN_Setting(True), $0000
+	.dstruct structDMAToVRAM, $7F2614, $2000, VMAIN_Setting(true), $0000
 
 	phx
 	lda #(`procFadeInAfterSound)<<8
@@ -698,7 +698,7 @@ rsUnknown80A0B5 ; 80/A0B5
 	plx
 	sep #$20
 	stz bBufferINIDISP
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 	jsl rlEnableVBlank
 	plp
@@ -714,15 +714,15 @@ rsUnknown80A139 ; 80/A139
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0700, VMAIN_Setting(True), $E000
+	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0700, VMAIN_Setting(true), $E000
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG2TilemapBuffer, $0700, VMAIN_Setting(True), $F000
+	.dstruct structDMAToVRAM, aBG2TilemapBuffer, $0700, VMAIN_Setting(true), $F000
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0700, VMAIN_Setting(True), $A000
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0700, VMAIN_Setting(true), $A000
 
 	rts
 
@@ -735,7 +735,7 @@ rsUnknown80A161 ; 80/A161
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -774,7 +774,7 @@ rsUnknown80A161 ; 80/A161
 	sep #$20
 	stz bBufferINIDISP
 
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 
 	jsl rlEnableVBlank
@@ -791,7 +791,7 @@ rsUnknown80A1E0 ; 80/A1E0
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -817,9 +817,9 @@ rsUnknown80A1E0 ; 80/A1E0
 	sta $7E4FBC
 
 	sep #$20
-	lda #INIDISP_Setting(False, 15)
+	lda #INIDISP_Setting(false, 15)
 	sta bBufferINIDISP
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 
 	jsl rlEnableVBlank
@@ -842,7 +842,7 @@ rsUnknown80A23A ; 80/A23A
 	.databank `*
 
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 
@@ -907,20 +907,20 @@ rsUnknown80A23A ; 80/A23A
 	jsl rlUnknown8CC669
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $7FB0F5, $2000, VMAIN_Setting(True), $6000
+	.dstruct structDMAToVRAM, $7FB0F5, $2000, VMAIN_Setting(true), $6000
 
 	jsl rlUnknown8CC670
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $7FB0F5, $2000, VMAIN_Setting(True), $8000
+	.dstruct structDMAToVRAM, $7FB0F5, $2000, VMAIN_Setting(true), $8000
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, g4bppBlank80A43E, size(g4bppBlank80A43E), VMAIN_Setting(True), $7FE0
+	.dstruct structDMAToVRAM, g4bppBlank80A43E, size(g4bppBlank80A43E), VMAIN_Setting(true), $7FE0
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, g4bppBlank80A43E, size(g4bppBlank80A43E), VMAIN_Setting(True), $9FE0
+	.dstruct structDMAToVRAM, g4bppBlank80A43E, size(g4bppBlank80A43E), VMAIN_Setting(true), $9FE0
 
 	jsl rlUnknown8CC677
 	lda #(`aBG1TilemapBuffer)<<8
@@ -942,11 +942,11 @@ rsUnknown80A23A ; 80/A23A
 	jsl rlBlockAddWord
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG2TilemapBuffer, $0800, VMAIN_Setting(True), $F800
+	.dstruct structDMAToVRAM, aBG2TilemapBuffer, $0800, VMAIN_Setting(true), $F800
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, g2bppBlank80A43E, size(g2bppBlank80A43E), VMAIN_Setting(True), $BFF0
+	.dstruct structDMAToVRAM, g2bppBlank80A43E, size(g2bppBlank80A43E), VMAIN_Setting(true), $BFF0
 
 	lda #(`aBG1TilemapBuffer)<<8
 	sta lR18+1
@@ -958,7 +958,7 @@ rsUnknown80A23A ; 80/A23A
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(True), $D000
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(true), $D000
 
 	jsl rlUnknown8CC6A1
 	lda #(`$7FB135)<<8
@@ -975,7 +975,7 @@ rsUnknown80A23A ; 80/A23A
 	jsl rlLoadDialogueBGDialogueBoxGraphicsAndPalette
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0800, VMAIN_Setting(True), $F000
+	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0800, VMAIN_Setting(true), $F000
 
 	jsl rlGetDialogueBoxGraphicsPointer
 	lda #(`$7FB0F5)<<8
@@ -1012,9 +1012,9 @@ rsUnknown80A23A ; 80/A23A
 	sta wBufferBG3VOFS
 	sta wBufferBG3HOFS
 	sep #$20
-	lda #T_Setting(True, False, False, False, False)
+	lda #T_Setting(true, false, false, false, false)
 	sta bBufferTM
-	lda #INIDISP_Setting(False)
+	lda #INIDISP_Setting(false)
 	sta bBufferINIDISP
 	rep #$20
 	lda #$0007
@@ -1076,9 +1076,9 @@ rsUnknown80A488 ; 80/A488
 	.databank ?
 
 	sep #$30
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
-	lda #0 ; HDMAEN_Setting(False, False, False, False, False, False, False, False)
+	lda #0 ; HDMAEN_Setting(false, false, false, false, false, false, false, false)
 	sta @l HDMAEN
 	rep #$30
 
@@ -1372,7 +1372,7 @@ rsUnknown80A605 ; 80/A605
 	.databank ?
 
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	rep #$20
 	jsl rlProcessDMAStructArray
@@ -1399,7 +1399,7 @@ rsUnknown80A63B ; 80/A63B
 	stz NMITIMEN,b
 	stz bBufferNMITIMEN
 
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 
@@ -1492,10 +1492,10 @@ rlUnknown80A6CA ; 80/A6CA
 	.databank `*
 
 	sep #$30
-	lda #NMITIMEN_Setting(True, False, False, False)
+	lda #NMITIMEN_Setting(true, false, false, false)
 	sta NMITIMEN,b
 	sta bBufferNMITIMEN
-	lda #WRIO_Setting(False, True, 0)
+	lda #WRIO_Setting(false, true, 0)
 	sta WRIO,b
 	stz WRMPYA,b
 	stz WRMPYB,b
@@ -1513,7 +1513,7 @@ rlUnknown80A6CA ; 80/A6CA
 	stz MDMAEN,b
 	stz HDMAEN,b
 	stz bBufferHDMAEN
-	lda #MEMSEL_Setting(True)
+	lda #MEMSEL_Setting(true)
 	sta MEMSEL,b
 	sta bBufferMEMSEL
 	plp
@@ -1535,7 +1535,7 @@ rlUnknown80A711 ; 80/A711
 	.databank `*
 
 	sep #$30
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	lda #0
@@ -1607,10 +1607,10 @@ rlUnknown80A711 ; 80/A711
 	stz M7D,b
 	stz M7X,b
 	stz M7Y,b
-	lda #W12SEL_Setting(False, False, False, False, False, False, False, False)
+	lda #W12SEL_Setting(false, false, false, false, false, false, false, false)
 	sta W12SEL,b
 	sta bBufferW12SEL
-	lda #W34SEL_Setting(False, False, False, False, False, False, False, False)
+	lda #W34SEL_Setting(false, false, false, false, false, false, false, false)
 	sta W34SEL,b
 	sta bBufferW34SEL
 	stz WOBJSEL,b
@@ -1629,29 +1629,29 @@ rlUnknown80A711 ; 80/A711
 	stz bBufferWBGLOG
 	stz WOBJLOG,b
 	stz bBufferWOBJLOG
-	lda #T_Setting(True, False, False, False, True)
+	lda #T_Setting(true, false, false, false, true)
 	sta TM,b
 	sta bBufferTM
 	sta TMW,b
 	sta bBufferTMW
-	lda #T_Setting(False, False, False, False, False)
+	lda #T_Setting(false, false, false, false, false)
 	sta TS,b
 	sta bBufferTS
 	sta TSW,b
 	sta bBufferTSW
-	lda #CGWSEL_Setting(False, True, CGWSEL_MathAlways, CGWSEL_BlackNever)
+	lda #CGWSEL_Setting(false, true, CGWSEL_MathAlways, CGWSEL_BlackNever)
 	sta CGWSEL,b
 	sta bBufferCGWSEL
-	lda #CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, False, True)
+	lda #CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, false, true)
 	sta CGADSUB,b
 	sta bBufferCGADSUB
-	lda #COLDATA_Setting(0, True, False, False)
+	lda #COLDATA_Setting(0, true, false, false)
 	sta COLDATA,b
 	sta bBufferCOLDATA_1
-	lda #COLDATA_Setting(0, False, True, False)
+	lda #COLDATA_Setting(0, false, true, false)
 	sta COLDATA,b
 	sta bBufferCOLDATA_2
-	lda #COLDATA_Setting(0, False, False, True)
+	lda #COLDATA_Setting(0, false, false, true)
 	sta COLDATA,b
 	sta bBufferCOLDATA_3
 	lda #$00

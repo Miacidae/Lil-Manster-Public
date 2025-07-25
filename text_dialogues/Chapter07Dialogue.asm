@@ -1,10 +1,10 @@
 dialogueChapter07Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "Prince Leif, the Knights of Munster"
@@ -12,11 +12,11 @@ dialogueChapter07Opening1
 .text "will catch up with us before long."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "What should I do?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "There are two options: first, you could flee"
 .byte NewLine
@@ -35,7 +35,7 @@ dialogueChapter07Opening1
 .text "to petition Thracia for aid immediately."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "A-Ask Thracia for aid?! That's absurd!"
 .byte WaitForA
@@ -47,7 +47,7 @@ dialogueChapter07Opening1
 .text "not come crawling to them with cup in hand!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Do you expect to fight off the Knights of"
 .byte NewLine
@@ -73,7 +73,7 @@ dialogueChapter07Opening1
 .text "in this war would be from battle?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Even supposing I did agree,"
 .byte NewLine
@@ -82,7 +82,7 @@ dialogueChapter07Opening1
 .text "They're allies of the Empire!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "And if foreign invaders amass at their borders,"
 .byte NewLine
@@ -104,14 +104,14 @@ dialogueChapter07Opening1
 .text "who do you think he would help?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...I understand. We'll take refuge"
 .byte NewLine
 .text "in Castle Meath, and head for Tahra afterward."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You want to make for Tahra...? As in,"
 .byte NewLine
@@ -130,7 +130,7 @@ dialogueChapter07Opening1
 .text "Does my prince wish an early grave?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Tahra is...my home away from home,"
 .byte NewLine
@@ -144,7 +144,7 @@ dialogueChapter07Opening1
 .text "I won't abandon them now!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Very well, but let's discuss this later."
 .byte NewLine
@@ -155,13 +155,13 @@ dialogueChapter07Opening1
 
 dialogueChapter07Opening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word shiva_portrait
 .text "What's all this ruckus...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word merc_portrait
 .text "Couple rebels in Munster kicked"
@@ -186,7 +186,7 @@ dialogueChapter07Opening2
 .text "a bounty this convenient in a long while."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hmm..."
 .byte WaitForA
@@ -195,11 +195,11 @@ dialogueChapter07Opening2
 
 dialogueChapter07Ending1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word hannibal_portrait
 .text "Clearly, your group wanted to flee Munster,"
@@ -207,7 +207,7 @@ dialogueChapter07Ending1
 .text "but I would hear your reasons."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Most of us lived in a village on the eastern"
 .byte NewLine
 .text "shore. I was...captured while freeing"
@@ -220,29 +220,29 @@ dialogueChapter07Ending1
 .text "me, and we fled the province together."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hmm... For one so young, you don't seem"
 .byte NewLine
 .text "to bend easily. What's your name, lad?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Lugh Faris, at your service, General Hannibal."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hmm... You share...quite the resemblance..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Resemblance? What do you mean, General...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "It's...nothing you need concern yourself with."
 .byte NewLine
@@ -251,21 +251,21 @@ dialogueChapter07Ending1
 .text "now that you're free of Munster?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "We'll head to Tahra to fend off the Empire's siege."
 .byte NewLine
 .text "I've many friends there in need of help."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Are you planning a route"
 .byte NewLine
 .text "through the central mountains?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That was my intent, yes."
 .byte NewLine
@@ -274,7 +274,7 @@ dialogueChapter07Ending1
 .text "crossing through Imperial territory."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Is that so? Then be warned:"
 .byte NewLine
@@ -288,7 +288,7 @@ dialogueChapter07Ending1
 
 dialogueChapter07Ending2
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Thank you, General. Now, would you release"
 .byte NewLine
@@ -297,23 +297,23 @@ dialogueChapter07Ending2
 .text "They're good friends of mine."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Ah, of course."
 .byte WaitForA
 .byte ScrollText
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word wolfe_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .text "Men, bring them to the prisoners,"
 .byte NewLine
 .text "on the double!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Yes, General!"
 .byte WaitForA
 
@@ -321,7 +321,7 @@ dialogueChapter07Ending2
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word ClearPortrait
 
@@ -329,7 +329,7 @@ dialogueChapter07Ending2
 
 dialogueChapter07Ending3
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word halvan_portrait
 .text "Prince Leif! Sheesh, some help I turned out"
@@ -344,7 +344,7 @@ dialogueChapter07Ending3
 
 dialogueChapter07Ending4
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word osian_portrait
 .text "Damned Thracians! Next time I see them,"
@@ -357,7 +357,7 @@ dialogueChapter07Ending4
 
 dialogueChapter07Ending5
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word ronan_portrait
 .text "I'm awful sorry, Prince Leif..."
@@ -370,7 +370,7 @@ dialogueChapter07Ending5
 
 dialogueChapter07HannibalLoad
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word hannibal_portrait
 
@@ -388,12 +388,12 @@ dialogueChapter07Ending6
 
 dialogueChapter07Ending7
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word callion_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .text "Good folk, let me introduce you to Callion."
 .byte WaitForA
 .byte ScrollText
@@ -411,7 +411,7 @@ dialogueChapter07Ending7
 .text "will see that you cross the mountains safely."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Of course, sire. They can count on me!"
 .byte WaitForA
 
@@ -428,30 +428,30 @@ dialogueChapter07Ending7
 .text "I'm sure there's a detour we can find—"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word callion_portrait
 .text "Nonsense! I'd be honored to join you!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...If you insist,"
 .byte NewLine
 .text "I certainly would appreciate your help."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Think nothing of it!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .word ClearPortrait
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word leif_portrait
@@ -460,19 +460,19 @@ dialogueChapter07Ending7
 
 dialogueChapter07Ending8
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word cairpre_portrait
 .text "Good day, sir!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Oh, you were one of the children imprisoned"
 .byte NewLine
 .text "at Kerberos' Gate... What are you doing here?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "General Hannibal is my lord father, you see."
 .byte WaitForA
@@ -484,20 +484,20 @@ dialogueChapter07Ending8
 .text "a very powerful staff imbued with Warp magic."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Thank you! This is most generous...!"
 .byte WaitForA
 .byte ScrollText
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
 .byte EndText
 
 dialogueChapter07Ending9
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word hannibal_portrait
 .text "Sir Lugh, you'd best be setting out."
@@ -505,7 +505,7 @@ dialogueChapter07Ending9
 .text "It'll be dark before long."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Of course."
 .byte NewLine
 .text "Many thanks for your help, General Hannibal."
@@ -517,17 +517,17 @@ dialogueChapter07Ending9
 
 dialogueChapter07FinnSafyAppear1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word hannibal_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word wolfe_portrait
 .text "Welcome back, General Hannibal."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "I see our dungeon is considerably"
 .byte NewLine
 .text "more full than when I departed."
@@ -535,7 +535,7 @@ dialogueChapter07FinnSafyAppear1
 .text "What, pray tell, happened while I was away?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "A group of suspicious characters were making"
 .byte NewLine
@@ -549,12 +549,12 @@ dialogueChapter07FinnSafyAppear1
 .text "from the eastern frontier."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hmm... What have they to say for themselves?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "“We're just villagers!” and other obvious tripe."
 .byte NewLine
@@ -572,7 +572,7 @@ dialogueChapter07FinnSafyAppear1
 
 dialogueChapter07FinnSafyAppear2
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "What's more, we saw what looked like a"
 .byte NewLine
@@ -585,7 +585,7 @@ dialogueChapter07FinnSafyAppear2
 
 dialogueChapter07FinnSafyAppear3
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Understood. I'll go have a word with"
 .byte NewLine
@@ -599,7 +599,7 @@ dialogueChapter07FinnSafyAppear3
 .text "Let's not give that fiend any openings, eh?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hah! Of course, milord."
 .byte WaitForA
@@ -608,7 +608,7 @@ dialogueChapter07FinnSafyAppear3
 
 dialogueChapter07FinnSafyAppear4A
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word finn_portrait
 .text "I must reach Lord Leif at once..."
@@ -620,22 +620,22 @@ dialogueChapter07FinnSafyAppear4A
 
 dialogueChapter07FinnSafyAppear5
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word safie_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I cannot allow myself to be delayed any longer."
 .byte NewLine
 .text "Sister, please make your way back to Tahra."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Am I that much of a burden to you, Sir Finn?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Not at all. Your presence has been most"
 .byte NewLine
@@ -644,7 +644,7 @@ dialogueChapter07FinnSafyAppear5
 .text "I could protect you."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "When I left Tahra, I swore to Saint Heim that,"
 .byte NewLine
@@ -660,7 +660,7 @@ dialogueChapter07FinnSafyAppear5
 .text "Sir Finn. Allow me to uphold my own oath."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...I understand, Sister. Let's get moving"
 .byte NewLine
@@ -671,7 +671,7 @@ dialogueChapter07FinnSafyAppear5
 
 dialogueChapter07FinnSafyAppear4B
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word safie_portrait
 .text "I pray that Lord Leif is safe..."
@@ -681,28 +681,28 @@ dialogueChapter07FinnSafyAppear4B
 
 dialogueChapter07SafyShivaTalk
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word shiva_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word safie_portrait
 .text "Hm? Oh, you're..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Ah, Sister... It's been a while."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Why are you doing this?"
 .byte NewLine
 .text "I know you're not a bad person."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "This is the job. I'm a sellsword—and frankly,"
 .byte NewLine
@@ -714,31 +714,31 @@ dialogueChapter07SafyShivaTalk
 .text "I'm trouble to be around."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm not going anywhere."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...You really willing to risk everything"
 .byte NewLine
 .text "for that little boy?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "If it came to that, I would give my life"
 .byte NewLine
 .text "to protect Prince Leif, yes."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Losing Prince Leif, losing what he represents,"
 .byte NewLine
@@ -752,7 +752,7 @@ dialogueChapter07SafyShivaTalk
 .text "it would only be right to do so."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hmph... You're quite the fool, Sister."
 .byte WaitForA
@@ -762,12 +762,12 @@ dialogueChapter07SafyShivaTalk
 .text "I can appreciate that kind of naive innocence."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hm? Will you...agree to aid the prince, then?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah, this is getting absurd... But yes,"
 .byte NewLine
@@ -781,12 +781,12 @@ dialogueChapter07SafyShivaTalk
 .text "than people rushing toward their own death."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I apologize... I'll be mindful of that."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Can I ask you something, though?"
 .byte NewLine
@@ -795,7 +795,7 @@ dialogueChapter07SafyShivaTalk
 .text "brightens your day, that brings you laughter?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I suppose that I want to see everyone"
 .byte NewLine
@@ -804,7 +804,7 @@ dialogueChapter07SafyShivaTalk
 .text "when they feel joy, I share in it."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I see..."
 .byte NewLine
@@ -818,7 +818,7 @@ dialogueChapter07SafyShivaTalk
 .text "What do you go by?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Safy. I'm Safy of Tahra."
 .byte WaitForA
@@ -827,21 +827,21 @@ dialogueChapter07SafyShivaTalk
 
 dialogueChapter07LeifFinnTalk
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word finn_portrait
 .text "Lord Leif! You're all right!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "I'm sorry to have worried you, Finn."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Worried? Of... Of course not! I never doubted"
 .byte NewLine
@@ -850,12 +850,12 @@ dialogueChapter07LeifFinnTalk
 .text "I just...didn't expect we'd meet again so soon."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You can thank the Magi for that."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Is that the name your new retinue goes by?"
 .byte NewLine
@@ -864,7 +864,7 @@ dialogueChapter07LeifFinnTalk
 .text "sellswords among them... Who are they, then?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "They're a group of rebels from up north."
 .byte NewLine
@@ -873,7 +873,7 @@ dialogueChapter07LeifFinnTalk
 .text "that Munster stands free."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Their loyalty to you is most important"
 .byte NewLine
@@ -889,7 +889,7 @@ dialogueChapter07LeifFinnTalk
 .text "Milord, is she...?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "The Commander is still in Munster..."
 .byte NewLine
@@ -901,14 +901,14 @@ dialogueChapter07LeifFinnTalk
 .text "There's...nothing I can do for her now..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Gods' breath! Th-That can't be...! Lord Leif..."
 .byte NewLine
 .text "I'm sorry. I... I don't know what to say..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You've nothing to apologize for, Finn."
 .byte NewLine
@@ -929,7 +929,7 @@ dialogueChapter07LeifFinnTalk
 .text "on the day we take back Munster!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Gladly, milord! On my honor, never again"
 .byte NewLine
@@ -938,7 +938,7 @@ dialogueChapter07LeifFinnTalk
 .text "Brave Lance in hand, until the very end!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Thank you, Finn."
 .byte WaitForA
@@ -948,7 +948,7 @@ dialogueChapter07LeifFinnTalk
 .text "of our former group gone?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "They were captured by General Hannibal's"
 .byte NewLine
@@ -960,7 +960,7 @@ dialogueChapter07LeifFinnTalk
 .text "to you comes first, so I set out without them."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Then our road leads to Meath regardless."
 .byte WaitForA
@@ -977,7 +977,7 @@ dialogueChapter07LeifFinnTalk
 .text "I can tell."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah... I have, milord."
 .byte WaitForA
@@ -986,28 +986,28 @@ dialogueChapter07LeifFinnTalk
 
 dialogueChapter07NannaFinnTalk
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word finn_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word nanna_portrait
 .text "Father?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Nanna...! Are you all right?"
 .byte NewLine
 .text "You weren't hurt, were you?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm fine. Eyvel was there to...to protect me..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That is good."
 .byte NewLine
@@ -1023,22 +1023,22 @@ dialogueChapter07NannaFinnTalk
 .text "I'm always here to listen."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Father..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Yes? What's wrong?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...No, it's nothing. I apologize."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "All right, all right,"
 .byte NewLine
@@ -1061,7 +1061,7 @@ dialogueChapter07NannaFinnTalk
 .text "after you've used your staff."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Of... Of course, Father."
 .byte WaitForA
@@ -1070,7 +1070,7 @@ dialogueChapter07NannaFinnTalk
 
 dialogueChapter07HannibalAppear
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word hannibal_portrait
 .text "The Knights of Munster dare to cross"
@@ -1089,7 +1089,7 @@ dialogueChapter07HannibalAppear
 
 dialogueChapter07RaydrikDialogue
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word raydrik_portrait
 .text "H-Hannibal himself has taken the field?!"
@@ -1106,7 +1106,7 @@ dialogueChapter07RaydrikDialogue
 
 dialogueChapter07EisenhauSpawn
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word raydrik_portrait
 .text "The rebels have a head start, but they're"
@@ -1114,11 +1114,11 @@ dialogueChapter07EisenhauSpawn
 .text "only on foot."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word eisenau_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text " Eisenhau, chase them down"
 .byte NewLine
 .text "with your knights and eliminate them."
@@ -1129,13 +1129,13 @@ dialogueChapter07EisenhauSpawn
 .text "on Castle Meath's soil."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Aye, milord, but...Thracia is our sworn ally."
 .byte NewLine
 .text "Why would the rebels head to Castle Meath?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Oh, please... Thracia and the Empire"
 .byte NewLine
@@ -1149,12 +1149,12 @@ dialogueChapter07EisenhauSpawn
 .text "they'll use that to their advantage."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah... I see."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Perhaps I'm overestimating them,"
 .byte NewLine
@@ -1175,7 +1175,7 @@ dialogueChapter07EisenhauSpawn
 .text "must not lay a hand on them, no matter what!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Aye, milord!"
 .byte WaitForA
@@ -1185,7 +1185,7 @@ dialogueChapter07EisenhauSpawn
 
 dialogueChapter07PureWaterHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word moustache_portrait
 .text "If yer feelin' lucky, why not head to the arena"
@@ -1225,7 +1225,7 @@ dialogueChapter07PureWaterHouse
 
 dialogueChapter07AntitoxinHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word beardedman_portrait
 .text "Yer headed fer Tahra?"
@@ -1251,7 +1251,7 @@ dialogueChapter07AntitoxinHouse
 
 dialogueChapter07MasterSealHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word younglady_portrait
 .text "Heeey there, soldier. At the risk of sounding"

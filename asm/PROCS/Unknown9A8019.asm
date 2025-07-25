@@ -73,7 +73,7 @@ rlUnknown9A808B ; 9A/808B
 
 	sep #$20
 
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 
 	rep #$20
@@ -118,7 +118,7 @@ rlUnknown9A8098 ; 9A/8098
 
 	sep #$20
 
-	lda #T_Setting(False, True, False, False, True)
+	lda #T_Setting(false, true, false, false, true)
 	sta bBufferTM
 
 	rep #$20
@@ -164,16 +164,16 @@ rlUnknown9A80FE ; 9A/80FE
 
 	sep #$20
 
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 
-	lda #T_Setting(False, False, False, False, False)
+	lda #T_Setting(false, false, false, false, false)
 	sta bBufferTS
 
-	lda #CGWSEL_Setting(False, False, CGWSEL_MathAlways, CGWSEL_BlackNever)
+	lda #CGWSEL_Setting(false, false, CGWSEL_MathAlways, CGWSEL_BlackNever)
 	sta bBufferCGWSEL
 
-	lda #CGADSUB_Setting(CGADSUB_Add, False, False, False, False, False, False, False)
+	lda #CGADSUB_Setting(CGADSUB_Add, false, false, false, false, false, false, false)
 	sta bBufferCGADSUB
 
 	rep #$20

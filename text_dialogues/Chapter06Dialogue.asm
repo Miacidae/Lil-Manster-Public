@@ -1,20 +1,20 @@
 dialogueChapter06Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "Prince Leif, over here!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "August?! What are you doing here?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Planning your rescue,"
 .byte NewLine
@@ -26,7 +26,7 @@ dialogueChapter06Opening1
 .text "you look as if your mind is in great turmoil."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I've never hated the Empire more than I do"
 .byte NewLine
@@ -59,7 +59,7 @@ dialogueChapter06Opening1
 .word PlayMusic
 .byte $43
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Lady Eyvel was turned to stone by some"
 .byte NewLine
@@ -68,14 +68,14 @@ dialogueChapter06Opening1
 .text "you...must accept that she is gone, Prince Leif."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Wh-What kind of talk is that?! Isn't there"
 .byte NewLine
 .text "some way to undo what's happened to her?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Well... There is a sacred artifact,"
 .byte NewLine
@@ -94,12 +94,12 @@ dialogueChapter06Opening1
 .text "anyone not of his bloodline from using it."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Manfroy's bloodline... So then..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "This is mere rumor, but it is said that"
 .byte NewLine
@@ -127,12 +127,12 @@ dialogueChapter06Opening1
 .text "will also be taken there as a trophy."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That... That's nonsense! Utter nonsense!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Is it? What you call “utter nonsense” is the"
 .byte NewLine
@@ -160,7 +160,7 @@ dialogueChapter06Opening1
 .text "you'll see nary a single child still free!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Do parents feel nothing when their children"
 .byte NewLine
@@ -169,7 +169,7 @@ dialogueChapter06Opening1
 .text "Why aren't they fighting this?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Of course the people fight this—they resist"
 .byte NewLine
@@ -214,12 +214,12 @@ dialogueChapter06Opening1
 .text "the Dark Age is upon us again."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Is there no end to their heartlessness...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "North Thracia was once defined by its clear"
 .byte NewLine
@@ -273,7 +273,7 @@ dialogueChapter06Opening1
 .text "the Loptrians could be driven from Thracia."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I refuse to abandon the Commander, but..."
 .byte NewLine
@@ -302,7 +302,7 @@ dialogueChapter06Opening1
 .text "But...is defeating the Empire even possible?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Yes, but leave the details for another time—"
 .byte NewLine
@@ -314,14 +314,14 @@ dialogueChapter06Opening1
 .text "to hear such resolve from you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "There's no shortage of soldiers emerging to"
 .byte NewLine
 .text "pursue us... Is there any safe route out of here?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Going through the eastern side-gate would be"
 .byte NewLine
@@ -337,7 +337,7 @@ dialogueChapter06Opening1
 .text "much more difficult."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Not be seen by the enemy?"
 .byte NewLine
@@ -351,7 +351,7 @@ dialogueChapter06Opening2
 .word PlayMusic
 .byte $31	;In-Battle ~ Danger / Amidst the Battle ~ Crisis
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word karin_portrait
@@ -365,14 +365,14 @@ dialogueChapter06Opening2
 .text "one by one—no chance of being seen that way!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That'll get us out of here without a fight,"
 .byte NewLine
 .text "but will you be all right, Karin?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I can tell Hermes is willing to tough it out"
 .byte NewLine
@@ -393,7 +393,7 @@ dialogueChapter06Opening2
 .text "strong enough to carry me and one extra!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
@@ -408,11 +408,11 @@ dialogueChapter06Opening2
 
 dialogueChapter06SaiasGalzus1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word saias_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word galzus_portrait
 .text "I do apologize for this, Bishop."
@@ -420,7 +420,7 @@ dialogueChapter06SaiasGalzus1
 .text "Looks like all I've done is weigh you down."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Tell me something, Galzus. You said you work"
 .byte NewLine
 .text "for Baron Raydrik, correct? So why this girl,"
@@ -428,12 +428,12 @@ dialogueChapter06SaiasGalzus1
 .text "of all people...? What is she to you?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Nobody."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Whatever you say, Galzus."
 .byte NewLine
@@ -451,7 +451,7 @@ dialogueChapter06SaiasGalzus1
 
 dialogueChapter06SaiasGalzus2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word galzus_portrait
 .byte ScrollText
@@ -464,13 +464,13 @@ dialogueChapter06SaiasGalzus2
 
 dialogueChapter06CedArrive
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ced_portrait
 .text "Good! Prince Leif is still safe!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word whitecloak_portrait
 .text "He'd better be, after all the trouble it took"
@@ -478,7 +478,7 @@ dialogueChapter06CedArrive
 .text "to find him..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "We must act as a decoy"
 .byte NewLine
@@ -495,7 +495,7 @@ dialogueChapter06CedArrive
 .text "I humbly ask for your cooperation."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "As if you even have to ask!"
 .byte NewLine
@@ -506,7 +506,7 @@ dialogueChapter06CedArrive
 
 dialogueChapter06CedLeave
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ced_portrait
 .text "We're nearly at our limit... I'm ordering a retreat!"
@@ -520,11 +520,11 @@ dialogueChapter06CedLeave
 
 dialogueChapter06GalzusSpawn
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word galzus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word raydrik_portrait
 .text "So the esteemed sellsword Galzus"
@@ -534,11 +534,11 @@ dialogueChapter06GalzusSpawn
 .text "What in blazes took you so long?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "...What you got for me?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "See those prisoners there? They're making their"
 .byte NewLine
@@ -550,7 +550,7 @@ dialogueChapter06GalzusSpawn
 .text "of yours to deal with them!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah! Those whelps are hardly worth worryin'"
 .byte NewLine
@@ -561,7 +561,7 @@ dialogueChapter06GalzusSpawn
 
 dialogueChapter06DoorOpenDialogue1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word elder_portrait
 .text "You folks all right?"
@@ -575,7 +575,7 @@ dialogueChapter06DoorOpenDialogue1
 
 dialogueChapter06DoorOpenDialogue2
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Wait a little longer, and Sir Ced oughta show"
 .byte NewLine
@@ -586,11 +586,11 @@ dialogueChapter06DoorOpenDialogue2
 
 dialogueChapter06Ending
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word raydrik_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word guard_portrait
 .text "Baron Raydrik, we regret to report that"
@@ -600,7 +600,7 @@ dialogueChapter06Ending
 .text "He's...escaped."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "And just what were you doing, you idiots?!"
 .byte NewLine
 .text "We had them trapped like rats,"
@@ -608,14 +608,14 @@ dialogueChapter06Ending
 .text "and you still couldn't handle it?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "We... We offer our deepest apologies, sire!"
 .byte NewLine
 .text "We're truly sorry!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Your apologies are as empty as your brains!"
 .byte NewLine
@@ -636,19 +636,19 @@ dialogueChapter06Ending
 .text "there's no end to the trouble they could cause..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "At once, milord!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hold! What became of that girl... Mareeta, was"
 .byte NewLine
 .text "it? I've not seen her since this fiasco started..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...I'm aware of her fate, Baron Raydrik,"
 .byte NewLine
@@ -664,7 +664,7 @@ dialogueChapter06Ending
 .text "I cannot begin to express my apologies, sire!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...I swear, I've never encountered a group"
 .byte NewLine
@@ -676,7 +676,7 @@ dialogueChapter06Ending
 .text "who this assailant was?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "There's no doubt they were quite skilled,"
 .byte NewLine
@@ -690,12 +690,12 @@ dialogueChapter06Ending
 .text "Are you certain we can trust him?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No... Galzus...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "What's more, another man is sure he's seen"
 .byte NewLine
@@ -709,7 +709,7 @@ dialogueChapter06Ending
 .text "he's part of the Isaachian royal family..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hmph. I'm already aware of his heritage."
 .byte NewLine
@@ -725,7 +725,7 @@ dialogueChapter06Ending
 .text "he's technically the Prince of Ribaut, himself."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "B-But Prince Shannan is one of the most"
 .byte NewLine
@@ -734,7 +734,7 @@ dialogueChapter06Ending
 .text "this castle to a man who shares his blood?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...I can see I'll have to spell this out for you."
 .byte WaitForA
@@ -763,12 +763,12 @@ dialogueChapter06Ending
 .text "help the likes of Shannan and his rebels?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I see your point..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah... Then Galzus would have every reason to"
 .byte NewLine
@@ -777,12 +777,12 @@ dialogueChapter06Ending
 .text "of Od on her back as well... Heh, heh, heh..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Uh, sire?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Mm, it's nothing you need concern yourself"
 .byte NewLine
@@ -802,7 +802,7 @@ dialogueChapter06Ending
 
 dialogueChapter06MasterSealHouseEmilyDead
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady_portrait
 .text "Oh, Emily... Wh-Where have you gone off to...?"
@@ -812,7 +812,7 @@ dialogueChapter06MasterSealHouseEmilyDead
 
 dialogueChapter06MasterSealHouseEmilyAlive
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady_portrait
 .text "Y-Yer the ones what saved me daughter, Emily!"
@@ -843,7 +843,7 @@ dialogueChapter06MasterSealHouseEmilyAlive
 
 dialogueChapter06HicksHouseMurphyDead
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word hicks_portrait
 .text "Go back where ya came from,"
@@ -860,7 +860,7 @@ dialogueChapter06HicksHouseMurphyDead
 
 dialogueChapter06HicksHouseMurphyAlive
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word hicks_portrait
 .text "Thunderin' Thrud! I been waitin' fer you folks!"
@@ -894,7 +894,7 @@ dialogueChapter06HicksHouseMurphyAlive
 
 dialogueChapter06RapierHouseCliffDead
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word black_mustache_portrait
 .text "Well, I guess there's no helpin' it..."
@@ -918,7 +918,7 @@ dialogueChapter06RapierHouseCliffDead
 
 dialogueChapter06RapierHouseCliffAlive
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word black_mustache_portrait
 .text "Yer the folk that helped me grandson Cliff,"
@@ -939,7 +939,7 @@ dialogueChapter06RapierHouseCliffAlive
 
 dialogueChapter06ParagonManualHouseBowieDead
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word braidedgirl_portrait
 .text "I'd... I'd already accepted"
@@ -956,7 +956,7 @@ dialogueChapter06ParagonManualHouseBowieDead
 
 dialogueChapter06ParagonManualHouseBowieAlive
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word braidedgirl_portrait
 .text "The Magi helped me kid brother, Bowie, escape"
@@ -991,7 +991,7 @@ dialogueChapter06ParagonManualHouseBowieAlive
 
 dialogueChapter06PureWaterHouseBellaDead
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word younglady_portrait
 .text "Bella... Yer never comin' home..."
@@ -1006,7 +1006,7 @@ dialogueChapter06PureWaterHouseBellaDead
 
 dialogueChapter06PureWaterHouseBellaAlive
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word younglady_portrait
 .text "Me little sis, Bella, told me yer the ones"
@@ -1030,7 +1030,7 @@ dialogueChapter06PureWaterHouseBellaAlive
 
 dialogueChapter06OdsScrollHouseLeenaDead
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman2_portrait
 .text "Some freedom fighters y'all turned out to be!"
@@ -1051,7 +1051,7 @@ dialogueChapter06OdsScrollHouseLeenaDead
 
 dialogueChapter06OdsScrollHouseLeenaAlive
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman2_portrait
 .text "Oh, I been waitin' fer ya!"

@@ -1,6 +1,6 @@
 dialogueChapter24Door1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word boy_portrait
 .text "Huh?"
@@ -13,7 +13,7 @@ dialogueChapter24Door1
 
 dialogueChapter24Door2
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word boy_portrait
@@ -28,11 +28,11 @@ dialogueChapter24Door2
 
 dialogueChapter24MareetaGalzus
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word galzus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word mareeta_portrait
 .text "It's you..."
@@ -42,7 +42,7 @@ dialogueChapter24MareetaGalzus
 .text "I always hoped I'd see you again."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "What'd you come back here for?!"
 .byte NewLine
 .text "You're still just a little girl..."
@@ -50,7 +50,7 @@ dialogueChapter24MareetaGalzus
 .text "Swords ain't toys, you know!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Back then, when I was possessed by that"
 .byte NewLine
@@ -72,12 +72,12 @@ dialogueChapter24MareetaGalzus
 .text "It's you! You're my father!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah...!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Why aren't you saying anything?!"
 .byte NewLine
@@ -86,14 +86,14 @@ dialogueChapter24MareetaGalzus
 .text "Please, just answer me!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I..."
 .byte NewLine
 .text "You don't blame me...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm the one to blame..."
 .byte NewLine
@@ -110,7 +110,7 @@ dialogueChapter24MareetaGalzus
 .text "I never held a grudge against you, Father!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...I'm sorry."
 .byte NewLine
@@ -129,7 +129,7 @@ dialogueChapter24MareetaGalzus
 .text "anything to do with me, wherever you were."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Just like that...?!"
 .byte NewLine
@@ -138,7 +138,7 @@ dialogueChapter24MareetaGalzus
 .text "We'll always be family...!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -155,12 +155,12 @@ dialogueChapter24MareetaGalzus
 .text "The one who's raised you ever since?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That's right..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -175,11 +175,11 @@ dialogueChapter24MareetaGalzus
 
 dialogueChapter24Opening
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word raydrik_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word veld_portrait
 .text "Raydrik, do I hear correctly that you've"
@@ -187,7 +187,7 @@ dialogueChapter24Opening
 .text "allowed those rebels to invade the castle?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Ah..."
 .byte NewLine
 .text "If Your Eminence would grant me more time,"
@@ -195,7 +195,7 @@ dialogueChapter24Opening
 .text "I'll see to it that the vermin are wiped out."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Don't promise more than you're capable of."
 .byte NewLine
@@ -204,12 +204,12 @@ dialogueChapter24Opening
 .text "rebels have the overwhelming advantage."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Even for you, this is pathetic."
 .byte NewLine
@@ -223,14 +223,14 @@ dialogueChapter24Opening
 .text "Our alliance has come to an end."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Wait, Bishop Veld! Please!"
 .byte NewLine
 .text "If you abandon me now, I... I..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Not above begging, are we?"
 .byte WaitForA
@@ -250,11 +250,11 @@ dialogueChapter24Opening
 
 dialogueChapter24Ced
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word ced_portrait
 .text "Don't let your guard down, Prince."
@@ -274,7 +274,7 @@ dialogueChapter24Ced
 .text "Challenging him directly is suicide."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Galzus, you say?"
 .byte NewLine
 .text "Hmm..."
@@ -282,7 +282,7 @@ dialogueChapter24Ced
 .text "What should we do about him, then?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Our only option is to lure him close enough for"
 .byte NewLine
@@ -291,7 +291,7 @@ dialogueChapter24Ced
 .text "Yet even I don't know if that will defeat him..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "We barely have enough troops"
 .byte NewLine
@@ -299,18 +299,18 @@ dialogueChapter24Ced
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "August, why did you insist on"
 .byte NewLine
 .text "splitting our army in three?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Divide and conquer, of a sort."
 .byte NewLine
 .text "The second group is to rescue the children,"
@@ -325,14 +325,14 @@ dialogueChapter24Ced
 .text "to send them in ahead of us."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Rescuing the children goes without saying,"
 .byte NewLine
 .text "but why bother with the Loptrian bishops?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "There's a place of worship in the east wing"
 .byte NewLine
@@ -344,7 +344,7 @@ dialogueChapter24Ced
 .text "army, as they wield Berserk and Sleep staves."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I see..."
 .byte NewLine
@@ -353,7 +353,7 @@ dialogueChapter24Ced
 .text "falls solely to our group, then?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed."
 .byte NewLine
@@ -374,7 +374,7 @@ dialogueChapter24Ced
 .text "You just focus on Raydrik!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Understood!"
 .byte NewLine
@@ -386,11 +386,11 @@ dialogueChapter24Ced
 
 dialogueChapter24Saias
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word saias_portrait
 .text "Raydrik has few soldiers left, Prince,"
@@ -407,7 +407,7 @@ dialogueChapter24Saias
 .text "Challenging him directly is suicide."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Galzus, you say?"
 .byte NewLine
 .text "Hmm..."
@@ -415,7 +415,7 @@ dialogueChapter24Saias
 .text "What should we do about him, then?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I can't guarantee this, but if you still have"
 .byte NewLine
@@ -429,24 +429,24 @@ dialogueChapter24Saias
 .text "of deep bond with the girl..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Then Mareeta could be..."
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "Wait! August, why did you insist on"
 .byte NewLine
 .text "splitting our army in three?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Divide and conquer, of a sort."
 .byte NewLine
 .text "The second group is to rescue the children,"
@@ -461,14 +461,14 @@ dialogueChapter24Saias
 .text "to send them in ahead of us."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Rescuing the children goes without saying,"
 .byte NewLine
 .text "but why bother with the Loptrian bishops?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "There's a place of worship in the east wing"
 .byte NewLine
@@ -480,7 +480,7 @@ dialogueChapter24Saias
 .text "army, as they wield Berserk and Sleep staves."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I see..."
 .byte NewLine
@@ -489,7 +489,7 @@ dialogueChapter24Saias
 .text "falls solely to our group, then?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed."
 .byte NewLine
@@ -512,7 +512,7 @@ dialogueChapter24Saias
 .text "you just focus on Raydrik!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Understood!"
 .byte NewLine
@@ -524,11 +524,11 @@ dialogueChapter24Saias
 
 dialogueChapter24August
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "Raydrik has nearly run out of men, my prince,"
@@ -543,13 +543,13 @@ dialogueChapter24August
 .text "Galzus, famed for never having lost a battle."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Galzus, you say?"
 .byte NewLine
 .text "So what should we do about him, August?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Our only option is to lure him close to us"
 .byte NewLine
@@ -561,7 +561,7 @@ dialogueChapter24August
 .text "to defeat him..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "If we need so many troops to ambush him,"
 .byte NewLine
@@ -570,7 +570,7 @@ dialogueChapter24August
 .text "in three?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Divide and conquer, of a sort."
 .byte NewLine
@@ -586,14 +586,14 @@ dialogueChapter24August
 .text "to send them in ahead of us."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Rescuing the children goes without saying,"
 .byte NewLine
 .text "but why bother with the Loptrian bishops?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "There's a place of worship in the east wing"
 .byte NewLine
@@ -605,7 +605,7 @@ dialogueChapter24August
 .text "army, as they wield Berserk and Sleep staves."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I see..."
 .byte NewLine
@@ -614,7 +614,7 @@ dialogueChapter24August
 .text "falls solely to our group, then?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed."
 .byte NewLine
@@ -630,7 +630,7 @@ dialogueChapter24August
 .text "I know you have the strength to prevail!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I do!"
 .byte NewLine
@@ -644,11 +644,11 @@ dialogueChapter24August
 
 dialogueChapter24NoGalzus
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "Raydrik has nearly run out of men, my prince,"
@@ -658,7 +658,7 @@ dialogueChapter24NoGalzus
 .text "yet await us in the castle's halls."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "If Raydrik still has so many troops,"
 .byte NewLine
 .text "why did you insist on splitting our army"
@@ -666,7 +666,7 @@ dialogueChapter24NoGalzus
 .text "in three?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Divide and conquer, of a sort."
 .byte NewLine
@@ -682,14 +682,14 @@ dialogueChapter24NoGalzus
 .text "to send them in ahead of us."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Rescuing the children goes without saying,"
 .byte NewLine
 .text "but why bother with the Loptrian bishops?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "There's a place of worship in the east wing"
 .byte NewLine
@@ -701,7 +701,7 @@ dialogueChapter24NoGalzus
 .text "army, as they wield Berserk and Sleep staves."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I see..."
 .byte NewLine
@@ -710,7 +710,7 @@ dialogueChapter24NoGalzus
 .text "falls solely to our group, then?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed."
 .byte NewLine
@@ -726,7 +726,7 @@ dialogueChapter24NoGalzus
 .text "I know you have the strength to prevail!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I do!"
 .byte NewLine
@@ -740,11 +740,11 @@ dialogueChapter24NoGalzus
 
 dialogueChapter24Closing
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "We fought for every inch,"
@@ -754,7 +754,7 @@ dialogueChapter24Closing
 .text "Bards will sing of this battle for years to come."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "But is Raydrik really dead, August?"
 .byte NewLine
 .text "After the finishing blow was dealt,"
@@ -762,7 +762,7 @@ dialogueChapter24Closing
 .text "his body just vanished."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Some wicked force is at work here,"
 .byte NewLine
@@ -783,14 +783,14 @@ dialogueChapter24Closing
 .text "we cannot consider Munster truly liberated."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "A secret temple..."
 .byte NewLine
 .text "So this is the Loptrians' stronghold in Thracia."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed. The man in charge of the temple"
 .byte NewLine
@@ -799,14 +799,14 @@ dialogueChapter24Closing
 .text "and confidant to Manfroy himself."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Bishop Veld..."
 .byte NewLine
 .text "What kind of man is he?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "He leads the parish of Loptrians"
 .byte NewLine
@@ -830,7 +830,7 @@ dialogueChapter24Closing
 .text "Lady Eyvel to stone."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Wh-What?!"
 .byte NewLine
@@ -847,7 +847,7 @@ dialogueChapter24Closing
 
 dialogueChapter24ClosingKaia
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Speaking of which, August..."
 .byte NewLine
@@ -856,7 +856,7 @@ dialogueChapter24ClosingKaia
 .text "what can we do to cure her?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "As I mentioned before, the Staff of Kia"
 .byte NewLine
@@ -872,7 +872,7 @@ dialogueChapter24ClosingKaia
 .text "Castle Munster..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "So after all this, we're still just as powerless?!"
 .byte NewLine
@@ -884,7 +884,7 @@ dialogueChapter24ClosingKaia
 .text "Was all this just a waste?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word sarah_portrait
@@ -897,7 +897,7 @@ dialogueChapter24ClosingKaia
 .text "I'm right here. I'll use the staff."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Sara...?!"
 .byte NewLine
@@ -906,7 +906,7 @@ dialogueChapter24ClosingKaia
 .text "How can you use the staff?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Because I know how the seal works."
 .byte NewLine
@@ -915,7 +915,7 @@ dialogueChapter24ClosingKaia
 .text "in the first place, so..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Grandfather...?"
 .byte NewLine
@@ -924,7 +924,7 @@ dialogueChapter24ClosingKaia
 .text "Sara, you're Manfroy's granddaughter?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Don't make me talk about Grandfather..."
 .byte NewLine
@@ -941,14 +941,14 @@ dialogueChapter24ClosingKaia
 
 dialogueChapter24ClosingNoKaia
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "August, do you know how to get to this"
 .byte NewLine
 .text "secret temple?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I've already determined where the entrance is."
 .byte WaitForA
@@ -967,7 +967,7 @@ dialogueChapter24ClosingNoKaia
 .text "we risk Veld slipping away in the meantime."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "The suffering wrought upon Thracia"
 .byte NewLine

@@ -205,7 +205,7 @@ rlProcInventoryFullConvoyMenuInit ; 86/E53D
 	jsl rlProcEngineCreateProc
 	plx
 	sep #$20
-	lda #T_Setting(False, True, False, False, True)
+	lda #T_Setting(false, true, false, false, true)
 	sta bBufferTM
 	rep #$20
 	plb
@@ -256,7 +256,7 @@ rlProcInventoryFullConvoyMenuOnCycle2 ; 86/E605
 	jsl $858310
 	jsl $87A84B
 	sep #$20
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 	rep #$20
 	plb

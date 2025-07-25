@@ -6,7 +6,7 @@ rlGetBattleForecastBGTiles ; 81/BF00
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $F4C000, $0800, VMAIN_Setting(True), $4000
+	.dstruct structDMAToVRAM, $F4C000, $0800, VMAIN_Setting(true), $4000
 
 	rtl
 

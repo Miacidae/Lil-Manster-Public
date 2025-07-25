@@ -1,18 +1,18 @@
 dialogueChapter04xOpening1
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word asbel_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ced_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .text "Sir Ced, do you think the kids are safe?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Think of it the way Raydrik would:"
 .byte NewLine
 .text "would you send a convoy all the way"
@@ -25,26 +25,26 @@ dialogueChapter04xOpening1
 .text "to show for yourself? There's still time, Asbel."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then we can send them all back home!"
 .byte NewLine
 .text "Their parents must be so worried."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Focus, Asbel. There's too many guards about"
 .byte NewLine
 .text "to celebrate just yet."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Yessir."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Listen closely: after you've rescued"
 .byte NewLine
@@ -53,12 +53,12 @@ dialogueChapter04xOpening1
 .text "and seek out Prince Leif of House Leonster."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "C-Come again? Prince Leif?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Indeed. He fell prey to some trap of Raydrik's"
 .byte NewLine
@@ -68,7 +68,7 @@ dialogueChapter04xOpening1
 .text "...Asbel, what's wrong? You're white as a sheet!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Lord Leif was a dear friend of mine, you see."
 .byte NewLine
@@ -80,7 +80,7 @@ dialogueChapter04xOpening1
 .text "For three whole years, I've been searching..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Then look alive—today is the day"
 .byte NewLine
@@ -96,12 +96,12 @@ dialogueChapter04xOpening1
 .text "if we stay here much longer..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Are you coming with us?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I...considered it, but I can't. There's many"
 .byte NewLine
@@ -110,7 +110,7 @@ dialogueChapter04xOpening1
 .text "and they need my aid just as much."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You've spent this whole time teaching me,"
 .byte NewLine
@@ -119,7 +119,7 @@ dialogueChapter04xOpening1
 .text "Some apprentice I turned out to be..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No, this is my choice, Asbel."
 .byte NewLine
@@ -133,12 +133,12 @@ dialogueChapter04xOpening1
 .text "Do me proud, and use it to protect Prince Leif."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Sir Ced, will... Will we see each other again?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "If Prince Leif is the hero we've been"
 .byte NewLine
@@ -152,7 +152,7 @@ dialogueChapter04xOpening1
 .text "Right here in Munster."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Munster...? R-Right! Munster it is!"
 .byte NewLine
@@ -163,26 +163,26 @@ dialogueChapter04xOpening1
 
 dialogueChapter04xOpening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word girl_portrait
 .text "*Sniffle... Sniffle...*"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word boy_portrait
 .text "C'mon, knock off the waterworks..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "B-B-But...!"
 .byte NewLine
 .text "*Sniffle*"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Don't make them soldiers mad at us again."
 .byte NewLine
@@ -191,7 +191,7 @@ dialogueChapter04xOpening2
 .text "like last time..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I don't care if they get mad!"
 .byte WaitForA
@@ -208,28 +208,28 @@ dialogueChapter04xOpening2
 
 dialogueChapter04xAsbelRecruitment
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word asbel_portrait
 .text "Lord Leif...!  "
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "After all these years!"
 .byte NewLine
 .text "It's me, Asbel!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Asbel?! What in the world are you doing here?"
 .byte NewLine
 .text "Why aren't you still in Tahra?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I set off after you just as soon as"
 .byte NewLine
@@ -243,14 +243,14 @@ dialogueChapter04xAsbelRecruitment
 .text "I've been sticking around Munster."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You left Tahra that quickly?! Then...you've"
 .byte NewLine
 .text "spent the last three years looking for me..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Of course I did! I promised you as much,"
 .byte NewLine
@@ -266,7 +266,7 @@ dialogueChapter04xAsbelRecruitment
 .text "Er, Lord Leif."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm sorry..."
 .byte NewLine
@@ -287,7 +287,7 @@ dialogueChapter04xAsbelRecruitment
 .text "with me, so I left you out of it."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What a load of pegasus dung...! We swore"
 .byte NewLine
@@ -303,12 +303,12 @@ dialogueChapter04xAsbelRecruitment
 .text "in them."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "A-Asbel..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Lord Leif, if only for my sake,"
 .byte NewLine
@@ -321,32 +321,32 @@ dialogueChapter04xAsbelRecruitment
 
 dialogueChapter04xKarinCedTalk
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word karin_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ced_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .text "Lord Ced!"
 .byte NewLine
 .text "Oh, Lord Ced, after all this time..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Yes? Wait... Karin? Has something happened?"
 .byte NewLine
 .text "Why have you left Silesse?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "To... To find you, my prince!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "To find me...? Oh, for heaven's sake..."
 .byte NewLine
@@ -355,7 +355,7 @@ dialogueChapter04xKarinCedTalk
 .text "Or was it my mother?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -365,12 +365,12 @@ dialogueChapter04xKarinCedTalk
 .text "for you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Is that so? Well, let's hear it."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "W-Well, to tell the truth... Oh, gods..."
 .byte WaitForA
@@ -378,7 +378,7 @@ dialogueChapter04xKarinCedTalk
 .text "......"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Karin, if you have something to tell me,"
 .byte NewLine
@@ -387,7 +387,7 @@ dialogueChapter04xKarinCedTalk
 .text "This is no time for weakness."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Y-You're right..."
 .byte NewLine
@@ -396,50 +396,50 @@ dialogueChapter04xKarinCedTalk
 .text "Her Majesty the Queen has... She, um..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Mother?! No, she can't have...!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm...afraid so, milord. Two months ago..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Mother is..."
 .byte NewLine
 .text "My mother has...passed away...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Lord Ced... I'm sorry. You shouldn't have"
 .byte NewLine
 .text "found out like this. Here, of all places..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Does it matter? I was too late... Father..."
 .byte NewLine
 .text "I wanted them to see each other one last time..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Lord Ced, return to Silesse with me—please."
 .byte NewLine
 .text "Lady Fee is waiting for you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Fee... How is she? Is she all right?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Silesse faces dire times, milord."
 .byte WaitForA
@@ -482,7 +482,7 @@ dialogueChapter04xKarinCedTalk
 .text "would do?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Karin, I... You're right, of course, but..."
 .byte NewLine
@@ -503,14 +503,14 @@ dialogueChapter04xKarinCedTalk
 .text "by whatever means I could."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then why are you leading some rebel group"
 .byte NewLine
 .text "in Munster?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I heard tell that my father had been here"
 .byte NewLine
@@ -529,7 +529,7 @@ dialogueChapter04xKarinCedTalk
 .text "as my father had abandoned Silesse."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Is that right...? I apologize, Lord Ced..."
 .byte NewLine
@@ -538,7 +538,7 @@ dialogueChapter04xKarinCedTalk
 .text "before judging you..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm sorry, Karin, but I need more time."
 .byte NewLine
@@ -552,7 +552,7 @@ dialogueChapter04xKarinCedTalk
 .text "a half-year at most."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...You're fixin' to overthrow that creep, huh?"
 .byte NewLine
@@ -561,7 +561,7 @@ dialogueChapter04xKarinCedTalk
 .text "Count me in—I'll stay here with you!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Heh. I'm flattered, Karin, but as your prince,"
 .byte NewLine
@@ -570,7 +570,7 @@ dialogueChapter04xKarinCedTalk
 .text "fight knowing you were endangering yourself."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...That's a diplomatic way of saying"
 .byte NewLine
@@ -586,19 +586,19 @@ dialogueChapter04xKarinCedTalk
 .text "yourself, Lord Ced."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You have my word—and as proof of my vow,"
 .byte NewLine
 .text "I bestow this upon you."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Er, what is it? A used handkerchief?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah! Would you believe this is an heirloom"
 .byte NewLine
@@ -620,7 +620,7 @@ dialogueChapter04xKarinCedTalk
 .text "actually. Instead, I entrust it to you, Karin."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Are you really trusting me"
 .byte NewLine
@@ -630,7 +630,7 @@ dialogueChapter04xKarinCedTalk
 .text "I... This is most unexpected!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Karin... I did wrong by my mother,"
 .byte NewLine
@@ -644,7 +644,7 @@ dialogueChapter04xKarinCedTalk
 .text "I want you to have it."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...OK, but I'm only keeping it safe for you."
 .byte NewLine
@@ -653,14 +653,14 @@ dialogueChapter04xKarinCedTalk
 .text "to Silesse!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Then the snowy banks of Silesse shall be"
 .byte NewLine
 .text "witness to our next meeting. Be well, Karin."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You said it!"
 .byte NewLine
@@ -671,7 +671,7 @@ dialogueChapter04xKarinCedTalk
 
 dialogueChapter04xUpperCellUnlock
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word girl_portrait
 .text "I jus' wanna go home..."
@@ -693,7 +693,7 @@ dialogueChapter04xUpperCellUnlock
 
 dialogueChapter04xLowerCellUnlock
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word boy_portrait
 .text "Huh? Can I go home to my papa now?"

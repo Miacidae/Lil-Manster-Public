@@ -1,5 +1,5 @@
 dialogueChapter05LeifRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "I'll come back for you, Commander!"
@@ -17,7 +17,7 @@ dialogueChapter05LeifRetreatQuote
 .byte EndText
 
 dialogueChapter05NannaRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word nanna_portrait
 .text "Eyvel... I'm sorry."
@@ -27,7 +27,7 @@ dialogueChapter05NannaRetreatQuote
 .byte EndText
 
 dialogueFinnRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word finn_portrait
 .text "As you wish, milord. I'll secure the way ahead!"
@@ -35,7 +35,7 @@ dialogueFinnRetreatQuote
 .byte EndText
 
 dialogueOsianRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word osian_portrait
 .text "Haha! Nothing to it!"
@@ -43,7 +43,7 @@ dialogueOsianRetreatQuote
 .byte EndText
 
 dialogueHalvanRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word halvan_portrait
 .text "Now comes the real battle..."
@@ -51,7 +51,7 @@ dialogueHalvanRetreatQuote
 .byte EndText
 
 dialogueEyvelRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word eyvel_portrait
 .text "Mind your limits, Little Leif."
@@ -61,7 +61,7 @@ dialogueEyvelRetreatQuote
 .byte EndText
 
 dialogueDagdarRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dagdar_portrait
 .text "Prince Leif, there's nuthin' more you can do!"
@@ -71,7 +71,7 @@ dialogueDagdarRetreatQuote
 .byte EndText
 
 dialogueRalphRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ralph_portrait
 .text "Tch..."
@@ -81,7 +81,7 @@ dialogueRalphRetreatQuote
 .byte EndText
 
 dialogueMartyRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word marty_portrait
 .text "*Pant, pant, wheeze*"
@@ -91,7 +91,7 @@ dialogueMartyRetreatQuote
 .byte EndText
 
 dialogueRonanRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ronan_portrait
 .text "Wh-What a rush... Everybody all right?"
@@ -99,7 +99,7 @@ dialogueRonanRetreatQuote
 .byte EndText
 
 dialogueSafyRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word safie_portrait
 .text "Gods above, keep and protect Prince Leif."
@@ -109,7 +109,7 @@ dialogueSafyRetreatQuote
 .byte EndText
 
 dialogueLaraRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word lara_portrait
 .text "Sorry to duck out like this..."
@@ -119,7 +119,7 @@ dialogueLaraRetreatQuote
 .byte EndText
 
 dialogueBrightonRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word brighton_portrait
 .text "Damned shameful of me,"
@@ -129,7 +129,7 @@ dialogueBrightonRetreatQuote
 .byte EndText
 
 dialogueFergusRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word fergus_portrait
 .text "Ah, how times have changed..."
@@ -139,7 +139,7 @@ dialogueFergusRetreatQuote
 .byte EndText
 
 dialogueAsbelRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word asbel_portrait
 .text "Don't you dare leave me behind again,"
@@ -149,7 +149,7 @@ dialogueAsbelRetreatQuote
 .byte EndText
 
 dialogueMachaRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word macha_portrait
 .text "I owe you one. I'll be just up ahead!"
@@ -157,7 +157,7 @@ dialogueMachaRetreatQuote
 .byte EndText
 
 dialogueHicksRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word hicks_portrait
 .text "Murphy, yer papa is doin' the best he can..."
@@ -165,7 +165,7 @@ dialogueHicksRetreatQuote
 .byte EndText
 
 dialogueNannaRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word nanna_portrait
 .text "Lord Leif... Stay safe...!"
@@ -173,7 +173,7 @@ dialogueNannaRetreatQuote
 .byte EndText
 
 dialogueDalsinRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dalsin_portrait
 .text "Diana, Jubel... I'll make it back home someday."
@@ -183,7 +183,7 @@ dialogueDalsinRetreatQuote
 .byte EndText
 
 dialogueCallionRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word callion_portrait
 .text "I'll go ahead, then. I'm...sorry to run like this."
@@ -191,7 +191,7 @@ dialogueCallionRetreatQuote
 .byte EndText
 
 dialogChapter04xCedRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ced_portrait
 .text "I'll be taking my leave, then."
@@ -199,7 +199,7 @@ dialogChapter04xCedRetreatQuote
 .byte EndText
 
 dialogueLifisRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word lifis_portrait
 .text "Heh, heh, heh... Another clean get-away!"
@@ -209,7 +209,7 @@ dialogueLifisRetreatQuote
 .byte EndText
 
 dialogueKarinRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word karin_portrait
 .text "*Pant... Pant*"
@@ -221,7 +221,7 @@ dialogueKarinRetreatQuote
 .byte EndText
 
 dialogueTanyaRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word tanya_portrait
 .text "We can't stick around here much longer,"
@@ -231,7 +231,7 @@ dialogueTanyaRetreatQuote
 .byte EndText
 
 dialogueMareetaRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word mareeta_portrait
 .text "Mother, I know you must be watching"
@@ -241,7 +241,7 @@ dialogueMareetaRetreatQuote
 .byte EndText
 
 dialogueShivaRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word shiva_portrait
 .text "...Sorry..."
@@ -249,7 +249,7 @@ dialogueShivaRetreatQuote
 .byte EndText
 
 dialogueSelphinaRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word selphina_portrait
 .text "There's no need to remain here any longer,"
@@ -259,7 +259,7 @@ dialogueSelphinaRetreatQuote
 .byte EndText
 
 dialogueKaneRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word kane_portrait
 .text "I'll ride ahead, Prince! Be careful!"
@@ -267,7 +267,7 @@ dialogueKaneRetreatQuote
 .byte EndText
 
 dialogueAlbaRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word alba_portrait
 .text "OK, onto the next battle!"
@@ -277,7 +277,7 @@ dialogueAlbaRetreatQuote
 .byte EndText
 
 dialogueRobertRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word robert_portrait
 .text "Next time, THEY'LL be the ones retreating...!"
@@ -285,7 +285,7 @@ dialogueRobertRetreatQuote
 .byte EndText
 
 dialogueFredRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word fred_portrait
 .text "I'll ride ahead!"
@@ -295,7 +295,7 @@ dialogueFredRetreatQuote
 .byte EndText
 
 dialogueOlwenRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word olwen_portrait
 .text "The battle begins anew..."
@@ -303,7 +303,7 @@ dialogueOlwenRetreatQuote
 .byte EndText
 
 dialogueSalemRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word salem_portrait
 .text "I cannot allow myself to fall here..."
@@ -311,7 +311,7 @@ dialogueSalemRetreatQuote
 .byte EndText
 
 dialoguePerneRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word pan_portrait
 .text "This isn't over yet!"
@@ -321,7 +321,7 @@ dialoguePerneRetreatQuote
 .byte EndText
 
 dialogueTrudeRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word trude_portrait
 .text "...Sorry. I'm gettin' outta here."
@@ -329,7 +329,7 @@ dialogueTrudeRetreatQuote
 .byte EndText
 
 dialogueTinaRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word tina_portrait
 .text "Nothin' but fightin', fightin', an' more fightin'!"
@@ -339,7 +339,7 @@ dialogueTinaRetreatQuote
 .byte EndText
 
 dialogueGladeRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word glade_portrait
 .text "We've done all we can, sire!"
@@ -349,7 +349,7 @@ dialogueGladeRetreatQuote
 .byte EndText
 
 dialogueHomerRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word homer_portrait
 .text "Good grief, life is too short"
@@ -359,7 +359,7 @@ dialogueHomerRetreatQuote
 .byte EndText
 
 dialogueDeanRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dean_portrait
 .text "I'll be going on ahead..."
@@ -367,7 +367,7 @@ dialogueDeanRetreatQuote
 .byte EndText
 
 dialogueEdaRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word eda_portrait
 .text "I'll be an even greater asset in the next battle!"
@@ -375,7 +375,7 @@ dialogueEdaRetreatQuote
 .byte EndText
 
 dialogueLinoanRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word linoan_portrait
 .text "I wonder how the people of Tahra are faring"
@@ -385,7 +385,7 @@ dialogueLinoanRetreatQuote
 .byte EndText
 
 dialogueIliosRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ilios_portrait
 .text "Tch... They think they can push me around"
@@ -397,7 +397,7 @@ dialogueIliosRetreatQuote
 .byte EndText
 
 dialogueSchroffRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word schroff_portrait
 .text "The Holy Spirit of Bragi is watching over you,"
@@ -407,7 +407,7 @@ dialogueSchroffRetreatQuote
 .byte EndText
 
 dialogueMishaRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word misha_portrait
 .text "I'll go first."
@@ -417,7 +417,7 @@ dialogueMishaRetreatQuote
 .byte EndText
 
 dialogueShannamRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word shannam_portrait
 .text "Hah! Child's play."
@@ -425,7 +425,7 @@ dialogueShannamRetreatQuote
 .byte EndText
 
 dialogueMirandaRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word miranda_portrait
 .text "I barely escaped with my life..."
@@ -433,7 +433,7 @@ dialogueMirandaRetreatQuote
 .byte EndText
 
 dialogueSaraRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word sarah_portrait
 .text "......"
@@ -441,7 +441,7 @@ dialogueSaraRetreatQuote
 .byte EndText
 
 dialogueXavierRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word xavier_portrait
 .text "I shall go on ahead..."
@@ -449,7 +449,7 @@ dialogueXavierRetreatQuote
 .byte EndText
 
 dialogueAmaldaRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word amalda_portrait
 .text "I apologize for retreating before you could..."
@@ -457,7 +457,7 @@ dialogueAmaldaRetreatQuote
 .byte EndText
 
 dialogueConomorRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word conomor_portrait
 .text "Forgive me for leaving your side, Prince Leif!"
@@ -467,7 +467,7 @@ dialogueConomorRetreatQuote
 .byte EndText
 
 dialogueDiarmuidRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dermott_portrait
 .text "Luck be with you, Prince Leif!"
@@ -475,7 +475,7 @@ dialogueDiarmuidRetreatQuote
 .byte EndText
 
 dialogueSaiasRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word saias_portrait
 .text "My apologies for leaving the battlefield"
@@ -485,7 +485,7 @@ dialogueSaiasRetreatQuote
 .byte EndText
 
 dialogueCedRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ced_portrait
 .text "Very well. I'll scout ahead!"
@@ -493,7 +493,7 @@ dialogueCedRetreatQuote
 .byte EndText
 
 dialogueGalzusRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word galzus_portrait
 .text "......"
@@ -503,7 +503,7 @@ dialogueGalzusRetreatQuote
 ; Unused
 
 dialogueGunterRetreatQuote
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word cohen_portrait
 .text "An old man like me is only"

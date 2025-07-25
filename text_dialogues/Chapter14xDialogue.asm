@@ -1,6 +1,6 @@
 dialogueChapter14xVillager1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman_portrait
 .text "Thanks for pullin' our sorry bums"
@@ -20,7 +20,7 @@ dialogueChapter14xVillager1
 
 dialogueChapter14xVillager2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word braidedgirl_portrait
 .text "I made this Stamina Drink while we were"
@@ -45,7 +45,7 @@ dialogueChapter14xVillager2
 
 dialogueChapter14xVillager3
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady3_portrait
 .text "Hoo-boy, was that a fright and a half!"
@@ -63,7 +63,7 @@ dialogueChapter14xVillager3
 
 dialogueChapter14xVillager4
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word younglady_portrait
 .text "We really just ended up being a giant burden,"
@@ -83,7 +83,7 @@ dialogueChapter14xVillager4
 
 dialogueChapter14xVillager5
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word black_mustache_portrait
 .text "Flamin' Fjalar! We actually made it!"
@@ -98,7 +98,7 @@ dialogueChapter14xVillager5
 
 dialogueChapter14xVillager6
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman2_portrait
 .text "We made it out alive! Why, I was afraid the"
@@ -134,11 +134,11 @@ dialogueChapter14xVillager6
 
 dialogueChapter14xOpening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "Escaping Tahra may be difficult"
@@ -146,7 +146,7 @@ dialogueChapter14xOpening1
 .text "with all these civilians in tow..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Civilians?"
 .byte NewLine
 .text "You mean townsfolk from Tahra"
@@ -154,7 +154,7 @@ dialogueChapter14xOpening1
 .text "are following us?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word linoan_portrait
@@ -168,7 +168,7 @@ dialogueChapter14xOpening1
 .text "but nothing I said could sway them."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "*Sigh*"
 .byte NewLine
@@ -177,7 +177,7 @@ dialogueChapter14xOpening1
 .text "Well, how many of them are there?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word dorias_portrait
@@ -186,7 +186,7 @@ dialogueChapter14xOpening1
 .text "in disorganized groups."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That many?"
 .byte NewLine
@@ -195,7 +195,7 @@ dialogueChapter14xOpening1
 .text "all the way to North Thracia!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I concur."
 .byte NewLine
@@ -209,7 +209,7 @@ dialogueChapter14xOpening1
 .text "out of just this valley may prove to be difficult."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "But we can't turn a blind eye to them, either."
 .byte NewLine
@@ -225,7 +225,7 @@ dialogueChapter14xOpening1
 .text "Make that our first priority!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Understood, Prince Leif."
 .byte WaitForA
@@ -235,11 +235,11 @@ dialogueChapter14xOpening1
 
 dialogueChapter14xOpening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word misha_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word codha_portrait
 .text "I take it the Pegasus Corps are prepared"
@@ -247,7 +247,7 @@ dialogueChapter14xOpening2
 .text "for battle, Captain Misha?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "You won't be disappointed. I've brought"
 .byte NewLine
 .text "half of our whole mercenary company along—"
@@ -255,7 +255,7 @@ dialogueChapter14xOpening2
 .text "they'll be ready to take to the sky shortly."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Very good."
 .byte NewLine
@@ -264,14 +264,14 @@ dialogueChapter14xOpening2
 .text "I've no more use for you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No. I'm not about to let you steal command"
 .byte NewLine
 .text "of my squad right out from under me."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Oh, come now, Captain."
 .byte NewLine
@@ -287,21 +287,21 @@ dialogueChapter14xOpening2
 .text "such as yourself, wouldn't you agree?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I said no."
 .byte NewLine
 .text "My squad is—"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You have me mistaken for a man who"
 .byte NewLine
 .text "repeats himself. This is an order, Captain."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I..."
 .byte NewLine
@@ -315,7 +315,7 @@ dialogueChapter14xOpening2
 
 dialogueChapter14xClosing
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "It seems we've cheated death yet again."
@@ -323,7 +323,7 @@ dialogueChapter14xClosing
 .text "Our forces are all clear of the valley, sire."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "Gods' breath, what a relief!"
@@ -333,14 +333,14 @@ dialogueChapter14xClosing
 .text "our next course of action?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'd advise crossing over the Dauph Mountains"
 .byte NewLine
 .text "to reach the road to Nordrhein."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The road to Nordrhein?"
 .byte NewLine
@@ -349,7 +349,7 @@ dialogueChapter14xClosing
 .text "to Leonster along the coast?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That's my thinking, yes, but I've not yet heard"
 .byte NewLine
@@ -365,7 +365,7 @@ dialogueChapter14xClosing
 .byte ScrollText
 .word ClearPortrait
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word ClearPortrait
 
@@ -375,17 +375,17 @@ dialogueChapter14xClosing
 .word PlayMusic
 .byte $4B
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word lewyn_portrait
 .text "A moment of your time, August?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "L-Lord Lewyn?!"
 .byte NewLine
 .text "How... How were you able to find me"
@@ -393,7 +393,7 @@ dialogueChapter14xClosing
 .text "so quickly, Your Highness?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "We've been through much together, you and I."
 .byte NewLine
@@ -414,14 +414,14 @@ dialogueChapter14xClosing
 .text "You certainly have your work cut out for you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It...seems I was not up to the task."
 .byte NewLine
 .text "I'm sorry for disappointing you, Your Highness."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Oh, don't kid yourself. Tahra's capitulation"
 .byte NewLine
@@ -430,12 +430,12 @@ dialogueChapter14xClosing
 .text "You've been doing a fine job."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "If you say so, Your Highness..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Now, if there's no other matters of import,"
 .byte NewLine
@@ -454,7 +454,7 @@ dialogueChapter14xClosing
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Another whole year..."
 .byte NewLine
@@ -466,11 +466,11 @@ dialogueChapter14xClosing
 
 dialogueLinoanDeathDean
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dean_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "Dean, did I hear correctly that you're..."
@@ -478,16 +478,16 @@ dialogueLinoanDeathDean
 .text "leaving our army?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "......"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I hope we can meet again..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "If Dáinn wills it, perhaps we will."
 .byte WaitForA

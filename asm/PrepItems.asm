@@ -212,19 +212,19 @@
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, $F28000, $5800, VMAIN_Setting(True), $4800
+			.dstruct structDMAToVRAM, $F28000, $5800, VMAIN_Setting(true), $4800
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0700, VMAIN_Setting(True), $E000
+			.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0700, VMAIN_Setting(true), $E000
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG2TilemapBuffer, size(aBG2TilemapBuffer), VMAIN_Setting(True), $F000
+			.dstruct structDMAToVRAM, aBG2TilemapBuffer, size(aBG2TilemapBuffer), VMAIN_Setting(true), $F000
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer, size(aBG2TilemapBuffer), VMAIN_Setting(True), $A000
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer, size(aBG2TilemapBuffer), VMAIN_Setting(true), $A000
 		
 			plb
 			plp
@@ -320,23 +320,23 @@
 		
 		aPrepItemsHDMATable ; 81/E37D
 		
-			.byte NTRL_Setting(117, False)
+			.byte NTRL_Setting(117, false)
 		
-			.byte T_Setting(True, True, True, False, True)
+			.byte T_Setting(true, true, true, false, true)
 		
-			.byte NTRL_Setting(11, False)
+			.byte NTRL_Setting(11, false)
 		
-			.byte T_Setting(True, True, True, False, False)
+			.byte T_Setting(true, true, true, false, false)
 		
-			.byte NTRL_Setting(95, False)
+			.byte NTRL_Setting(95, false)
 		
-			.byte T_Setting(True, True, True, False, True)
+			.byte T_Setting(true, true, true, false, true)
 		
-			.byte NTRL_Setting(1, False)
+			.byte NTRL_Setting(1, false)
 		
-			.byte T_Setting(False, False, False, False, False)
+			.byte T_Setting(false, false, false, false, false)
 		
-			.byte NTRL_Setting(0, False)
+			.byte NTRL_Setting(0, false)
 		
 		rsUnknown81E386 ; 81/E386
 		
@@ -398,7 +398,7 @@
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(True), ($A000 + ((0 + (32 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(true), ($A000 + ((0 + (32 * $20)) * 2))
 		
 			rtl
 		
@@ -619,7 +619,7 @@
 			jsl rlProcEngineCreateProc
 		
 			sep #$20
-			lda #INIDISP_Setting(False, 0)
+			lda #INIDISP_Setting(false, 0)
 			sta bBufferINIDISP
 		
 			rep #$20
@@ -859,7 +859,7 @@
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (17 * $20)) * 2), ((10 * $20) * 2), VMAIN_Setting(True), ($A000 + ((0 + (17 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (17 * $20)) * 2), ((10 * $20) * 2), VMAIN_Setting(true), ($A000 + ((0 + (17 * $20)) * 2))
 		
 			rts
 		
@@ -934,7 +934,7 @@
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (16 * $20)) * 2), ((0 + (12 * $20)) * 2), VMAIN_Setting(True), ($A000 + ((0 + (16 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (16 * $20)) * 2), ((0 + (12 * $20)) * 2), VMAIN_Setting(true), ($A000 + ((0 + (16 * $20)) * 2))
 		
 			jmp rsPrepItemsSelectNextAction
 		
@@ -1112,11 +1112,11 @@
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (16 * $20)) * 2), ((0 + (2 * $20)) * 2), VMAIN_Setting(True), ($A000 + ((0 + (16 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (16 * $20)) * 2), ((0 + (2 * $20)) * 2), VMAIN_Setting(true), ($A000 + ((0 + (16 * $20)) * 2))
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (27 * $20)) * 2), ((0 + (2 * $20)) * 2), VMAIN_Setting(True), ($A000 + ((0 + (27 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (27 * $20)) * 2), ((0 + (2 * $20)) * 2), VMAIN_Setting(true), ($A000 + ((0 + (27 * $20)) * 2))
 		
 			rts
 		
@@ -1552,9 +1552,9 @@
 			plb
 			jmp _Loop
 		
-			_ShortSprite .dstruct structSpriteArray, [[[0, 0], $61, True, $000, 2, 0, False, False]]
+			_ShortSprite .dstruct structSpriteArray, [[[0, 0], $61, true, $000, 2, 0, false, false]]
 		
-			_TallSprite .dstruct structSpriteArray, [[[0, 0], $61, True, $000, 2, 0, False, False], [[0, -16], $61, True, $002, 2, 0, False, False]]
+			_TallSprite .dstruct structSpriteArray, [[[0, 0], $61, true, $000, 2, 0, false, false], [[0, -16], $61, true, $002, 2, 0, false, false]]
 
 		rsPrepItemsSetupSelectedUnit ; 81/EA07
 		
@@ -2196,7 +2196,7 @@
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer+$40, $0380, VMAIN_Setting(True), $A040
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer+$40, $0380, VMAIN_Setting(true), $A040
 		
 			plx
 			lda #<>rlProcPrepItemsDrawInventoryOnCycle4
@@ -2215,7 +2215,7 @@
 			phx
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG2TilemapBuffer+$40, $0380, VMAIN_Setting(True), $F040
+			.dstruct structDMAToVRAM, aBG2TilemapBuffer+$40, $0380, VMAIN_Setting(true), $F040
 		
 			plx
 			jsl rlProcEngineFreeProc
@@ -2291,7 +2291,7 @@
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(True), ($A000 + ((0 + (32 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(true), ($A000 + ((0 + (32 * $20)) * 2))
 		
 			jmp rsPrepItemsSelectNextAction
 		
@@ -2336,7 +2336,7 @@
 			jsr rsPrepItemsListDrawOwnerName
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG2TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(True), ($F000 + ((0 + (32 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG2TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(true), ($F000 + ((0 + (32 * $20)) * 2))
 		
 			jmp rsPrepItemsSelectNextAction
 		
@@ -2349,7 +2349,7 @@
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(True), ($A000 + ((0 + (32 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(true), ($A000 + ((0 + (32 * $20)) * 2))
 		
 			phx
 			lda #(`$85C8BA)<<8
@@ -2570,7 +2570,7 @@
 			jsl $87E728
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (13 * $20)) * 2), ((0 + (2 * $20)) * 2), VMAIN_Setting(True), ($A000 + ((0 + (13 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (13 * $20)) * 2), ((0 + (2 * $20)) * 2), VMAIN_Setting(true), ($A000 + ((0 + (13 * $20)) * 2))
 		
 			rts
 		
@@ -2631,7 +2631,7 @@
 			plx
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (13 * $20)) * 2), ((0 + (2 * $20)) * 2), VMAIN_Setting(True), ($A000 + ((0 + (13 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (13 * $20)) * 2), ((0 + (2 * $20)) * 2), VMAIN_Setting(true), ($A000 + ((0 + (13 * $20)) * 2))
 		
 			lda #$000B
 			jsl rlUnknown808C87
@@ -2772,7 +2772,7 @@
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(True), ($A000 + ((0 + (32 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(true), ($A000 + ((0 + (32 * $20)) * 2))
 		
 			jsl $85C8E2
 			jsr rsPrepItemsSetLinecounts
@@ -2787,7 +2787,7 @@
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG2TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(True), ($F000 + ((0 + (32 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG2TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(true), ($F000 + ((0 + (32 * $20)) * 2))
 		
 			phx
 			lda #(`procUnknown81F12C)<<8
@@ -3248,7 +3248,7 @@
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (10 * $20)) * 2), ((0 + (5 * $20)) * 2), VMAIN_Setting(True), ($A000 + ((0 + (10 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (10 * $20)) * 2), ((0 + (5 * $20)) * 2), VMAIN_Setting(true), ($A000 + ((0 + (10 * $20)) * 2))
 		
 			rts
 		
@@ -3328,7 +3328,7 @@
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (13 * $20)) * 2), ((0 + (2 * $20)) * 2), VMAIN_Setting(True), ($A000 + ((0 + (13 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (13 * $20)) * 2), ((0 + (2 * $20)) * 2), VMAIN_Setting(true), ($A000 + ((0 + (13 * $20)) * 2))
 		
 			+
 			lda #<>$83C0F6
@@ -3369,7 +3369,7 @@
 		
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(True), ($A000 + ((0 + (32 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG3TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(true), ($A000 + ((0 + (32 * $20)) * 2))
 		
 			rtl
 		
@@ -3383,7 +3383,7 @@
 			jsl rlProcEngineFreeProc
 			jsl rlDMAByStruct
 		
-			.dstruct structDMAToVRAM, aBG2TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(True), ($F000 + ((0 + (32 * $20)) * 2))
+			.dstruct structDMAToVRAM, aBG2TilemapBuffer + ((0 + (32 * $20)) * 2), ((0 + (32 * $20)) * 2), VMAIN_Setting(true), ($F000 + ((0 + (32 * $20)) * 2))
 		
 			rtl
 

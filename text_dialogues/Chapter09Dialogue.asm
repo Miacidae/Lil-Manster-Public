@@ -1,10 +1,10 @@
 dialogueChapter09LeifSelphinaTalk
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word selphina_portrait
 .text "Prince Leif! Oh, it's been too long, milord!"
@@ -12,11 +12,11 @@ dialogueChapter09LeifSelphinaTalk
 .text "It's me, Selphina!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Selphina, in the flesh! Can it really be you?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Prince Leif... This halfway feels like a dream..."
 .byte NewLine
@@ -28,7 +28,7 @@ dialogueChapter09LeifSelphinaTalk
 .text "You've grown into such a fine young man..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Oh, Selphina, it's enough to make me cry..."
 .byte NewLine
@@ -57,7 +57,7 @@ dialogueChapter09LeifSelphinaTalk
 .text "for it. I remember being quite the little terror..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Oh, it would be terribly improper to ever say"
 .byte NewLine
@@ -71,7 +71,7 @@ dialogueChapter09LeifSelphinaTalk
 .text "still has yet to return?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm afraid so..."
 .byte NewLine
@@ -80,7 +80,7 @@ dialogueChapter09LeifSelphinaTalk
 .text "to Isaach."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I see..."
 .byte NewLine
@@ -101,43 +101,43 @@ dialogueChapter09LeifSelphinaTalk
 
 dialogueChapter09SelphinaFinnTalk1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word selphina_portrait
 .text "Sir Finn! It's been too long."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word finn_portrait
 .text "Hold! Are you friend or enemy?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Have you forgotten me already, Sir Finn?"
 .byte NewLine
 .text "It's Selphina!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Selphina? Duke Dorius' daughter?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "The very same."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You don't say... When last we met,"
 .byte NewLine
 .text "you still wore your hair in braids..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I can only hope I'm more of a proper woman"
 .byte NewLine
@@ -146,7 +146,7 @@ dialogueChapter09SelphinaFinnTalk1
 .text "Glade and I have since been wed, you see."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Glade?! That old dog! How's he been?"
 .byte NewLine
@@ -155,7 +155,7 @@ dialogueChapter09SelphinaFinnTalk1
 .text "you must take me to him at once!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Your reunion will have to wait a little longer,"
 .byte NewLine
@@ -164,7 +164,7 @@ dialogueChapter09SelphinaFinnTalk1
 .text "trying to aid the city's defenders."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "A pity..."
 .byte NewLine
@@ -176,7 +176,7 @@ dialogueChapter09SelphinaFinnTalk1
 
 dialogueChapter09SelphinaFinnTalk2
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hmph. You can barely hide your excitement"
 .byte NewLine
@@ -190,12 +190,12 @@ dialogueChapter09SelphinaFinnTalk2
 .text "no regard for the feelings of women."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Th-That's uncalled for! I meant nothing by it..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Oh? But I still remember how you abandoned"
 .byte NewLine
@@ -207,19 +207,19 @@ dialogueChapter09SelphinaFinnTalk2
 .text "but you let her walk away."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I... I'm not sure what you mean..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No, I know you understand, Sir Finn—"
 .byte NewLine
 .text "but you pretend not to!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Selphina, we've just met again"
 .byte NewLine
@@ -228,7 +228,7 @@ dialogueChapter09SelphinaFinnTalk2
 .text "There's no need to get into this now."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah... I apologize. You've the right of it."
 .byte NewLine
@@ -237,14 +237,14 @@ dialogueChapter09SelphinaFinnTalk2
 .text "like that after such a long absence..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No, I... I understand. We can...talk about it"
 .byte NewLine
 .text "later. For now, the battlefield calls."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Of course, Sir Finn."
 .byte WaitForA
@@ -254,13 +254,13 @@ dialogueChapter09SelphinaFinnTalk2
 
 dialogueChapter09CallionSelphinaTalk
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word callion_portrait
 .text "Lady Selphina, I made it back!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word selphina_portrait
 .text "Oh, my dear Callion!"
@@ -268,7 +268,7 @@ dialogueChapter09CallionSelphinaTalk
 .text "Thank you for all that you've done."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Think nothing of it, milady."
 .byte NewLine
@@ -289,7 +289,7 @@ dialogueChapter09CallionSelphinaTalk
 .text "is just how powerless I truly am..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Don't let your impatience"
 .byte NewLine
@@ -303,14 +303,14 @@ dialogueChapter09CallionSelphinaTalk
 .text "may have come more quickly than I'd thought."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What is..."
 .byte NewLine
 .text "Th-This is a fine blade, milady, but where—"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Your mother entrusted this to me."
 .byte NewLine
@@ -322,12 +322,12 @@ dialogueChapter09CallionSelphinaTalk
 .text "when you had grown into a worthy knight."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "M-Mother?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "She passed from this world far too young,"
 .byte NewLine
@@ -343,21 +343,21 @@ dialogueChapter09CallionSelphinaTalk
 .text "until the day he died honorably in battle."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "So this was Father's own blade...one that"
 .byte NewLine
 .text "he wielded in service of House Leonster...!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "This is your birthright, Callion—use it"
 .byte NewLine
 .text "with great care."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Y-Yes, I will!"
 .byte NewLine
@@ -369,7 +369,7 @@ dialogueChapter09CallionSelphinaTalk
 
 dialogueChapter09FjalarsScrollHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word moustache_portrait
 .text "You folks friends of the people in that villa?"
@@ -399,7 +399,7 @@ dialogueChapter09FjalarsScrollHouse
 
 dialogueChapter09StaminaDrinkHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldman_portrait
 .text "What's the matter, chum? You're lookin'"
@@ -438,21 +438,21 @@ dialogueChapter09StaminaDrinkHouse
 
 dialogueChapter09Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word merloch_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word travant_portrait
 .text "Is this the area, Merloch?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "That's correct, sire."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hmph... So these bandits are harassing"
 .byte NewLine
@@ -461,7 +461,7 @@ dialogueChapter09Opening1
 .text "Even for your average brigand, that's stupid."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word altena_portrait
@@ -472,7 +472,7 @@ dialogueChapter09Opening1
 .text "to come here in person for such a trifle."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "And what kind of king would I be if I wasn't"
 .byte NewLine
@@ -486,14 +486,14 @@ dialogueChapter09Opening1
 .text "had an outing of our own, Altena."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Indeed, Father."
 .byte NewLine
 .text "I'm glad we were able to spend time together."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Shame that Arion couldn't join us."
 .byte NewLine
@@ -502,12 +502,12 @@ dialogueChapter09Opening1
 .text "the capital to be left unattended in our absence."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "He's merely taking after your example, Father."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Mm. When I was his age, I'd already taken"
 .byte NewLine
@@ -516,7 +516,7 @@ dialogueChapter09Opening1
 .text "if he wants to outpace me."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "He's doing his best—and so am I."
 .byte NewLine
@@ -525,7 +525,7 @@ dialogueChapter09Opening1
 .text "for our family, my lord father."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Good. The two of you are Thracia's future."
 .byte WaitForA
@@ -554,29 +554,29 @@ dialogueChapter09Opening1
 .text "to the deepest pit of Hell."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Father?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Altena..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Yes?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...The wind's changing on us."
 .byte NewLine
 .text "Let's head back and leave this one to Merloch."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "As you wish, my lord father."
 .byte WaitForA
@@ -584,18 +584,18 @@ dialogueChapter09Opening1
 .word LoadPortrait
 .word merloch_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You good to handle this on your own,"
 .byte NewLine
 .text "Merloch?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Hah! You insult me by asking, sire!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "All right, then I'm entrusting you with the rest"
 .byte NewLine
@@ -609,7 +609,7 @@ dialogueChapter09Opening1
 .text "to have made an enemy of Thracia!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Leave everything to me, milord!"
 .byte WaitForA
@@ -619,11 +619,11 @@ dialogueChapter09Opening1
 
 dialogueChapter09Opening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dorias_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word selphina_portrait
 .text "My lord father! It's the Thracian army!"
@@ -631,7 +631,7 @@ dialogueChapter09Opening2
 .text "T-They're flooding in from the south!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "So Travant has finally noticed us..."
 .byte NewLine
 .text "A pox on it all! With Glade in Tahra, there's"
@@ -639,14 +639,14 @@ dialogueChapter09Opening2
 .text "no one here with any experience in battle..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then leave it to me. I'll draw their attention"
 .byte NewLine
 .text "and buy everyone time to escape."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Wait! General Hannibal sent word ahead."
 .byte WaitForA
@@ -661,7 +661,7 @@ dialogueChapter09Opening2
 .text "We have to hold out until they get here..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Understood. If you've no objections,"
 .byte NewLine
@@ -669,39 +669,39 @@ dialogueChapter09Opening2
 .byte WaitForA
 .byte ScrollText
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .byte ScrollText
 .word LoadPortrait
 .word kane_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .text "Kane!  "
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .byte ScrollText
 .word LoadPortrait
 .word alba_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .text " Alba! "
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .byte ScrollText
 .word LoadPortrait
 .word robert_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .text " Robert!"
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .byte ScrollText
 .word ClearPortrait
 
-.byte Left_slot
+.byte Left_Slot
 .byte NewLine
 .text "We're moving out! Follow me!"
 .byte WaitForA
@@ -711,23 +711,23 @@ dialogueChapter09Opening2
 
 dialogueChapter09Opening3
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "The villa is just ahead, Prince Leif."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Is something amiss? Those soldiers"
 .byte NewLine
 .text "moving about, are they Duke Dorius' troops?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hm?"
 .byte NewLine
@@ -736,14 +736,14 @@ dialogueChapter09Opening3
 .text "Prince Leif—that's the Thracian army!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Wh-What?! Wasn't this villa supposed to be"
 .byte NewLine
 .text "under the protection of General Hannibal?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Perhaps Thracia finally learned"
 .byte NewLine
@@ -752,14 +752,14 @@ dialogueChapter09Opening3
 .text "General Hannibal tipped them off..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'll not hear it, August! General Hannibal"
 .byte NewLine
 .text "is a man of honor—he'd not do such a thing!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Be that as it may, we must move"
 .byte NewLine
@@ -778,17 +778,17 @@ dialogueChapter09Opening3
 
 dialogueChapter09Ending1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dorias_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "Dorius!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Prince Leif...!"
 .byte NewLine
 .text "To be able to see you, safe and healthy,"
@@ -801,7 +801,7 @@ dialogueChapter09Ending1
 .text "young man."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Whatever I've accomplished, I owe to you"
 .byte NewLine
@@ -810,7 +810,7 @@ dialogueChapter09Ending1
 .text "I never could've come as far as I have..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Oh, this is most unbecoming!"
 .byte NewLine
@@ -819,7 +819,7 @@ dialogueChapter09Ending1
 .text "I've become easier to move to tears in my age."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Duke Dorius, I think you've earned—"
 .byte WaitForA
@@ -827,7 +827,7 @@ dialogueChapter09Ending1
 .text "Ah! Y-Your arm! Don't tell me you..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Oh, this? Bah! It's but a trifle."
 .byte NewLine
@@ -836,7 +836,7 @@ dialogueChapter09Ending1
 .text "The disgrace is mine alone to bear."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "At Ulster? Then...it was for the sake"
 .byte NewLine
@@ -855,7 +855,7 @@ dialogueChapter09Ending1
 .text "Even you, Dorius... All for me..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah! Don't let this, of all things, weigh heavily"
 .byte NewLine
@@ -939,7 +939,7 @@ dialogueChapter09Ending2
 
 .word $2E00
 .long $8CBDD4
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "Hmm... Prince Leif's man was right."
@@ -966,7 +966,7 @@ dialogueChapter09Ending3
 
 .word PlayMusic
 .byte $3D
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word altena_portrait
 .text "All soldiers of Thracia, heed me!"
@@ -991,7 +991,7 @@ dialogueChapter09Ending3
 
 dialogueChapter09PlayerLoss
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "Prince Leif, I've dire news!"
@@ -999,7 +999,7 @@ dialogueChapter09PlayerLoss
 .text "I... I regret to report that the villa... has fallen."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "Come again?!"
@@ -1007,7 +1007,7 @@ dialogueChapter09PlayerLoss
 .text "Th-Then... Duke Dorius..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "All that remained of Leonster's nobility"
 .byte NewLine

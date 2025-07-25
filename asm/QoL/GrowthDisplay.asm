@@ -560,7 +560,7 @@ rsTurnHexIntoText
 	lda #$824F
 	adc @l RDMPY 		; remainder
 	xba
-	sta wR26,X 		
+	sta wR26,x
 	lda @l RDDIV 		; result
 	bne - 
 	bra _WriteTerminator

@@ -145,18 +145,18 @@ rlProcPrepScreenMapScrollOnCycle5 ; 81/C298
 	jsl rlProcEngineFreeProc
 
 	lda wMapScrollXPixels,b
-	lsr A
-	lsr A
-	lsr A
-	lsr A
+	lsr a
+	lsr a
+	lsr a
+	lsr a
 	clc 
 	adc #$0007
 	sta wR0
 	lda wMapScrollYPixels,b
-	lsr A
-	lsr A
-	lsr A
-	lsr A
+	lsr a
+	lsr a
+	lsr a
+	lsr a
 	clc
 	adc #$0006
 	sta wR1

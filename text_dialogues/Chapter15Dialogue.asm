@@ -1,10 +1,10 @@
 dialogueChapter15RalphAmaldaSpawn
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word bishop_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word amalda_portrait
 .text "It was good seeing you, Bishop, though"
@@ -14,7 +14,7 @@ dialogueChapter15RalphAmaldaSpawn
 .text "You'll watch over the children, I trust."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Of course, milady. They'll be most safe here—"
 .byte NewLine
 .text "the Empire has no reason to come all this way"
@@ -39,7 +39,7 @@ dialogueChapter15RalphAmaldaSpawn
 .text "would befall you..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I feel no fear, only shame—shame that,"
 .byte NewLine
@@ -74,7 +74,7 @@ dialogueChapter15RalphAmaldaSpawn
 .text "believe in our orders myself?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word schroff_portrait
@@ -85,12 +85,12 @@ dialogueChapter15RalphAmaldaSpawn
 .text "get careless."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Father Schroff, I can't just—"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Without you, we'd have no way of helping"
 .byte NewLine
@@ -104,7 +104,7 @@ dialogueChapter15RalphAmaldaSpawn
 .text "yet to save before throwing your own away."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...You're right."
 .byte NewLine
@@ -116,14 +116,14 @@ dialogueChapter15RalphAmaldaSpawn
 .word LoadPortrait
 .word bishop_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "She walks a hard road, that one."
 .byte NewLine
 .text "Would that our own was any easier..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Yet for all that we do, the world is still"
 .byte NewLine
 .text "crumbling to pieces all around us."
@@ -131,7 +131,7 @@ dialogueChapter15RalphAmaldaSpawn
 .text "We can do naught but pray as it collapses..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Perhaps... But I know what I heard"
 .byte NewLine
@@ -145,14 +145,14 @@ dialogueChapter15RalphAmaldaSpawn
 .text "from the living world.”"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The voice of Father Claud,"
 .byte NewLine
 .text "long since dead and buried..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm sure it was him."
 .byte WaitForA
@@ -167,7 +167,7 @@ dialogueChapter15RalphAmaldaSpawn
 .text "and tell me what it has become.”"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Mm... I understand."
 .byte NewLine
@@ -183,7 +183,7 @@ dialogueChapter15RalphAmaldaSpawn
 .text "Worry not, I'll care for the children."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Thank you, Bishop..."
 .byte NewLine
@@ -195,13 +195,13 @@ dialogueChapter15RalphAmaldaSpawn
 .word LoadPortrait
 .word ralph_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 
 .word PlayMusic
 .byte $31
 
-.byte Right_slot
+.byte Right_Slot
 .text "Bishop?"
 .byte NewLine
 .text "We got a big problem on our hands."
@@ -209,13 +209,13 @@ dialogueChapter15RalphAmaldaSpawn
 .text "A pack of bandits are closing in on the village."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "H-How can that be?!"
 .byte NewLine
 .text "We have nothing of value!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Guess they got their reasons, 'cause I just saw"
 .byte NewLine
@@ -237,7 +237,7 @@ dialogueChapter15RalphAmaldaSpawn
 .text "an' hightail it outta here."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Will the gods grant us no respite? Bah!"
 .byte WaitForA
@@ -254,7 +254,7 @@ dialogueChapter15RalphAmaldaSpawn
 .text "has vanished from the world. We all thank you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Thank destiny, 'cause it seems to have placed"
 .byte NewLine
@@ -266,7 +266,7 @@ dialogueChapter15RalphAmaldaSpawn
 
 dialogueChapter15ArmorslayerHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word moustache_portrait
 .text "Strong folk need strong swords, right?"
@@ -281,7 +281,7 @@ dialogueChapter15ArmorslayerHouse
 
 dialogueChapter15SkillRingHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldman_portrait
 .text "Hey there, chum!"
@@ -301,7 +301,7 @@ dialogueChapter15SkillRingHouse
 
 dialogueChapter15KillerLanceHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word elder_portrait
 .text "By Ornery Od!"
@@ -339,7 +339,7 @@ dialogueChapter15KillerLanceHouse
 
 dialogueChapter15UllrScroll
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady_portrait
 .text "Ye wouldn't happen to have any idea"
@@ -385,17 +385,17 @@ dialogueChapter15UllrScroll
 
 dialogueChapter15RalphRecruitment
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ralph_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "Are you a sellsword hired by the village?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Depends what you mean."
 .byte NewLine
 .text "I'm fighting for the village,"
@@ -410,12 +410,12 @@ dialogueChapter15RalphRecruitment
 .text "Couldn't take coin from the needy."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then why fight on their behalf?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I stumbled across this place in the middle of"
 .byte NewLine
@@ -429,7 +429,7 @@ dialogueChapter15RalphRecruitment
 .text "Just who are you supposed to be, anyway?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah, my apologies."
 .byte NewLine
@@ -441,7 +441,7 @@ dialogueChapter15RalphRecruitment
 .text "I'm Leif of Leonster."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Leif...?"
 .byte NewLine
@@ -462,7 +462,7 @@ dialogueChapter15RalphRecruitment
 .text "could I join your army?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Of course!"
 .byte NewLine
@@ -476,7 +476,7 @@ dialogueChapter15RalphRecruitment
 .text "What's your reason?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Because I won't put up with living under"
 .byte NewLine
@@ -485,7 +485,7 @@ dialogueChapter15RalphRecruitment
 .text "That good enough of a reason?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I...can't say I disagree,"
 .byte NewLine
@@ -499,7 +499,7 @@ dialogueChapter15RalphRecruitment
 .text "Do you swear to fight for that cause?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Sure do!"
 .byte NewLine
@@ -511,7 +511,7 @@ dialogueChapter15RalphRecruitment
 
 dialogueChapter15AmaldaLeave
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word amalda_portrait
 .text "Wonders never cease..."
@@ -533,11 +533,11 @@ dialogueChapter15AmaldaLeave
 
 dialogueChapter15MareetaShannam1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word shannam_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word mareeta_portrait
 .text "Hold! Who are you?!"
@@ -545,7 +545,7 @@ dialogueChapter15MareetaShannam1
 .text "Another one of the Empire's lapdogs?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "How uncouth..."
 .byte NewLine
 .text "If you wish to live, turn your blade aside."
@@ -558,7 +558,7 @@ dialogueChapter15MareetaShannam1
 .text "clueless little girls like you."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Astra?"
 .byte NewLine
@@ -570,7 +570,7 @@ dialogueChapter15MareetaShannam1
 .text "That would make you—"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Correct."
 .byte NewLine
@@ -584,14 +584,14 @@ dialogueChapter15MareetaShannam1
 .text "and forget you ever saw me."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Prince Shannan!"
 .byte NewLine
 .text "I would ask something of you!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hrk!"
 .byte NewLine
@@ -600,7 +600,7 @@ dialogueChapter15MareetaShannam1
 .text "Let's avoid any surprises, shall we?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Please, you must teach me"
 .byte NewLine
@@ -614,12 +614,12 @@ dialogueChapter15MareetaShannam1
 .text "Astra would be enough..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Please, Prince Shannan!"
 .byte NewLine
@@ -628,14 +628,14 @@ dialogueChapter15MareetaShannam1
 .text "No matter what, I must grow stronger...!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "W-Well, I could take you through"
 .byte NewLine
 .text "the motions, I suppose..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Would you?"
 .byte NewLine
@@ -649,7 +649,7 @@ dialogueChapter15MareetaShannam1
 .word PlayMusic
 .byte $4C
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Oof, this has gone from bad to worse."
 .byte NewLine
@@ -658,11 +658,11 @@ dialogueChapter15MareetaShannam1
 .text "about swordsmanship..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word mareeta_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Knowing the movements of the technique"
 .byte NewLine
@@ -678,12 +678,12 @@ dialogueChapter15MareetaShannam1
 .text "only then are you capable of learning Astra."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "My body and my mind...?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Indeed."
 .byte NewLine
@@ -692,14 +692,14 @@ dialogueChapter15MareetaShannam1
 .text "with your sword."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "But how should I swing it, exactly?"
 .byte NewLine
 .text "Could you demonstrate? Just once?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Uhhh..."
 .byte WaitForA
@@ -716,18 +716,18 @@ dialogueChapter15MareetaShannam1
 .text "all you would learn is how to imitate me."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Yeah, that sounded good..."
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word mareeta_portrait
 .text "So that's how it is, huh...?"
@@ -738,19 +738,19 @@ dialogueChapter15MareetaShannam1
 .text "Hee-yah!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No, not like that!"
 .byte NewLine
 .text "You're doing it completely wrong!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Haaa-yah!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No, no!"
 .byte NewLine
@@ -766,18 +766,18 @@ dialogueChapter15MareetaShannam1
 .text "Your body is working, but your mind isn't in it!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I have no idea what I'm saying."
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word mareeta_portrait
 .text "Focus my mind into my body..."
@@ -792,11 +792,11 @@ dialogueChapter15MareetaShannam1
 
 dialogueChapter15MareetaShannam2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word shannam_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word mareeta_portrait
 .text "W-Was that...?"
@@ -804,18 +804,18 @@ dialogueChapter15MareetaShannam2
 .text "I can't believe it...!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "...No way..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No, that can't be it!"
 .byte NewLine
 .text "It isn't really THAT easy, is it, Prince Shannan?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Huh?"
 .byte NewLine
@@ -824,14 +824,14 @@ dialogueChapter15MareetaShannam2
 .text "You couldn't call that a perfected Astra!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That's what I thought."
 .byte NewLine
 .text "I mean, that hardly took any time at all..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "A-At any rate, I promised to show you"
 .byte NewLine
@@ -840,7 +840,7 @@ dialogueChapter15MareetaShannam2
 .text "I'll be taking my leave now."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Thank you for everything, Prince Shannan!"
 .byte WaitForA
@@ -849,7 +849,7 @@ dialogueChapter15MareetaShannam2
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word mareeta_portrait
@@ -872,24 +872,24 @@ dialogueChapter15MareetaShannam2
 
 dialogueChapter15Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "Prince Leif, a moment, if I may?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I would advise heading west at the pass"
 .byte NewLine
 .text "up ahead to reach the road to Nordrhein."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "And it is on this matter that Duke Dorius and I"
@@ -906,7 +906,7 @@ dialogueChapter15Opening1
 .text "are sure to be weaker."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Clearly you aren't well-acquainted"
 .byte NewLine
@@ -922,7 +922,7 @@ dialogueChapter15Opening1
 .text "Hell, the locals even call it the “Mirage Forest!”"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Don't patronize me."
 .byte WaitForA
@@ -941,7 +941,7 @@ dialogueChapter15Opening1
 .text "That's just basic tactics!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I must strenuously object!"
 .byte NewLine
@@ -969,7 +969,7 @@ dialogueChapter15Opening1
 .text "held high!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Such a spectacle would indeed be glorious—"
 .byte NewLine
@@ -981,7 +981,7 @@ dialogueChapter15Opening1
 .text "Our casualties would be enormous."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Some of our own would perish, true,"
 .byte NewLine
@@ -990,7 +990,7 @@ dialogueChapter15Opening1
 .text "worthy of a knight of Leonster."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Don't presume to speak for all of us,"
 .byte NewLine
@@ -1009,7 +1009,7 @@ dialogueChapter15Opening1
 .text "by projecting your own values onto them."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Th-That's uncalled for, August!"
 .byte NewLine
@@ -1028,7 +1028,7 @@ dialogueChapter15Opening1
 .text "The decision rests with Prince Leif now."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Indeed it does."
 .byte NewLine
@@ -1040,11 +1040,11 @@ dialogueChapter15Opening1
 
 dialogueChapter15Opening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word seil_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word merc_portrait
 .text "Boss, Boss! I gots a great idea!"
@@ -1052,7 +1052,7 @@ dialogueChapter15Opening2
 .text "Let's hit up that there village today!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "What, that old slum?"
 .byte NewLine
 .text "It's just a couple lean-tos and an outhouse."
@@ -1065,7 +1065,7 @@ dialogueChapter15Opening2
 .text "an improvement fer them villagers."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "They might not got anything valuable,"
 .byte NewLine
@@ -1077,7 +1077,7 @@ dialogueChapter15Opening2
 .text "to slavers! It'd be an easy payday!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Huh..."
 .byte NewLine
@@ -1096,7 +1096,7 @@ dialogueChapter15Opening2
 
 dialogueChapter15RightAugust
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "This path shall take us through the deep"
@@ -1120,7 +1120,7 @@ dialogueChapter15RightAugustYesNo
 
 .word $2E00
 .long $8CBBBC
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "Shall we proceed, my prince?"
@@ -1136,7 +1136,7 @@ dialogueChapter15RightAugustYesNo
 
 dialogueChapter15BishopNoLeif
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word bishop_portrait
 .text "Good heavens, what a day this has been..."
@@ -1156,11 +1156,11 @@ dialogueChapter15BishopNoLeif
 
 dialogueChapter15BishopLeif
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word bishop_portrait
 .text "My goodness, we owe you and your forces"
@@ -1180,11 +1180,11 @@ dialogueChapter15BishopLeif
 
 dialogueChapter15Closing
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word bishop_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "Thank you, Bishop."
@@ -1194,16 +1194,16 @@ dialogueChapter15Closing
 .text "my men and I must be on our way."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Where are you headed, might I ask?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "We ride for Leonster."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Is that so?"
 .byte NewLine
@@ -1249,15 +1249,15 @@ dialogueChapter15BishopYesNo
 
 .word $2E00
 .long $8CBBBC
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word bishop_portrait
 .text "Which way shall I send you?"
 
-.byte Right_slot
+.byte Right_Slot
 .text "Please send us toward..."
 .byte NewLine
 .text "     Fort Nordrhein"
@@ -1271,7 +1271,7 @@ dialogueChapter15BishopYesNo
 
 dialogueChapter15LeftDorias
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "This way leads to Nordrhein, which will"
@@ -1293,7 +1293,7 @@ dialogueChapter15LeftDoriasYesNo
 
 .word $2E00
 .long $8CBBBC
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "Is this your will, sire?"

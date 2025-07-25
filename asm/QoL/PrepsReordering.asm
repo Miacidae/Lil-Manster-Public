@@ -28,7 +28,7 @@ rlPreps83B854
 	phx
 	pha
 	sta lR18
-	lda a83B8FD,X
+	lda a83B8FD,x
 	tax
 	phx
 	jsl $87E728
@@ -44,7 +44,7 @@ rlPreps83B854
 	inx
 
 	_B89A
-	lda a83B8E5,X
+	lda a83B8E5,x
 	bne _Loop
 
 	lda #$2A70
@@ -56,13 +56,13 @@ rlPreps83B854
 	_Loop2
 	phx
 	tay
-	lda a83B8FD,X 
+	lda a83B8FD,x
 	clc 
 	adc #8
 	tax
 	phy 
 	phx
-	lda $0000,Y 
+	lda $0000,y
 	and #$00FF
 	jsl $87E4A9
 	pla 
@@ -70,7 +70,7 @@ rlPreps83B854
 	adc #$000E 
 	tax
 	ply
-	lda $0071,Y 
+	lda $0071,y
 	and #$00FF
 	jsl $87E4A9
 	plx
@@ -78,7 +78,7 @@ rlPreps83B854
 	inx 
 
 	_B8D5
-	lda $83B913,X 
+	lda $83B913,x
 	bne _Loop2
 
 	jsr $83BCE0
@@ -249,7 +249,7 @@ rsPreps83B9C9
 	asl 
 	asl 
 	tax 
-	lda aUnknown83848B,X
+	lda aUnknown83848B,x
 	sta wR0
 	jmp (wR0)
 	
@@ -258,20 +258,20 @@ rsPreps83B9C9
 
 	.databank `aPlayerVisibleUnitMap
 
-	lda aPlayerVisibleUnitMap,X
+	lda aPlayerVisibleUnitMap,x
 	sta wR0
 	lda #aTargetingCharacterBuffer
 	sta wR1
 	jsl rlCopyCharacterDataToBufferByDeploymentNumber
 	ldx #aSelectedCharacterBuffer
-	ldy structExpandedCharacterDataRAM.Coordinates,X 
-	lda structExpandedCharacterDataRAM.Coordinates+size(structExpandedCharacterDataRAM),X ; 47	
-	sty structExpandedCharacterDataRAM.Coordinates+size(structExpandedCharacterDataRAM),X 
-	sta structExpandedCharacterDataRAM.Coordinates,X 
-	ldy structExpandedCharacterDataRAM.DeploymentSlot,X 
-	lda structExpandedCharacterDataRAM.DeploymentSlot+size(structExpandedCharacterDataRAM),X 
-	sty structExpandedCharacterDataRAM.DeploymentSlot+size(structExpandedCharacterDataRAM),X 
-	sta structExpandedCharacterDataRAM.DeploymentSlot,X
+	ldy structExpandedCharacterDataRAM.Coordinates,x
+	lda structExpandedCharacterDataRAM.Coordinates+size(structExpandedCharacterDataRAM),x ; 47	
+	sty structExpandedCharacterDataRAM.Coordinates+size(structExpandedCharacterDataRAM),x 
+	sta structExpandedCharacterDataRAM.Coordinates,x
+	ldy structExpandedCharacterDataRAM.DeploymentSlot,x
+	lda structExpandedCharacterDataRAM.DeploymentSlot+size(structExpandedCharacterDataRAM),x
+	sty structExpandedCharacterDataRAM.DeploymentSlot+size(structExpandedCharacterDataRAM),x
+	sta structExpandedCharacterDataRAM.DeploymentSlot,x
 	lda #aSelectedCharacterBuffer
 	sta wR1
 	jsl rlCopyCharacterDataFromBuffer
@@ -421,7 +421,7 @@ rsPreps83BAEE
 	.databank `aPlayerVisibleUnitMap
 
 	ldx wCursorTileIndex,b
-	lda aPlayerVisibleUnitMap,X 
+	lda aPlayerVisibleUnitMap,x
 	sta wR0 
 	lda #aSelectedCharacterBuffer
 	sta wR1 
@@ -450,7 +450,7 @@ rsPrepsGetCursorUnitDeploymentNumber ; 83BB13
 	.databank `aPlayerVisibleUnitMap
 
 	ldx wCursorTileIndex,b
-	lda aPlayerVisibleUnitMap,X
+	lda aPlayerVisibleUnitMap,x
 	and #$00FF
 	rts 
 
@@ -475,7 +475,7 @@ rlPreps83BB39 ; push deployed characters to the start of the deployment slots
 	ldx #$005E
 
 	-
-	stz aPrepDeploymentSlots+$60,X 
+	stz aPrepDeploymentSlots+$60,x
 	dex 
 	dex 
 	bpl -
@@ -483,10 +483,10 @@ rlPreps83BB39 ; push deployed characters to the start of the deployment slots
 	-
 	inx 
 	inx 
-	ldy aPrepDeploymentSlots,X 
+	ldy aPrepDeploymentSlots,x
 	beq +
 
-	lda structCharacterDataRAM.UnitState,b,Y 
+	lda structCharacterDataRAM.UnitState,b,y
 	bit #UnitStateMoved
 	bne -
 
@@ -501,7 +501,7 @@ rlPreps83BB39 ; push deployed characters to the start of the deployment slots
 	jmp _Out
 
 	+
-	sta aPrepDeploymentSlots+$60,X 
+	sta aPrepDeploymentSlots+$60,x
 	inx 
 	inx 
 	eor #$FFFF
@@ -509,10 +509,10 @@ rlPreps83BB39 ; push deployed characters to the start of the deployment slots
 	sta wR16
 
 	_GetSelectedAndUnselectedUnitsLoop
-	ldy aPrepDeploymentSlots,X 
+	ldy aPrepDeploymentSlots,x
 	beq _BB92
 
-	lda structCharacterDataRAM.UnitState,b,Y 
+	lda structCharacterDataRAM.UnitState,b,y
 	and #UnitStateMoved
 	beq +
 
@@ -527,7 +527,7 @@ rlPreps83BB39 ; push deployed characters to the start of the deployment slots
 	lsr
 
 	+
-	sta aPrepDeploymentSlots+$60,X
+	sta aPrepDeploymentSlots+$60,x
 	inx 
 	inx 
 	bit wR16
@@ -541,7 +541,7 @@ rlPreps83BB39 ; push deployed characters to the start of the deployment slots
 	bra _BBAD
 
 	_ReorganizeLoop
-	lda aPrepDeploymentSlots+$60,X
+	lda aPrepDeploymentSlots+$60,x
 	bmi + ; highest bit set > branch
 
 	; bit unset, push unselected unit back in the list
@@ -554,8 +554,8 @@ rlPreps83BB39 ; push deployed characters to the start of the deployment slots
 	+
 	asl a 
 	tay 
-	lda aPrepDeploymentSlots,Y 
-	sta aPrepDeploymentSlots+$60,X
+	lda aPrepDeploymentSlots,y
+	sta aPrepDeploymentSlots+$60,x
 
 	_BBAD
 	dex 
@@ -567,9 +567,9 @@ rlPreps83BB39 ; push deployed characters to the start of the deployment slots
 	ldx lR18
 
 	_ApplyNewOrderingLoop
-	lda aPrepDeploymentSlots,X 
-	ldy aPrepDeploymentSlots+$60,X 
-	stz aPrepDeploymentSlots+$60,X 
+	lda aPrepDeploymentSlots,x
+	ldy aPrepDeploymentSlots+$60,x
+	stz aPrepDeploymentSlots+$60,x
 	sty wR16
 	cmp wR16
 	beq _BBF1
@@ -579,13 +579,13 @@ rlPreps83BB39 ; push deployed characters to the start of the deployment slots
 	-
 	inx 
 	inx
-	cmp aPrepDeploymentSlots+$60,X
+	cmp aPrepDeploymentSlots+$60,x
 	bne -
 
 	sta wR16
 	tya
-	sta aPrepDeploymentSlots+$60,X 
-	lda aPrepDeploymentSlots,X 
+	sta aPrepDeploymentSlots+$60,x
+	lda aPrepDeploymentSlots,x
 	sta lR18
 
 
@@ -595,12 +595,12 @@ rlPreps83BB39 ; push deployed characters to the start of the deployment slots
 	dey 
 
 	-
-	lda (wR16),Y 
+	lda (wR16),y
 	tax
-	lda (lR18),Y 
-	sta (wR16),Y 
+	lda (lR18),y
+	sta (wR16),y
 	txa
-	sta (lR18),Y 
+	sta (lR18),y
 	dey 
 	bmi +
 	bne -- ; swap unit data 
@@ -816,8 +816,8 @@ rsPreps83C80C
 	ldy #$0006
 	
 	-
-	lda (wR0),Y
-	sta $02F0,b,Y
+	lda (wR0),y
+	sta $02F0,b,y
 	dey
 	dey
 	bpl -
@@ -949,11 +949,11 @@ rsPreps85F474
 rlPrepsCheckIfUnitIsDeployable ; 85F483 
 
 	sep #$20
-	lda structCharacterDataRAM.Fatigue,b,X
+	lda structCharacterDataRAM.Fatigue,b,x
 	cmp #$FF
 	beq +
 
-	cmp structCharacterDataRAM.MaxHP,b,X
+	cmp structCharacterDataRAM.MaxHP,b,x
 	beq +
 	bcc +
 
@@ -963,9 +963,9 @@ rlPrepsCheckIfUnitIsDeployable ; 85F483
 
 	+
 	rep #$20
-	lda structCharacterDataRAM.UnitState,b,X 
+	lda structCharacterDataRAM.UnitState,b,x
 	and #$9FFF ; unset UnitStateUnknown3 and UnitStateUnknown4
-	sta structCharacterDataRAM.UnitState,b,X
+	sta structCharacterDataRAM.UnitState,b,x
 
 	+
 	rtl 
@@ -987,7 +987,7 @@ rsPrepsUpdateStatusIfStaminaDrink ; 85F4A6
 	plx
 	lda wR17
 	cmp #1
-	lda structCharacterDataRAM.UnitState,b,X 
+	lda structCharacterDataRAM.UnitState,b,x
 	bcc +
 
 	ora #UnitStateUnknown4
@@ -999,7 +999,7 @@ rsPrepsUpdateStatusIfStaminaDrink ; 85F4A6
 	and #$BFFF
 
 	+
-	sta structCharacterDataRAM.UnitState,b,X
+	sta structCharacterDataRAM.UnitState,b,x
 	pla 
 	sta lR25+1
 	pla 
@@ -1019,10 +1019,10 @@ rsPrepsCheckIfItemIsStaminaDrink ;	85F4E3
 rsPreps85F4EE
 
 	ldx aPrepDeploymentSlots	
-	lda structCharacterDataRAM.UnitState,b,X
+	lda structCharacterDataRAM.UnitState,b,x
 	and #$DFFF
 	ora #UnitStateMoved
-	sta structCharacterDataRAM.UnitState,b,X
+	sta structCharacterDataRAM.UnitState,b,x
 	lda #<>rsPreps85F50C
 	sta lR25
 	lda #>`rsPreps85F50C
@@ -1032,7 +1032,7 @@ rsPreps85F4EE
 
 rsPreps85F50C
 
-	lda structCharacterDataRAM.UnitState,b,X
+	lda structCharacterDataRAM.UnitState,b,x
 	bit #UnitStateMoved
 	beq +
 
@@ -1040,7 +1040,7 @@ rsPreps85F50C
 	beq +
 	
 	and #$FDFF
-	sta structCharacterDataRAM.UnitState,b,X
+	sta structCharacterDataRAM.UnitState,b,x
 	
 	+
 	rtl 
@@ -1090,9 +1090,9 @@ rlPreps85F558 ; assign units the starting position coords based on deployment sl
 
 	_AssignStartingCoords
 	and #$F3BA
-	sta structCharacterDataRAM.UnitState,b,X
+	sta structCharacterDataRAM.UnitState,b,x
 	ldy wR17
-	lda [lR18],Y
+	lda [lR18],y
 	iny
 	iny
 	sty wR17
@@ -1100,11 +1100,11 @@ rlPreps85F558 ; assign units the starting position coords based on deployment sl
 
 	_HideUnit ; hide undeployed units and give them generic coords 
 	ora #UnitStateHidden
-	sta structCharacterDataRAM.UnitState,b,X
+	sta structCharacterDataRAM.UnitState,b,x
 	lda #$0101
 
 	+
-	sta structCharacterDataRAM.Coordinates,b,X
+	sta structCharacterDataRAM.Coordinates,b,x
 	rtl
 
 rsPreps85F57D
@@ -1114,12 +1114,12 @@ rsPreps85F57D
 	.databank `wPrepSelectedDeployableUnits
 
 	ldy wR1
-	lda structCharacterDataRAM.UnitState,b,Y
+	lda structCharacterDataRAM.UnitState,b,y
 	and #$FDFF
 	ora #UnitStateHidden
-	sta structCharacterDataRAM.UnitState,b,Y
+	sta structCharacterDataRAM.UnitState,b,y
 	lda #$0101
-	sta structCharacterDataRAM.Coordinates,b,Y
+	sta structCharacterDataRAM.Coordinates,b,y
 	dec wPrepSelectedDeployableUnits
 	rts
 
@@ -1129,7 +1129,7 @@ HideOrDisplayUnitsOnPerpsMapCheck
 	and #$F000
 	beq _Hide 
 
-	lda structCharacterDataRAM.UnitState,b,X
+	lda structCharacterDataRAM.UnitState,b,x
 	bit #UnitStateMoved
 	beq _Hide
 
@@ -1137,7 +1137,7 @@ HideOrDisplayUnitsOnPerpsMapCheck
 
 
 	_Hide
-	lda structCharacterDataRAM.UnitState,b,X
+	lda structCharacterDataRAM.UnitState,b,x
 	jmp rlPreps85F558._HideUnit
 
 
@@ -1164,12 +1164,12 @@ HideOrDisplayUnitsOnPerpsMapCheck
 
 	lda wPrepUnitListColumn
 	clc 
-	adc $85FA36,X
+	adc $85FA36,x
 	sta wR0 
 	pha
 	clc
 	lda wPrepUnitListRow
-	adc $85FA3E,X
+	adc $85FA3E,x
 	sta wR1
 	pha
 	jsl $85FAD0
@@ -1302,14 +1302,14 @@ rsPreps85FA53
 
 	jsr rsPreps85FA53
 	ldy wR1
-	lda structCharacterDataRAM.UnitState,b,Y
+	lda structCharacterDataRAM.UnitState,b,y
 	ora #UnitStateMoved
 	bcc +
 
 	and #$F3BA
 
 	+
-	sta structCharacterDataRAM.UnitState,b,Y
+	sta structCharacterDataRAM.UnitState,b,y
 	inc wPrepSelectedDeployableUnits
 
 	+
@@ -1335,7 +1335,7 @@ rsPreps85FA53
 	tay
 	jsl rlGetSaveSlotOffset
 	ldx wSaveSlotOffset,b
-	lda aSRAM+structSaveDataEntry.CurrentChapter,X
+	lda aSRAM+structSaveDataEntry.CurrentChapter,x
 	and #$00FF
 	cmp wCurrentChapter,b
 	bne +

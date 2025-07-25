@@ -160,7 +160,7 @@ rlProcEventTestClearBG1Tilemap ; 82/80F7
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0800, VMAIN_Setting(True), $E000
+	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0800, VMAIN_Setting(true), $E000
 
 	rtl
 
@@ -660,7 +660,7 @@ rlProcEventTestHandleAction ; 82/84FD
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(True), $A000
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(true), $A000
 
 	plx
 	jsl rlProcEngineFreeProc
@@ -701,7 +701,7 @@ rlProcEventTestHandleAction ; 82/84FD
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(True), $A000
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(true), $A000
 
 	plx
 	rtl

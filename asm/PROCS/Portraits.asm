@@ -948,13 +948,13 @@ rlDialogueBoxHDMAInit ; 82/9420
 	.databank ?
 
 	sep #$20
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTS
-	lda #CGWSEL_Setting(True, False, CGWSEL_MathAlways, CGWSEL_BlackNever)
+	lda #CGWSEL_Setting(true, false, CGWSEL_MathAlways, CGWSEL_BlackNever)
 	sta bBufferCGWSEL
-	lda #CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+	lda #CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 	sta bBufferCGADSUB
 	rep #$20
 	rtl
@@ -973,93 +973,93 @@ aDialogueBoxHDMACode ; 82/9436
 
 aDialogueHDMATable ; 82/9438
 
-	.byte NTRL_Setting(64, True)
+	.byte NTRL_Setting(64, true)
 
 	.for i=0, i<8, i+=1
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Add, False, False, False, False, False, False, False)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Add, false, false, false, false, false, false, false)
 	.next
 
 	.for i=5, i>=0, i-=1
-		.word (COLDATA_Setting(i, True, True, True) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+		.word (COLDATA_Setting(i, true, true, true) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 	.next
 
 	.for i=0, i<21, i+=1
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 	.next
 
-	.word (COLDATA_Setting(1, True, True, True) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+	.word (COLDATA_Setting(1, true, true, true) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 
-	.word (COLDATA_Setting(2, True, True, True) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+	.word (COLDATA_Setting(2, true, true, true) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 
-	.word (COLDATA_Setting(3, True, True, True) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+	.word (COLDATA_Setting(3, true, true, true) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 
-	.byte NTRL_Setting(64, True)
+	.byte NTRL_Setting(64, true)
 
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 
-	.word (COLDATA_Setting(4, True, True, True) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+	.word (COLDATA_Setting(4, true, true, true) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 
-	.word (COLDATA_Setting(5, True, True, True) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+	.word (COLDATA_Setting(5, true, true, true) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 
 	.for i=0, i<56, i+=1
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Add, False, False, False, False, False, False, False)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Add, false, false, false, false, false, false, false)
 	.next
 
-	.byte NTRL_Setting(64, True)
+	.byte NTRL_Setting(64, true)
 
 	.for i=0, i<32, i+=1
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Add, False, False, False, False, False, False, False)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Add, false, false, false, false, false, false, false)
 	.next
 
 	.for i=0, i<4, i+=1
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 	.next
 
 
 	.for i=4, i>=0, i-=1
-		.word (COLDATA_Setting(i, True, True, True) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+		.word (COLDATA_Setting(i, true, true, true) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 	.next
 
 	.for i=0, i<8, i+=1
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 	.next
 
-	.byte NTRL_Setting(32, True)
+	.byte NTRL_Setting(32, true)
 
 	.for i=0, i<14, i+=1
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 	.next
 
 	.for i=1, i<=4, i+=1
-		.word (COLDATA_Setting(i, True, True, True) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-		.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+		.word (COLDATA_Setting(i, true, true, true) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+		.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 	.next
 
-	.word (COLDATA_Setting(5, True, True, True) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
-	.word (COLDATA_Setting(0, False, False, False) << 8) | CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+	.word (COLDATA_Setting(5, true, true, true) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
+	.word (COLDATA_Setting(0, false, false, false) << 8) | CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 
-.byte NTRL_Setting(0, False)
+.byte NTRL_Setting(0, false)
 
 procPortrait4 .dstruct structProcInfo, (4, "@"), rlProcPortraitBGInit, None, aProcPortraitBGCode ; 82/95FD
 procPortrait5 .dstruct structProcInfo, (5, "@"), rlProcPortraitBGInit, None, aProcPortraitBGCode ; 82/9605
@@ -1535,7 +1535,7 @@ rsClearUpperDialogueBoxBG3 ; 82/98A4
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0400, VMAIN_Setting(True), $A000
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0400, VMAIN_Setting(true), $A000
 
 	plx
 	rts
@@ -1558,7 +1558,7 @@ rsClearLowerDialogueBoxBG3 ; 82/98CA
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $7EEB7C, $0400, VMAIN_Setting(True), $A400
+	.dstruct structDMAToVRAM, $7EEB7C, $0400, VMAIN_Setting(true), $A400
 
 	plx
 	rts
@@ -1586,7 +1586,7 @@ rlUnknown8298F0 ; 82/98F0
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $7EEF7C, $0800, VMAIN_Setting(True), $A800
+	.dstruct structDMAToVRAM, $7EEF7C, $0800, VMAIN_Setting(true), $A800
 
 	plx
 	rtl

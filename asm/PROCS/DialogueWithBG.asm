@@ -70,7 +70,7 @@ rlProcDialogueWithBGOnCycle2 ; 82/8D85
 
 	lda bBufferINIDISP
 	and #INIDISP_Brightness
-	cmp #INIDISP_Setting(False, 15)
+	cmp #INIDISP_Setting(false, 15)
 	beq +
 
 	inc a
@@ -140,7 +140,7 @@ rlProcDialogueWithBGOnCycle4 ; 82/8DC0
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0800, VMAIN_Setting(True), $E000
+	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0800, VMAIN_Setting(true), $E000
 
 	jsl $958127
 

@@ -2,15 +2,15 @@
 
 dialogueChapter02Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_potrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word bucks_potrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte $09 ; font 9(always use font 9)	
 .text "Bucks, is this kind of body count"
 .byte NewLine
@@ -22,7 +22,7 @@ dialogueChapter02Opening1
 .text "not gut everything that moves."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Look 'ere, smart-aleck."
 .byte NewLine
 .text "We got us a nice division of labor goin'."
@@ -45,7 +45,7 @@ dialogueChapter02Opening1
 .text "that the Leonster boy was hidin' with 'em."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Leonster boy...?"
 .byte NewLine
@@ -54,7 +54,7 @@ dialogueChapter02Opening1
 .text "Are you certain of this?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Sure am. The boss grabbed one of the village"
 .byte NewLine
@@ -68,12 +68,12 @@ dialogueChapter02Opening1
 .text "mighta survived if he'd talked sooner."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "He resorted to torture, did he...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hah, yer one to talk!"
 .byte WaitForA
@@ -89,7 +89,7 @@ dialogueChapter02Opening1
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Dammit, Lifis... You've become more trouble"
 .byte NewLine
@@ -110,7 +110,7 @@ dialogueChapter02Opening1
 	
 dialogueChapter02Opening2A
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word eyvel_portrait
 
@@ -123,7 +123,7 @@ dialogueChapter02Opening2A
 .text "That village is being raided!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Hmm... That's Lifis' crew, by the look of it."
 .byte NewLine
 .text "They've been quiet as a mouse for a while,"
@@ -142,18 +142,18 @@ dialogueChapter02Opening2A
 	
 dialogueChapter02Opening2B
 	
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word finn_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .byte $09 ; font 9(always use font 9)
 .text "Finn, look here! That village is being raided!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "What's this? These pirates answer to a man"
 .byte NewLine
 .text "named Lifis, as I recall—but they've been quiet"
@@ -161,7 +161,7 @@ dialogueChapter02Opening2B
 .text "for so long, I thought they might've disbanded."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Seems they have a macabre idea of a reunion,"
 .byte NewLine
@@ -174,7 +174,7 @@ dialogueChapter02Opening2B
 
 dialogueChapter02Opening2C
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait; load portrait
 .word leif_portrait2
 .byte $09 ; font 9(always use font 9)
@@ -199,11 +199,11 @@ dialogueChapter02Opening2C
 	
 dialogueChapter02RonanHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ronan_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word oldlady_portrait
 .byte $09 ; font 9(always use font 9)	
@@ -216,12 +216,12 @@ dialogueChapter02RonanHouse
 .text "I'll go and fight alongside—"
 .byte WaitForA
 	
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word ClearPortrait
 .word RetractBox
 	
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Oh, you must be with the Freeblades!"
 .byte NewLine
@@ -263,7 +263,7 @@ dialogueChapter02RonanHouse
 
 dialogueChapter02RonanHouseVillageAttacked
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word braidedgirl_portrait
 .byte $09 ; font 9(always use font 9)
@@ -326,7 +326,7 @@ dialogueChapter02SpeedRingHouse
 .word ClearPortrait
 .word RetractBox
 	
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word braidedgirl_portrait
 .text "...I'm sorry 'bout my brother."
@@ -352,7 +352,7 @@ dialogueChapter02SpeedRingHouse
 
 dialogueChapter02SpeedRingHouseVillageAttacked
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word beardedman_portrait
 .byte $09 ; font 9(always use font 9)
@@ -373,7 +373,7 @@ dialogueChapter02SpeedRingHouseVillageAttacked
 	
 dialogueChapter02VulneraryHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word beardedman_portrait
 .byte $09 ; font 9(always use font 9)
@@ -394,7 +394,7 @@ dialogueChapter02VulneraryHouse
 .byte EndText
 
 dialogueChapter02VulneraryHouseVillageAttacked
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldman2_portrait
 .byte $09 ; font 9(always use font 9)
@@ -465,36 +465,36 @@ dialogueChapter02WorldMap3
 	
 dialogueChapter02Ending1Gaiden
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_potrait
 .byte $09 ; font 9(always use font 9)
 .text "Lord Leif, I presume?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "...And you are?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "August, at your service."
 .byte NewLine
 .text "I am a priest of Bragi on pilgrimage."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Is there something you need from me?"
 .byte NewLine
 .text "With respect, I don't have time to spare on talk."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Neither do I."
 .byte NewLine
@@ -503,7 +503,7 @@ dialogueChapter02Ending1Gaiden
 .text "to nip this pirate threat in the bud?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Indeed. If we leave them be, it's only a matter"
 .byte NewLine
@@ -515,14 +515,14 @@ dialogueChapter02Ending1Gaiden
 .text "captive there."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I see. In that case, allow me to be"
 .byte NewLine
 .text "your navigator. I can guide you to the isles."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What?"
 .byte NewLine
@@ -531,7 +531,7 @@ dialogueChapter02Ending1Gaiden
 .text "to the Corsair Isles?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "This old man has many surprises left"
 .byte NewLine
@@ -544,36 +544,36 @@ dialogueChapter02Ending1Gaiden
 
 dialogueChapter02Ending1Regular
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_potrait
 .byte $09 ; font 9(always use font 9)
 .text "Lord Leif, I presume?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "...And you are?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "August, at your service."
 .byte NewLine
 .text "I am a priest of Bragi on pilgrimage."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Is there something you need from me?"
 .byte NewLine
 .text "With respect, I don't have time to spare on talk."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Neither do I. I'm headed to Munster, but with"
 .byte NewLine
@@ -585,14 +585,14 @@ dialogueChapter02Ending1Regular
 .text "May I accompany you?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Certainly, it's no trouble."
 .byte NewLine
 .text "We'll be passing through Kerberos' Gate shortly."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm in your debt. Along the way, I'm certain"
 .byte NewLine

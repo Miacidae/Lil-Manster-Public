@@ -4,7 +4,7 @@
 NewLine = $02
 ScrollText = $04
 EndText = $05
-Left_slot = $06
+Left_Slot = $06
 Right_Slot = $07
 WaitForA = $08
 
@@ -22,7 +22,7 @@ PauseDialogue = $1D00
 
 dialogueChapter01Opening1
 
-    .byte Left_slot ; Left slot
+    .byte Left_Slot ; Left slot
     .word LoadPortrait    ; load portrait
     .word raydrik_portrait
 
@@ -30,7 +30,7 @@ dialogueChapter01Opening1
     .word LoadPortrait
     .word weissman_portrait
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte $09 ; font 9(always use font 9)	
 	.text "Have you found that whelp of a prince yet?"
 	.byte WaitForA	
@@ -41,7 +41,7 @@ dialogueChapter01Opening1
 	.text "village top to bottom, but came up with nothing."
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Why is such a simple task taking you so long?"
 	.byte NewLine
@@ -69,7 +69,7 @@ dialogueChapter01Opening1
 	.text "to fend off a pirate raid on a nearby village."
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Freeblades? What nonsense is that?"
 	.byte WaitForA
@@ -98,7 +98,7 @@ dialogueChapter01Opening1
 	.text "She's supposedly quite a wonder with a sword..."
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Hmm... She may be a problem."
 	.byte WaitForA
@@ -122,7 +122,7 @@ dialogueChapter01Opening1
 	.text "they'll have no choice but to surrender."
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Hmph. I admit, you have your uses, Weismann."
 	.byte WaitForA
@@ -143,11 +143,11 @@ dialogueChapter01Opening1
 	.byte ScrollText
 	.text "Your trust in me is well placed, sire."
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.word ClearPortrait
 	.word RetractBox
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.byte NewLine
 	.text "Men, bring the girls here!"
 	.byte WaitForA
@@ -156,7 +156,7 @@ dialogueChapter01Opening1
 	
 dialogueChapter01Opening2
 
-	.byte Left_slot
+	.byte Left_Slot
     .word LoadPortrait
     .word raydrik_portrait
 
@@ -164,7 +164,7 @@ dialogueChapter01Opening2
     .word LoadPortrait
     .word mareeta_portrait
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte $09
 	.text "What's your name, lass?"
 	.byte WaitForA
@@ -173,15 +173,15 @@ dialogueChapter01Opening2
 	.text "Hmph..."
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Hah! A fighting spirit to match a pretty face."
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.word ClearPortrait
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte NewLine
 	.text "Now, let's have a look at the other one..."
 	.byte WaitForA
@@ -190,7 +190,7 @@ dialogueChapter01Opening2
 	.word LoadPortrait
 	.word nanna_portrait
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Ah, you must be Finn's young ward."
 	.byte NewLine
@@ -206,12 +206,12 @@ dialogueChapter01Opening2
 	.text "thin even in squalor, I see."
 	.byte WaitForA
 
-	.byte Right_slot
+	.byte Right_Slot
 	.text "......"
 	.byte WaitForA
 	.byte ScrollText
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "What a pleasant surprise the two of you"
 	.byte NewLine
@@ -222,7 +222,7 @@ dialogueChapter01Opening2
 	.word LoadPortrait
 	.word weissman_portrait
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Weismann, I'll be departing for Munster now."
 	.byte NewLine
@@ -237,7 +237,7 @@ dialogueChapter01Opening2
 	
 dialogueChapter01Opening3
 
-	.byte Right_slot
+	.byte Right_Slot
     .word LoadPortrait
     .word eyvel_portrait
 	.byte $09	
@@ -258,7 +258,7 @@ dialogueChapter01Opening3
 
 dialogueChapter01Opening4
 
-	.byte Left_slot
+	.byte Left_Slot
     .word LoadPortrait
     .word eyvel_portrait
 	
@@ -365,7 +365,7 @@ dialogueChapter01Opening4
 	.text "That's my decision to make."
 	.byte WaitForA
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "...Finn, you wanna weigh in here?"
 	
@@ -480,11 +480,11 @@ dialogueChapter01Opening4
 	
 dialogueChapter01DagdarArrive
 
-	.byte Right_slot
+	.byte Right_Slot
 	.word LoadPortrait
 	.word dagdar_portrait
 
-	.byte Left_slot
+	.byte Left_Slot
 	.word LoadPortrait
 	.word tanya_portrait
 	.text "Papa, the fighting's started already!"
@@ -507,7 +507,7 @@ dialogueChapter01DagdarArrive
 
 dialogueChapter01MartyArrive
 
-	.byte Right_slot
+	.byte Right_Slot
     .word LoadPortrait
     .word marty_portrait
 	.byte $09 ; font 9(always use font 9)
@@ -520,11 +520,11 @@ dialogueChapter01MartyArrive
 	
 dialogueChapter01OsianHouseOsian
 
-	.byte Right_slot
+	.byte Right_Slot
     .word LoadPortrait
-    .word Osian_portrait
+    .word osian_portrait
 	
-	.byte Left_slot
+	.byte Left_Slot
     .word LoadPortrait
     .word oldman_portrait
 	.byte $09 ; font 9(always use font 9)
@@ -535,7 +535,7 @@ dialogueChapter01OsianHouseOsian
 	.text "is to babysit you."
 	.byte WaitForA
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.text "We're risking life and limb to protect the"
 	.byte NewLine
 	.text "village, and you're giving me a lecture? You've"
@@ -543,7 +543,7 @@ dialogueChapter01OsianHouseOsian
 	.text "got a strange sense of gratitude, old man."
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Not even the Empire knockin' down our front"
 	.byte NewLine
@@ -555,7 +555,7 @@ dialogueChapter01OsianHouseOsian
 	.text "Here. This is what you came for, right?"
 	.byte WaitForA
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "For once, you read my mind."
 	.byte NewLine
@@ -564,21 +564,21 @@ dialogueChapter01OsianHouseOsian
 	.text "without this axe at my side."
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Which don't explain why you forget it at home"
 	.byte NewLine
 	.text "half the damn time!"
 	.byte WaitForA
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "Hey, I came here for the axe,"
 	.byte NewLine
 	.text "not to get chewed out!"
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "If that's all you wanted, then get going!"
 	.byte NewLine
@@ -587,7 +587,7 @@ dialogueChapter01OsianHouseOsian
 	.text "Don't keep the Commander waitin' on you!"
 	.byte WaitForA
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "You don't need to tell me twice!"
 	.byte WaitForA
@@ -596,7 +596,7 @@ dialogueChapter01OsianHouseOsian
 	
 dialogueChapter01OsianHouseOther
 
-	.byte Right_slot
+	.byte Right_Slot
     .word LoadPortrait
     .word oldman_portrait
 	.byte $09 ; font 9(always use font 9)	
@@ -611,7 +611,7 @@ dialogueChapter01OsianHouseOther
 	
 dialogueChapter01LifeRingHouse
 
-	.byte Right_slot
+	.byte Right_Slot
     .word LoadPortrait
     .word oldlady_portrait
 	.byte $09 ; font 9(always use font 9)
@@ -645,7 +645,7 @@ dialogueChapter01LifeRingHouse
 	
 dialogueChapter01VulneraryHouse
 
-	.byte Right_slot
+	.byte Right_Slot
     .word LoadPortrait
     .word oldlady3_portrait
 	.byte $09 ; font 9(always use font 9)
@@ -676,7 +676,7 @@ dialogueChapter01VulneraryHouse
 	
 dialogueChapter01IronSwordHouse
 
-	.byte Right_slot
+	.byte Right_Slot
     .word LoadPortrait
     .word moustache_portrait
 	.byte $09 ; font 9(always use font 9)	
@@ -713,11 +713,11 @@ dialogueChapter01IronSwordHouse
 	
 dialogueChapter01HalvanHouseHalvan
 	
-	.byte Right_slot
+	.byte Right_Slot
     .word LoadPortrait 
     .word halvan_portrait
 
-	.byte Left_slot
+	.byte Left_Slot
     .word LoadPortrait
     .word younglady_portrait
 	.byte $09 ; font 9(always use font 9)	
@@ -728,13 +728,13 @@ dialogueChapter01HalvanHouseHalvan
 	.text "You can use this to keep yourself safe, right?"
 	.byte WaitForA
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.text "An...axe? Where in the world did you get"
 	.byte NewLine
 	.text "such a fine weapon?"
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Darnedest thing... I was walkin' past the lake"
 	.byte NewLine
@@ -757,7 +757,7 @@ dialogueChapter01HalvanHouseHalvan
 	
 dialogueChapter01HalvanHouseOther
 
-	.byte Right_slot
+	.byte Right_Slot
     .word LoadPortrait
     .word younglady_portrait
 	.byte $09 ; font 9(always use font 9)	
@@ -772,7 +772,7 @@ dialogueChapter01HalvanHouseOther
 	
 dialogueChapter01Ending
 
-	.byte Right_slot
+	.byte Right_Slot
     .word LoadPortrait
     .word leif_portrait2
 	.byte $09 ; font 9(always use font 9)
@@ -781,7 +781,7 @@ dialogueChapter01Ending
 	.text "Please, answer me!"
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
     .word LoadPortrait
     .word eyvel_portrait
 	.text "Little Nan, Mareeta..."
@@ -796,7 +796,7 @@ dialogueChapter01Ending
 	.text "to Munster, right?"
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Yeah—as bargaining chips, in case Weismann"
 	.byte NewLine
@@ -814,7 +814,7 @@ dialogueChapter01Ending
 	.text "The two of them are counting on us!"
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Now look here, Little Leif—" ;interrupt
 	.byte WaitForA
@@ -838,7 +838,7 @@ dialogueChapter01Ending
 	.text "their life in exchange for mine."
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "...I understand. We leave at dawn, then."
 	.byte NewLine
@@ -860,7 +860,7 @@ dialogueChapter01EndingNoEyvel
 	.text "Please, answer me!"
 	.byte WaitForA
 		
-	.byte Left_slot
+	.byte Left_Slot
     .word LoadPortrait
     .word youngman_portrait
 	.text "L-Lord Leif!"
@@ -875,12 +875,12 @@ dialogueChapter01EndingNoEyvel
 	.text "and we couldn't do nuthin' to stop 'em!"
 	.byte WaitForA
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "Nanna? What happened to Nanna?"
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "The Empire took 'er, sure as you're standin'"
 	.byte NewLine
@@ -892,12 +892,12 @@ dialogueChapter01EndingNoEyvel
 	.text "They both wore chains, last I saw."
 	.byte WaitForA
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "Where were they taken?"
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Don't rightfully know, Lord Leif. One of them"
 	.byte NewLine
@@ -906,7 +906,7 @@ dialogueChapter01EndingNoEyvel
 	.text "to Munster, but nuthin' more specific'n that."
 	.byte WaitForA
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "Munster... Then that's where I'm headed, too."
 	.byte NewLine
@@ -1056,18 +1056,18 @@ dialogueChapter01WorldMap6
 	
 dialogueChapter01EyvelDagdarTalk
 	
-	.byte Right_slot
+	.byte Right_Slot
     .word LoadPortrait
     .word dagdar_portrait
 
-	.byte Left_slot
+	.byte Left_Slot
 	.word LoadPortrait
     .word eyvel_portrait
 	.byte $09 ; font 9(always use font 9)	
 	.text "Dagdar?! You...came down to fight with us?"
 	.byte WaitForA
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.text "Eyvel! Does me heart good to see you"
 	.byte NewLine
 	.text "in one piece!"
@@ -1081,7 +1081,7 @@ dialogueChapter01EyvelDagdarTalk
 	.text "It have anything to do with...the boy?"
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "Yeah. The Little Lord, Leif, he's..."
 	.byte NewLine
@@ -1095,7 +1095,7 @@ dialogueChapter01EyvelDagdarTalk
 	.text "I'm sorry... I shouldn't have kept it from you."
 	.byte WaitForA
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "Mm, I figured as much. Well, no use worryin'"
 	.byte NewLine
@@ -1108,23 +1108,23 @@ dialogueChapter01EyvelDagdarTalk
 	
 dialogueChapter01OsianTanyaTalk
 
-	.byte Right_slot
+	.byte Right_Slot
     .word LoadPortrait
     .word tanya_portrait
 	
-	.byte Left_slot
+	.byte Left_Slot
     .word LoadPortrait
-    .word Osian_portrait
+    .word osian_portrait
 	.text "Tanya? What do you think you're doing here?"
 	.byte WaitForA
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.text "What does it look like, Osian?"
 	.byte NewLine
 	.text "I'm here to help you guys, any way I can!"
 	.byte WaitForA
 	
-	.byte Left_slot
+	.byte Left_Slot
 	.byte ScrollText
 	.text "“Help any way you can,” huh?"
 	.byte NewLine
@@ -1136,7 +1136,7 @@ dialogueChapter01OsianTanyaTalk
 	.text "you'd just get in the way."
 	.byte WaitForA
 	
-	.byte Right_slot
+	.byte Right_Slot
 	.byte ScrollText
 	.text "You've got some nerve, Osian!"
 	.byte NewLine

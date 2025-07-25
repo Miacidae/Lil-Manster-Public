@@ -205,19 +205,19 @@ GUARD_ZQOL_HP_BARS :?= false
         ; Regsiter sprites for all
         ; allegiances.
 
-        lda #NewOAMTileAndAttr($000, 0, 2, False, False)
+        lda #NewOAMTileAndAttr($000, 0, 2, false, false)
         sta wR9
         lda #((Player + 1) * size(word))
         sta wR6
         jsr rsRegisterMapSpriteAndStatus
 
-        lda #NewOAMTileAndAttr($000, 1, 2, False, False)
+        lda #NewOAMTileAndAttr($000, 1, 2, false, false)
         sta wR9
         lda #((Enemy + 1) * size(word))
         sta wR6
         jsr rsRegisterMapSpriteAndStatus
 
-        lda #NewOAMTileAndAttr($000, 2, 2, False, False)
+        lda #NewOAMTileAndAttr($000, 2, 2, false, false)
         sta wR9
         lda #((NPC + 1) * size(word))
         sta wR6
@@ -317,7 +317,7 @@ GUARD_ZQOL_HP_BARS :?= false
         bit #UnitStateGrayed
         beq +
 
-          lda #NewOAMTileAndAttr($000, 3, 2, False, False)
+          lda #NewOAMTileAndAttr($000, 3, 2, false, false)
           sta lR20
 
         +
@@ -413,7 +413,7 @@ GUARD_ZQOL_HP_BARS :?= false
           adc #7
           sta aUpperMapSpriteAndStatusBuffer+structMapSpriteAndStatusEntry.Y,y
 
-          lda #NewOAMTileAndAttr($114, 0, 0, False, False)
+          lda #NewOAMTileAndAttr($114, 0, 0, false, false)
           ora wR9
           sta aUpperMapSpriteAndStatusBuffer+structMapSpriteAndStatusEntry.TileAndAttr,y
 
@@ -489,11 +489,11 @@ GUARD_ZQOL_HP_BARS :?= false
           jmp _ShortSprite
 
         aStatusSpriteTable
-          _Sleep .word NewOAMTileAndAttr($11F, 0, 2, False, False)
-          _Berserk .word NewOAMTileAndAttr($12C, 0, 2, False, False)
-          _Poison .word NewOAMTileAndAttr($12D, 1, 2, False, False)
-          _Silence .word NewOAMTileAndAttr($13C, 0, 2, False, False)
-          _Petrify .word NewOAMTileAndAttr($13D, 1, 2, False, False)
+          _Sleep .word NewOAMTileAndAttr($11F, 0, 2, false, false)
+          _Berserk .word NewOAMTileAndAttr($12C, 0, 2, false, false)
+          _Poison .word NewOAMTileAndAttr($12D, 1, 2, false, false)
+          _Silence .word NewOAMTileAndAttr($13C, 0, 2, false, false)
+          _Petrify .word NewOAMTileAndAttr($13D, 1, 2, false, false)
 
         .databank 0
 
@@ -1031,9 +1031,9 @@ GUARD_ZQOL_HP_BARS :?= false
       aMissSpriteFrames .bfor t in MissSpriteFrameDefs
         yCoord := t[1]
 
-        MissSpriteFrame  := [[[ 0, yCoord], $00, SpriteSmall, $00F, 3, 0, False, False]]
-        MissSpriteFrame ..= [[[-8, yCoord], $00, SpriteSmall, $00E, 3, 0, False, False]]
-        MissSpriteFrame ..= [[[ 1, yCoord], $00, SpriteSmall, $00F, 3, 0, True, False]]
+        MissSpriteFrame  := [[[ 0, yCoord], $00, SpriteSmall, $00F, 3, 0, false, false]]
+        MissSpriteFrame ..= [[[-8, yCoord], $00, SpriteSmall, $00E, 3, 0, false, false]]
+        MissSpriteFrame ..= [[[ 1, yCoord], $00, SpriteSmall, $00F, 3, 0, true, false]]
 
         .structNewSpriteArray MissSpriteFrame
       .endfor
@@ -1175,87 +1175,87 @@ GUARD_ZQOL_HP_BARS :?= false
           .addr aOBJMDownFrame1
           .addr aOBJMDownFrame2
 
-        OBJMLeftFrame0Sprites  := [[[1, 0], $00, SpriteSmall, $120, 2, 0, False, False]]
-        OBJMLeftFrame0Sprites ..= [[[1, 8], $00, SpriteSmall, $130, 2, 0, False, False]]
-        OBJMLeftFrame0Sprites ..= [[[9, 0], $00, SpriteSmall, $123, 2, 0, False, False]]
-        OBJMLeftFrame0Sprites ..= [[[9, 8], $00, SpriteSmall, $133, 2, 0, False, False]]
+        OBJMLeftFrame0Sprites  := [[[1, 0], $00, SpriteSmall, $120, 2, 0, false, false]]
+        OBJMLeftFrame0Sprites ..= [[[1, 8], $00, SpriteSmall, $130, 2, 0, false, false]]
+        OBJMLeftFrame0Sprites ..= [[[9, 0], $00, SpriteSmall, $123, 2, 0, false, false]]
+        OBJMLeftFrame0Sprites ..= [[[9, 8], $00, SpriteSmall, $133, 2, 0, false, false]]
 
         aOBJMLeftFrame0 .structNewSpriteArray OBJMLeftFrame0Sprites
 
-        OBJMLeftFrame1Sprites  := [[[1, 0], $00, SpriteSmall, $121, 2, 0, False, False]]
-        OBJMLeftFrame1Sprites ..= [[[1, 8], $00, SpriteSmall, $131, 2, 0, False, False]]
-        OBJMLeftFrame1Sprites ..= [[[9, 0], $00, SpriteSmall, $123, 2, 0, False, False]]
-        OBJMLeftFrame1Sprites ..= [[[9, 8], $00, SpriteSmall, $133, 2, 0, False, False]]
+        OBJMLeftFrame1Sprites  := [[[1, 0], $00, SpriteSmall, $121, 2, 0, false, false]]
+        OBJMLeftFrame1Sprites ..= [[[1, 8], $00, SpriteSmall, $131, 2, 0, false, false]]
+        OBJMLeftFrame1Sprites ..= [[[9, 0], $00, SpriteSmall, $123, 2, 0, false, false]]
+        OBJMLeftFrame1Sprites ..= [[[9, 8], $00, SpriteSmall, $133, 2, 0, false, false]]
 
         aOBJMLeftFrame1 .structNewSpriteArray OBJMLeftFrame1Sprites
 
-        OBJMLeftFrame2Sprites  := [[[1, 0], $00, SpriteSmall, $122, 2, 0, False, False]]
-        OBJMLeftFrame2Sprites ..= [[[1, 8], $00, SpriteSmall, $132, 2, 0, False, False]]
-        OBJMLeftFrame2Sprites ..= [[[9, 0], $00, SpriteSmall, $123, 2, 0, False, False]]
-        OBJMLeftFrame2Sprites ..= [[[9, 8], $00, SpriteSmall, $133, 2, 0, False, False]]
+        OBJMLeftFrame2Sprites  := [[[1, 0], $00, SpriteSmall, $122, 2, 0, false, false]]
+        OBJMLeftFrame2Sprites ..= [[[1, 8], $00, SpriteSmall, $132, 2, 0, false, false]]
+        OBJMLeftFrame2Sprites ..= [[[9, 0], $00, SpriteSmall, $123, 2, 0, false, false]]
+        OBJMLeftFrame2Sprites ..= [[[9, 8], $00, SpriteSmall, $133, 2, 0, false, false]]
 
         aOBJMLeftFrame2 .structNewSpriteArray OBJMLeftFrame2Sprites
 
-        OBJMRightFrame0Sprites  := [[[7, 0], $00, SpriteSmall, $120, 2, 0, True, False]]
-        OBJMRightFrame0Sprites ..= [[[7, 8], $00, SpriteSmall, $130, 2, 0, True, False]]
-        OBJMRightFrame0Sprites ..= [[[-1, 0], $00, SpriteSmall, $123, 2, 0, True, False]]
-        OBJMRightFrame0Sprites ..= [[[-1, 8], $00, SpriteSmall, $133, 2, 0, True, False]]
+        OBJMRightFrame0Sprites  := [[[7, 0], $00, SpriteSmall, $120, 2, 0, true, false]]
+        OBJMRightFrame0Sprites ..= [[[7, 8], $00, SpriteSmall, $130, 2, 0, true, false]]
+        OBJMRightFrame0Sprites ..= [[[-1, 0], $00, SpriteSmall, $123, 2, 0, true, false]]
+        OBJMRightFrame0Sprites ..= [[[-1, 8], $00, SpriteSmall, $133, 2, 0, true, false]]
 
         aOBJMRightFrame0 .structNewSpriteArray OBJMRightFrame0Sprites
 
-        OBJMRightFrame1Sprites  := [[[7, 0], $00, SpriteSmall, $121, 2, 0, True, False]]
-        OBJMRightFrame1Sprites ..= [[[7, 8], $00, SpriteSmall, $131, 2, 0, True, False]]
-        OBJMRightFrame1Sprites ..= [[[-1, 0], $00, SpriteSmall, $123, 2, 0, True, False]]
-        OBJMRightFrame1Sprites ..= [[[-1, 8], $00, SpriteSmall, $133, 2, 0, True, False]]
+        OBJMRightFrame1Sprites  := [[[7, 0], $00, SpriteSmall, $121, 2, 0, true, false]]
+        OBJMRightFrame1Sprites ..= [[[7, 8], $00, SpriteSmall, $131, 2, 0, true, false]]
+        OBJMRightFrame1Sprites ..= [[[-1, 0], $00, SpriteSmall, $123, 2, 0, true, false]]
+        OBJMRightFrame1Sprites ..= [[[-1, 8], $00, SpriteSmall, $133, 2, 0, true, false]]
 
         aOBJMRightFrame1 .structNewSpriteArray OBJMRightFrame1Sprites
 
-        OBJMRightFrame2Sprites  := [[[7, 0], $00, SpriteSmall, $122, 2, 0, True, False]]
-        OBJMRightFrame2Sprites ..= [[[7, 8], $00, SpriteSmall, $132, 2, 0, True, False]]
-        OBJMRightFrame2Sprites ..= [[[-1, 0], $00, SpriteSmall, $123, 2, 0, True, False]]
-        OBJMRightFrame2Sprites ..= [[[-1, 8], $00, SpriteSmall, $133, 2, 0, True, False]]
+        OBJMRightFrame2Sprites  := [[[7, 0], $00, SpriteSmall, $122, 2, 0, true, false]]
+        OBJMRightFrame2Sprites ..= [[[7, 8], $00, SpriteSmall, $132, 2, 0, true, false]]
+        OBJMRightFrame2Sprites ..= [[[-1, 0], $00, SpriteSmall, $123, 2, 0, true, false]]
+        OBJMRightFrame2Sprites ..= [[[-1, 8], $00, SpriteSmall, $133, 2, 0, true, false]]
 
         aOBJMRightFrame2 .structNewSpriteArray OBJMRightFrame2Sprites
 
-        OBJMUpFrame0Sprites  := [[[0, 1], $00, SpriteSmall, $124, 2, 0, False, False]]
-        OBJMUpFrame0Sprites ..= [[[8, 1], $00, SpriteSmall, $125, 2, 0, False, False]]
-        OBJMUpFrame0Sprites ..= [[[0, 9], $00, SpriteSmall, $134, 2, 0, False, False]]
-        OBJMUpFrame0Sprites ..= [[[8, 9], $00, SpriteSmall, $135, 2, 0, False, False]]
+        OBJMUpFrame0Sprites  := [[[0, 1], $00, SpriteSmall, $124, 2, 0, false, false]]
+        OBJMUpFrame0Sprites ..= [[[8, 1], $00, SpriteSmall, $125, 2, 0, false, false]]
+        OBJMUpFrame0Sprites ..= [[[0, 9], $00, SpriteSmall, $134, 2, 0, false, false]]
+        OBJMUpFrame0Sprites ..= [[[8, 9], $00, SpriteSmall, $135, 2, 0, false, false]]
 
         aOBJMUpFrame0 .structNewSpriteArray OBJMUpFrame0Sprites
 
-        OBJMUpFrame1Sprites  := [[[0, 1], $00, SpriteSmall, $126, 2, 0, False, False]]
-        OBJMUpFrame1Sprites ..= [[[8, 1], $00, SpriteSmall, $127, 2, 0, False, False]]
-        OBJMUpFrame1Sprites ..= [[[0, 9], $00, SpriteSmall, $134, 2, 0, False, False]]
-        OBJMUpFrame1Sprites ..= [[[8, 9], $00, SpriteSmall, $135, 2, 0, False, False]]
+        OBJMUpFrame1Sprites  := [[[0, 1], $00, SpriteSmall, $126, 2, 0, false, false]]
+        OBJMUpFrame1Sprites ..= [[[8, 1], $00, SpriteSmall, $127, 2, 0, false, false]]
+        OBJMUpFrame1Sprites ..= [[[0, 9], $00, SpriteSmall, $134, 2, 0, false, false]]
+        OBJMUpFrame1Sprites ..= [[[8, 9], $00, SpriteSmall, $135, 2, 0, false, false]]
 
         aOBJMUpFrame1 .structNewSpriteArray OBJMUpFrame1Sprites
 
-        OBJMUpFrame2Sprites  := [[[0, 1], $00, SpriteSmall, $128, 2, 0, False, False]]
-        OBJMUpFrame2Sprites ..= [[[8, 1], $00, SpriteSmall, $129, 2, 0, False, False]]
-        OBJMUpFrame2Sprites ..= [[[0, 9], $00, SpriteSmall, $134, 2, 0, False, False]]
-        OBJMUpFrame2Sprites ..= [[[8, 9], $00, SpriteSmall, $135, 2, 0, False, False]]
+        OBJMUpFrame2Sprites  := [[[0, 1], $00, SpriteSmall, $128, 2, 0, false, false]]
+        OBJMUpFrame2Sprites ..= [[[8, 1], $00, SpriteSmall, $129, 2, 0, false, false]]
+        OBJMUpFrame2Sprites ..= [[[0, 9], $00, SpriteSmall, $134, 2, 0, false, false]]
+        OBJMUpFrame2Sprites ..= [[[8, 9], $00, SpriteSmall, $135, 2, 0, false, false]]
 
         aOBJMUpFrame2 .structNewSpriteArray OBJMUpFrame2Sprites
 
-        OBJMDownFrame0Sprites  := [[[0, 7], $00, SpriteSmall, $124, 2, 0, False, True]]
-        OBJMDownFrame0Sprites ..= [[[8, 7], $00, SpriteSmall, $125, 2, 0, False, True]]
-        OBJMDownFrame0Sprites ..= [[[0, -1], $00, SpriteSmall, $134, 2, 0, False, True]]
-        OBJMDownFrame0Sprites ..= [[[8, -1], $00, SpriteSmall, $135, 2, 0, False, True]]
+        OBJMDownFrame0Sprites  := [[[0, 7], $00, SpriteSmall, $124, 2, 0, false, true]]
+        OBJMDownFrame0Sprites ..= [[[8, 7], $00, SpriteSmall, $125, 2, 0, false, true]]
+        OBJMDownFrame0Sprites ..= [[[0, -1], $00, SpriteSmall, $134, 2, 0, false, true]]
+        OBJMDownFrame0Sprites ..= [[[8, -1], $00, SpriteSmall, $135, 2, 0, false, true]]
 
         aOBJMDownFrame0 .structNewSpriteArray OBJMDownFrame0Sprites
 
-        OBJMDownFrame1Sprites  := [[[0, 7], $00, SpriteSmall, $126, 2, 0, False, True]]
-        OBJMDownFrame1Sprites ..= [[[8, 7], $00, SpriteSmall, $127, 2, 0, False, True]]
-        OBJMDownFrame1Sprites ..= [[[0, -1], $00, SpriteSmall, $134, 2, 0, False, True]]
-        OBJMDownFrame1Sprites ..= [[[8, -1], $00, SpriteSmall, $135, 2, 0, False, True]]
+        OBJMDownFrame1Sprites  := [[[0, 7], $00, SpriteSmall, $126, 2, 0, false, true]]
+        OBJMDownFrame1Sprites ..= [[[8, 7], $00, SpriteSmall, $127, 2, 0, false, true]]
+        OBJMDownFrame1Sprites ..= [[[0, -1], $00, SpriteSmall, $134, 2, 0, false, true]]
+        OBJMDownFrame1Sprites ..= [[[8, -1], $00, SpriteSmall, $135, 2, 0, false, true]]
 
         aOBJMDownFrame1 .structNewSpriteArray OBJMDownFrame1Sprites
 
-        OBJMDownFrame2Sprites  := [[[0, 7], $00, SpriteSmall, $128, 2, 0, False, True]]
-        OBJMDownFrame2Sprites ..= [[[8, 7], $00, SpriteSmall, $129, 2, 0, False, True]]
-        OBJMDownFrame2Sprites ..= [[[0, -1], $00, SpriteSmall, $134, 2, 0, False, True]]
-        OBJMDownFrame2Sprites ..= [[[8, -1], $00, SpriteSmall, $135, 2, 0, False, True]]
+        OBJMDownFrame2Sprites  := [[[0, 7], $00, SpriteSmall, $128, 2, 0, false, true]]
+        OBJMDownFrame2Sprites ..= [[[8, 7], $00, SpriteSmall, $129, 2, 0, false, true]]
+        OBJMDownFrame2Sprites ..= [[[0, -1], $00, SpriteSmall, $134, 2, 0, false, true]]
+        OBJMDownFrame2Sprites ..= [[[8, -1], $00, SpriteSmall, $135, 2, 0, false, true]]
 
         aOBJMDownFrame2 .structNewSpriteArray OBJMDownFrame2Sprites
 

@@ -5,10 +5,10 @@ rsUnknown80B88F ; 80/B88F
 	.databank ?
 
 	sep #$30
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	stz bUnknown000F54,b
-	lda #0 ; HDMAEN_Setting(False, False, False, False, False, False, False, False)
+	lda #0 ; HDMAEN_Setting(false, false, false, false, false, false, false, false)
 	sta @l HDMAEN
 	rep #$30
 	jsl rlDMAPaletteAndOAMBuffer
@@ -80,7 +80,7 @@ rlUnknown80B925 ; 80/B925
 	.databank ?
 
 	sep #$20
-	lda #INIDISP_Setting(False)
+	lda #INIDISP_Setting(false)
 	sta bBufferINIDISP
 	rep #$20
 	lda #<>rsUnknown80B948
@@ -101,7 +101,7 @@ rsUnknown80B948 ; 80/B948
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -128,7 +128,7 @@ rlUnknown80B981 ; 80/B981
 	.databank ?
 
 	sep #$20
-	lda #INIDISP_Setting(False)
+	lda #INIDISP_Setting(false)
 	sta bBufferINIDISP
 	rep #$20
 	lda #<>rsUnknown80B9C1
@@ -167,7 +167,7 @@ rsUnknown80B9C1 ; 80/B9C1
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -235,7 +235,7 @@ rlUnknown80BA41 ; 80/BA41
 	lda #$000E
 	sta wMenuType,b
 	sep #$20
-	lda #INIDISP_Setting(False)
+	lda #INIDISP_Setting(false)
 	sta bBufferINIDISP
 	rep #$20
 	lda #<>rsUnknown80BA6B
@@ -254,7 +254,7 @@ rsUnknown80BA6B ; 80/BA6B
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -299,7 +299,7 @@ rsUnknown80BAC1 ; 80/BAC1
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -345,7 +345,7 @@ rsUnknown80BB19 ; 80/BB19
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -407,7 +407,7 @@ rsUnknown80BB88 ; 80/BB88
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -465,7 +465,7 @@ rlUnknown80BBE2 ; 80/BBE2
 	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	lda #INIDISP_Setting(False)
+	lda #INIDISP_Setting(false)
 	sta bBufferINIDISP
 	rep #$20
 	rtl
@@ -477,7 +477,7 @@ rsUnknown80BC0E ; 80/BC0E
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -534,7 +534,7 @@ rlUnknown80BC41 ; 80/BC41
 	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	lda #INIDISP_Setting(False)
+	lda #INIDISP_Setting(false)
 	sta bBufferINIDISP
 	rep #$20
 	rtl
@@ -555,7 +555,7 @@ rlUnknown80BC9C ; 80/BC9C
 	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	lda #INIDISP_Setting(False)
+	lda #INIDISP_Setting(false)
 	sta bBufferINIDISP
 	rep #$20
 	lda #$000D
@@ -584,7 +584,7 @@ rsUnknown80BCDC ; 80/BCDC
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -633,7 +633,7 @@ rsUnknown80BD3D ; 80/BD3D
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -673,7 +673,7 @@ rlUnknown80BD87 ; 80/BD87
 	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	lda #INIDISP_Setting(False)
+	lda #INIDISP_Setting(false)
 	sta bBufferINIDISP
 	rep #$20
 	rtl
@@ -686,7 +686,7 @@ rsUnknown80BDA4 ; 80/BDA4
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -738,7 +738,7 @@ rlUnknown80BDE7 ; 80/BDE7
 	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	lda #INIDISP_Setting(False)
+	lda #INIDISP_Setting(false)
 	sta bBufferINIDISP
 	rep #$20
 	plb
@@ -789,7 +789,7 @@ rlUnknown80BE27 ; 80/BE27
 	sta lR44
 	jsl rlProcEngineCreateProc
 	sep #$20
-	lda #INIDISP_Setting(False)
+	lda #INIDISP_Setting(false)
 	sta bBufferINIDISP
 	rep #$20
 	plb
@@ -803,7 +803,7 @@ rsUnknown80BE77 ; 80/BE77
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -847,9 +847,9 @@ rsUnknown80BED7 ; 80/BED7
 	.databank ?
 
 	sep #$30
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
-	lda #0 ; HDMAEN_Setting(False, False, False, False, False, False, False, False)
+	lda #0 ; HDMAEN_Setting(false, false, false, false, false, false, false, false)
 	sta @l HDMAEN
 	rep #$30
 	jsl rlDMAPaletteAndOAMBuffer
@@ -908,7 +908,7 @@ rsUnknown80BF58 ; 80/BF58
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -941,27 +941,27 @@ rsUnknown80BF58 ; 80/BF58
 	lda #($83C0F6)>>8
 	sta aCurrentTilemapInfo.lInfoPointer+1,b
 	sep #$20
-	lda #W12SEL_Setting(False, False, False, False, True, True, False, False)
+	lda #W12SEL_Setting(false, false, false, false, true, true, false, false)
 	sta bBufferW12SEL
-	lda #W12SEL_Setting(False, False, False, False, False, False, False, False)
+	lda #W12SEL_Setting(false, false, false, false, false, false, false, false)
 	sta bBufferW34SEL
-	lda #WOBJSEL_Setting(False, False, False, False, False, False, False, False)
+	lda #WOBJSEL_Setting(false, false, false, false, false, false, false, false)
 	sta bBufferWOBJSEL
 	lda #WBGLOG_Setting(WLOG_ORR, WLOG_ORR, WLOG_ORR, WLOG_ORR)
 	sta bBufferWBGLOG
 	lda #WOBJLOG_Setting(WLOG_ORR, WLOG_ORR)
 	sta bBufferWOBJLOG
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
-	lda #T_Setting(False, False, True, False, False)
+	lda #T_Setting(false, false, true, false, false)
 	sta bBufferTS
-	lda #T_Setting(False, True, False, False, False)
+	lda #T_Setting(false, true, false, false, false)
 	sta bBufferTMW
-	lda #T_Setting(False, False, False, False, False)
+	lda #T_Setting(false, false, false, false, false)
 	sta bBufferTSW
-	lda #CGADSUB_Setting(CGADSUB_Add, True, False, True, False, False, False, False)
+	lda #CGADSUB_Setting(CGADSUB_Add, true, false, true, false, false, false, false)
 	sta bBufferCGADSUB
-	lda #CGWSEL_Setting(False, True, CGWSEL_MathAlways, CGWSEL_BlackNever)
+	lda #CGWSEL_Setting(false, true, CGWSEL_MathAlways, CGWSEL_BlackNever)
 	sta bBufferCGWSEL
 	rep #$20
 	lda #(`$9A83A1)<<8
@@ -979,7 +979,7 @@ rsUnknown80BF58 ; 80/BF58
 	jsl rlBlockFillWord
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(True), $A000
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(true), $A000
 
 	lda #$5000
 	sta wR0
@@ -1066,7 +1066,7 @@ rsUnknown80C0D2 ; 80/C0D2
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -1127,7 +1127,7 @@ rsUnknown80C134 ; 80/C134
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -1173,7 +1173,7 @@ rsUnknown80C182 ; 80/C182
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -1218,7 +1218,7 @@ rsUnknown80C1D0 ; 80/C1D0
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -1263,7 +1263,7 @@ rsUnknown80C21E ; 80/C21E
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -1308,7 +1308,7 @@ rsUnknown80C26C ; 80/C26C
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -1355,7 +1355,7 @@ rsUnknown80C2BF ; 80/C2BF
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -1399,7 +1399,7 @@ rsUnknown80C30C ; 80/C30C
 	.databank ?
 
 	sep #$30
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	rep #$30
 	jsl rlDMAPaletteAndOAMBuffer
@@ -1533,7 +1533,7 @@ rsUnknown80C402 ; 80/C402
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -1583,7 +1583,7 @@ rsUnknown80C460 ; 80/C460
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -1634,7 +1634,7 @@ rsUnknown80C4C2 ; 80/C4C2
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -1683,7 +1683,7 @@ rsUnknown80C51C ; 80/C51C
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -1732,7 +1732,7 @@ rsUnknown80C576 ; 80/C576
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -1785,7 +1785,7 @@ rsUnknown80C5DE ; 80/C5DE
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -1818,9 +1818,9 @@ rsUnknown80C623 ; 80/C623
 	.databank ?
 
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
-	lda #0 ; HDMAEN_Setting(False, False, False, False, False, False, False, False)
+	lda #0 ; HDMAEN_Setting(false, false, false, false, false, false, false, false)
 	sta @l HDMAEN
 	rep #$20
 	jsl rlProcessDMAStructArray
@@ -1933,7 +1933,7 @@ rsUnknown80C6FC ; 80/C6FC
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 	rep #$20
@@ -2101,15 +2101,15 @@ rsUnknown80C86F ; 80/C86F
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $F3CC80, $2800, VMAIN_Setting(True), $C000
+	.dstruct structDMAToVRAM, $F3CC80, $2800, VMAIN_Setting(true), $C000
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $9F81C0, $0C00, VMAIN_Setting(True), $A000
+	.dstruct structDMAToVRAM, $9F81C0, $0C00, VMAIN_Setting(true), $A000
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $F2D380, $0500, VMAIN_Setting(True), $2800
+	.dstruct structDMAToVRAM, $F2D380, $0500, VMAIN_Setting(true), $2800
 
 	rts
 
@@ -2120,19 +2120,19 @@ rlUnknown80C897 ; 80/C897
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $9F8000, $01C0, VMAIN_Setting(True), $9000
+	.dstruct structDMAToVRAM, $9F8000, $01C0, VMAIN_Setting(true), $9000
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $F1F080, $0400, VMAIN_Setting(True), $2000
+	.dstruct structDMAToVRAM, $F1F080, $0400, VMAIN_Setting(true), $2000
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $9F8DC0, $0600, VMAIN_Setting(True), $4000
+	.dstruct structDMAToVRAM, $9F8DC0, $0600, VMAIN_Setting(true), $4000
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $9FB1C0, $0800, VMAIN_Setting(True), $E800
+	.dstruct structDMAToVRAM, $9FB1C0, $0800, VMAIN_Setting(true), $E800
 
 	lda #(`$F48000)<<8
 	sta lR18+1
@@ -2163,7 +2163,7 @@ rlUnknown80C897 ; 80/C897
 	jsl rlBlockCopy
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $01C0, VMAIN_Setting(True), $9000
+	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $01C0, VMAIN_Setting(true), $9000
 
 	lda #(`$9FA2C0)<<8
 	sta lR18+1
@@ -2211,7 +2211,7 @@ rlUnknown80C897 ; 80/C897
 	jsl rlBlockCopy
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG2TilemapBuffer, $1000, VMAIN_Setting(True), $6000
+	.dstruct structDMAToVRAM, aBG2TilemapBuffer, $1000, VMAIN_Setting(true), $6000
 
 	lda #(`$F4FE00)<<8
 	sta lR18+1
@@ -2287,7 +2287,7 @@ rlUnknown80C897 ; 80/C897
 	sta wR1
 	jsl $859233
 	jsl $859205
-	lda #CGADSUB_Setting(CGADSUB_Subtract, False, False, True, False, False, False, False)
+	lda #CGADSUB_Setting(CGADSUB_Subtract, false, false, true, false, false, false, false)
 	sta bBufferCGADSUB
 	lda #7
 	sta wR0
@@ -2493,19 +2493,19 @@ rlUnknown80CC11 ; 80/CC11
 	and #~BGSC_Size
 	ora #BGSC_Setting(0, BGSC_64x32)
 	sta bBufferBG3SC
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
-	lda #T_Setting(False, False, False, False, False)
+	lda #T_Setting(false, false, false, false, false)
 	sta bBufferTS
-	lda #T_Setting(False, False, False, False, False)
+	lda #T_Setting(false, false, false, false, false)
 	sta bBufferTMW
-	lda #T_Setting(False, False, False, False, False)
+	lda #T_Setting(false, false, false, false, false)
 	sta bBufferTSW
-	lda #W12SEL_Setting(False, False, False, False, False, False, False, False)
+	lda #W12SEL_Setting(false, false, false, false, false, false, false, false)
 	sta bBufferW12SEL
-	lda #W34SEL_Setting(False, False, False, False, False, False, False, False)
+	lda #W34SEL_Setting(false, false, false, false, false, false, false, false)
 	sta bBufferW34SEL
-	lda #WOBJSEL_Setting(False, False, False, False, False, False, False, False)
+	lda #WOBJSEL_Setting(false, false, false, false, false, false, false, false)
 	sta bBufferWOBJSEL
 	lda #0
 	sta bBufferWH0
@@ -2517,11 +2517,11 @@ rlUnknown80CC11 ; 80/CC11
 	lda #WBGLOG_Setting(WLOG_ORR, WLOG_ORR, WLOG_ORR, WLOG_ORR)
 	sta bBufferWBGLOG
 	sta bBufferWOBJLOG
-	lda #CGWSEL_Setting(False, False, CGWSEL_MathAlways, CGWSEL_BlackNever)
+	lda #CGWSEL_Setting(false, false, CGWSEL_MathAlways, CGWSEL_BlackNever)
 	sta bBufferCGWSEL
-	lda #CGADSUB_Setting(CGADSUB_Subtract, False, False, True, False, False, False, False)
+	lda #CGADSUB_Setting(CGADSUB_Subtract, false, false, true, false, false, false, false)
 	sta bBufferCGADSUB
-	lda #COLDATA_Setting(0, True, True, True)
+	lda #COLDATA_Setting(0, true, true, true)
 	sta bBufferCOLDATA_1
 	sta bBufferCOLDATA_2
 	sta bBufferCOLDATA_3
@@ -2965,7 +2965,7 @@ rsUnknown80CF55 ; 80/CF55
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $9F8000, $01C0, VMAIN_Setting(True), $9000
+	.dstruct structDMAToVRAM, $9F8000, $01C0, VMAIN_Setting(true), $9000
 
 	lda $7E454D
 	and #$00FF
@@ -3367,9 +3367,9 @@ rsUnknown80D207 ; 80/D207
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
-	lda #0 ; HDMAEN_Setting(False, False, False, False, False, False, False, False)
+	lda #0 ; HDMAEN_Setting(false, false, false, false, false, false, false, false)
 	sta @l HDMAEN
 	rep #$20
 	jsl $9BC26F
@@ -3413,9 +3413,9 @@ rsUnknown80D276 ; 80/D276
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
-	lda #0 ; HDMAEN_Setting(False, False, False, False, False, False, False, False)
+	lda #0 ; HDMAEN_Setting(false, false, false, false, false, false, false, false)
 	sta @l HDMAEN
 	rep #$20
 	jsl $9BC26F
@@ -3538,7 +3538,7 @@ rsUnknown80D369 ; 80/D369
 
 	php
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta bBufferINIDISP
 	sta INIDISP,b
 	rep #$20
@@ -4724,7 +4724,7 @@ rsUnknown80DBAF ; 80/DBAF
 	sta $7FD8B9
 	rep #$20
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta bBufferINIDISP
 	sta INIDISP,b
 	rep #$20
@@ -4764,7 +4764,7 @@ rsUnknown80DBAF ; 80/DBAF
 	stz wUnknown000300,b
 	jsl rlEnableVBlank
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta bBufferINIDISP
 	sta INIDISP,b
 	rep #$20

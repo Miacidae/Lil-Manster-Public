@@ -1,10 +1,10 @@
 dialogueChapter08xOsianTanyaTalk
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word tanya_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word osian_portrait
 .text "Tanya! You're safe!"
@@ -12,13 +12,13 @@ dialogueChapter08xOsianTanyaTalk
 .text "You...really had me worried there, you moron!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Who you calling a moron, moron?!"
 .byte NewLine
 .text "Nobody asked you to fret over me!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Would it kill you to show a little gratitude?"
 .byte NewLine
@@ -27,7 +27,7 @@ dialogueChapter08xOsianTanyaTalk
 .text "you'd just be a stain on the floor!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What?! You're the one who started"
 .byte NewLine
@@ -48,7 +48,7 @@ dialogueChapter08xOsianTanyaTalk
 .text "you could stand to be even a little friendly..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "H-Hey! Wait, wait, don't cry, OK?"
 .byte NewLine
@@ -65,11 +65,11 @@ dialogueChapter08xOsianTanyaTalk
 
 dialogueChapter08xOpening
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word tanya_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dagdar_portrait
 .text "...Tanya, it's time fer you to go."
@@ -79,11 +79,11 @@ dialogueChapter08xOpening
 .text "I'll keep any of 'em from followin' ya."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "No way, Papa! I leave when you leave!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You stick around here, you'll just be a burden."
 .byte NewLine
@@ -92,13 +92,13 @@ dialogueChapter08xOpening
 .text "and don't give me lip!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I... I know I wouldn't be much help, but—"
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word gomez_portrait
@@ -109,7 +109,7 @@ dialogueChapter08xOpening
 .text "are gettin' out of here is in a casket."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dagdar_portrait
 .text "Listen up, Gomez!"
@@ -119,7 +119,7 @@ dialogueChapter08xOpening
 .text "Think about this afore you do somethin' rash."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Naw, it's too late fer you"
 .byte NewLine
@@ -147,7 +147,7 @@ dialogueChapter08xOpening
 .text "Shame on you, old man!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What'd you say?!"
 .byte WaitForA
@@ -176,11 +176,11 @@ dialogueChapter08xOpening
 
 dialogueChapter08xEnding
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "I pity Dagdar and his men, truly, but..."
@@ -190,7 +190,7 @@ dialogueChapter08xEnding
 .text "through honest labor?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "And where would they labor?"
 .byte NewLine
 .text "Their very land was infertile."
@@ -206,14 +206,14 @@ dialogueChapter08xEnding
 .text "Their choice was simple: steal or starve."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then they had cowards for parents,"
 .byte NewLine
 .text "to have forsaken their children so!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "And how would you know? You've been"
 .byte NewLine
@@ -229,14 +229,14 @@ dialogueChapter08xEnding
 .text "from the Empire?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Where my food came from? I...don't know."
 .byte NewLine
 .text "I never had to worry about hunger."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Then you were fortunate to have had such"
 .byte NewLine
@@ -282,7 +282,7 @@ dialogueChapter08xEnding
 .text "This is the reality of living in South Thracia."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Th-Then they should just import food"
 .byte NewLine
@@ -291,7 +291,7 @@ dialogueChapter08xEnding
 .text "an abundance of crops—buy their excess!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah, but the whole of North Thracia—"
 .byte NewLine
@@ -303,12 +303,12 @@ dialogueChapter08xEnding
 .text "Food, especially, was closely guarded."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Wh-Why would the North do such a thing?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Historically? Recall the war between Njörun"
 .byte NewLine
@@ -335,7 +335,7 @@ dialogueChapter08xEnding
 .text "for a century afterward."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I...had been told that Thracia"
 .byte NewLine
@@ -354,7 +354,7 @@ dialogueChapter08xEnding
 .text "and South were a single kingdom once..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It all returns to the Tragedy of the Gáe Bolg,"
 .byte NewLine

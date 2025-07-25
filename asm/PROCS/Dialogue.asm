@@ -47,7 +47,7 @@ rlProcDialogueInit ; 82/867C
 	phx
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, _g2bppBlankDialogueTile, size(_g2bppBlankDialogueTile), VMAIN_Setting(True), $CD00
+	.dstruct structDMAToVRAM, _g2bppBlankDialogueTile, size(_g2bppBlankDialogueTile), VMAIN_Setting(true), $CD00
 
 	plx
 	rtl
@@ -234,7 +234,7 @@ rlProcDialogueMain ; 82/87C5
 
 	lda bBufferINIDISP
 	and #$00FF
-	cmp #INIDISP_Setting(False, 15)
+	cmp #INIDISP_Setting(false, 15)
 	beq +
 
 	jmp _End
@@ -296,11 +296,11 @@ rlProcDialogueMain ; 82/87C5
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(True), $A000
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(true), $A000
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, _g2bppBlankMenuTextTile, size(_g2bppBlankMenuTextTile), VMAIN_Setting(True), $BDF0
+	.dstruct structDMAToVRAM, _g2bppBlankMenuTextTile, size(_g2bppBlankMenuTextTile), VMAIN_Setting(true), $BDF0
 
 	; Reset BG3 size
 
@@ -385,7 +385,7 @@ rlUnknown8288AB ; 82/88AB
 	phx
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $F3CC80, $0800, VMAIN_Setting(True), $B800
+	.dstruct structDMAToVRAM, $F3CC80, $0800, VMAIN_Setting(true), $B800
 
 	plx
 	phx
@@ -412,7 +412,7 @@ rlUnknown8288D1 ; 82/88D1
 	phx
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $F3D480, $0800, VMAIN_Setting(True), $C000
+	.dstruct structDMAToVRAM, $F3D480, $0800, VMAIN_Setting(true), $C000
 
 	plx
 	phx
@@ -439,7 +439,7 @@ rlUnknown8288F7 ; 82/88F7
 	phx
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $F3DC80, $0800, VMAIN_Setting(True), $C800
+	.dstruct structDMAToVRAM, $F3DC80, $0800, VMAIN_Setting(true), $C800
 
 	plx
 	phx
@@ -466,7 +466,7 @@ rlUnknown82891D ; 82/891D
 	phx
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $F3E480, $0800, VMAIN_Setting(True), $D000
+	.dstruct structDMAToVRAM, $F3E480, $0800, VMAIN_Setting(true), $D000
 
 	plx
 	phx
@@ -586,13 +586,13 @@ rlUnknown8289AE ; 82/89AE
 
 	+
 	sep #$20
-	lda #T_Setting(True, False, True, False, False)
+	lda #T_Setting(true, false, true, false, false)
 	tsb bBufferTM
-	lda #CGWSEL_Setting(False, False, CGWSEL_MathAlways, CGWSEL_BlackNever)
+	lda #CGWSEL_Setting(false, false, CGWSEL_MathAlways, CGWSEL_BlackNever)
 	sta bBufferCGWSEL
-	lda #CGADSUB_Setting(CGADSUB_Subtract, False, True, False, False, False, True, False)
+	lda #CGADSUB_Setting(CGADSUB_Subtract, false, true, false, false, false, true, false)
 	sta bBufferCGADSUB
-	lda #COLDATA_Setting(0, False, False, False)
+	lda #COLDATA_Setting(0, false, false, false)
 	sta bBufferCOLDATA_0
 	jsl rlUnknown8289ED
 	plp
@@ -904,7 +904,7 @@ rlUnknown828BA6 ; 82/8BA6
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(True), $A000
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(true), $A000
 
 	plx
 	phx
@@ -996,7 +996,7 @@ rlUnknown828C1C ; 82/8C1C
 	jsl rlFillBG3Tilemap
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(True), $A000
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(true), $A000
 
 	lda #(`$7E4BF8)<<8
 	sta lR18+1

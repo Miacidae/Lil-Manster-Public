@@ -1,10 +1,10 @@
 dialogueChapter22SaiasLeaveCohenAlive
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word saias_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word bishop_portrait
 .text "Gods above, the enemy has advanced this far?"
@@ -12,20 +12,20 @@ dialogueChapter22SaiasLeaveCohenAlive
 .text "Saias, you must flee! Now!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "No, Count!"
 .byte NewLine
 .text "Come what may, I'll stay by your side!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Still your tongue! Just do as I say!"
 .byte NewLine
 .text "The battle is lost!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Wait! Please!"
 .byte NewLine
@@ -37,7 +37,7 @@ dialogueChapter22SaiasLeaveCohenAlive
 
 dialogueChapter22SaiasLeaveCohenDead
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word saias_portrait
 .text "Count Cohen..."
@@ -50,7 +50,7 @@ dialogueChapter22SaiasLeaveCohenDead
 
 dialogueChapter22VillagerPureWater
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word black_mustache_portrait
 .text "Hey, listen up! The Empire's got a whole"
@@ -70,7 +70,7 @@ dialogueChapter22VillagerPureWater
 
 dialogueChapter22VillagerWarpStaff
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldman_portrait
 .text "By Nimble Njörun, the River Thracia"
@@ -117,7 +117,7 @@ dialogueChapter22VillagerWarpStaff
 
 dialogueChapter22VillagerRescueStaff
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word beardedman_portrait
 .text "By Dapper Dáinn, the River Thracia"
@@ -149,7 +149,7 @@ dialogueChapter22VillagerRescueStaff
 
 dialogueChapter22SaiasBridge
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word saias_portrait
 .text "...That's it! NOW!"
@@ -164,7 +164,7 @@ dialogueChapter22SaiasBridge
 
 dialogueChapter22NoSaiasBridge
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word guard_portrait
 .text "NOW!"
@@ -177,7 +177,7 @@ dialogueChapter22NoSaiasBridge
 
 dialogueChapter22ReinhardtBridge
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word reinhardt_portrait
 .text "The enemy has finally gotten close enough!"
@@ -192,11 +192,11 @@ dialogueChapter22ReinhardtBridge
 
 dialogueChapter22ReinhardtOlwen
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word reinhardt_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word olwen_portrait
 .text "Brother...!"
@@ -206,7 +206,7 @@ dialogueChapter22ReinhardtOlwen
 .text "I knew you couldn't be far, my lord brother..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "It feels like a lifetime"
 .byte NewLine
 .text "since we last saw each other..."
@@ -214,14 +214,14 @@ dialogueChapter22ReinhardtOlwen
 .text "Thank the gods we were able to meet again."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Brother..."
 .byte NewLine
 .text "I..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Come now, there will be time to tell me"
 .byte NewLine
@@ -245,7 +245,7 @@ dialogueChapter22ReinhardtOlwen
 .text "Let's go back home together."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Home..."
 .byte NewLine
@@ -264,7 +264,7 @@ dialogueChapter22ReinhardtOlwen
 .text "I've already made up my mind."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Olwen, listen to what you're saying!"
 .byte NewLine
@@ -273,7 +273,7 @@ dialogueChapter22ReinhardtOlwen
 .text "I couldn't bear to lose you!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm more than just your little sister!"
 .byte NewLine
@@ -295,7 +295,7 @@ dialogueChapter22ReinhardtOlwen
 .text "could sway my mind now."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Then..."
 .byte NewLine
@@ -307,14 +307,14 @@ dialogueChapter22ReinhardtOlwen
 .text "against me, Olwen?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "If you stand in our way, Brother, then..."
 .byte NewLine
 .text "I have no choice."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I see..."
 .byte NewLine
@@ -338,7 +338,7 @@ dialogueChapter22ReinhardtOlwen
 
 dialogueChapter22ReinhardtOlwen2
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "This is the last time I'll be able to treat you"
 .byte NewLine
@@ -350,7 +350,7 @@ dialogueChapter22ReinhardtOlwen2
 .text "I have one last gift for you."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "This is...?!"
 .byte NewLine
@@ -359,7 +359,7 @@ dialogueChapter22ReinhardtOlwen2
 .text "It's your most prized weapon, Brother!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "A token of better days..."
 .byte WaitForA
@@ -371,14 +371,14 @@ dialogueChapter22ReinhardtOlwen2
 .text "You can put it to better use."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "But why?"
 .byte NewLine
 .text "I know how important it is to you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That's..."
 .byte NewLine
@@ -399,11 +399,11 @@ dialogueChapter22ReinhardtOlwen2
 
 dialogueChapter22SaiasCohen
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word saias_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word bishop_portrait
 .text "You've done plenty, Saias!"
@@ -411,13 +411,13 @@ dialogueChapter22SaiasCohen
 .text "Quickly, you must begone from here!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "I shall do no such thing!"
 .byte NewLine
 .text "I'll stay at your side until the end, Count!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "If you value me half as much as you claim,"
 .byte NewLine
@@ -515,11 +515,11 @@ dialogueChapter22SaiasCohen
 
 dialogueChapter22SaiasReinhardt
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word saias_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word reinhardt_portrait
 .text "It's been some time since last we met,"
@@ -527,7 +527,7 @@ dialogueChapter22SaiasReinhardt
 .text "Bishop Saias."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Commander Reinhardt!"
 .byte NewLine
 .text "What are you doing here, milord?"
@@ -538,7 +538,7 @@ dialogueChapter22SaiasReinhardt
 .text "to Miletos—weren't you with her?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I worry for my little sister..."
 .byte NewLine
@@ -550,12 +550,12 @@ dialogueChapter22SaiasReinhardt
 .text "any longer."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Did the princess really tell you that?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "She did. With a man as powerful as"
 .byte NewLine
@@ -564,7 +564,7 @@ dialogueChapter22SaiasReinhardt
 .text "there's no reason for me to escort her as well."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -574,7 +574,7 @@ dialogueChapter22SaiasReinhardt
 
 dialogueChapter22SaiasReinhardt2
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Commander, this is difficult for me to ask,"
 .byte NewLine
@@ -583,7 +583,7 @@ dialogueChapter22SaiasReinhardt2
 .text "defected to the rebels. Is this true?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...It is."
 .byte WaitForA
@@ -600,7 +600,7 @@ dialogueChapter22SaiasReinhardt2
 .text "I know I can bring her back to her senses."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Mm... I know that you'll always see her"
 .byte NewLine
@@ -619,7 +619,7 @@ dialogueChapter22SaiasReinhardt2
 .text "You must accept that."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "How Olwen lives her life..."
 .byte NewLine
@@ -628,7 +628,7 @@ dialogueChapter22SaiasReinhardt2
 .text "her path has split apart from mine?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Indeed..."
 .byte NewLine
@@ -642,11 +642,11 @@ dialogueChapter22SaiasReinhardt2
 
 dialogueChapter22LeifIntro
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "The River Thracia..."
@@ -659,13 +659,13 @@ dialogueChapter22LeifIntro
 .text "the blessing of Earth Mother Ethniu herself."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Indeed? I'm afraid its beauty is lost on me—"
 .byte NewLine
 .text "I see only a river stained red with blood."
 .byte WaitForA
 .byte ScrollText
-.text "True, the river has granted this land"
+.text "true, the river has granted this land"
 .byte NewLine
 .text "many blessings, but it also stirs greed"
 .byte NewLine
@@ -686,7 +686,7 @@ dialogueChapter22LeifIntro
 .text "King Kalf—was slain on this very river."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That's right..."
 .byte NewLine
@@ -695,7 +695,7 @@ dialogueChapter22LeifIntro
 .text "on this bridge..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah, at the risk of sounding pedantic, King Kalf"
 .byte NewLine
@@ -733,17 +733,17 @@ dialogueChapter22LeifIntro
 
 dialogueChapter22LeifClosing
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "We've made it across the river at last."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "“A river stained red with blood.”"
 .byte NewLine
 .text "Now I understand what you meant by that."
@@ -751,7 +751,7 @@ dialogueChapter22LeifClosing
 .text "Somehow, I can feel that taint upon the river..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Blood that has been spilled can never be"
 .byte NewLine

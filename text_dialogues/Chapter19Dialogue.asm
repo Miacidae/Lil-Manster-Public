@@ -1,10 +1,10 @@
 dialogueChapter19ConomorRecruit
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word conomor_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word miranda_portrait
 .text "Conomor!"
@@ -12,13 +12,13 @@ dialogueChapter19ConomorRecruit
 .text "Stop your foolishness this instant!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Princess Miranda?!"
 .byte NewLine
 .text "What are you doing here?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I was rescued by Prince Leif, and at my"
 .byte NewLine
@@ -41,14 +41,14 @@ dialogueChapter19ConomorRecruit
 .text "Ulster's finest knights into Imperial lapdogs?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah..."
 .byte NewLine
 .text "You have my...deepest apologies..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The enemy isn't Leonster, you fool!"
 .byte NewLine
@@ -67,17 +67,17 @@ dialogueChapter19ConomorRecruit
 .text "Their mission is now our own!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "As you command, milady!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Knights of Ulster!"
 .byte NewLine
@@ -106,11 +106,11 @@ dialogueChapter19ConomorRecruit
 
 dialogueChapter19AmaldaRecruit
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word amalda_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word schroff_portrait
 .text "Lady Amalda, lower your sword!"
@@ -118,13 +118,13 @@ dialogueChapter19AmaldaRecruit
 .text "It's me, Schroff!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Father Schroff?!"
 .byte NewLine
 .text "What in blazes are you doing here?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I came to meet with you."
 .byte NewLine
@@ -133,7 +133,7 @@ dialogueChapter19AmaldaRecruit
 .text "has been waiting for you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You...want me to betray my country?"
 .byte WaitForA
@@ -145,7 +145,7 @@ dialogueChapter19AmaldaRecruit
 .text "be living in such torment."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Lady Amalda, a country isn't the plaything"
 .byte NewLine
@@ -161,7 +161,7 @@ dialogueChapter19AmaldaRecruit
 .text "of being called a traitor?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It's not that simple!"
 .byte NewLine
@@ -170,7 +170,7 @@ dialogueChapter19AmaldaRecruit
 .text "of my troops if I defect!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "They can decide for themselves."
 .byte NewLine
@@ -179,7 +179,7 @@ dialogueChapter19AmaldaRecruit
 .text "follow your heart."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Mm... I understand."
 .byte NewLine
@@ -198,7 +198,7 @@ dialogueChapter19AmaldaRecruit
 
 dialogueChapter19BalladPureWater
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman2_portrait
 .text "Is it true the Leonster army was wiped out"
@@ -341,7 +341,7 @@ dialogueChapter19BalladPureWater
 
 dialogueChapter19SilverSwordHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word moustache_portrait
 .text "Hornswogglin' Hoðr! This place"
@@ -364,7 +364,7 @@ dialogueChapter19SilverSwordHouse
 
 dialogueChapter19KillerLanceHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word black_mustache_portrait
 .text "Just because the other knights were defeated"
@@ -394,7 +394,7 @@ dialogueChapter19KillerLanceHouse
 
 dialogueChapter19SpeedRingHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word braidedgirl_portrait
 .text "I've been saving the nearby Thracians"
@@ -423,7 +423,7 @@ dialogueChapter19SpeedRingHouse
 
 dialogueChapter19PureWaterHouse2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word beardedman_portrait
 .text "Hey, are you the ones fighting to free Thracia?"
@@ -450,7 +450,7 @@ dialogueChapter19PureWaterHouse2
 
 dialogueChapter19HealHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman_portrait
 .text "So the Imperial Army has come"
@@ -470,7 +470,7 @@ dialogueChapter19HealHouse
 
 dialogueChapter19EnsorcelHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word younglady_portrait
 .text "The Imperial Army looks to be"
@@ -499,7 +499,7 @@ dialogueChapter19EnsorcelHouse
 
 dialogueChapter19HealHouse2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldman_portrait
 .text "Flyin' Forseti! The other knights"
@@ -517,7 +517,7 @@ dialogueChapter19HealHouse2
 
 dialogueChapter19WindHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word teenageboy_portrait
 .text "Pardon me, but, um..."
@@ -544,17 +544,17 @@ dialogueChapter19WindHouse
 
 dialogueChapter19Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "Everyone is ready, August."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Hold a moment, my prince."
 .byte NewLine
 .text "It seems someone has come to the castle..."
@@ -569,28 +569,28 @@ dialogueChapter19Opening1
 .text "I... I'm sorry..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Sorry for what?"
 .byte NewLine
 .text "What's happened?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Th-The Imperial Army counterattacked..."
 .byte NewLine
 .text "We were...slaughtered..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Wh-What?!"
 .byte NewLine
 .text "Where's Dorius?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Duke Dorius, he..."
 .byte NewLine
@@ -604,7 +604,7 @@ dialogueChapter19Opening1
 .text "He...met his end..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Dorius..."
 .byte NewLine
@@ -614,21 +614,21 @@ dialogueChapter19Opening1
 .text "......"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "We weren't strong enough..."
 .byte NewLine
 .text "Forgive us!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Th-That's absurd..."
 .byte NewLine
 .text "This can't be..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
@@ -639,14 +639,14 @@ dialogueChapter19Opening1
 .text "before our entire army is massacred."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No..."
 .byte NewLine
 .text "This can't be happening..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Prince Leif!"
 .byte NewLine
@@ -668,11 +668,11 @@ dialogueChapter19Opening1
 
 dialogueChapter19Opening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word wolfe_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word blume_portrait
 .text "...Now the maggots understand"
@@ -687,7 +687,7 @@ dialogueChapter19Opening2
 .text "than Castle Leonster's recapture!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "It shall be done."
 .byte WaitForA
 
@@ -696,7 +696,7 @@ dialogueChapter19Opening2
 
 dialogueChapter19Opening3Conomor
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word conomor_portrait
 .text "So many of our people have died..."
@@ -709,7 +709,7 @@ dialogueChapter19Opening3Conomor
 
 dialogueChapter19Opening3Amalda
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word amalda_portrait
 .text "I have a duty to protect my troops, but..."
@@ -727,11 +727,11 @@ dialogueChapter19Opening3Amalda
 
 dialogueChapter19Closing1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "And so the Empire's retaliation begins..."
@@ -741,13 +741,13 @@ dialogueChapter19Closing1
 .text "We should retreat to the castle."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "August, this is all my fault..."
 .byte NewLine
 .text "It's like I killed Dorius myself..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You don't have the luxury"
 .byte NewLine
@@ -764,12 +764,12 @@ dialogueChapter19Closing1
 .text "you'll need it for what lies ahead."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...You're right."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Come now, I do bring some good news."
 .byte WaitForA
@@ -788,7 +788,7 @@ dialogueChapter19Closing1
 .text "Do you know who their leader is?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "If the rebellion is in Isaach,"
 .byte NewLine
@@ -808,19 +808,19 @@ dialogueChapter19Closing1
 .text "In short, he's a far greater man than I..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Of course Prince Shannan is with the rebels,"
 .byte NewLine
 .text "but their leader is someone else."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That being...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Lord Seliph of House Chalphy."
 .byte NewLine
@@ -829,14 +829,14 @@ dialogueChapter19Closing1
 .text "hail him as the “Scion of Light.”"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "L-Lord Seliph?!"
 .byte NewLine
 .text "Can this be true...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I believe it is—and his father, Lord Sigurd,"
 .byte NewLine
@@ -889,7 +889,7 @@ dialogueChapter19Closing1
 .text "a more perfect opportunity ourselves."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -897,7 +897,7 @@ dialogueChapter19Closing1
 .text "What exactly are you saying?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm saying there's a reason so many people"
 .byte NewLine
@@ -930,7 +930,7 @@ dialogueChapter19Closing1
 .text "around them, shaped by the needs of others."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "August..."
 .byte NewLine
@@ -939,7 +939,7 @@ dialogueChapter19Closing1
 .text "crafted me to be what they needed, too?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Mm... You'll have to come to your own"
 .byte NewLine
@@ -976,11 +976,11 @@ dialogueChapter19Closing1
 
 dialogueChapter19Closing2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "The prince has ordered that he not"
@@ -990,7 +990,7 @@ dialogueChapter19Closing2
 .text "You may state your business to me instead."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Oh, well, uh... We fled from Ulster, y'see."
 .byte NewLine
 .text "The Imperials were hot on our trail"
@@ -1003,14 +1003,14 @@ dialogueChapter19Closing2
 .text "this Master Seal, as a way of sayin' thanks."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Leave it with me. I'll deliver it to the prince,"
 .byte NewLine
 .text "and convey your gratitude."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "All right. Thank you."
 .byte WaitForA

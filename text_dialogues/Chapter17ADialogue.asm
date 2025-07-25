@@ -1,6 +1,6 @@
 dialogueChapter17AMullerSpawn
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word muller_portrait
 .text "Damn... I didn't think it would take this long"
@@ -10,7 +10,7 @@ dialogueChapter17AMullerSpawn
 .text "order the whole army to charge!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word guard_portrait
 .text "General Muller?"
@@ -18,7 +18,7 @@ dialogueChapter17AMullerSpawn
 .text "What happened to Commander Reinhardt?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "He's left for Connaught with Princess Ishtar."
 .byte WaitForA
@@ -30,14 +30,14 @@ dialogueChapter17AMullerSpawn
 .text "I'd imagine he was worried about her."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "He left to babysit the princess instead of"
 .byte NewLine
 .text "coming to battle? What kind of soldier is he?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "A better one than you'll ever be!"
 .byte NewLine
@@ -46,7 +46,7 @@ dialogueChapter17AMullerSpawn
 .text "you're insulting the chain of command!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Agh!"
 .byte NewLine
@@ -57,7 +57,7 @@ dialogueChapter17AMullerSpawn
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Still, this IS going to make things harder on"
 .byte NewLine
@@ -69,11 +69,11 @@ dialogueChapter17AMullerSpawn
 
 dialogueChapter17ASaiasNicolov
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word nicolov_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word saias_portrait
 .text "Colonel Nicolov!"
@@ -81,18 +81,18 @@ dialogueChapter17ASaiasNicolov
 .text "It's been quite some time."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Oh, Bishop Saias!"
 .byte NewLine
 .text "We've been waiting for you, sire!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "How goes the battle?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "The enemy fights with an...unexpected"
 .byte NewLine
@@ -109,14 +109,14 @@ dialogueChapter17ASaiasNicolov
 .text "marked improvement!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Have Commander Reinhardt"
 .byte NewLine
 .text "and the Gelbenritter arrived yet?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I expect them to be here any moment—"
 .byte NewLine
@@ -125,7 +125,7 @@ dialogueChapter17ASaiasNicolov
 .text "like vultures to carrion."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then now is the perfect time"
 .byte NewLine
@@ -134,7 +134,7 @@ dialogueChapter17ASaiasNicolov
 .text "Send word to the Silessian mercenaries."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It shall be done, sire!"
 .byte WaitForA
@@ -144,17 +144,17 @@ dialogueChapter17ASaiasNicolov
 
 dialogueChapter17ASaiasSoldier
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word guard_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word saias_portrait
 .text "...How goes the battle?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Oh, you're Bishop Saias!"
 .byte WaitForA
 .byte ScrollText
@@ -165,12 +165,12 @@ dialogueChapter17ASaiasSoldier
 .text "Colonel Nicolov has, uh... He's already..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Is that so...?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "B-But you're here now!"
 .byte NewLine
@@ -179,14 +179,14 @@ dialogueChapter17ASaiasSoldier
 .text "is sure to raise morale!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Have Commander Reinhardt"
 .byte NewLine
 .text "and the Gelbenritter arrived yet?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "They should be here any minute!"
 .byte NewLine
@@ -195,7 +195,7 @@ dialogueChapter17ASaiasSoldier
 .text "rear guard like butter, so they will!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then now is the perfect time"
 .byte NewLine
@@ -204,7 +204,7 @@ dialogueChapter17ASaiasSoldier
 .text "Send word to the Silessian mercenaries."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Of course, sire!"
 .byte WaitForA
@@ -214,11 +214,11 @@ dialogueChapter17ASaiasSoldier
 
 dialogueChapter17ASaiasLeif
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dorius_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "W-What is the meaning of this?!"
@@ -226,7 +226,7 @@ dialogueChapter17ASaiasLeif
 .text "The enemy's morale is suddenly sky-high!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "My greatest fear..."
 .byte NewLine
 .text "Prince Leif, we cannot hesitate for even"
@@ -234,14 +234,14 @@ dialogueChapter17ASaiasLeif
 .text "a moment—we must order a retreat at once!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "What are you talking about?!"
 .byte NewLine
 .text "Explain yourself, please!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Saias, the Royal Bishop of House Velthomer"
 .byte NewLine
@@ -253,14 +253,14 @@ dialogueChapter17ASaiasLeif
 .text "we don't stand a chance!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "There's been such a person in the Empire"
 .byte NewLine
 .text "all along?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
@@ -278,7 +278,7 @@ dialogueChapter17ASaiasLeif
 .text "in a Bragian monastery."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...I understand."
 .byte WaitForA
@@ -295,17 +295,17 @@ dialogueChapter17ASaiasLeif
 
 dialogueChapter17ASaiasIshtar
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word saias_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word ishtar_portrait
 .text "Bishop Saias, is this where you've gone?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Hm? Princess Ishtar?"
 .byte NewLine
 .text "And Commander Reinhardt, too?"
@@ -313,7 +313,7 @@ dialogueChapter17ASaiasIshtar
 .text "Whatever is the matter? You look panicked!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "It's Prince Julius... He's fallen terribly ill!"
 .byte NewLine
@@ -322,7 +322,7 @@ dialogueChapter17ASaiasIshtar
 .text "and seems to be in great pain..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "The prince has always had a frail constitution,"
 .byte NewLine
@@ -334,7 +334,7 @@ dialogueChapter17ASaiasIshtar
 .text "Can they do anything?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I won't allow it!"
 .byte NewLine
@@ -343,14 +343,14 @@ dialogueChapter17ASaiasIshtar
 .text "they'll not come near him!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Even Archbishop Manfroy?!"
 .byte NewLine
 .text "Why?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Shouldn't you know that better than anyone,"
 .byte NewLine
@@ -360,7 +360,7 @@ dialogueChapter17ASaiasIshtar
 .text "Please, you have to see things my way!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...I understand."
 .byte NewLine
@@ -369,12 +369,12 @@ dialogueChapter17ASaiasIshtar
 .text "Where is His Highness?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Back in Connaught, in my chambers."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Very well..."
 .byte NewLine
@@ -386,11 +386,11 @@ dialogueChapter17ASaiasIshtar
 
 dialogueChapter17AMishaKarin
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word misha_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word karin_portrait
 .text "Captain Misha?!"
@@ -403,18 +403,18 @@ dialogueChapter17AMishaKarin
 .text "Why are you on their side?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "I have something to protect."
 .byte NewLine
 .text "Simple as that."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...And what would that be?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "None of your damn business, that's what."
 .byte NewLine
@@ -428,7 +428,7 @@ dialogueChapter17AMishaKarin
 
 dialogueChapter17AMagicRingHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman2_portrait
 .text "A-Are you trying to attack Castle Leonster"
@@ -448,7 +448,7 @@ dialogueChapter17AMagicRingHouse
 
 dialogueChapter17APureWaterHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word beardedman_portrait
 .text "Castle Leonster has lots of those Loptrian"
@@ -463,7 +463,7 @@ dialogueChapter17APureWaterHouse
 
 dialogueChapter17ARescueHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman_portrait
 .text "Castle Leonster makes for a nice, isolated"
@@ -483,7 +483,7 @@ dialogueChapter17ARescueHouse
 
 dialogueChapter17AWarpHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word braidedgirl_portrait
 .text "Finally, we can break free of the Empire's"
@@ -503,21 +503,21 @@ dialogueChapter17AWarpHouse
 
 dialogueChapter17ASara
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word bishop_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word sarah_portrait
 .text "......"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Ah, Sara, where do you think you're going?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -526,7 +526,7 @@ dialogueChapter17ASara
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Oh, are you with the Liberation Army?"
 .byte NewLine
@@ -542,35 +542,35 @@ dialogueChapter17ASara
 .text "She can be most mysterious."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word sarah_portrait
 .text "...Go..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Go? Go where?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Go..."
 .byte NewLine
 .text "I will go with them..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "B-But they said they were with the army—"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah, Sara, wait!"
 .byte WaitForA
@@ -590,11 +590,11 @@ dialogueChapter17ASara
 
 dialogueChapter17AOpening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word nicolov_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word gustav_portrait
 .text "I see you've yet to deal with the rebels,"
@@ -602,7 +602,7 @@ dialogueChapter17AOpening1
 .text "Nicolov. Explain yourself!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Ah..."
 .byte NewLine
 .text "Kempf's bravado got the better of him,"
@@ -617,7 +617,7 @@ dialogueChapter17AOpening1
 .text "You have my sincerest apologies!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Dammit, Kempf!"
 .byte NewLine
@@ -631,7 +631,7 @@ dialogueChapter17AOpening1
 .text "like you said."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No, sir, it was me"
 .byte NewLine
@@ -665,7 +665,7 @@ dialogueChapter17AOpening1
 .text "we could defeat any army!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed..."
 .byte NewLine
@@ -684,14 +684,14 @@ dialogueChapter17AOpening1
 .text "and graciously offered to lend us his power."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "THE Bishop Saias?"
 .byte NewLine
 .text "The military genius?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The one and only!"
 .byte NewLine
@@ -700,7 +700,7 @@ dialogueChapter17AOpening1
 .text "in a few hours."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah! This just isn't the rebels' lucky day, is it?"
 .byte WaitForA
@@ -717,7 +717,7 @@ dialogueChapter17AOpening1
 .text "in the castle and await word of our victory."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Very well."
 .byte NewLine
@@ -729,21 +729,21 @@ dialogueChapter17AOpening1
 
 dialogueChapter17AOpening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word misha_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word nicolov_portrait
 .text "Do you understand the plan, Captain Misha?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "...Yeah, I got it."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Very good."
 .byte NewLine
@@ -752,31 +752,31 @@ dialogueChapter17AOpening2
 .text "there's one other matter..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That being?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I've heard tell your mother was killed by the"
 .byte NewLine
 .text "traitor Sigurd during the civil war. Is that true?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah. I take it that's why you became"
 .byte NewLine
 .text "a mercenary fighting on behalf of the Empire?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "This isn't about my mother."
 .byte NewLine
@@ -790,7 +790,7 @@ dialogueChapter17AOpening2
 .text "to buy bread and milk..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I see..."
 .byte NewLine
@@ -799,7 +799,7 @@ dialogueChapter17AOpening2
 .text "Please, forget I said anything."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Then I'll be taking my leave."
 .byte WaitForA
@@ -809,11 +809,11 @@ dialogueChapter17AOpening2
 
 dialogueChapter17AOpening3
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "I'll not lie to you, my prince:"
@@ -821,11 +821,11 @@ dialogueChapter17AOpening3
 .text "the enemy's formation is nearly flawless."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "How so?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The main problem is the band of Silessian"
 .byte NewLine
@@ -837,14 +837,14 @@ dialogueChapter17AOpening3
 .text "they'll cut us down from behind."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Why not divide our forces"
 .byte NewLine
 .text "and send a team to attack them first?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "We don't have the men to spare."
 .byte WaitForA
@@ -856,12 +856,12 @@ dialogueChapter17AOpening3
 .text "and his army striking from the rear."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "So what should we do?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "How willing to fight are the Silessian"
 .byte NewLine
@@ -873,11 +873,11 @@ dialogueChapter17AOpening3
 
 dialogueChapter17AClosing
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dorius_portrait
 .text "We've managed to capture the castle gates,"
@@ -887,7 +887,7 @@ dialogueChapter17AClosing
 .text "Don't let your guard down, Prince Leif."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Then we've little choice but to eliminate them"
 .byte NewLine
 .text "all at once, excessive though it may seem."
@@ -903,7 +903,7 @@ dialogueChapter17AClosing
 .text "How many people have died at his whim...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
@@ -919,7 +919,7 @@ dialogueChapter17AClosing
 
 dialogueChapter17AMishaJoin
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word dorius_portrait
@@ -928,7 +928,7 @@ dialogueChapter17AMishaJoin
 .text "of the Silessians. What shall we do with her?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Let her through, please."
 .byte NewLine
@@ -936,18 +936,18 @@ dialogueChapter17AMishaJoin
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word misha_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "Is it true you're the commander"
 .byte NewLine
 .text "of the Silessian forces?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "This is a waste of time..."
 .byte NewLine
@@ -977,7 +977,7 @@ dialogueChapter17AMishaJoin
 .text "that would be mercy."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word karin_portrait
@@ -988,12 +988,12 @@ dialogueChapter17AMishaJoin
 .word PlayMusic
 .byte $44	; Chapter End – August Speaks B
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word misha_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "Captain Misha, you have something"
 .byte NewLine
 .text "to protect, don't you?"
@@ -1006,13 +1006,13 @@ dialogueChapter17AMishaJoin
 .text "on you! You haven't thought about them!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Ah!"
 .byte NewLine
 .text "...How do you know about that?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I asked one of your troops. I saw her lying"
 .byte NewLine
@@ -1038,12 +1038,12 @@ dialogueChapter17AMishaJoin
 .text "just to buy food."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
@@ -1069,14 +1069,14 @@ dialogueChapter17AMishaJoin
 .text "Who will protect Silesse's children then?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Child hunts...?"
 .byte NewLine
 .text "What in blazes are you talking about?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word leif_portrait2
@@ -1092,7 +1092,7 @@ dialogueChapter17AMishaJoin
 .text "to our pain and suffering!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...I'm sorry, I'm a little overwhelmed, here."
 .byte WaitForA

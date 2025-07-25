@@ -1,6 +1,6 @@
 dialogueChapter17BAmaldaCharge
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word amalda_portrait
 .text "The castle is in jeopardy..."
@@ -15,7 +15,7 @@ dialogueChapter17BAmaldaCharge
 
 dialogueChapter17BOpenGate1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word colho_portrait
 .text "Oh-ho, so you're attackin' Castle Leonster?"
@@ -58,7 +58,7 @@ dialogueChapter17BOpenGate2
 
 .word $2E00
 .long $8CBBBC
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word colho_portrait
 .text "So... What's it gonna be?"
@@ -74,7 +74,7 @@ dialogueChapter17BOpenGate2
 
 dialogueChapter17BOpenGateNoMoney
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word colho_portrait
 .text "What kind of conqueror doesn't have"
@@ -87,7 +87,7 @@ dialogueChapter17BOpenGateNoMoney
 
 dialogueChapter17BHouseOther
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word elder_portrait
 .text "You're with the Leonster army, aren't you?"
@@ -100,11 +100,11 @@ dialogueChapter17BHouseOther
 
 dialogueChapter17BElder1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word elder_portrait
 .text "Ah, Lord Leif..."
@@ -117,7 +117,7 @@ dialogueChapter17BElder1
 .text "this day..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "You're the village elder, I take it?"
 .byte WaitForA
 .byte ScrollText
@@ -143,7 +143,7 @@ dialogueChapter17BElder1
 .text "Leonster shall rise again!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Prince, there's something I must ask of you."
 .byte NewLine
@@ -152,14 +152,14 @@ dialogueChapter17BElder1
 .text "Please."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Help us...?"
 .byte NewLine
 .text "You mean your people wish to fight?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed."
 .byte NewLine
@@ -175,7 +175,7 @@ dialogueChapter17BElder1
 .text "stockpiling weapons in secret."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word dorius_portrait
@@ -189,7 +189,7 @@ dialogueChapter17BElder1
 .text "will be easy pickings for them."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I know that."
 .byte NewLine
@@ -208,7 +208,7 @@ dialogueChapter17BElder1
 .text "keep them busy, the prince can breach the—"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word leif_portrait2
@@ -222,7 +222,7 @@ dialogueChapter17BElder1
 .text "I won't allow such a thing!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Lord Leif..."
 .byte NewLine
@@ -260,12 +260,12 @@ dialogueChapter17BElder1
 .text "and we have no regrets."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Elder, sir..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
@@ -290,7 +290,7 @@ dialogueChapter17BElder1
 .text "And if they're so set in their ways..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You..."
 .byte NewLine
@@ -299,7 +299,7 @@ dialogueChapter17BElder1
 .text "I should accept their offer?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm merely saying it's worth considering."
 .byte NewLine
@@ -308,12 +308,12 @@ dialogueChapter17BElder1
 .text "did you not? This may very well be it."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Dorius, what say you?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word dorius_portrait
@@ -334,15 +334,15 @@ dialogueChapter17BElder2
 
 .word $2E00
 .long $8CBBBC
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dorius_portrait
 .text "What is your command?"
 
-.byte Right_slot
+.byte Right_Slot
 .text "Let's see..."
 .byte NewLine
 .text "     We'll accept the villagers' help."
@@ -356,7 +356,7 @@ dialogueChapter17BElder2
 
 dialogueChapter17BOpenGate3
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word gomez_portrait
 .text "Been waitin' for ya."
@@ -371,11 +371,11 @@ dialogueChapter17BOpenGate3
 
 dialogueChapter17BOpening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "My prince, may I present your sovereign land:"
@@ -388,7 +388,7 @@ dialogueChapter17BOpening1
 .text "so the enemy shouldn't be expecting us."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "I'm not sure it will be so easy, August."
 .byte WaitForA
 .byte ScrollText
@@ -402,7 +402,7 @@ dialogueChapter17BOpening1
 .text "What are we to do?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed..."
 .byte NewLine
@@ -421,12 +421,12 @@ dialogueChapter17BOpening1
 .text "Ah, this is most vexing..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Dorius, what would you suggest?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word dorius_portrait
@@ -449,7 +449,7 @@ dialogueChapter17BOpening1
 .text "We need to prepare ourselves for that."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I understand, but keep thinking."
 .byte NewLine
@@ -461,11 +461,11 @@ dialogueChapter17BOpening1
 
 dialogueChapter17BOpening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word amalda_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word palman_portrait
 .text "General Amalda, how is it a fine soldier"
@@ -473,18 +473,18 @@ dialogueChapter17BOpening2
 .text "like you got stuck guarding the rear gate?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Evidently, my comments touched a nerve"
 .byte NewLine
 .text "with Marquess Gustav..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Still bickering about the child hunts, I take it?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It's more than a simple row."
 .byte WaitForA
@@ -508,7 +508,7 @@ dialogueChapter17BOpening2
 .text "if you were in my position?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Now, now, Lady Amalda."
 .byte NewLine
@@ -529,7 +529,7 @@ dialogueChapter17BOpening2
 .text "will be seized and taken to Belhalla."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "But why?!"
 .byte NewLine
@@ -548,11 +548,11 @@ dialogueChapter17BOpening2
 
 dialogueChapter17BClosing1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "We've finally seized the castle gates,"
@@ -565,7 +565,7 @@ dialogueChapter17BClosing1
 .text "you've gathered."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Ahem..."
 .byte WaitForA
 .byte ScrollText
@@ -576,7 +576,7 @@ dialogueChapter17BClosing1
 .text "He is...a man of many vices."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Marquess Gustav..."
 .byte NewLine
@@ -585,7 +585,7 @@ dialogueChapter17BClosing1
 .text "he's ruled Leonster with an iron fist."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Frankly, he's a second-rate commander,"
 .byte NewLine
@@ -594,12 +594,12 @@ dialogueChapter17BClosing1
 .text "with expensive equipment."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Anything else we should be aware of?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Well, the real problem will be General Xavier."
 .byte WaitForA
@@ -624,12 +624,12 @@ dialogueChapter17BClosing1
 .text "for that traitor!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I...take it you know him, Dorius?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah... As ashamed as I am to admit it,"
 .byte NewLine
@@ -655,14 +655,14 @@ dialogueChapter17BClosing1
 .text "will keep my blade from his throat!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word elder_portrait
 .text "It's not what you think, Duke Dorius!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You're...the village elder?"
 .byte NewLine
@@ -674,7 +674,7 @@ dialogueChapter17BClosing1
 .text "that damnable turncoat?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "General Xavier did everything for our sake."
 .byte NewLine
@@ -702,7 +702,7 @@ dialogueChapter17BClosing1
 .text "wouldn't be alive today."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Is this true?!"
 .byte NewLine
@@ -716,7 +716,7 @@ dialogueChapter17BClosing1
 .text "the castle would be as good as ours!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Bah, would that things were that simple..."
 .byte WaitForA
@@ -745,7 +745,7 @@ dialogueChapter17BClosing1
 .text "for their well-being..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word leif_portrait2
@@ -756,12 +756,12 @@ dialogueChapter17BClosing1
 .text "and his men will be freed of their servitude!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You...think it will be that easy?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "He deserves an apology for everything"
 .byte NewLine
@@ -775,7 +775,7 @@ dialogueChapter17BClosing1
 
 dialogueChapter17BClosing2
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah, one other thing."
 .byte NewLine
@@ -784,7 +784,7 @@ dialogueChapter17BClosing2
 .text "give this to you, Lord Leif."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Is this...a Master Seal?"
 .byte NewLine
@@ -793,7 +793,7 @@ dialogueChapter17BClosing2
 .text "to the most valiant of knights..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed. We couldn't be of much help to you"
 .byte NewLine
@@ -809,14 +809,14 @@ dialogueChapter17BClosing2
 .text "to one of your own soldiers."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I accept your gift, Elder."
 .byte NewLine
 .text "Give everyone in the village my thanks."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "If you can recapture the castle,"
 .byte NewLine

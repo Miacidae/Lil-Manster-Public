@@ -1,10 +1,10 @@
 dialogueChapter12MagicRingHouseOlwen
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word younglady_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word girl_portrait
 .text "Sis, Sis! Come look!"
@@ -34,7 +34,7 @@ dialogueChapter12MagicRingHouseOlwen
 
 dialogueChapter12MagicRingHouseNotOlwen
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady3_portrait
 .text "We thought the children of our village"
@@ -65,7 +65,7 @@ dialogueChapter12MagicRingHouseNotOlwen
 
 dialogueChapter12HeimScrollHouseFailed
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady_portrait
 .text "*Cough, cough! Wheeze!*"
@@ -80,7 +80,7 @@ dialogueChapter12HeimScrollHouseFailed
 
 dialogueChapter12HeimScrollHouseSaved
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady_portrait
 .text "Billowin' Bragi!"
@@ -117,7 +117,7 @@ dialogueChapter12HeimScrollHouseSaved
 
 dialogueChapter12SilenceHouseFailed
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word black_mustache_portrait
 .text "Get outta here, you useless sadsacks!"
@@ -130,7 +130,7 @@ dialogueChapter12SilenceHouseFailed
 
 dialogueChapter12SilenceHouseSaved
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word black_mustache_portrait
 .text "I been waitin' fer you since I heard"
@@ -158,7 +158,7 @@ dialogueChapter12SilenceHouseSaved
 
 dialogueChapter12DawnGaidenFail
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "Dawn is breaking, Prince Leif!"
@@ -171,23 +171,23 @@ dialogueChapter12DawnGaidenFail
 
 dialogueChapter12SalemTina
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word salem_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word tina_portrait
 .text "Salem? Er, sir?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Oh, Tina."
 .byte NewLine
 .text "What can I do for you?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I brought you a midnight snack!"
 .byte NewLine
@@ -196,7 +196,7 @@ dialogueChapter12SalemTina
 .text "I figured you could use a nice, hot meal!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That's very kind of you, Tina,"
 .byte NewLine
@@ -210,12 +210,12 @@ dialogueChapter12SalemTina
 .text "Ladies need their beauty sleep, or so I'm told."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Aw, you're no fun..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Wait. You're worried about your sister,"
 .byte NewLine
@@ -234,7 +234,7 @@ dialogueChapter12SalemTina
 .text "I'll help you find her."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "D-Do you mean it?!"
 .byte NewLine
@@ -261,7 +261,7 @@ dialogueChapter12SalemTina
 
 dialogueChapter12Colho
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word colho_portrait
 .text "Look alive, lads! Seems some fresh game"
@@ -300,17 +300,17 @@ dialogueChapter12Colho
 
 dialogueChapter12MareetaDialogue
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady3_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word mareeta_portrait
 .text "What's all that noise? What's wrong?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "The villages 'round here are bein' raided"
 .byte NewLine
 .text "by bandits, that's what! Everyone's"
@@ -318,14 +318,14 @@ dialogueChapter12MareetaDialogue
 .text "scared to death that they'll come here next!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Are they the local bandit group"
 .byte NewLine
 .text "I've heard the villagers mention?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No, no, no—that's the Dandelion yer thinkin' of,"
 .byte NewLine
@@ -346,14 +346,14 @@ dialogueChapter12MareetaDialogue
 .text "that turned up here not too long ago..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Well, whoever they are, you don't need to"
 .byte NewLine
 .text "worry. I'll protect every last one of you!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What in blazes are you thinkin'?!"
 .byte WaitForA
@@ -365,7 +365,7 @@ dialogueChapter12MareetaDialogue
 .text "can't expect to go toe-to-toe with bandits!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No—I'm a swordswoman, a Myrmidon,"
 .byte NewLine
@@ -382,11 +382,11 @@ dialogueChapter12MareetaDialogue
 
 dialogueChapter12Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word pan_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word salem_portrait
 .text "Perne, your shift is done."
@@ -394,7 +394,7 @@ dialogueChapter12Opening1
 .text "Let me take over for you on lookout."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "It's already past dusk, Salem."
 .byte NewLine
 .text "How can you be this energetic now,"
@@ -402,14 +402,14 @@ dialogueChapter12Opening1
 .text "especially with how bad you were roughed up?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Come now, it was all thanks to you"
 .byte NewLine
 .text "that I managed to survive. I'll be fine."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Still, those Loptrian lunatics are a sadistic"
 .byte NewLine
@@ -418,7 +418,7 @@ dialogueChapter12Opening1
 .text "pass by, you'd have been a goner for sure."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -428,7 +428,7 @@ dialogueChapter12Opening1
 .text "That is one of their highest tenets..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "“Betrayal” is a bit of a stretch, ain't it?"
 .byte NewLine
@@ -454,7 +454,7 @@ dialogueChapter12Opening1
 .text "luxurious position to just walk away from."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I...no longer understood the Church."
 .byte NewLine
@@ -463,7 +463,7 @@ dialogueChapter12Opening1
 .text "nothing less."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hmm... Simple as that, huh?"
 .byte WaitForA
@@ -478,7 +478,7 @@ dialogueChapter12Opening1
 .text "If you're up for it, that is."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I admit, your...unusual sense of ethics"
 .byte NewLine
@@ -495,7 +495,7 @@ dialogueChapter12Opening1
 .text "I'll agree to stay here."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm not in the hobby of murder, myself—"
 .byte NewLine
@@ -511,7 +511,7 @@ dialogueChapter12Opening1
 .text "I won't let them drop any bodies during a heist."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "It's more than that. Colho and his followers"
 .byte NewLine
@@ -520,7 +520,7 @@ dialogueChapter12Opening1
 .text "travelers and passing merchants."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah... So you already heard about them, huh?"
 .byte WaitForA
@@ -537,7 +537,7 @@ dialogueChapter12Opening1
 .text "Salem."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Don't forget about Tina. See that you're"
 .byte NewLine
@@ -546,7 +546,7 @@ dialogueChapter12Opening1
 .text "harsh with her—she's little more than a child."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah... All right, all right."
 .byte NewLine
@@ -570,7 +570,7 @@ dialogueChapter12Opening1
 .text "If they find us, we'll be sitting ducks."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Not to worry. If anyone draws near,"
 .byte NewLine
@@ -584,11 +584,11 @@ dialogueChapter12Opening1
 
 dialogueChapter12Opening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady3_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word saias_portrait
 .text "...Well, I must be off."
@@ -598,7 +598,7 @@ dialogueChapter12Opening2
 .text "but please, for my sake, watch over the child."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Yer more'n welcome, Bishop."
 .byte NewLine
 .text "Just leave everything to me, and don't you fret"
@@ -613,7 +613,7 @@ dialogueChapter12Opening2
 .text "Are you leaving already?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm afraid so—I must return to Grannvale."
 .byte WaitForA
@@ -625,14 +625,14 @@ dialogueChapter12Opening2
 .text "You'll be just fine on your own."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...I don't know how I can ever repay you,"
 .byte NewLine
 .text "Bishop. If not for you, I..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You certainly don't lack for gratitude,"
 .byte NewLine
@@ -667,7 +667,7 @@ dialogueChapter12Opening2
 .text "and no regret is irredeemable."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Y-You want me to use that damned sword?!"
 .byte NewLine
@@ -676,7 +676,7 @@ dialogueChapter12Opening2
 .text "ever again!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You wish to carry on your mother's legacy"
 .byte NewLine
@@ -724,7 +724,7 @@ dialogueChapter12Opening2
 .text "then you won't ever truly be a Swordmaster."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I...think I understand."
 .byte WaitForA
@@ -736,7 +736,7 @@ dialogueChapter12Opening2
 .text "could overcome my mother's love for me."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Very good. If you have the resolve to keep"
 .byte NewLine
@@ -755,7 +755,7 @@ dialogueChapter12Opening2
 .text "but I pray you find happiness."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "The same to you, Bishop Saias. Be well."
 .byte WaitForA
@@ -768,11 +768,11 @@ dialogueChapter12Opening2
 
 dialogueChapter12ClosingFailedGaiden
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "I can hardly believe it myself, but it seems"
@@ -794,7 +794,7 @@ dialogueChapter12ClosingFailedGaiden
 .text "and say that he follows a strict code of honor."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Really...?"
 .byte NewLine
 .text "Well, I suppose we'd best leave them be, then."
@@ -802,7 +802,7 @@ dialogueChapter12ClosingFailedGaiden
 .text "It's already past dawn, in any case."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then we're in agreement, sire. We should"
 .byte NewLine
@@ -814,11 +814,11 @@ dialogueChapter12ClosingFailedGaiden
 
 dialogueChapter12ClosingToGaiden
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "This seems to be the bandits' hideout,"
@@ -833,13 +833,13 @@ dialogueChapter12ClosingToGaiden
 .text "to purge Tahra's borders of these vermin."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "I've no objections, but what of our troops?"
 .byte NewLine
 .text "Aren't the men exhausted?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm afraid so. Between the long march"
 .byte NewLine
@@ -855,7 +855,7 @@ dialogueChapter12ClosingToGaiden
 .text "The decision is yours, milord."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...I'll do it. If we rout these bandits"
 .byte NewLine
@@ -869,11 +869,11 @@ dialogueChapter12ClosingToGaiden
 
 dialogueChapter12Ending2MareetaLeif
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word mareeta_portrait
 .text "L-Leif?!"
@@ -881,7 +881,7 @@ dialogueChapter12Ending2MareetaLeif
 .text "Little Lord, is that you?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "...Mareeta?!"
 .byte NewLine
 .text "Mareeta, it really is you!"
@@ -889,7 +889,7 @@ dialogueChapter12Ending2MareetaLeif
 .text "How... How did you wind up here?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm just as surprised as you are!"
 .byte NewLine
@@ -903,7 +903,7 @@ dialogueChapter12Ending2MareetaLeif
 .text "this is just a dream."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Mareeta, I... I beg your forgiveness"
 .byte NewLine
@@ -912,7 +912,7 @@ dialogueChapter12Ending2MareetaLeif
 .text "my fault that the Commander... That she..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "If what happened is anyone's fault, it's mine."
 .byte WaitForA
@@ -924,14 +924,14 @@ dialogueChapter12Ending2MareetaLeif
 .text "sword. I didn't have the discipline to resist it..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Mareeta, this I swear to you:"
 .byte NewLine
 .text "I'll get the Commander back, whatever it takes!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You mean WE!"
 .byte NewLine
@@ -945,7 +945,7 @@ dialogueChapter12Ending2MareetaLeif
 .text "You must let me join you!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Of course I'll have you!"
 .byte WaitForA
@@ -969,7 +969,7 @@ dialogueChapter12Ending2MareetaLeif
 .text "from getting her back!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Couldn't have said it better myself,"
 .byte NewLine

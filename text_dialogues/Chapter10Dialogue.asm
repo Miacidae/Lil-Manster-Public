@@ -77,11 +77,11 @@ dialogueChapter10WorldMap2
 
 dialogueChapter10OlwenFredArrive
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word olwen_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word largo_portrait
 .text "Lady Olwen, the valley is under attack!"
@@ -91,13 +91,13 @@ dialogueChapter10OlwenFredArrive
 .text "and warn them—I'll keep the enemy at bay."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "If you'll permit it, General, I would rather"
 .byte NewLine
 .text "remain here and fight alongside you!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm honored, Lady Olwen, but we have our"
 .byte NewLine
@@ -106,7 +106,7 @@ dialogueChapter10OlwenFredArrive
 .text "Fort Dundrum must be your first priority!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I can't just leave you here!"
 .byte NewLine
@@ -115,7 +115,7 @@ dialogueChapter10OlwenFredArrive
 .text "the valley, if only for a little while...!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Very well—provided that you swear to leave"
 .byte NewLine
@@ -124,22 +124,22 @@ dialogueChapter10OlwenFredArrive
 .text "in short order."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Thank you, General!"
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word fred_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "Fred, let's move out!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Hah! There's the Lady Olwen I know!"
 .byte WaitForA
 
@@ -148,7 +148,7 @@ dialogueChapter10OlwenFredArrive
 
 dialogueChapter10OlwenFredLeave
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word olwen_portrait
 .text "I can delay no longer..."
@@ -170,7 +170,7 @@ dialogueChapter10OlwenFredLeave
 
 dialogueChapter10RescueHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady_portrait
 .text "Natterin' Nál!"
@@ -197,7 +197,7 @@ dialogueChapter10RescueHouse
 
 dialogueChapter10EnsorcelHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman_portrait
 .text "Don't tell me! You're the Liberation Army,"
@@ -251,13 +251,13 @@ dialogueChapter10EnsorcelHouse
 
 dialogueChapter10Opening1
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word olwen_portrait
 .text "Has there been any change, General Largo?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word largo_portrait
 .text "Hm? You're doing reconnaissance again today,"
@@ -267,7 +267,7 @@ dialogueChapter10Opening1
 .text "coming this far into the mountains every morn."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word fred_portrait
@@ -283,7 +283,7 @@ dialogueChapter10Opening1
 .text "each day..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word olwen_portrait
@@ -294,7 +294,7 @@ dialogueChapter10Opening1
 .text "look at Kempf's face every hour of the day."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word largo_portrait
@@ -329,7 +329,7 @@ dialogueChapter10Opening1
 .text "He's a disgrace to his uniform."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "General Kempf is utterly convinced that"
 .byte NewLine
@@ -341,7 +341,7 @@ dialogueChapter10Opening1
 .text "comes with military service."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "They're both close in age, were both"
 .byte NewLine
@@ -350,28 +350,28 @@ dialogueChapter10Opening1
 .text "to see how such a vile mindset took root."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "But my lord brother certainly doesn't feel"
 .byte NewLine
 .text "the same way about him."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then that's all the more reason for General"
 .byte NewLine
 .text "Kempf to hate him, wouldn't you say?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What? Why? If the hatred's not mutual,"
 .byte NewLine
 .text "there should be no reason for it to continue!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hah! You don't get it? I envy your innocence."
 .byte NewLine
@@ -380,14 +380,14 @@ dialogueChapter10Opening1
 .text "North and South Thracia will never be as one."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I don't follow... What's that got to do"
 .byte NewLine
 .text "with the North and South?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Ah, I've bent your ear for too long, though"
 .byte NewLine
@@ -396,7 +396,7 @@ dialogueChapter10Opening1
 .text "you stay a spell and catch your breath?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I will. Thank you."
 .byte NewLine
@@ -408,11 +408,11 @@ dialogueChapter10Opening1
 
 dialogueChapter10Opening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "Prince Leif, just across the valley"
@@ -422,7 +422,7 @@ dialogueChapter10Opening2
 .text "between Thracia and the Empire."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "We'll finally be able to strike"
 .byte NewLine
 .text "at the enemy's own territory for a change..."
@@ -430,7 +430,7 @@ dialogueChapter10Opening2
 .text "Have we any idea of their numbers?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Our reports say that their garrison is small,"
 .byte NewLine
@@ -447,12 +447,12 @@ dialogueChapter10Opening2
 .text "destroy them before advancing toward the fort."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "How do you propose we do that?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "We've three means of attack."
 .byte NewLine
@@ -478,14 +478,14 @@ dialogueChapter10Opening2
 .text "This...could work as a last recourse."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "They both have their own crucial downsides..."
 .byte NewLine
 .text "What's the best course of action?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That would be the third way."
 .byte WaitForA
@@ -505,11 +505,11 @@ dialogueChapter10Opening2
 
 dialogueChapter10EndLargoAlive
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "General Largo..."
@@ -519,7 +519,7 @@ dialogueChapter10EndLargoAlive
 .text "he was made out to be."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "This was our first time fighting the troops"
 .byte NewLine
 .text "of House Friege... Now that the battle is over,"
@@ -534,7 +534,7 @@ dialogueChapter10EndLargoAlive
 .text "how fierce their full army will prove to be..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed. House Friege is one of the most"
 .byte NewLine
@@ -562,14 +562,14 @@ dialogueChapter10EndLargoAlive
 .text "Your leadership this day was most admirable."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah... You mean how I had General Largo"
 .byte NewLine
 .text "captured instead of killed?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed. This holy war must be fought to the"
 .byte NewLine
@@ -585,7 +585,7 @@ dialogueChapter10EndLargoAlive
 .text "Never forsake your knightly pride."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Knightly pride... Huh. I didn't really think of it"
 .byte NewLine
@@ -599,11 +599,11 @@ dialogueChapter10EndLargoAlive
 
 dialogueChapter10EndLargoDead
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "August, did you see the Mage Knight"
@@ -611,18 +611,18 @@ dialogueChapter10EndLargoDead
 .text "that fled midway through the battle?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Indeed—a woman knight, at that."
 .byte NewLine
 .text "She was a most difficult adversary."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Who was she?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I didn't recognize her, but there's little doubt"
 .byte NewLine
@@ -631,12 +631,12 @@ dialogueChapter10EndLargoDead
 .text "of our incursion."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "So the enemy will know we're coming..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Just so. And Fort Dundrum is no common"
 .byte NewLine
@@ -664,14 +664,14 @@ dialogueChapter10EndLargoDead
 .text "seizing the fort..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I see... Still, there's no other route"
 .byte NewLine
 .text "that would allow us to cross the mountains."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That seems to be the hand we've been dealt,"
 .byte NewLine
@@ -680,7 +680,7 @@ dialogueChapter10EndLargoDead
 .text "to act, we must take Fort Dundrum."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then there's little point standing around"
 .byte NewLine

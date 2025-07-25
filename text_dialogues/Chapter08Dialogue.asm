@@ -1,6 +1,6 @@
 dialogueChapter08LemayMount
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word Lemay_portrait
 .text "Ugh, I didn't know Gomez an' his boys"
@@ -20,7 +20,7 @@ dialogueChapter08LemayMount
 
 dialogueChapter08OsianMartyTalk
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word marty_portrait
 .text "Calm down, Marty, he ain't recognized you..."
@@ -28,34 +28,34 @@ dialogueChapter08OsianMartyTalk
 .text "Now wait fer an openin' and run for the hills—"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word osian_portrait
 .text "Hm? Wait, you're... Hey, Marty, ol' buddy!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What? Marty? Don't know no Marty."
 .byte NewLine
 .text "Haven't even heard the name before—"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Marty, pal, I could spot that chin of yours"
 .byte NewLine
 .text "from a mile away. What are you doing here?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Er, well... It weren't my idea, I swear!"
 .byte NewLine
 .text "It was all Gomez's idea! He made me do it...!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That isn't the problem here! C'mon, Marty!"
 .byte NewLine
@@ -71,28 +71,28 @@ dialogueChapter08OsianMartyTalk
 .text "and I got no choice but to cut you down!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Wait, wait! I..."
 .byte NewLine
 .text "It was wrong of me to go along with this..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...So you're with us, then?"
 .byte NewLine
 .text "You'll help us fight off these bandits?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "F-F-Fight off the bandits? Even Gomez?!"
 .byte NewLine
 .text "Er... Well, y'see... I, uh..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Argh! You should be ashamed, Marty!"
 .byte NewLine
@@ -101,7 +101,7 @@ dialogueChapter08OsianMartyTalk
 .text "are you with us, or against us?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "All right, all right! I'll say it loud an' clear:"
 .byte NewLine
@@ -115,7 +115,7 @@ dialogueChapter08OsianMartyTalk
 
 dialogueChapter08HalvanMartyTalk
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word marty_portrait
 .text "Calm down, Marty, he ain't recognized you..."
@@ -123,20 +123,20 @@ dialogueChapter08HalvanMartyTalk
 .text "Now wait fer an openin' and run for the hills—"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word halvan_portrait
 .text "Hm? Is that... Marty, is that you?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What? Marty? Don't know no Marty."
 .byte NewLine
 .text "Haven't even heard the name before—"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Marty, you're tall enough to be a lightning rod."
 .byte NewLine
@@ -145,14 +145,14 @@ dialogueChapter08HalvanMartyTalk
 .text "What I can't figure out is why you're here..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Er, well... It weren't my idea, I swear!"
 .byte NewLine
 .text "It was all Gomez's idea! He made me do it...!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "“He made me do it!” Listen to yourself,"
 .byte NewLine
@@ -161,12 +161,12 @@ dialogueChapter08HalvanMartyTalk
 .text "villages? You've gotta make up excuses too?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I couldn't do nuthin' about it! It ain't my fault..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...All right, we're going in circles here. Just tell"
 .byte NewLine
@@ -178,7 +178,7 @@ dialogueChapter08HalvanMartyTalk
 .text "Are you just a common bandit now?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "W-Well, when you put it like that..."
 .byte NewLine
@@ -187,7 +187,7 @@ dialogueChapter08HalvanMartyTalk
 .text "to go along with this..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then you're still a friend of the Freeblades,"
 .byte NewLine
@@ -196,17 +196,17 @@ dialogueChapter08HalvanMartyTalk
 .text "like a friend would?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Marty!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Y-Yessir! 'Course I will, sir!"
 .byte WaitForA
@@ -216,7 +216,7 @@ dialogueChapter08HalvanMartyTalk
 
 dialogueChapter08MartyCaptured
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word marty_portrait
 .text "Er... Look, I didn't wanna fight you! Honest!"
@@ -231,11 +231,11 @@ dialogueChapter08MartyCaptured
 
 dialogueChapter08GomezAppear
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word gomez_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word Lemay_portrait
 .text "All right, pay up. Your crew might be happy"
@@ -245,7 +245,7 @@ dialogueChapter08GomezAppear
 .text "but I got an actual army to get back to."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Change of plans. Gonna need you to put in"
 .byte NewLine
 .text "a little extra elbow grease—looks like"
@@ -260,7 +260,7 @@ dialogueChapter08GomezAppear
 .text "Once that's done, you'll get every coin."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Damn, this was just supposed to be"
 .byte NewLine
@@ -274,7 +274,7 @@ dialogueChapter08GomezAppear
 
 dialogueChapter08MasterSealHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldman_orange_portrait
 .text "While Dagdar was away helpin'"
@@ -315,7 +315,7 @@ dialogueChapter08MasterSealHouse
 
 dialogueChapter08LuckRingHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word younglady_portrait
 .text "Lucky you! Of all the houses in the North"
@@ -350,11 +350,11 @@ dialogueChapter08LuckRingHouse
 
 dialogueChapter08Opening
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word callion_portrait
 .text "Ah, feel that earthy, mountain air!"
@@ -364,7 +364,7 @@ dialogueChapter08Opening
 .text "of Mount Violdrake."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Your help has been invaluable, Callion."
 .byte NewLine
 .text "You should make your way back"
@@ -372,7 +372,7 @@ dialogueChapter08Opening
 .text "to General Hannibal—we can take it from here."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm...not returning to Thracia, milord."
 .byte NewLine
@@ -381,12 +381,12 @@ dialogueChapter08Opening
 .text "and he gave me his blessing."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Do you think the General a fool?"
 .byte NewLine
@@ -417,14 +417,14 @@ dialogueChapter08Opening
 .text "The motherland shall soon breathe free again!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Motherland?"
 .byte NewLine
 .text "You...mean to say you're not Thracian?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed. I was born to a sworn knight"
 .byte NewLine
@@ -446,7 +446,7 @@ dialogueChapter08Opening
 .text "and reclaim our sovereign land."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm...not sure that I'm the liege you seek,"
 .byte NewLine
@@ -460,7 +460,7 @@ dialogueChapter08Opening
 .text "I merely want to aid Tahra."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Even so, as long as I fight beneath the banner"
 .byte NewLine
@@ -474,14 +474,14 @@ dialogueChapter08Opening
 .text "we make for General Hannibal's villa."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hm? General Hannibal didn't seem the type"
 .byte NewLine
 .text "to own a lavish mountain villa..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "He's not. The villa is a safehouse"
 .byte NewLine
@@ -497,7 +497,7 @@ dialogueChapter08Opening
 .text "in the ways of knighthood."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "D-Did I hear you correctly? Dorius...?!"
 .byte NewLine
@@ -506,19 +506,19 @@ dialogueChapter08Opening
 .text "Duke Dorius is alive...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "See for yourself, milord. Shall we be off?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Of course, at once! Being able to see"
 .byte NewLine
 .text "Duke Dorius again... It's like a waking dream!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
@@ -537,17 +537,17 @@ dialogueChapter08Opening
 .text "What are your orders, sire?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Say no more."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word callion_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I apologize, Callion,"
 .byte NewLine
@@ -556,7 +556,7 @@ dialogueChapter08Opening
 .text "Will you aid me in defending the villagers?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Hah! You needn't ask—I'd be worried"
 .byte NewLine
 .text "if you DIDN'T want to help them, milord!"
@@ -574,11 +574,11 @@ dialogueChapter08Opening
 
 dialogueChapter08Ending1A
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "Prince Leif, I've brought the man"
@@ -587,11 +587,11 @@ dialogueChapter08Ending1A
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word Lemay_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "Let me get a look at you... Wait, you were in"
 .byte NewLine
 .text "charge of these brigands? Why is the Thracian"
@@ -599,13 +599,13 @@ dialogueChapter08Ending1A
 .text "coat of arms on your breastplate, then?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "It's no business of yours, junior."
 .byte NewLine
 .text "Just take my head and be done with it."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No. There's been enough blood spilled today."
 .byte NewLine
@@ -614,7 +614,7 @@ dialogueChapter08Ending1A
 .text "and you have my word you'll walk free."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I could...walk free?"
 .byte WaitForA
@@ -626,7 +626,7 @@ dialogueChapter08Ending1A
 .text "I'd bring shame to the Dracoknights!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Just before we arrived here, I also had to"
 .byte NewLine
@@ -642,12 +642,12 @@ dialogueChapter08Ending1A
 .text "on the street. Is that what you want?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm sure you had your reasons for doing this."
 .byte NewLine
@@ -661,19 +661,19 @@ dialogueChapter08Ending1A
 .text "and I have no reason to pursue you."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Ask your question."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "The lord of that manor, Dagdar,"
 .byte NewLine
 .text "and his daughter Tanya—where are they?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -692,24 +692,24 @@ dialogueChapter08Ending1A
 .text "I could tell he was fixin' to kill 'em both."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I see... Thank you."
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "August, see that this man"
 .byte NewLine
 .text "and his dragon mount are freed at once."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "...As you wish."
 .byte WaitForA
 .byte ScrollText
@@ -723,17 +723,17 @@ dialogueChapter08Ending1A
 
 dialogueChapter08Chapter08xLeifDagdar
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dagdar_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "Dagdar! You're all right!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Well, I'll be... Prince Leif!"
 .byte NewLine
 .text "Heh, an' here I was the one"
@@ -748,24 +748,24 @@ dialogueChapter08Chapter08xLeifDagdar
 .text "She head back to Fiana, or is she with you?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Prince... What happened?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Eyvel is...still in Munster. We...didn't have"
 .byte NewLine
 .text "the forces to rescue her. I couldn't save her..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Wh-What?! Dammit, Leif!"
 .byte NewLine
@@ -774,7 +774,7 @@ dialogueChapter08Chapter08xLeifDagdar
 .text "How the hell could ya just leave her?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "There was nothing I could do! I..."
 .byte NewLine
@@ -786,31 +786,31 @@ dialogueChapter08Chapter08xLeifDagdar
 .text "anyone? What should I do? What CAN I do?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "If... If I'd just been a little stronger..."
 .byte NewLine
 .text "If I had done things differently, maybe—"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Dammit, Prince!"
 .byte NewLine
 .text "Yer puttin' too much of the blame on yerself."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "But—"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Look, I'm sorry fer yellin' at you just now."
 .byte NewLine
@@ -826,12 +826,12 @@ dialogueChapter08Chapter08xLeifDagdar
 .text "effort, and it ain't yer fault it didn't work out."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "D-Dagdar..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Sure, you kids are goin' through some rough"
 .byte NewLine
@@ -857,21 +857,21 @@ dialogueChapter08Chapter08xLeifDagdar
 
 dialogueChapter08Ending1C
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word tanya_portrait
 .text "L-Lord Leif...!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Tanya... It's good to see you again."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Yeah, I guess... There's not much to it, really."
 .byte NewLine
@@ -887,7 +887,7 @@ dialogueChapter08Ending1C
 .text "with Papa long since buried..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I see..."
 .byte NewLine
@@ -896,7 +896,7 @@ dialogueChapter08Ending1C
 .text "for what happened to your father..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No, it's OK... Papa did what he thought"
 .byte NewLine
@@ -905,7 +905,7 @@ dialogueChapter08Ending1C
 .text "he must've really believed in it."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What will you do now, Tanya?"
 .byte NewLine
@@ -914,19 +914,19 @@ dialogueChapter08Ending1C
 .text "Perhaps you could come with us."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Is... Is that really all right with you,"
 .byte NewLine
 .text "having me tag along?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Of course! You're always welcome with us!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Yeah... Yeah, this is just what I need!"
 .byte NewLine
@@ -940,13 +940,13 @@ dialogueChapter08Ending1C
 
 dialogueChapter08Ending1D
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "That's the end of that, I suppose..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "Seems we've largely disposed"
@@ -954,14 +954,14 @@ dialogueChapter08Ending1D
 .text "of the bandits, sire."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Without Dagdar to keep them in line, look"
 .byte NewLine
 .text "how quickly they reverted to this savagery..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm reminded of a certain proverb:"
 .byte WaitForA
@@ -990,7 +990,7 @@ dialogueChapter08Ending1D
 .text "...Do you understand, Prince Leif?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Yes. I must take that lesson to heart."
 .byte WaitForA

@@ -25,11 +25,11 @@ dialogueChapter03WorldMap2
 
 dialogueChapter03Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word lobos_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word raydrik_portrait
 .byte $09 ; font 9(always use font 9)
@@ -39,7 +39,7 @@ dialogueChapter03Opening1
 .text "Lobos?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Ah, Baron Raydrik. We've rounded up all the"
 .byte NewLine
 .text "brats in the area, rest assured. For the time"
@@ -50,7 +50,7 @@ dialogueChapter03Opening1
 .text "What do you want done with them, milord?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hmm. Best keep them there"
 .byte NewLine
@@ -64,14 +64,14 @@ dialogueChapter03Opening1
 .text "for an incursion."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Magi? As in those rebels from Munster?"
 .byte NewLine
 .text "They're still alive?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "To my great chagrin, yes."
 .byte NewLine
@@ -85,7 +85,7 @@ dialogueChapter03Opening1
 .text "a new man in charge..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Never a moment's peace these days..."
 .byte NewLine
@@ -94,7 +94,7 @@ dialogueChapter03Opening1
 .text "Will you be returning to Munster?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Not immediately. My journey has been"
 .byte NewLine
@@ -108,7 +108,7 @@ dialogueChapter03Opening1
 .text "eh, Lobos?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah! Indeed, sire."
 .byte WaitForA
@@ -117,11 +117,11 @@ dialogueChapter03Opening1
 
 dialogueChapter03Opening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_potrait
 .text "That fortress, Kerberos' Gate, guards the road"
@@ -136,11 +136,11 @@ dialogueChapter03Opening2
 .text "it's more terrible than Hell itself."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Why?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The soldiers here no longer watch over"
 .byte NewLine
@@ -152,14 +152,14 @@ dialogueChapter03Opening2
 .text "for the province's child hunts."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Child hunts?"
 .byte NewLine
 .text "What are you talking about, August?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...All across the Empire, children aged seven to"
 .byte NewLine
@@ -178,14 +178,14 @@ dialogueChapter03Opening2
 .text "as servants to the dark god, Loptous."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That's inconceivable."
 .byte NewLine
 .text "What manner of tall tale..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I realize it sounds too horrible to be true,"
 .byte NewLine
@@ -197,7 +197,7 @@ dialogueChapter03Opening2
 .text "within that very fortress you see."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...What soldier could willingly take part in such"
 .byte NewLine
@@ -216,7 +216,7 @@ dialogueChapter03Opening2
 .text "I must free those children from this barbarism."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed..."
 .byte NewLine
@@ -247,14 +247,14 @@ dialogueChapter03Opening2
 .text "Fortune be with you, Prince of Leonster."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hold! This whole time, you've known I was"
 .byte NewLine
 .text "the heir to House Leonster?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "But of course. What's more, I want to see you"
 .byte NewLine
@@ -267,7 +267,7 @@ dialogueChapter03Opening2
 
 dialogueChapter03Ending1
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "...It was a hard-fought victory,"
@@ -279,7 +279,7 @@ dialogueChapter03Ending1
 .byte $3B
 .byte ScrollText
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word raydrik_portrait
 .text "Nicely done. I'm impressed, truly." 
@@ -298,22 +298,22 @@ dialogueChapter03Ending1
 .word LoadPortrait
 .word nanna_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Nanna?!"
 .byte WaitForA
 .byte ScrollText
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word raydrik_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .text "...Raydrik, you soulless parasite..."
 .byte WaitForA
 .byte ScrollText
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word nanna_portrait
 .text "Run, Lord Leif!"
@@ -321,17 +321,17 @@ dialogueChapter03Ending1
 .text "Don't worry about me!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Damn...!"
 .byte WaitForA
 .byte ScrollText
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word raydrik_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .text "Fine... Fine, I said!"
 .byte NewLine
 .text "I'm putting my weapons down,"
@@ -339,7 +339,7 @@ dialogueChapter03Ending1
 .text "so keep your hands off Nanna!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Hah! See, the young pup knows how to heel!"
 .byte NewLine  
 .text "Men, move in and chain the good Prince Leif!"
@@ -351,7 +351,7 @@ dialogueChapter03Ending1
 
 dialogueChapter03Ending2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word eyvel_portrait
 
@@ -376,7 +376,7 @@ dialogueChapter03Ending2
 
 dialogueChapter03Ending3
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word finn_portrait
 
@@ -394,7 +394,7 @@ dialogueChapter03Ending3
 
 dialogueChapter03Ending4
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word halvan_portrait
 
@@ -407,7 +407,7 @@ dialogueChapter03Ending4
 
 dialogueChapter03Ending5
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word osian_portrait
 
@@ -425,7 +425,7 @@ dialogueChapter03Ending5
 
 dialogueChapter03Ending6
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word safie_portrait
 
@@ -436,7 +436,7 @@ dialogueChapter03Ending6
 
 dialogueChapter03Ending7
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dagdar_portrait
 
@@ -456,7 +456,7 @@ dialogueChapter03Ending7
 
 dialogueChapter03CairpreHouseCairpre
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word bishop_portrait
 
@@ -486,7 +486,7 @@ dialogueChapter03CairpreHouseCairpre
 
 dialogueChapter03CairpreHouseOther
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word bishop_portrait
 
@@ -499,7 +499,7 @@ dialogueChapter03CairpreHouseOther
 
 dialogueChapter03LucciaHouseLuccia
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady3_portrait
 
@@ -535,7 +535,7 @@ dialogueChapter03LucciaHouseLuccia
 
 dialogueChapter03LucciaHouseOther
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady3_portrait
 
@@ -550,7 +550,7 @@ dialogueChapter03LucciaHouseOther
 
 dialogueChapter03JubelHouseJubel
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word younglady_portrait
 
@@ -582,7 +582,7 @@ dialogueChapter03JubelHouseJubel
 
 dialogueChapter03JubelHouseOther
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word younglady_portrait
 
@@ -602,7 +602,7 @@ dialogueChapter03JubelHouseOther
 
 dialogueChapter03RomeoHouseRomeo
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady_portrait
 
@@ -627,7 +627,7 @@ dialogueChapter03RomeoHouseRomeo
 
 dialogueChapter03RomeoHouseOther
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady_portrait
 

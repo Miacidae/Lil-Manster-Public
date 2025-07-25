@@ -16,7 +16,7 @@ rsInitPPURegs ; 80/8930
 
 	php
 	sep #$20
-	lda #NMITIMEN_Setting(True, False, False, False)
+	lda #NMITIMEN_Setting(true, false, false, false)
 	sta NMITIMEN,b
 	sta bBufferNMITIMEN
 
@@ -37,11 +37,11 @@ rsInitPPURegs ; 80/8930
 	stz APU02,b
 	stz APU03,b
 
-	lda #MEMSEL_Setting(True)
+	lda #MEMSEL_Setting(true)
 	sta MEMSEL,b
 	sta bBufferMEMSEL
 
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	sta bBufferINIDISP
 
@@ -49,7 +49,7 @@ rsInitPPURegs ; 80/8930
 	stz OAMADD,b
 	stz wBufferOAMADD
 
-	lda #$80										; OAMADDH_Setting(True)
+	lda #$80										; OAMADDH_Setting(true)
 	sta OAMADD+1,b
 	sta wBufferOAMADD+1
 
@@ -104,13 +104,13 @@ rsInitPPURegs ; 80/8930
 	stz CGWSEL,b
 	stz CGADSUB,b
 
-	lda #COLDATA_Setting(0, False, False, True)
+	lda #COLDATA_Setting(0, false, false, true)
 	sta COLDATA,b
 	sta bBufferCOLDATA_1
-	lda #COLDATA_Setting(0, False, True, False)
+	lda #COLDATA_Setting(0, false, true, false)
 	sta COLDATA,b
 	sta bBufferCOLDATA_2
-	lda #COLDATA_Setting(0, True, False, False)
+	lda #COLDATA_Setting(0, true, false, false)
 	sta COLDATA,b
 	sta bBufferCOLDATA_3
 
@@ -168,9 +168,9 @@ riResetE ; 80/8A36
 	; disable irqs, joypad read
 
 	sep #$20
-	lda #MEMSEL_Setting(True)
+	lda #MEMSEL_Setting(true)
 	sta MEMSEL,b
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	stz NMITIMEN,b
 	stz MDMAEN,b
@@ -182,7 +182,7 @@ riResetE ; 80/8A36
 	; is fine and we skip checking for
 	; irregularities
 
-	.enc "None"
+	.enc "none"
 
 	lda aEngineName,b
 	cmp #"EL"
@@ -370,7 +370,7 @@ riResetE ; 80/8A36
 	sta DMA_IO[0].DAS,b
 	stz VMADD,b
 	sep #$20
-	lda #1        ; MDMAEN_Setting(True, False, False, False, False, False, False, False)
+	lda #1        ; MDMAEN_Setting(true, false, false, false, false, false, false, false)
 	sta MDMAEN,b
 	rep #$20
 	jsr rsInitPPURegs
@@ -399,7 +399,7 @@ rsResetAlreadyInitialized ; 80/8BA7
 
 	; Force blank, stop DMA, stop irqs
 
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	stz NMITIMEN,b
 	stz MDMAEN,b
