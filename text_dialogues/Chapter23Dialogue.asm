@@ -1,16 +1,16 @@
 dialogueChapter23CoulterSpawn
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word coulter_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word altena_portrait
 .text "What's the situation in Munster, Coulter?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Nothing unusual yet, but if our intelligence"
 .byte NewLine
 .text "is accurate, there should be massive"
@@ -23,7 +23,7 @@ dialogueChapter23CoulterSpawn
 .text "we'll have the perfect chance to strike..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "But such a plan risks dragging the civilians"
 .byte NewLine
@@ -44,7 +44,7 @@ dialogueChapter23CoulterSpawn
 .text "do just as much damage to the Empire?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah..."
 .byte NewLine
@@ -53,7 +53,7 @@ dialogueChapter23CoulterSpawn
 .text "directly from His Majesty..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Then let me speak to Father."
 .byte NewLine
@@ -62,7 +62,7 @@ dialogueChapter23CoulterSpawn
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Bah, Lady Altena is too naive..."
 .byte NewLine
@@ -86,11 +86,11 @@ dialogueChapter23CoulterSpawn
 
 dialogueChapter23CedAlphand
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ced_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word alphand_portrait
 .text "*Pant... Pant...*"
@@ -98,7 +98,7 @@ dialogueChapter23CedAlphand
 .text "Wh-What manner of heathen are you?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "I am Ced of the Magi."
 .byte NewLine
 .text "We've taken control of the city,"
@@ -109,7 +109,7 @@ dialogueChapter23CedAlphand
 .text "Surrender now and I'll spare your life."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Oh, how droll!"
 .byte NewLine
@@ -121,7 +121,7 @@ dialogueChapter23CedAlphand
 
 dialogueChapter23AltenaLeave
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word coulter_portrait
 .text "Well, well!"
@@ -132,11 +132,11 @@ dialogueChapter23AltenaLeave
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word altena_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "Now's our chance!"
 .byte NewLine
 .text "We couldn't ask for a better way"
@@ -144,7 +144,7 @@ dialogueChapter23AltenaLeave
 .text "to take the city ourselves!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Hold! If we strike now, it's the civilians"
 .byte NewLine
 .text "who'll suffer most!"
@@ -152,7 +152,7 @@ dialogueChapter23AltenaLeave
 .text "Perhaps I could talk them into surrendering..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "These are the king's orders, dammit!"
 .byte NewLine
@@ -161,12 +161,12 @@ dialogueChapter23AltenaLeave
 .text "even if you're the princess!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm in command here!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "And this is MY battalion!"
 .byte NewLine
@@ -175,12 +175,12 @@ dialogueChapter23AltenaLeave
 .text "to attack Munster even if you refused!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "He did...?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You can just stay here and watch,"
 .byte NewLine
@@ -189,7 +189,7 @@ dialogueChapter23AltenaLeave
 .text "is moving in, with or without you!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Coulter, wait! Coulter!"
 .byte WaitForA
@@ -198,7 +198,7 @@ dialogueChapter23AltenaLeave
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word altena_portrait
@@ -212,7 +212,7 @@ dialogueChapter23AltenaLeave
 
 dialogueChapter23InfoHouse1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady3_portrait
 .text "That dark magic is some terrifying stuff..."
@@ -239,7 +239,7 @@ dialogueChapter23InfoHouse1
 
 dialogueChapter23InfoHouse2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman2_portrait
 .text "You can't beat Raydrik, you fools!"
@@ -278,7 +278,7 @@ dialogueChapter23InfoHouse2
 
 dialogueChapter23VulneraryHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word braidedgirl_portrait
 .text "You've come so far already!"
@@ -296,7 +296,7 @@ dialogueChapter23VulneraryHouse
 
 dialogueChapter23PureWaterHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady_portrait
 .text "If you're serious about liberatin' Munster,"
@@ -316,7 +316,7 @@ dialogueChapter23PureWaterHouse
 
 dialogueChapter23PhysicHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman_portrait
 .text "Looks like the folks who made a break for it"
@@ -338,13 +338,13 @@ dialogueChapter23PhysicHouse
 
 dialogueChapter23AlphandVenin1
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word guard_portrait
 .text "You wished to see me, Lord Alphand?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word alphand_portrait
 .text "Ah, yes..."
@@ -352,26 +352,26 @@ dialogueChapter23AlphandVenin1
 .text "I seem to have misplaced my grimoire."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Oh gods, again?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hm?"
 .byte NewLine
 .text "Speak up, I can't hear you!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Uh, it was nothing..."
 .byte NewLine
 .text "So which book have you lost this time?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "My tome of Venin—you know the one,"
 .byte NewLine
@@ -390,16 +390,16 @@ dialogueChapter23AlphandVenin1
 .text "with snake venom... Ah, it's magnificent!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm looking, I'm looking, hold your horses..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word ClearPortrait
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ohhh, I hope it's easier to find"
 .byte NewLine
@@ -411,13 +411,13 @@ dialogueChapter23AlphandVenin1
 
 dialogueChapter23AlphandVenin2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word guard_portrait
 .text "Lord Alphand, I found it!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word alphand_portrait
 .text "Really? Splendid!"
@@ -430,7 +430,7 @@ dialogueChapter23AlphandVenin2
 .byte ScrollText
 .word ClearPortrait
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Well, before you make with the"
 .byte NewLine
@@ -444,23 +444,23 @@ dialogueChapter23AlphandVenin2
 
 dialogueChapter23LeifCed
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ced_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "Aren't you...Sir Ced?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Prince Leif?!"
 .byte NewLine
 .text "Hah, so you've finally arrived!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Sorry to have kept you waiting."
 .byte NewLine
@@ -469,7 +469,7 @@ dialogueChapter23LeifCed
 .text "for rescuing me, Prince Ced..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah... So my secret is out, I see."
 .byte NewLine
@@ -478,7 +478,7 @@ dialogueChapter23LeifCed
 .text "Did Karin tell you?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "She did. If what she said is true, you stayed"
 .byte NewLine
@@ -501,7 +501,7 @@ dialogueChapter23LeifCed
 .text "was run. That was unforgivable of me."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "There's no need to apologize, Prince."
 .byte NewLine
@@ -529,7 +529,7 @@ dialogueChapter23LeifCed
 .text "I'm to blame for all of this, not you."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Even so...I envy you, Prince Ced."
 .byte NewLine
@@ -555,7 +555,7 @@ dialogueChapter23LeifCed
 .text "I... I'm no Crusader..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Prince Leif..."
 .byte NewLine
@@ -619,7 +619,7 @@ dialogueChapter23LeifCed
 .text "You've done her legacy proud!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Prince Ced..."
 .byte NewLine
@@ -645,7 +645,7 @@ dialogueChapter23LeifCed
 .text "Heh. Perhaps I am still a child, in many ways."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Then that would mean I, holy weapon and all,"
 .byte NewLine
@@ -654,14 +654,14 @@ dialogueChapter23LeifCed
 .text "Do you mean to insult me?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah...!"
 .byte NewLine
 .text "N-No, that's not what—"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah! I was only joking, Prince Leif."
 .byte NewLine
@@ -698,14 +698,14 @@ dialogueChapter23LeifCed
 .text "while the Magi keep order in the city?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "It would be my honor to fight alongside you!"
 .byte NewLine
 .text "I, too, have a score to settle with Raydrik."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "How fitting that this fiend will meet his end"
 .byte NewLine
@@ -719,11 +719,11 @@ dialogueChapter23LeifCed
 
 dialogueChapter23LeifSaias
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word saias_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "A...priest?!"
@@ -731,13 +731,13 @@ dialogueChapter23LeifSaias
 .text "You're the one that led the children to safety?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Indeed. I did so on behalf of Sir Ced"
 .byte NewLine
 .text "of the Magi. Thank you for taking us in."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Think nothing of it!"
 .byte NewLine
@@ -751,7 +751,7 @@ dialogueChapter23LeifSaias
 .text "You should get somewhere safe, Father."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah..."
 .byte NewLine
@@ -760,14 +760,14 @@ dialogueChapter23LeifSaias
 .text "I take it you're Prince Leif?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That I am."
 .byte NewLine
 .text "How did you know?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "There's no time. Listen closely:"
 .byte NewLine
@@ -781,14 +781,14 @@ dialogueChapter23LeifSaias
 .text "You'll need it if you're to defeat Raydrik."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Bragi's Blade?!"
 .byte NewLine
 .text "You're...giving this to ME?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Make no mistake: Sir Ced wanted you"
 .byte NewLine
@@ -804,7 +804,7 @@ dialogueChapter23LeifSaias
 .text "knows little of swordplay himself, you see."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "A sacred blade..."
 .byte NewLine
@@ -821,7 +821,7 @@ dialogueChapter23LeifSaias
 .text "Thank you for everything, Father."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm...just happy to have played my part."
 .byte WaitForA
@@ -845,11 +845,11 @@ dialogueChapter23LeifSaias
 
 dialogueChapter23Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ced_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word younglady_portrait
 .text "Sir Ced!"
@@ -862,7 +862,7 @@ dialogueChapter23Opening1
 .text "the children now!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Blast! Would that I could escort them"
 .byte NewLine
 .text "out of here myself, but that would leave"
@@ -875,21 +875,21 @@ dialogueChapter23Opening1
 .text "of getting the children to safety on their own..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word saias_portrait
 .text "I could carry out that duty, if you'd allow it."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Who goes there?!"
 .byte NewLine
 .text "Who... Who in blazes are you?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "A simple traveler, nothing more."
 .byte NewLine
@@ -905,7 +905,7 @@ dialogueChapter23Opening1
 .text "Or are you unwilling to trust me?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hmm..."
 .byte NewLine
@@ -921,7 +921,7 @@ dialogueChapter23Opening1
 .text "You wear the robes of the royal priesthood..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "We haven't the time for me to explain"
 .byte NewLine
@@ -935,7 +935,7 @@ dialogueChapter23Opening1
 .text "Choose now."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Very well."
 .byte NewLine
@@ -952,7 +952,7 @@ dialogueChapter23Opening1
 .text "the city as well."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "A sword...?"
 .byte WaitForA
@@ -969,7 +969,7 @@ dialogueChapter23Opening1
 .text "in Castle Munster, under heavy guard."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It was, but I saw to that."
 .byte WaitForA
@@ -986,14 +986,14 @@ dialogueChapter23Opening1
 .text "that can breach its foul magic."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I see..."
 .byte NewLine
 .text "So what would you have me do with it?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "The blade can only be wielded by"
 .byte NewLine
@@ -1007,14 +1007,14 @@ dialogueChapter23Opening1
 .text "He can use it—I want you to deliver it to him."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I understand."
 .byte NewLine
 .text "I'll see that it reaches his hands."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You've my gratitude."
 .byte WaitForA
@@ -1024,7 +1024,7 @@ dialogueChapter23Opening1
 .text "You must give me your name, at least..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah, forgive my rudeness."
 .byte NewLine
@@ -1036,11 +1036,11 @@ dialogueChapter23Opening1
 
 dialogueChapter23Opening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word guard_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word raydrik_portrait
 .text "What?!"
@@ -1048,7 +1048,7 @@ dialogueChapter23Opening2
 .text "Those peasants dare to flee Munster?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "I'm afraid so, sire."
 .byte NewLine
 .text "And it seems the Magi have been sheltering"
@@ -1056,7 +1056,7 @@ dialogueChapter23Opening2
 .text "children—they're making a run for it right now."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That's unacceptable! Those cattle are"
 .byte NewLine
@@ -1065,12 +1065,12 @@ dialogueChapter23Opening2
 .text "to get the Empire to overlook this mess!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word faden_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Faden, cut them down in the streets!"
 .byte NewLine
@@ -1082,7 +1082,7 @@ dialogueChapter23Opening2
 .text "what the price of fleeing is!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Leave it to me, milord."
 .byte WaitForA
 .byte ScrollText
@@ -1091,7 +1091,7 @@ dialogueChapter23Opening2
 .text "You called, Lord Raydrik?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Alphand, I want you to take command"
 .byte NewLine
@@ -1110,7 +1110,7 @@ dialogueChapter23Opening2
 .text "of the gates as well!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Of course, sire."
 .byte NewLine
@@ -1122,17 +1122,17 @@ dialogueChapter23Opening2
 
 dialogueChapter23Opening3
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "We've reached Munster at last..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "...It appears the fighting between the Magi"
 .byte NewLine
 .text "and the Knights of Munster has broken out"
@@ -1160,7 +1160,7 @@ dialogueChapter23Opening3
 .text "Whole groups of children are fleeing Munster!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "What?!"
 .byte NewLine
@@ -1174,11 +1174,11 @@ dialogueChapter23Opening3
 
 dialogueChapter23Closing1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "It certainly wasn't easy, but the gates"
@@ -1188,7 +1188,7 @@ dialogueChapter23Closing1
 .text "How shall we proceed from here?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "The Magi can keep order in the streets"
 .byte NewLine
 .text "while we storm the castle. Raydrik has fled"
@@ -1200,7 +1200,7 @@ dialogueChapter23Closing1
 .text "to use the captive children as hostages."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then we have our work cut out for us..."
 .byte NewLine
@@ -1234,12 +1234,12 @@ dialogueChapter23NoBlade
 .text "without a plan, my prince."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Then what do you propose, August?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Let's think through everything we know..."
 .byte NewLine
@@ -1258,7 +1258,7 @@ dialogueChapter23NoBlade
 
 dialogueChapter23HasBlade
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah, I'm one step ahead of you. I received"
 .byte NewLine
@@ -1274,7 +1274,7 @@ dialogueChapter23HasBlade
 .text "it can breach the magic protecting him."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hmm..."
 .byte NewLine
@@ -1293,10 +1293,10 @@ dialogueChapter23HasBlade
 
 dialogueChapter23SaiasBlade
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word saias_portrait
@@ -1312,7 +1312,7 @@ dialogueChapter23SaiasBlade
 .text "Prince Leif, you should be able to wield it."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "I'm not sure I follow."
 .byte NewLine
 .text "What does this sword have to do with"
@@ -1320,7 +1320,7 @@ dialogueChapter23SaiasBlade
 .text "overcoming Raydrik's dark magic?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "This is Bragi's Blade, and it's...something of a"
 .byte NewLine
@@ -1332,7 +1332,7 @@ dialogueChapter23SaiasBlade
 .text "protecting Raydrik."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "A sacred blade..."
 .byte NewLine
@@ -1349,14 +1349,14 @@ dialogueChapter23SaiasBlade
 .text "Thank you for everything, Father Saias."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Please, save your thanks for Sir Ced."
 .byte NewLine
 .text "I was just the errand boy."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Of course."
 .byte NewLine
@@ -1364,7 +1364,7 @@ dialogueChapter23SaiasBlade
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 
 .byte EndText
@@ -1372,10 +1372,10 @@ dialogueChapter23SaiasBlade
 
 dialogueCh23SaiasLoad
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word saias_portrait
@@ -1385,11 +1385,11 @@ dialogueCh23SaiasLoad
 
 dialogueChapter23SaiasBranch
 
-.byte Right_slot
+.byte Right_Slot
 .text "What will you do now, Father?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "I have nowhere to return to."
 .byte NewLine
 .text "There's only one thing I can do now: I shall go"
@@ -1397,7 +1397,7 @@ dialogueChapter23SaiasBranch
 .text "to the Tower of Bragi and pray for guidance."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Can you tell me nothing more"
 .byte NewLine
@@ -1406,12 +1406,12 @@ dialogueChapter23SaiasBranch
 .text "How exactly did you end up here?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I can't say. Not now."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I see. I don't suppose there's any chance"
 .byte NewLine
@@ -1425,7 +1425,7 @@ dialogueChapter23SaiasBranch
 
 dialogueChapter23SaiasYes
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The prospect of striking down Raydrik..."
 .byte WaitForA
@@ -1445,7 +1445,7 @@ dialogueChapter23SaiasYes
 
 dialogueChapter23SaiasNo
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I've seen enough of battle for one lifetime."
 .byte NewLine
@@ -1534,11 +1534,11 @@ dialogueChapter23WorldMap2
 
 dialogueChapter23Fall
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "How can this be?!"
@@ -1546,7 +1546,7 @@ dialogueChapter23Fall
 .text "The Magi were...wiped out?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Without their leader,"
 .byte NewLine
 .text "the Magi's ranks have collapsed."

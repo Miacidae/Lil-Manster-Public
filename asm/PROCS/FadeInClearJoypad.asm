@@ -44,10 +44,10 @@ rlProcFadeInClearJoypadOnCycle ; 81/C4C9
 	rtl
 
 	_FadeInTable ; 81/C4F1
-		.byte INIDISP_Setting(False, 0)
-		.byte INIDISP_Setting(False, 0)
+		.byte INIDISP_Setting(false, 0)
+		.byte INIDISP_Setting(false, 0)
 		.for i in range(16)
-			.byte INIDISP_Setting(False, i)
+			.byte INIDISP_Setting(false, i)
 		.next
 		.char -1
 

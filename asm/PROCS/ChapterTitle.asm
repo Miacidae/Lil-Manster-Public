@@ -22,16 +22,16 @@ rlSetupChapterTitleWindow ; 9A/8154
 
 	sep #$20
 
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 
-	lda #T_Setting(False, False, False, False, False)
+	lda #T_Setting(false, false, false, false, false)
 	sta bBufferTS
 
-	lda #CGWSEL_Setting(False, False, CGWSEL_MathAlways, CGWSEL_BlackNever)
+	lda #CGWSEL_Setting(false, false, CGWSEL_MathAlways, CGWSEL_BlackNever)
 	sta bBufferCGWSEL
 
-	lda #CGADSUB_Setting(CGADSUB_Add, False, False, False, False, False, False, False)
+	lda #CGADSUB_Setting(CGADSUB_Add, false, false, false, false, false, false, false)
 	sta bBufferCGADSUB
 
 	rep #$20

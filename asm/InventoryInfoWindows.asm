@@ -342,11 +342,11 @@ rlCopyInventorySkillInfoWindowTilemaps ; 81/FBC4
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG2TilemapBuffer+$0780, $03C0, VMAIN_Setting(True), $F780
+	.dstruct structDMAToVRAM, aBG2TilemapBuffer+$0780, $03C0, VMAIN_Setting(true), $F780
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer+$0780, $03C0, VMAIN_Setting(True), $A780
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer+$0780, $03C0, VMAIN_Setting(true), $A780
 
 	lda #$000C
 	jsl rlUnknown808C87
@@ -388,11 +388,11 @@ rlRevertInventorySkillInfoWindowTilemaps ; 81/FC82
 	jsl rlRevertWindowTilemapRect
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG2TilemapBuffer+$0780, $03C0, VMAIN_Setting(True), $F780
+	.dstruct structDMAToVRAM, aBG2TilemapBuffer+$0780, $03C0, VMAIN_Setting(true), $F780
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer+$0780, $03C0, VMAIN_Setting(True), $A780
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer+$0780, $03C0, VMAIN_Setting(true), $A780
 
 	lda #$0021
 	jsl rlUnknown808C87

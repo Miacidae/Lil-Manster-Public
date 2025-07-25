@@ -18,13 +18,13 @@ rlGetPhaseChangeGraphics ; 81/B563
 	stz wUnknown000302,b
 	jsl $8593EB
 	sep #$20
-	lda #T_Setting(False, False, False, False, True)
+	lda #T_Setting(false, false, false, false, true)
 	sta bBufferTM
-	lda #T_Setting(False, True, True, False, False)
+	lda #T_Setting(false, true, true, false, false)
 	sta bBufferTS
-	lda #CGADSUB_Setting(CGADSUB_Add, False, False, False, False, False, True, True)
+	lda #CGADSUB_Setting(CGADSUB_Add, false, false, false, false, false, true, true)
 	sta bBufferCGADSUB
-	lda #CGWSEL_Setting(False, True, CGWSEL_MathAlways, CGWSEL_BlackNever)
+	lda #CGWSEL_Setting(false, true, CGWSEL_MathAlways, CGWSEL_BlackNever)
 	sta bBufferCGWSEL
 	rep #$30
 	lda #<>$F2E780
@@ -34,7 +34,7 @@ rlGetPhaseChangeGraphics ; 81/B563
 	lda #$0800
 	sta wR0
 	lda #$2000
-	sta wr1
+	sta wR1
 	lda wCurrentPhase,b
 	jsl $83B296
 	txa

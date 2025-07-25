@@ -81,7 +81,7 @@ rlUnknown8CD52F ; 8C/D52F
 	stz wEventEngineStatus,b
 
 	sep #$20
-	lda #T_Setting(False, False, False, False, False)
+	lda #T_Setting(false, false, false, false, false)
 	sta bBufferTM
 	plp
 	rtl

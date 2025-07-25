@@ -38,7 +38,7 @@
 * = $1F7F3D
 .logical mapped($1F7F3D)
 
-	.crossbank.start *, "intro_crawl/IntroTilemap1.bin.fe4"
+	.crossbank.start "intro_crawl/IntroTilemap1.bin.fe4"
 
 .here
 
@@ -80,7 +80,7 @@
 * = $3CE117
 .logical mapped($3CE117)
 
-	.crossbank.start *, "WorldMap.4bpp.fe4"
+	.crossbank.start "WorldMap.4bpp.fe4"
 
 .here
 
@@ -468,7 +468,7 @@ nintendo_logo
 * = $1E79BF
 .logical mapped($1E79BF)
 
-	.crossbank.start *, "intro_crawl/IntroPicture6.4bpp.fe4"
+	.crossbank.start "intro_crawl/IntroPicture6.4bpp.fe4"
 
 .here
 

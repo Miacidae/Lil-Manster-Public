@@ -1,6 +1,6 @@
 dialogueChapterFinalThroneOpened
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word veld_portrait
 .text "Ah! What?!"
@@ -29,7 +29,7 @@ dialogueChapterFinalThroneOpened
 
 dialogueChapterFinalOpening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word veld_portrait
 .text "Raydrik proved to be even more useless"
@@ -39,7 +39,7 @@ dialogueChapterFinalOpening1
 .text "done right, best do it yourself."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word manfroy_portrait
 .text "Veld..."
@@ -47,14 +47,14 @@ dialogueChapterFinalOpening1
 .text "Explain yourself!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Archbishop Manfroy!"
 .byte NewLine
 .text "Wh-When did you get here, Your Eminence?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Spare me your sniveling formalities."
 .byte NewLine
@@ -68,7 +68,7 @@ dialogueChapterFinalOpening1
 .text "at every turn!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm deeply sorry, Your Eminence."
 .byte NewLine
@@ -77,7 +77,7 @@ dialogueChapterFinalOpening1
 .text "before the day is over, I assure you."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "See that you do—otherwise, it will be your head"
 .byte NewLine
@@ -96,7 +96,7 @@ dialogueChapterFinalOpening1
 .text "Prince Quan will be for nothing."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm amazed the ruse has held for this long,"
 .byte NewLine
@@ -105,7 +105,7 @@ dialogueChapterFinalOpening1
 .text "was behind it all."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Eheheheh! I almost pity the Thracians,"
 .byte NewLine
@@ -131,12 +131,12 @@ dialogueChapterFinalOpening1
 .text "as you predicted it would."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm honored by your words, Your Eminence..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "But it's simply given way to a new problem:"
 .byte NewLine
@@ -152,7 +152,7 @@ dialogueChapterFinalOpening1
 .text "when he was little more than an infant..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It is true that Prince Leif has brought"
 .byte NewLine
@@ -196,7 +196,7 @@ dialogueChapterFinalOpening1
 .text "He cannot hope to triumph against me."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hmm..."
 .byte NewLine
@@ -210,7 +210,7 @@ dialogueChapterFinalOpening1
 .text "five of my finest creations, the Deadlords."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm most grateful, Your Eminence."
 .byte WaitForA
@@ -222,7 +222,7 @@ dialogueChapterFinalOpening1
 .text "Now the barrier will be impenetrable!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then I'll leave you to it, Veld."
 .byte NewLine
@@ -231,7 +231,7 @@ dialogueChapterFinalOpening1
 .text "to bring me the good news..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I won't fail you, Your Eminence."
 .byte WaitForA
@@ -241,17 +241,17 @@ dialogueChapterFinalOpening1
 
 dialogueChapterFinalOpening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "Is everyone ready, August?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "All of our troops understand the plan:"
 .byte NewLine
 .text "small squads have each been stationed"
@@ -264,7 +264,7 @@ dialogueChapterFinalOpening2
 .text "the horrors that lurk within..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I know they are. Everyone is aware of what's"
 .byte NewLine
@@ -273,7 +273,7 @@ dialogueChapterFinalOpening2
 .text "have to be broken to open the way to Veld."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It's more complicated than that, my prince."
 .byte NewLine
@@ -301,7 +301,7 @@ dialogueChapterFinalOpening2
 .text "getting rid of the barrier more quickly."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I understand..."
 .byte NewLine
@@ -315,11 +315,11 @@ dialogueChapterFinalOpening2
 
 dialogueChapterFinalEnding1August
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "We...won...?"
@@ -327,7 +327,7 @@ dialogueChapterFinalEnding1August
 .text "Is it...really over?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "It is. Breathe easy, my prince—"
 .byte NewLine
 .text "your long fight has at last come to an end."
@@ -352,7 +352,7 @@ dialogueChapterFinalEnding1August
 .text "and strength, my prince. You never gave up."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No, August..."
 .byte NewLine
@@ -376,7 +376,7 @@ dialogueChapterFinalEnding1August
 .text "I was truly fortunate to have met you..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "This is..."
 .byte NewLine
@@ -416,7 +416,7 @@ dialogueChapterFinalEnding1August
 .text "for all the times I doubted you."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'll not lie, August... The times"
 .byte NewLine
@@ -446,7 +446,7 @@ dialogueChapterFinalEnding1August
 .text "stayed by my side and continued to teach me."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah..."
 .byte NewLine
@@ -454,7 +454,7 @@ dialogueChapterFinalEnding1August
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 
 .byte EndText
@@ -462,7 +462,7 @@ dialogueChapterFinalEnding1August
 
 dialogueChapterFinalEnding2Finn
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word finn_portrait
 .text "Lord Leif!"
@@ -472,13 +472,13 @@ dialogueChapterFinalEnding2Finn
 .text "Connaught has been seized by his army!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Huh? Connaught has already fallen?!"
 .byte NewLine
 .text "What of Lord Seliph...?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "He's alive and well, milord—fear not."
 .byte NewLine
@@ -494,7 +494,7 @@ dialogueChapterFinalEnding2Finn
 .text "welcome surprise when he arrives."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I can hardly believe it..."
 .byte NewLine
@@ -508,7 +508,7 @@ dialogueChapterFinalEnding2Finn
 .text "King Bloom with my own hands."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I sympathize, milord—but as regrets go,"
 .byte NewLine
@@ -531,7 +531,7 @@ dialogueChapterFinalEnding2Finn
 .text "by the son of the late hero Quan."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Finn... We've been through so many"
 .byte NewLine
@@ -562,7 +562,7 @@ dialogueChapterFinalEnding2Finn
 .text "How can I ever repay you?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "L-Lord Leif..."
 .byte WaitForA
@@ -609,7 +609,7 @@ dialogueChapterFinalEnding2Finn
 .text "milord, it is what I would ask of you as well."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I would move the heavens themselves"
 .byte NewLine
@@ -633,13 +633,13 @@ dialogueChapterFinalEnding2Finn
 .text "Would that be enough to repay you, Finn?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It's...all I could have dreamed of, Lord Leif."
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 
 .byte EndText
@@ -647,7 +647,7 @@ dialogueChapterFinalEnding2Finn
 
 dialogueChapterFinalEnding3Eyvel
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word eyvel_portrait
 .text "Guess that's the end of this whole mess..."
@@ -664,13 +664,13 @@ dialogueChapterFinalEnding3Eyvel
 .text "have got to head back to Fiana."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "What?! You're not coming with me, Eyvel?!"
 .byte NewLine
 .text "Why would you do that?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "We may have kicked the Loptrians out,"
 .byte NewLine
@@ -686,12 +686,12 @@ dialogueChapterFinalEnding3Eyvel
 .text "mages and priests now—you don't need us."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "But... Eyvel..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Little Lord, I'll be looking forward to the day"
 .byte NewLine
@@ -705,7 +705,7 @@ dialogueChapterFinalEnding3Eyvel
 .text "I'll bring everybody to Leonster to celebrate."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...I'd like that."
 .byte WaitForA
@@ -722,7 +722,7 @@ dialogueChapterFinalEnding3Eyvel
 .text "so please be patient with me..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I don't think we'll be waiting for long, actually."
 .byte WaitForA
@@ -735,7 +735,7 @@ dialogueChapterFinalEnding3Eyvel
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 
 .byte EndText
@@ -743,7 +743,7 @@ dialogueChapterFinalEnding3Eyvel
 
 dialogueChapterFinalEnding4Miranda
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word miranda_portrait
 .text "Prince Leif, something's been on my mind"
@@ -751,18 +751,18 @@ dialogueChapterFinalEnding4Miranda
 .text "for a little while."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Princess Miranda?"
 .byte NewLine
 .text "What's wrong?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I... I owe you an apology."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "If this is about Dorius, what happened"
 .byte NewLine
@@ -778,7 +778,7 @@ dialogueChapterFinalEnding4Miranda
 .text "will be glad to know you're alive and well."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Uh, that's... That's delightful to hear, but..."
 .byte NewLine
@@ -799,7 +799,7 @@ dialogueChapterFinalEnding4Miranda
 .text "boss me around just because I'm a woman..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Well, out of the royal families"
 .byte NewLine
@@ -815,14 +815,14 @@ dialogueChapterFinalEnding4Miranda
 .text "But even so, I still..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Do you not like me, Prince?"
 .byte NewLine
 .text "If that's the case, I'll get over it, but..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No, it's not that simple. I just..."
 .byte NewLine
@@ -841,7 +841,7 @@ dialogueChapterFinalEnding4Miranda
 .text "to figure out if I truly love someone or not..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -859,7 +859,7 @@ dialogueChapterFinalEnding4Miranda
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 
 .byte EndText
@@ -867,13 +867,13 @@ dialogueChapterFinalEnding4Miranda
 
 dialogueChapterFinalEnding5Linoan
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word linoan_portrait
 .text "Lord Leif..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Linoan!"
 .byte NewLine
 .text "Ah... I imagine this must be very bittersweet"
@@ -893,13 +893,13 @@ dialogueChapterFinalEnding5Linoan
 .text "for a while longer?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Of course I will, Lord Leif!"
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 
 .byte EndText
@@ -914,13 +914,13 @@ dialogueChapterFinalEnding6Dean
 .text "I cannot go with you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "How can that be, Dean?"
 .byte NewLine
 .text "Why can't you?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Thracia is my motherland."
 .byte NewLine
@@ -934,7 +934,7 @@ dialogueChapterFinalEnding6Dean
 .text "He'll protect you from now on."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Dean..."
 .byte NewLine
@@ -943,12 +943,12 @@ dialogueChapterFinalEnding6Dean
 .text "I... I couldn't bear to go on without you."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Linoan...?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I will abandon my plans to retake Tahra"
 .byte NewLine
@@ -957,7 +957,7 @@ dialogueChapterFinalEnding6Dean
 .text "So please, remain at my side..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Don't say something so stupid, Linoan!"
 .byte NewLine
@@ -974,10 +974,10 @@ dialogueChapterFinalEnding6Dean
 .text "I have to avoid that, no matter what it takes..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word leif_portrait
@@ -987,7 +987,7 @@ dialogueChapterFinalEnding6Dean
 
 dialogueChapterFinalEnding7Mareeta
 						; LN > NM > LM > NM > LN
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word nanna_portrait
 .text "......"
@@ -997,21 +997,21 @@ dialogueChapterFinalEnding7Mareeta
 .word LoadPortrait
 .word mareeta_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word nanna_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "Now look here, Little Lady!"
 .byte NewLine
 .text "You've just got to say it! Right now!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "B-But—"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "If you don't say it now, you'll only regret it!"
 .byte NewLine
@@ -1020,12 +1020,12 @@ dialogueChapterFinalEnding7Mareeta
 .text "the “cute little sister” forever?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "But Mareeta—"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ugh, you're just going in circles!"
 .byte NewLine
@@ -1035,7 +1035,7 @@ dialogueChapterFinalEnding7Mareeta
 .text "Hey, Leif!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word leif_portrait
@@ -1051,7 +1051,7 @@ dialogueChapterFinalEnding7Mareeta
 .word LoadPortrait
 .word nanna_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Go on, Nanna."
 .byte NewLine
@@ -1059,7 +1059,7 @@ dialogueChapterFinalEnding7Mareeta
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 
@@ -1067,13 +1067,13 @@ dialogueChapterFinalEnding7Mareeta
 
 dialogueChapterFinalEnding8Nanna
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word nanna_portrait
 .text "L-Lord Leif..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Oh, Nanna! There hasn't been a chance"
 .byte NewLine
 .text "for just the two of us to talk."
@@ -1086,14 +1086,14 @@ dialogueChapterFinalEnding8Nanna
 .text "you knew how grateful I am."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You give me too much credit..."
 .byte NewLine
 .text "I hardly did anything at all."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I think not!"
 .byte NewLine
@@ -1122,14 +1122,14 @@ dialogueChapterFinalEnding8Nanna
 .text "I humbly ask for your blessing to wed her.”"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah...!"
 .byte NewLine
 .text "Lord Leif..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I know we have a long way to go"
 .byte NewLine
@@ -1138,7 +1138,7 @@ dialogueChapterFinalEnding8Nanna
 .text "you'll stay by my side, Nanna."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Of... Of course I will!"
 .byte NewLine
@@ -1146,7 +1146,7 @@ dialogueChapterFinalEnding8Nanna
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 
 .byte EndText
@@ -1154,7 +1154,7 @@ dialogueChapterFinalEnding8Nanna
 
 dialogueChapterFinalEnd
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "Prince Leif, Lord Seliph is here to see you."
@@ -1167,7 +1167,7 @@ dialogueChapterFinalEnd
 .text "I'm relieved to see you safe, Prince Leif."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Lord Seliph!"
 .byte NewLine
 .text "We're only here because you intervened"
@@ -1175,7 +1175,7 @@ dialogueChapterFinalEnd
 .text "at Leonster. The credit for this victory is yours."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No, North Thracia was liberated by you,"
 .byte NewLine
@@ -1215,7 +1215,7 @@ dialogueChapterFinalEnd
 .text "just as our fathers vowed before us."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm honored to accept your oath!"
 .byte NewLine
@@ -1231,7 +1231,7 @@ dialogueChapterFinalEnd
 .text "to create a brighter future for everyone!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Then let us swear it upon this sword!"
 .byte NewLine
@@ -1247,7 +1247,7 @@ dialogueChapterFinalEnd
 .text "from this evil! This I vow to you!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "And I vow just the same to you—"
 .byte NewLine

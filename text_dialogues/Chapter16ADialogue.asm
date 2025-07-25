@@ -1,6 +1,6 @@
 dialogueChapter16AConomorArrive
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word conomor_portrait
 .text "All troops, charge!"
@@ -8,7 +8,7 @@ dialogueChapter16AConomorArrive
 .text "Show the enemy the fury of Ulster!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dvorak_portrait
 .text "Lord Conomor, are you sure about this?"
@@ -21,7 +21,7 @@ dialogueChapter16AConomorArrive
 .text "to retake Ulster!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I know. But if we betray the Empire now,"
 .byte NewLine
@@ -42,7 +42,7 @@ dialogueChapter16AConomorArrive
 
 dialogueChapter16AIliosIntro
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ilios_portrait
 .text "Damn it all..."
@@ -62,11 +62,11 @@ dialogueChapter16AIliosIntro
 
 dialogueChapter16AIliosKarin
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ilios_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word karin_portrait
 .text "Hey, hey!"
@@ -79,7 +79,7 @@ dialogueChapter16AIliosKarin
 .text "but can I bend your ear for a second?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Wh-What?"
 .byte NewLine
 .text "Who are you supposed to be?"
@@ -90,7 +90,7 @@ dialogueChapter16AIliosKarin
 .text "and stop fluttering around me like that!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "About that..."
 .byte NewLine
@@ -99,7 +99,7 @@ dialogueChapter16AIliosKarin
 .text "and join up with us, would you?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "H-Hey! Is this some kind of joke?"
 .byte NewLine
@@ -108,7 +108,7 @@ dialogueChapter16AIliosKarin
 .text "Gods above, you're a strange one..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Should I take that as a “no,” then?"
 .byte WaitForA
@@ -120,28 +120,28 @@ dialogueChapter16AIliosKarin
 .text "Well, goodbye, I guess..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "H-Hey!"
 .byte NewLine
 .text "Wait a minute!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hm?"
 .byte NewLine
 .text "What is it?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I would, uh...consider defecting"
 .byte NewLine
 .text "if I could be promised certain conditions."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Really?"
 .byte NewLine
@@ -150,7 +150,7 @@ dialogueChapter16AIliosKarin
 .text "All right, what is it you want?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Well, assuming Leonster is restored"
 .byte NewLine
@@ -159,7 +159,7 @@ dialogueChapter16AIliosKarin
 .text "full peerage."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That's all?"
 .byte NewLine
@@ -181,7 +181,7 @@ dialogueChapter16AIliosKarin
 .text "a pegasus flying with Thracia's Dracoknights!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "“Commoner” this, “commoner” that..."
 .byte NewLine
@@ -200,19 +200,19 @@ dialogueChapter16AIliosKarin
 .text "in our veins!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then why do you want a noble title so badly?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah... W-Well, I..."
 .byte NewLine
 .text "Look, I don't have to explain myself to you!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Uh-huh..."
 .byte NewLine
@@ -221,12 +221,12 @@ dialogueChapter16AIliosKarin
 .text "What's your name, O noble commoner?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Oh, uh... It's Ilios."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That's an awfully noble-sounding name..."
 .byte NewLine
@@ -238,7 +238,7 @@ dialogueChapter16AIliosKarin
 .text "Is “Ilios” even your real name?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Oh, what a stupid thing to ask!"
 .byte NewLine
@@ -250,7 +250,7 @@ dialogueChapter16AIliosKarin
 .text "that I would one day earn a title to match!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Oh-ho!"
 .byte NewLine
@@ -288,7 +288,7 @@ dialogueChapter16AIliosKarin
 .text "That fits you much better, don't you think?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Wh—"
 .byte NewLine
@@ -300,14 +300,14 @@ dialogueChapter16AIliosKarin
 .text "messing with people's birth names!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Well, Sir Troy, it's good to have you"
 .byte NewLine
 .text "fighting alongside us!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "H-Hey!"
 .byte NewLine
@@ -319,11 +319,11 @@ dialogueChapter16AIliosKarin
 
 dialogueChapter16AKempfOlwen
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word kempf_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word olwen_portrait
 .text "It's been a long time, General Kempf."
@@ -331,7 +331,7 @@ dialogueChapter16AKempfOlwen
 .text "How have you been?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Olwen?!"
 .byte WaitForA
 .byte ScrollText
@@ -342,7 +342,7 @@ dialogueChapter16AKempfOlwen
 .text "you want to be hung as a traitor, too?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Traitor I may be, but my name will be"
 .byte NewLine
@@ -361,7 +361,7 @@ dialogueChapter16AKempfOlwen
 .text "coward to admit it."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What?!"
 .byte NewLine
@@ -380,7 +380,7 @@ dialogueChapter16AKempfOlwen
 .text "of crimes!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I ran to get reinforcements."
 .byte NewLine
@@ -406,7 +406,7 @@ dialogueChapter16AKempfOlwen
 .text "of my lord brother Reinhardt."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hrk...!"
 .byte NewLine
@@ -429,12 +429,12 @@ dialogueChapter16AKempfOlwen
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word olwen_portrait
 .text "I've played my part..."
@@ -447,11 +447,11 @@ dialogueChapter16AKempfOlwen
 
 dialogueChapter16AKempfCharge
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dvorak_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word kempf_portrait
 .text "Order a full charge on the enemy's front lines!"
@@ -464,13 +464,13 @@ dialogueChapter16AKempfCharge
 .text "Leave no one alive!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "H-Hold a moment, General!"
 .byte NewLine
 .text "That goes against Colonel Nicolov's orders!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "And when we win the day, no one will care!"
 .byte NewLine
@@ -489,17 +489,17 @@ dialogueChapter16AKempfCharge
 
 dialogueChapter16ASchroffLeif
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word schroff_portrait
 .text "Ah, you must be Lord Leif!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "That's right."
 .byte NewLine
 .text "A priest back in Solwood told me"
@@ -510,7 +510,7 @@ dialogueChapter16ASchroffLeif
 .text "But how did you recognize me?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I've seen you before, though not in person."
 .byte NewLine
@@ -531,7 +531,7 @@ dialogueChapter16ASchroffLeif
 .text "and they only become truer as time goes on..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "The Tower of Bragi?"
 .byte NewLine
@@ -540,7 +540,7 @@ dialogueChapter16ASchroffLeif
 .text "What in blazes are you talking about?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "When the time comes, milord, understanding"
 .byte NewLine
@@ -557,7 +557,7 @@ dialogueChapter16ASchroffLeif
 
 dialogueChapter16ASchroffOther
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady3_portrait
 .text "Father Schroff is resting."
@@ -572,7 +572,7 @@ dialogueChapter16ASchroffOther
 
 dialogueChapter16ABridgeKeyHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word black_mustache_portrait
 .text "*Sigh*"
@@ -614,7 +614,7 @@ dialogueChapter16ABridgeKeyHouse
 
 dialogueChapter16APureWaterHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word younglady_portrait
 .text "A-Are you folks the heirs to House Leonster?"
@@ -634,7 +634,7 @@ dialogueChapter16APureWaterHouse
 
 dialogueChapter16AMasterSealHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldman_portrait
 .text "Mm, your reputation precedes you."
@@ -659,11 +659,11 @@ dialogueChapter16AMasterSealHouse
 
 dialogueChapter16ASchroffIntro
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word schroff_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word oldlady3_portrait
 .text "Father Schroff? Seems a battle has broken"
@@ -678,7 +678,7 @@ dialogueChapter16ASchroffIntro
 .text "It'd be my pleasure to have you, it would."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Very well. Loath as I am to impose upon"
 .byte NewLine
 .text "your kindness, I suppose I don't have"
@@ -691,11 +691,11 @@ dialogueChapter16ASchroffIntro
 
 dialogueChapter16AOpening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word kempf_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word nicolov_portrait
 .text "Kempf, for your sake, I hope"
@@ -703,7 +703,7 @@ dialogueChapter16AOpening1
 .text "you're prepared for anything."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Leave everything to me, Colonel Nicolov."
 .byte WaitForA
 .byte ScrollText
@@ -719,7 +719,7 @@ dialogueChapter16AOpening1
 .text "of grandeur with ease."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "“With ease,” you say?"
 .byte NewLine
@@ -752,14 +752,14 @@ dialogueChapter16AOpening1
 .text "as good as dead!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah..."
 .byte NewLine
 .text "You...have my apologies, Colonel..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Save it, Kempf."
 .byte NewLine
@@ -780,12 +780,12 @@ dialogueChapter16AOpening1
 .text "It's an order: stick with the ballistae!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Yes, sir."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Now, it may seem like we're on the defensive,"
 .byte NewLine
@@ -806,7 +806,7 @@ dialogueChapter16AOpening1
 .text "and crush the enemy in one fell swoop!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What?"
 .byte NewLine
@@ -815,7 +815,7 @@ dialogueChapter16AOpening1
 .text "are to be our reinforcements?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The very same. Count Conomor is bringing"
 .byte NewLine
@@ -824,17 +824,17 @@ dialogueChapter16AOpening1
 .text "by the mightiest army in North Thracia!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I...see..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "So Conomor is to get all the glory, then?"
 .byte NewLine
@@ -851,11 +851,11 @@ dialogueChapter16AOpening1
 
 dialogueChapter16AOpening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "My prince, the scout we sent ahead has"
@@ -865,7 +865,7 @@ dialogueChapter16AOpening2
 .text "formation."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Hm... The perimeter of Ford Nordrhein is"
 .byte NewLine
 .text "protected by ballistae..."
@@ -876,7 +876,7 @@ dialogueChapter16AOpening2
 .text "doing something about them."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Unfortunately, that bridge is the only way"
 .byte NewLine
@@ -892,14 +892,14 @@ dialogueChapter16AOpening2
 .text "within range of the enemy's ballistae."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Then our only option is to lure the knights"
 .byte NewLine
 .text "out of the ballistae's range."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I doubt any subterfuge would convince them"
 .byte NewLine
@@ -908,7 +908,7 @@ dialogueChapter16AOpening2
 .text "a far superior position, and they know it."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Perhaps, but it's still worth considering."
 .byte NewLine
@@ -922,7 +922,7 @@ dialogueChapter16AOpening2
 
 dialogueChapter16AOpening3
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word olwen_portrait
@@ -938,7 +938,7 @@ dialogueChapter16AOpening3
 .text "will be forced to follow."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "J-Just what are you proposing, Olwen?!"
 .byte NewLine
@@ -947,7 +947,7 @@ dialogueChapter16AOpening3
 .text "in such grave danger!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then I ask it from you as a favor, Prince."
 .byte NewLine
@@ -959,11 +959,11 @@ dialogueChapter16AOpening3
 
 dialogueChapter16AClosing1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dorius_portrait
 .text "Well done, Prince Leif!"
@@ -980,7 +980,7 @@ dialogueChapter16AClosing1
 .text "awaiting your return for many years now..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Leonster..."
 .byte NewLine
 .text "My kingdom..."
@@ -991,7 +991,7 @@ dialogueChapter16AClosing1
 
 dialogueChapter16AClosing2
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed. Your sovereign land."
 .byte NewLine
@@ -1005,7 +1005,7 @@ dialogueChapter16AClosing2
 .text "if you do not remember her beauty."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No, I remember Leonster's beauty—but most"
 .byte NewLine
@@ -1014,14 +1014,14 @@ dialogueChapter16AClosing2
 .text "I'll never forget it."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "“That night?”"
 .byte NewLine
 .text "What do you remember, milord?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "The night that Castle Leonster fell..."
 .byte NewLine
@@ -1049,7 +1049,7 @@ dialogueChapter16AClosing2
 .text "I'd felt such a profound sadness..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I forced Finn into a tough role, I admit."
 .byte NewLine
@@ -1070,7 +1070,7 @@ dialogueChapter16AClosing2
 .text "away from the flames consuming the castle..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That was the last time I ever saw Finn cry."
 .byte NewLine
@@ -1084,7 +1084,7 @@ dialogueChapter16AClosing2
 .text "he forgot how to laugh, too..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "He left a part of himself behind in Leonster."
 .byte NewLine
@@ -1098,14 +1098,14 @@ dialogueChapter16AClosing2
 
 dialogueChapter16AClosing3
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Truth be told, when the Knights of Ulster"
 .byte NewLine
 .text "attacked from the rear, I thought..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The disorder in their vanguard"
 .byte NewLine
@@ -1119,14 +1119,14 @@ dialogueChapter16AClosing3
 .text "Count Conomor is indeed a splendid leader."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hm?"
 .byte NewLine
 .text "Count Conomor?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed. He's a brave general of Ulster,"
 .byte NewLine
@@ -1135,14 +1135,14 @@ dialogueChapter16AClosing3
 .text "loyalty."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Then why is such a man serving the Empire?"
 .byte NewLine
 .text "Does their tyranny not concern him?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "It's most puzzling, but there must be something"
 .byte NewLine

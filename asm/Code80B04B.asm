@@ -91,9 +91,9 @@ rlButtonCombinationResetCheck ; 80/B096
 	bne _End
 
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
-	lda #NMITIMEN_Setting(True, False, False, False)
+	lda #NMITIMEN_Setting(true, false, false, false)
 	sta NMITIMEN,b
 	sta bBufferNMITIMEN
 	stz bDMAPendingChannels,b

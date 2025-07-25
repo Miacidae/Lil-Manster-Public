@@ -86,4 +86,4 @@ rlProcInventoryRescueIconOnCycle ; 81/E0D9
 	plb
 	rtl
 
-	_Sprite .dstruct structSpriteArray, [[[7, 6], $00, False, $114, 3, 0, False, False]]
+	_Sprite .dstruct structSpriteArray, [[[7, 6], $00, false, $114, 3, 0, false, false]]

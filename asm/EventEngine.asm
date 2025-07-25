@@ -363,7 +363,7 @@ rlUnknown8C81F3 ; 8C/81F3
 	bne _End
 
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta bBufferINIDISP
 	rep #$20
 
@@ -2012,10 +2012,10 @@ rsEventCodeHandler_DIALOGUE_ARRAY ; 8C/892F
 	lda #$0000
 	sta wEventEngineTruthFlag,b
 
-	lda [lR22],Y
+	lda [lR22],y
 	sta lR19
 	inc y
-	lda [lR22],Y
+	lda [lR22],y
 	sta lR19+1
 
 	lda wEventEngineCharacterTarget,b
@@ -4764,7 +4764,7 @@ rlUnknown8C9689 ; 8C/9689
 	pha
 
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta bBufferINIDISP
 	rep #$20
 
@@ -15357,7 +15357,7 @@ rlASMCWorldMapDialogue ; 8C/CAD4
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, _BlankTile, size(_BlankTile), VMAIN_Setting(True), $CD00
+	.dstruct structDMAToVRAM, _BlankTile, size(_BlankTile), VMAIN_Setting(true), $CD00
 
 	lda #(`aBG3TilemapBuffer)<<8
 	sta lR18+1
@@ -15923,7 +15923,7 @@ rlUnknown8CCDA5 ; 8C/CDA5
 	phx
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, g4bppUnknown8CCDB9, size(g4bppUnknown8CCDB9), VMAIN_Setting(True), $2800
+	.dstruct structDMAToVRAM, g4bppUnknown8CCDB9, size(g4bppUnknown8CCDB9), VMAIN_Setting(true), $2800
 
 	plx
 	lda #$4000

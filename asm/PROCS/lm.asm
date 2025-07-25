@@ -94,7 +94,7 @@ rsUnknown94CD4D ; 94/CD4D
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer+$700, $0100, VMAIN_Setting(True), $A700
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer+$700, $0100, VMAIN_Setting(true), $A700
 
 	_End
 	rts
@@ -142,7 +142,7 @@ rsUnknown94CD92 ; 94/CD92
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer+$700, $0100, VMAIN_Setting(True), $A700
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer+$700, $0100, VMAIN_Setting(true), $A700
 
 	jsl rlEnableBG3Sync
 	rts

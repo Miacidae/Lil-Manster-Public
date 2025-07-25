@@ -62,7 +62,7 @@ OptionPointerNameBankSwap
 	lda #$2180
 	sta aCurrentTilemapInfo.wBaseTile
 	ldx wR17
-	lda $85D5C3,X
+	lda $85D5C3,x
 	tax
 	stx $A9AB
 	rtl
@@ -81,12 +81,12 @@ OptionGetAndSaveBankSwap
 	
 	-
 	ldx wR17 
-	lda aOptionsWindowMenuLinePointers,X
+	lda aOptionsWindowMenuLinePointers,x
 	sta lR18
 	jsr rsCopyOptionsPointerData
 
 	ldx wR16
-	lda $0000,b,X
+	lda $0000,b,x
 	sta wR0				; short pointer
 	ldx wR17 
 	pea <>(+)-1	
@@ -529,7 +529,7 @@ rsCopyOptionsPointerData
 			lsr
 			tax 
 			lda aOptions.wAnimation 
-			sta $A97F,b,X
+			sta $A97F,b,x
 			rts 
 		
 		aOptionMenuTextSpeedUnitSpeedHiddenInfoPrepsGetter
@@ -540,7 +540,7 @@ rsCopyOptionsPointerData
 			lsr
 			tax 
 			lda aOptions.wTerrainWindow 
-			sta $A97F+1,b,X
+			sta $A97F+1,b,x
 			rts 
 		
 		aOptionMenuAudioBGMVolumeGetter
@@ -551,7 +551,7 @@ rsCopyOptionsPointerData
 			lsr
 			tax 
 			lda aOptions.wBurstWindow
-			sta $A97F+2,b,X
+			sta $A97F+2,b,x
 			rts 
 		
 		aOptionMenuTileSettingGetter
@@ -566,7 +566,7 @@ rsCopyOptionsPointerData
 			lsr
 			lsr
 			tax 
-			lda $A97F,b,X
+			lda $A97F,b,x
 			sta aOptions.wAnimation
 			rts 
 		
@@ -577,7 +577,7 @@ rsCopyOptionsPointerData
 			lsr
 			lsr
 			tax 
-			lda $A97F+1,b,X
+			lda $A97F+1,b,x
 			sta aOptions.wTerrainWindow
 			rts 
 		
@@ -588,7 +588,7 @@ rsCopyOptionsPointerData
 			lsr
 			lsr
 			tax 
-			lda $A97F+2,b,X
+			lda $A97F+2,b,x
 			sta aOptions.wBurstWindow
 			rts 
 		

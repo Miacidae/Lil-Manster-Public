@@ -1,6 +1,6 @@
 dialogueChapter11xOltophFlees
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oltoph_portrait
 .text "Hmph! Orders be damned, I'll not just sit here"
@@ -8,11 +8,11 @@ dialogueChapter11xOltophFlees
 .text "and wait to die!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word guard_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I must be off. I'll report how dire"
 .byte NewLine
@@ -21,11 +21,11 @@ dialogueChapter11xOltophFlees
 .text "commanding officer still remains here."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "If that's the case, Bishop, perhaps I—"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No, I'll go! It has to be me, you understand?"
 .byte NewLine
@@ -36,7 +36,7 @@ dialogueChapter11xOltophFlees
 .byte ScrollText
 .word ClearPortrait
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -46,7 +46,7 @@ dialogueChapter11xOltophFlees
 
 dialogueChapter11xFredArrives
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word fred_portrait
 .text "Lady Olwen! Are you down here?!"
@@ -54,13 +54,13 @@ dialogueChapter11xFredArrives
 .byte ScrollText
 .word ClearPortrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word fred_portrait
 .text "Please, say something!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word olwen_portrait
 .text "Fred?! You came back for me..."
@@ -81,11 +81,11 @@ dialogueChapter11xFredArrives
 
 dialogueChapter11xLeifOlwen
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word olwen_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "I can see you protected those children"
@@ -93,16 +93,16 @@ dialogueChapter11xLeifOlwen
 .text "during the battle... May I ask who you are?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "I would ask the same of you, sir."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...My name is Leif, and I command this army."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Leif?!"
 .byte NewLine
@@ -116,14 +116,14 @@ dialogueChapter11xLeifOlwen
 .text "of House Friege, at your service."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "House Friege, you say?"
 .byte NewLine
 .text "Then...why did you—"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Frankly, I'm not sure where to begin."
 .byte NewLine
@@ -149,7 +149,7 @@ dialogueChapter11xLeifOlwen
 .text "with what I've learned, I assure you."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Your past is of no issue to me."
 .byte NewLine
@@ -163,7 +163,7 @@ dialogueChapter11xLeifOlwen
 .text "before I can render judgment on your request."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Of course. It was unreasonable of me to ask"
 .byte NewLine
@@ -175,23 +175,23 @@ dialogueChapter11xLeifOlwen
 
 dialogueChapter11xOlwenFred
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word olwen_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word fred_portrait
 .text "Lady Olwen!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Fred! Thank you..."
 .byte NewLine
 .text "You've saved me from a fate most terrible."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Think nothing of it, milady. I'm just glad"
 .byte NewLine
@@ -205,19 +205,19 @@ dialogueChapter11xOlwenFred
 .text "You're white as a sheet!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Fred..."
 .byte NewLine
 .text "What have we really been fighting for?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "What do you mean, milady?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What exactly have I accomplished?"
 .byte NewLine
@@ -236,12 +236,12 @@ dialogueChapter11xOlwenFred
 .text "have I made possible?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Lady Olwen..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Never before have I had such...doubts..."
 .byte NewLine
@@ -265,7 +265,7 @@ dialogueChapter11xOlwenFred
 .text "I... I don't know what to do..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Lady Olwen, I can tell you only one thing"
 .byte NewLine
@@ -279,14 +279,14 @@ dialogueChapter11xOlwenFred
 .text "in Prince Leif's army."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Join Prince Leif?!"
 .byte NewLine
 .text "H-He's the enemy! He always has been!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...I met Prince Leif, albeit briefly. Just from"
 .byte NewLine
@@ -300,7 +300,7 @@ dialogueChapter11xOlwenFred
 .text "Lady Olwen, we can find it again in his army!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...If you're that convinced of Prince Leif's"
 .byte NewLine
@@ -312,11 +312,11 @@ dialogueChapter11xOlwenFred
 
 dialogueChapter11xOpening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oltoph_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word kempf_portrait
 .text "Bishop Oltoph, listen closely:"
@@ -354,7 +354,7 @@ dialogueChapter11xOpening1
 .text "for as long as possible. Buy me time."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "B-But General, the enemy has already"
 .byte NewLine
 .text "breached the fort's interior! My men and I"
@@ -362,14 +362,14 @@ dialogueChapter11xOpening1
 .text "cannot possibly withstand a prolonged siege!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Nonsense! You still have one final"
 .byte NewLine
 .text "means of defense in the southern corridor."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Are you implying we are to huddle"
 .byte NewLine
@@ -383,7 +383,7 @@ dialogueChapter11xOpening1
 .text "We'll be sitting ducks!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No, I'm ordering you to kill the invaders"
 .byte NewLine
@@ -404,14 +404,14 @@ dialogueChapter11xOpening1
 .text "You used that word, not I. These are orders."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I...understand. If... If this is an order,"
 .byte NewLine
 .text "I have no choice in the matter."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That's the first smart thing you've said, Bishop."
 .byte WaitForA
@@ -430,12 +430,12 @@ dialogueChapter11xOpening1
 .text "trouble if they manage to survive all this."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...As you wish, General."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Don't look so glum, Bishop."
 .byte NewLine
@@ -444,7 +444,7 @@ dialogueChapter11xOpening1
 .text "knowing your death served a purpose."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -454,11 +454,11 @@ dialogueChapter11xOpening1
 
 dialogueChapter11xOpening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word olwen_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word boy_portrait
 .text "Y-Yer an Imperial soldier...!"
@@ -471,7 +471,7 @@ dialogueChapter11xOpening2
 .text "An' now yer here to kill us, ain'tcha?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "No, that's... That's not why I'm here!"
 .byte NewLine
 .text "I was arrested!"
@@ -479,7 +479,7 @@ dialogueChapter11xOpening2
 .text "Wh-What are you kids doing here?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word girl2_portrait
@@ -493,7 +493,7 @@ dialogueChapter11xOpening2
 .text "Wh-What's gonna happen to us...?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word boy_portrait
@@ -514,7 +514,7 @@ dialogueChapter11xOpening2
 .word LoadPortrait
 .word olwen_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word girl_portrait
@@ -529,7 +529,7 @@ dialogueChapter11xOpening2
 .word RetractBox
 .word ClearPortrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It can't be..."
 .byte NewLine
@@ -557,7 +557,7 @@ dialogueChapter11xOpening2
 .text "and this is what they've been doing all along?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word girl_portrait
 .text "Please, ma'am, help us!"
@@ -565,7 +565,7 @@ dialogueChapter11xOpening2
 .text "Take us back home!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Everything's going to be all right."
 .byte NewLine
@@ -584,7 +584,7 @@ dialogueChapter11xOpening2
 
 dialogueChapter11xClosing1
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "Yet more children caged... It's easy to see"
@@ -592,7 +592,7 @@ dialogueChapter11xClosing1
 .text "why the people of Tahra rebelled."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "Indeed. But that makes the Empire all the more"
@@ -625,14 +625,14 @@ dialogueChapter11xClosing1
 .text "to join in the assault."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The Gelbenritter... That's House Friege's"
 .byte NewLine
 .text "elite battalion of knights, correct?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Indeed, but they are no mere knights."
 .byte WaitForA
@@ -668,7 +668,7 @@ dialogueChapter11xClosing1
 .text "the reincarnation of the crusader Thrud."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
@@ -684,7 +684,7 @@ dialogueChapter11xClosing1
 .text "You've lost sight of reality!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "August! You insult me, speaking so brashly!"
 .byte NewLine
@@ -693,7 +693,7 @@ dialogueChapter11xClosing1
 .text "Please, do tell!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Need I spell it out?"
 .byte NewLine
@@ -721,7 +721,7 @@ dialogueChapter11xClosing1
 
 dialogueChapter11xClosing2
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word olwen_portrait
@@ -732,12 +732,12 @@ dialogueChapter11xClosing2
 .text "is no servant of Loptous!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...And who might you be?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Olwen, sister of Sir Reinhardt."
 .byte WaitForA
@@ -755,7 +755,7 @@ dialogueChapter11xClosing2
 .word LoadPortrait
 .word olwen_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...I see. If that's the case, Olwen, take a good,"
 .byte NewLine

@@ -1050,7 +1050,7 @@ rlUpdateBGTilemaps ; 81/B21E
 	sta wBGUpdateFlags
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0700, VMAIN_Setting(True), $A000
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0700, VMAIN_Setting(true), $A000
 
 	; Decrement layer count and continue for remaining layers
 
@@ -1066,7 +1066,7 @@ rlUpdateBGTilemaps ; 81/B21E
 	sta wBGUpdateFlags
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0700, VMAIN_Setting(True), $E000
+	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0700, VMAIN_Setting(true), $E000
 
 	dec wR0
 	beq ++
@@ -1081,7 +1081,7 @@ rlUpdateBGTilemaps ; 81/B21E
 	sta wBGUpdateFlags
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG2TilemapBuffer, $0700, VMAIN_Setting(True), $F000
+	.dstruct structDMAToVRAM, aBG2TilemapBuffer, $0700, VMAIN_Setting(true), $F000
 
 	+
 	plp

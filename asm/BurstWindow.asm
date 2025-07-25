@@ -104,7 +104,7 @@ rlDrawBurstWindow ; 84/A09B
 
 	_ClearWindow
 	sep #$20
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 	rep #$20
 
@@ -153,7 +153,7 @@ rlDMABurstWindowTiles ; 84/A17D
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $F4F700, $02C0, VMAIN_Setting(True), $4000
+	.dstruct structDMAToVRAM, $F4F700, $02C0, VMAIN_Setting(true), $4000
 
 	rtl
 

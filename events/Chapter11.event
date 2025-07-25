@@ -411,7 +411,7 @@ GUARD_FE5_CHAPTER11 :?= false
 			
 					FADE_IN 2
 			
-					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(False, 15)
+					HALT_UNTIL_BYTE_SKIPPABLE bBufferINIDISP, INIDISP_Setting(false, 15)
 			
 					PLAY_SOUND_FORCED $00E0
 					PAUSE_SKIPPABLE 32
@@ -602,7 +602,7 @@ GUARD_FE5_CHAPTER11 :?= false
 			
 					CALL_ASM_LOOP rlASMCDialogueWithBGEndFadeOut
 			
-					STORE_BYTE bBufferINIDISP, INIDISP_Setting(False, 0)
+					STORE_BYTE bBufferINIDISP, INIDISP_Setting(false, 0)
 			
 					EVENT_TEST_FLAG_SET FlagFredSaved
 					JUMP_FALSE +
@@ -630,56 +630,56 @@ GUARD_FE5_CHAPTER11 :?= false
 				_PrepGroup ; B1/CEFC
 					.byte 8, 7
 			
-					UNIT FriegeArmoredLance1, Enemy, [7, 9], [7, 9], Kempf, [Javelin, Vulnerary, DoorKey], 10, False, [$00, $10, $00, $00]
-					UNIT FriegeArmoredLance1, Enemy, [8, 9], [8, 9], Kempf, [VeninLance, Antitoxin, DoorKey], 15, False, [$00, $10, $00, $00]
-					UNIT FriegeArmoredLance1, Enemy, [6, 9], [6, 9], Kempf, [Javelin, Vulnerary], 12, False, [$00, $10, $00, $00]
-					UNIT FriegeArmoredLance1, Enemy, [9, 9], [9, 9], Kempf, [Javelin, Vulnerary, DoorKey], 10, False, [$00, $10, $00, $00]
-					UNIT FriegeArmoredLance1, Enemy, [6, 10], [6, 10], Kempf, [LongLance], 14, False, [$00, $10, $00, $00]
-					UNIT FriegeArmoredLance1, Enemy, [7, 10], [7, 10], Kempf, [LongLance], 9, False, [$00, $10, $00, $00]
-					UNIT FriegeArmoredLance1, Enemy, [10, 9], [10, 9], Kempf, [Javelin, Vulnerary, DoorKey], 12, False, [$00, $10, $00, $00]
-					UNIT FriegeArmoredLance1, Enemy, [8, 10], [8, 10], Kempf, [LongLance], 13, False, [$00, $10, $00, $00]
-					UNIT FriegeArmoredLance1, Enemy, [9, 10], [9, 10], Kempf, [LongLance], 9, False, [$00, $10, $00, $00]
-					UNIT FriegeArmoredLance1, Enemy, [10, 10], [10, 10], Kempf, [LongLance], 14, False, [$00, $10, $00, $00]
-					UNIT Kempf, Enemy, [13, 1], [13, 1], Kempf, [MasterSword, Thoron, VeninEdge, Vulnerary, Vulnerary], 10, True, [$01, $03, $00, $80]
-					UNIT FriegeMage1, Enemy, [12, 1], [12, 1], Kempf, [Thunder], 12, False, [$01, $03, $00, $00]
-					UNIT FriegeSoldier2, Enemy, [4, 3], [4, 3], Kempf, [Javelin], 10, False, [$00, $03, $00, $00]
-					UNIT FriegeSoldier2, Enemy, [5, 3], [5, 3], Kempf, [Javelin], 14, False, [$00, $03, $00, $00]
-					UNIT FriegeArmoredAxe1, Enemy, [12, 2], [12, 2], Kempf, [VeninAxe], 15, False, [$00, $03, $00, $00]
-					UNIT FriegeArmoredAxe1, Enemy, [14, 2], [14, 2], Kempf, [VeninAxe], 15, False, [$00, $03, $00, $00]
-					UNIT FriegeSoldier2, Enemy, [6, 3], [6, 3], Kempf, [Javelin], 12, False, [$00, $03, $00, $00]
-					UNIT FriegeMage1, Enemy, [14, 1], [14, 1], Kempf, [Thunder], 12, False, [$01, $03, $00, $00]
-					UNIT FriegeBishop2, Enemy, [13, 3], [13, 3], Kempf, [Thunder, Physic], 10, False, [$00, $00, $00, $00]
-					UNIT FriegeSoldier2, Enemy, [6, 17], [6, 17], Kempf, [LongLance], 14, False, [$02, $15, $00, $00]
-					UNIT FriegeSoldier2, Enemy, [10, 17], [10, 17], Kempf, [LongLance], 14, False, [$02, $15, $00, $00]
-					UNIT FriegeSoldier2, Enemy, [9, 17], [9, 17], Kempf, [ShortLance], 8, False, [$02, $15, $00, $00]
-					UNIT FriegeSoldier2, Enemy, [7, 17], [7, 17], Kempf, [ShortLance], 8, False, [$02, $15, $00, $00]
-					UNIT FriegeSoldier2, Enemy, [8, 17], [8, 17], Kempf, [ShortLance], 8, False, [$02, $15, $00, $00]
-					UNIT FriegeArcher, Enemy, [6, 16], [6, 16], Kempf, [Longbow, KillerBow], 12, False, [$02, $15, $00, $00]
-					UNIT FriegeArcher, Enemy, [10, 16], [10, 16], Kempf, [Longbow, KillerBow], 12, False, [$02, $15, $00, $00]
-					UNIT FriegeArmoredAxe1, Enemy, [12, 3], [12, 3], Kempf, [VeninAxe], 15, False, [$00, $03, $00, $00]
-					UNIT FriegeArmoredAxe1, Enemy, [14, 3], [14, 3], Kempf, [VeninAxe], 15, False, [$00, $03, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [7, 9], [7, 9], Kempf, [Javelin, Vulnerary, DoorKey], 10, false, [$00, $10, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [8, 9], [8, 9], Kempf, [VeninLance, Antitoxin, DoorKey], 15, false, [$00, $10, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [6, 9], [6, 9], Kempf, [Javelin, Vulnerary], 12, false, [$00, $10, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [9, 9], [9, 9], Kempf, [Javelin, Vulnerary, DoorKey], 10, false, [$00, $10, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [6, 10], [6, 10], Kempf, [LongLance], 14, false, [$00, $10, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [7, 10], [7, 10], Kempf, [LongLance], 9, false, [$00, $10, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [10, 9], [10, 9], Kempf, [Javelin, Vulnerary, DoorKey], 12, false, [$00, $10, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [8, 10], [8, 10], Kempf, [LongLance], 13, false, [$00, $10, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [9, 10], [9, 10], Kempf, [LongLance], 9, false, [$00, $10, $00, $00]
+					UNIT FriegeArmoredLance1, Enemy, [10, 10], [10, 10], Kempf, [LongLance], 14, false, [$00, $10, $00, $00]
+					UNIT Kempf, Enemy, [13, 1], [13, 1], Kempf, [MasterSword, Thoron, VeninEdge, Vulnerary, Vulnerary], 10, true, [$01, $03, $00, $80]
+					UNIT FriegeMage1, Enemy, [12, 1], [12, 1], Kempf, [Thunder], 12, false, [$01, $03, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [4, 3], [4, 3], Kempf, [Javelin], 10, false, [$00, $03, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [5, 3], [5, 3], Kempf, [Javelin], 14, false, [$00, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [12, 2], [12, 2], Kempf, [VeninAxe], 15, false, [$00, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [14, 2], [14, 2], Kempf, [VeninAxe], 15, false, [$00, $03, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [6, 3], [6, 3], Kempf, [Javelin], 12, false, [$00, $03, $00, $00]
+					UNIT FriegeMage1, Enemy, [14, 1], [14, 1], Kempf, [Thunder], 12, false, [$01, $03, $00, $00]
+					UNIT FriegeBishop2, Enemy, [13, 3], [13, 3], Kempf, [Thunder, Physic], 10, false, [$00, $00, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [6, 17], [6, 17], Kempf, [LongLance], 14, false, [$02, $15, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [10, 17], [10, 17], Kempf, [LongLance], 14, false, [$02, $15, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [9, 17], [9, 17], Kempf, [ShortLance], 8, false, [$02, $15, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [7, 17], [7, 17], Kempf, [ShortLance], 8, false, [$02, $15, $00, $00]
+					UNIT FriegeSoldier2, Enemy, [8, 17], [8, 17], Kempf, [ShortLance], 8, false, [$02, $15, $00, $00]
+					UNIT FriegeArcher, Enemy, [6, 16], [6, 16], Kempf, [Longbow, KillerBow], 12, false, [$02, $15, $00, $00]
+					UNIT FriegeArcher, Enemy, [10, 16], [10, 16], Kempf, [Longbow, KillerBow], 12, false, [$02, $15, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [12, 3], [12, 3], Kempf, [VeninAxe], 15, false, [$00, $03, $00, $00]
+					UNIT FriegeArmoredAxe1, Enemy, [14, 3], [14, 3], Kempf, [VeninAxe], 15, false, [$00, $03, $00, $00]
 				UNIT
 			
 				_FredCameraCoordinates ; B1/D130
 					.byte 8, 7
 			
 				_FredGroup ; B1/D132
-					UNIT Fred, Enemy, [8, 19], [8, 19], Olwen, [LightningSword, Vulnerary], 2, False, [$01, $03, $02, $80]
+					UNIT Fred, Enemy, [8, 19], [8, 19], Olwen, [LightningSword, Vulnerary], 2, false, [$01, $03, $02, $80]
 				UNIT
 			
 				_UnusedCoordinates1 ; B1/D148
 					.byte 8, 13
 			
 				_BallistaGroup ; B1/D14A
-					UNIT FriegeBallista2, Enemy, [3, 12], [3, 12], Kempf, [Ballista], 10, False, [$00, $03, $00, $00]
-					UNIT FriegeBallista2, Enemy, [13, 12], [13, 12], Kempf, [Ballista], 8, False, [$00, $03, $00, $00]
+					UNIT FriegeBallista2, Enemy, [3, 12], [3, 12], Kempf, [Ballista], 10, false, [$00, $03, $00, $00]
+					UNIT FriegeBallista2, Enemy, [13, 12], [13, 12], Kempf, [Ballista], 8, false, [$00, $03, $00, $00]
 				UNIT
 			
 				_OlwenCameraCoordinates ; B1/D174
 					.byte 8, 7
 			
 				_OlwenGroup ; B1/D176
-					UNIT Olwen, Enemy, [13, 2], [13, 2], Olwen, [], 2, False, [$00, $00, $00, $00]
+					UNIT Olwen, Enemy, [13, 2], [13, 2], Olwen, [], 2, false, [$00, $00, $00, $00]
 				UNIT
 			
 				_StartingPositions ; B1/D18C

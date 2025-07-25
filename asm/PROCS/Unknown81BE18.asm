@@ -117,7 +117,7 @@ rlProcUnknown81BE18OnCycle ; 81/BE21
 	lda #$0003
 	sta wUnknown000302,b
 	sep #$20
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 	stz bBufferTS
 	rep #$30

@@ -339,9 +339,9 @@
 
   .endvirtual
 
-  .virtual $7E4E0A
+  .virtual $7E4E0C
 
-    wPrepItemsActionIndex             .word ?   ; $7E4E0A
+    ; wPrepItemsActionIndex             .word ?   ; $7E4E0A
     wInventoryScrolledFlag              .word ?   ; $7E4E0C
 
   .endvirtual
@@ -365,11 +365,11 @@
 
   .endvirtual
 
-  .virtual $7E4FD0
-
-    aConvoy                   .fill 2 * 128 ; $7E4FD0
-
-  .endvirtual
+;  .virtual $7E4FD0
+;
+;    aConvoy                   .fill 2 * 128 ; $7E4FD0
+;
+;  .endvirtual
 
 
   .virtual $7E50D2
@@ -455,6 +455,13 @@
 
   .endvirtual
 
+  .virtual $7EA937
+
+    lUnitGroupLoadingPointer .long ? ; $7EA937
+    wUnitGroupLoadingCount .word ? ; $7EA93A
+    wUnitGroupLoadingInventoryIndex .word ? ; $7EA93C
+
+  .endvirtual
 
   .virtual $7EA937
 
@@ -522,32 +529,39 @@
 
   .endvirtual
 
+;  .virtual $7EB6C3
+;
+;    wPrepDeploymentSlotsOffset        .word ?   ; $7EB6C3
+;    wPrepUnitListColumn           .word ?   ; $7EB6C5
+;    wPrepUnitListRow            .word ?   ; $7EB6C7
+;    wPrepMinimumDeployableUnits       .word ?   ; $7EB6C9
+;    wPrepMaximumDeployableUnits       .word ?   ; $7EB6CB
+;    wPrepSelectedDeployableUnits      .word ?   ; $7EB6CD
+;    wPrepTotalDeployableUnits       .word ?   ; $7EB6CF
+;
+;    .fill ($7EB6DB - *)
+;
+;    wPrepUnitListTextCoordinateBase     .word ?   ; $7EB6DB
+;    wPrepUnitListSpriteVerticalOffset   .word ?   ; $7EB6DD
+;    wPrepUnitListMovingFlag         .word ?   ; $7EB6DF
+;                        .word ?   ; $7EB6E1
+;    wPrepScrollDirectionIncrement     .word ?   ; $7EB6E3
+;    wPrepScrollDirectionStep        .word ?   ; $7EB6E5
+;    wPrepListCursorXCoordinate        .word ?   ; $7EB6E7
+;    wPrepListCursorYCoordinate        .word ?   ; $7EB6E9
+;    wPrepItemsSelectedOption        .word ?   ; $7EB6EB
+;    wPrepItemsDiscardIndex          .word ?   ; $7EB6ED
+;    wPrepItemsDiscardLength         .word ?   ; $7EB6EF
+;    wPrepUnitListLastSelectedColumn     .word ?   ; $7EB6F1
+;    wPrepUnitListLastSelectedRow      .word ?   ; $7EB6F3
+;    wPrepUnitListLastScrollOffset     .word ?   ; $7EB6F5
+;    wPrepUnitListLastScrolledMenuLine   .word ?   ; $7EB6F7
+;
+;  .endvirtual
+
+
   .virtual $7EB6C3
-
-    wPrepDeploymentSlotsOffset        .word ?   ; $7EB6C3
-    wPrepUnitListColumn           .word ?   ; $7EB6C5
-    wPrepUnitListRow            .word ?   ; $7EB6C7
-    wPrepMinimumDeployableUnits       .word ?   ; $7EB6C9
-    wPrepMaximumDeployableUnits       .word ?   ; $7EB6CB
-    wPrepSelectedDeployableUnits      .word ?   ; $7EB6CD
-    wPrepTotalDeployableUnits       .word ?   ; $7EB6CF
-
-    .fill ($7EB6DB - *)
-
-    wPrepUnitListTextCoordinateBase     .word ?   ; $7EB6DB
-    wPrepUnitListSpriteVerticalOffset   .word ?   ; $7EB6DD
-    wPrepUnitListMovingFlag         .word ?   ; $7EB6DF
-                        .word ?   ; $7EB6E1
-    wPrepScrollDirectionIncrement     .word ?   ; $7EB6E3
-    wPrepScrollDirectionStep        .word ?   ; $7EB6E5
-    wPrepListCursorXCoordinate        .word ?   ; $7EB6E7
-    wPrepListCursorYCoordinate        .word ?   ; $7EB6E9
-    wPrepItemsSelectedOption        .word ?   ; $7EB6EB
+  
     wPrepItemsDiscardIndex          .word ?   ; $7EB6ED
-    wPrepItemsDiscardLength         .word ?   ; $7EB6EF
-    wPrepUnitListLastSelectedColumn     .word ?   ; $7EB6F1
-    wPrepUnitListLastSelectedRow      .word ?   ; $7EB6F3
-    wPrepUnitListLastScrollOffset     .word ?   ; $7EB6F5
-    wPrepUnitListLastScrolledMenuLine   .word ?   ; $7EB6F7
-
+  
   .endvirtual

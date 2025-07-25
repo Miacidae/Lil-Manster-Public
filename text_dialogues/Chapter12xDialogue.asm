@@ -1,12 +1,12 @@
 dialogueChapter12xPerneSalem
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word salem_portrait
 .text "That's enough, Perne! No more violence."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word pan_portrait
 .text "Salem?!"
@@ -19,7 +19,7 @@ dialogueChapter12xPerneSalem
 .text "How much is the Empire payin' you for this?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You've got it all wrong, you idiot."
 .byte NewLine
@@ -31,14 +31,14 @@ dialogueChapter12xPerneSalem
 .text "and they're no enemy of ours."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "“Liberation Army”?"
 .byte NewLine
 .text "Never heard of 'em. Who are they?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "They're people who share our value"
 .byte NewLine
@@ -52,7 +52,7 @@ dialogueChapter12xPerneSalem
 .text "you have to lower your sword!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hmm... Clearly, there's a bigger picture here"
 .byte NewLine
@@ -80,7 +80,7 @@ dialogueChapter12xPerneSalem
 
 dialogueChapter12xPerneLifis
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word lithis_portrait
 .text "Ah, hell..."
@@ -88,7 +88,7 @@ dialogueChapter12xPerneLifis
 .text "Not good!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word pan_portrait
 .text "What in the...?"
@@ -98,14 +98,14 @@ dialogueChapter12xPerneLifis
 .text "You old dog! How long's it been?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Y-Yeah, uh, I've been gone a while..."
 .byte NewLine
 .text "Er, Perne...sir..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hah! You haven't changed a bit, kiddo!"
 .byte NewLine
@@ -114,14 +114,14 @@ dialogueChapter12xPerneLifis
 .text "junior?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "H-Hey, gimme some credit, wouldja?"
 .byte NewLine
 .text "Let's not talk too much about ancient history!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Really? 'Cause I remember you bein'"
 .byte NewLine
@@ -140,7 +140,7 @@ dialogueChapter12xPerneLifis
 .text "an' beat you somethin' fierce..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...You were always the ringleader."
 .byte NewLine
@@ -149,19 +149,19 @@ dialogueChapter12xPerneLifis
 .text "that started it, Perne..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hm?"
 .byte NewLine
 .text "You say somethin', kiddo?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "N-No, nothing. Nothing at all..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Oh, that's right, you joined up"
 .byte NewLine
@@ -182,24 +182,24 @@ dialogueChapter12xPerneLifis
 .text "an eye on you. Where's your leader at?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hey, you got a problem with that?!"
 .byte NewLine
 .text "I'm all ears, Li'l Lifis!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...No, there's no problem..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "It'll be just like the old days! You'll see!"
 .byte WaitForA
@@ -208,7 +208,7 @@ dialogueChapter12xPerneLifis
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ugh... It's happening all over again..."
 .byte NewLine
@@ -217,7 +217,7 @@ dialogueChapter12xPerneLifis
 .text "born from Loptous' own bosom..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word pan_portrait
 .text "Hey, you feelin' OK there, little buddy?"
@@ -225,7 +225,7 @@ dialogueChapter12xPerneLifis
 .text "You're lookin' pretty pale."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Huh? Oh, uh, I am?"
 .byte NewLine
@@ -234,7 +234,7 @@ dialogueChapter12xPerneLifis
 .text "Yeah, that's it! A cold. Ahahaha..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Huh...?"
 .byte WaitForA
@@ -244,7 +244,7 @@ dialogueChapter12xPerneLifis
 
 dialogueChapter12xPerneLifis2
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Oh, Perne? While you're in such a generous"
 .byte NewLine
@@ -253,7 +253,7 @@ dialogueChapter12xPerneLifis2
 .text "that mercenary? He's givin' my people trouble."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hm? Oh, you mean Trude?"
 .byte NewLine
@@ -267,13 +267,13 @@ dialogueChapter12xPerneLifis2
 
 dialogueChapter12xPerneLara
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word lara_portrait
 .text "Perne!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word pan_portrait
 .text "Yeah?"
@@ -290,14 +290,14 @@ dialogueChapter12xPerneLara
 .text "but come runnin' back into my arms, right?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Er... Would it make you happy"
 .byte NewLine
 .text "if I actually said that?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "H-Hey, what's got you so serious?"
 .byte NewLine
@@ -318,7 +318,7 @@ dialogueChapter12xPerneLara
 .text "kiddo."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "So that's it then, huh? You're shooing me away"
 .byte NewLine
@@ -335,7 +335,7 @@ dialogueChapter12xPerneLara
 .text "in the world..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "W-Well, yeah, but that was before I realized"
 .byte NewLine
@@ -361,7 +361,7 @@ dialogueChapter12xPerneLara
 .text "So it's for the best that you quit."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Y-Yeah..."
 .byte NewLine
@@ -375,12 +375,12 @@ dialogueChapter12xPerneLara
 .text "I can go back to doin' it for you."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Look, don't be stupid..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Not JUST for you, I mean! For everybody!"
 .byte NewLine
@@ -389,12 +389,12 @@ dialogueChapter12xPerneLara
 .text "a little bit more lively with my dancing..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Huh? Who's “everybody”?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Prince Leif an' the whole North Thracian"
 .byte NewLine
@@ -403,7 +403,7 @@ dialogueChapter12xPerneLara
 .text "y'know! Not that I'm much help, myself..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Oh-ho! So that's what got all this ruckus"
 .byte NewLine
@@ -417,14 +417,14 @@ dialogueChapter12xPerneLara
 .text "with you an' the Liberation Army."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "R-Really, Perne?!"
 .byte NewLine
 .text "All right, it's a deal!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Good! I wasn't keen on holin' up in Dacia"
 .byte NewLine
@@ -441,11 +441,11 @@ dialogueChapter12xPerneLara
 
 dialogueChapter12xPerneTrude
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word trude_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word pan_portrait
 .text "Hey, Trude, sheathe your sword!"
@@ -453,13 +453,13 @@ dialogueChapter12xPerneTrude
 .text "There's no need to fight anymore."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Huh? But...why?"
 .byte NewLine
 .text "What's goin' on?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "These folks are with the Liberation Army,"
 .byte NewLine
@@ -468,7 +468,7 @@ dialogueChapter12xPerneTrude
 .text "more'n welcome to come along, if it suits you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah, I get it... So THESE folks are"
 .byte NewLine
@@ -492,7 +492,7 @@ dialogueChapter12xPerneTrude
 .text "gotta stick together, right?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hey, that's the spirit!"
 .byte NewLine
@@ -506,7 +506,7 @@ dialogueChapter12xPerneTrude
 .text "Trude. You'd better be up for it!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah! “Let the die be cast,” as they say."
 .byte NewLine
@@ -518,7 +518,7 @@ dialogueChapter12xPerneTrude
 
 dialogueChapter12xTinaSafy
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word safie_portrait
 .text "Tina?!"
@@ -526,7 +526,7 @@ dialogueChapter12xTinaSafy
 .text "Wh-What in blazes are you doing here?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word tina_portrait
 .text "Oh, Big Sis!"
@@ -534,7 +534,7 @@ dialogueChapter12xTinaSafy
 .text "*Sniffle, whimper*"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Tina, dear, why the tears?"
 .byte NewLine
@@ -546,7 +546,7 @@ dialogueChapter12xTinaSafy
 .text "Why did you leave Tahra?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I w-wanted to help you!"
 .byte NewLine
@@ -567,7 +567,7 @@ dialogueChapter12xTinaSafy
 .text "as his personal slave!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "A slave?!"
 .byte NewLine
@@ -579,7 +579,7 @@ dialogueChapter12xTinaSafy
 .text "...Tina, what exactly did he make you do?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Steal things for him, mostly..."
 .byte NewLine
@@ -588,7 +588,7 @@ dialogueChapter12xTinaSafy
 .text "He said those were what made me useful..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "W-Well, couldn't you just refuse?"
 .byte NewLine
@@ -600,24 +600,24 @@ dialogueChapter12xTinaSafy
 .text "Wouldn't he?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You don't understand! If I said no,"
 .byte NewLine
 .text "he'd do awful, horrible, terrible things to me!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "H-He would?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Uh-huh..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Tina, please, you must tell me what he did"
 .byte NewLine
@@ -626,7 +626,7 @@ dialogueChapter12xTinaSafy
 .text "myself for whatever wickedness it is!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "*Sniffle, whimper*"
 .byte WaitForA
@@ -643,12 +643,12 @@ dialogueChapter12xTinaSafy
 .text "I thought I'd die right then and there!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Is that all?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Uh-huh..."
 .byte NewLine
@@ -657,19 +657,19 @@ dialogueChapter12xTinaSafy
 .text "I'm gettin' shivers just tellin' you about it now!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "*Sigh*"
 .byte NewLine
 .text "Oh, Tina..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Yeah?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...It's nothing. Listen, I told you to wait"
 .byte NewLine
@@ -678,7 +678,7 @@ dialogueChapter12xTinaSafy
 .text "you'll do as I say from now on, all right?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Yeah, of course!"
 .byte NewLine
@@ -699,7 +699,7 @@ dialogueChapter12xTinaSafy
 .text "What do you think, Big Sis?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Tina... I..."
 .byte NewLine
@@ -708,7 +708,7 @@ dialogueChapter12xTinaSafy
 .text "Let's...talk about this later, all right?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Okie-dokie, Big Sis!"
 .byte WaitForA
@@ -718,11 +718,11 @@ dialogueChapter12xTinaSafy
 
 dialogueChapter12xOpening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word trude_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word pan_portrait
 .text "Something's fishy..."
@@ -730,7 +730,7 @@ dialogueChapter12xOpening1
 .text "What's goin' on outside?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Bad news, Perne."
 .byte NewLine
 .text "Somebody's broken into the manor."
@@ -738,14 +738,14 @@ dialogueChapter12xOpening1
 .text "Soldiers, by the look of it."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Imperial guardsmen, maybe...?"
 .byte NewLine
 .text "Damn... What's happened to Salem?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Didn't see him. He might be dead..."
 .byte WaitForA
@@ -765,7 +765,7 @@ dialogueChapter12xOpening1
 .text "Has... Has somethin' happened?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The Imperial Army's come to bring the"
 .byte NewLine
@@ -775,12 +775,12 @@ dialogueChapter12xOpening1
 .text "Argh, a pox on 'em all! Those entitled louts..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Th-The Empire's here...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You got an awful funny look on your face,"
 .byte NewLine
@@ -794,7 +794,7 @@ dialogueChapter12xOpening1
 .text "such a useful little moppet just slip away!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "B-But why...?"
 .byte NewLine
@@ -803,7 +803,7 @@ dialogueChapter12xOpening1
 .text "L-Look, I wasn't thinkin' anything funny!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Nuh-uh, you ain't gettin' off that easy."
 .byte NewLine
@@ -815,14 +815,14 @@ dialogueChapter12xOpening1
 .text "You got that?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Eeek! No, no, not another punishment!"
 .byte NewLine
 .text "I'm sorry! I'll be good, I promise!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Well, we'll just see about that, won't we?"
 .byte NewLine
@@ -836,7 +836,7 @@ dialogueChapter12xOpening1
 
 dialogueChapter12xOpening2Salem
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word salem_portrait
 .text "Perne is a reasonable man."
@@ -846,13 +846,13 @@ dialogueChapter12xOpening2Salem
 .text "I can make him understand the situation."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "Are you...offering to help us, Salem?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Truth be told, I haven't made up my mind yet."
 .byte NewLine
@@ -866,11 +866,11 @@ dialogueChapter12xOpening2Salem
 
 dialogueChapter12xOpening3Lifis
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word lithis_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "Is something amiss, Lifis?"
@@ -878,7 +878,7 @@ dialogueChapter12xOpening3Lifis
 .text "You look terribly pale."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Ergh... Look, Prince, here's the thing..."
 .byte NewLine
 .text "If it's all the same to you, can I just sit this"
@@ -886,7 +886,7 @@ dialogueChapter12xOpening3Lifis
 .text "one out? Can't somebody else fill in for me?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
@@ -897,7 +897,7 @@ dialogueChapter12xOpening3Lifis
 .text "you lived near here when you were a child."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Heh, well, about that..."
 .byte NewLine
@@ -911,14 +911,14 @@ dialogueChapter12xOpening3Lifis
 .text "Pretty please?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Is that it? Bah, what a petty reason..."
 .byte NewLine
 .text "Report to the front lines at once!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "C'mon, don't make me beg!"
 .byte NewLine
@@ -927,7 +927,7 @@ dialogueChapter12xOpening3Lifis
 .text "Pretty please with sugar on top?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The prince has spoken!"
 .byte NewLine
@@ -939,35 +939,35 @@ dialogueChapter12xOpening3Lifis
 
 dialogueChapter12xOpening4Lara
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word lara_portrait
 .text "Um, excuse me..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Lara?"
 .byte NewLine
 .text "What's wrong?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The bandit leader, Perne, he's..."
 .byte NewLine
 .text "He's not a bad person, you know."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hm? Do you know him, Lara?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Yeah, I... I do."
 .byte NewLine
@@ -988,14 +988,14 @@ dialogueChapter12xOpening4Lara
 .text "Perne rescued me from that, an' set me free."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "And from there, you became a thief..."
 .byte NewLine
 .text "Is that about right?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That's about the whole of it, yeah."
 .byte WaitForA
@@ -1012,11 +1012,11 @@ dialogueChapter12xOpening4Lara
 
 dialogueChapter12xEnding1
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "Dawn is breaking, and this battle has allowed"
@@ -1031,7 +1031,7 @@ dialogueChapter12xEnding1
 
 dialogueChapter12xEnding2
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word pan_portrait
@@ -1052,12 +1052,12 @@ dialogueChapter12xEnding2
 
 dialogueChapter12xEnding3
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word lithis_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .text "Well, Perne proved to be a thoughtful man—"
 .byte NewLine
 .text "and a friend of the Liberation Army as well."
@@ -1067,7 +1067,7 @@ dialogueChapter12xEnding3
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .text "Prince, you've got no idea"
 .byte NewLine
 .text "who that snake really is..."

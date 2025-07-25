@@ -90,11 +90,11 @@ aPhaseGraphicSpritePointerTable ; 81/B732
 	.addr aEnemyPhaseGraphicSprites
 	.addr aNPCPhaseGraphicSprites
 
-aPlayerPhaseGraphicSprites .dstruct structSpriteArray, [[[64, 4], $61, True, $1C0, 3, 7, False, False], [[80, 4], $61, True, $1C2, 3, 7, False, False], [[96, 4], $61, True, $1C4, 3, 7, False, False], [[112, 4], $61, True, $1C6, 3, 7, False, False], [[128, 4], $61, True, $1C8, 3, 7, False, False], [[144, 4], $61, True, $1CA, 3, 7, False, False], [[160, 4], $61, True, $1CC, 3, 7, False, False], [[176, 4], $61, True, $1CE, 3, 7, False, False]]
+aPlayerPhaseGraphicSprites .dstruct structSpriteArray, [[[64, 4], $61, true, $1C0, 3, 7, false, false], [[80, 4], $61, true, $1C2, 3, 7, false, false], [[96, 4], $61, true, $1C4, 3, 7, false, false], [[112, 4], $61, true, $1C6, 3, 7, false, false], [[128, 4], $61, true, $1C8, 3, 7, false, false], [[144, 4], $61, true, $1CA, 3, 7, false, false], [[160, 4], $61, true, $1CC, 3, 7, false, false], [[176, 4], $61, true, $1CE, 3, 7, false, false]]
 
-aEnemyPhaseGraphicSprites .dstruct structSpriteArray, [[[65, 4], $61, True, $1E0, 3, 7, False, False], [[81, 4], $61, True, $1E2, 3, 7, False, False], [[97, 4], $61, True, $1E4, 3, 7, False, False], [[113, 4], $61, True, $1E6, 3, 7, False, False], [[133, 4], $61, True, $1C9, 3, 7, False, False], [[141, 4], $61, True, $1CA, 3, 7, False, False], [[157, 4], $61, True, $1CC, 3, 7, False, False], [[173, 4], $61, True, $1CE, 3, 7, False, False]]
+aEnemyPhaseGraphicSprites .dstruct structSpriteArray, [[[65, 4], $61, true, $1E0, 3, 7, false, false], [[81, 4], $61, true, $1E2, 3, 7, false, false], [[97, 4], $61, true, $1E4, 3, 7, false, false], [[113, 4], $61, true, $1E6, 3, 7, false, false], [[133, 4], $61, true, $1C9, 3, 7, false, false], [[141, 4], $61, true, $1CA, 3, 7, false, false], [[157, 4], $61, true, $1CC, 3, 7, false, false], [[173, 4], $61, true, $1CE, 3, 7, false, false]]
 
-aNPCPhaseGraphicSprites .dstruct structSpriteArray, [[[76, 4], $61, True, $1E9, 3, 7, False, False], [[92, 4], $61, True, $1EB, 3, 7, False, False], [[108, 4], $61, True, $1ED, 3, 7, False, False], [[119, 4], $61, True, $1C9, 3, 7, False, False], [[127, 4], $61, True, $1CA, 3, 7, False, False], [[143, 4], $61, True, $1CC, 3, 7, False, False], [[159, 4], $61, True, $1CE, 3, 7, False, False]]
+aNPCPhaseGraphicSprites .dstruct structSpriteArray, [[[76, 4], $61, true, $1E9, 3, 7, false, false], [[92, 4], $61, true, $1EB, 3, 7, false, false], [[108, 4], $61, true, $1ED, 3, 7, false, false], [[119, 4], $61, true, $1C9, 3, 7, false, false], [[127, 4], $61, true, $1CA, 3, 7, false, false], [[143, 4], $61, true, $1CC, 3, 7, false, false], [[159, 4], $61, true, $1CE, 3, 7, false, false]]
 
 aPhaseGraphicDisplacementTable ; 81/B7B1
 	.sint -64
@@ -140,13 +140,13 @@ rlProcPhaseGraphicColorInit ; 81/B7F9
 	.databank ?
 
 	sep #$20
-	lda #CGADSUB_Setting(CGADSUB_Add, False, True, False, False, False, False, True)
+	lda #CGADSUB_Setting(CGADSUB_Add, false, true, false, false, false, false, true)
 	sta bBufferCGADSUB
-	lda #CGWSEL_Setting(False, True, CGWSEL_MathAlways, CGWSEL_BlackNever)
+	lda #CGWSEL_Setting(false, true, CGWSEL_MathAlways, CGWSEL_BlackNever)
 	sta bBufferCGWSEL
-	lda #T_Setting(True, True, False, False, True)
+	lda #T_Setting(true, true, false, false, true)
 	sta bBufferTM
-	lda #T_Setting(False, True, False, False, True)
+	lda #T_Setting(false, true, false, false, true)
 	sta bBufferTS
 
 	rep #$30
@@ -307,7 +307,7 @@ rlProcPhaseGraphicColorOnCycle2 ; 81/B8CE
 	jsl $85910B
 	jsl $8593AD
 	sep #$20
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 	rep #$20
 	rtl

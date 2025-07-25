@@ -1,4 +1,4 @@
-StructItemDataEntry 0,Type,AlternateType,Might,Accuracy,Weight,Durability,Critrate,MinRange,MaxRange,WeaponRank,Effectiveness,StatBonus,Cost,Description,UseEffect,WeaponEffect,Skills2,Skills3,Traits,Icon
+structItemDataEntry 0,Type,AlternateType,Might,Accuracy,Weight,Durability,Critrate,MinRange,MaxRange,WeaponRank,Effectiveness,StatBonus,Cost,Description,UseEffect,WeaponEffect,Skills2,Skills3,Traits,Icon
 NoneItem,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None
 IronSword,TypeSword,None,6,70,6,40,0,1,1,RankE,ItemEffectivenesses.aNoEffectiveness,aNoItemBonuses,2200,<>menutextIronSwordDescription,None,None,None,None,TraitWeapon,$0
 SteelSword,TypeSword,None,9,65,11,30,0,1,1,RankD,ItemEffectivenesses.aNoEffectiveness,aNoItemBonuses,2900,<>menutextSteelSwordDescription,None,None,None,None,TraitWeapon,$1

@@ -9,7 +9,7 @@
 * = $237BFD
 .logical $C6FBFD
 
-	aBADynSprite_Cleric                         .crossbank.start *, "units/DynSprite_Cleric.4bpp.fe4"
+	aBADynSprite_Cleric .crossbank.start "units/DynSprite_Cleric.4bpp.fe4"
 
 .here
 
@@ -33,7 +33,7 @@
 	aBADynSprite_DismountedMageKnightF_MagicStaff                             .binary "units/DynSprite_DismountedMageKnightF_MagicStaff.4bpp.fe4"
 	aBADynSprite_Lord_Prince_DismountedLordKnight                             .binary "units/DynSprite_Lord_Prince_DismountedLordKnight.4bpp.fe4"
 	aBAStaSprite_Lord_Prince_Dismounted_KntLord_PalF_MstKntF_Falcon_Slash     .binary "units/StaSprite_Lord_Prince_Dismounted_KntLord_PalF_MstKntF_Falcon_Slash.4bpp.fe4"
-	aBADynSprite_DismountedPaladinF_DismountedMasterKnightF_Sword             .crossbank.start *, "units/DynSprite_DismountedPaladinF_DismountedMasterKnightF_Sword.4bpp.fe4"
+	aBADynSprite_DismountedPaladinF_DismountedMasterKnightF_Sword             .crossbank.start "units/DynSprite_DismountedPaladinF_DismountedMasterKnightF_Sword.4bpp.fe4"
 
 .here
 
@@ -63,7 +63,7 @@
 	aBAStaSprite_LoptrianMage_Magic_Shadow            .binary "units/StaSprite_LoptrianMage_Magic_Shadow.4bpp.fe4"
 	aBADynSprite_ThunderMageM                         .binary "units/DynSprite_ThunderMageM.4bpp.fe4"
 	aBAStaSprite_ThunderMage_Shadow                   .binary "units/StaSprite_ThunderMage_Shadow.4bpp.fe4"
-	aBADynSprite_ThunderMageF                         .crossbank.start *, "units/DynSprite_ThunderMageF.4bpp.fe4"
+	aBADynSprite_ThunderMageF                         .crossbank.start "units/DynSprite_ThunderMageF.4bpp.fe4"
 
 .here
 
@@ -88,7 +88,7 @@
 	aBAStaSprite_UnusedC9E091_Shadow                  .binary "units/StaSprite_UnusedC9E091_Shadow.4bpp.fe4"
 	aBADynSprite_Sorcerer                             .binary "units/DynSprite_Sorcerer.4bpp.fe4"
 	aBAStaSprite_Sorcerer_Shadow                      .binary "units/StaSprite_Sorcerer_Shadow.4bpp.fe4"
-	aBADynSprite_DarkBishop                           .crossbank.start *, "units/DynSprite_DarkBishop.4bpp.fe4"
+	aBADynSprite_DarkBishop                           .crossbank.start "units/DynSprite_DarkBishop.4bpp.fe4"
 
 .here
 
@@ -109,7 +109,7 @@
 	aBAStaSprite_PegKnt_FalconKnt_DracoKntF_Body      .binary "units/StaSprite_PegKnt_FalconKnt_DracoKntF_Body.4bpp.fe4"
 	aBADynSprite_Dracorider                           .binary "units/DynSprite_Dracorider.4bpp.fe4"
 	aBAStaSprite_DracoRiderM_DragonMaster_Body        .binary "units/StaSprite_DracoRiderM_DragonMaster_Body.4bpp.fe4"
-	aBADynSprite_Dracoknight_Dragonmaster             .crossbank.start *, "units/DynSprite_Dracoknight_Dragonmaster.4bpp.fe4"
+	aBADynSprite_Dracoknight_Dragonmaster             .crossbank.start "units/DynSprite_Dracoknight_Dragonmaster.4bpp.fe4"
 
 .here
 
@@ -132,7 +132,7 @@
 	aBAStaSprite_Warrior_Quiver                       .binary "units/StaSprite_Warrior_Quiver.4bpp.fe4"
 	aBADynSprite_Hunter                               .binary "units/DynSprite_Hunter.4bpp.fe4"
 	aBAStaSprite_Hunter_Quiver                        .binary "units/StaSprite_Hunter_Quiver.4bpp.fe4"
-	aBADynSprite_PirateAxes                           .crossbank.start *, "units/DynSprite_PirateAxes.4bpp.fe4"
+	aBADynSprite_PirateAxes                           .crossbank.start "units/DynSprite_PirateAxes.4bpp.fe4"
 
 .here
 
@@ -154,7 +154,7 @@
 	aBADynSprite_SwordmasterM                               .binary "units/DynSprite_SwordmasterM.4bpp.fe4"
 	aBAStaSprite_Promoted_Infantry_Melee_Slash              .binary "units/StaSprite_Promoted_Infantry_Melee_Slash.4bpp.fe4"
 	aBADynSprite_SwordmasterF                               .binary "units/DynSprite_SwordmasterF.4bpp.fe4"
-	aBADynSprite_GeneralSwordAxes                           .crossbank.start *, "units/DynSprite_GeneralSwordAxes.4bpp.fe4"
+	aBADynSprite_GeneralSwordAxes                           .crossbank.start "units/DynSprite_GeneralSwordAxes.4bpp.fe4"
 
 .here
 
@@ -175,7 +175,7 @@
 	aBAStaSprite_Baron_Slashes                        .binary "units/StaSprite_Baron_Slashes.4bpp.fe4"
 	aBADynSprite_ArmorSwordAxes                       .binary "units/DynSprite_ArmorSwordAxes.4bpp.fe4"
 	aBAStaSprite_MeleeArmor_Slashes                   .binary "units/StaSprite_MeleeArmor_Slashes.4bpp.fe4"
-	aBADynSprite_ArmorLances                          .crossbank.start *, "units/DynSprite_ArmorLances.4bpp.fe4"
+	aBADynSprite_ArmorLances                          .crossbank.start "units/DynSprite_ArmorLances.4bpp.fe4"
 
 .here
 
@@ -203,7 +203,7 @@
 	aBADynSprite_ThiefF                               .binary "units/DynSprite_ThiefF.4bpp.fe4"
 	aBADynSprite_RogueM                               .binary "units/DynSprite_RogueM.4bpp.fe4"
 	aBAStaSprite_Rogue_Slash                          .binary "units/StaSprite_Rogue_Slash.4bpp.fe4"
-	aBADynSprite_RogueF                               .crossbank.start *, "units/DynSprite_RogueF.4bpp.fe4"
+	aBADynSprite_RogueF                               .crossbank.start "units/DynSprite_RogueF.4bpp.fe4"
 
 .here
 
@@ -228,7 +228,7 @@
 	aBAStaSprite_Player_Mounted_Body                  .binary "units/StaSprite_Player_Mounted_Body.4bpp.fe4"
 	aBAStaSprite_ArchKnightM_Body                     .binary "units/StaSprite_ArchKnightM_Body.4bpp.fe4"
 	aBAStaSprite_BowKnightM_Body                      .binary "units/StaSprite_BowKnightM_Body.4bpp.fe4"
-	aBADynSprite_ArchKnight                           .crossbank.start *, "units/DynSprite_ArchKnight.4bpp.fe4"
+	aBADynSprite_ArchKnight                           .crossbank.start "units/DynSprite_ArchKnight.4bpp.fe4"
 
 .here
 
@@ -266,7 +266,7 @@
 	aBADynSprite_HeroM_ThrownAxe                                        .binary "units/DynSprite_HeroM_ThrownAxe.4bpp.fe4"
 	aBADynSprite_HeroF_Axe                                              .binary "units/DynSprite_HeroF_Axe.4bpp.fe4"
 	aBADynSprite_HeroF_ThrownAxe                                        .binary "units/DynSprite_HeroF_ThrownAxe.4bpp.fe4"
-	aBADynSprite_DismountedRanger_DismountedDracoknightM_HeroFE4M       .crossbank.start *, "units/DynSprite_DismountedRanger_DismountedDracoknightM_HeroFE4M.4bpp.fe4"
+	aBADynSprite_DismountedRanger_DismountedDracoknightM_HeroFE4M       .crossbank.start "units/DynSprite_DismountedRanger_DismountedDracoknightM_HeroFE4M.4bpp.fe4"
 
 .here
 
@@ -285,7 +285,7 @@
 	aBADynSprite_DismountedArchKnightM                .binary "units/DynSprite_DismountedArchKnightM.4bpp.fe4"
 	aBADynSprite_JuniorLord_Dismounted_PromotedMeleeCavs_MasterKnightM_Dracorider_Dragonmaster		.binary "units/DynSprite_JuniorLord_Dismounted_PromotedMeleeCavs_MasterKnightM_Dracorider_Dragonmaster.4bpp.fe4"
 	aBADynSprite_Dismounted_MeleeCavs                 .binary "units/DynSprite_Dismounted_MeleeCavs.4bpp.fe4"
-	aBADynSprite_DismountedTroubadour_Sword           .crossbank.start *, "units/DynSprite_DismountedTroubadour_Sword.4bpp.fe4"
+	aBADynSprite_DismountedTroubadour_Sword           .crossbank.start "units/DynSprite_DismountedTroubadour_Sword.4bpp.fe4"
 
 .here
 

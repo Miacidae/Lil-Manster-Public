@@ -1,17 +1,17 @@
 dialogueDemo1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dagdar_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word tanya_portrait
 .text "Papa, the fighting's started already!"
 .word PauseDialogue
 .byte $5A
 
-.byte Right_slot
+.byte Right_Slot
 .text "Ain't no good way to go about this"
 .byte NewLine
 .text "damned battle..."
@@ -30,7 +30,7 @@ dialogueDemo1
 .word ClearPortrait
 .word RetractBox
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word ClearPortrait
 .word RetractBox
@@ -38,7 +38,7 @@ dialogueDemo1
 .word PauseDialogue
 .byte $3C
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word marty_portrait
 .text "Oh, fer cryin' out loud!"
@@ -52,11 +52,11 @@ dialogueDemo1
 
 dialogueDemo2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word eyvel_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "Commander, over here!"
@@ -65,7 +65,7 @@ dialogueDemo2
 .word PauseDialogue
 .byte $5A
 
-.byte Right_slot
+.byte Right_Slot
 .text "Hmm... That's Lifis' crew, by the look of it."
 .byte NewLine
 .word PlayMusic
@@ -76,7 +76,7 @@ dialogueDemo2
 .word PauseDialogue
 .byte $5A
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "And we have to move faster!"
 .byte NewLine
@@ -89,25 +89,25 @@ dialogueDemo2
 
 dialogueDemoRaydrik
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word weissman_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word raydrik_portrait
 .text "You're certain this is the village, Weismann?"
 .word PauseDialogue
 .byte $5A
 
-.byte Right_slot
+.byte Right_Slot
 .text "Quite certain, milord."
 .byte NewLine
 .text "There can be no mistake."
 .word PauseDialogue
 .byte $5A
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then what are you waiting for?"
 .byte NewLine

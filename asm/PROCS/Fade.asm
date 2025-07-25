@@ -159,7 +159,7 @@ rlProcUnknown82A1BBInit ; 82/A1C3
 	bit #INIDISP_ForcedBlank
 	bne +
 
-	bit #INIDISP_Setting(False, 15)
+	bit #INIDISP_Setting(false, 15)
 	beq +
 
 	lda #(`procFadeOut1)<<8
@@ -182,7 +182,7 @@ rlProcUnknown82A1BBOnCycle ; 82/A1E4
 	bit #INIDISP_ForcedBlank
 	bne +
 
-	bit #INIDISP_Setting(False, 15)
+	bit #INIDISP_Setting(false, 15)
 	bne ++
 
 	+
@@ -320,7 +320,7 @@ rlProcUnknown82A272Init ; 82/A27A
 	bit #INIDISP_ForcedBlank
 	bne +
 
-	bit #INIDISP_Setting(False, 15)
+	bit #INIDISP_Setting(false, 15)
 	beq +
 
 	lda #(`procFadeOut2)<<8
@@ -343,7 +343,7 @@ rlProcUnknown82A272OnCycle ; 82/A29B
 	bit #INIDISP_ForcedBlank
 	bne +
 
-	bit #INIDISP_Setting(False, 15)
+	bit #INIDISP_Setting(false, 15)
 	bne ++
 
 	+

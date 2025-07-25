@@ -1,27 +1,27 @@
 dialogueChapter24xKaiaEyvelLeif
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word eyvel_portrait
 .text "......"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Eyvel!"
 .byte NewLine
 .text "Come on, Eyvel!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Eyvel!"
 .byte NewLine
@@ -30,7 +30,7 @@ dialogueChapter24xKaiaEyvelLeif
 .text "Can you hear me?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Leif..."
 .byte NewLine
@@ -44,14 +44,14 @@ dialogueChapter24xKaiaEyvelLeif
 .text "You gotta break out of here, and fast!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Eyvel... Things are very different now"
 .byte NewLine
 .text "than when you were last awake..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Different? What's gotten into your head?"
 .byte NewLine
@@ -63,21 +63,21 @@ dialogueChapter24xKaiaEyvelLeif
 .text "Wait, what is this place...?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Eyvel... Thank goodness..."
 .byte NewLine
 .text "You're just like how you were before."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Little Leif..."
 .byte NewLine
 .text "Just what the hell happened to me?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm sorry, but there's not enough time"
 .byte NewLine
@@ -96,7 +96,7 @@ dialogueChapter24xKaiaEyvelLeif
 .text "Eyvel!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Heh... Already too old to keep calling me"
 .byte NewLine
@@ -112,7 +112,7 @@ dialogueChapter24xKaiaEyvelLeif
 .text "after this battle, right?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Of course!"
 .byte NewLine
@@ -124,59 +124,59 @@ dialogueChapter24xKaiaEyvelLeif
 
 dialogueChapter24xKaiaEyvelMareeta
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word mareeta_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word eyvel_portrait
 .text "......"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Mother!"
 .byte NewLine
 .text "Hang on, Mother!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Mother!"
 .byte NewLine
 .text "Can't you hear me?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm so sorry, Mother..."
 .byte NewLine
 .text "I... I..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...What are you crying for, Mareeta?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Huh?"
 .byte NewLine
 .text "M-Mother?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Good, you're back to your senses..."
 .byte NewLine
@@ -188,14 +188,14 @@ dialogueChapter24xKaiaEyvelMareeta
 .text "Wait, what is this place...?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Mother!"
 .byte NewLine
 .text "You're all right...!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "'Course I am! What, you thought Raydrik's"
 .byte NewLine
@@ -209,7 +209,7 @@ dialogueChapter24xKaiaEyvelMareeta
 .text "run off to? And how'd we end up here...?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Raydrik, he's... He's already dead."
 .byte NewLine
@@ -223,7 +223,7 @@ dialogueChapter24xKaiaEyvelMareeta
 .text "Raydrik had...turned you to stone..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Loptrian bishop...?"
 .byte NewLine
@@ -237,7 +237,7 @@ dialogueChapter24xKaiaEyvelMareeta
 .text "Where is he?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "He's the one we're hunting now."
 .byte NewLine
@@ -253,7 +253,7 @@ dialogueChapter24xKaiaEyvelMareeta
 .text "alongside you again!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You don't even have to ask, Mareeta."
 .byte NewLine
@@ -267,7 +267,7 @@ dialogueChapter24xKaiaEyvelMareeta
 .text "I can tell I must've put you kids through a lot..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Mother..."
 .byte WaitForA
@@ -277,23 +277,23 @@ dialogueChapter24xKaiaEyvelMareeta
 
 dialogueChapter24xOpening
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "Is this the place...?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Indeed. We're already inside the Loptrians'"
 .byte NewLine
 .text "secret temple. Stay alert, Prince Leif!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "It certainly looks how you'd expect a hidden"
 .byte NewLine
@@ -305,7 +305,7 @@ dialogueChapter24xOpening
 .text "Where could Eyvel be?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That I don't know, I'm afraid."
 .byte NewLine
@@ -376,11 +376,11 @@ dialogueChapter24xOpening
 
 dialogueChapter24xEyvelLeif
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word eyvel_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "Eyvel..."
@@ -400,7 +400,7 @@ dialogueChapter24xEyvelLeif
 .text "I'm so glad you're all right..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Has it already been a whole year"
 .byte NewLine
 .text "since that day in the arena?"
@@ -413,7 +413,7 @@ dialogueChapter24xEyvelLeif
 .text "You're a man now—and a real prince, at that."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Eyvel... I realized I never thanked you."
 .byte NewLine
@@ -473,7 +473,7 @@ dialogueChapter24xEyvelLeif
 .text "of family that I'd forgotten so long ago..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Oh, Little Leif..."
 .byte NewLine
@@ -565,10 +565,10 @@ dialogueChapter24xEyvelLeif
 
 dialogueChapter24xEyvelNanna
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word nanna_portrait
@@ -596,7 +596,7 @@ dialogueChapter24xEyvelNanna
 .text "my gratitude for that..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Oh, Little Lady..."
 .byte NewLine
 .text "C'mon, you're the Princess of Nordion!"
@@ -624,10 +624,10 @@ dialogueChapter24xEyvelNanna
 
 dialogueChapter24xEyvelDagdar
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word dagdar_portrait
@@ -638,7 +638,7 @@ dialogueChapter24xEyvelDagdar
 .text "but nobody could ever replace you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "You don't give yourself enough credit, Dagdar."
 .byte WaitForA
 .byte NewLine
@@ -649,7 +649,7 @@ dialogueChapter24xEyvelDagdar
 .text "We made quite the team..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "D-Don't be stupid...!"
 .byte NewLine
@@ -661,10 +661,10 @@ dialogueChapter24xEyvelDagdar
 
 dialogueChapter24xEyvelTanya
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word tanya_portrait
@@ -678,10 +678,10 @@ dialogueChapter24xEyvelTanya
 
 dialogueChapter24xEyvelHalvan
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word halvan_portrait
@@ -702,7 +702,7 @@ dialogueChapter24xEyvelHalvan
 .text "just to get you back."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Halvan..."
 .byte NewLine
 .text "I'm sorry for everything I've put you through."
@@ -720,10 +720,10 @@ dialogueChapter24xEyvelHalvan
 
 dialogueChapter24xEyvelOsian
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word osian_portrait
@@ -741,7 +741,7 @@ dialogueChapter24xEyvelOsian
 .text "I think I finally get that now..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "I'm happy to hear you say that, you big lug."
 .byte NewLine
 .text "You've got it better than"
@@ -759,25 +759,25 @@ dialogueChapter24xEyvelOsian
 
 dialogueChapter24xEyvelMareeta
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word mareeta_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "Mareeta? What's wrong?"
 .byte NewLine
 .text "What are you doing over here by yourself?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "M-Mother..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "C'mon, you're a beautiful woman now,"
 .byte NewLine
@@ -786,14 +786,14 @@ dialogueChapter24xEyvelMareeta
 .text "with all those tears. Here, wipe them off."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Mother...!"
 .byte NewLine
 .text "I... I..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "There, there, sweet pea."
 .byte NewLine
@@ -807,19 +807,19 @@ dialogueChapter24xEyvelMareeta
 
 dialogueChapter24xEyvelGalzus
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word galzus_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "...Who are you?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "I had half a mind to just leave,"
 .byte NewLine
 .text "but I had to spare you a few words."
@@ -834,14 +834,14 @@ dialogueChapter24xEyvelGalzus
 .text "what you've made of her... Thank you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Huh...?!"
 .byte NewLine
 .text "Y-You're Mareeta's—"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That'd be me, yeah."
 .byte WaitForA
@@ -860,7 +860,7 @@ dialogueChapter24xEyvelGalzus
 .text "a slaver up an' took her from me."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...She was just a little girl when I found her."
 .byte NewLine
@@ -891,7 +891,7 @@ dialogueChapter24xEyvelGalzus
 .text "But I couldn't."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No... You're not to blame for any of this."
 .byte NewLine
@@ -912,7 +912,7 @@ dialogueChapter24xEyvelGalzus
 .text "who watched over her after all this."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I agree. Mareeta is my daughter now—"
 .byte NewLine
@@ -921,7 +921,7 @@ dialogueChapter24xEyvelGalzus
 .text "away from me even if you wanted to."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Good... After this is all over,"
 .byte NewLine
@@ -930,28 +930,28 @@ dialogueChapter24xEyvelGalzus
 .text "You'll never have to see me again."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Then before you leave,"
 .byte NewLine
 .text "I have one last favor to ask, Galzus."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Name it."
 .byte NewLine
 .text "If it's within my power, it will be done."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Once every year, would you visit us in Fiana?"
 .byte NewLine
 .text "That's all I ask."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -964,10 +964,10 @@ dialogueChapter24xEyvelGalzus
 
 dialogueChapter24xEyvelFinn
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word finn_portrait
@@ -978,7 +978,7 @@ dialogueChapter24xEyvelFinn
 .text "but I wanted you to know how grateful I am."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "And I'm grateful to you, Finn, for everything"
 .byte NewLine
 .text "you've done for Fiana over the years."
@@ -986,7 +986,7 @@ dialogueChapter24xEyvelFinn
 .text "I couldn't find a finer knight in all of Jugdral."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I never planned on telling you this,"
 .byte NewLine
@@ -1000,14 +1000,14 @@ dialogueChapter24xEyvelFinn
 .text "who looked just like you..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Just like me...?"
 .byte NewLine
 .text "Are you sure you're not just confused, Finn?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No, I'm certain."
 .byte WaitForA
@@ -1036,21 +1036,21 @@ dialogueChapter24xEyvelFinn
 .text "Her name was Brigid."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Brigid...?"
 .byte NewLine
 .text "Finn, are you saying that woman... was me?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Yes..."
 .byte NewLine
 .text "Well, probably."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Heh..."
 .byte NewLine

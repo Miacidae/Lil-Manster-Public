@@ -1,10 +1,10 @@
 dialogueChapter16BMiranda
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dorius_portrait
 .text "Is this...a monastery of the Loptr Church?"
@@ -21,11 +21,11 @@ dialogueChapter16BMiranda
 .text "inside the monastery. She wishes to see you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Very well. Bring her to me."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word miranda_portrait
@@ -34,12 +34,12 @@ dialogueChapter16BMiranda
 .text "It's been a long, long time..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...And you are?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You ask ME that?! Oh, so that's how it is..."
 .byte NewLine
@@ -48,7 +48,7 @@ dialogueChapter16BMiranda
 .text "I'm Miranda of Ulster!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Miranda... The princess? Princess of Ulster?"
 .byte NewLine
@@ -57,7 +57,7 @@ dialogueChapter16BMiranda
 .text "Why are you here?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Did you not recognize me?"
 .byte WaitForA
@@ -76,14 +76,14 @@ dialogueChapter16BMiranda
 .text "is your fault, Prince!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "My fault?"
 .byte NewLine
 .text "Why?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "All of this began when Leonster fell."
 .byte WaitForA
@@ -119,7 +119,7 @@ dialogueChapter16BMiranda
 .text "things wouldn't be like this..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -167,7 +167,7 @@ dialogueChapter16BMiranda
 .text "is pure selfishness!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word leif_portrait2
@@ -176,7 +176,7 @@ dialogueChapter16BMiranda
 .text "Nothing good will come of talk like that!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hrm..."
 .byte NewLine
@@ -188,7 +188,7 @@ dialogueChapter16BMiranda
 .word LoadPortrait
 .word miranda_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You have my apologies as well,"
 .byte NewLine
@@ -209,7 +209,7 @@ dialogueChapter16BMiranda
 .text "being imprisoned here for so long..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "...Well, admittedly, I haven't been imprisoned"
 .byte NewLine
 .text "in this dreary monastery the whole time."
@@ -241,14 +241,14 @@ dialogueChapter16BMiranda
 .text "I was moved to this dreadful place."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah... Well, even one year is far too long"
 .byte NewLine
 .text "to spend in a place like this."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Prince Leif, if you weren't lying"
 .byte NewLine
@@ -269,11 +269,11 @@ dialogueChapter16BMiranda
 
 dialogueChapter16BHomerShannam
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word shannam_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word homer_portrait
 .text "Well, well, look who it is."
@@ -281,11 +281,11 @@ dialogueChapter16BHomerShannam
 .text "It's been a while, Shannam."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Grk...!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "So this time you're a stooge for the Loptrians,"
 .byte NewLine
@@ -294,14 +294,14 @@ dialogueChapter16BHomerShannam
 .text "when it comes to employers."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "H-Hey... I don't like doing this, you know!"
 .byte NewLine
 .text "Look, I'm out of coin... I don't have a choice!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Uh-huh. Well, suit yourself."
 .byte NewLine
@@ -310,7 +310,7 @@ dialogueChapter16BHomerShannam
 .text "what you do."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hey, wait, where're you going?"
 .byte WaitForA
@@ -322,7 +322,7 @@ dialogueChapter16BHomerShannam
 .text "I mean, we're friends, right?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Like I said, it makes no difference to me"
 .byte NewLine
@@ -331,7 +331,7 @@ dialogueChapter16BHomerShannam
 .text "it's no skin off my back."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Really? Wow!"
 .byte NewLine
@@ -340,7 +340,7 @@ dialogueChapter16BHomerShannam
 .text "Thanks a bunch."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You're not like the real prince at all."
 .byte NewLine
@@ -352,11 +352,11 @@ dialogueChapter16BHomerShannam
 
 dialogueChapter16BSaraSalem
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word sarah_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word salem_portrait
 .text "Lady Sara?!"
@@ -364,13 +364,13 @@ dialogueChapter16BSaraSalem
 .text "What are you doing in a place like this?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Who are you?"
 .byte NewLine
 .text "I don't know you."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah, of course..."
 .byte WaitForA
@@ -382,7 +382,7 @@ dialogueChapter16BSaraSalem
 .text "would have no reason to know me."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hmm..."
 .byte NewLine
@@ -396,19 +396,19 @@ dialogueChapter16BSaraSalem
 .text "I must find it..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The voice of my master...?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It's such a beautiful voice..."
 .byte NewLine
 .text "And it's calling out to me for help..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Uh..."
 .byte NewLine
@@ -422,7 +422,7 @@ dialogueChapter16BSaraSalem
 .text "the Staff of Kia... That's it!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Mm..."
 .byte NewLine
@@ -434,11 +434,11 @@ dialogueChapter16BSaraSalem
 
 dialogueChapter16BSaraLeif
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word sarah_portrait
 .text "Aah..."
@@ -448,7 +448,7 @@ dialogueChapter16BSaraLeif
 .text "I'll help you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Oh, this is...quite the nuisance."
 .byte NewLine
 .text "August, Dorius, where have you two gone?"
@@ -456,7 +456,7 @@ dialogueChapter16BSaraLeif
 .text "I could use your advice right about now..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm Sara."
 .byte NewLine
@@ -473,12 +473,12 @@ dialogueChapter16BSaraLeif
 .text "named Ethlyn, but she's dead, isn't that right?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Gah...!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Don't look so afraid."
 .byte NewLine
@@ -495,12 +495,12 @@ dialogueChapter16BSaraLeif
 .text "It happened before I was born."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "It was you that was calling out to me,"
 .byte NewLine
@@ -512,7 +512,7 @@ dialogueChapter16BSaraLeif
 .text "you can make do without me!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Wait! Please!"
 .byte WaitForA
@@ -529,14 +529,14 @@ dialogueChapter16BSaraLeif
 .text "Will you come with us?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Uh-huh, I'm fine with that."
 .byte NewLine
 .text "You know, I really like your voice."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Um... Thank you, Sara."
 .byte WaitForA
@@ -546,7 +546,7 @@ dialogueChapter16BSaraLeif
 
 dialogueChapter16BVillager
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman_portrait
 .text "What are you, lost?"
@@ -603,7 +603,7 @@ dialogueChapter16BVillager
 
 dialogueChapter16BSaraArrive
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word sarah_portrait
 .text "Huh...?"
@@ -611,7 +611,7 @@ dialogueChapter16BSaraArrive
 .text "Wh-Who is..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word reinkoch_portrait
 .text "Lady Sara?"
@@ -619,14 +619,14 @@ dialogueChapter16BSaraArrive
 .text "Is there something wrong?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No... It's nothing."
 .byte NewLine
 .text "Reinkoch, can I take a walk for a little while?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah..."
 .byte NewLine
@@ -640,11 +640,11 @@ dialogueChapter16BSaraArrive
 
 dialogueChapter16BOpening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dorius_portrait
 .text "This is the great forest of Millefeuille,"
@@ -654,13 +654,13 @@ dialogueChapter16BOpening1
 .text "“Mirage Forest.”"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "A forest of mirages..."
 .byte NewLine
 .text "So, how do we proceed from here?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "If we can make it to the forest's"
 .byte NewLine
@@ -676,7 +676,7 @@ dialogueChapter16BOpening1
 .text "we don't lose anyone along the way."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Understood. Tell everyone to exercise"
 .byte NewLine
@@ -695,17 +695,17 @@ dialogueChapter16BOpening1
 
 dialogueChapter16BOpening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word reinkoch_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word guard_portrait
 .text "Is something amiss, Bishop Reinkoch?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Eheheheh... Gaze into the crystal ball"
 .byte NewLine
 .text "and have a look for yourself."
@@ -713,7 +713,7 @@ dialogueChapter16BOpening2
 .text "Seems some fresh prey has wandered here."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Armed men...?"
 .byte NewLine
@@ -722,7 +722,7 @@ dialogueChapter16BOpening2
 .text "trying to rescue his precious Princess Miranda."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Bah, not even Conomor is that foolish."
 .byte NewLine
@@ -731,7 +731,7 @@ dialogueChapter16BOpening2
 .text "of Leonster, trying to recapture their castle."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah, they must have chosen to go through"
 .byte NewLine
@@ -740,7 +740,7 @@ dialogueChapter16BOpening2
 .text "western front... What a colossal blunder."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It's quite the boon for us, really."
 .byte NewLine
@@ -749,40 +749,40 @@ dialogueChapter16BOpening2
 .text "Gather every free hand and take up positions."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "At once, Bishop."
 .byte NewLine
 .text "But what will you be doing, sir?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah! I'll be taking the opportunity to..."
 .byte NewLine
 .text "test this."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah, that's the Berserk staff!"
 .byte NewLine
 .text "This should be most interesting..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Eheheheh..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word sarah_portrait
 .text "Having fun, Reinkoch?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Lady Sara?!"
 .byte NewLine
@@ -791,14 +791,14 @@ dialogueChapter16BOpening2
 .text "Please, return to your chambers."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...But that's boring."
 .byte NewLine
 .text "What's Grandfather doing?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Archbishop Manfroy is in Connaught"
 .byte NewLine
@@ -807,7 +807,7 @@ dialogueChapter16BOpening2
 .text "I believe he should be returning soon..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ooh, if I'd known this was going to be"
 .byte NewLine
@@ -819,11 +819,11 @@ dialogueChapter16BOpening2
 
 dialogueChapter16BClosing
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "Somehow, we managed to escape..."
@@ -836,7 +836,7 @@ dialogueChapter16BClosing
 .text "born of my negligence. The failure is mine..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Don't let it weigh too heavily on you."
 .byte NewLine
 .text "You're not all-knowing, after all."

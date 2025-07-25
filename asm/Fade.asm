@@ -36,7 +36,7 @@ rlFadeInByTimer ; 80/AB89
 	+
 	lda bBufferINIDISP
 	and #15
-	cmp #INIDISP_Setting(False, 15)
+	cmp #INIDISP_Setting(false, 15)
 	beq _MaxBrightness ; If max brightness
 
 	; dec timer
@@ -139,7 +139,7 @@ rlFadeOutByTimer ; 80/ABC7
 	_MinBrightness
 	lda #-1
 	sta wScreenFadingFlag,b
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta bBufferINIDISP
 	plp
 	plb
@@ -178,7 +178,7 @@ rlFadeOutColorByTimer ; 80/AC07
 
 	lda wScreenFadingTimeIncrement,b
 	sta wScreenFadingTimer,b
-	lda #COLDATA_Setting(31, True, True, True)
+	lda #COLDATA_Setting(31, true, true, true)
 	sta bBufferCOLDATA_0 ; color base?
 	stz bBufferCOLDATA_1 ; b?
 	stz bBufferCOLDATA_2 ; g?
@@ -201,7 +201,7 @@ rlFadeOutColorByTimer ; 80/AC07
 	lda bBufferCOLDATA_0
 	and #COLDATA_Intensity
 	dec a
-	ora #COLDATA_Setting(0, True, True, True)
+	ora #COLDATA_Setting(0, true, true, true)
 	sta bBufferCOLDATA_0
 
 	+
@@ -250,7 +250,7 @@ rlFadeInColorByTimer ; 80/AC4D
 
 	lda wScreenFadingTimeIncrement,b
 	sta wScreenFadingTimer,b
-	lda #COLDATA_Setting(0, True, True, True)
+	lda #COLDATA_Setting(0, true, true, true)
 	sta bBufferCOLDATA_0
 	stz bBufferCOLDATA_1
 	stz bBufferCOLDATA_2
@@ -270,7 +270,7 @@ rlFadeInColorByTimer ; 80/AC4D
 	lda bBufferCOLDATA_0
 	and #COLDATA_Intensity
 	inc a
-	ora #COLDATA_Setting(0, True, True, True)
+	ora #COLDATA_Setting(0, true, true, true)
 	sta bBufferCOLDATA_0
 
 	_NotTime

@@ -9,12 +9,12 @@ rlDemoRain ; 9A/E53D
 	jsl rlDisableVBlank
 
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta bBufferINIDISP
 	rep #$20
 
 	sep #$20
-	lda #INIDISP_Setting(True)
+	lda #INIDISP_Setting(true)
 	sta INIDISP,b
 	rep #$20
 
@@ -29,7 +29,7 @@ rlDemoRain ; 9A/E53D
 	jsl rlAppendDecompList
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $7FB0F5, $0400, VMAIN_Setting(True), $4000
+	.dstruct structDMAToVRAM, $7FB0F5, $0400, VMAIN_Setting(true), $4000
 
 	lda #(`$9FB9C0)<<8
 	sta lR18+1
@@ -42,7 +42,7 @@ rlDemoRain ; 9A/E53D
 	jsl rlAppendDecompList
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $7FB0F5, $0200, VMAIN_Setting(True), $B000
+	.dstruct structDMAToVRAM, $7FB0F5, $0200, VMAIN_Setting(true), $B000
 
 	lda #(`$9FB9F9)<<8
 	sta lR18+1
@@ -55,7 +55,7 @@ rlDemoRain ; 9A/E53D
 	jsl rlAppendDecompList
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0800, VMAIN_Setting(True), $E000
+	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $0800, VMAIN_Setting(true), $E000
 
 	lda #(`$9FBA75)<<8
 	sta lR18+1
@@ -68,7 +68,7 @@ rlDemoRain ; 9A/E53D
 	jsl rlAppendDecompList
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(True), $A000
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer, $0800, VMAIN_Setting(true), $A000
 
 	lda #(`DemoRainPalette)<<8
 	sta lR18+1
@@ -101,16 +101,16 @@ rlDemoRain ; 9A/E53D
 
 	sep #$20
 
-	lda #T_Setting(True, False, True, False, False)
+	lda #T_Setting(true, false, true, false, false)
 	sta bBufferTM
 
-	lda #T_Setting(False, True, False, False, True)
+	lda #T_Setting(false, true, false, false, true)
 	sta bBufferTS
 
-	lda #CGWSEL_Setting(False, True, CGWSEL_MathAlways, CGWSEL_BlackNever)
+	lda #CGWSEL_Setting(false, true, CGWSEL_MathAlways, CGWSEL_BlackNever)
 	sta bBufferCGWSEL
 
-	lda #CGADSUB_Setting(CGADSUB_Add, True, True, False, True, False, False, True)
+	lda #CGADSUB_Setting(CGADSUB_Add, true, true, false, true, false, false, true)
 	sta bBufferCGADSUB
 
 	lda bBufferBG1SC
@@ -124,12 +124,12 @@ rlDemoRain ; 9A/E53D
 	rep #$20
 
 	sep #$20
-	lda #INIDISP_Setting(False, 0)
+	lda #INIDISP_Setting(false, 0)
 	sta bBufferINIDISP
 	rep #$20
 
 	sep #$20
-	lda #INIDISP_Setting(False, 0)
+	lda #INIDISP_Setting(false, 0)
 	sta INIDISP,b
 	rep #$20
 

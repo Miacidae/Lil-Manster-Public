@@ -252,7 +252,7 @@
 	g4bppcPortraitEAEE23 .binary "sprites/PortraitEAEE23.4bpp.comp"
 	g4bppcPortraitEAF322 .binary "sprites/PortraitEAF322.4bpp.comp"
 	g4bppcPortraitEAF8A6 .binary "sprites/PortraitEAF8A6.4bpp.comp"
-	g4bppcPortraitEAFE34 .crossbank.start *, "sprites/PortraitEAFE34.4bpp.comp"
+	g4bppcPortraitEAFE34 .crossbank.start "sprites/PortraitEAFE34.4bpp.comp"
 
 .here
 
@@ -292,7 +292,7 @@
 	g4bppcPortraitEBEE1D .binary "sprites/PortraitEBEE1D.4bpp.comp"
 	g4bppcPortraitEBF2FF .binary "sprites/PortraitEBF2FF.4bpp.comp"
 	g4bppcPortraitEBF862 .binary "sprites/PortraitEBF862.4bpp.comp"
-	g4bppcPortraitEBFD2F .crossbank.start *, "sprites/PortraitEBFD2F.4bpp.comp"
+	g4bppcPortraitEBFD2F .crossbank.start "sprites/PortraitEBFD2F.4bpp.comp"
 
 .here
 
@@ -332,7 +332,7 @@
 	g4bppcPortraitECF0A4 .binary "sprites/PortraitECF0A4.4bpp.comp"
 	g4bppcPortraitECF4EA .binary "sprites/PortraitECF4EA.4bpp.comp"
 	g4bppcPortraitECF9CB .binary "sprites/PortraitECF9CB.4bpp.comp"
-	g4bppcPortraitECFE67 .crossbank.start *, "sprites/PortraitECFE67.4bpp.comp"
+	g4bppcPortraitECFE67 .crossbank.start "sprites/PortraitECFE67.4bpp.comp"
 
 .here
 
@@ -372,7 +372,7 @@
 	g4bppcPortraitEDED87 .binary "sprites/PortraitEDED87.4bpp.comp"
 	g4bppcPortraitEDF246 .binary "sprites/PortraitEDF246.4bpp.comp"
 	g4bppcPortraitEDF6BA .binary "sprites/PortraitEDF6BA.4bpp.comp"
-	g4bppcPortraitEDFBE9 .crossbank.start *, "sprites/PortraitEDFBE9.4bpp.comp"
+	g4bppcPortraitEDFBE9 .crossbank.start "sprites/PortraitEDFBE9.4bpp.comp"
 
 .here
 
@@ -413,7 +413,7 @@
 	g4bppcPortraitEEEE9B .binary "sprites/PortraitEEEE9B.4bpp.comp"
 	g4bppcPortraitEEF32A .binary "sprites/PortraitEEF32A.4bpp.comp"
 	g4bppcPortraitEEF712 .binary "sprites/PortraitEEF712.4bpp.comp"
-	g4bppcPortraitEEFC0A .crossbank.start *, "sprites/PortraitEEFC0A.4bpp.comp"
+	g4bppcPortraitEEFC0A .crossbank.start "sprites/PortraitEEFC0A.4bpp.comp"
 
 .here
 

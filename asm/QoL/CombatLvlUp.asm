@@ -41,81 +41,81 @@ rep #$20
   .al
 
 ; do it in fe5s order (first row down, then 2nd row down) instead of fe4 (left to right)
-LDA $7E448E 		; coordinates of stat increase
-CMP #$A890
-BEQ level_up_hp
-CMP #$B090
-BEQ level_up_str
-CMP #$B890
-BEQ level_up_mgc
-CMP #$C090
-BEQ level_up_skl
-CMP #$A8E8
-BEQ level_up_spd
-CMP #$B0E8
-BEQ level_up_luk
-CMP #$B8E8
-BEQ level_up_def
-CMP #$C0E8
-BEQ level_up_con
+lda $7E448E 		; coordinates of stat increase
+cmp #$A890
+beq level_up_hp
+cmp #$B090
+beq level_up_str
+cmp #$B890
+beq level_up_mgc
+cmp #$C090
+beq level_up_skl
+cmp #$A8E8
+beq level_up_spd
+cmp #$B0E8
+beq level_up_luk
+cmp #$B8E8
+beq level_up_def
+cmp #$C0E8
+beq level_up_con
 
 
 level_up_hp:
-LDX #$CFA0
-BRA level_up_address_saved
+ldx #$CFA0
+bra level_up_address_saved
 level_up_str:
-LDX #$CFE0
-BRA level_up_address_saved
+ldx #$CFE0
+bra level_up_address_saved
 level_up_mgc:
-LDX #$D020
-BRA level_up_address_saved
+ldx #$D020
+bra level_up_address_saved
 level_up_skl:
-LDX #$D060
-BRA level_up_address_saved
+ldx #$D060
+bra level_up_address_saved
 level_up_spd:
-LDX #$CFB6
-BRA level_up_address_saved
+ldx #$CFB6
+bra level_up_address_saved
 level_up_luk:
-LDX #$CFF6
-BRA level_up_address_saved
+ldx #$CFF6
+bra level_up_address_saved
 level_up_def:
-LDX #$D036
-BRA level_up_address_saved
+ldx #$D036
+bra level_up_address_saved
 level_up_con:
-LDX #$D076
-BRA level_up_address_saved
+ldx #$D076
+bra level_up_address_saved
 
 
 level_up_address_saved:
-LDA $7E4490
-AND #$00FF
-CLC
-ADC #$1FE0
-STA $7F0004,x 		; tilemap + or -
+lda $7E4490
+and #$00FF
+clc
+adc #$1FE0
+sta $7F0004,x 		; tilemap + or -
 
-LDA $7E4492
-AND #$00FF
-CLC
-ADC #$1FF6  		;shortcut to making a tile out of the value
-STA $7F0006,x 		; tilemap stat
+lda $7E4492
+and #$00FF
+clc
+adc #$1FF6  		;shortcut to making a tile out of the value
+sta $7F0006,x 		; tilemap stat
 
 
-LDA $7F0000,x
-AND #$00FF
-CMP #$004A
-BCS level_up_skip_first_digit
-CLC
-ADC #$200A
-STA $7F0000,x
+lda $7F0000,x
+and #$00FF
+cmp #$004A
+bcs level_up_skip_first_digit
+clc
+adc #$200A
+sta $7F0000,x
 
 level_up_skip_first_digit:
-LDA $7F0002,x
-AND #$00FF
-CMP #$004A
-BCS level_up_done_converting
-CLC
-ADC #$200A
-STA $7F0002,x
+lda $7F0002,x
+and #$00FF
+cmp #$004A
+bcs level_up_done_converting
+clc
+adc #$200A
+sta $7F0002,x
 
 level_up_done_converting:
 
@@ -123,61 +123,61 @@ sep #$20
 plb
 rep #$20
 
-PLY
-PLX
+ply
+plx
 
-PHX
-PHY
-LDA wR0
-PHA
-LDA wR1
-PHA
-LDA lR18
-PHA
-LDA lR18+1
-PHA
+phx
+phy
+lda wR0
+pha
+lda wR1
+pha
+lda lR18
+pha
+lda lR18+1
+pha
 
 ; sticky stats graphic
 
-LDA #$02C0 					; count
+lda #$02C0 					; count
 sta wR0
 
-LDA #>`StickyStats + $3C0		 
+lda #>`StickyStats + $3C0		 
 sta lR18+1
-LDA #<>StickyStats + $3C0	; source
+lda #<>StickyStats + $3C0	; source
 sta lR18
 
-LDA #$73E0 					; destination, E7C0 in vram
+lda #$73E0 					; destination, E7C0 in vram
 sta wR1
 
 jsl rlDMAByPointer
 
 ; sticky stats tilemap
 
-LDA #$00E0 					; count
+lda #$00E0 					; count
 sta wR0
 
-LDA #>`$7FCFA0	
+lda #>`$7FCFA0	
 sta lR18+1
-LDA #<>$7FCFA0  			; source
+lda #<>$7FCFA0  			; source
 sta lR18
 
-LDA #$6BD0 					; destination, D7A0 in vram
+lda #$6BD0 					; destination, D7A0 in vram
 sta wR1
 
 jsl rlDMAByPointer
 
 
-PLA
-STA lR18+1
-PLA
-STA lR18
-PLA
-STA wR1
-PLA
-STA wR0
-PLY
-PLX
+pla
+sta lR18+1
+pla
+sta lR18
+pla
+sta wR1
+pla
+sta wR0
+ply
+plx
 
 
 ; previous code 
@@ -185,6 +185,6 @@ PLX
 lda $7E4494
 tax 
 
-RTL
+rtl
 
 .here

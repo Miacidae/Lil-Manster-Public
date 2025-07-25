@@ -1,6 +1,6 @@
 dialogueChapter21xWelkenrosen
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word codha_portrait
 .text "Soldiers of Leonster yet remain here...?"
@@ -15,11 +15,11 @@ dialogueChapter21xWelkenrosen
 
 dialogueChapter21xOpening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dvorak_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word zaun_portrait
 .text "Hmm..."
@@ -29,13 +29,13 @@ dialogueChapter21xOpening1
 .text "and it only seems to be getting worse..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "...We have word that the rebels have already"
 .byte NewLine
 .text "gained control of the gates, sir."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hmph! I suppose it was only a matter of time"
 .byte NewLine
@@ -49,7 +49,7 @@ dialogueChapter21xOpening1
 .text "last resort. Do I make myself clear?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Clear as a vial of Pure Water, sir."
 .byte WaitForA
@@ -59,17 +59,17 @@ dialogueChapter21xOpening1
 
 dialogueChapter21xOpening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "So this is the Imperial prison camp..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "As I understand it, most of the soldiers"
 .byte NewLine
 .text "captured throughout Thracia are sent here."
@@ -82,12 +82,12 @@ dialogueChapter21xOpening2
 .text "chance will be squandered if you don't hurry."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "What do you mean?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Have you already forgotten?"
 .byte NewLine
@@ -96,7 +96,7 @@ dialogueChapter21xOpening2
 .text "a battalion of Loptrian mages are en route."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Could it be the Welkenrosen...?"
 .byte NewLine
@@ -110,11 +110,11 @@ dialogueChapter21xOpening2
 
 dialogueChapter21xClosing
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ishtar_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word julius_portrait
 .text "Hmm..."
@@ -132,11 +132,11 @@ dialogueChapter21xClosing
 .text "House Friege is a joke."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "I... I apologize on behalf of my kin..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Heh, heh..."
 .byte NewLine
@@ -152,28 +152,28 @@ dialogueChapter21xClosing
 .text "I...need you with me."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "As you wish..."
 .byte NewLine
 .text "But where are we to go instead?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Miletos."
 .byte NewLine
 .text "Hilda has been pestering me to come."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Mother...?"
 .byte NewLine
 .text "Whatever for?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "To see the results of her harvest, of course."
 .byte NewLine
@@ -182,14 +182,14 @@ dialogueChapter21xClosing
 .text "governing the city since I gave her the throne."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Mother...has..."
 .byte NewLine
 .text "She's been conducting child hunts..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You know, Miletos' climate is quite pleasant"
 .byte NewLine
@@ -229,12 +229,12 @@ dialogueChapter21xClosing
 .text "have you by my side..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "L-Lord Julius..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ishtar..."
 .byte NewLine
@@ -243,7 +243,7 @@ dialogueChapter21xClosing
 .text "I don't want him near us anymore."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Reinhardt?!"
 .byte NewLine
@@ -252,7 +252,7 @@ dialogueChapter21xClosing
 .text "I rely on him every day!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I don't care!"
 .byte NewLine
@@ -261,7 +261,7 @@ dialogueChapter21xClosing
 .text "If I see him, I'll pluck out his eyes myself!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah...!"
 .byte NewLine
@@ -273,7 +273,7 @@ dialogueChapter21xClosing
 .text "let Reinhardt go home. Please."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Heh, heh..."
 .byte NewLine

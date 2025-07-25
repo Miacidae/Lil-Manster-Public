@@ -294,7 +294,7 @@ rlDMAByStruct ; 80/AE2E
 	; Inputs:
 	; DMA struct after jsl, i.e.:
 	; jsl rlDMAByStruct
-	; .dstruct structDMAToVRAM, $7E0000, $0080, VMAIN_Setting(True), $E000
+	; .dstruct structDMAToVRAM, $7E0000, $0080, VMAIN_Setting(true), $E000
 	; plp
 	; rtl
 
@@ -505,7 +505,7 @@ rlDMAByPointer ; 80/AEF9
 	sta aDMAArray+structDMAToVRAMEntry.Count,b,x
 
 	sep #$20
-	lda #VMAIN_Setting(True, VMAIN_TranslationNone, VMAIN_Step1)
+	lda #VMAIN_Setting(true, VMAIN_TranslationNone, VMAIN_Step1)
 	sta aDMAArray+structDMAToVRAMEntry.Mode,b,x
 
 	rep #$20
@@ -579,7 +579,7 @@ rlDMAByPointerStep32 ; 80/AF46
 	lda wR0
 	sta aDMAArray+structDMAToVRAMEntry.Count,b,x
 	sep #$20
-	lda #VMAIN_Setting(True, VMAIN_TranslationNone, VMAIN_Step32)
+	lda #VMAIN_Setting(true, VMAIN_TranslationNone, VMAIN_Step32)
 	sta aDMAArray+structDMAToVRAMEntry.Mode,b,x
 	rep #$20
 	lda wR1

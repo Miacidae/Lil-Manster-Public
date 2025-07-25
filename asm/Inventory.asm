@@ -90,7 +90,7 @@ rlBuildInventoryWindow ; 81/CE71
 	jsl rlAppendDecompList
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $7FB0F5, $1A00, VMAIN_Setting(True), $5000
+	.dstruct structDMAToVRAM, $7FB0F5, $1A00, VMAIN_Setting(true), $5000
 
 	; Background tilemap
 
@@ -156,15 +156,15 @@ rlBuildInventoryWindow ; 81/CE71
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG1TilemapBuffer, ((0 + (48 * $20)) * 2), VMAIN_Setting(True), $E000
+	.dstruct structDMAToVRAM, aBG1TilemapBuffer, ((0 + (48 * $20)) * 2), VMAIN_Setting(true), $E000
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG2TilemapBuffer, ((0 + (48 * $20)) * 2), VMAIN_Setting(True), $F000
+	.dstruct structDMAToVRAM, aBG2TilemapBuffer, ((0 + (48 * $20)) * 2), VMAIN_Setting(true), $F000
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG3TilemapBuffer, ((0 + (48 * $20)) * 2), VMAIN_Setting(True), $A000
+	.dstruct structDMAToVRAM, aBG3TilemapBuffer, ((0 + (48 * $20)) * 2), VMAIN_Setting(true), $A000
 
 	plb
 	plp
@@ -313,7 +313,7 @@ rsInventorySetScrollPositions ; 81/D092
 
 	; Use all layers but BG4
 
-	lda #T_Setting(True, True, True, False, True)
+	lda #T_Setting(true, true, true, false, true)
 	sta bBufferTM
 
 	rep #$30
@@ -989,9 +989,9 @@ rlInventoryDrawMapSprite ; 81/D4A0
 		.word $0000
 		.addr _TallSprite
 
-	_ShortSprite .dstruct structSpriteArray, [[[0, 2], $61, True, 0, 2, $000, False, False]]
+	_ShortSprite .dstruct structSpriteArray, [[[0, 2], $61, true, 0, 2, $000, false, false]]
 
-	_TallSprite .dstruct structSpriteArray, [[[0, 2], $61, True, 0, 2, $000, False, False], [[0, -14], $61, True, $002, 2, 0, False, False]]
+	_TallSprite .dstruct structSpriteArray, [[[0, 2], $61, true, 0, 2, $000, false, false], [[0, -14], $61, true, $002, 2, 0, false, false]]
 
 	_DrawRescuedSprite
 
@@ -1016,7 +1016,7 @@ rlInventoryDrawMapSprite ; 81/D4A0
 
 	rtl
 
-	_RescuedSprite .dstruct structSpriteArray, [[[7, 6], $00, False, $114, 2, 0, False, False]]
+	_RescuedSprite .dstruct structSpriteArray, [[[7, 6], $00, false, $114, 2, 0, false, false]]
 
 aInventoryStatBarTilemapTable ; 81/D511
 	.word <>$F4FC00
@@ -1868,7 +1868,7 @@ rlGetStarString ; 81/DB5D
 	cpy #6
 	bcc _DBAE 	; branch if less than 6 stars
 
-	sta $3FF0,b,X
+	sta $3FF0,b,x
 	ldx #6
 	cpy #100
 	bcc + 		; branch if less than 100 stars 
@@ -1904,7 +1904,7 @@ rlGetStarString ; 81/DB5D
 	lda #$824F
 	adc $16 	; RDMPYL remainder
 	xba
-	sta $3FF0,b,X ; store actual number going from 1s digit to 10s, to 100s
+	sta $3FF0,b,x ; store actual number going from 1s digit to 10s, to 100s
 	ldy $14 	; RDDIVL result
 	bne - 
 
@@ -1913,7 +1913,7 @@ rlGetStarString ; 81/DB5D
 	bra +
 
 	-
-	sta $3FF0,b,X
+	sta $3FF0,b,x
 	inx
 	inx
 
@@ -1922,7 +1922,7 @@ rlGetStarString ; 81/DB5D
 	bpl -
 
 	+
-	stz $3FF0,b,X ; store terminator after number of stars
+	stz $3FF0,b,x ; store terminator after number of stars
 	lda #$3FF0
 	cpx #10
 	bcc + 		; branch if less than 10
@@ -2343,7 +2343,7 @@ rlInventoryActionCloseMenu ; 81/DDA1
 
 	+
 	sep #$20
-	lda #INIDISP_Setting(False, 0)
+	lda #INIDISP_Setting(false, 0)
 	sta bBufferINIDISP
 	rep #$20
 

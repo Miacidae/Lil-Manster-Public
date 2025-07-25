@@ -159,7 +159,7 @@ rsUnknown838093 ; 83/8093
 	-
 	lda bBufferINIDISP
 	and #$00FF
-	cmp #INIDISP_Setting(False, 15)
+	cmp #INIDISP_Setting(false, 15)
 	beq +
 
 	jmp _End
@@ -393,7 +393,7 @@ rsUnknown8381F6 ; 83/81F6
 
 	lda bBufferINIDISP
 	and #$00FF
-	cmp #INIDISP_Setting(False, 15)
+	cmp #INIDISP_Setting(false, 15)
 	bne +
 
 	jsl $8593EB
@@ -411,7 +411,7 @@ rsUnknown83820C ; 83/820C
 
 	lda bBufferINIDISP
 	and #$00FF
-	cmp #INIDISP_Setting(False, 15)
+	cmp #INIDISP_Setting(false, 15)
 	bne +
 
 	lda aSoundSystem.aUnknown0004BA,b
@@ -1791,7 +1791,7 @@ rsUnknown838A39 ; 83/8A39
 
 	lda bBufferINIDISP
 	and #$00FF
-	cmp #INIDISP_Setting(False, 15)
+	cmp #INIDISP_Setting(false, 15)
 	bne +
 
 	lda aSoundSystem.aUnknown0004BA,b
@@ -1858,7 +1858,7 @@ rlDisplayMinimap ; 83/8A72
 	bcs +
 
 	sep #$20
-	lda #T_Setting(False, True, False, False, True)
+	lda #T_Setting(false, true, false, false, true)
 	sta bBufferTM
 	rep #$20
 	lda #$000F
@@ -1889,7 +1889,7 @@ rsUnknown838AC1 ; 83/8AC1
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $7FB0F5, $C00, VMAIN_Setting(True), $A000
+	.dstruct structDMAToVRAM, $7FB0F5, $C00, VMAIN_Setting(true), $A000
 
 	jmp rsUnknown838529
 
@@ -1901,7 +1901,7 @@ rsUnknown838AD1 ; 83/8AD1
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $7FBCF5, $C00, VMAIN_Setting(True), $AC00
+	.dstruct structDMAToVRAM, $7FBCF5, $C00, VMAIN_Setting(true), $AC00
 
 	jmp rsUnknown838529
 
@@ -1913,7 +1913,7 @@ rsUnknown838AE1 ; 83/8AE1
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $7FC8F5, $C00, VMAIN_Setting(True), $B800
+	.dstruct structDMAToVRAM, $7FC8F5, $C00, VMAIN_Setting(true), $B800
 
 	jmp rsUnknown838529
 
@@ -1925,7 +1925,7 @@ rsUnknown838AF1 ; 83/8AF1
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $7FD4F5, $C00, VMAIN_Setting(True), $C400
+	.dstruct structDMAToVRAM, $7FD4F5, $C00, VMAIN_Setting(true), $C400
 
 	jmp rsUnknown838529
 
@@ -1941,10 +1941,10 @@ rsUnknown838B01 ; 83/8B01
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $800, VMAIN_Setting(True), $E000
+	.dstruct structDMAToVRAM, aBG1TilemapBuffer, $800, VMAIN_Setting(true), $E000
 
 	sep #$20
-	lda #T_Setting(True, True, False, False, True)
+	lda #T_Setting(true, true, false, false, true)
 	sta bBufferTM
 	rep #$20
 
@@ -2016,7 +2016,7 @@ rsUnknown838B5C ; 83/8B5C
 	stz wBufferBG1VOFS
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $F3CC80, $C00, VMAIN_Setting(True), $B800
+	.dstruct structDMAToVRAM, $F3CC80, $C00, VMAIN_Setting(true), $B800
 
 	phx
 	lda #(`$849DF4)<<8
@@ -2037,7 +2037,7 @@ rsUnknown838BA0 ; 83/8BA0
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $F3D880, $C00, VMAIN_Setting(True), $C400
+	.dstruct structDMAToVRAM, $F3D880, $C00, VMAIN_Setting(true), $C400
 
 	jmp rsUnknown838529
 
@@ -7453,7 +7453,7 @@ rlUnknown83A74E ; 83/A74E
 
 	jsl rlDMAByStruct
 
-	.dstruct structDMAToVRAM, $7F2614, $2000, VMAIN_Setting(True), $0000
+	.dstruct structDMAToVRAM, $7F2614, $2000, VMAIN_Setting(true), $0000
 
 	plb
 	plp

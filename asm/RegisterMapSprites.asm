@@ -25,19 +25,19 @@ rlRegisterAllMapSpritesAndStatus ; 88/85D1
 	stz wR16
 	stz wR17
 
-	lda #OAMTileAndAttr($000, 0, 2, False, False)
+	lda #OAMTileAndAttr($000, 0, 2, false, false)
 	sta wR9
 	lda #(Player + 1) * 2
 	sta wR6
 	jsr rsRegisterMapSpriteAndStatus
 
-	lda #OAMTileAndAttr($000, 1, 2, False, False)
+	lda #OAMTileAndAttr($000, 1, 2, false, false)
 	sta wR9
 	lda #(Enemy + 1) * 2
 	sta wR6
 	jsr rsRegisterMapSpriteAndStatus
 
-	lda #OAMTileAndAttr($000, 2, 2, False, False)
+	lda #OAMTileAndAttr($000, 2, 2, false, false)
 	sta wR9
 	lda #(NPC + 1) * 2
 	sta wR6
@@ -124,7 +124,7 @@ rsRegisterMapSpriteAndStatus ; 88/8616
 	bit #UnitStateGrayed
 	beq +
 
-	lda #OAMTileAndAttr($000, 3, 2, False, False)
+	lda #OAMTileAndAttr($000, 3, 2, false, false)
 	sta lR20
 
 	+
@@ -215,7 +215,7 @@ rsRegisterMapSpriteAndStatus ; 88/8616
 	adc #7
 	sta aUpperMapSpriteAndStatusBuffer+structMapSpriteAndStatusEntry.Y,y
 
-	lda #OAMTileAndAttr($114, 0, 0, False, False)
+	lda #OAMTileAndAttr($114, 0, 0, false, false)
 	ora wR9
 	sta aUpperMapSpriteAndStatusBuffer+structMapSpriteAndStatusEntry.TileAndAttr,y
 
@@ -227,23 +227,23 @@ rsRegisterMapSpriteAndStatus ; 88/8616
 	jmp _Next
 
 	_Sleep
-	lda #OAMTileAndAttr($11F, 0, 2, False, False)
+	lda #OAMTileAndAttr($11F, 0, 2, false, false)
 	bra +
 
 	_Berserk
-	lda #OAMTileAndAttr($12C, 0, 2, False, False)
+	lda #OAMTileAndAttr($12C, 0, 2, false, false)
 	bra +
 
 	_Poison
-	lda #OAMTileAndAttr($12D, 1, 2, False, False)
+	lda #OAMTileAndAttr($12D, 1, 2, false, false)
 	bra +
 
 	_Stone
-	lda #OAMTileAndAttr($13D, 1, 2, False, False)
+	lda #OAMTileAndAttr($13D, 1, 2, false, false)
 	bra +
 
 	_Silence
-	lda #OAMTileAndAttr($13C, 0, 2, False, False)
+	lda #OAMTileAndAttr($13C, 0, 2, false, false)
 
 	+
 	sta wR0

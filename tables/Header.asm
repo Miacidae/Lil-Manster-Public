@@ -1,7 +1,7 @@
 
 ; Cartridge-specific settings
 
-.enc "None"
+.enc "none"
 
 MakerCode            = 1
 GameCode             = "BFRJ"
@@ -17,13 +17,13 @@ CartridgeCoprocessor = None
 CartridgeROMSize     = $600000
 CartridgeRAMSize     = $9000
 CartridgeDestination = DestinationJapanese
-CartridgeNew         = True
+CartridgeNew         = true
 CartridgeVersion     = 0
 CartridgeChecksum    = $9554
 
 ; Now to actually create the header
 
-.if CartridgeNew == True
+.if CartridgeNew == true
 
 	.text format("%02X", MakerCode)
 	.text GameCode
@@ -61,7 +61,7 @@ CartridgeChecksum    = $9554
 .byte GetShiftAmount(CartridgeRAMSize / 1024)
 .byte CartridgeDestination[0]
 
-.if CartridgeNew == True
+.if CartridgeNew == true
 
 	.byte $33
 

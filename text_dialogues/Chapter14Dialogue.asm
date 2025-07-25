@@ -1,5 +1,5 @@
 dialogueChapter14HomerWomen
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word homer_portrait
 .text "Well, what have we here?"
@@ -14,7 +14,7 @@ dialogueChapter14HomerWomen
 .byte EndText
 
 dialogueChapter14HomerKids
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word homer_portrait
 .text "Beat it, kid. I'm trying to catch an afternoon"
@@ -26,11 +26,11 @@ dialogueChapter14HomerKids
 .byte EndText
 
 dialogueCh14HomerNanna
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word nanna_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word homer_portrait
 .text "Oh-ho-ho...! I like what I see!"
@@ -40,13 +40,13 @@ dialogueCh14HomerNanna
 .text "to make time for you, darling."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "I beg your pardon?"
 .byte NewLine
 .text "What's the meaning of this...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Y'see, hun, this is my last night in town."
 .byte NewLine
@@ -62,7 +62,7 @@ dialogueCh14HomerNanna
 .text "What'd you hit me for?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What are you thinking?!"
 .byte NewLine
@@ -78,7 +78,7 @@ dialogueCh14HomerNanna
 .text "Have you no shame?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Well, first, it is past noon, second—"
 .byte NewLine
@@ -106,7 +106,7 @@ dialogueCh14HomerNanna
 
 dialogueChapter14Villager1
 
-.byte Right_slot ; HOUSE NORTH EAST
+.byte Right_Slot ; HOUSE NORTH EAST
 .word LoadPortrait
 .word youngman_portrait
 .text "W-What's gonna happen to us...?"
@@ -121,7 +121,7 @@ dialogueChapter14Villager1
 
 dialogueChapter14Villager2
 
-.byte Right_slot ; HOUSE CENTER EAST
+.byte Right_Slot ; HOUSE CENTER EAST
 .word LoadPortrait
 .word braidedgirl_portrait
 .text "I can't take this anymore!"
@@ -136,7 +136,7 @@ dialogueChapter14Villager2
 
 dialogueChapter14Villager3
 
-.byte Right_slot ; HOUSE SOUTH EAST
+.byte Right_Slot ; HOUSE SOUTH EAST
 .word LoadPortrait
 .word oldlady3_portrait
 .text "This whole mess has most of the city"
@@ -154,7 +154,7 @@ dialogueChapter14Villager3
 
 dialogueChapter14Villager4
 
-.byte Right_slot ; HOUSE SOUTH WEST
+.byte Right_Slot ; HOUSE SOUTH WEST
 .word LoadPortrait
 .word younglady_portrait
 .text "My Ma and Pa were both killed..."
@@ -169,7 +169,7 @@ dialogueChapter14Villager4
 
 dialogueChapter14Villager5
 
-.byte Right_slot ; HOUSE NORTH WEST
+.byte Right_Slot ; HOUSE NORTH WEST
 .word LoadPortrait
 .word black_mustache_portrait
 .text "It seems Tahra's fate is already sealed..."
@@ -184,7 +184,7 @@ dialogueChapter14Villager5
 
 dialogueChapter14Villager6
 
-.byte Right_slot ; HOUSE CENTER WEST
+.byte Right_Slot ; HOUSE CENTER WEST
 .word LoadPortrait
 .word youngman2_portrait
 .text "I came to this city to escape the rule"
@@ -202,7 +202,7 @@ dialogueChapter14Villager6
 
 dialogueChapter14HomerMen
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word homer_portrait
 .text "Hmm... A man, huh?"
@@ -217,7 +217,7 @@ dialogueChapter14HomerMen
 
 dialogueCh14NosferatuHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word elder_portrait
 .text "Ah, you're the folks from the Liberation Army."
@@ -239,11 +239,11 @@ dialogueCh14NosferatuHouse
 
 dialogueChapter14DragonpikeHouseDean
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dean_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word younglady_portrait
 .text "Ah, Sir Dean!"
@@ -258,13 +258,13 @@ dialogueChapter14DragonpikeHouseDean
 .text "I'm glad to see you're doing well."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Lady Altena?!"
 .byte NewLine
 .text "What in Dáinn's name are you doing here?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Heh..."
 .byte NewLine
@@ -276,7 +276,7 @@ dialogueChapter14DragonpikeHouseDean
 .text "a spear worthy of your service to Thracia."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Th-This is no mere spear...!"
 .byte NewLine
@@ -290,7 +290,7 @@ dialogueChapter14DragonpikeHouseDean
 .text "such a prized possession?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "He considered it a token of his apology,"
 .byte NewLine
@@ -304,7 +304,7 @@ dialogueChapter14DragonpikeHouseDean
 .text "to put it to good use."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I was the one who chose to desert the army."
 .byte NewLine
@@ -323,7 +323,7 @@ dialogueChapter14DragonpikeHouseDean
 .text "So as flattered as I am, I can't accept this."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Don't disregard my brother's feelings so easily,"
 .byte NewLine
@@ -339,7 +339,7 @@ dialogueChapter14DragonpikeHouseDean
 .text "I'll just order you to accept it."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah... You know, technically, I'm not a knight"
 .byte NewLine
@@ -360,7 +360,7 @@ dialogueChapter14DragonpikeHouseDean
 .text "but I'm only borrowing it, that's all."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm glad you understand."
 .byte WaitForA
@@ -384,7 +384,7 @@ dialogueChapter14DragonpikeHouseDean
 .text "was his way of being here in spirit."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm supposed to be a stand-in for"
 .byte NewLine
@@ -410,7 +410,7 @@ dialogueChapter14DragonpikeHouseDean
 
 dialogueChapter14DragonpikeHouseOther
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word younglady_portrait
 .text "Oh, dear..."
@@ -423,11 +423,11 @@ dialogueChapter14DragonpikeHouseOther
 
 dialogueChapter14NpcArrive
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word mccloy_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word travant_portrait
 .text "It's almost time..."
@@ -449,7 +449,7 @@ dialogueChapter14NpcArrive
 .text "enough to make it look like we're being loyal."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "...And when the Empire's forces"
 .byte NewLine
 .text "have exhausted themselves,"
@@ -457,7 +457,7 @@ dialogueChapter14NpcArrive
 .text "we turn on them and seize Tahra for ourselves."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Exactly."
 .byte WaitForA
@@ -469,7 +469,7 @@ dialogueChapter14NpcArrive
 .text "the city too much in all the fighting."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm aware of the stakes, Your Majesty."
 .byte NewLine
@@ -481,11 +481,11 @@ dialogueChapter14NpcArrive
 
 dialogueChapter14ShannamLeave
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word shannam_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word homer_portrait
 .text "Hey, what's with the getup?"
@@ -493,13 +493,13 @@ dialogueChapter14ShannamLeave
 .text "You planning to skip town?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Hmph..."
 .byte NewLine
 .text "There's no point in stickin' around here..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Oh, c'mon! The folks around here"
 .byte NewLine
@@ -515,7 +515,7 @@ dialogueChapter14ShannamLeave
 .text "the women. “Hell hath no fury,” and all that."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "N-No, it's not like that! I'm the prince of"
 .byte NewLine
@@ -524,21 +524,21 @@ dialogueChapter14ShannamLeave
 .text "my people without their beloved leader!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Uh-huh. Yeah, if you're the Prince of Isaach,"
 .byte NewLine
 .text "I'm Saint Heim. I can see right through you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hrk...!"
 .byte NewLine
 .text "How did you know?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm a bard, remember? I know what"
 .byte NewLine
@@ -555,12 +555,12 @@ dialogueChapter14ShannamLeave
 .text "with the rest of the city if you can avoid it."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "So you're making a run for it, too?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That's the plan. I'm hightailing it outta here"
 .byte NewLine
@@ -569,7 +569,7 @@ dialogueChapter14ShannamLeave
 .text "plenty of time to have my fun tonight, heheh."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Yeah, you do that. Me, I'm gettin' out while"
 .byte NewLine
@@ -578,14 +578,14 @@ dialogueChapter14ShannamLeave
 .text "maybe we'll cross paths again someday."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "One last thing. Now that we're acquainted,"
 .byte NewLine
 .text "you at least gotta tell me your real name."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -593,7 +593,7 @@ dialogueChapter14ShannamLeave
 .text "It's Shannam."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "That's...closer to the real thing"
 .byte NewLine
@@ -608,17 +608,17 @@ dialogueChapter14ShannamLeave
 
 dialogueChapter14Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word baldach_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word paulus_portrait
 .text "Where's Liszt? I don't see him anywhere..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "I bring word of his fate. He charged into"
 .byte NewLine
 .text "battle early, and was defeated by the rebels."
@@ -626,19 +626,19 @@ dialogueChapter14Opening1
 .text "Right now, he's either dead or in chains."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The poor sod... I almost pity him."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "If I may speak freely, sir, Liszt brought it"
 .byte NewLine
 .text "upon himself when he disobeyed your orders."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...I'm not so sure of that. I was opposed"
 .byte NewLine
@@ -657,12 +657,12 @@ dialogueChapter14Opening1
 .text "Go ahead and laugh, Baldach."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Colonel..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "But I cannot allow myself to hesitate"
 .byte NewLine
@@ -674,7 +674,7 @@ dialogueChapter14Opening1
 .text "Will you lend me your strength, Baldach?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Of course, Colonel Paulus!"
 .byte NewLine
@@ -688,7 +688,7 @@ dialogueChapter14Opening1
 .text "we'll begin our assault at once."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Permission granted. I'll have my own troops"
 .byte NewLine
@@ -704,7 +704,7 @@ dialogueChapter14Opening1
 .text "keep your guard up."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'll remain vigilant, Colonel."
 .byte NewLine
@@ -716,17 +716,17 @@ dialogueChapter14Opening1
 
 dialogueChapter14Opening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word linoan_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word eda_portrait
 .text "...It's started, Lady Linoan."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "And so the Empire brings the full weight"
 .byte NewLine
 .text "of their army to bear against us..."
@@ -734,19 +734,19 @@ dialogueChapter14Opening2
 .text "What is Lord Leif doing now?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Meeting with the other commanding officers"
 .byte NewLine
 .text "and military officials."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Is Dean with them?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Brother said he wasn't the type to sit around"
 .byte NewLine
@@ -758,7 +758,7 @@ dialogueChapter14Opening2
 .text "He's always been headstrong like that..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Heh. That much I already know."
 .byte NewLine
@@ -784,7 +784,7 @@ dialogueChapter14Opening2
 .text "undefeatable in battle—just like Dáinn."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I...think you've been misled, Lady Linoan."
 .byte NewLine
@@ -793,7 +793,7 @@ dialogueChapter14Opening2
 .text "you believe him to be."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I beg to differ. He's not perfect, granted,"
 .byte NewLine
@@ -855,7 +855,7 @@ dialogueChapter14Opening2
 .text "that he answered to Lord Arion himself..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...There's more to it than that."
 .byte WaitForA
@@ -881,12 +881,12 @@ dialogueChapter14Opening2
 .text "look like he'd simply deserted from the army."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Lord Arion really went to such lengths...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "His Highness was caught between a rock and"
 .byte NewLine
@@ -919,15 +919,15 @@ dialogueChapter14Opening2
 
 dialogueChapter14Ending1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word arion_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word travant_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "My lord father, doesn't attacking Tahra"
 .byte NewLine
 .text "only serve to benefit the Empire?"
@@ -940,7 +940,7 @@ dialogueChapter14Ending1
 .text "pave the way for a new alliance between us."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Hah! You think shackling ourselves to Tahra"
 .byte NewLine
 .text "would be enough to triumph over the Empire?"
@@ -958,12 +958,12 @@ dialogueChapter14Ending1
 .text "and we were still no match for the Empire."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...We lost only because Raydrik betrayed us."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Maybe so, maybe so... But the fact remains"
 .byte NewLine
@@ -1001,7 +1001,7 @@ dialogueChapter14Ending1
 .text "You still want to go through with your plan?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "N-No..."
 .byte NewLine
@@ -1013,19 +1013,19 @@ dialogueChapter14Ending1
 .text "...But if I may, Father, I have a request."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "*Sigh*"
 .byte NewLine
 .text "What?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I wish to help you seize Tahra."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...You're up to something, aren't you?"
 .byte WaitForA
@@ -1040,14 +1040,14 @@ dialogueChapter14Ending1
 .text "I give you leave to act as you see fit!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I won't let you down!"
 .byte NewLine
 .text "Thank you, my lord father!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Just make sure you don't take too long."
 .byte WaitForA
@@ -1059,17 +1059,17 @@ dialogueChapter14Ending1
 .text "of troops to seize Tahra if I can avoid it."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Of course, Father!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "If things keep going the way they are,"
 .byte NewLine
@@ -1083,7 +1083,7 @@ dialogueChapter14Ending1
 
 dialogueChapter14Ending2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word arion_portrait
 .text "Linoan! Where are you?"
@@ -1091,7 +1091,7 @@ dialogueChapter14Ending2
 .text "It's me! It's Arion!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word linoan_portrait
 .text "Lord Arion!"
@@ -1099,7 +1099,7 @@ dialogueChapter14Ending2
 .text "Wh-What are you doing here?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "There's no time. You must listen to me:"
 .byte NewLine
@@ -1113,7 +1113,7 @@ dialogueChapter14Ending2
 .text "recover from this battle. Its fate will be sealed."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Why...?"
 .byte NewLine
@@ -1125,7 +1125,7 @@ dialogueChapter14Ending2
 .text "from you... Just what in blazes has happened?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "My lord father is planning to seize Tahra"
 .byte NewLine
@@ -1139,12 +1139,12 @@ dialogueChapter14Ending2
 .text "once their forces are exhausted."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No...!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It gets worse. Sorcerers of the Loptr Church"
 .byte NewLine
@@ -1165,14 +1165,14 @@ dialogueChapter14Ending2
 .text "It will be genocide."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The Welkenrosen..."
 .byte NewLine
 .text "This was my greatest fear..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Linoan, you must trust me."
 .byte NewLine
@@ -1200,14 +1200,14 @@ dialogueChapter14Ending2
 .text "that I'll protect you just as vigilantly, Linoan."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "What will become of Lord Leif"
 .byte NewLine
 .text "and the other knights?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm afraid they'll have no choice but to flee"
 .byte NewLine
@@ -1216,7 +1216,7 @@ dialogueChapter14Ending2
 .text "to escape, and Father fears him as a threat."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...I understand, Your Highness."
 .byte NewLine
@@ -1225,12 +1225,12 @@ dialogueChapter14Ending2
 .text "and entrust the city of Tahra to you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You've made a wise decision, Linoan."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "But I won't be staying here, myself."
 .byte NewLine
@@ -1254,7 +1254,7 @@ dialogueChapter14Ending2
 .text "do you promise to return Tahra to my rule?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You...plan to overthrow the Empire?"
 .byte NewLine
@@ -1263,12 +1263,12 @@ dialogueChapter14Ending2
 .text "the Empire, I'll gladly return Tahra to you."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Is Prince Leif worthy of such confidence,"
 .byte NewLine

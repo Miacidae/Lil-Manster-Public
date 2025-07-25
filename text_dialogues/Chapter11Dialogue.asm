@@ -1,6 +1,6 @@
 dialogueChapter11KempfLeave
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word kempf_portrait
 .text "Ugh... What a joke...!"
@@ -15,7 +15,7 @@ dialogueChapter11KempfLeave
 
 dialogueChapter11KempfLeif
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word kempf_portrait
 .text "What's this...?!"
@@ -60,7 +60,7 @@ dialogueChapter11KempfLeif
 
 dialogueChapter11KempfTrapActivated
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word kempf_portrait
 .text "Ahahaha! Those dullards actually fell for it!"
@@ -74,11 +74,11 @@ dialogueChapter11KempfTrapActivated
 
 dialogueChapter11LeifFred
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word fred_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 .text "Do the holy-blooded knights of House Friege"
@@ -96,7 +96,7 @@ dialogueChapter11LeifFred
 .text "It seems I was mistaken!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "...On behalf of my home, my honor compels"
 .byte NewLine
 .text "me to agree with you. The crusader Thrud"
@@ -121,7 +121,7 @@ dialogueChapter11LeifFred
 .text "against you if you can promise the same."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...If you've no mind to fight, sir,"
 .byte NewLine
@@ -135,7 +135,7 @@ dialogueChapter11LeifFred
 .text "have little energy to spare, now."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I...can agree to those terms."
 .byte NewLine
@@ -147,7 +147,7 @@ dialogueChapter11LeifFred
 .text "that our time is better spent devising an escape."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Very well. My forces will storm"
 .byte NewLine
@@ -164,7 +164,7 @@ dialogueChapter11LeifFred
 .text "Are we in agreement?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "We are. It appears I owe you quite the debt..."
 .byte NewLine
@@ -173,12 +173,12 @@ dialogueChapter11LeifFred
 .text "I would know your name as well, friend."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...It's Leif. Leif of House Leonster."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "House Leonster?!"
 .byte NewLine
@@ -195,11 +195,11 @@ dialogueChapter11LeifFred
 
 dialogueChapter11Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word kempf_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word olwen_portrait
 .text "I've already told you, the enemy appeared"
@@ -219,7 +219,7 @@ dialogueChapter11Opening1
 .text "Please, General Kempf...!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "You claim this enemy “appeared"
 .byte NewLine
 .text "out of nowhere” to besiege Fort Nowell,"
@@ -253,7 +253,7 @@ dialogueChapter11Opening1
 .text "the slightest bit of information!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I came here to warn you precisely because"
 .byte NewLine
@@ -267,7 +267,7 @@ dialogueChapter11Opening1
 .text "siege! Does it matter who the attackers are?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "And what if this “attack” is merely a ploy"
 .byte NewLine
@@ -293,7 +293,7 @@ dialogueChapter11Opening1
 .text "12th Division. It would weaken our position!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "And what of General Largo?!"
 .byte NewLine
@@ -302,7 +302,7 @@ dialogueChapter11Opening1
 .text "he faces certain danger at this very moment!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Bah, what's one or two old men in the grand"
 .byte NewLine
@@ -311,14 +311,14 @@ dialogueChapter11Opening1
 .text "could he really have left, anyway?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Wh-What?!"
 .byte NewLine
 .text "General Kempf, even now, you... You..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "The glare you're shooting me is almost"
 .byte NewLine
@@ -344,24 +344,24 @@ dialogueChapter11Opening1
 .text "the Empire does to traitors?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Tch..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Is that it? You've got quite the mouth on you,"
 .byte NewLine
 .text "but no spine to back up your words."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You're a simple girl who got into Belhalla's"
 .byte NewLine
@@ -384,24 +384,24 @@ dialogueChapter11Opening1
 .text "is to go begging your brother for help."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Wh-What did you just say to me?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hm? Are you hard of hearing? I said that all"
 .byte NewLine
 .text "you're good for is to go crying to Reinhardt!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You...!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Oh, how he must dote on you..."
 .byte NewLine
@@ -410,14 +410,14 @@ dialogueChapter11Opening1
 .text "is knowing how to lead women on!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hold your tongue! I'll not stand here"
 .byte NewLine
 .text "and let you dishonor my brother!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah! You dare to draw your sword on me?!"
 .byte NewLine
@@ -425,18 +425,18 @@ dialogueChapter11Opening1
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word guard_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "Men! Seize Olwen and throw her"
 .byte NewLine
 .text "in the dungeon for this act of rebellion!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Yes, General!"
 .byte WaitForA
 
@@ -444,7 +444,7 @@ dialogueChapter11Opening1
 .word LoadPortrait
 .word olwen_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word guard_portrait
@@ -457,7 +457,7 @@ dialogueChapter11Opening1
 .word LoadPortrait
 .word kempf_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .text "Tch... General Kempf..."
 .byte NewLine
 .text "How contemptible..."
@@ -470,7 +470,7 @@ dialogueChapter11Opening1
 
 dialogueChapter11Opening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word kempf_portrait
 .text "Hah! That should put the impertinent little girl"
@@ -495,23 +495,23 @@ dialogueChapter11Opening2
 
 dialogueChapter11Opening3
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word kempf_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word fred_portrait
 .text "General Kempf! Explain yourself!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Fred, my dear boy, you look different"
 .byte NewLine
 .text "from your usual self. Is something amiss?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Don't play dumb!"
 .byte NewLine
@@ -532,7 +532,7 @@ dialogueChapter11Opening3
 .text "but to report this matter to Princess Ishtar!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "“Personal grudge?” Nonsense!"
 .byte WaitForA
@@ -544,7 +544,7 @@ dialogueChapter11Opening3
 .text "her superior officer! She meant to kill me!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Wh-What?!"
 .byte NewLine
@@ -553,7 +553,7 @@ dialogueChapter11Opening3
 .text "She... She would never..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Fred, since you're so well-acquainted with"
 .byte NewLine
@@ -567,14 +567,14 @@ dialogueChapter11Opening3
 .text "punishable by execution..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...So that's your goal, is it?"
 .byte NewLine
 .text "Your cowardice knows no bounds..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Be that as it may, as Olwen's adjutant, her"
 .byte NewLine
@@ -595,12 +595,12 @@ dialogueChapter11Opening3
 .text "outcome, or I'll have Olwen executed!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Kempf...! You're shameless!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hm? Did you say something?"
 .byte NewLine
@@ -614,11 +614,11 @@ dialogueChapter11Opening3
 
 dialogueChapter11EndFredSaved
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "Simply superb work, my prince! With Fort"
@@ -650,11 +650,11 @@ dialogueChapter11EndFredSaved
 
 dialogueChapter11EndFredDead
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dorias_portrait
 .text "Fort Dundrum has fallen, and not a moment"

@@ -1,16 +1,16 @@
 dialogueChapter18XavierRecruitment
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word xavier_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait2
 .text "General Xavier?!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Prince Leif..."
 .byte WaitForA
 .byte ScrollText
@@ -21,12 +21,12 @@ dialogueChapter18XavierRecruitment
 .text "I've no regrets left, now."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "General, what are you saying...?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah... Need I spell it out?"
 .byte WaitForA
@@ -55,7 +55,7 @@ dialogueChapter18XavierRecruitment
 .text "I beg of you..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "General..."
 .byte NewLine
@@ -78,7 +78,7 @@ dialogueChapter18XavierRecruitment
 .text "For years, you've carried this weight alone..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Prince Leif..."
 .byte NewLine
@@ -87,7 +87,7 @@ dialogueChapter18XavierRecruitment
 .text "I didn't think it'd come so soon."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word dorius_portrait
@@ -98,7 +98,7 @@ dialogueChapter18XavierRecruitment
 .text "I had...erred in my judgment."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Duke Dorius..."
 .byte NewLine
@@ -107,7 +107,7 @@ dialogueChapter18XavierRecruitment
 .text "I... I'm..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Prince Leif needs men like you, Xavier."
 .byte NewLine
@@ -116,7 +116,7 @@ dialogueChapter18XavierRecruitment
 .text "Serve him once again."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah..."
 .byte NewLine
@@ -133,11 +133,11 @@ dialogueChapter18XavierRecruitment
 
 dialogueChapter18Villager1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word $006B	;purple cape Liszt
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word $009A	;yellow young lady
 .text "Paaapa!"
@@ -145,7 +145,7 @@ dialogueChapter18Villager1
 .text "Heeey, Papa...!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Y-You're all right!"
 .byte NewLine
 .text "Take my hand, sweetie—"
@@ -158,17 +158,17 @@ dialogueChapter18Villager1
 
 dialogueChapter18Villager2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word $0071	;brown cape Paulus
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word oldlady3_portrait
 .text "It's you!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Y-You're safe?!"
 .byte WaitForA
 .byte ScrollText
@@ -184,11 +184,11 @@ dialogueChapter18Villager2
 
 dialogueChapter18Villager3
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word guard_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word boy_portrait
 .text "Father!"
@@ -196,7 +196,7 @@ dialogueChapter18Villager3
 .text "Oh, Father, I'm so sorry!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "H-How..."
 .byte NewLine
 .text "How did you get here?!"
@@ -219,11 +219,11 @@ dialogueChapter18Villager3
 
 dialogueChapter18Villager4
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dvorak_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word $0099	;blue young lady portrait
 .text "Stop it! Lower your weapon!"
@@ -231,7 +231,7 @@ dialogueChapter18Villager4
 .text "I'm here! You don't have to fight anymore!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Aw, really? I was just starting to enjoy it, too!"
 .byte NewLine
 .text "I-I mean..."
@@ -247,11 +247,11 @@ dialogueChapter18Villager4
 
 dialogueChapter18Villager5
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word blond_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word braidedgirl_portrait
 .text "HEY!"
@@ -261,7 +261,7 @@ dialogueChapter18Villager5
 .text "I have half a mind to run off without you!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Ah, it's not what you think!"
 .byte NewLine
 .text "I was only helping the Empire"
@@ -269,12 +269,12 @@ dialogueChapter18Villager5
 .text "because you'd been imprisoned—"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hey, wait for me!"
 .byte NewLine
@@ -286,11 +286,11 @@ dialogueChapter18Villager5
 
 dialogueChapter18Villager6
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word whitecloak_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word elder_portrait
 .text "I'm sorry for everything you've been through..."
@@ -298,7 +298,7 @@ dialogueChapter18Villager6
 .text "All this, just for my sake..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Ah, Father! You're alive!"
 .byte NewLine
 .text "My kin is safe—that's all I know about life"
@@ -316,17 +316,17 @@ dialogueChapter18Villager6
 
 dialogueChapter18Villager7
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word collar_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word oldlady_portrait
 .text "......"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "M-Mother?!"
 .byte WaitForA
 .byte ScrollText
@@ -342,11 +342,11 @@ dialogueChapter18Villager7
 
 dialogueChapter18Villager8
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word $0062	;brown hair Lemay
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word girl_portrait
 .text "Papa!"
@@ -354,7 +354,7 @@ dialogueChapter18Villager8
 .text "Papa, stop it!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Ah! You're all right!"
 .byte NewLine
 .text "I'm so glad..."
@@ -372,21 +372,21 @@ dialogueChapter18Villager8
 
 dialogueChapter18Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word xavier_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word gustav_portrait
 .text "I trust we have an understanding, Xavier?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "...Milord?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "An understanding that I'm the only general"
 .byte NewLine
@@ -403,7 +403,7 @@ dialogueChapter18Opening1
 .text "I trust you won't forget my generosity."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Right-hand man?"
 .byte NewLine
@@ -412,7 +412,7 @@ dialogueChapter18Opening1
 .text "to aid you, nothing more."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Yes, you've been quite the asset."
 .byte NewLine
@@ -426,12 +426,12 @@ dialogueChapter18Opening1
 .text "would do that?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hah..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "What?"
 .byte NewLine
@@ -445,14 +445,14 @@ dialogueChapter18Opening1
 .text "Well, let's hear it! Out with it, now!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Unless you can bring back the dead,"
 .byte NewLine
 .text "I don't think you can help me."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah..."
 .byte NewLine
@@ -479,7 +479,7 @@ dialogueChapter18Opening1
 .text "your sword, they'd never accept you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I know that, dammit!"
 .byte NewLine
@@ -505,21 +505,21 @@ dialogueChapter18Opening1
 
 dialogueChapter18Opening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "August, are you certain this is a good idea,"
 .byte NewLine
 .text "splitting our forces in two like this?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "It's a necessary maneuver if we wish"
 .byte NewLine
 .text "to protect the castle's treasure."
@@ -530,12 +530,12 @@ dialogueChapter18Opening2
 .text "two teams working in tandem."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "And how do we talk down General Xavier?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "With great difficulty, I imagine."
 .byte WaitForA
@@ -554,16 +554,16 @@ dialogueChapter18Opening2
 .text "of an escaped hostage, the plan is ruined."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Understood."
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte NewLine
 .text "All right, everyone! Take breaching positions!"
 .byte WaitForA
@@ -578,11 +578,11 @@ dialogueChapter18Opening2
 
 dialogueChapter18Closing1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dorius_portrait
 .text "The last remains of the Empire's forces"
@@ -597,7 +597,7 @@ dialogueChapter18Closing1
 .text "Leonster has returned to its rightful ruler!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Thank you, Dorius."
 .byte NewLine
 .text "I never would've made it here"
@@ -605,7 +605,7 @@ dialogueChapter18Closing1
 .text "without your aid... I owe you much."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You owe me nothing, Prince Leif."
 .byte WaitForA
@@ -615,12 +615,12 @@ dialogueChapter18Closing1
 
 dialogueChapter18Closing2Finn
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word finn_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Finn..."
 .byte NewLine
@@ -632,7 +632,7 @@ dialogueChapter18Closing2Finn
 .text "Thank you for everything, Finn."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Lord Leif..."
 .byte NewLine
 .text "I...haven't the words..."
@@ -643,15 +643,15 @@ dialogueChapter18Closing2Finn
 
 dialogueChapter18Closing3Miranda
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word miranda_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .text "Prince!"
 .byte NewLine
 .text "Not to ruin your moment,"
@@ -659,13 +659,13 @@ dialogueChapter18Closing3Miranda
 .text "but I insist you live up to your word!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Princess Miranda? Ah, I haven't"
 .byte NewLine
 .text "forgotten—the liberation of Ulster."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Splendid! Then we're on the same page."
 .byte NewLine
@@ -674,14 +674,14 @@ dialogueChapter18Closing3Miranda
 .text "Quickly now, before we lose our chance!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What do you mean?"
 .byte NewLine
 .text "Has something happened in Ulster?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The citizens are plotting rebellion—"
 .byte NewLine
@@ -700,15 +700,15 @@ dialogueChapter18Closing3Miranda
 
 dialogueChapter18Closing4
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .text "I apologize for disturbing you, Prince,"
 .byte NewLine
 .text "but someone wishes to speak with you."
@@ -728,7 +728,7 @@ dialogueChapter18Closing4
 .text "Please, I beg of you, come to Ulster's aid!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Ulster? What are you talking about?"
 .byte NewLine
 .text "Calm down, and explain everything"
@@ -736,7 +736,7 @@ dialogueChapter18Closing4
 .text "from the beginning."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I think you already know Ulster's situation:"
 .byte NewLine
@@ -752,7 +752,7 @@ dialogueChapter18Closing4
 .text "took up arms and rebelled."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "A rebellion..."
 .byte WaitForA
@@ -764,7 +764,7 @@ dialogueChapter18Closing4
 .text "of Ulster joined this rebellion?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm afraid not..."
 .byte NewLine
@@ -795,14 +795,14 @@ dialogueChapter18Closing4
 
 dialogueChapter18Closing5
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...I understand."
 .byte NewLine
 .text "I'll head for Ulster immediately."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word dorius_portrait
@@ -842,7 +842,7 @@ dialogueChapter18Closing5
 .text "the Empire's own blunders—don't forget that!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Dorius! August!"
 .byte NewLine
@@ -868,7 +868,7 @@ dialogueChapter18Closing5
 .text "you can just wait in this damn castle!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "How disappointing..."
 .byte NewLine
@@ -890,16 +890,16 @@ dialogueChapter18Closing5
 .byte WaitForA
 .byte ScrollText
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word augustus_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .text "Are we in agreement, August?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Ah..."
 .byte NewLine
 .text "Is this how...?"
@@ -913,7 +913,7 @@ dialogueChapter18Closing5
 .text "Please, Dorius."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The prince needs you."
 .byte NewLine
@@ -927,7 +927,7 @@ dialogueChapter18Closing5
 .text "all your intellect, to Prince Leif's cause."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -944,7 +944,7 @@ dialogueChapter18Closing5
 .text "if we lead our troops at the same time."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Don't be so selfish, Prince!"
 .byte NewLine
@@ -971,7 +971,7 @@ dialogueChapter18Closing5
 .text "Would you put them through such a thing?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...You've the right of it, Dorius."
 .byte NewLine
@@ -980,7 +980,7 @@ dialogueChapter18Closing5
 .text "Even so, will you have enough manpower?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah, the motherland has provided"
 .byte NewLine
@@ -996,7 +996,7 @@ dialogueChapter18Closing5
 .text "make up for the absent half of our army."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Very well."
 .byte NewLine
@@ -1005,7 +1005,7 @@ dialogueChapter18Closing5
 .text "Take care of Ulster's people for me, Dorius!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Of course."
 .byte NewLine
@@ -1014,14 +1014,14 @@ dialogueChapter18Closing5
 .text "there's one other matter of import."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What is it?"
 .byte NewLine
 .text "Has something happened?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Leonster once again stands free."
 .byte NewLine
@@ -1040,7 +1040,7 @@ dialogueChapter18Closing5
 .text "and live up to your duties as ruler."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Yes, indeed."
 .byte NewLine
@@ -1052,7 +1052,7 @@ dialogueChapter18Closing5
 .text "We have to seize Munster together, Dorius."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Mm..."
 .byte NewLine
@@ -1071,11 +1071,11 @@ dialogueChapter18Closing5
 
 dialogueChapter18Soldiers
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "A few of the enemy soldiers have requested"
@@ -1090,13 +1090,13 @@ dialogueChapter18Soldiers
 .text "from that fate."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Very well."
 .byte NewLine
 .text "Show them in."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word whitecloak_portrait

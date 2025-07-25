@@ -1,6 +1,6 @@
 dialogueChapter04Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word raydrik_portrait
 
@@ -9,11 +9,11 @@ dialogueChapter04Opening1
 .text "my position in Munster and beyond."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dalsin_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Dalsin! See that the brat doesn't so much as"
 .byte NewLine
@@ -22,7 +22,7 @@ dialogueChapter04Opening1
 .text "to claim him!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "...Aye, sire."
 .byte WaitForA
 
@@ -30,43 +30,43 @@ dialogueChapter04Opening1
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It's high time to celebrate"
 .byte NewLine
 .text "with a visit to the arena."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word eyvel_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You, woman!"
 .byte NewLine
 .text "You'll be accompanying me."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Why me...?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I assumed you would want to see the other"
 .byte NewLine
 .text "girls. But if you wish to spit on my generosity..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Other girls?"
 .byte NewLine
 .text "You mean...Mareeta and Nanna?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I believe those are their names, yes."
 .byte NewLine
@@ -75,29 +75,29 @@ dialogueChapter04Opening1
 .text "I've been keeping them quite comfortable."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Are you really gonna let me see them?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "You have my word."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Fine. Lead the way."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah, how old-fashioned, leading the way"
 .byte NewLine
 .text "for such a fine lady. Heh, heh, heh..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "......"
 .byte WaitForA
@@ -106,7 +106,7 @@ dialogueChapter04Opening1
 
 dialogueChapter04Opening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word ced_portrait
 .text "This is it. Asbel and I will locate the children, but"
@@ -116,22 +116,22 @@ dialogueChapter04Opening2
 .text "and free everyone locked up there."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word brighton_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Brighton, you're in charge."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Yessir! Once we've released these poor souls,"
 .byte NewLine
 .text "we'll rendezvous with you."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Gods willing, we'll all meet again."
 .byte NewLine
@@ -142,11 +142,11 @@ dialogueChapter04Opening2
 
 dialogueChapter04Opening3
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word lara_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word macha_portrait
 .text "We're counting on you, Lara."
@@ -154,13 +154,13 @@ dialogueChapter04Opening3
 .text "Think you can handle this?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Uh-huh. No lock is gonna stand in my way!"
 .byte NewLine
 .text "Just watch my back, OK?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word brighton_portrait
@@ -169,12 +169,12 @@ dialogueChapter04Opening3
 .text "you could grab their weapons, no problem."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Not if they're too heavy, I can't!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word macha_portrait
@@ -187,7 +187,7 @@ dialogueChapter04Opening3
 
 dialogueChapter04DalsinRecruitment
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word dalsin_portrait
 
@@ -216,7 +216,7 @@ dialogueChapter04DalsinRecruitment
 
 dialogueChapter04LifisDialogue
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word lifis_portrait
 
@@ -225,7 +225,7 @@ dialogueChapter04LifisDialogue
 .text "Ah, Lady Luck is so fickle..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word bandit1_portrait
 
@@ -236,12 +236,12 @@ dialogueChapter04LifisDialogue
 .text "or somethin'? On the Corsair Isles, right?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hm? Oh, uh... Yeah, but..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Thought so! Hah, ya look just like the guy"
 .byte NewLine
@@ -252,7 +252,7 @@ dialogueChapter04LifisDialogue
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Heh, isn't that somethin'? Guess I'm famous."
 .byte NewLine
@@ -260,7 +260,7 @@ dialogueChapter04LifisDialogue
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word bandit1_portrait
 .text "What, did I say somethin' wrong?"
@@ -268,18 +268,18 @@ dialogueChapter04LifisDialogue
 .text "Ya got this look on yer face..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Truth be told, I'm fixin' to bust my way"
 .byte NewLine
 .text "outta here."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "What?! You could pull somethin' like that off?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Think about it, genius."
 .byte NewLine
@@ -300,21 +300,21 @@ dialogueChapter04LifisDialogue
 .text "before long, let's make nice for now, eh?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Really?"
 .byte NewLine
 .text "Th-Then you gotta take me with you, Boss!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hmm... Well, if you can pull your own weight,"
 .byte NewLine
 .text "I'll think about it."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You mean it, Boss?! Leave it to me!"
 .byte NewLine
@@ -323,10 +323,10 @@ dialogueChapter04LifisDialogue
 .text "that's fer sure!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word bandit_portrait
@@ -345,7 +345,7 @@ dialogueChapter04LifisDialogue
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .text "Heheh... Played like a fiddle, all three of 'em!"
 .byte NewLine
 .text "After we're busted out, I'll have a whole new"
@@ -357,26 +357,26 @@ dialogueChapter04LifisDialogue
 
 dialogueChapter04LeifDialogue
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word fergus_portrait
 
 .text "Huh, folk're gettin' real lively all of a sudden."
 .byte NewLine
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "So, what're you in for, kid?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "...And you are?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Fergus the sellsword, at yer service. An' I'm this"
 .byte NewLine
@@ -390,19 +390,19 @@ dialogueChapter04LeifDialogue
 .text "Got arrested fer the effort. Terrible story, really."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word karin_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word fergus_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .text "Oh, please! You didn't just try to stop them,"
 .byte NewLine
 .text "you beat one of them half to death!"
@@ -410,14 +410,14 @@ dialogueChapter04LeifDialogue
 .text "That's the terrible story, here."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Wait just a darn minute—"
 .byte NewLine
 .text "you were the one who started it!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Yeah, and they arrested me 'cause they thought"
 .byte NewLine
@@ -429,7 +429,7 @@ dialogueChapter04LeifDialogue
 .text "So what're you gonna do about it?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm gonna take a nap, that's what. Hey,"
 .byte NewLine
@@ -442,25 +442,25 @@ dialogueChapter04LeifDialogue
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ugh, I don't even care anymore..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Oh, uh, sorry. I'm Karin, by the way."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .text "Karin? That's an unusual name for a Thracian."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "That's 'cause I'm not Thracian—I'm from Silesse."
 .byte NewLine
@@ -469,7 +469,7 @@ dialogueChapter04LeifDialogue
 .text "thanks to this dimwit."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Silesse..."
 .byte NewLine
@@ -478,7 +478,7 @@ dialogueChapter04LeifDialogue
 .text "Why come all the way here from Silesse?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Our prince up and left the country, that's why."
 .byte WaitForA
@@ -495,7 +495,7 @@ dialogueChapter04LeifDialogue
 .text "our little runaway prince."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'd heard that the Kingdom of Silesse"
 .byte NewLine
@@ -504,7 +504,7 @@ dialogueChapter04LeifDialogue
 .text "How is it the royal family is still alive?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "The rebels have been keeping them safe."
 .byte WaitForA
@@ -521,14 +521,14 @@ dialogueChapter04LeifDialogue
 .text "and lend them my lance."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Impressive. If you become a pegasus knight,"
 .byte NewLine
 .text "you'll be able to dance through the skies."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Well, I can fly already, but I won't be doing"
 .byte NewLine
@@ -550,14 +550,14 @@ dialogueChapter04LeifDialogue
 .text "right now—looking for me, that is."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "So why did the prince leave Silesse"
 .byte NewLine
 .text "in the first place?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It's a long story."
 .byte NewLine
@@ -586,7 +586,7 @@ dialogueChapter04LeifDialogue
 .text "but ended up jailed 'cause of this muttonhead."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word fergus_portrait
@@ -605,7 +605,7 @@ dialogueChapter04LeifDialogue
 .text "anyone can escape all yer yammerin'!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "And it's not like anyone can escape"
 .byte NewLine
@@ -618,7 +618,7 @@ dialogueChapter04LeifDialogue
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word guard_portrait
@@ -633,21 +633,21 @@ dialogueChapter04LeifDialogue
 .text "Bahaha...!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Tch..."
 .byte WaitForA
 
 .byte Left_Slot
 .byte ScrollText
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word leif_portrait
 .text "......"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "What's eatin' you, lad? You look awful upset."
 .byte NewLine
@@ -656,7 +656,7 @@ dialogueChapter04LeifDialogue
 .text "Not like it could do any harm, now."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...You're right."
 .byte NewLine
@@ -667,21 +667,21 @@ dialogueChapter04LeifDialogue
 
 dialogueChapter04NPCDialogue
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word oldlady3_portrait
 .text "*Huff... Puff... Puff...*"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Hey, you all right over there, old lady?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Don't you fret about me—I don't have"
 .byte NewLine
@@ -693,7 +693,7 @@ dialogueChapter04NPCDialogue
 .text "*Hack! Ack! Wheeze!*"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hey, hey, don't overdo it, lady!"
 .byte NewLine
@@ -701,7 +701,7 @@ dialogueChapter04NPCDialogue
 .byte WaitForA
 .byte ScrollText
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word ylgreen_portrait
@@ -710,7 +710,7 @@ dialogueChapter04NPCDialogue
 .text "sick ol' grandmas now?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Looks like it..."
 .byte NewLine
 .text "How long are they gonna get to throw their"
@@ -718,14 +718,14 @@ dialogueChapter04NPCDialogue
 .text "weight around, doin' whatever they please?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You reckon them Magi folk have a chance"
 .byte NewLine
 .text "of takin' the Empire down?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I dunno. Maybe. I mean, they've gotta have"
 .byte NewLine
@@ -734,14 +734,14 @@ dialogueChapter04NPCDialogue
 .text "we've gotta believe in 'em."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Their leader, Sir Ced..."
 .byte NewLine
 .text "They call 'im the “Hero on the Wind.”"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Yeah, an' he's earned that name."
 .byte NewLine
@@ -769,11 +769,11 @@ dialogueChapter04NPCDialogue
 
 dialogueChapter04LeifCellUnlock
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word fergus_portrait
 .text "Well, well! Hey, Prince Leif, somebody's come"
@@ -781,11 +781,11 @@ dialogueChapter04LeifCellUnlock
 .text "to rescue us! C'mon, let's make a break for it!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Who in the world are they?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Does it matter? Save those questions"
 .byte NewLine
@@ -799,12 +799,12 @@ dialogueChapter04LeifCellUnlock
 .text "them soldiers what-for if they try to follow."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "But what happens to you if I [Escape] first?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Mm, I expect I'll get caught an' thrown in here"
 .byte NewLine
@@ -813,14 +813,14 @@ dialogueChapter04LeifCellUnlock
 .text "if I can do some good 'fore I get grabbed."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I won't accept that!"
 .byte NewLine
 .text "I'll only [Escape] after everyone else has!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Hah! Yer gonna make me cry, junior. Suppose I"
 .byte NewLine
@@ -834,7 +834,7 @@ dialogueChapter04LeifCellUnlock
 .text "After hearin' yer story, I'm invested!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word karin_portrait
@@ -843,12 +843,12 @@ dialogueChapter04LeifCellUnlock
 .text "Fergus."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Fallen for me already, eh?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Oh, please! If you think that, you must still be"
 .byte NewLine
@@ -857,7 +857,7 @@ dialogueChapter04LeifCellUnlock
 .text "yet, grandpa?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "All right, all right, lay off. But have you made"
 .byte NewLine
@@ -869,7 +869,7 @@ dialogueChapter04LeifCellUnlock
 .text "Same name as the prince yer after, right?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It's probably him, yeah—but right now,"
 .byte NewLine
@@ -886,21 +886,21 @@ dialogueChapter04LeifCellUnlock
 .text "to smash his face in is fine by me."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "You got the skill with a blade"
 .byte NewLine
 .text "to back up them words, lass?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I...won't pretend I'm the best,"
 .byte NewLine
 .text "but I'll give it my all!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Yeah, didn't think so. Ah, sheesh..."
 .byte NewLine
@@ -912,11 +912,11 @@ dialogueChapter04LeifCellUnlock
 
 dialogueChapter04LifisCellUnlock
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word lifis_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word bandit1_portrait
 .text "Boss, Boss! The door's open!"
@@ -924,11 +924,11 @@ dialogueChapter04LifisCellUnlock
 .text "It happened just like you said it would!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "......"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "What's the matter?"
 .byte NewLine
@@ -939,7 +939,7 @@ dialogueChapter04LifisCellUnlock
 .word ClearPortrait
 .word RetractBox
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "L-Lady Luck really is fickle..."
 .byte NewLine
@@ -955,17 +955,17 @@ dialogueChapter04LifisCellUnlock
 
 dialogueChapter04Ending
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word veld_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word manfroy_portrait
 .text "Veld, how go your operations here?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Smoothly, Archbishop Manfroy. Some of"
 .byte NewLine
 .text "the citizens mount a meager resistance,"
@@ -973,7 +973,7 @@ dialogueChapter04Ending
 .text "but their children are harvested all the same."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Splendid! Then Tahra is the only city"
 .byte NewLine
@@ -990,7 +990,7 @@ dialogueChapter04Ending
 .text "does not tolerate resistance."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "It would be done, Your Eminence,"
 .byte NewLine
@@ -1006,7 +1006,7 @@ dialogueChapter04Ending
 .word LoadPortrait
 .word ishtar_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Princess Ishtar, your father appears to be"
 .byte NewLine
@@ -1018,7 +1018,7 @@ dialogueChapter04Ending
 .text "for this lack of resolve?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "My father has been placed"
 .byte NewLine
 .text "in a difficult position."
@@ -1055,7 +1055,7 @@ dialogueChapter04Ending
 .text "them to your dark god! Have you no shame?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word julius_portrait
@@ -1092,7 +1092,7 @@ dialogueChapter04Ending
 .text "for themselves!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "At what cost? They compete against each other,"
 .byte NewLine
@@ -1104,7 +1104,7 @@ dialogueChapter04Ending
 .text "You dare call that happiness?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "...Ah, my dear, you'll understand my wisdom—"
 .byte NewLine
@@ -1116,7 +1116,7 @@ dialogueChapter04Ending
 .text "back. Let's take in the view together, Ishtar."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...Lord Julius..."
 .byte WaitForA
@@ -1125,7 +1125,7 @@ dialogueChapter04Ending
 
 dialogueChapter04LeftCellUnlock
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word youngman_portrait
 .text "Somebody's come fer us!"
@@ -1143,7 +1143,7 @@ dialogueChapter04LeftCellUnlock
 
 dialogueChapter04RightCellUnlock
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word elder_portrait
 .text "A thousand thanks upon ye, Magi! Everybody,"

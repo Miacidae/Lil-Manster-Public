@@ -104,7 +104,7 @@
 		
 			sep #$20
 			lda #0
-			sta aMovementMap,X
+			sta aMovementMap,x
 			rep #$20
 		
 			lda #aSelectedCharacterBuffer

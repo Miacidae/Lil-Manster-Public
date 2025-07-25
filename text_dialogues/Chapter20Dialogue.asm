@@ -1,6 +1,6 @@
 dialogueChapter20SilenceHouse
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word oldlady3_portrait
 .text "Oh dear..."
@@ -27,30 +27,30 @@ dialogueChapter20SilenceHouse
 
 dialogueChapter20Opening1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word bharat_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word reinhardt_portrait
 .text "How goes the war, Lord Bharat?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Ah, Reinhardt. I've been waiting for you."
 .byte NewLine
 .text "You've brought my reinforcements, I trust?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "A battalion is on its way here from Ulster."
 .byte NewLine
 .text "They should be arriving shortly."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hmm... Yes, that should do it."
 .byte NewLine
@@ -59,19 +59,19 @@ dialogueChapter20Opening1
 .text "These few halls are the rebels' last refuge."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Normally that would be good news, but..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Hmm? What do you mean?"
 .byte NewLine
 .text "Is something amiss?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "This siege has gone on for half a year,"
 .byte NewLine
@@ -87,14 +87,14 @@ dialogueChapter20Opening1
 .text "I'd suggest you hurry."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "...You're not telling me anything"
 .byte NewLine
 .text "I don't already know."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "The king's temper worsens by the day."
 .byte NewLine
@@ -103,12 +103,12 @@ dialogueChapter20Opening1
 .text "has been taking its toll on him..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "What of the Isaachian rebels?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I hear they've already crossed the border"
 .byte NewLine
@@ -132,14 +132,14 @@ dialogueChapter20Opening1
 .text "a most arduous one indeed."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "And what does His Highness himself"
 .byte NewLine
 .text "intend to do?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I believe the king plans to personally"
 .byte NewLine
@@ -158,14 +158,14 @@ dialogueChapter20Opening1
 .text "your future will be...most uncertain."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah..."
 .byte NewLine
 .text "Very well. You've made yourself clear."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Then I must be returning to Connaught."
 .byte NewLine
@@ -177,13 +177,13 @@ dialogueChapter20Opening1
 
 dialogueChapter20Opening2
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word bharat_portrait
 .text "You! Get over here!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word dvorak_portrait
 .text "Uh..."
@@ -191,7 +191,7 @@ dialogueChapter20Opening2
 .text "Y-Yes, sir?"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Send word to all the troops: we're launching"
 .byte NewLine
@@ -203,7 +203,7 @@ dialogueChapter20Opening2
 .text "Fight with all your soul if you want to live!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah!"
 .byte NewLine
@@ -215,11 +215,11 @@ dialogueChapter20Opening2
 
 dialogueChapter20Opening3
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "...The enemy has begun their assault,"
@@ -227,11 +227,11 @@ dialogueChapter20Opening3
 .text "Prince Leif."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Can we mount a defense?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I've already ordered as much."
 .byte NewLine
@@ -243,7 +243,7 @@ dialogueChapter20Opening3
 .text "If we fall here, we have nowhere to run."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "We've done quite well against such an"
 .byte NewLine
@@ -255,7 +255,7 @@ dialogueChapter20Opening3
 .text "But we'll reach our limit before long."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Bah, you've become overfond"
 .byte NewLine
@@ -286,7 +286,7 @@ dialogueChapter20Opening3
 .text "merge our forces!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm sorry, August. I know..."
 .byte WaitForA
@@ -298,7 +298,7 @@ dialogueChapter20Opening3
 .text "having to watch our soldiers die one by one?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "If it pains you so, that's all the more reason to"
 .byte NewLine
@@ -310,23 +310,23 @@ dialogueChapter20Opening3
 
 dialogueChapter20Closing1
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word leif_portrait2
 
-.byte Left_slot
+.byte Left_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "Prince Leif, the enemy is retreating!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "What?!"
 .byte NewLine
 .text "Why would they do that?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Because Seliph's army has arrived!"
 .byte NewLine
@@ -340,7 +340,7 @@ dialogueChapter20Closing1
 .text "We've done it! We're saved!"
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Truly...?"
 .byte NewLine
@@ -352,7 +352,7 @@ dialogueChapter20Closing1
 .text "How do you know this?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Ah, listen to me go on..."
 .byte NewLine
@@ -364,7 +364,7 @@ dialogueChapter20Closing1
 .text "He awaits you inside the other chamber."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Lord Seliph's emissary?!"
 .byte NewLine
@@ -373,7 +373,7 @@ dialogueChapter20Closing1
 .text "Please, send him in!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .word LoadPortrait
 .word dermott_portrait
@@ -384,7 +384,7 @@ dialogueChapter20Closing1
 .text "I go by Diarmuid."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Diarmuid?!"
 .byte NewLine
@@ -393,7 +393,7 @@ dialogueChapter20Closing1
 .text "Are you Nanna's older brother?!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I am."
 .byte WaitForA
@@ -403,21 +403,21 @@ dialogueChapter20Closing1
 
 dialogueChapter20Closing2NannaDead
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I was looking forward to meeting her, but..."
 .byte NewLine
 .text "Well, I suppose we all have regrets."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "I'm sorry."
 .byte NewLine
 .text "I...wasn't strong enough..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No, Lord Leif, it's not your fault."
 .byte NewLine
@@ -426,7 +426,7 @@ dialogueChapter20Closing2NannaDead
 .text "by your side, no matter how things ended."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Diarmuid..."
 .byte WaitForA
@@ -436,14 +436,14 @@ dialogueChapter20Closing2NannaDead
 
 dialogueChapter20Closing2
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Lord Leif, this is a letter from Lord Seliph."
 .byte NewLine
 .text "Give it a read, if you would, sire."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Very well..."
 .byte WaitForA
@@ -453,14 +453,14 @@ dialogueChapter20Closing2
 .text "shouldn't take very long at all."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Indeed."
 .byte NewLine
 .text "It will fall to our army within a few days."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Then there's no reason to delay!"
 .byte NewLine
@@ -472,7 +472,7 @@ dialogueChapter20Closing2
 .text "We head for Ulster!"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm pleased to hear it, sire."
 .byte NewLine
@@ -484,19 +484,19 @@ dialogueChapter20Closing2
 
 dialogueChapter20Closing3
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Was there anything else you needed"
 .byte NewLine
 .text "to tell me on behalf of Lord Seliph?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "No, sire."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Then now that that's done,"
 .byte NewLine
@@ -510,7 +510,7 @@ dialogueChapter20Closing3
 .text "Brother..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "Nanna?!"
 .byte NewLine
@@ -534,12 +534,12 @@ dialogueChapter20Closing3
 .text "through Lord Lewyn..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Lord Lewyn...?"
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "He's Lord Seliph's tactician."
 .byte NewLine
@@ -553,7 +553,7 @@ dialogueChapter20Closing3
 .text "but vanished in the Aed Desert..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "Ah!"
 .byte NewLine
@@ -570,14 +570,14 @@ dialogueChapter20Closing3
 .text "Mother... Oh, gods..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I'm sorry, Nanna."
 .byte NewLine
 .text "Mother was traveling all that way for me..."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .text "No, don't think like that."
 .byte WaitForA
@@ -594,7 +594,7 @@ dialogueChapter20Closing3
 .text "for their children. I've seen as much..."
 .byte WaitForA
 
-.byte Left_slot
+.byte Left_Slot
 .byte ScrollText
 .text "I haven't given up, Nanna."
 .byte NewLine
@@ -609,12 +609,12 @@ dialogueChapter20Closing3
 .byte WaitForA
 .byte ScrollText
 
-.byte Right_slot
+.byte Right_Slot
 .byte ScrollText
 .word LoadPortrait
 .word leif_portrait
 
-.byte Left_slot
+.byte Left_Slot
 .text "Prince Leif, I have a request, if I may."
 .byte NewLine
 .text "Would you permit me"
@@ -627,7 +627,7 @@ dialogueChapter20Closing3
 .text "once we rejoin him."
 .byte WaitForA
 
-.byte Right_slot
+.byte Right_Slot
 .text "Of course!"
 .byte NewLine
 .text "I'd be glad to have you along"
@@ -643,7 +643,7 @@ dialogueChapter20Closing3
 
 dialogueChapter20Fall
 
-.byte Right_slot
+.byte Right_Slot
 .word LoadPortrait
 .word augustus_portrait
 .text "Prince Leif, the Friege army"
